@@ -733,4 +733,225 @@ the muscle summates many twitches; spikes are all-or-none and never got bigger.
 Muscle force is graded by firing rate and by recruitment (c, not changed here).
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio. Only base R is used (no packages), and all data
+are typed into the code.
+
+### R1. Equilibrium potentials as vectors
+
+R can do the Nernst calculation from 1.1 for all three ions at once. Complete
+the line that calculates `E` (replace `___` with the Nernst equation), run the
+code and report $E_\text{Na}$ exactly as R prints it.
+
+```r
+ion     <- c("K", "Na", "Cl")
+outside <- c(5, 145, 110)   # mmol/L
+inside  <- c(140, 15, 10)   # mmol/L
+z       <- c(1, 1, -1)
+E <- ___
+names(E) <- ion
+round(E, 1)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$E_\text{Na}$ = 60.6 mV (the ≈ +61 mV of 1.1).
+
+```r
+E <- 61.5 / z * log10(outside / inside)
+names(E) <- ion
+round(E, 1)
+```
+
+```
+    K    Na    Cl 
+-89.0  60.6 -64.0 
+```
+
+Each vector element is used in turn, so one line does three calculations.
+:::
+
+### R2. Conduction velocity
+
+Two recording electrodes 5 cm apart pick up the same action potential in four
+different axons. The latencies below are invented teaching values. Complete the
+velocity line (convert ms to s), run the code and report (a) the fastest
+velocity in m/s and (b) how many times faster the fastest axon is than the
+slowest.
+
+```r
+distance <- 0.05                      # metres between the two electrodes
+latency  <- c(0.8, 2.5, 10, 50)       # milliseconds, invented teaching values
+velocity <- distance / (___ / 1000)   # m/s
+velocity
+max(velocity) / min(velocity)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(a) 62.5 m/s; (b) 62.5 times faster.
+
+```r
+velocity <- distance / (latency / 1000)   # m/s
+velocity
+max(velocity) / min(velocity)
+```
+
+```
+[1] 62.5 20.0  5.0  1.0
+[1] 62.5
+```
+
+The fastest value is in the range of a large myelinated vertebrate axon; the
+slowest is like a thin unmyelinated axon.
+:::
+
+### R3. Rate code in a data frame
+
+A sensory neuron is stimulated at six strengths. The firing rate and the height
+of its spikes are stored in a data frame (invented teaching values; at strength
+1 the neuron did not fire, so spike height is `NA`). Run the code and answer:
+
+a. What are the mean and the standard deviation of spike amplitude?
+b. How many stimulus strengths give a firing rate above 40 spikes/s?
+c. Which quantity carries the information about stimulus strength: spike
+   amplitude or firing rate?
+
+```r
+rec <- data.frame(
+  stimulus  = c(1, 2, 3, 4, 5, 6),            # arbitrary units
+  rate      = c(0, 12, 25, 41, 58, 70),       # spikes per second
+  amplitude = c(NA, 98, 100, 99, 101, 100)    # spike height, mV
+)
+mean(rec$amplitude, na.rm = TRUE)
+sd(rec$amplitude, na.rm = TRUE)
+strong <- rec[rec$rate > 40, ]
+nrow(strong)
+plot(rec$stimulus, rec$rate, type = "b",
+     xlab = "Stimulus strength", ylab = "Firing rate (spikes/s)")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 99.6
+[1] 1.140175
+[1] 3
+```
+
+a. Mean 99.6 mV, standard deviation 1.14 mV.
+b. 3 (strengths 4, 5 and 6).
+c. Firing rate. It rises steadily with stimulus strength (the plot), while
+   spike amplitude stays almost constant: action potentials are all-or-none.
+
+`rec[rec$rate > 40, ]` keeps the rows where the condition is `TRUE` and all
+columns.
+:::
+
+### R4. Counting amino acids in a potassium channel
+
+KcsA is a bacterial potassium channel whose structure was the first atomic view
+of a K⁺ channel pore. Its sequence below is copied from UniProt entry
+[P0A334](https://rest.uniprot.org/uniprotkb/P0A334.fasta) (*Streptomyces
+lividans*). Run the code. How many amino acids long is KcsA, and which amino
+acid is most common?
+
+```r
+kcsa <- paste0(
+  "MPPMLSGLLARLVKLLLGRHGSALHWRAAGAATVLLVIVLLAGSYLAVLAERGAPGAQLI",
+  "TYPRALWWSVETATTVGYGDLYPVTLWGRLVAVVVMVAGITSFGLVTAALATWFVGREQE",
+  "RRGHFVRHSEKAAEEAYTRTTRALHERFDRLERMLDDNRR")
+nchar(kcsa)
+aa <- strsplit(kcsa, "")[[1]]
+counts <- sort(table(aa), decreasing = TRUE)
+head(counts, 3)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+160 amino acids; leucine (L, 24 times) is most common.
+
+```
+[1] 160
+aa
+ L  A  R 
+24 22 17 
+```
+
+`strsplit()` cuts the string into single letters and `table()` counts each
+letter.
+:::
+
+### R5. Finding the selectivity filter
+
+The narrow part of a K⁺ channel pore that lets K⁺ through but not Na⁺ is the
+**selectivity filter**. In K⁺ channels it contains the signature motif TVGYG.
+Using `kcsa` from R4, complete the code to search for `"TVGYG"`. At which
+position does the motif start?
+
+```r
+gregexpr("___", kcsa)[[1]][1]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Position 75.
+
+```r
+gregexpr("TVGYG", kcsa)[[1]][1]
+```
+
+```
+[1] 75
+```
+
+This matches UniProt, which annotates residues 75–80 as the selectivity filter.
+:::
+
+### R6. A transmembrane segment is hydrophobic
+
+A helix that crosses the membrane is surrounded by lipid tails, so most of its
+amino acids are hydrophobic. UniProt annotates residues 28–50 of KcsA as its
+first transmembrane helix. Using `kcsa` from R4, run the code. What fraction of
+the residues is hydrophobic in (a) the transmembrane helix and (b) residues
+128–150, part of the C-terminal region that lies in the cytoplasm?
+
+```r
+hydrophobic <- c("A", "V", "I", "L", "M", "F", "W", "C")
+frac_hydrophobic <- function(s) {
+  aa <- strsplit(s, "")[[1]]
+  mean(aa %in% hydrophobic)
+}
+tm1  <- substr(kcsa, 28, 50)
+tail <- substr(kcsa, 128, 150)
+tm1
+tail
+round(frac_hydrophobic(tm1), 2)
+round(frac_hydrophobic(tail), 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(a) 0.78; (b) 0.26.
+
+```
+[1] "AAGAATVLLVIVLLAGSYLAVLA"
+[1] "HSEKAAEEAYTRTTRALHERFDR"
+[1] 0.78
+[1] 0.26
+```
+
+`aa %in% hydrophobic` gives `TRUE`/`FALSE` for each letter, and the mean of
+`TRUE`/`FALSE` values is the fraction `TRUE`. The cytoplasmic stretch is rich in
+charged residues (E, K, R, H, D) instead. Programs that predict transmembrane
+segments slide a window like this along the whole sequence.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

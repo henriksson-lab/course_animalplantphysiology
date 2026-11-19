@@ -514,4 +514,222 @@ blood strips more O₂ from the water but leaves less saturated. Fish adjust
 ventilation and lamellar perfusion to match the two.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio. Only base R is used (no packages), and all data
+are typed into the code.
+
+### R1. Cardiac output for five people
+
+The heart rates and stroke volumes below are invented teaching numbers for five
+resting people. Run the code and report (a) the mean cardiac output and (b) its
+standard deviation (rounded to two decimals).
+
+```r
+hr <- c(62, 75, 58, 80, 70)              # heart rate, beats per min
+sv <- c(0.070, 0.065, 0.080, 0.060, 0.072) # stroke volume, L per beat
+co <- hr * sv                             # cardiac output, L per min
+co
+mean(co)
+round(sd(co), 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 4.340 4.875 4.640 4.800 5.040
+[1] 4.739
+[1] 0.27
+```
+
+a. 4.739 L min⁻¹. b. 0.27 L min⁻¹. R multiplies the two vectors element by
+element, giving one cardiac output per person.
+:::
+
+### R2. The Fick principle in a data frame
+
+The invented values below describe one person at rest, walking and running.
+Complete the line marked `___` so that it calculates O₂ consumption with the
+Fick principle, $\dot V_{\rm O_2}=Q\times(C_a-C_v)$. Report the O₂ consumption
+while running and how many times larger it is than at rest.
+
+```r
+d <- data.frame(
+  state = c("rest", "walking", "running"),
+  co    = c(5.0, 9.0, 18.0),     # cardiac output, L min^-1
+  CaO2  = c(195, 195, 195),      # arterial O2 content, mL O2 L^-1
+  CvO2  = c(145, 115, 55)        # venous O2 content, mL O2 L^-1
+)
+d$vo2 <- ___
+d
+d$vo2[d$state == "running"] / d$vo2[d$state == "rest"]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+d$vo2 <- d$co * (d$CaO2 - d$CvO2)
+```
+
+```
+    state co CaO2 CvO2  vo2
+1    rest  5  195  145  250
+2 walking  9  195  115  720
+3 running 18  195   55 2520
+[1] 10.08
+```
+
+Running: 2520 mL O₂ min⁻¹, 10.08 times the resting value. The rise comes from
+both a larger cardiac output and a larger arterial–venous O₂ difference.
+:::
+
+### R3. A haemoglobin dissociation curve
+
+The Hill equation $S=P^n/(P^n+P_{50}^n)$ gives an approximate sigmoid
+dissociation curve. Use $P_{50}=3.5$ kPa and $n=2.7$, approximate textbook
+values for human haemoglobin at pH 7.4 and 37 °C. Run the code and report the
+saturation (%) at an arterial $P_{\rm O_2}$ of 13.3 kPa, at a resting tissue
+$P_{\rm O_2}$ of 5.3 kPa, and the percentage-point difference (the fraction
+unloaded).
+
+```r
+hill <- function(po2, p50, n) po2^n / (po2^n + p50^n)
+s_lung   <- hill(13.3, p50 = 3.5, n = 2.7)
+s_tissue <- hill(5.3,  p50 = 3.5, n = 2.7)
+round(100 * s_lung)
+round(100 * s_tissue)
+round(100 * (s_lung - s_tissue))
+curve(100 * hill(x, p50 = 3.5, n = 2.7), from = 0, to = 15,
+      xlab = "PO2 (kPa)", ylab = "Saturation (%)")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 97
+[1] 75
+[1] 22
+```
+
+97 % at 13.3 kPa, 75 % at 5.3 kPa, so 22 percentage points are unloaded. The
+plot shows the S-shaped curve: flat above about 10 kPa and steep between 2 and
+6 kPa. The values agree closely with the **Rest** preset in E1.
+:::
+
+### R4. Where does a right shift matter most?
+
+A right shift (for example lower pH) raises $P_{50}$ to 4.5 kPa. Run the code,
+which compares the two curves at six $P_{\rm O_2}$ values. At which of these
+$P_{\rm O_2}$ values is the drop in saturation caused by the shift largest?
+
+a. 2 kPa  b. 4 kPa  c. 8 kPa  d. 12 kPa
+
+```r
+hill <- function(po2, p50, n) po2^n / (po2^n + p50^n)
+po2 <- c(2, 4, 6, 8, 10, 12)
+normal  <- hill(po2, p50 = 3.5, n = 2.7)
+shifted <- hill(po2, p50 = 4.5, n = 2.7)
+round(100 * normal)
+round(100 * shifted)
+po2[which.max(normal - shifted)]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 18 59 81 90 94 97
+[1] 10 42 68 83 90 93
+[1] 4
+```
+
+b. At 4 kPa saturation falls from 59 % to 42 % (17 points); at 12 kPa it falls
+by only 4 points. The right shift releases O₂ mainly at tissue-like
+$P_{\rm O_2}$, while loading in the lung is hardly affected.
+:::
+
+### R5. The sickle-cell mutation
+
+The DNA string below is the start of the coding sequence of human β-globin
+(*HBB*), copied from NCBI RefSeq NM_000518.5. The code splits it into codons and
+translates them with a small codon table that contains only the codons needed
+here. Run it and answer:
+
+a. What is the protein sequence?
+b. Which codon encodes amino acid 6 of β-globin? (The first methionine is
+   removed from the mature protein, so amino acid 6 is codon 7.)
+c. In sickle-cell disease codon 7 is changed from GAG to GTG. Complete the
+   `___` line, run the last part, and give the new protein sequence. Which
+   amino acid replaces which?
+
+```r
+hbb <- "ATGGTGCATCTGACTCCTGAGGAGAAG"
+codons <- substring(hbb, seq(1, nchar(hbb), by = 3), seq(3, nchar(hbb), by = 3))
+codons
+code <- c(ATG = "M", GTG = "V", CAT = "H", CTG = "L", ACT = "T",
+          CCT = "P", GAG = "E", AAG = "K")
+paste(code[codons], collapse = "")
+codons[7]
+sickle <- codons
+sickle[7] <- ___
+paste(code[sickle], collapse = "")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+sickle[7] <- "GTG"
+```
+
+```
+[1] "ATG" "GTG" "CAT" "CTG" "ACT" "CCT" "GAG" "GAG" "AAG"
+[1] "MVHLTPEEK"
+[1] "GAG"
+[1] "MVHLTPVEK"
+```
+
+a. MVHLTPEEK. b. GAG (glutamate, E). c. MVHLTPVEK: glutamate (E) is replaced
+by valine (V). A single base change, A→T in the middle of the codon, swaps a
+charged amino acid for a hydrophobic one, which makes deoxygenated HbS
+molecules stick together into fibres.
+:::
+
+### R6. Counting amino acids in β-globin
+
+The protein sequence below is human haemoglobin subunit β, copied from UniProt
+P68871. Run the code and report (a) the length of the chain, (b) the number of
+histidines (H) and (c) the number of glutamates (E). (d) How many glutamates
+does the sickle-cell β chain (HbS, from R5) have?
+
+```r
+hbb <- paste0("MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPK",
+              "VKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFG",
+              "KEFTPPVQAAYQKVVAGVANALAHKYH")
+nchar(hbb)
+aa <- strsplit(hbb, "")[[1]]
+counts <- table(aa)
+counts["H"]
+counts["E"]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 147
+H 
+9 
+E 
+8 
+```
+
+a. 147 amino acids (including the initial methionine). b. 9 histidines; one of
+them binds the haem iron in each subunit. c. 8 glutamates. d. 7, because one
+glutamate is replaced by valine.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

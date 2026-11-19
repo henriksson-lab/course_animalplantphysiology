@@ -627,4 +627,220 @@ Refuges must be in place from the first Bt planting, not added after
 resistance has been detected.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio. Only base R is used (no packages), and all data
+are typed into the code.
+
+### R1. Growth of watered and drought-stressed plants
+
+The heights below are invented teaching data (the course file
+`data/growth-stress.csv`): pots 1–6 were watered and pots 7–12 received
+reduced water for 7 days. Run the code. What are the mean growth and the
+standard deviation (to two decimals) in each group?
+
+```r
+initial <- c(30, 32, 28, 31, 29, 30, 31, 29, 30, 32, 28, 30)
+final   <- c(48, 52, 50, 50, 50, 50, 41, 41, 44, 43, 41, 42)
+growth  <- final - initial
+growth
+watered <- growth[1:6]
+drought <- growth[7:12]
+mean(watered)
+mean(drought)
+round(sd(watered), 2)
+round(sd(drought), 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+ [1] 18 20 22 19 21 20 10 12 14 11 13 12
+[1] 20
+[1] 12
+[1] 1.41
+[1] 1.41
+```
+
+Watered: mean 20 mm, SD 1.41 mm. Reduced water: mean 12 mm, SD 1.41 mm.
+R subtracts the two vectors element by element, pot by pot.
+:::
+
+### R2. Is the difference larger than chance? A t-test
+
+Put the growth values from R1 in a data frame and compare the groups with a
+t-test. Run the code. How many rows does the subset show, what are the t
+value and the p-value, and is the difference significant at the 0.05 level:
+(a) yes or (b) no?
+
+```r
+pots <- data.frame(
+  treatment = rep(c("watered", "reduced-water"), each = 6),
+  growth_mm = c(18, 20, 22, 19, 21, 20, 10, 12, 14, 11, 13, 12)
+)
+pots[pots$treatment == "reduced-water", ]
+result <- t.test(growth_mm ~ treatment, data = pots)
+result
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+       treatment growth_mm
+7  reduced-water        10
+8  reduced-water        12
+9  reduced-water        14
+10 reduced-water        11
+11 reduced-water        13
+12 reduced-water        12
+
+	Welch Two Sample t-test
+
+data:  growth_mm by treatment
+t = -9.798, df = 10, p-value = 1.916e-06
+alternative hypothesis: true difference in means between group reduced-water and group watered is not equal to 0
+95 percent confidence interval:
+ -9.819268 -6.180732
+sample estimates:
+mean in group reduced-water       mean in group watered 
+                         12                          20 
+```
+
+Six rows. t = −9.798, p = 1.916 × 10⁻⁶. (a) yes, p is far below 0.05.
+The t value is negative because R puts the groups in alphabetical order and
+subtracts watered from reduced-water. The test says the growth difference is
+unlikely to be chance; it does not say whether the plants would recover or
+set fewer seeds.
+:::
+
+### R3. Resistance evolution on a Bt crop
+
+The loop follows the frequency `p` of a resistance allele R in an insect
+population feeding on a Bt crop. Fitness values are invented teaching
+numbers: RR larvae survive (`w_RR = 1`) and 10 % of SS larvae survive
+(`w_SS = 0.1`).
+
+a. Run the code with `w_RS <- 1` (R dominant). What is the frequency of R
+   after one generation (to four decimals), and after how many generations
+   does it first exceed 0.5?
+b. Change to `w_RS <- 0.1` (R recessive, as with a high-dose Bt crop). What
+   does the last line print, and what does that mean?
+c. Keep `w_RS <- 0.1` and change both `30`s to `200`. After how many
+   generations does R first exceed 0.5?
+
+```r
+p <- 0.001
+w_RR <- 1; w_RS <- 1; w_SS <- 0.1
+p_values <- p
+for (gen in 1:30) {
+  q <- 1 - p
+  w_bar <- p^2 * w_RR + 2 * p * q * w_RS + q^2 * w_SS
+  p <- (p^2 * w_RR + p * q * w_RS) / w_bar
+  p_values <- c(p_values, p)
+}
+round(p_values[2], 4)
+which(p_values > 0.5)[1] - 1
+plot(0:30, p_values, type = "l", xlab = "Generation", ylab = "Frequency of R")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 
+   ```
+   [1] 0.0098
+   [1] 4
+   ```
+   R rises from 0.001 to 0.0098 in one generation and exceeds 0.5 after
+   4 generations.
+b. 
+   ```
+   [1] 0.001
+   [1] NA
+   ```
+   `NA` means no generation in the first 30 had a frequency above 0.5; R is
+   still about 0.001.
+c. 
+   ```
+   [1] 0.001
+   [1] 118
+   ```
+   118 generations. When RS larvae die like SS larvae, almost all rare R
+   alleles (which sit in heterozygotes) are removed, so resistance spreads
+   far more slowly. `p_values[1]` is generation 0, which is why the code
+   subtracts 1.
+:::
+
+### R4. Finding a CRISPR guide next to a PAM
+
+Cas9 cuts a DNA target that is directly followed by an NGG PAM (any base,
+then GG). A guide RNA matches the 20 nucleotides just before the PAM. The
+target below is a made-up sequence. Run the code. At which positions do
+NGG sites start, what is the 20-nucleotide guide before the first PAM, and
+what is its GC content (%)?
+
+```r
+target <- "ATGCTAGCTTGACCGTAGCATCGGATCCAGTTAACGG"
+pam <- as.vector(gregexpr("(?=[ACGT]GG)", target, perl = TRUE)[[1]])
+pam
+guide <- substr(target, pam[1] - 20, pam[1] - 1)
+guide
+bases <- strsplit(guide, "")[[1]]
+gc <- mean(bases == "G" | bases == "C") * 100
+gc
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 22 35
+[1] "TGCTAGCTTGACCGTAGCAT"
+[1] 50
+```
+
+NGG sites start at positions 22 (CGG) and 35 (CGG). The guide is
+TGCTAGCTTGACCGTAGCAT (positions 2–21), with 50 % GC (10 of 20 bases are G
+or C). The pattern `(?=...)` lets R also report overlapping matches.
+:::
+
+### R5. Checking the edit: percent identity
+
+After editing, the target region of a plant is sequenced and aligned with
+the wild type. Both are made-up sequences; `-` marks a gap. Run the code.
+How many aligned positions are identical, what is the percent identity (to
+one decimal), and at which position is the difference? Is the edit
+(a) a substitution, (b) a 1-base deletion or (c) a 1-base insertion, and does
+it shift the reading frame?
+
+```r
+wild_type <- "ATGGCTTCAGGATCCAGTTAAGCT"
+edited    <- "ATGGCTTCAGGAT-CAGTTAAGCT"
+a <- strsplit(wild_type, "")[[1]]
+b <- strsplit(edited, "")[[1]]
+length(a)
+sum(a == b)
+round(sum(a == b) / length(a) * 100, 1)
+which(a != b)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 24
+[1] 23
+[1] 95.8
+[1] 14
+```
+
+23 of 24 positions are identical, 95.8 % identity, and the difference is at
+position 14. (b) a 1-base deletion: the C in the wild type faces a gap in
+the edited sequence. One base is not a multiple of three, so the reading
+frame shifts after the deletion. High percent identity therefore does not
+mean the protein is nearly unchanged.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

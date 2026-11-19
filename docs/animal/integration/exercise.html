@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -277,6 +312,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/organisation/exercise.html#explore-a1-scaling" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Diffusion limits body size</span></a>
   </div>
@@ -324,6 +365,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/energy-temperature/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/energy-temperature/exercise.html#explore-a2-thermal" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Endotherm versus ectotherm</span></a>
   </div>
@@ -361,6 +408,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../animal/gas-circulation/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../animal/gas-circulation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -412,6 +465,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/water-excretion/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/water-excretion/exercise.html#explore-a4-tonicity" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Tonicity and cell volume</span></a>
   </div>
@@ -455,6 +514,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../animal/integration/exercise.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../animal/integration/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,6 +594,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../plant/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../plant/organisation/exercise.html#explore-p1-cellgrowth" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Growth of a walled cell</span></a>
   </div>
@@ -572,6 +643,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/water-nutrition/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/water-nutrition/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -623,6 +700,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../plant/carbon-metabolism/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../plant/carbon-metabolism/exercise.html#explore-p3-lightcurve" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Light-response curve</span></a>
   </div>
@@ -660,6 +743,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/development/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/development/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -707,6 +796,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/stress-biotechnology/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/stress-biotechnology/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -898,6 +993,15 @@ window.Quarto = {
   <li><a href="#e3.2" id="toc-e3.2" class="nav-link" data-scroll-target="#e3.2">E3.2</a></li>
   <li><a href="#e3.3" id="toc-e3.3" class="nav-link" data-scroll-target="#e3.3">E3.3</a></li>
   <li><a href="#e3.4" id="toc-e3.4" class="nav-link" data-scroll-target="#e3.4">E3.4</a></li>
+  </ul></li>
+  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises">R and bioinformatics</a>
+  <ul class="collapse">
+  <li><a href="#r1.-equilibrium-potentials-as-vectors" id="toc-r1.-equilibrium-potentials-as-vectors" class="nav-link" data-scroll-target="#r1.-equilibrium-potentials-as-vectors">R1. Equilibrium potentials as vectors</a></li>
+  <li><a href="#r2.-conduction-velocity" id="toc-r2.-conduction-velocity" class="nav-link" data-scroll-target="#r2.-conduction-velocity">R2. Conduction velocity</a></li>
+  <li><a href="#r3.-rate-code-in-a-data-frame" id="toc-r3.-rate-code-in-a-data-frame" class="nav-link" data-scroll-target="#r3.-rate-code-in-a-data-frame">R3. Rate code in a data frame</a></li>
+  <li><a href="#r4.-counting-amino-acids-in-a-potassium-channel" id="toc-r4.-counting-amino-acids-in-a-potassium-channel" class="nav-link" data-scroll-target="#r4.-counting-amino-acids-in-a-potassium-channel">R4. Counting amino acids in a potassium channel</a></li>
+  <li><a href="#r5.-finding-the-selectivity-filter" id="toc-r5.-finding-the-selectivity-filter" class="nav-link" data-scroll-target="#r5.-finding-the-selectivity-filter">R5. Finding the selectivity filter</a></li>
+  <li><a href="#r6.-a-transmembrane-segment-is-hydrophobic" id="toc-r6.-a-transmembrane-segment-is-hydrophobic" class="nav-link" data-scroll-target="#r6.-a-transmembrane-segment-is-hydrophobic">R6. A transmembrane segment is hydrophobic</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -2222,6 +2326,215 @@ Answer
 <div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Only b (1 stimulus versus 40). Peak total force rose from 2.8 to 9.4 because the muscle summates many twitches; spikes are all-or-none and never got bigger. Muscle force is graded by firing rate and by recruitment (c, not changed here).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="r-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="r-exercises">R and bioinformatics</h2>
+<p>Run the code in R or RStudio. Only base R is used (no packages), and all data are typed into the code.</p>
+<section id="r1.-equilibrium-potentials-as-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="r1.-equilibrium-potentials-as-vectors">R1. Equilibrium potentials as vectors</h3>
+<p>R can do the Nernst calculation from 1.1 for all three ions at once. Complete the line that calculates <code>E</code> (replace <code>___</code> with the Nernst equation), run the code and report <span class="math inline">\(E_\text{Na}\)</span> exactly as R prints it.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ion     <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"K"</span>, <span class="st">"Na"</span>, <span class="st">"Cl"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>outside <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">145</span>, <span class="dv">110</span>)   <span class="co"># mmol/L</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>inside  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">140</span>, <span class="dv">15</span>, <span class="dv">10</span>)   <span class="co"># mmol/L</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>z       <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> ___</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(E) <span class="ot">&lt;-</span> ion</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(E, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(E_\text{Na}\)</span> = 60.6 mV (the ≈ +61 mV of 1.1).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> <span class="fl">61.5</span> <span class="sc">/</span> z <span class="sc">*</span> <span class="fu">log10</span>(outside <span class="sc">/</span> inside)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(E) <span class="ot">&lt;-</span> ion</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(E, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>    K    Na    Cl 
+-89.0  60.6 -64.0 </code></pre>
+<p>Each vector element is used in turn, so one line does three calculations.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r2.-conduction-velocity" class="level3">
+<h3 class="anchored" data-anchor-id="r2.-conduction-velocity">R2. Conduction velocity</h3>
+<p>Two recording electrodes 5 cm apart pick up the same action potential in four different axons. The latencies below are invented teaching values. Complete the velocity line (convert ms to s), run the code and report (a) the fastest velocity in m/s and (b) how many times faster the fastest axon is than the slowest.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>distance <span class="ot">&lt;-</span> <span class="fl">0.05</span>                      <span class="co"># metres between the two electrodes</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>latency  <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.8</span>, <span class="fl">2.5</span>, <span class="dv">10</span>, <span class="dv">50</span>)       <span class="co"># milliseconds, invented teaching values</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>velocity <span class="ot">&lt;-</span> distance <span class="sc">/</span> (___ <span class="sc">/</span> <span class="dv">1000</span>)   <span class="co"># m/s</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>velocity</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(velocity) <span class="sc">/</span> <span class="fu">min</span>(velocity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>62.5 m/s; (b) 62.5 times faster.</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>velocity <span class="ot">&lt;-</span> distance <span class="sc">/</span> (latency <span class="sc">/</span> <span class="dv">1000</span>)   <span class="co"># m/s</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>velocity</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(velocity) <span class="sc">/</span> <span class="fu">min</span>(velocity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>[1] 62.5 20.0  5.0  1.0
+[1] 62.5</code></pre>
+<p>The fastest value is in the range of a large myelinated vertebrate axon; the slowest is like a thin unmyelinated axon.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r3.-rate-code-in-a-data-frame" class="level3">
+<h3 class="anchored" data-anchor-id="r3.-rate-code-in-a-data-frame">R3. Rate code in a data frame</h3>
+<p>A sensory neuron is stimulated at six strengths. The firing rate and the height of its spikes are stored in a data frame (invented teaching values; at strength 1 the neuron did not fire, so spike height is <code>NA</code>). Run the code and answer:</p>
+<ol type="a">
+<li>What are the mean and the standard deviation of spike amplitude?</li>
+<li>How many stimulus strengths give a firing rate above 40 spikes/s?</li>
+<li>Which quantity carries the information about stimulus strength: spike amplitude or firing rate?</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rec <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">stimulus  =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),            <span class="co"># arbitrary units</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">rate      =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>, <span class="dv">25</span>, <span class="dv">41</span>, <span class="dv">58</span>, <span class="dv">70</span>),       <span class="co"># spikes per second</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">amplitude =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">98</span>, <span class="dv">100</span>, <span class="dv">99</span>, <span class="dv">101</span>, <span class="dv">100</span>)    <span class="co"># spike height, mV</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(rec<span class="sc">$</span>amplitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(rec<span class="sc">$</span>amplitude, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>strong <span class="ot">&lt;-</span> rec[rec<span class="sc">$</span>rate <span class="sc">&gt;</span> <span class="dv">40</span>, ]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(strong)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rec<span class="sc">$</span>stimulus, rec<span class="sc">$</span>rate, <span class="at">type =</span> <span class="st">"b"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Stimulus strength"</span>, <span class="at">ylab =</span> <span class="st">"Firing rate (spikes/s)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 99.6
+[1] 1.140175
+[1] 3</code></pre>
+<ol type="a">
+<li>Mean 99.6 mV, standard deviation 1.14 mV.</li>
+<li>3 (strengths 4, 5 and 6).</li>
+<li>Firing rate. It rises steadily with stimulus strength (the plot), while spike amplitude stays almost constant: action potentials are all-or-none.</li>
+</ol>
+<p><code>rec[rec$rate &gt; 40, ]</code> keeps the rows where the condition is <code>TRUE</code> and all columns.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r4.-counting-amino-acids-in-a-potassium-channel" class="level3">
+<h3 class="anchored" data-anchor-id="r4.-counting-amino-acids-in-a-potassium-channel">R4. Counting amino acids in a potassium channel</h3>
+<p>KcsA is a bacterial potassium channel whose structure was the first atomic view of a K⁺ channel pore. Its sequence below is copied from UniProt entry <a href="https://rest.uniprot.org/uniprotkb/P0A334.fasta">P0A334</a> (<em>Streptomyces lividans</em>). Run the code. How many amino acids long is KcsA, and which amino acid is most common?</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>kcsa <span class="ot">&lt;-</span> <span class="fu">paste0</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"MPPMLSGLLARLVKLLLGRHGSALHWRAAGAATVLLVIVLLAGSYLAVLAERGAPGAQLI"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"TYPRALWWSVETATTVGYGDLYPVTLWGRLVAVVVMVAGITSFGLVTAALATWFVGREQE"</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"RRGHFVRHSEKAAEEAYTRTTRALHERFDRLERMLDDNRR"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(kcsa)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>aa <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(kcsa, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">table</span>(aa), <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(counts, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>160 amino acids; leucine (L, 24 times) is most common.</p>
+<pre><code>[1] 160
+aa
+ L  A  R 
+24 22 17 </code></pre>
+<p><code>strsplit()</code> cuts the string into single letters and <code>table()</code> counts each letter.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r5.-finding-the-selectivity-filter" class="level3">
+<h3 class="anchored" data-anchor-id="r5.-finding-the-selectivity-filter">R5. Finding the selectivity filter</h3>
+<p>The narrow part of a K⁺ channel pore that lets K⁺ through but not Na⁺ is the <strong>selectivity filter</strong>. In K⁺ channels it contains the signature motif TVGYG. Using <code>kcsa</code> from R4, complete the code to search for <code>"TVGYG"</code>. At which position does the motif start?</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gregexpr</span>(<span class="st">"___"</span>, kcsa)[[<span class="dv">1</span>]][<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Position 75.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gregexpr</span>(<span class="st">"TVGYG"</span>, kcsa)[[<span class="dv">1</span>]][<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>[1] 75</code></pre>
+<p>This matches UniProt, which annotates residues 75–80 as the selectivity filter.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r6.-a-transmembrane-segment-is-hydrophobic" class="level3">
+<h3 class="anchored" data-anchor-id="r6.-a-transmembrane-segment-is-hydrophobic">R6. A transmembrane segment is hydrophobic</h3>
+<p>A helix that crosses the membrane is surrounded by lipid tails, so most of its amino acids are hydrophobic. UniProt annotates residues 28–50 of KcsA as its first transmembrane helix. Using <code>kcsa</code> from R4, run the code. What fraction of the residues is hydrophobic in (a) the transmembrane helix and (b) residues 128–150, part of the C-terminal region that lies in the cytoplasm?</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>hydrophobic <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"V"</span>, <span class="st">"I"</span>, <span class="st">"L"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>, <span class="st">"W"</span>, <span class="st">"C"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>frac_hydrophobic <span class="ot">&lt;-</span> <span class="cf">function</span>(s) {</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  aa <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(s, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(aa <span class="sc">%in%</span> hydrophobic)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>tm1  <span class="ot">&lt;-</span> <span class="fu">substr</span>(kcsa, <span class="dv">28</span>, <span class="dv">50</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>tail <span class="ot">&lt;-</span> <span class="fu">substr</span>(kcsa, <span class="dv">128</span>, <span class="dv">150</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>tm1</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>tail</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">frac_hydrophobic</span>(tm1), <span class="dv">2</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">frac_hydrophobic</span>(tail), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>0.78; (b) 0.26.</li>
+</ol>
+<pre><code>[1] "AAGAATVLLVIVLLAGSYLAVLA"
+[1] "HSEKAAEEAYTRTTRALHERFDR"
+[1] 0.78
+[1] 0.26</code></pre>
+<p><code>aa %in% hydrophobic</code> gives <code>TRUE</code>/<code>FALSE</code> for each letter, and the mean of <code>TRUE</code>/<code>FALSE</code> values is the fraction <code>TRUE</code>. The cytoplasmic stretch is rich in charged residues (E, K, R, H, D) instead. Programs that predict transmembrane segments slide a window like this along the whole sequence.</p>
 </div>
 </div>
 </div>

@@ -16,7 +16,7 @@ explain an exchange constraint using size and distance; recognise the four
 primary tissue categories from described features; construct a negative-feedback
 explanation; and distinguish an individual's response from evolutionary change.
 Use the [slides](lec.qmd), then the [exercises](exercise.qmd) and
-[self-check quiz](quiz.qmd). No programming is needed.
+[self-check quiz](quiz.qmd). Each exercise page ends with short, optional R tasks.
 
 ## From cells to an organism
 

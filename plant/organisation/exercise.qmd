@@ -486,4 +486,220 @@ in the elongation zone, where cells expand; the meristem still produces the
 same number of cells.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio. Only base R is used (no packages), and all data
+are typed into the code.
+
+### R1. Cell lengths in two zones
+
+The lengths (µm) of eight neighbouring cells were measured in the meristem and
+in the elongation zone of one root (invented teaching values). Complete the
+second `mean()` line, run the code and report how many times longer the average
+elongation-zone cell is than the average meristem cell.
+
+```r
+meristem   <- c(9, 11, 10, 12, 8, 10, 11, 9)
+elongation <- c(35, 60, 85, 110, 140, 150, 155, 157)
+mean(meristem)
+mean(___)
+mean(elongation) / mean(meristem)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+11.15 times longer.
+
+```r
+mean(meristem)
+mean(elongation)
+mean(elongation) / mean(meristem)
+```
+
+```
+[1] 10
+[1] 111.5
+[1] 11.15
+```
+
+The root lengthens mainly because cells expand after they leave the meristem,
+not because they divide there.
+:::
+
+### R2. Where does elongation start?
+
+One cell file is measured at increasing distance from the root tip (invented
+teaching values). Complete the subsetting line so that `elongated` keeps the
+cells longer than 50 µm. Run the code and report (a) how many cells are longer
+than 50 µm and (b) the distance from the tip of the first such cell.
+
+```r
+root <- data.frame(
+  position = c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000),  # µm from tip
+  length   = c(10, 11, 10, 14, 30, 62, 105, 140, 152, 155)          # cell length, µm
+)
+elongated <- root[root$length ___ 50, ]
+nrow(elongated)
+min(elongated$position)
+plot(root$position, root$length, type = "b",
+     xlab = "Distance from root tip (µm)", ylab = "Cell length (µm)")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(a) 5 cells; (b) 600 µm from the tip.
+
+```r
+elongated <- root[root$length > 50, ]
+nrow(elongated)
+min(elongated$position)
+```
+
+```
+[1] 5
+[1] 600
+```
+
+The plot shows short cells near the tip, a steep rise (elongation zone) and a
+plateau where cells have reached their final length.
+:::
+
+### R3. Surface area and volume of a growing cell
+
+Treat a root cell as a cylinder of radius $r$ and length $L$: surface area
+$= 2\pi r L + 2\pi r^2$ and volume $= \pi r^2 L$. Compare a young meristem cell
+($L$ = 10 µm) with an elongated cell ($L$ = 150 µm), both with $r$ = 5 µm
+(invented teaching dimensions). Run the code and answer:
+
+a. What is the surface-to-volume ratio (µm⁻¹) of each cell?
+b. How many times larger is the volume of the elongated cell?
+c. Which cell has less surface membrane per unit volume to serve?
+
+```r
+r <- c(5, 5)          # radius, µm
+L <- c(10, 150)       # length, µm: meristem cell, elongated cell
+area   <- 2 * pi * r * L + 2 * pi * r^2
+volume <- pi * r^2 * L
+round(area / volume, 3)
+round(volume[2] / volume[1], 1)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 0.600 0.413
+[1] 15
+```
+
+a. 0.600 µm⁻¹ for the meristem cell, 0.413 µm⁻¹ for the elongated cell.
+b. 15 times larger.
+c. The elongated cell. Much of its extra volume is the central vacuole, so the
+   cell gets large without making 15 times more cytoplasm.
+:::
+
+### R4. A nuclear-encoded chloroplast protein
+
+The small subunit of Rubisco works inside the chloroplast but is encoded in the
+nucleus. It is made in the cytosol with an N-terminal **transit peptide** that
+directs it into the chloroplast and is then cut off. The sequence below is
+copied from UniProt entry
+[P10795](https://rest.uniprot.org/uniprotkb/P10795.fasta) (RBCS-1A,
+*Arabidopsis thaliana*), which annotates residues 1–54 as the transit peptide.
+Complete the `substr()` line for the mature protein, run the code and report
+(a) the length of the full protein and (b) the length of the mature protein
+in the chloroplast.
+
+```r
+rbcs <- paste0(
+  "MASSMLSSATMVASPAQATMVAPFNGLKSSAAFPATRKANNDITSITSNGGRVNCMQVWP",
+  "PIGKKKFETLSYLPDLTDSELAKEVDYLIRNKWIPCVEFELEHGFVYREHGNSPGYYDGR",
+  "YWTMWKLPLFGCTDSAQVLKEVEECKKEYPNAFIRIIGFDNTRQVQCISFIAYKPPSFTG")
+nchar(rbcs)
+transit <- substr(rbcs, 1, 54)
+mature  <- substr(rbcs, ___, nchar(rbcs))
+nchar(mature)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(a) 180 amino acids; (b) 126 amino acids.
+
+```r
+mature  <- substr(rbcs, 55, nchar(rbcs))
+nchar(mature)
+```
+
+```
+[1] 180
+[1] 126
+```
+:::
+
+### R5. Composition of the transit peptide
+
+Chloroplast transit peptides are typically rich in serine (S) and threonine
+(T). Using `transit` and `mature` from R4, run the code. What fraction of the
+residues is S or T in (a) the transit peptide and (b) the mature protein?
+
+```r
+frac_ST <- function(s) {
+  aa <- strsplit(s, "")[[1]]
+  mean(aa %in% c("S", "T"))
+}
+round(frac_ST(transit), 2)
+round(frac_ST(mature), 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(a) 0.26; (b) 0.1 (R drops the trailing zero of 0.10).
+
+```
+[1] 0.26
+[1] 0.1
+```
+
+The transit peptide has more than twice the S + T fraction of the mature
+protein, as expected for a chloroplast-targeting sequence.
+:::
+
+### R6. Translating and GC content
+
+Below is a made-up DNA sequence and a small codon table containing only the
+codons it needs. Run the code and report (a) the protein sequence (one-letter
+code) and (b) the GC content in percent. Compare (a) with the first amino acids
+of `rbcs` in R4.
+
+```r
+dna <- "ATGGCTTCCTCTATGCTC"   # a made-up DNA sequence
+code <- c(ATG = "M", GCT = "A", TCC = "S", TCT = "S", CTC = "L")
+starts <- seq(1, nchar(dna), by = 3)
+codons <- substring(dna, starts, starts + 2)
+codons
+paste(code[codons], collapse = "")
+gc <- strsplit(dna, "")[[1]]
+round(100 * mean(gc %in% c("G", "C")), 1)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(a) MASSML; (b) 50 %.
+
+```
+[1] "ATG" "GCT" "TCC" "TCT" "ATG" "CTC"
+[1] "MASSML"
+[1] 50
+```
+
+MASSML is the start of RBCS-1A. Note that S is coded by two different codons
+(TCC and TCT): the genetic code is redundant, so one protein sequence can be
+written by many DNA sequences.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

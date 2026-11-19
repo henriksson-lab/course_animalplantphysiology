@@ -562,4 +562,233 @@ cost over that height, according to the panel?
 0.98 MPa (0.0098 MPa per metre × 100 m), before any loss due to flow.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio; it uses base R only (no packages), and all data
+are typed into the code.
+
+### R1. Water potential of four cells
+
+Four cells (invented teaching values) have the solute and pressure potentials
+below. Run the code to calculate Ψ = Ψs + Ψp for each cell. Which cell has
+the lowest Ψ, and which cells would *lose* water when placed in a solution
+with Ψ = −0.4 MPa?
+
+```r
+cell  <- c("A", "B", "C", "D")
+psi_s <- c(-0.8, -0.7, -1.2, -0.5)   # MPa
+psi_p <- c( 0.2,  0.5,  0.3,  0.4)   # MPa
+psi <- psi_s + psi_p
+psi
+cell[which.min(psi)]
+psi > -0.4    # TRUE = cell Ψ is higher than the solution
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+psi
+## [1] -0.6 -0.2 -0.9 -0.1
+cell[which.min(psi)]
+## [1] "C"
+psi > -0.4
+## [1] FALSE  TRUE FALSE  TRUE
+```
+
+Cell C has the lowest Ψ (−0.9 MPa). Cells B and D have a higher Ψ than the
+solution, so they lose water; A and C take up water.
+:::
+
+### R2. Solute potential with the van 't Hoff equation
+
+Complete the code to calculate Ψs = −*i c R T* at 25 °C for sucrose (*i* = 1)
+and NaCl (*i* = 2) at 0.1, 0.2 and 0.3 mol L⁻¹. What is Ψs of 0.3 mol L⁻¹
+sucrose, and which sucrose concentration has the same Ψs as 0.1 mol L⁻¹ NaCl?
+
+```r
+R <- 0.008314              # L MPa mol^-1 K^-1
+T <- 298                   # K
+conc <- c(0.1, 0.2, 0.3)   # mol L^-1
+psi_s_sucrose <- -1 * conc * R * T
+psi_s_nacl    <- ___       # complete: NaCl gives two particles
+round(psi_s_sucrose, 2)
+round(psi_s_nacl, 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+psi_s_nacl <- -2 * conc * R * T
+round(psi_s_sucrose, 2)
+## [1] -0.25 -0.50 -0.74
+round(psi_s_nacl, 2)
+## [1] -0.50 -0.99 -1.49
+```
+
+0.3 mol L⁻¹ sucrose has Ψs = −0.74 MPa. 0.2 mol L⁻¹ sucrose has the same Ψs
+(−0.50 MPa) as 0.1 mol L⁻¹ NaCl.
+:::
+
+### R3. Transpiration rate per leaf area
+
+Eight pots were weighed before and after 30 min in still or moving air
+(invented teaching data, the same values as `data/plant-water.csv`). An
+unplanted pot lost 0.1 g, which is subtracted as soil evaporation. Every pot
+has 50 cm² of leaf. Run the code. What is the mean transpiration rate (mg cm⁻²
+min⁻¹) in still air and in moving air?
+
+```r
+pots <- data.frame(
+  pot   = c("W01", "W02", "W03", "W04", "W05", "W06", "W07", "W08"),
+  air   = c("still", "still", "still", "still",
+            "moving", "moving", "moving", "moving"),
+  start = c(121, 122, 123, 124, 125, 126, 127, 128),        # g
+  end   = c(120.2, 121, 121.8, 123, 123.4, 124, 124.6, 126)  # g
+)
+blank   <- 0.1   # g lost by the unplanted pot
+area    <- 50    # cm^2 leaf area per pot
+minutes <- 30
+pots$loss <- pots$start - pots$end - blank
+pots$rate <- pots$loss * 1000 / (area * minutes)   # mg cm^-2 min^-1
+pots
+tapply(pots$rate, pots$air, mean)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+pots
+##   pot    air start   end loss      rate
+## 1 W01  still   121 120.2  0.7 0.4666667
+## 2 W02  still   122 121.0  0.9 0.6000000
+## 3 W03  still   123 121.8  1.1 0.7333333
+## 4 W04  still   124 123.0  0.9 0.6000000
+## 5 W05 moving   125 123.4  1.5 1.0000000
+## 6 W06 moving   126 124.0  1.9 1.2666667
+## 7 W07 moving   127 124.6  2.3 1.5333333
+## 8 W08 moving   128 126.0  1.9 1.2666667
+tapply(pots$rate, pots$air, mean)
+##   moving    still 
+## 1.266667 0.600000 
+```
+
+Still air: 0.60 mg cm⁻² min⁻¹. Moving air: 1.27 mg cm⁻² min⁻¹.
+:::
+
+### R4. Spread, ratio and a boxplot
+
+Continue with `pots` from R3. Run the code. Give the standard deviation of
+the rate in each group, and by what factor moving air increases the mean rate.
+In the boxplot, do the two boxes overlap (yes/no)?
+
+```r
+means <- tapply(pots$rate, pots$air, mean)
+sds   <- tapply(pots$rate, pots$air, sd)
+round(sds, 2)
+round(means["moving"] / means["still"], 2)
+boxplot(rate ~ air, data = pots,
+        xlab = "Air", ylab = "Transpiration (mg cm-2 min-1)")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+round(sds, 2)
+## moving  still 
+##   0.22   0.11 
+round(means["moving"] / means["still"], 2)
+## moving 
+##   2.11 
+```
+
+SD is 0.22 (moving) and 0.11 (still) mg cm⁻² min⁻¹; moving air increases the
+mean rate 2.11-fold. The boxes do not overlap: the lowest moving-air pot
+(1.00) is above the highest still-air pot (0.73).
+:::
+
+### R5. Finding the NPA motifs of an aquaporin
+
+Aquaporins have two copies of the Asn-Pro-Ala (NPA) motif, which line the
+water pore. The code holds the real protein sequence of Arabidopsis aquaporin
+PIP2;1 (UniProt P43286). Run it. How long is the protein, and at which
+positions do the NPA motifs start?
+
+```r
+# Arabidopsis aquaporin PIP2;1, UniProt P43286
+pip21 <- paste0(
+  "MAKDVEAVPGEGFQTRDYQDPPPAPFIDGAELKKWSFYRAVIAEFVATLLFLYITVLTVI",
+  "GYKIQSDTDAGGVDCGGVGILGIAWAFGGMIFILVYCTAGISGGHINPAVTFGLFLARKV",
+  "SLPRALLYIIAQCLGAICGVGFVKAFQSSYYTRYGGGANSLADGYSTGTGLAAEIIGTFV",
+  "LVYTVFSATDPKRSARDSHVPVLAPLPIGFAVFMVHLATIPITGTGINPARSFGAAVIYN",
+  "KSKPWDDHWIFWVGPFIGAAIAAFYHQFVLRASGSKSLGSFRSAANV")
+nchar(pip21)
+gregexpr("NPA", pip21)[[1]]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+nchar(pip21)
+## [1] 287
+gregexpr("NPA", pip21)[[1]]
+## [1] 107 228
+## attr(,"match.length")
+## [1] 3 3
+## attr(,"index.type")
+## [1] "chars"
+## attr(,"useBytes")
+## [1] TRUE
+```
+
+The protein has 287 amino acids, and the NPA motifs start at positions 107
+and 228 (the same positions UniProt annotates as NPA 1 and NPA 2).
+:::
+
+### R6. GC content and translation of a short DNA string
+
+The code holds a made-up DNA sequence and a small codon lookup that covers
+only the codons in it. Complete the GC-content line, then run the code. What
+is the GC content (%), what protein does the DNA encode, and does it contain
+an NPA motif (TRUE/FALSE)?
+
+```r
+dna <- "ATGGGTCATATTAACCCGGCTGTTACCTAA"   # a made-up DNA sequence
+bases <- strsplit(dna, "")[[1]]
+gc <- 100 * sum(bases == "G" | bases == ___) / length(bases)   # complete
+round(gc, 1)
+codon_table <- c(ATG = "M", GGT = "G", CAT = "H", ATT = "I", AAC = "N",
+                 CCG = "P", GCT = "A", GTT = "V", ACC = "T", TAA = "*")
+codons <- substring(dna, seq(1, nchar(dna) - 2, by = 3),
+                         seq(3, nchar(dna), by = 3))
+codons
+protein <- paste(codon_table[codons], collapse = "")
+protein
+grepl("NPA", protein)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+gc <- 100 * sum(bases == "G" | bases == "C") / length(bases)
+round(gc, 1)
+## [1] 43.3
+codons
+##  [1] "ATG" "GGT" "CAT" "ATT" "AAC" "CCG" "GCT" "GTT" "ACC" "TAA"
+protein
+## [1] "MGHINPAVT*"
+grepl("NPA", protein)
+## [1] TRUE
+```
+
+GC content is 43.3 %. The DNA encodes MGHINPAVT followed by a stop codon (`*`),
+and it contains an NPA motif (TRUE). After the start Met, GHINPAVT matches
+positions 104–111 of PIP2;1 in R5.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

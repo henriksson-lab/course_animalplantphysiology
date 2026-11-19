@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -277,6 +312,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/organisation/exercise.html#explore-a1-scaling" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Diffusion limits body size</span></a>
   </div>
@@ -324,6 +365,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/energy-temperature/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/energy-temperature/exercise.html#explore-a2-thermal" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Endotherm versus ectotherm</span></a>
   </div>
@@ -361,6 +408,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../animal/gas-circulation/exercise.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../animal/gas-circulation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -412,6 +465,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/water-excretion/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/water-excretion/exercise.html#explore-a4-tonicity" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Tonicity and cell volume</span></a>
   </div>
@@ -455,6 +514,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../animal/integration/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../animal/integration/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,6 +594,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../plant/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../plant/organisation/exercise.html#explore-p1-cellgrowth" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Growth of a walled cell</span></a>
   </div>
@@ -572,6 +643,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/water-nutrition/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/water-nutrition/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -623,6 +700,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../plant/carbon-metabolism/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../plant/carbon-metabolism/exercise.html#explore-p3-lightcurve" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Light-response curve</span></a>
   </div>
@@ -660,6 +743,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/development/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/development/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -707,6 +796,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/stress-biotechnology/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/stress-biotechnology/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -878,6 +973,15 @@ window.Quarto = {
   <li><a href="#e6" id="toc-e6" class="nav-link" data-scroll-target="#e6">E6</a></li>
   <li><a href="#e7" id="toc-e7" class="nav-link" data-scroll-target="#e7">E7</a></li>
   <li><a href="#e8" id="toc-e8" class="nav-link" data-scroll-target="#e8">E8</a></li>
+  </ul></li>
+  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises">R and bioinformatics</a>
+  <ul class="collapse">
+  <li><a href="#r1.-cardiac-output-for-five-people" id="toc-r1.-cardiac-output-for-five-people" class="nav-link" data-scroll-target="#r1.-cardiac-output-for-five-people">R1. Cardiac output for five people</a></li>
+  <li><a href="#r2.-the-fick-principle-in-a-data-frame" id="toc-r2.-the-fick-principle-in-a-data-frame" class="nav-link" data-scroll-target="#r2.-the-fick-principle-in-a-data-frame">R2. The Fick principle in a data frame</a></li>
+  <li><a href="#r3.-a-haemoglobin-dissociation-curve" id="toc-r3.-a-haemoglobin-dissociation-curve" class="nav-link" data-scroll-target="#r3.-a-haemoglobin-dissociation-curve">R3. A haemoglobin dissociation curve</a></li>
+  <li><a href="#r4.-where-does-a-right-shift-matter-most" id="toc-r4.-where-does-a-right-shift-matter-most" class="nav-link" data-scroll-target="#r4.-where-does-a-right-shift-matter-most">R4. Where does a right shift matter most?</a></li>
+  <li><a href="#r5.-the-sickle-cell-mutation" id="toc-r5.-the-sickle-cell-mutation" class="nav-link" data-scroll-target="#r5.-the-sickle-cell-mutation">R5. The sickle-cell mutation</a></li>
+  <li><a href="#r6.-counting-amino-acids-in-β-globin" id="toc-r6.-counting-amino-acids-in-β-globin" class="nav-link" data-scroll-target="#r6.-counting-amino-acids-in-β-globin">R6. Counting amino acids in β-globin</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1712,6 +1816,219 @@ Answer
 <div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Ratio 0.50: blood out 19.9 kPa, 45 % taken. Ratio 2.00: blood out 10.6 kPa, 86 % taken. a: slow blood almost reaches the inlet water’s PO₂, while fast blood strips more O₂ from the water but leaves less saturated. Fish adjust ventilation and lamellar perfusion to match the two.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="r-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="r-exercises">R and bioinformatics</h2>
+<p>Run the code in R or RStudio. Only base R is used (no packages), and all data are typed into the code.</p>
+<section id="r1.-cardiac-output-for-five-people" class="level3">
+<h3 class="anchored" data-anchor-id="r1.-cardiac-output-for-five-people">R1. Cardiac output for five people</h3>
+<p>The heart rates and stroke volumes below are invented teaching numbers for five resting people. Run the code and report (a) the mean cardiac output and (b) its standard deviation (rounded to two decimals).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>hr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">62</span>, <span class="dv">75</span>, <span class="dv">58</span>, <span class="dv">80</span>, <span class="dv">70</span>)              <span class="co"># heart rate, beats per min</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sv <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.070</span>, <span class="fl">0.065</span>, <span class="fl">0.080</span>, <span class="fl">0.060</span>, <span class="fl">0.072</span>) <span class="co"># stroke volume, L per beat</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>co <span class="ot">&lt;-</span> hr <span class="sc">*</span> sv                             <span class="co"># cardiac output, L per min</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>co</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(co)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sd</span>(co), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 4.340 4.875 4.640 4.800 5.040
+[1] 4.739
+[1] 0.27</code></pre>
+<ol type="a">
+<li>4.739 L min⁻¹. b. 0.27 L min⁻¹. R multiplies the two vectors element by element, giving one cardiac output per person.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r2.-the-fick-principle-in-a-data-frame" class="level3">
+<h3 class="anchored" data-anchor-id="r2.-the-fick-principle-in-a-data-frame">R2. The Fick principle in a data frame</h3>
+<p>The invented values below describe one person at rest, walking and running. Complete the line marked <code>___</code> so that it calculates O₂ consumption with the Fick principle, <span class="math inline">\(\dot V_{\rm O_2}=Q\times(C_a-C_v)\)</span>. Report the O₂ consumption while running and how many times larger it is than at rest.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">state =</span> <span class="fu">c</span>(<span class="st">"rest"</span>, <span class="st">"walking"</span>, <span class="st">"running"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">co    =</span> <span class="fu">c</span>(<span class="fl">5.0</span>, <span class="fl">9.0</span>, <span class="fl">18.0</span>),     <span class="co"># cardiac output, L min^-1</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">CaO2  =</span> <span class="fu">c</span>(<span class="dv">195</span>, <span class="dv">195</span>, <span class="dv">195</span>),      <span class="co"># arterial O2 content, mL O2 L^-1</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">CvO2  =</span> <span class="fu">c</span>(<span class="dv">145</span>, <span class="dv">115</span>, <span class="dv">55</span>)        <span class="co"># venous O2 content, mL O2 L^-1</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>vo2 <span class="ot">&lt;-</span> ___</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>d</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>vo2[d<span class="sc">$</span>state <span class="sc">==</span> <span class="st">"running"</span>] <span class="sc">/</span> d<span class="sc">$</span>vo2[d<span class="sc">$</span>state <span class="sc">==</span> <span class="st">"rest"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>vo2 <span class="ot">&lt;-</span> d<span class="sc">$</span>co <span class="sc">*</span> (d<span class="sc">$</span>CaO2 <span class="sc">-</span> d<span class="sc">$</span>CvO2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>    state co CaO2 CvO2  vo2
+1    rest  5  195  145  250
+2 walking  9  195  115  720
+3 running 18  195   55 2520
+[1] 10.08</code></pre>
+<p>Running: 2520 mL O₂ min⁻¹, 10.08 times the resting value. The rise comes from both a larger cardiac output and a larger arterial–venous O₂ difference.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r3.-a-haemoglobin-dissociation-curve" class="level3">
+<h3 class="anchored" data-anchor-id="r3.-a-haemoglobin-dissociation-curve">R3. A haemoglobin dissociation curve</h3>
+<p>The Hill equation <span class="math inline">\(S=P^n/(P^n+P_{50}^n)\)</span> gives an approximate sigmoid dissociation curve. Use <span class="math inline">\(P_{50}=3.5\)</span> kPa and <span class="math inline">\(n=2.7\)</span>, approximate textbook values for human haemoglobin at pH 7.4 and 37 °C. Run the code and report the saturation (%) at an arterial <span class="math inline">\(P_{\rm O_2}\)</span> of 13.3 kPa, at a resting tissue <span class="math inline">\(P_{\rm O_2}\)</span> of 5.3 kPa, and the percentage-point difference (the fraction unloaded).</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>hill <span class="ot">&lt;-</span> <span class="cf">function</span>(po2, p50, n) po2<span class="sc">^</span>n <span class="sc">/</span> (po2<span class="sc">^</span>n <span class="sc">+</span> p50<span class="sc">^</span>n)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>s_lung   <span class="ot">&lt;-</span> <span class="fu">hill</span>(<span class="fl">13.3</span>, <span class="at">p50 =</span> <span class="fl">3.5</span>, <span class="at">n =</span> <span class="fl">2.7</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>s_tissue <span class="ot">&lt;-</span> <span class="fu">hill</span>(<span class="fl">5.3</span>,  <span class="at">p50 =</span> <span class="fl">3.5</span>, <span class="at">n =</span> <span class="fl">2.7</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> s_lung)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> s_tissue)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> (s_lung <span class="sc">-</span> s_tissue))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">hill</span>(x, <span class="at">p50 =</span> <span class="fl">3.5</span>, <span class="at">n =</span> <span class="fl">2.7</span>), <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">15</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"PO2 (kPa)"</span>, <span class="at">ylab =</span> <span class="st">"Saturation (%)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 97
+[1] 75
+[1] 22</code></pre>
+<p>97 % at 13.3 kPa, 75 % at 5.3 kPa, so 22 percentage points are unloaded. The plot shows the S-shaped curve: flat above about 10 kPa and steep between 2 and 6 kPa. The values agree closely with the <strong>Rest</strong> preset in E1.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r4.-where-does-a-right-shift-matter-most" class="level3">
+<h3 class="anchored" data-anchor-id="r4.-where-does-a-right-shift-matter-most">R4. Where does a right shift matter most?</h3>
+<p>A right shift (for example lower pH) raises <span class="math inline">\(P_{50}\)</span> to 4.5 kPa. Run the code, which compares the two curves at six <span class="math inline">\(P_{\rm O_2}\)</span> values. At which of these <span class="math inline">\(P_{\rm O_2}\)</span> values is the drop in saturation caused by the shift largest?</p>
+<ol type="a">
+<li>2 kPa b. 4 kPa c.&nbsp;8 kPa d.&nbsp;12 kPa</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>hill <span class="ot">&lt;-</span> <span class="cf">function</span>(po2, p50, n) po2<span class="sc">^</span>n <span class="sc">/</span> (po2<span class="sc">^</span>n <span class="sc">+</span> p50<span class="sc">^</span>n)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>po2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">12</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>normal  <span class="ot">&lt;-</span> <span class="fu">hill</span>(po2, <span class="at">p50 =</span> <span class="fl">3.5</span>, <span class="at">n =</span> <span class="fl">2.7</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>shifted <span class="ot">&lt;-</span> <span class="fu">hill</span>(po2, <span class="at">p50 =</span> <span class="fl">4.5</span>, <span class="at">n =</span> <span class="fl">2.7</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> normal)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> shifted)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>po2[<span class="fu">which.max</span>(normal <span class="sc">-</span> shifted)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 18 59 81 90 94 97
+[1] 10 42 68 83 90 93
+[1] 4</code></pre>
+<ol start="2" type="a">
+<li>At 4 kPa saturation falls from 59 % to 42 % (17 points); at 12 kPa it falls by only 4 points. The right shift releases O₂ mainly at tissue-like <span class="math inline">\(P_{\rm O_2}\)</span>, while loading in the lung is hardly affected.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r5.-the-sickle-cell-mutation" class="level3">
+<h3 class="anchored" data-anchor-id="r5.-the-sickle-cell-mutation">R5. The sickle-cell mutation</h3>
+<p>The DNA string below is the start of the coding sequence of human β-globin (<em>HBB</em>), copied from NCBI RefSeq NM_000518.5. The code splits it into codons and translates them with a small codon table that contains only the codons needed here. Run it and answer:</p>
+<ol type="a">
+<li>What is the protein sequence?</li>
+<li>Which codon encodes amino acid 6 of β-globin? (The first methionine is removed from the mature protein, so amino acid 6 is codon 7.)</li>
+<li>In sickle-cell disease codon 7 is changed from GAG to GTG. Complete the <code>___</code> line, run the last part, and give the new protein sequence. Which amino acid replaces which?</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>hbb <span class="ot">&lt;-</span> <span class="st">"ATGGTGCATCTGACTCCTGAGGAGAAG"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>codons <span class="ot">&lt;-</span> <span class="fu">substring</span>(hbb, <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">nchar</span>(hbb), <span class="at">by =</span> <span class="dv">3</span>), <span class="fu">seq</span>(<span class="dv">3</span>, <span class="fu">nchar</span>(hbb), <span class="at">by =</span> <span class="dv">3</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>codons</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>code <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">ATG =</span> <span class="st">"M"</span>, <span class="at">GTG =</span> <span class="st">"V"</span>, <span class="at">CAT =</span> <span class="st">"H"</span>, <span class="at">CTG =</span> <span class="st">"L"</span>, <span class="at">ACT =</span> <span class="st">"T"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">CCT =</span> <span class="st">"P"</span>, <span class="at">GAG =</span> <span class="st">"E"</span>, <span class="at">AAG =</span> <span class="st">"K"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(code[codons], <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>codons[<span class="dv">7</span>]</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>sickle <span class="ot">&lt;-</span> codons</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sickle[<span class="dv">7</span>] <span class="ot">&lt;-</span> ___</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(code[sickle], <span class="at">collapse =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>sickle[<span class="dv">7</span>] <span class="ot">&lt;-</span> <span class="st">"GTG"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>[1] "ATG" "GTG" "CAT" "CTG" "ACT" "CCT" "GAG" "GAG" "AAG"
+[1] "MVHLTPEEK"
+[1] "GAG"
+[1] "MVHLTPVEK"</code></pre>
+<ol type="a">
+<li>MVHLTPEEK. b. GAG (glutamate, E). c.&nbsp;MVHLTPVEK: glutamate (E) is replaced by valine (V). A single base change, A→T in the middle of the codon, swaps a charged amino acid for a hydrophobic one, which makes deoxygenated HbS molecules stick together into fibres.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r6.-counting-amino-acids-in-β-globin" class="level3">
+<h3 class="anchored" data-anchor-id="r6.-counting-amino-acids-in-β-globin">R6. Counting amino acids in β-globin</h3>
+<p>The protein sequence below is human haemoglobin subunit β, copied from UniProt P68871. Run the code and report (a) the length of the chain, (b) the number of histidines (H) and (c) the number of glutamates (E). (d) How many glutamates does the sickle-cell β chain (HbS, from R5) have?</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>hbb <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPK"</span>,</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>              <span class="st">"VKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFG"</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">"KEFTPPVQAAYQKVVAGVANALAHKYH"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(hbb)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>aa <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(hbb, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>counts <span class="ot">&lt;-</span> <span class="fu">table</span>(aa)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>counts[<span class="st">"H"</span>]</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>counts[<span class="st">"E"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 147
+H 
+9 
+E 
+8 </code></pre>
+<ol type="a">
+<li>147 amino acids (including the initial methionine). b. 9 histidines; one of them binds the haem iron in each subunit. c.&nbsp;8 glutamates. d.&nbsp;7, because one glutamate is replaced by valine.</li>
+</ol>
 </div>
 </div>
 </div>

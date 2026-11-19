@@ -517,4 +517,200 @@ Press **Cold** (disturbance −0.30 °C min⁻¹). What is the deviation at minu
 it is heating (for example shivering), opposing the fall in temperature.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code below in R or RStudio. Only base R is used (no packages), and all
+data are typed directly into the code.
+
+### R1. Surface area to volume of cubes
+
+Complete the last line so that R prints the surface-area-to-volume ratio of
+each cube, then run the code. What ratio (mm⁻¹) does R give for the 4 mm cube?
+
+```r
+L <- c(1, 2, 4, 8)          # side length of each cube (mm)
+area   <- 6 * L^2           # surface area (mm^2)
+volume <- L^3               # volume (mm^3)
+ratio  <- ____ / ____       # surface-area-to-volume ratio (mm^-1)
+ratio
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+L <- c(1, 2, 4, 8)          # side length of each cube (mm)
+area   <- 6 * L^2           # surface area (mm^2)
+volume <- L^3               # volume (mm^3)
+ratio  <- area / volume     # surface-area-to-volume ratio (mm^-1)
+ratio
+```
+
+```
+[1] 6.00 3.00 1.50 0.75
+```
+
+1.5 mm⁻¹. Each doubling of side length halves the ratio (6/L).
+:::
+
+### R2. Diffusion time grows with distance squared
+
+Diffusion time is proportional to the square of distance. Run the code. How
+many times longer does diffusion over 100 µm take than over 10 µm?
+
+```r
+d <- c(1, 10, 100)          # diffusion distance (micrometres)
+t_rel <- d^2 / d[1]^2       # diffusion time relative to 1 micrometre
+t_rel
+t_rel[3] / t_rel[2]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1]     1   100 10000
+[1] 100
+```
+
+100 times longer: ten times the distance gives one hundred times the time.
+:::
+
+### R3. Mean and spread of body temperature
+
+The values are invented teaching numbers: eight readings of a resting
+person's core temperature (°C). Run the code and report (a) the mean,
+(b) the standard deviation rounded to two decimals, and (c) how many
+readings lie outside 36.8–37.2 °C.
+
+```r
+temp <- c(36.8, 37.1, 36.9, 37.4, 37.0, 36.6, 37.2, 37.0)
+mean(temp)
+round(sd(temp), 2)
+sum(temp < 36.8 | temp > 37.2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 37
+[1] 0.24
+[1] 2
+```
+
+a. 37 °C. b. 0.24 °C. c. 2 readings (36.6 and 37.4 °C). The variable
+fluctuates around the set point rather than being perfectly constant.
+:::
+
+### R4. A disturbance and its correction
+
+Invented teaching numbers: body temperature recorded each minute during and
+after a short bout of exercise. Complete the subsetting line so that `high`
+keeps only the rows with a temperature above 37.5 °C, then run the code.
+
+a. How many readings are above 37.5 °C?
+b. At which minute is the temperature highest?
+
+```r
+rec <- data.frame(
+  minute = 0:9,
+  temp   = c(37.0, 37.3, 37.6, 37.8, 37.7, 37.5, 37.3, 37.2, 37.1, 37.0)
+)
+high <- rec[rec$temp ____ 37.5, ]
+high
+nrow(high)
+rec$minute[which.max(rec$temp)]
+plot(rec$minute, rec$temp, type = "b",
+     xlab = "Time (min)", ylab = "Body temperature (°C)")
+abline(h = 37, lty = 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+high <- rec[rec$temp > 37.5, ]
+```
+
+```
+  minute temp
+3      2 37.6
+4      3 37.8
+5      4 37.7
+[1] 3
+[1] 3
+```
+
+a. 3 readings. b. Minute 3. The plot shows the rise and the return towards
+the dashed 37 °C line, as expected when negative feedback opposes a deviation.
+:::
+
+### R5. A log–log slope with `lm`
+
+For cubes, area grows more slowly than volume. Fit a straight line to
+log₁₀(area) against log₁₀(volume). What is the slope (rounded to three
+decimals)?
+
+a. 0.333  b. 0.667  c. 1.000  d. 1.500
+
+```r
+L <- c(1, 2, 4, 8, 16)
+area   <- 6 * L^2
+volume <- L^3
+fit <- lm(log10(area) ~ log10(volume))
+round(coef(fit), 3)
+plot(log10(volume), log10(area))
+abline(fit)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+  (Intercept) log10(volume) 
+        0.778         0.667 
+```
+
+b. 0.667, that is 2/3: area ∝ volume^(2/3). The intercept 0.778 is
+log₁₀(6). A slope below 1 on a log–log plot means the surface available per
+unit volume falls as size increases.
+:::
+
+### R6. Glycine in collagen (bioinformatics)
+
+Collagen, the main fibrous protein of connective-tissue matrix, has a repeating
+Gly–X–Y pattern. The string below is residues 181–240 of human collagen
+alpha-1(I), copied from UniProt
+[P02452](https://rest.uniprot.org/uniprotkb/P02452.fasta) (one letter per
+amino acid; G = glycine). Run the code.
+
+a. What fraction of the residues is glycine (three decimals)?
+b. Are all spacings between consecutive glycines equal to 3 (yes/no)?
+
+```r
+col1 <- "MGPSGPRGLPGPPGAPGPQGFQGPPGEPGEPGASGPMGPRGPPGPPGKNGDDGEAGKPGR"
+aa <- strsplit(col1, "")[[1]]   # split into single letters
+length(aa)
+sum(aa == "G")
+round(mean(aa == "G"), 3)
+g_pos <- gregexpr("G", col1)[[1]]   # positions of each G
+diff(as.vector(g_pos))
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 60
+[1] 20
+[1] 0.333
+ [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+```
+
+a. 0.333 (20 of 60). b. Yes: glycine is every third residue. The small
+glycine fits in the centre of the collagen triple helix, which is why a
+regular sequence pattern underlies the strength of tendon and bone matrix.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

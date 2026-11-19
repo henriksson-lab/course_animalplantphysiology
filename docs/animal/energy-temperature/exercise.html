@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -277,6 +312,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/organisation/exercise.html#explore-a1-scaling" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Diffusion limits body size</span></a>
   </div>
@@ -324,6 +365,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/energy-temperature/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/energy-temperature/exercise.html#explore-a2-thermal" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Endotherm versus ectotherm</span></a>
   </div>
@@ -361,6 +408,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../animal/gas-circulation/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../animal/gas-circulation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -412,6 +465,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../animal/water-excretion/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../animal/water-excretion/exercise.html#explore-a4-tonicity" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Tonicity and cell volume</span></a>
   </div>
@@ -455,6 +514,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../animal/integration/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../animal/integration/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,6 +594,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../plant/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../plant/organisation/exercise.html#explore-p1-cellgrowth" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Growth of a walled cell</span></a>
   </div>
@@ -572,6 +643,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/water-nutrition/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/water-nutrition/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -623,6 +700,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../plant/carbon-metabolism/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../plant/carbon-metabolism/exercise.html#explore-p3-lightcurve" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Demo: Light-response curve</span></a>
   </div>
@@ -660,6 +743,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/development/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/development/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -707,6 +796,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../plant/stress-biotechnology/exercise.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../plant/stress-biotechnology/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R and bioinformatics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -879,6 +974,15 @@ window.Quarto = {
   <li><a href="#e3" id="toc-e3" class="nav-link" data-scroll-target="#e3">E3</a></li>
   <li><a href="#e4" id="toc-e4" class="nav-link" data-scroll-target="#e4">E4</a></li>
   <li><a href="#e5" id="toc-e5" class="nav-link" data-scroll-target="#e5">E5</a></li>
+  </ul></li>
+  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises">R and bioinformatics</a>
+  <ul class="collapse">
+  <li><a href="#r1.-an-energy-budget" id="toc-r1.-an-energy-budget" class="nav-link" data-scroll-target="#r1.-an-energy-budget">R1. An energy budget</a></li>
+  <li><a href="#r2.-from-energy-to-power" id="toc-r2.-from-energy-to-power" class="nav-link" data-scroll-target="#r2.-from-energy-to-power">R2. From energy to power</a></li>
+  <li><a href="#r3.-blank-corrected-respirometry" id="toc-r3.-blank-corrected-respirometry" class="nav-link" data-scroll-target="#r3.-blank-corrected-respirometry">R3. Blank-corrected respirometry</a></li>
+  <li><a href="#r4.-a-q₁₀-function" id="toc-r4.-a-q₁₀-function" class="nav-link" data-scroll-target="#r4.-a-q₁₀-function">R4. A Q₁₀ function</a></li>
+  <li><a href="#r5.-metabolic-scaling-on-a-loglog-plot" id="toc-r5.-metabolic-scaling-on-a-loglog-plot" class="nav-link" data-scroll-target="#r5.-metabolic-scaling-on-a-loglog-plot">R5. Metabolic scaling on a log–log plot</a></li>
+  <li><a href="#r6.-a-carrier-motif-in-ucp1-bioinformatics" id="toc-r6.-a-carrier-motif-in-ucp1-bioinformatics" class="nav-link" data-scroll-target="#r6.-a-carrier-motif-in-ucp1-bioinformatics">R6. A carrier motif in UCP1 (bioinformatics)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1823,6 +1927,228 @@ Answer
 <ol type="a">
 <li>0.025 W at 37 °C and 0.010 W at 27 °C: a factor of 2.5, which is the definition of Q₁₀ (the change in rate for a 10 °C change in temperature).</li>
 <li>It increases, to 0.013 W. A lower Q₁₀ means the rate falls less on cooling by 10 °C (factor 2.0 instead of 2.5). With <strong>Log scale</strong> ticked the lizard’s curve is a straight line whose slope is set by Q₁₀.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="r-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="r-exercises">R and bioinformatics</h2>
+<p>Run the code below in R or RStudio. Only base R is used (no packages), and all data are typed directly into the code.</p>
+<section id="r1.-an-energy-budget" class="level3">
+<h3 class="anchored" data-anchor-id="r1.-an-energy-budget">R1. An energy budget</h3>
+<p>Use the budget from the tutorial (kJ day⁻¹). Complete the line for <code>retained</code> and run the code. Report (a) retained energy and (b) the fraction of ingested energy that is absorbed.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ingested  <span class="ot">&lt;-</span> <span class="dv">100</span>   <span class="co"># kJ per day</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>faeces    <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>excreted  <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>metabolic <span class="ot">&lt;-</span> <span class="dv">60</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>retained <span class="ot">&lt;-</span> ingested <span class="sc">-</span> ____ <span class="sc">-</span> ____ <span class="sc">-</span> ____</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>retained</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>absorbed <span class="ot">&lt;-</span> ingested <span class="sc">-</span> faeces</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>absorbed <span class="sc">/</span> ingested</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>retained <span class="ot">&lt;-</span> ingested <span class="sc">-</span> faeces <span class="sc">-</span> excreted <span class="sc">-</span> metabolic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>[1] 10
+[1] 0.75</code></pre>
+<ol type="a">
+<li>10 kJ day⁻¹. b. 0.75 (75 % of ingested energy is absorbed).</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r2.-from-energy-to-power" class="level3">
+<h3 class="anchored" data-anchor-id="r2.-from-energy-to-power">R2. From energy to power</h3>
+<p>A metabolic expenditure of 60 kJ day⁻¹ is an energy per day. Convert it to watts (J s⁻¹). What power does R report, rounded to three decimals?</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>metabolic_kJ_per_day <span class="ot">&lt;-</span> <span class="dv">60</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>seconds_per_day <span class="ot">&lt;-</span> <span class="dv">24</span> <span class="sc">*</span> <span class="dv">60</span> <span class="sc">*</span> <span class="dv">60</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>watts <span class="ot">&lt;-</span> metabolic_kJ_per_day <span class="sc">*</span> <span class="dv">1000</span> <span class="sc">/</span> seconds_per_day</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>seconds_per_day</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(watts, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 86400
+[1] 0.694</code></pre>
+<p>0.694 W. Multiply kJ by 1000 to get J, then divide by the 86 400 seconds in a day.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="r3.-blank-corrected-respirometry" class="level3">
+<h3 class="anchored" data-anchor-id="r3.-blank-corrected-respirometry">R3. Blank-corrected respirometry</h3>
+<p>Animal A uses the numbers from the tutorial; B–D are invented teaching numbers. Each chamber holds 0.10 L and is read after 10 min; the empty chamber loses 0.0010 mg min⁻¹. Run the code.</p>
+<ol type="a">
+<li>What is the mean blank-corrected rate (mg O₂ min⁻¹)?</li>
+<li>Which animal has the highest rate?</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>resp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">animal =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">drop   =</span> <span class="fu">c</span>(<span class="fl">0.40</span>, <span class="fl">0.55</span>, <span class="fl">0.30</span>, <span class="fl">0.47</span>)   <span class="co"># fall in O2 (mg per L) over 10 min</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>volume  <span class="ot">&lt;-</span> <span class="fl">0.10</span>     <span class="co"># L of water in the chamber</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>minutes <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>blank   <span class="ot">&lt;-</span> <span class="fl">0.0010</span>   <span class="co"># mg per min lost by an empty chamber</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>resp<span class="sc">$</span>rate <span class="ot">&lt;-</span> resp<span class="sc">$</span>drop <span class="sc">*</span> volume <span class="sc">/</span> minutes <span class="sc">-</span> blank</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>resp</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(resp<span class="sc">$</span>rate)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>resp<span class="sc">$</span>animal[<span class="fu">which.max</span>(resp<span class="sc">$</span>rate)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>  animal drop   rate
+1      A 0.40 0.0030
+2      B 0.55 0.0045
+3      C 0.30 0.0020
+4      D 0.47 0.0037
+[1] 0.0033
+[1] "B"</code></pre>
+<ol type="a">
+<li>0.0033 mg min⁻¹. b. Animal B. Row A reproduces the tutorial’s 0.0030 mg min⁻¹.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r4.-a-q₁₀-function" class="level3">
+<h3 class="anchored" data-anchor-id="r4.-a-q₁₀-function">R4. A Q₁₀ function</h3>
+<p>The function implements the Q₁₀ equation from the tutorial. Run the code.</p>
+<ol type="a">
+<li>What is Q₁₀ for the tutorial example (rate 2 → 4 between 10 and 20 °C)?</li>
+<li>A rate rises from 1.0 to 1.5 between 20 and 25 °C (invented numbers). What is Q₁₀?</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>q10 <span class="ot">&lt;-</span> <span class="cf">function</span>(R1, R2, T1, T2) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  (R2 <span class="sc">/</span> R1)<span class="sc">^</span>(<span class="dv">10</span> <span class="sc">/</span> (T2 <span class="sc">-</span> T1))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">q10</span>(<span class="at">R1 =</span> <span class="dv">2</span>, <span class="at">R2 =</span> <span class="dv">4</span>, <span class="at">T1 =</span> <span class="dv">10</span>, <span class="at">T2 =</span> <span class="dv">20</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">q10</span>(<span class="at">R1 =</span> <span class="fl">1.0</span>, <span class="at">R2 =</span> <span class="fl">1.5</span>, <span class="at">T1 =</span> <span class="dv">20</span>, <span class="at">T2 =</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 2
+[1] 2.25</code></pre>
+<ol type="a">
+<li><ol start="2" type="1">
+<li><ol start="2" type="a">
+<li>2.25: a 5 °C interval is half of 10 °C, so the ratio 1.5 is squared (1.5² = 2.25).</li>
+</ol></li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r5.-metabolic-scaling-on-a-loglog-plot" class="level3">
+<h3 class="anchored" data-anchor-id="r5.-metabolic-scaling-on-a-loglog-plot">R5. Metabolic scaling on a log–log plot</h3>
+<p>Invented teaching numbers: resting metabolic rate (W) of six mammals of different body mass (kg). Fit a straight line to log₁₀(rate) against log₁₀(mass).</p>
+<ol type="a">
+<li>What is the slope, rounded to two decimals?</li>
+<li>Does mass-specific rate (W kg⁻¹, last line) rise or fall with body mass?</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mass <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.3</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">70</span>, <span class="dv">500</span>)   <span class="co"># body mass (kg)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>rate <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.17</span>, <span class="fl">1.5</span>, <span class="fl">5.4</span>, <span class="dv">20</span>, <span class="dv">80</span>, <span class="dv">370</span>) <span class="co"># resting metabolic rate (W)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log10</span>(rate) <span class="sc">~</span> <span class="fu">log10</span>(mass))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">coef</span>(fit), <span class="dv">2</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">log10</span>(mass), <span class="fu">log10</span>(rate),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"log10 body mass (kg)"</span>, <span class="at">ylab =</span> <span class="st">"log10 metabolic rate (W)"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(rate <span class="sc">/</span> mass, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>(Intercept) log10(mass) 
+       0.53        0.75 
+[1] 8.5 5.0 2.7 2.0 1.1 0.7</code></pre>
+<ol type="a">
+<li>0.75. b. It falls (from 8.5 to 0.7 W kg⁻¹). A slope below 1 means whole-animal rate rises less steeply than mass, so each kilogram of a large animal uses less power than a kilogram of a small one.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="r6.-a-carrier-motif-in-ucp1-bioinformatics" class="level3">
+<h3 class="anchored" data-anchor-id="r6.-a-carrier-motif-in-ucp1-bioinformatics">R6. A carrier motif in UCP1 (bioinformatics)</h3>
+<p>Uncoupling protein 1 (UCP1) lets protons leak back into the mitochondrial matrix in brown fat, so energy is released as heat instead of being used for ATP synthesis. The sequence is human UCP1, copied from UniProt <a href="https://rest.uniprot.org/uniprotkb/P25874.fasta">P25874</a>. Mitochondrial carrier proteins contain a signature motif P-x-[DE]-x-x-[KR]: P, any amino acid, D or E, two of any, then K or R. In a regular expression <code>.</code> means “any letter” and <code>[DE]</code> means “D or E”. Run the code.</p>
+<ol type="a">
+<li>How many amino acids long is UCP1?</li>
+<li>How many times does the motif occur?</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ucp1 <span class="ot">&lt;-</span> <span class="fu">paste0</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"MGGLTASDVHPTLGVQLFSAGIAACLADVITFPLDTAKVRLQVQGECPTSSVIRYKGVLG"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"TITAVVKTEGRMKLYSGLPAGLQRQISSASLRIGLYDTVQEFLTAGKETAPSLGSKILAG"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"LTTGGVAVFIGQPTEVVKVRLQAQSHLHGIKPRYTGTYNAYRIIATTEGLTGLWKGTTPN"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"LMRSVIINCTELVTYDLMKEAFVKNNILADDVPCHLVSALIAGFCATAMSSPVDVVKTRF"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"INSPPGQYKSVPNCAMKVFTNEGPTAFFKGLVPSFLRLGSWNVIMFVCFEQLKRELSKSR"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"QTMDCAT"</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(ucp1)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>hits <span class="ot">&lt;-</span> <span class="fu">gregexpr</span>(<span class="st">"P.[DE]..[KR]"</span>, ucp1)[[<span class="dv">1</span>]]</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">as.vector</span>(hits)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">regmatches</span>(ucp1, <span class="fu">gregexpr</span>(<span class="st">"P.[DE]..[KR]"</span>, ucp1))[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>[1] 307
+[1]  33 133 232
+[1] "PLDTAK" "PTEVVK" "PVDVVK"</code></pre>
+<ol type="a">
+<li>307 amino acids. b. 3 times, at positions 33, 133 and 232, roughly 100 residues apart. Mitochondrial carriers are built from three similar repeats of about 100 amino acids, each carrying one copy of the motif.</li>
 </ol>
 </div>
 </div>

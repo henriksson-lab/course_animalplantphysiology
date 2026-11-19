@@ -509,4 +509,209 @@ b. It increases, to 0.013 W. A lower Q₁₀ means the rate falls less on coolin
    curve is a straight line whose slope is set by Q₁₀.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code below in R or RStudio. Only base R is used (no packages), and all
+data are typed directly into the code.
+
+### R1. An energy budget
+
+Use the budget from the tutorial (kJ day⁻¹). Complete the line for `retained`
+and run the code. Report (a) retained energy and (b) the fraction of ingested
+energy that is absorbed.
+
+```r
+ingested  <- 100   # kJ per day
+faeces    <- 25
+excreted  <- 5
+metabolic <- 60
+retained <- ingested - ____ - ____ - ____
+retained
+absorbed <- ingested - faeces
+absorbed / ingested
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+retained <- ingested - faeces - excreted - metabolic
+```
+
+```
+[1] 10
+[1] 0.75
+```
+
+a. 10 kJ day⁻¹. b. 0.75 (75 % of ingested energy is absorbed).
+:::
+
+### R2. From energy to power
+
+A metabolic expenditure of 60 kJ day⁻¹ is an energy per day. Convert it to
+watts (J s⁻¹). What power does R report, rounded to three decimals?
+
+```r
+metabolic_kJ_per_day <- 60
+seconds_per_day <- 24 * 60 * 60
+watts <- metabolic_kJ_per_day * 1000 / seconds_per_day
+seconds_per_day
+round(watts, 3)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 86400
+[1] 0.694
+```
+
+0.694 W. Multiply kJ by 1000 to get J, then divide by the 86 400 seconds in
+a day.
+:::
+
+### R3. Blank-corrected respirometry
+
+Animal A uses the numbers from the tutorial; B–D are invented teaching
+numbers. Each chamber holds 0.10 L and is read after 10 min; the empty
+chamber loses 0.0010 mg min⁻¹. Run the code.
+
+a. What is the mean blank-corrected rate (mg O₂ min⁻¹)?
+b. Which animal has the highest rate?
+
+```r
+resp <- data.frame(
+  animal = c("A", "B", "C", "D"),
+  drop   = c(0.40, 0.55, 0.30, 0.47)   # fall in O2 (mg per L) over 10 min
+)
+volume  <- 0.10     # L of water in the chamber
+minutes <- 10
+blank   <- 0.0010   # mg per min lost by an empty chamber
+resp$rate <- resp$drop * volume / minutes - blank
+resp
+mean(resp$rate)
+resp$animal[which.max(resp$rate)]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+  animal drop   rate
+1      A 0.40 0.0030
+2      B 0.55 0.0045
+3      C 0.30 0.0020
+4      D 0.47 0.0037
+[1] 0.0033
+[1] "B"
+```
+
+a. 0.0033 mg min⁻¹. b. Animal B. Row A reproduces the tutorial's
+0.0030 mg min⁻¹.
+:::
+
+### R4. A Q₁₀ function
+
+The function implements the Q₁₀ equation from the tutorial. Run the code.
+
+a. What is Q₁₀ for the tutorial example (rate 2 → 4 between 10 and 20 °C)?
+b. A rate rises from 1.0 to 1.5 between 20 and 25 °C (invented numbers).
+   What is Q₁₀?
+
+```r
+q10 <- function(R1, R2, T1, T2) {
+  (R2 / R1)^(10 / (T2 - T1))
+}
+q10(R1 = 2, R2 = 4, T1 = 10, T2 = 20)
+q10(R1 = 1.0, R2 = 1.5, T1 = 20, T2 = 25)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 2
+[1] 2.25
+```
+
+a. 2. b. 2.25: a 5 °C interval is half of 10 °C, so the ratio 1.5 is
+squared (1.5² = 2.25).
+:::
+
+### R5. Metabolic scaling on a log–log plot
+
+Invented teaching numbers: resting metabolic rate (W) of six mammals of
+different body mass (kg). Fit a straight line to log₁₀(rate) against
+log₁₀(mass).
+
+a. What is the slope, rounded to two decimals?
+b. Does mass-specific rate (W kg⁻¹, last line) rise or fall with body mass?
+
+```r
+mass <- c(0.02, 0.3, 2, 10, 70, 500)   # body mass (kg)
+rate <- c(0.17, 1.5, 5.4, 20, 80, 370) # resting metabolic rate (W)
+fit <- lm(log10(rate) ~ log10(mass))
+round(coef(fit), 2)
+plot(log10(mass), log10(rate),
+     xlab = "log10 body mass (kg)", ylab = "log10 metabolic rate (W)")
+abline(fit)
+round(rate / mass, 1)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+(Intercept) log10(mass) 
+       0.53        0.75 
+[1] 8.5 5.0 2.7 2.0 1.1 0.7
+```
+
+a. 0.75. b. It falls (from 8.5 to 0.7 W kg⁻¹). A slope below 1 means whole-animal
+rate rises less steeply than mass, so each kilogram of a large animal uses
+less power than a kilogram of a small one.
+:::
+
+### R6. A carrier motif in UCP1 (bioinformatics)
+
+Uncoupling protein 1 (UCP1) lets protons leak back into the mitochondrial
+matrix in brown fat, so energy is released as heat instead of being used for
+ATP synthesis. The sequence is human UCP1, copied from UniProt
+[P25874](https://rest.uniprot.org/uniprotkb/P25874.fasta). Mitochondrial
+carrier proteins contain a signature motif P-x-[DE]-x-x-[KR]: P, any amino
+acid, D or E, two of any, then K or R. In a regular expression `.` means "any
+letter" and `[DE]` means "D or E". Run the code.
+
+a. How many amino acids long is UCP1?
+b. How many times does the motif occur?
+
+```r
+ucp1 <- paste0(
+  "MGGLTASDVHPTLGVQLFSAGIAACLADVITFPLDTAKVRLQVQGECPTSSVIRYKGVLG",
+  "TITAVVKTEGRMKLYSGLPAGLQRQISSASLRIGLYDTVQEFLTAGKETAPSLGSKILAG",
+  "LTTGGVAVFIGQPTEVVKVRLQAQSHLHGIKPRYTGTYNAYRIIATTEGLTGLWKGTTPN",
+  "LMRSVIINCTELVTYDLMKEAFVKNNILADDVPCHLVSALIAGFCATAMSSPVDVVKTRF",
+  "INSPPGQYKSVPNCAMKVFTNEGPTAFFKGLVPSFLRLGSWNVIMFVCFEQLKRELSKSR",
+  "QTMDCAT")
+nchar(ucp1)
+hits <- gregexpr("P.[DE]..[KR]", ucp1)[[1]]
+as.vector(hits)
+regmatches(ucp1, gregexpr("P.[DE]..[KR]", ucp1))[[1]]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 307
+[1]  33 133 232
+[1] "PLDTAK" "PTEVVK" "PVDVVK"
+```
+
+a. 307 amino acids. b. 3 times, at positions 33, 133 and 232, roughly 100
+residues apart. Mitochondrial carriers are built from three similar repeats of
+about 100 amino acids, each carrying one copy of the motif.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

@@ -540,4 +540,186 @@ already mostly in the inactive Pr form, so far-red has almost no Pfr to
 convert; the night is not interrupted.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio. Only base R is used (no packages), and all data
+are typed into the code.
+
+### R1. Germination percentages
+
+Use the seed counts from question 4.3 (20 seeds per dish). Run the code. What
+are the four germination percentages, and the mean percentage for the
+control and the treated dishes?
+
+```r
+germinated <- c(12, 14, 16, 18)
+treatment  <- c("control", "control", "treated", "treated")
+percent <- germinated / 20 * 100
+percent
+mean(percent[treatment == "control"])
+mean(percent[treatment == "treated"])
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 60 70 80 90
+[1] 65
+[1] 85
+```
+
+Control: 60 % and 70 %, mean 65 %. Treated: 80 % and 90 %, mean 85 %.
+`percent[treatment == "control"]` keeps only the values where the condition
+is `TRUE`.
+:::
+
+### R2. Day length and flowering
+
+A short-day plant flowers when the night is at least as long as its critical
+night length of 11 h. Complete the line marked `___` so that `sdp_flowers` is
+`TRUE` when the night is long enough, then run the code. For how many of the
+day lengths from 8 h to 16 h does the plant flower, and what is the longest
+day length at which it flowers?
+
+```r
+day_length <- 8:16
+night_length <- 24 - day_length
+sdp_flowers <- ___
+photo <- data.frame(day_length, night_length, sdp_flowers)
+photo
+sum(photo$sdp_flowers)
+max(photo$day_length[photo$sdp_flowers])
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+sdp_flowers <- night_length >= 11
+```
+
+```
+  day_length night_length sdp_flowers
+1          8           16        TRUE
+2          9           15        TRUE
+3         10           14        TRUE
+4         11           13        TRUE
+5         12           12        TRUE
+6         13           11        TRUE
+7         14           10       FALSE
+8         15            9       FALSE
+9         16            8       FALSE
+[1] 6
+[1] 13
+```
+
+The plant flowers at 6 of the 9 day lengths; the longest is 13 h (an 11 h
+night). `sum()` counts `TRUE` as 1 and `FALSE` as 0.
+:::
+
+### R3. The triple response in numbers
+
+The hypocotyl lengths below are invented teaching data for dark-grown
+seedlings kept in air or in ethylene. Run the code. What is the mean
+hypocotyl length in each group, and the ethylene : air ratio (to two
+decimals)? Does the boxplot show ethylene-treated hypocotyls as (a) longer
+or (b) shorter?
+
+```r
+seedlings <- data.frame(
+  treatment = c(rep("air", 5), rep("ethylene", 5)),
+  hypocotyl_mm = c(12.1, 11.4, 12.8, 11.9, 12.3,
+                    4.2,  3.8,  4.5,  4.1,  3.9)
+)
+group_means <- tapply(seedlings$hypocotyl_mm, seedlings$treatment, mean)
+group_means
+round(group_means["ethylene"] / group_means["air"], 2)
+boxplot(hypocotyl_mm ~ treatment, data = seedlings,
+        ylab = "Hypocotyl length (mm)")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+     air ethylene 
+    12.1      4.1 
+ethylene 
+    0.34 
+```
+
+Air 12.1 mm, ethylene 4.1 mm, ratio 0.34. (b) shorter: a short hypocotyl is
+one of the three features of the triple response. `tapply()` applies `mean`
+separately to each treatment group.
+:::
+
+### R4. Auxin-response elements in a promoter
+
+Auxin-responsive genes often carry the auxin-response element TGTCTC in their
+promoter, and many promoters have a TATA box (TATAAA) near the transcription
+start. The promoter below is a made-up sequence. Run the code. How long is
+the sequence, how many TGTCTC elements does it contain and at which
+positions, and where does the TATA box start?
+
+```r
+promoter <- "AAGCTTGTCTCATACGTTGACTGTCTCCATATAAATAGGCATTGTCTCAC"
+nchar(promoter)
+hits <- as.vector(gregexpr("TGTCTC", promoter)[[1]])
+hits
+length(hits)
+as.vector(regexpr("TATAAA", promoter))
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 50
+[1]  6 22 43
+[1] 3
+[1] 30
+```
+
+50 nucleotides; three TGTCTC elements, starting at positions 6, 22 and 43;
+the TATA box starts at position 30. `gregexpr()` finds every match,
+`regexpr()` only the first.
+:::
+
+### R5. A point mutation in a made-up gene
+
+The made-up open reading frame below codes for a short peptide. The mutant
+differs by one base. The small codon table contains only the codons needed.
+Run the code. What are the two peptides (one letter per amino acid, `*` =
+stop)? Which kind of mutation is it: (a) silent, (b) missense or
+(c) nonsense?
+
+```r
+codons <- c(ATG = "M", GCT = "A", GAA = "E", TGG = "W", CAA = "Q",
+            AAA = "K", CTG = "L", TAA = "*", TAG = "*", TGA = "*")
+translate <- function(dna) {
+  starts <- seq(1, nchar(dna) - 2, by = 3)
+  triplets <- substring(dna, starts, starts + 2)
+  paste(codons[triplets], collapse = "")
+}
+wild_type <- "ATGGCTGAATGGCAAAAACTGTAA"
+mutant    <- "ATGGCTGAATGACAAAAACTGTAA"
+translate(wild_type)
+translate(mutant)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] "MAEWQKL*"
+[1] "MAE*QKL*"
+```
+
+(c) nonsense. The fourth codon changes from TGG (tryptophan) to TGA (stop),
+so the mutant protein stops after three amino acids. A premature stop like
+this in a gibberellin biosynthesis gene would give a dwarf that can be
+rescued by spraying gibberellin (compare question 1.4).
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

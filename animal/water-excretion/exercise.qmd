@@ -672,4 +672,208 @@ of 180. No: glucose is only filtered and reabsorbed, never secreted, so the
 excreted amount can never exceed the filtered load and clearance stays below GFR.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio. Only base R is used (no packages), and all data
+are typed into the code.
+
+### R1. Osmolarity of a mixed solution
+
+A solution contains 0.10 mol L⁻¹ glucose, 0.10 mol L⁻¹ NaCl and
+0.05 mol L⁻¹ CaCl₂. Treat the salts as fully dissociated. Complete the
+`particles` vector (particles per formula unit), run the code and report the
+total osmolarity.
+
+```r
+conc      <- c(glucose = 0.10, NaCl = 0.10, CaCl2 = 0.05)  # mol L^-1
+particles <- c(glucose = 1,    NaCl = ___,  CaCl2 = ___)
+osm <- conc * particles
+osm
+sum(osm)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+particles <- c(glucose = 1,    NaCl = 2,    CaCl2 = 3)
+```
+
+```
+glucose    NaCl   CaCl2 
+   0.10    0.20    0.15 
+[1] 0.45
+```
+
+0.45 Osm L⁻¹ (450 mOsm L⁻¹). NaCl gives Na⁺ + Cl⁻; CaCl₂ gives Ca²⁺ + 2 Cl⁻.
+:::
+
+### R2. Renal accounting in a data frame
+
+The invented numbers below give the filtered load, reabsorption and secretion
+of three substances (amount units min⁻¹). Complete the `___` line using
+excretion = filtered − reabsorbed + secreted. Report the excretion of each
+substance, and which substance is excreted fastest.
+
+```r
+k <- data.frame(
+  substance  = c("A", "B", "C"),
+  filtered   = c(100, 50, 20),   # amount units min^-1
+  reabsorbed = c(99, 25, 0),
+  secreted   = c(0, 0, 30)
+)
+k$excreted <- ___
+k
+k$substance[which.max(k$excreted)]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+k$excreted <- k$filtered - k$reabsorbed + k$secreted
+```
+
+```
+  substance filtered reabsorbed secreted excreted
+1         A      100         99        0        1
+2         B       50         25        0       25
+3         C       20          0       30       50
+[1] "C"
+```
+
+A: 1, B: 25, C: 50 units min⁻¹. C is excreted fastest even though it has the
+smallest filtered load, because it is also secreted.
+:::
+
+### R3. Clearance and GFR
+
+Clearance is $C=U\times V/P$ (urine concentration × urine flow ÷ plasma
+concentration). Inulin is filtered but neither reabsorbed nor secreted, so its
+clearance equals the GFR. Use the invented values U = 25 mg mL⁻¹,
+V = 1.0 mL min⁻¹ and P = 0.2 mg mL⁻¹. Run the code and report (a) the GFR and
+(b) which of the three substances X, Y, Z (clearances 0, 60 and 600 mL min⁻¹)
+undergoes net secretion.
+
+```r
+clearance <- function(U, V, P) U * V / P
+gfr <- clearance(U = 25, V = 1.0, P = 0.2)   # inulin: mg mL^-1, mL min^-1, mg mL^-1
+gfr
+C <- c(X = 0, Y = 60, Z = 600)               # clearances, mL min^-1
+ifelse(C > gfr, "net secretion", "net reabsorption")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 125
+                 X                  Y                  Z 
+"net reabsorption" "net reabsorption"    "net secretion" 
+```
+
+a. GFR = 125 mL min⁻¹. b. Z: its clearance is higher than the GFR, so more is
+excreted than is filtered. X (clearance 0) behaves like glucose in a healthy
+person: filtered and completely reabsorbed.
+:::
+
+### R4. Glucose transport maximum
+
+Use the same values as the Explore demo: GFR 0.125 L min⁻¹ and a glucose
+transport maximum (Tm) of 2.0 mmol min⁻¹. `pmin()` takes the smaller of two
+values element by element, so the tubule reabsorbs either everything filtered
+or Tm, whichever is less. Run the code and report (a) the glucose excreted at a
+plasma glucose of 25 mmol L⁻¹ and (b) the lowest of the five plasma
+concentrations at which glucose appears in the urine.
+
+```r
+gfr <- 0.125                     # L min^-1
+tm  <- 2.0                       # mmol min^-1
+plasma <- c(5, 10, 15, 20, 25)   # mmol L^-1
+filtered   <- gfr * plasma
+reabsorbed <- pmin(filtered, tm)
+excreted   <- filtered - reabsorbed
+excreted
+plasma[excreted > 0][1]
+plot(plasma, excreted, type = "b",
+     xlab = "Plasma glucose (mmol/L)", ylab = "Excreted (mmol/min)")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 0.000 0.000 0.000 0.500 1.125
+[1] 20
+```
+
+a. 1.125 mmol min⁻¹. b. 20 mmol L⁻¹. The threshold is Tm ÷ GFR =
+16 mmol L⁻¹, between 15 and 20; above it excretion rises in a straight line,
+as the plot shows.
+:::
+
+### R5. The NPA motifs of aquaporin-2
+
+Aquaporin-2 is the water channel that ADH inserts into the collecting-duct
+membrane. Its pore is lined by two loops that each carry the motif
+asparagine–proline–alanine (NPA). The sequence below is human aquaporin-2,
+copied from UniProt P41181. Run the code and report (a) the length of the
+protein, (b) how many NPA motifs it contains and (c) the position of each.
+
+```r
+aqp2 <- paste0("MWELRSIAFSRAVFAEFLATLLFVFFGLGSALNWPQALPSVLQIAMAFGLGIGTLVQALG",
+               "HISGAHINPAVTVACLVGCHVSVLRAAFYVAAQLLGAVAGAALLHEITPADIRGDLAVNA",
+               "LSNSTTAGQAVTVELFLTLQLVLCIFASTDERRGENPGTPALSIGFSVALGHLLGIHYTG",
+               "CSMNPARSLAPAVVTGKFDDHWVFWIGPLVGAILGSLLYNYVLFPPAKSLSERLAVLKGL",
+               "EPDTDWEEREVRRRQSVELHSPQSLPRGTKA")
+nchar(aqp2)
+hits <- as.vector(gregexpr("NPA", aqp2)[[1]])
+hits
+length(hits)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 271
+[1]  68 184
+[1] 2
+```
+
+a. 271 amino acids. b. Two. c. Starting at positions 68 and 184. The two NPA
+loops meet in the middle of the membrane and form the narrowest part of the
+water pore.
+:::
+
+### R6. The ADH phosphorylation site
+
+When ADH binds its receptor, protein kinase A phosphorylates aquaporin-2 on
+serine 256 in the cytoplasmic C-terminal tail, which helps move the channel
+into the apical membrane. Using the `aqp2` string from R5, run the code and
+report (a) the amino acid at position 256, (b) the seven residues 253–259 and
+(c) the number of serines (S) in the last 30 residues.
+
+```r
+substr(aqp2, 256, 256)
+substr(aqp2, 253, 259)
+tail_seq <- substr(aqp2, 242, nchar(aqp2))
+tail_seq
+sum(strsplit(tail_seq, "")[[1]] == "S")
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] "S"
+[1] "RRQSVEL"
+[1] "PDTDWEEREVRRRQSVELHSPQSLPRGTKA"
+[1] 3
+```
+
+a. S (serine). b. RRQSVEL; the arginines just before the serine are typical of
+a protein kinase A target site. c. 3 serines (positions 256, 261 and 264).
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

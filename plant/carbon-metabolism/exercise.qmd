@@ -499,4 +499,229 @@ low in the cold (C3 O₂/CO₂ is only 0.15 at 12 °C). This is why C4 grasses
 dominate warm regions and C3 grasses cool ones.
 :::
 
+## R and bioinformatics {#r-exercises}
+
+Run the code in R or RStudio; it uses base R only (no packages), and all data
+are typed into the code.
+
+### R1. Net and gross photosynthesis
+
+Plant L01 was measured at five light levels (invented teaching data, the same
+values as `data/photosynthesis.csv`). Respiration is estimated as the CO₂
+released in darkness, and gross uptake = net uptake + respiration. Run the
+code. What is gross uptake at 600 µmol photons m⁻² s⁻¹, and between which two
+light levels does net uptake rise most steeply per photon?
+
+```r
+light <- c(0, 50, 200, 600, 1200)   # umol photons m^-2 s^-1
+net   <- c(-2, 0, 5, 10, 11)        # umol CO2 m^-2 s^-1
+resp  <- -net[1]                    # CO2 released in darkness
+gross <- net + resp
+gross
+diff(net) / diff(light)             # slope between neighbouring points
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+gross
+## [1]  0  2  7 12 13
+diff(net) / diff(light)
+## [1] 0.040000000 0.033333333 0.012500000 0.001666667
+```
+
+Gross uptake at 600 µmol photons m⁻² s⁻¹ is 12 µmol CO₂ m⁻² s⁻¹. The slope
+is steepest between 0 and 50 (0.040) and falls with each step, as the curve
+saturates.
+:::
+
+### R2. A data frame for three plants and a plot
+
+Run the code, which puts all three plants into one data frame. What is the
+mean net uptake at 1200 µmol photons m⁻² s⁻¹, and which rows of the data
+frame hold plant L02?
+
+```r
+curves <- data.frame(
+  plant = rep(c("L01", "L02", "L03"), each = 5),
+  light = rep(c(0, 50, 200, 600, 1200), times = 3),
+  net   = c(-2,   0,    5,   10,   11,
+            -2.2, -0.2, 4.6, 9.5,  10.5,
+            -1.8, 0.2,  5.4, 10.5, 11.5)
+)
+tapply(curves$net, curves$light, mean)
+l02 <- curves[curves$plant == "L02", ]
+l02
+plot(curves$light, curves$net, col = factor(curves$plant), pch = 19,
+     xlab = "Light (umol photons m-2 s-1)",
+     ylab = "Net CO2 uptake (umol m-2 s-1)")
+abline(h = 0, lty = 2)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+tapply(curves$net, curves$light, mean)
+##    0   50  200  600 1200 
+##   -2    0    5   10   11 
+l02
+##    plant light  net
+## 6    L02     0 -2.2
+## 7    L02    50 -0.2
+## 8    L02   200  4.6
+## 9    L02   600  9.5
+## 10   L02  1200 10.5
+```
+
+The mean at 1200 is 11 µmol CO₂ m⁻² s⁻¹. Plant L02 is in rows 6–10. In the
+plot, the points cross the dashed zero line between 0 and 200 µmol photons
+m⁻² s⁻¹.
+:::
+
+### R3. Light compensation point by linear interpolation
+
+For plant L02, net uptake changes sign between 50 and 200 µmol photons
+m⁻² s⁻¹. Draw a straight line between those two points and find where it
+crosses zero. Complete `y2`, run the code, and give the compensation point.
+Does R's `approx()` give the same value (yes/no)?
+
+```r
+light <- c(0, 50, 200, 600, 1200)
+net   <- c(-2.2, -0.2, 4.6, 9.5, 10.5)   # plant L02
+x1 <- 50;  y1 <- -0.2
+x2 <- 200; y2 <- ___                      # complete
+comp <- x1 + (0 - y1) * (x2 - x1) / (y2 - y1)
+comp
+approx(x = net, y = light, xout = 0)$y
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+y2 <- 4.6
+comp
+## [1] 56.25
+approx(x = net, y = light, xout = 0)$y
+## [1] 56.25
+```
+
+The compensation point is 56.25 (about 56) µmol photons m⁻² s⁻¹, and yes,
+`approx()` gives the same value.
+:::
+
+### R4. Water-use efficiency of C3, C4 and CAM leaves
+
+Water-use efficiency (WUE) is CO₂ taken up per water lost. The values below
+are invented teaching numbers, each measured while the leaf's stomata are open
+(the CAM leaf at night). Run the code. Give the WUE of each leaf (µmol CO₂ per
+mmol H₂O) and which leaf has the highest.
+
+```r
+leaf <- c("C3 wheat", "C4 maize", "CAM pineapple")
+A    <- c(12, 18, 4)        # CO2 uptake, umol m^-2 s^-1
+E    <- c(4.0, 3.0, 0.5)    # transpiration, mmol H2O m^-2 s^-1
+wue  <- A / E
+wue
+leaf[which.max(wue)]
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+wue
+## [1] 3 6 8
+leaf[which.max(wue)]
+## [1] "CAM pineapple"
+```
+
+C3: 3, C4: 6, CAM: 8 µmol CO₂ per mmol H₂O. The CAM leaf has the highest WUE
+because it opens its stomata in cool night air; the C4 leaf beats the C3 leaf
+because PEP carboxylase lets it fix CO₂ with less open stomata.
+:::
+
+### R5. Percent identity of Rubisco from two plants
+
+The code holds the first 60 amino acids of the Rubisco large subunit (rbcL)
+from *Arabidopsis thaliana* (UniProt O03042) and spinach (UniProt P00875).
+The two fragments align without gaps. Run the code. How many positions are
+identical, what is the percent identity, and at which positions do they
+differ?
+
+```r
+arath <- "MSPQTETKASVGFKAGVKEYKLTYYTPEYETKDTDILAAFRVTPQPGVPPEEAGAAVAAE"
+spiol <- "MSPQTETKASVEFKAGVKDYKLTYYTPEYETLDTDILAAFRVSPQPGVPPEEAGAAVAAE"
+a <- strsplit(arath, "")[[1]]
+s <- strsplit(spiol, "")[[1]]
+length(a) == length(s)
+sum(a == s)
+round(100 * mean(a == s), 1)
+which(a != s)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+length(a) == length(s)
+## [1] TRUE
+sum(a == s)
+## [1] 56
+round(100 * mean(a == s), 1)
+## [1] 93.3
+which(a != s)
+## [1] 12 19 32 43
+```
+
+56 of 60 positions are identical (93.3 %); they differ at positions 12, 19,
+32 and 43. Rubisco is highly conserved, even between plants from different families.
+:::
+
+### R6. The lysine that activates Rubisco
+
+Rubisco is activated when CO₂ binds to a lysine (Lys201 in spinach), forming a
+carbamate. The code holds the full spinach rbcL sequence (UniProt P00875).
+Complete the counting line and run the code. How long is the protein, how many
+lysines (K) does it contain, and which amino acid is at position 201?
+
+```r
+# Spinach Rubisco large subunit, UniProt P00875
+rbcl <- paste0(
+  "MSPQTETKASVEFKAGVKDYKLTYYTPEYETLDTDILAAFRVSPQPGVPPEEAGAAVAAE",
+  "SSTGTWTTVWTDGLTNLDRYKGRCYHIEPVAGEENQYICYVAYPLDLFEEGSVTNMFTSI",
+  "VGNVFGFKALRALRLEDLRIPVAYVKTFQGPPHGIQVERDKLNKYGRPLLGCTIKPKLGL",
+  "SAKNYGRAVYECLRGGLDFTKDDENVNSQPFMRWRDRFLFCAEALYKAQAETGEIKGHYL",
+  "NATAGTCEDMMKRAVFARELGVPIVMHDYLTGGFTANTTLSHYCRDNGLLLHIHRAMHAV",
+  "IDRQKNHGMHFRVLAKALRLSGGDHIHSGTVVGKLEGERDITLGFVDLLRDDYTEKDRSR",
+  "GIYFTQSWVSTPGVLPVASGGIHVWHMPALTEIFGDDSVLQFGGGTLGHPWGNAPGAVAN",
+  "RVALEACVQARNEGRDLAREGNTIIREATKWSPELAAACEVWKEIKFEFPAMDTV")
+nchar(rbcl)
+aa <- strsplit(rbcl, "")[[1]]
+sum(aa == ___)               # complete: count lysines
+substr(rbcl, 201, 201)
+substr(rbcl, 196, 206)
+```
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```r
+nchar(rbcl)
+## [1] 475
+sum(aa == "K")
+## [1] 23
+substr(rbcl, 201, 201)
+## [1] "K"
+substr(rbcl, 196, 206)
+## [1] "GLDFTKDDENV"
+```
+
+The protein has 475 amino acids and 23 lysines. Position 201 is K (lysine), in
+the stretch GLDFTKDDENV; UniProt annotates it as N6-carboxylysine, the
+carbamylated residue.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

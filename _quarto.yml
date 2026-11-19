@@ -69,6 +69,8 @@ website:
           text: Lecture slides
         - href: animal/organisation/exercise.qmd
           text: Exercises
+        - href: animal/organisation/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: animal/organisation/exercise.qmd#explore-a1-scaling
           text: "Demo: Diffusion limits body size"
         - href: animal/organisation/exercise.qmd#explore-a1-feedback
@@ -83,6 +85,8 @@ website:
           text: Lecture slides
         - href: animal/energy-temperature/exercise.qmd
           text: Exercises
+        - href: animal/energy-temperature/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: animal/energy-temperature/exercise.qmd#explore-a2-thermal
           text: "Demo: Endotherm versus ectotherm"
         - href: animal/energy-temperature/quiz.qmd
@@ -95,6 +99,8 @@ website:
           text: Lecture slides
         - href: animal/gas-circulation/exercise.qmd
           text: Exercises
+        - href: animal/gas-circulation/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: animal/gas-circulation/exercise.qmd#explore-a3-dissociation
           text: "Demo: Haemoglobin loading and unloading"
         - href: animal/gas-circulation/exercise.qmd#explore-a3-countercurrent
@@ -109,6 +115,8 @@ website:
           text: Lecture slides
         - href: animal/water-excretion/exercise.qmd
           text: Exercises
+        - href: animal/water-excretion/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: animal/water-excretion/exercise.qmd#explore-a4-tonicity
           text: "Demo: Tonicity and cell volume"
         - href: animal/water-excretion/exercise.qmd#explore-a4-renal
@@ -123,6 +131,8 @@ website:
           text: Lecture slides
         - href: animal/integration/exercise.qmd
           text: Exercises
+        - href: animal/integration/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: animal/integration/exercise.qmd#explore-a5-membrane
           text: "Demo: Ion gradients and membrane potential"
         - href: animal/integration/exercise.qmd#explore-a5-spike
@@ -143,6 +153,8 @@ website:
           text: Lecture slides
         - href: plant/organisation/exercise.qmd
           text: Exercises
+        - href: plant/organisation/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: plant/organisation/exercise.qmd#explore-p1-cellgrowth
           text: "Demo: Growth of a walled cell"
         - href: plant/organisation/exercise.qmd#explore-p1-roottip
@@ -157,6 +169,8 @@ website:
           text: Lecture slides
         - href: plant/water-nutrition/exercise.qmd
           text: Exercises
+        - href: plant/water-nutrition/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: plant/water-nutrition/exercise.qmd#explore-p2-waterpotential
           text: "Demo: A plant cell in a solution"
         - href: plant/water-nutrition/exercise.qmd#explore-p2-soilplantair
@@ -171,6 +185,8 @@ website:
           text: Lecture slides
         - href: plant/carbon-metabolism/exercise.qmd
           text: Exercises
+        - href: plant/carbon-metabolism/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: plant/carbon-metabolism/exercise.qmd#explore-p3-lightcurve
           text: "Demo: Light-response curve"
         - href: plant/carbon-metabolism/quiz.qmd
@@ -183,6 +199,8 @@ website:
           text: Lecture slides
         - href: plant/development/exercise.qmd
           text: Exercises
+        - href: plant/development/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: plant/development/exercise.qmd#explore-p4-phytochrome
           text: "Demo: Phytochrome switch in lettuce seeds"
         - href: plant/development/exercise.qmd#explore-p4-photoperiod
@@ -197,6 +215,8 @@ website:
           text: Lecture slides
         - href: plant/stress-biotechnology/exercise.qmd
           text: Exercises
+        - href: plant/stress-biotechnology/exercise.qmd#r-exercises
+          text: "R and bioinformatics"
         - href: plant/stress-biotechnology/exercise.qmd#explore-p5-stomata
           text: "Demo: Stomata, ABA and drought"
         - href: plant/stress-biotechnology/exercise.qmd#explore-p5-tissueculture
