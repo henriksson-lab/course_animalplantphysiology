@@ -1112,7 +1112,7 @@
     "href": "plant/index.html",
     "title": "Plant physiology",
     "section": "",
-    "text": "Plants acquire resources, build organs and respond to their surroundings while remaining rooted in place. Follow a leaf from its construction through transport and metabolism to development, defence and biotechnology.\nThis first teaching draft supplies explanations and classroom investigations. Departmental laboratory protocols and formal assessment instructions remain separate. No programming is required.\n\n\n\nUnit\nGuiding question\nStudy route\n\n\n\n\nP1. Organisation\nHow does a plant build a functioning body?\nRead, slides, exercise, self-check\n\n\nP2. Water and nutrition\nHow do resources enter and move through a plant?\nRead, slides, exercise, self-check\n\n\nP3. Carbon and metabolism\nHow does captured light support the whole organism?\nRead, slides, exercise, self-check\n\n\nP4. Development\nHow does a signal change growth and reproduction?\nRead, slides, exercise, self-check\n\n\nP5. Stress and biotechnology\nHow can physiology inform an intervention?\nRead, slides, exercise, self-check\n\n\n\nDraw compartments, label movement and predict what changes if one step is disrupted. Invented exercise observations are labelled as teaching examples; they do not reproduce an actual experiment’s results. Use the reading, then the short lecture deck, then exercises and self-checks. A scientific explanation needs a mechanism and evidence, not just a named hormone or pathway.",
+    "text": "How a plant, fixed in one place, builds its body, takes up water and minerals, captures carbon, controls its development and copes with stress, and how this knowledge is used in plant biotechnology.\n\n\n\nUnit\nMaterial\n\n\n\n\nP1. Building a functioning plant\nTutorial · Slides · Exercises · Quiz\n\n\nP2. Water, minerals and transport\nTutorial · Slides · Exercises · Quiz\n\n\nP3. Light, carbon and the whole-plant budget\nTutorial · Slides · Exercises · Quiz\n\n\nP4. Signals, growth and reproduction\nTutorial · Slides · Exercises · Quiz\n\n\nP5. Stress, defence and biotechnology\nTutorial · Slides · Exercises · Quiz",
     "crumbs": [
       "Home",
       "Plant physiology",
@@ -4077,31 +4077,7 @@
     "href": "animal/index.html",
     "title": "Animal physiology",
     "section": "",
-    "text": "The animal half connects structure, regulation and environmental adaptation. Use mammals as a reference, then compare alternative solutions in other animal groups. This is a first teaching draft following the proposed core course; actual specimen sessions and assessment details still require the established course material.",
-    "crumbs": [
-      "Home",
-      "Animal physiology",
-      "Animal route"
-    ]
-  },
-  {
-    "objectID": "animal/index.html#work-through-the-five-units",
-    "href": "animal/index.html#work-through-the-five-units",
-    "title": "Animal physiology",
-    "section": "Work through the five units",
-    "text": "Work through the five units\n\n\n\nUnit and guiding question\nStudy material\nPractice\n\n\n\n\nA1. How does organisation constrain function?\nTutorial · Slides\nExercises · Quiz\n\n\nA2. How are food, energy and temperature connected?\nTutorial · Slides\nExercises · Quiz\n\n\nA3. How does oxygen reach a working cell?\nTutorial · Slides\nExercises · Quiz\n\n\nA4. How do animals control water, ions and waste?\nTutorial · Slides\nExercises · Quiz\n\n\nA5. How are signals, movement and reproduction coordinated?\nTutorial · Slides\nExercises · Quiz",
-    "crumbs": [
-      "Home",
-      "Animal physiology",
-      "Animal route"
-    ]
-  },
-  {
-    "objectID": "animal/index.html#a-useful-study-rhythm",
-    "href": "animal/index.html#a-useful-study-rhythm",
-    "title": "Animal physiology",
-    "section": "A useful study rhythm",
-    "text": "A useful study rhythm\nBegin with the biological question, read the connected tutorial and sketch the mechanism. Use the slides for a short explanation or revision. Complete the exercise tasks with units and labelled arrows, then answer the quiz before opening its explanations. Revisit mistakes by repairing the mechanism rather than memorising the right option.\nThe numerical examples are invented for teaching and can be completed by hand or calculator. There is no required R component. Descriptive histology tasks prepare observation and reasoning; they do not replace the actual tissue collection, microscope work or anatomy practicals.\nFor integration, explain a whole-animal response using at least three units: how is it sensed, how do effectors change, what fuels it, and what transport, thermal and water costs follow? Continue with the plant half and practical work.",
+    "text": "How animals get oxygen and food to their cells, keep internal conditions stable and coordinate their bodies, using mammals as the reference with comparisons to other animal groups.\n\n\n\nUnit\nMaterial\n\n\n\n\nA1. Organisation, diversity and regulation\nTutorial · Slides · Exercises · Quiz\n\n\nA2. Nutrition, energy and temperature\nTutorial · Slides · Exercises · Quiz\n\n\nA3. Gas exchange and circulation\nTutorial · Slides · Exercises · Quiz\n\n\nA4. Water, ions and excretion\nTutorial · Slides · Exercises · Quiz\n\n\nA5. Integration, movement and reproduction\nTutorial · Slides · Exercises · Quiz",
     "crumbs": [
       "Home",
       "Animal physiology",

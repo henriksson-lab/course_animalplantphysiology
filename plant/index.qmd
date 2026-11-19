@@ -2,24 +2,14 @@
 title: "Plant physiology"
 ---
 
-Plants acquire resources, build organs and respond to their surroundings while
-remaining rooted in place. Follow a leaf from its construction through transport
-and metabolism to development, defence and biotechnology.
+How a plant, fixed in one place, builds its body, takes up water and minerals,
+captures carbon, controls its development and copes with stress, and how this
+knowledge is used in plant biotechnology.
 
-This first teaching draft supplies explanations and classroom investigations.
-Departmental laboratory protocols and formal assessment instructions remain
-separate. No programming is required.
-
-| Unit | Guiding question | Study route |
-| --- | --- | --- |
-| P1. Organisation | How does a plant build a functioning body? | [Read](organisation/index.qmd), [slides](organisation/lec.qmd), [exercise](organisation/exercise.qmd), [self-check](organisation/quiz.qmd) |
-| P2. Water and nutrition | How do resources enter and move through a plant? | [Read](water-nutrition/index.qmd), [slides](water-nutrition/lec.qmd), [exercise](water-nutrition/exercise.qmd), [self-check](water-nutrition/quiz.qmd) |
-| P3. Carbon and metabolism | How does captured light support the whole organism? | [Read](carbon-metabolism/index.qmd), [slides](carbon-metabolism/lec.qmd), [exercise](carbon-metabolism/exercise.qmd), [self-check](carbon-metabolism/quiz.qmd) |
-| P4. Development | How does a signal change growth and reproduction? | [Read](development/index.qmd), [slides](development/lec.qmd), [exercise](development/exercise.qmd), [self-check](development/quiz.qmd) |
-| P5. Stress and biotechnology | How can physiology inform an intervention? | [Read](stress-biotechnology/index.qmd), [slides](stress-biotechnology/lec.qmd), [exercise](stress-biotechnology/exercise.qmd), [self-check](stress-biotechnology/quiz.qmd) |
-
-Draw compartments, label movement and predict what changes if one step is
-disrupted. Invented exercise observations are labelled as teaching examples;
-they do not reproduce an actual experiment's results. Use the reading, then the
-short lecture deck, then exercises and self-checks. A scientific explanation
-needs a mechanism and evidence, not just a named hormone or pathway.
+| Unit | Material |
+| --- | --- |
+| P1. Building a functioning plant | [Tutorial](organisation/index.qmd) · [Slides](organisation/lec.qmd) · [Exercises](organisation/exercise.qmd) · [Quiz](organisation/quiz.qmd) |
+| P2. Water, minerals and transport | [Tutorial](water-nutrition/index.qmd) · [Slides](water-nutrition/lec.qmd) · [Exercises](water-nutrition/exercise.qmd) · [Quiz](water-nutrition/quiz.qmd) |
+| P3. Light, carbon and the whole-plant budget | [Tutorial](carbon-metabolism/index.qmd) · [Slides](carbon-metabolism/lec.qmd) · [Exercises](carbon-metabolism/exercise.qmd) · [Quiz](carbon-metabolism/quiz.qmd) |
+| P4. Signals, growth and reproduction | [Tutorial](development/index.qmd) · [Slides](development/lec.qmd) · [Exercises](development/exercise.qmd) · [Quiz](development/quiz.qmd) |
+| P5. Stress, defence and biotechnology | [Tutorial](stress-biotechnology/index.qmd) · [Slides](stress-biotechnology/lec.qmd) · [Exercises](stress-biotechnology/exercise.qmd) · [Quiz](stress-biotechnology/quiz.qmd) |
