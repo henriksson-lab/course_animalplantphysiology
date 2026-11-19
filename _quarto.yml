@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - overview.qmd
+    - animal/index.qmd
+    - plant/index.qmd
+    - practicals/index.qmd
+    - references.qmd
+
+website:
+  title: "Animal and Plant Physiology"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: overview.qmd
+        text: Course overview
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: "Course information"
+        contents:
+          - href: overview.qmd
+            text: Scope and learning goals
+          - href: references.qmd
+            text: Reading and sources
+      - section: "Animal physiology"
+        contents:
+          - href: animal/index.qmd
+            text: Proposed topics
+      - section: "Plant physiology"
+        contents:
+          - href: plant/index.qmd
+            text: Proposed topics
+      - section: "Practical work"
+        contents:
+          - href: practicals/index.qmd
+            text: Anatomy, experiments and communication
+
+format:
+  html:
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    theme: cosmo
+    css: styles.css
+
+# Retained from QuantBio for future lecture decks. A deck must explicitly
+# declare format: revealjs and theme: [simple, ../theme.scss].
+controls: true
+controls-layout: edges
+controls-back-arrows: visible

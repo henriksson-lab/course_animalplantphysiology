@@ -1,0 +1,35 @@
+---
+title: "Practical work and communication"
+---
+
+This page describes the proposed scope. It is not a laboratory protocol or
+an instruction to begin an experiment.
+
+## Anatomy and histology
+
+Observe representative normal tissues and organs, recognise characteristic
+features and explain how structure supports function. Retain comparisons
+between animal groups and the established specimen sessions.
+
+## Physiological experiments
+
+Carry out the course's established animal and plant experiments. Identify
+the question, experimental unit, controls, measurements and units before
+interpreting results. Preserve observations and distinguish variation among
+organisms from repeated measurements of one organism.
+
+The practical manual, equipment, specimen list and timetable will determine
+the experiments. No new experiment is specified by this outline.
+
+## Scientific reporting
+
+A report should connect the physiological question, methods, results and
+interpretation. Explain figures, uncertainty and limitations rather than
+presenting numbers alone. Software requirements will follow the actual
+practical instructions; this proposal requires no R component.
+
+## Literature and presentation
+
+Read scientific evidence critically, discuss physiological mechanisms and
+communicate a reasoned interpretation orally and in writing. Plant
+biotechnology discussion includes potential benefits, risks and ethics.

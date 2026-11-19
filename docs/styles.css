@@ -1,0 +1,18 @@
+/* Adapted from quantbio-3MB00A/styles.css: keep navigation conventions,
+   without its timetable-dependent week colours. */
+.sidebar-item.sidebar-item-section > .sidebar-item-container,
+.sidebar-item.sidebar-item-section > .sidebar-item-container > a,
+.sidebar-item.sidebar-item-section > .sidebar-item-container > .sidebar-item-toggle,
+.sidebar-item.sidebar-item-section > .sidebar-item-container .sidebar-item-text {
+  font-weight: 700;
+}
+
+.sidebar a.sidebar-item-text[href*="lec"],
+.sidebar-item .sidebar-item-text > a[href*="lec"] {
+  color: #1a7a3b;
+}
+
+.sidebar a.sidebar-item-text[href*="quiz"],
+.sidebar-item .sidebar-item-text > a[href*="quiz"] {
+  color: #2a55c2;
+}

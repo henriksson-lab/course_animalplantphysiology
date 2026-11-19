@@ -1,0 +1,35 @@
+---
+title: "Scope and learning goals"
+---
+
+This proposed course retains the scope of the documented 5MO101 predecessor.
+It is not an approved syllabus for its 2027 successor, 5MO00S.
+
+## Course components
+
+| Component | Baseline credits |
+| --- | ---: |
+| Animal theory and group work | 6 ECTS |
+| Animal practical work | 1.5 ECTS |
+| Plant theory | 5 ECTS |
+| Plant practical work | 2.5 ECTS |
+
+## Learning goals
+
+- Explain animal structure, function, regulation and environmental adaptation.
+- Recognise representative normal tissues and relate their features to function.
+- Explain plant organisation, metabolism, growth, development and regulation.
+- Discuss applications, benefits, risks and ethics of genetically modified plants.
+- Perform and interpret experiments and write scientific laboratory reports.
+- Evaluate relevant literature and communicate orally and in writing.
+
+## How the course works
+
+Lectures and discussion connect mechanisms to observations. Anatomy, histology
+and physiological experiments develop practical understanding. Reports,
+literature work and presentations develop scientific communication.
+
+The predecessor assesses theory through written examinations and practical and
+communication skills through reports and oral presentation. The actual course
+schedule, compulsory elements and assessment rules will be supplied once
+verified. See [reading and sources](references.qmd).

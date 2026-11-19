@@ -1,0 +1,24 @@
+---
+title: "Reading and sources"
+---
+
+## Course baseline
+
+The [official 5MO101 syllabus](https://www.umu.se/en/education/syllabus/5mo101/)
+documents the predecessor's scope, modules, outcomes and assessments. Its
+reading list is unavailable online. The formal syllabus and literature list
+for successor 5MO00S remain unverified here.
+
+## Candidate references
+
+These are planning references, **not confirmed required purchases**. Assigned
+sections and the actual course reading list will be provided later.
+
+- Hill, Cavanaugh and Anderson, *Animal Physiology*, fifth edition.
+  [Publisher information](https://www.oup.com.au/books/higher-education/biology/9780197552438).
+- Taiz, Møller, Murphy and Zieger, *Plant Physiology and Development*, seventh
+  edition. [Publisher information](https://www.oup.com.au/books/higher-education/biology/9780197577240).
+
+Selected sections can support the proposed topics. Practical instructions,
+tissue resources and research readings will need the established course's
+own materials.

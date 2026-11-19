@@ -1,0 +1,28 @@
+---
+title: "Animal and Plant Physiology"
+---
+
+::: {.callout-note}
+## Course material under development
+
+This is a planning scaffold. Topic order and readings are provisional;
+complete lessons, laboratory instructions and assessment details will follow.
+:::
+
+How do animals and plants maintain function, obtain resources, regulate their
+activities and respond to their environments? This course connects cells and
+tissues to whole organisms, using comparisons, practical observations,
+experiments and scientific literature.
+
+The working scope retains an equal animal and plant balance across 15 ECTS.
+It follows the documented predecessor course while the successor's formal
+details are checked.
+
+- [Course scope and learning goals](overview.qmd)
+- [Animal physiology topics](animal/index.qmd)
+- [Plant physiology topics](plant/index.qmd)
+- [Practical work and communication](practicals/index.qmd)
+- [Reading and evidence](references.qmd)
+
+Practical work develops physiological understanding and scientific reporting.
+There is currently no required R component in this proposal.
