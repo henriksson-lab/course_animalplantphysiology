@@ -1,9 +1,23 @@
 ---
-title: "A5 — Integration, movement and reproduction"
+title: A5 — Integration, movement and reproduction
 format:
   revealjs:
-    theme: [simple, ../../theme.scss]
-    slide-number: true
+    theme:
+    - simple
+    - ../../theme.scss
+    slide-number: c/t
+    width: 1280
+    height: 720
+    transition: none
+    history: false
+    highlight-style: github
+    code-overflow: wrap
+    code-line-numbers: false
+    incremental: false
+    chalkboard: false
+    menu: true
+    html-math-method: katex
+author: Animal and Plant Physiology
 ---
 
 ## Connect information to action

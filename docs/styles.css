@@ -1,5 +1,5 @@
-/* Adapted from quantbio-3MB00A/styles.css: keep navigation conventions,
-   without its timetable-dependent week colours. */
+/* QuantBio's navigation conventions, adapted to physiology blocks.
+   Lecture decks use theme.scss independently of these HTML page rules. */
 .sidebar-item.sidebar-item-section > .sidebar-item-container,
 .sidebar-item.sidebar-item-section > .sidebar-item-container > a,
 .sidebar-item.sidebar-item-section > .sidebar-item-container > .sidebar-item-toggle,
@@ -11,8 +11,49 @@
 .sidebar-item .sidebar-item-text > a[href*="lec"] {
   color: #1a7a3b;
 }
+.sidebar a.sidebar-item-text[href*="lec"]:hover {
+  color: #105025;
+}
 
 .sidebar a.sidebar-item-text[href*="quiz"],
 .sidebar-item .sidebar-item-text > a[href*="quiz"] {
   color: #2a55c2;
+}
+.sidebar a.sidebar-item-text[href*="quiz"]:hover {
+  color: #1a3a8c;
+}
+.sidebar a.sidebar-item-text[href*="exercise"] {
+  font-style: italic;
+}
+
+/* Match QuantBio's stripes and tinted headers. Top-level order is Home,
+   Course information, Animal, Plant, Practical, Revision/support. */
+.sidebar-menu-container > ul > li.sidebar-item-section:nth-child(n+3) {
+  border-left: 4px solid var(--block-color);
+  padding-left: 0.35rem;
+  margin: 0.4rem 0;
+}
+.sidebar-menu-container > ul > li.sidebar-item-section:nth-child(n+3) > .sidebar-item-container {
+  background: var(--block-tint);
+  border-radius: 0 4px 4px 0;
+  padding-left: 0.3rem;
+}
+.sidebar-menu-container > ul > li.sidebar-item-section:nth-child(n+3) > .sidebar-item-container .menu-text {
+  color: var(--block-color);
+}
+.sidebar-menu-container > ul > li:nth-child(3) {
+  --block-color: #2a7f8f;
+  --block-tint: #e6f3f5;
+}
+.sidebar-menu-container > ul > li:nth-child(4) {
+  --block-color: #397645;
+  --block-tint: #eaf3ec;
+}
+.sidebar-menu-container > ul > li:nth-child(5) {
+  --block-color: #a8324a;
+  --block-tint: #f8e9ec;
+}
+.sidebar-menu-container > ul > li:nth-child(6) {
+  --block-color: #6b4fa0;
+  --block-tint: #efebf7;
 }

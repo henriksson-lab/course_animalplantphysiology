@@ -1,32 +1,63 @@
 ---
 title: "Animal and Plant Physiology"
+title-block-banner: false
 ---
 
-::: {.callout-note}
-## First teaching draft
+A **15 ECTS course** on how animals and plants obtain resources, maintain
+function and respond to their environments. Connect cells and tissues to
+whole organisms through comparative physiology, experiments and scientific
+literature.
 
-Tutorials, lecture slides, exercises, self-check quizzes and classroom practical
-activities are available. Live laboratory protocols, specimen resources and
-official assessment details still come from the teaching team.
-:::
+## Where to start
 
-How do animals and plants maintain function, obtain resources, regulate their
-activities and respond to their environments? This course connects cells and
-tissues to whole organisms, using comparisons, practical observations,
-experiments and scientific literature.
+- [**Course overview**](overview.qmd) — scope, learning goals and course components.
+- [**Study route**](schedule.qmd) — the ten-week sequence, with practical work alongside each topic.
 
-The working scope retains an equal animal and plant balance across 15 ECTS.
-It follows the documented predecessor course while the successor's formal
-details are checked.
+## Before you start
 
-- [Start here](start.qmd) and follow the [ten-week route](schedule.qmd).
-- [Course scope and learning goals](overview.qmd)
-- [Animal physiology lessons](animal/index.qmd)
-- [Plant physiology lessons](plant/index.qmd)
-- [Practical work and communication](practicals/index.qmd)
-- [Reading and evidence](references.qmd)
+[**Read the study guide**](start.qmd) for the prerequisite bridge and how to
+use tutorials, slides, exercises and self-checks. Keep the
+[glossary](glossary.qmd) nearby when you meet an unfamiliar term.
 
-Practical work develops physiological understanding and scientific reporting.
-The [data and files](downloads.qmd) support complete classroom analysis by hand
-or calculator. There is no required R component; an optional worked example
-reuses a familiar workflow from Intro Computing.
+## Animal physiology
+
+The animal half connects structure and function, using mammals as a reference
+and comparisons with other animal groups. Work through the units in order:
+
+- [**A1. Organisation and diversity**](animal/organisation/index.qmd) — cells, tissues, organs, regulation and adaptation.
+- [**A2. Energy and temperature**](animal/energy-temperature/index.qmd) — nutrition, digestion, metabolism and thermal strategies.
+- [**A3. Gas exchange and circulation**](animal/gas-circulation/index.qmd) — ventilation, oxygen transport and delivery to tissues.
+- [**A4. Water and excretion**](animal/water-excretion/index.qmd) — water and salt balance, kidneys and nitrogen disposal.
+- [**A5. Integration and movement**](animal/integration/index.qmd) — nerves, senses, muscles, hormones and reproduction.
+
+Each unit has a tutorial, short lecture deck, exercises and a self-check quiz.
+The [animal course route](animal/index.qmd) brings those materials together.
+
+## Plant physiology
+
+The plant half follows resource acquisition, metabolism and regulated
+development through to environmental responses and applications:
+
+- [**P1. Plant organisation**](plant/organisation/index.qmd) — cells, walls, tissues, meristems and genomes.
+- [**P2. Water and nutrition**](plant/water-nutrition/index.qmd) — roots, xylem, stomata, minerals and transport.
+- [**P3. Carbon and metabolism**](plant/carbon-metabolism/index.qmd) — photosynthesis, respiration and source–sink relationships.
+- [**P4. Development**](plant/development/index.qmd) — signals, growth, flowering, reproduction and senescence.
+- [**P5. Stress and biotechnology**](plant/stress-biotechnology/index.qmd) — stress, defence, plant biotechnology and ethical questions.
+
+The [plant course route](plant/index.qmd) links the reading, slides and practice
+for each unit.
+
+## Practical work and revision
+
+[**Practical activities**](practicals/index.qmd) connect anatomy, tissue
+structure and physiological measurements with scientific reporting and
+discussion. Download the [datasets and student files](downloads.qmd), then
+use the [worked figures](figures.qmd) to check your plots.
+
+Finish each half with the [revision and integration tasks](revision.qmd).
+The core activities use paper or a calculator. An
+[optional R example](optional-computing/index.qmd) repeats one analysis.
+
+This is a first teaching draft. The teaching team supplies the live laboratory
+protocols, specimen resources and official assessment arrangements; see the
+[course overview](overview.qmd) and [reading guide](references.qmd) for details.

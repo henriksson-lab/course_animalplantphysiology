@@ -1,9 +1,23 @@
 ---
-title: "A3 — Gas exchange and circulation"
+title: A3 — Gas exchange and circulation
 format:
   revealjs:
-    theme: [simple, ../../theme.scss]
-    slide-number: true
+    theme:
+    - simple
+    - ../../theme.scss
+    slide-number: c/t
+    width: 1280
+    height: 720
+    transition: none
+    history: false
+    highlight-style: github
+    code-overflow: wrap
+    code-line-numbers: false
+    incremental: false
+    chalkboard: false
+    menu: true
+    html-math-method: katex
+author: Animal and Plant Physiology
 ---
 
 ## Oxygen must reach the working cell

@@ -29,7 +29,10 @@ The proposed topic order and readings are not claims about past teaching.
 
 Adapted from `/home/mahogny/github/course/quantbio-3MB00A`: Quarto website,
 `docs/` output, Cosmo HTML theme, docked searchable sidebar, code-copy controls,
-lecture/quiz link colours, Reveal slide settings and copied `theme.scss`.
+lecture/quiz link colours, coloured sidebar block headers and copied
+`theme.scss`. Primary blocks stay expanded, with units collapsed until opened.
+Lecture decks use QuantBio's 1280 × 720 canvas, slide counters, menu,
+edge controls, KaTeX and disabled transitions.
 Navigation, page selection and Makefile are reduced for this course. Building
 does not stage files. QuantBio's advanced content, demos, dependencies, caches,
 Git metadata and course-specific assessment rules are not copied.

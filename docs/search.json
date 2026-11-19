@@ -2075,7 +2075,7 @@
     "href": "animal/organisation/lec.html#size-changes-the-geometry",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Size changes the geometry",
-    "text": "Size changes the geometry\nFor a cube: area \\(=6L^2\\); volume \\(=L^3\\); ratio \\(=6/L\\).\n\nDouble length: area ×4, volume ×8.\nRatios need units: mm⁻¹, for example.\nLarger bodies can fold surfaces and move fluids.",
+    "text": "Size changes the geometry\nFor a cube: area =6L^2; volume =L^3; ratio =6/L.\n\nDouble length: area ×4, volume ×8.\nRatios need units: mm⁻¹, for example.\nLarger bodies can fold surfaces and move fluids.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2426,7 +2426,7 @@
     "href": "animal/integration/lec.html#force-work-and-power",
     "title": "A5 — Integration, movement and reproduction",
     "section": "Force, work and power",
-    "text": "Force, work and power\n\\(W=Fd\\) for constant aligned force and displacement.\n20 N × 0.10 m = 2 J; in 0.50 s gives 4 W external power.\nHolding stationary: zero external work in this calculation, but ATP can still be used.",
+    "text": "Force, work and power\nW=Fd for constant aligned force and displacement.\n20 N × 0.10 m = 2 J; in 0.50 s gives 4 W external power.\nHolding stationary: zero external work in this calculation, but ATP can still be used.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3128,7 +3128,7 @@
     "href": "animal/energy-temperature/lec.html#define-an-energy-budget",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Define an energy budget",
-    "text": "Define an energy budget\nIn this course example:\n\\[E_{\\rm intake}=E_{\\rm faeces}+E_{\\rm excreted}+E_{\\rm metabolic}+E_{\\rm retained}.\\]\nAll terms refer to the same interval. State conventions and avoid double counting.",
+    "text": "Define an energy budget\nIn this course example:\nE_{\\rm intake}=E_{\\rm faeces}+E_{\\rm excreted}+E_{\\rm metabolic}+E_{\\rm retained}.\nAll terms refer to the same interval. State conventions and avoid double counting.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3219,7 +3219,7 @@
     "href": "animal/energy-temperature/lec.html#describe-a-temperature-effect",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Describe a temperature effect",
-    "text": "Describe a temperature effect\n\\[Q_{10}=(R_2/R_1)^{10/(T_2-T_1)}.\\]\nA rate rising from 2 to 4 between 10 and 20 °C gives \\(Q_{10}=2\\).\nThis describes the measured interval; it is not a universal extrapolation rule.",
+    "text": "Describe a temperature effect\nQ_{10}=(R_2/R_1)^{10/(T_2-T_1)}.\nA rate rising from 2 to 4 between 10 and 20 °C gives Q_{10}=2.\nThis describes the measured interval; it is not a universal extrapolation rule.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3375,7 +3375,7 @@
     "href": "animal/gas-circulation/lec.html#an-exchange-surface-has-physical-constraints",
     "title": "A3 — Gas exchange and circulation",
     "section": "An exchange surface has physical constraints",
-    "text": "An exchange surface has physical constraints\n\\[\\dot M\\propto A\\Delta P/L.\\]\n\nMore area and gradient favour transfer.\nGreater thickness reduces it.\nThin, moist surfaces need support and protection.",
+    "text": "An exchange surface has physical constraints\n\\dot M\\propto A\\Delta P/L.\n\nMore area and gradient favour transfer.\nGreater thickness reduces it.\nThin, moist surfaces need support and protection.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3492,7 +3492,7 @@
     "href": "animal/gas-circulation/lec.html#pressure-resistance-and-flow",
     "title": "A3 — Gas exchange and circulation",
     "section": "Pressure, resistance and flow",
-    "text": "Pressure, resistance and flow\n\\[Q=\\Delta P/R.\\]\n\nA pressure difference drives bulk flow.\nVessel calibre affects resistance and distribution.\nMany vessels in parallel differ from one narrow tube.",
+    "text": "Pressure, resistance and flow\nQ=\\Delta P/R.\n\nA pressure difference drives bulk flow.\nVessel calibre affects resistance and distribution.\nMany vessels in parallel differ from one narrow tube.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -4276,7 +4276,57 @@
     "href": "index.html",
     "title": "Animal and Plant Physiology",
     "section": "",
-    "text": "First teaching draft\n\n\n\nTutorials, lecture slides, exercises, self-check quizzes and classroom practical activities are available. Live laboratory protocols, specimen resources and official assessment details still come from the teaching team.\n\n\nHow do animals and plants maintain function, obtain resources, regulate their activities and respond to their environments? This course connects cells and tissues to whole organisms, using comparisons, practical observations, experiments and scientific literature.\nThe working scope retains an equal animal and plant balance across 15 ECTS. It follows the documented predecessor course while the successor’s formal details are checked.\n\nStart here and follow the ten-week route.\nCourse scope and learning goals\nAnimal physiology lessons\nPlant physiology lessons\nPractical work and communication\nReading and evidence\n\nPractical work develops physiological understanding and scientific reporting. The data and files support complete classroom analysis by hand or calculator. There is no required R component; an optional worked example reuses a familiar workflow from Intro Computing.",
+    "text": "A 15 ECTS course on how animals and plants obtain resources, maintain function and respond to their environments. Connect cells and tissues to whole organisms through comparative physiology, experiments and scientific literature.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#where-to-start",
+    "href": "index.html#where-to-start",
+    "title": "Animal and Plant Physiology",
+    "section": "Where to start",
+    "text": "Where to start\n\nCourse overview — scope, learning goals and course components.\nStudy route — the ten-week sequence, with practical work alongside each topic.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#before-you-start",
+    "href": "index.html#before-you-start",
+    "title": "Animal and Plant Physiology",
+    "section": "Before you start",
+    "text": "Before you start\nRead the study guide for the prerequisite bridge and how to use tutorials, slides, exercises and self-checks. Keep the glossary nearby when you meet an unfamiliar term.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#animal-physiology",
+    "href": "index.html#animal-physiology",
+    "title": "Animal and Plant Physiology",
+    "section": "Animal physiology",
+    "text": "Animal physiology\nThe animal half connects structure and function, using mammals as a reference and comparisons with other animal groups. Work through the units in order:\n\nA1. Organisation and diversity — cells, tissues, organs, regulation and adaptation.\nA2. Energy and temperature — nutrition, digestion, metabolism and thermal strategies.\nA3. Gas exchange and circulation — ventilation, oxygen transport and delivery to tissues.\nA4. Water and excretion — water and salt balance, kidneys and nitrogen disposal.\nA5. Integration and movement — nerves, senses, muscles, hormones and reproduction.\n\nEach unit has a tutorial, short lecture deck, exercises and a self-check quiz. The animal course route brings those materials together.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#plant-physiology",
+    "href": "index.html#plant-physiology",
+    "title": "Animal and Plant Physiology",
+    "section": "Plant physiology",
+    "text": "Plant physiology\nThe plant half follows resource acquisition, metabolism and regulated development through to environmental responses and applications:\n\nP1. Plant organisation — cells, walls, tissues, meristems and genomes.\nP2. Water and nutrition — roots, xylem, stomata, minerals and transport.\nP3. Carbon and metabolism — photosynthesis, respiration and source–sink relationships.\nP4. Development — signals, growth, flowering, reproduction and senescence.\nP5. Stress and biotechnology — stress, defence, plant biotechnology and ethical questions.\n\nThe plant course route links the reading, slides and practice for each unit.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#practical-work-and-revision",
+    "href": "index.html#practical-work-and-revision",
+    "title": "Animal and Plant Physiology",
+    "section": "Practical work and revision",
+    "text": "Practical work and revision\nPractical activities connect anatomy, tissue structure and physiological measurements with scientific reporting and discussion. Download the datasets and student files, then use the worked figures to check your plots.\nFinish each half with the revision and integration tasks. The core activities use paper or a calculator. An optional R example repeats one analysis.\nThis is a first teaching draft. The teaching team supplies the live laboratory protocols, specimen resources and official assessment arrangements; see the course overview and reading guide for details.",
     "crumbs": [
       "Home"
     ]

@@ -93,10 +93,29 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./schedule.html"> 
-<span class="menu-text">Study route</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-info" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Course info</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-course-info">    
+        <li>
+    <a class="dropdown-item" href="./overview.html">
+ <span class="dropdown-text">Course overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./schedule.html">
+ <span class="dropdown-text">Study route</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./start.html">
+ <span class="dropdown-text">Before you start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./references.html">
+ <span class="dropdown-text">Reading</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./downloads.html"> 
 <span class="menu-text">Data and files</span></a>
@@ -140,13 +159,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Course information</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./start.html" class="sidebar-item-text sidebar-link">
@@ -187,13 +206,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Animal physiology</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./animal/index.html" class="sidebar-item-text sidebar-link">
@@ -379,13 +398,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">Plant physiology</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./plant/index.html" class="sidebar-item-text sidebar-link">
@@ -571,13 +590,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
  <span class="menu-text">Practical work</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./practicals/index.html" class="sidebar-item-text sidebar-link">
@@ -630,13 +649,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true">
  <span class="menu-text">Revision and optional support</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./revision.html" class="sidebar-item-text sidebar-link">
@@ -662,8 +681,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#where-to-start" id="toc-where-to-start" class="nav-link active" data-scroll-target="#where-to-start">Where to start</a></li>
+  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before you start</a></li>
+  <li><a href="#animal-physiology" id="toc-animal-physiology" class="nav-link" data-scroll-target="#animal-physiology">Animal physiology</a></li>
+  <li><a href="#plant-physiology" id="toc-plant-physiology" class="nav-link" data-scroll-target="#plant-physiology">Plant physiology</a></li>
+  <li><a href="#practical-work-and-revision" id="toc-practical-work-and-revision" class="nav-link" data-scroll-target="#practical-work-and-revision">Practical work and revision</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -687,32 +716,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-First teaching draft
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Tutorials, lecture slides, exercises, self-check quizzes and classroom practical activities are available. Live laboratory protocols, specimen resources and official assessment details still come from the teaching team.</p>
-</div>
-</div>
-<p>How do animals and plants maintain function, obtain resources, regulate their activities and respond to their environments? This course connects cells and tissues to whole organisms, using comparisons, practical observations, experiments and scientific literature.</p>
-<p>The working scope retains an equal animal and plant balance across 15 ECTS. It follows the documented predecessor course while the successor’s formal details are checked.</p>
+<p>A <strong>15 ECTS course</strong> on how animals and plants obtain resources, maintain function and respond to their environments. Connect cells and tissues to whole organisms through comparative physiology, experiments and scientific literature.</p>
+<section id="where-to-start" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-start">Where to start</h2>
 <ul>
-<li><a href="./start.html">Start here</a> and follow the <a href="./schedule.html">ten-week route</a>.</li>
-<li><a href="./overview.html">Course scope and learning goals</a></li>
-<li><a href="./animal/index.html">Animal physiology lessons</a></li>
-<li><a href="./plant/index.html">Plant physiology lessons</a></li>
-<li><a href="./practicals/index.html">Practical work and communication</a></li>
-<li><a href="./references.html">Reading and evidence</a></li>
+<li><a href="./overview.html"><strong>Course overview</strong></a> — scope, learning goals and course components.</li>
+<li><a href="./schedule.html"><strong>Study route</strong></a> — the ten-week sequence, with practical work alongside each topic.</li>
 </ul>
-<p>Practical work develops physiological understanding and scientific reporting. The <a href="./downloads.html">data and files</a> support complete classroom analysis by hand or calculator. There is no required R component; an optional worked example reuses a familiar workflow from Intro Computing.</p>
+</section>
+<section id="before-you-start" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
+<p><a href="./start.html"><strong>Read the study guide</strong></a> for the prerequisite bridge and how to use tutorials, slides, exercises and self-checks. Keep the <a href="./glossary.html">glossary</a> nearby when you meet an unfamiliar term.</p>
+</section>
+<section id="animal-physiology" class="level2">
+<h2 class="anchored" data-anchor-id="animal-physiology">Animal physiology</h2>
+<p>The animal half connects structure and function, using mammals as a reference and comparisons with other animal groups. Work through the units in order:</p>
+<ul>
+<li><a href="./animal/organisation/index.html"><strong>A1. Organisation and diversity</strong></a> — cells, tissues, organs, regulation and adaptation.</li>
+<li><a href="./animal/energy-temperature/index.html"><strong>A2. Energy and temperature</strong></a> — nutrition, digestion, metabolism and thermal strategies.</li>
+<li><a href="./animal/gas-circulation/index.html"><strong>A3. Gas exchange and circulation</strong></a> — ventilation, oxygen transport and delivery to tissues.</li>
+<li><a href="./animal/water-excretion/index.html"><strong>A4. Water and excretion</strong></a> — water and salt balance, kidneys and nitrogen disposal.</li>
+<li><a href="./animal/integration/index.html"><strong>A5. Integration and movement</strong></a> — nerves, senses, muscles, hormones and reproduction.</li>
+</ul>
+<p>Each unit has a tutorial, short lecture deck, exercises and a self-check quiz. The <a href="./animal/index.html">animal course route</a> brings those materials together.</p>
+</section>
+<section id="plant-physiology" class="level2">
+<h2 class="anchored" data-anchor-id="plant-physiology">Plant physiology</h2>
+<p>The plant half follows resource acquisition, metabolism and regulated development through to environmental responses and applications:</p>
+<ul>
+<li><a href="./plant/organisation/index.html"><strong>P1. Plant organisation</strong></a> — cells, walls, tissues, meristems and genomes.</li>
+<li><a href="./plant/water-nutrition/index.html"><strong>P2. Water and nutrition</strong></a> — roots, xylem, stomata, minerals and transport.</li>
+<li><a href="./plant/carbon-metabolism/index.html"><strong>P3. Carbon and metabolism</strong></a> — photosynthesis, respiration and source–sink relationships.</li>
+<li><a href="./plant/development/index.html"><strong>P4. Development</strong></a> — signals, growth, flowering, reproduction and senescence.</li>
+<li><a href="./plant/stress-biotechnology/index.html"><strong>P5. Stress and biotechnology</strong></a> — stress, defence, plant biotechnology and ethical questions.</li>
+</ul>
+<p>The <a href="./plant/index.html">plant course route</a> links the reading, slides and practice for each unit.</p>
+</section>
+<section id="practical-work-and-revision" class="level2">
+<h2 class="anchored" data-anchor-id="practical-work-and-revision">Practical work and revision</h2>
+<p><a href="./practicals/index.html"><strong>Practical activities</strong></a> connect anatomy, tissue structure and physiological measurements with scientific reporting and discussion. Download the <a href="./downloads.html">datasets and student files</a>, then use the <a href="./figures.html">worked figures</a> to check your plots.</p>
+<p>Finish each half with the <a href="./revision.html">revision and integration tasks</a>. The core activities use paper or a calculator. An <a href="./optional-computing/index.html">optional R example</a> repeats one analysis.</p>
+<p>This is a first teaching draft. The teaching team supplies the live laboratory protocols, specimen resources and official assessment arrangements; see the <a href="./overview.html">course overview</a> and <a href="./references.html">reading guide</a> for details.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

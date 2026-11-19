@@ -1,4 +1,4 @@
-# Explicit student-source patterns exclude instructor/ and plan/.
+# Student-source patterns exclude instructor/ and plan/.
 project:
   type: website
   output-dir: docs
@@ -23,14 +23,22 @@ website:
     left:
     - href: index.qmd
       text: Home
-    - href: schedule.qmd
-      text: Study route
+    - text: Course info
+      menu:
+      - href: overview.qmd
+        text: Course overview
+      - href: schedule.qmd
+        text: Study route
+      - href: start.qmd
+        text: Before you start
+      - href: references.qmd
+        text: Reading
     - href: downloads.qmd
       text: Data and files
   sidebar:
     style: docked
     search: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
     - href: index.qmd
       text: Home
