@@ -145,12 +145,13 @@ Tissue-specific expression later helps explain development and biotechnology.
 Organellar inheritance is often uniparental, but patterns vary among species;
 do not assume a universal maternal rule.
 
-## Make a testable prediction
+## From structure to whole-plant effect
 
 A plant with intact green leaves but reduced root hairs may struggle to obtain
 resources in some soils. Other root properties could compensate. Reduced hairs
-alone do not establish which transporter or hormone changed. Explain the chain:
-structure → exchange opportunity → resource availability → whole-plant effect.
+alone do not establish which transporter or hormone changed. The effect follows
+a chain: structure → exchange opportunity → resource availability →
+whole-plant effect.
 
 For another introductory account of organ and tissue organisation, use the
 [OpenStax plant-body overview](https://openstax.org/books/biology-2e/pages/30-1-the-plant-body).

@@ -2,190 +2,762 @@
 title: "Revision and integration"
 ---
 
-These are formative study tasks, not an official examination or a prediction
-of its questions. Attempt each explanation before opening the feedback. Include
-the causal chain: structure or signal → process → physiological consequence.
+The questions combine material from all units of each half of the course.
+Answer each question before opening its answer.
 
 ## Animal half {#animal-half}
 
-### 1. From tissue to oxygen demand
+### 1.1
 
-Compare a thin exchange epithelium with a thick stratified protective epithelium.
-Explain why their structures suit different functions. Then trace how an increase
-in muscle oxygen demand can be met through ventilation, exchange and circulation.
-Name one observation you would need before classifying a real tissue section.
+Put the steps in order for an oxygen molecule moving from the atmosphere to a
+mitochondrion in a mammalian skeletal-muscle fibre:
+
+a. O₂ binds to haemoglobin in a red blood cell
+b. O₂ dissociates from haemoglobin in a systemic capillary
+c. inspired air moves through the conducting airways to the alveoli
+d. blood flows through the pulmonary veins, left atrium, left ventricle and
+   systemic arteries
+e. O₂ diffuses across the alveolar wall and capillary endothelium into the plasma
+f. O₂ diffuses through interstitial fluid into the muscle fibre and is reduced
+   to water by the mitochondrial electron transport chain
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-A short diffusion distance favours exchange; multiple layers can protect
-against abrasion. Neither alone identifies an organ. Cell shape, layering,
-lumen, extracellular material and neighbouring tissues provide evidence.
-Ventilation renews the respiratory medium, diffusion crosses the exchange
-barrier, blood flow distributes oxygen, and tissues extract it. Increased
-demand need not be met by changing just one step. Microscopy interpretation
-must use the actual image and scale, not a guessed label from a written clue.
+c → e → a → d → b → f. Steps c and d are bulk flow (ventilation and
+circulation); steps e and f are diffusion down a partial-pressure gradient.
 :::
 
-### 2. Energy and temperature
+### 1.2
 
-Two simulated animals consume 18 and 30 µmol oxygen over six minutes. Both
-have mass 0.5 g. Calculate the whole-animal and mass-specific mean rates.
-The animals differ in both temperature and feeding history. What comparison
-is possible, and what causal claim is unsupported?
+Two animals, each of mass 0.5 g, consume 18 and 30 µmol O₂ in 6 minutes.
+
+a. Calculate the whole-animal rate of oxygen consumption for each animal.
+b. Calculate the mass-specific rate for each animal.
+c. The two animals were measured at different temperatures and had different
+   feeding histories. True or false: the data show that temperature caused the
+   difference in rate.
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-Whole-animal rates are 3 and 5 µmol min⁻¹. Mass-specific values are 6 and
-10 µmol min⁻¹ g⁻¹. The observed rates differ, but temperature and feeding
-history are confounded; neither cause can be isolated. Oxygen consumption
-is an indicator of aerobic metabolism under the stated conditions, not a
-direct measure of all energy use or a fitness score.
+a. 18/6 = 3 µmol O₂ min⁻¹ and 30/6 = 5 µmol O₂ min⁻¹.
+b. 3/0.5 = 6 µmol O₂ min⁻¹ g⁻¹ and 5/0.5 = 10 µmol O₂ min⁻¹ g⁻¹.
+c. False. Temperature and feeding history differ together (they are
+   confounded), so the effect of either cannot be separated.
 :::
 
-### 3. Two osmotic environments
+### 1.3
 
-Compare the water-balance problems faced by a freshwater fish and a terrestrial
-mammal. Explain how exchange surfaces, ion transport and excretion contribute.
-Why does “water follows salt” fail as a complete explanation of kidney function?
+The metabolic rate of an ectotherm is 2 units at 10 °C and 8 units at 30 °C.
+Calculate $Q_{10}$ for this interval.
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-A typical freshwater teleost gains water osmotically and loses ions across
-permeable surfaces; dilute urine and active ion uptake help maintain balance.
-A terrestrial mammal loses water to the environment and must balance intake,
-metabolic production and losses. Kidney filtration, selective reabsorption,
-secretion, medullary gradients and regulated collecting-duct permeability
-all matter. Water movement depends on a pathway as well as a driving gradient.
-There are diverse exceptions to broad group descriptions.
+$Q_{10} = (R_2/R_1)^{10/(T_2-T_1)} = (8/2)^{10/20} = 4^{0.5} = 2$.
 :::
 
-### 4. A signal to movement
+### 1.4
 
-Explain how a neural signal can produce skeletal-muscle force, and how endocrine
-signals can influence the resources available for activity. Distinguish changes
-in action-potential frequency from changes in action-potential amplitude.
+Over one day an animal ingests 200 kJ. Its faeces contain 50 kJ, its excreted
+nitrogenous waste contains 10 kJ and its metabolic expenditure is 120 kJ.
+Calculate:
+
+a. the absorbed energy
+b. the retained energy (growth and storage)
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-In a vertebrate example, a motor neuron activates the neuromuscular junction,
-muscle membrane excitation triggers calcium release, and calcium permits
-actin–myosin interaction. ATP supports cross-bridge cycling and calcium handling.
-Recruitment and activation frequency contribute to force regulation. Hormones
-can alter fuel mobilisation and longer-term tissue properties. A stronger
-stimulus generally changes firing/recruitment rather than scaling each
-regenerative action potential as if it were an analogue voltage signal.
+a. 200 − 50 = 150 kJ day⁻¹.
+b. 200 − 50 − 10 − 120 = 20 kJ day⁻¹.
+:::
+
+### 1.5
+
+A person at rest has a cardiac output of 5 L min⁻¹, an arterial O₂ content of
+200 mL O₂ L⁻¹ and a mixed-venous O₂ content of 150 mL O₂ L⁻¹. During heavy
+exercise, cardiac output is 20 L min⁻¹ and mixed-venous O₂ content falls to
+100 mL O₂ L⁻¹, while arterial content is unchanged.
+
+a. Calculate the whole-body O₂ consumption at rest and during exercise.
+b. By what factor did O₂ consumption increase?
+c. By what factors did cardiac output and the arterial–venous O₂ difference
+   change?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Rest: 5 × (200 − 150) = 250 mL O₂ min⁻¹.
+   Exercise: 20 × (200 − 100) = 2000 mL O₂ min⁻¹.
+b. 2000/250 = 8 times.
+c. Cardiac output increased 4 times; the arterial–venous difference doubled
+   (50 → 100 mL O₂ L⁻¹). 4 × 2 = 8.
+:::
+
+### 1.6
+
+True or false? Correct any false statements.
+
+a. A rightward shift of the haemoglobin–oxygen dissociation curve means a higher
+   oxygen affinity.
+b. Higher temperature, higher CO₂ and lower pH shift the curve to the right.
+c. Blood with a normal O₂ partial pressure but a low haemoglobin concentration
+   has a normal O₂ content.
+d. The pulmonary veins carry oxygen-rich blood.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. A rightward shift means lower affinity: a higher partial pressure is
+   needed for the same saturation, which favours unloading in the tissues.
+b. True.
+c. False. Most O₂ in blood is bound to haemoglobin, so less haemoglobin means
+   lower O₂ content at the same partial pressure.
+d. True. Veins carry blood towards the heart; the name does not depend on the
+   oxygen content.
+:::
+
+### 1.7
+
+Classify each event as ingestion, digestion, absorption, egestion or excretion.
+
+a. Pancreatic lipase hydrolyses triglycerides in the small intestine.
+b. Glucose crosses the intestinal epithelium into the blood.
+c. Undigested plant fibre leaves the body in the faeces.
+d. Urea leaves the body in the urine.
+e. A cow takes grass into its mouth.
+
+In a ruminant, does microbial fermentation take place before or after the small
+intestine?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Digestion. b. Absorption. c. Egestion. d. Excretion. e. Ingestion.
+
+Before: fermentation occurs in the rumen, so microbes and their products then
+pass on to the small intestine.
+:::
+
+### 1.8
+
+Complete the table for typical teleost fishes.
+
+| | Freshwater teleost | Marine teleost |
+| --- | --- | --- |
+| Body fluids compared with the surrounding water (hyperosmotic or hypo-osmotic) | | |
+| Passive water movement across gills and skin | | |
+| Passive ion movement across gills and skin | | |
+| Drinking | | |
+| Urine | | |
+| Active ion transport at the gills | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Freshwater teleost | Marine teleost |
+| --- | --- | --- |
+| Body fluids compared with the surrounding water | Hyperosmotic | Hypo-osmotic |
+| Passive water movement across gills and skin | Gain | Loss |
+| Passive ion movement across gills and skin | Loss | Gain |
+| Drinking | Little or none | Drinks seawater |
+| Urine | Large volume, dilute | Small volume, about isosmotic to plasma |
+| Active ion transport at the gills | Uptake of Na⁺ and Cl⁻ | Secretion of Na⁺ and Cl⁻ |
+:::
+
+### 1.9
+
+Assume complete dissociation and that the inside of a red blood cell is about
+0.30 Osm L⁻¹.
+
+a. Calculate the osmolarity of 0.15 mol L⁻¹ NaCl, 0.30 mol L⁻¹ sucrose and
+   0.30 mol L⁻¹ urea.
+b. Red blood cells are placed in each solution. The membrane is impermeable to
+   Na⁺, Cl⁻ and sucrose but permeable to urea. State whether each solution is
+   isotonic, hypotonic or hypertonic to the cells.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. All three are 0.30 Osm L⁻¹ (NaCl gives two particles per formula unit).
+b. NaCl: isotonic. Sucrose: isotonic. Urea: hypotonic. Urea enters the cells,
+   water follows, and the cells swell and lyse. The solutions are isosmotic,
+   but they do not have the same tonicity.
+:::
+
+### 1.10
+
+For substance X: plasma concentration 2 mmol L⁻¹, glomerular filtration rate
+0.12 L min⁻¹, tubular reabsorption 0.20 mmol min⁻¹, tubular secretion
+0.01 mmol min⁻¹ and urine flow 0.002 L min⁻¹. Calculate:
+
+a. the filtered load of X
+b. the excretion rate of X
+c. the concentration of X in the urine
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 2 mmol L⁻¹ × 0.12 L min⁻¹ = 0.24 mmol min⁻¹.
+b. 0.24 − 0.20 + 0.01 = 0.05 mmol min⁻¹.
+c. 0.05 mmol min⁻¹ / 0.002 L min⁻¹ = 25 mmol L⁻¹.
+:::
+
+### 1.11
+
+Put these parts of a mammalian nephron in the order that filtrate passes
+through them: distal tubule, Bowman's capsule, collecting duct, ascending limb
+of the loop of Henle, proximal tubule, descending limb of the loop of Henle.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Bowman's capsule → proximal tubule → descending limb → ascending limb →
+distal tubule → collecting duct.
+:::
+
+### 1.12
+
+Plasma osmolality rises after a mammal loses water. Match each item to its role
+in the feedback loop: regulated variable, sensor, effector, signal.
+
+a. antidiuretic hormone (ADH, vasopressin)
+b. collecting-duct epithelial cells
+c. plasma osmolality
+d. osmoreceptors in the hypothalamus
+
+What does ADH change in the collecting duct, and what happens to urine volume
+and concentration?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. signal; b. effector; c. regulated variable; d. sensor.
+
+ADH increases the water permeability of the collecting duct by inserting
+aquaporins into the apical membrane. More water is reabsorbed into the
+hyperosmotic medulla, so urine volume falls and urine concentration rises.
+This is negative feedback: the response lowers plasma osmolality.
+:::
+
+### 1.13
+
+Complete the table of nitrogenous wastes.
+
+| | Ammonia | Urea | Uric acid |
+| --- | --- | --- | --- |
+| Toxicity | | | |
+| Water needed for excretion | | | |
+| Energy cost of synthesis | | | |
+| Example animal group | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Ammonia | Urea | Uric acid |
+| --- | --- | --- | --- |
+| Toxicity | High | Low | Very low |
+| Water needed for excretion | Much | Moderate | Little |
+| Energy cost of synthesis | None (direct product) | Moderate | Highest |
+| Example animal group | Teleost fishes, many aquatic invertebrates | Mammals, sharks | Birds, reptiles, insects |
+:::
+
+### 1.14
+
+Put the steps in order, from a motor-neuron action potential to skeletal-muscle
+contraction:
+
+a. Ca²⁺ is released from the sarcoplasmic reticulum
+b. acetylcholine binds to receptors on the muscle fibre
+c. the action potential reaches the motor-neuron terminal
+d. Ca²⁺ binds to troponin, and tropomyosin moves to expose binding sites on actin
+e. voltage-gated Ca²⁺ channels open and Ca²⁺ enters the nerve terminal
+f. myosin cross-bridges cycle, using ATP
+g. an action potential spreads along the muscle membrane and into the T-tubules
+h. acetylcholine is released into the synaptic cleft
+
+::: {.callout-note collapse="true"}
+## Answer
+
+c → e → h → b → g → a → d → f.
+:::
+
+### 1.15
+
+True or false? Correct any false statements.
+
+a. The inside of a resting neuron is negative relative to the outside.
+b. The Na⁺/K⁺-ATPase moves 3 Na⁺ out of the cell and 2 K⁺ into it for each ATP
+   hydrolysed.
+c. A stronger stimulus produces larger action potentials in a sensory neuron.
+d. Whole-muscle force can be increased by recruiting more motor units.
+e. ATP is needed for myosin to detach from actin.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. True.
+b. True.
+c. False. Action potentials are all-or-none with a roughly fixed amplitude.
+   A stronger stimulus increases their frequency (and may recruit more neurons).
+d. True.
+e. True. Without ATP, cross-bridges stay attached (as in rigor mortis).
+:::
+
+### 1.16
+
+Name the gland or tissue that secretes or releases each hormone.
+
+a. GnRH
+b. LH and FSH
+c. ADH (released into the blood)
+d. insulin
+e. oestrogen
+
+Which type of feedback from oestrogen produces the LH surge that triggers
+ovulation?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Hypothalamus. b. Anterior pituitary. c. Posterior pituitary (it is made by
+hypothalamic neurons). d. β-cells of the pancreatic islets. e. Ovary (follicle cells).
+
+Positive feedback: sustained high oestrogen increases GnRH/LH release.
 :::
 
 ## Plant half {#plant-half}
 
-### 5. Water and carbon together
+### 2.1
 
-Explain how dry air can increase the demand for water loss, why stomatal closure
-can reduce that loss, and how closure can constrain carbon assimilation. Does
-this imply every leaf under drought has the same photosynthetic rate?
+A plant cell has Ψs = −1.2 MPa and Ψp = +0.5 MPa.
+
+a. Calculate its water potential.
+b. State the initial direction of net water movement when the cell is placed in
+   pure water (Ψ = 0 MPa), and in a solution with Ψ = −0.9 MPa.
+c. A root cell has Ψ = −0.4 MPa. In which direction does water initially move
+   when the soil solution is −0.1 MPa, and when a saline soil solution is
+   −0.6 MPa?
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-Water-vapour loss depends on the vapour gradient and pathway conductance.
-Closing stomata lowers conductance but also restricts CO₂ entry. Leaf temperature,
-boundary layer, soil/root hydraulic supply, biochemistry, species and acclimation
-also matter. Describe a trade-off and its conditions, not a universal numerical
-response. Stomata are regulated pores, rather than actively pumping water vapour.
+a. Ψ = Ψs + Ψp = −1.2 + 0.5 = −0.7 MPa.
+b. Pure water: into the cell. −0.9 MPa solution: out of the cell. Water moves
+   from higher (less negative) to lower (more negative) potential.
+c. −0.1 MPa soil: into the root cell. −0.6 MPa saline soil: out of the root cell.
 :::
 
-### 6. Net exchange is a balance
+### 2.2
 
-A teaching model gives gross fixation of 14 and respiratory loss of 3
-µmol CO₂ m⁻² s⁻¹ under one light condition. Calculate net uptake. In a second
-condition net uptake is zero. Does zero net uptake show that all metabolism
-has stopped? What extra assumption would be needed to estimate gross fixation
-from a dark-respiration measurement?
+Arrange from highest to lowest water potential in a transpiring plant: leaf
+mesophyll cell walls, atmosphere, soil water, root xylem.
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-Net uptake is 11 µmol CO₂ m⁻² s⁻¹ under the supplied simplified balance.
-Zero net uptake means opposing fluxes balance; processes can remain active.
-Using a dark rate to correct a light measurement assumes the relevant
-respiratory loss is suitably represented under illumination. Real measurements
-can also involve photorespiration and condition-dependent fluxes. State what
-the teaching model includes before interpreting it as a full carbon budget.
+Soil water → root xylem → leaf mesophyll cell walls → atmosphere. Water moves
+passively down this gradient; the largest drop is from the leaf to the air.
 :::
 
-### 7. A developmental response
+### 2.3
 
-Propose how to distinguish failure of seed germination from failure to supply
-permissive conditions. Include viability, water, temperature, light where
-relevant, and dormancy. Explain why a hormone response depends on tissue and stage.
+a. Put the steps in order for water moving from the soil to the atmosphere:
+
+   1. evaporation from mesophyll cell walls into the leaf air spaces
+   2. entry into a root hair
+   3. crossing the endodermis
+   4. diffusion of water vapour out through a stoma
+   5. movement through the root cortex
+   6. bulk flow up the xylem of the stem
+
+b. What structure forces water and solutes to cross a plasma membrane at the
+   endodermis, and what is it made of?
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-Use a suitable viable seed lot, record environmental conditions, include an
-appropriate reference and define germination before counting. Non-germination
-can reflect dead seeds, unsuitable conditions or dormancy; the observation
-alone does not distinguish them. Hormone responses depend on receptors,
-downstream machinery, sensitivity, other signals and developmental competence.
-Different tissues need not respond identically to the same external dose.
+a. 2 → 5 → 3 → 6 → 1 → 4.
+b. The Casparian strip, a band of suberin (and lignin) in the radial and
+   transverse walls of endodermal cells. It blocks the apoplastic route.
 :::
 
-### 8. An application claim
+### 2.4
 
-A line of modified plants has greater dry mass than its comparison line in
-one controlled trial. Draft a conclusion about the observation, then list
-evidence needed before recommending deployment under field drought.
+Complete the table.
+
+| | Xylem | Phloem |
+| --- | --- | --- |
+| Conducting cells | | |
+| Living at functional maturity? | | |
+| Main substances transported | | |
+| Direction of flow | | |
+| Pressure in the conducting cells | | |
+| Source of the driving force | | |
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-The observed dry-mass difference applies to the measured lines and conditions.
-Check independent allocation, genetic-background controls, replication,
-measurement timing and water use. Field performance, yield, environmental
-interactions, non-target effects, management, access and stakeholder priorities
-need evidence. Neither the modification method alone nor greater biomass in
-one setting determines the whole benefit–risk judgement.
+| | Xylem | Phloem |
+| --- | --- | --- |
+| Conducting cells | Tracheids and vessel elements | Sieve-tube elements (with companion cells) |
+| Living at functional maturity? | No | Yes (without a nucleus) |
+| Main substances transported | Water and mineral ions | Sucrose and other assimilates |
+| Direction of flow | From roots to shoots | From sources to sinks (up or down) |
+| Pressure in the conducting cells | Negative (tension) | Positive |
+| Source of the driving force | Evaporation from leaves (cohesion–tension) | Loading of sugar at sources draws in water osmotically (pressure flow) |
 :::
 
-## Integrating both halves
+### 2.5
 
-### 9. Transport is gradient plus pathway
+Match each description to one cell type: parenchyma, collenchyma,
+sclerenchyma, guard cell, companion cell.
 
-Make a comparison table for a gill, a kidney epithelial pathway and a root-to-leaf
-water pathway. For each identify the transported substance, driving force,
-barrier/pathway, regulatory process and a cost or limitation. Do not assume
-that all three use the same mechanism because all transport material.
+a. Living cells with unevenly thickened primary walls that support growing stems
+b. Cells with thick lignified secondary walls, often dead at maturity
+c. Thin-walled living cells used for photosynthesis or storage
+d. Paired epidermal cells that border a pore
+e. A nucleated cell connected to a sieve-tube element by many plasmodesmata
 
 ::: {.callout-note collapse="true"}
-## Feedback
+## Answer
 
-Gill oxygen crosses along a partial-pressure gradient; ventilation and blood
-flow help maintain it. Kidney epithelia combine selective channels/transporters
-with ion gradients and regulated water permeability. Root-to-leaf water flow
-depends on water-potential differences and hydraulic pathways, with evaporation
-and stomatal regulation important in transpiring plants. Diffusion distance,
-energy for gradient maintenance and hydraulic resistance impose different
-constraints. Distinguish bulk flow from membrane transport.
+a. Collenchyma. b. Sclerenchyma. c. Parenchyma. d. Guard cell. e. Companion cell.
 :::
 
-### 10. Evidence before an explanation
+### 2.6
 
-Choose one supplied practical dataset. Write five sentences: the question;
-the independent unit and comparison; a result with units; a mechanism consistent
-with that result; and a limitation or alternative explanation. Draw the result
-without using R. Swap explanations with a partner and identify any sentence
-that states more than the design supports.
+a. Put the steps of stomatal opening in order:
+
+   1. water enters the guard cells by osmosis
+   2. blue light activates the plasma-membrane H⁺-ATPase of the guard cells
+   3. guard-cell turgor rises and the pore opens
+   4. K⁺ (with Cl⁻ and malate) accumulates in the guard cells
+   5. the membrane hyperpolarises and K⁺ channels open
+
+b. Which hormone causes stomatal closure during drought?
 
 ::: {.callout-note collapse="true"}
-## Feedback criteria
+## Answer
 
-A complete response separates observation from mechanism and mechanism from
-proof. The calculation and figure must match the data dictionary. An explanation
-should be consistent with the unit tutorial, while the limitation should name
-a specific design/measurement issue. No particular software or p-value is
-required to achieve this.
+a. 2 → 5 → 4 → 1 → 3.
+b. Abscisic acid (ABA). It causes K⁺ and anion efflux from the guard cells, so
+   water leaves, turgor falls and the pore closes.
+:::
+
+### 2.7
+
+Net CO₂ uptake of a leaf (µmol CO₂ m⁻² s⁻¹) was measured at four light
+intensities (µmol photons m⁻² s⁻¹):
+
+| Light | 0 | 50 | 200 | 800 |
+| ---: | ---: | ---: | ---: | ---: |
+| Net CO₂ uptake | −2 | 0 | 6 | 9 |
+
+a. What is the rate of respiration in darkness?
+b. At which light intensity is the light compensation point?
+c. Assume that respiration in the light equals respiration in the dark.
+   Calculate gross photosynthesis at 200 µmol photons m⁻² s⁻¹.
+d. True or false: at the light compensation point, photosynthesis and
+   respiration have stopped.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 2 µmol CO₂ m⁻² s⁻¹ (CO₂ release).
+b. About 50 µmol photons m⁻² s⁻¹, where net uptake is zero.
+c. Gross = net + respiration = 6 + 2 = 8 µmol CO₂ m⁻² s⁻¹.
+d. False. Both continue; CO₂ uptake by photosynthesis equals CO₂ release by
+   respiration.
+:::
+
+### 2.8
+
+a. Complete the table.
+
+| | Light-dependent reactions | Calvin–Benson cycle |
+| --- | --- | --- |
+| Location in the chloroplast | | |
+| Inputs | | |
+| Outputs | | |
+
+b. Three CO₂ fixed in the Calvin–Benson cycle give one triose phosphate and
+   use 9 ATP and 6 NADPH. How much CO₂, ATP and NADPH are needed for one
+   glucose (two triose phosphates)?
+
+c. What is the source of the O₂ released in photosynthesis?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+**a.**
+
+| | Light-dependent reactions | Calvin–Benson cycle |
+| --- | --- | --- |
+| Location in the chloroplast | Thylakoid membranes | Stroma |
+| Inputs | Light, H₂O, ADP + Pᵢ, NADP⁺ | CO₂, ATP, NADPH (and RuBP, regenerated) |
+| Outputs | O₂, ATP, NADPH | Triose phosphate, ADP + Pᵢ, NADP⁺ |
+
+b. 6 CO₂, 18 ATP and 12 NADPH.
+c. Water, split at photosystem II.
+:::
+
+### 2.9
+
+Complete the table.
+
+| | C3 | C4 | CAM |
+| --- | --- | --- | --- |
+| Enzyme that first fixes CO₂ | | | |
+| First stable product | | | |
+| How initial fixation is separated from the Calvin–Benson cycle | | | |
+| When stomata are mainly open | | | |
+| Photorespiration in hot, bright conditions | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | C3 | C4 | CAM |
+| --- | --- | --- | --- |
+| Enzyme that first fixes CO₂ | Rubisco | PEP carboxylase | PEP carboxylase |
+| First stable product | 3-phosphoglycerate (3C) | Oxaloacetate (4C) | Oxaloacetate (4C), stored as malate |
+| How initial fixation is separated from the Calvin–Benson cycle | Not separated | In space: mesophyll and bundle-sheath cells | In time: night and day |
+| When stomata are mainly open | Day | Day | Night |
+| Photorespiration in hot, bright conditions | High | Low | Low |
+:::
+
+### 2.10
+
+Classify each organ as a source or a sink of sugar.
+
+a. a mature, illuminated leaf
+b. a developing fruit
+c. a growing root tip
+d. a potato tuber sprouting in spring
+e. a young, expanding leaf
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Source. b. Sink. c. Sink. d. Source (its stored starch is mobilised for the
+new shoots). e. Sink.
+:::
+
+### 2.11
+
+Match each plant hormone to one response: auxin, gibberellin, abscisic acid,
+ethylene, cytokinin, jasmonate, salicylic acid.
+
+a. ripening of climacteric fruits such as tomato and banana
+b. bending of a shoot towards light
+c. stem elongation and breaking of seed dormancy
+d. cell division in shoot meristems
+e. stomatal closure and maintenance of seed dormancy
+f. defence against chewing insects after wounding
+g. defence against biotrophic pathogens
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Ethylene. b. Auxin. c. Gibberellin. d. Cytokinin. e. Abscisic acid.
+f. Jasmonate. g. Salicylic acid.
+:::
+
+### 2.12
+
+a. Name the photoreceptor family that detects (i) red and far-red light and
+   (ii) blue light for phototropism.
+b. Under a leaf canopy the ratio of red to far-red light falls. What growth
+   response does this cause in a shade-avoiding seedling?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. (i) Phytochromes. (ii) Phototropins (cryptochromes also detect blue light).
+b. Increased stem and petiole elongation (shade-avoidance response).
+:::
+
+### 2.13
+
+a. Classify each case as dormancy or quiescence:
+   (i) a dry seed stored in a packet;
+   (ii) a viable seed in warm, moist soil that will not germinate until it has
+   been exposed to cold.
+b. Twelve of 20 seeds have germinated by day 5. Calculate the germination
+   percentage.
+c. True or false: the other eight seeds are dead.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. (i) Quiescence: external conditions (water) are unsuitable.
+   (ii) Dormancy: a viable seed does not germinate under otherwise suitable
+   conditions.
+b. 12/20 × 100 = 60%.
+c. False. They may be dormant, may germinate later or may be non-viable; the
+   count alone cannot tell.
+:::
+
+### 2.14
+
+a. Match each element to one role: nitrogen, phosphorus, potassium, magnesium,
+   iron.
+
+   1. central atom of chlorophyll
+   2. part of amino acids and nucleotides
+   3. main ion for osmotic adjustment in guard cells
+   4. part of ATP and nucleic acids
+   5. component of cytochromes and electron-transfer proteins
+
+b. Nitrogen is mobile in the phloem; iron is not. In which leaves do deficiency
+   symptoms of each first appear?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Magnesium: 1. Nitrogen: 2. Potassium: 3. Phosphorus: 4. Iron: 5.
+b. Nitrogen: older leaves, because it is remobilised to new growth.
+   Iron: young leaves, because it cannot be moved out of older leaves.
+:::
+
+### 2.15
+
+Classify each example as an acute response, acclimation or evolutionary
+adaptation.
+
+a. Stomata close within minutes after the roots are exposed to drying soil.
+b. Plants grown for several weeks in cool conditions increase the proportion of
+   unsaturated fatty acids in their membranes.
+c. A desert population has inherited CAM photosynthesis.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Acute response. b. Acclimation. c. Evolutionary adaptation.
+:::
+
+### 2.16
+
+Match each term to its definition: transformation, regeneration, promoter,
+reporter gene, genome editing, *Agrobacterium tumefaciens*.
+
+a. a DNA sequence that controls where and when a gene is transcribed
+b. a bacterium that transfers a DNA segment (T-DNA) into plant cells
+c. the introduction of foreign DNA into a cell
+d. a targeted change in an existing DNA sequence of the organism
+e. the growth of a whole plant from cultured cells or tissue
+f. a gene whose product is easy to detect, such as GFP or GUS
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Promoter. b. *Agrobacterium tumefaciens*. c. Transformation.
+d. Genome editing. e. Regeneration. f. Reporter gene.
+:::
+
+## Integrating both halves {#integration}
+
+### 3.1
+
+Classify each movement as diffusion, osmosis, bulk flow or primary active
+transport.
+
+a. blood flowing through the aorta
+b. O₂ crossing the alveolar wall
+c. sap rising in the xylem
+d. sucrose solution moving along sieve tubes
+e. H⁺ pumped out of a root cell by the plasma-membrane H⁺-ATPase
+f. Na⁺ moved out of a neuron by the Na⁺/K⁺-ATPase
+g. CO₂ moving from a leaf air space into a mesophyll cell
+h. water entering a guard cell through aquaporins
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Bulk flow. b. Diffusion. c. Bulk flow. d. Bulk flow.
+e. Primary active transport. f. Primary active transport. g. Diffusion.
+h. Osmosis.
+:::
+
+### 3.2
+
+Complete the table comparing water movement into the root xylem of a plant and
+out of the collecting duct of a mammalian kidney.
+
+| | Plant root | Mammalian collecting duct |
+| --- | --- | --- |
+| Is water actively pumped? | | |
+| Membrane proteins that increase water permeability | | |
+| Origin of the gradient that drives water movement | | |
+| Structure that blocks the route between cells | | |
+| Hormone that reduces water loss from the organism | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Plant root | Mammalian collecting duct |
+| --- | --- | --- |
+| Is water actively pumped? | No | No |
+| Membrane proteins that increase water permeability | Aquaporins | Aquaporins |
+| Origin of the gradient that drives water movement | Lower water potential in the xylem, mainly from transpiration (and solutes loaded into the xylem) | High osmolality of the medullary interstitium, built by ion transport in the loop of Henle and by urea |
+| Structure that blocks the route between cells | Casparian strip | Tight junctions |
+| Hormone that reduces water loss from the organism | Abscisic acid (stomatal closure) | ADH (more water reabsorbed) |
+
+In both cases active ion transport creates the gradient, and water follows
+passively.
+:::
+
+### 3.3
+
+Complete the table comparing three gas-exchange organs.
+
+| | Fish gill | Mammalian lung | Leaf |
+| --- | --- | --- | --- |
+| Respiratory medium | | | |
+| Exchange surface | | | |
+| Pattern of flow of the medium | | | |
+| Gas mainly taken up in daylight | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Fish gill | Mammalian lung | Leaf |
+| --- | --- | --- | --- |
+| Respiratory medium | Water | Air | Air |
+| Exchange surface | Gill lamellae | Alveoli | Walls of mesophyll cells facing the air spaces |
+| Pattern of flow of the medium | One-way, countercurrent to blood | Tidal (in and out by the same airways) | No ventilation; diffusion through stomata |
+| Gas mainly taken up in daylight | O₂ | O₂ | CO₂ |
+:::
+
+### 3.4
+
+State whether each process produces O₂, consumes O₂ or neither.
+
+a. photosynthetic electron transport at photosystem II
+b. mitochondrial respiration in a leaf cell in the light
+c. mitochondrial respiration in a muscle fibre
+d. photorespiration
+e. lactate fermentation in muscle
+f. ethanol fermentation in a waterlogged root
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Produces. b. Consumes. c. Consumes. d. Consumes (Rubisco oxygenation).
+e. Neither. f. Neither.
+:::
+
+### 3.5
+
+A red blood cell and a plant cell are both placed in pure water. The red blood
+cell bursts; the plant cell does not. Name the structure responsible for the
+difference, and the pressure that builds up in the plant cell.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The cell wall. Turgor (pressure potential, Ψp) rises until the water potential
+of the cell equals that of the surrounding water, so net water entry stops.
 :::

@@ -149,12 +149,5 @@ Thus two rising metabolic rates can reflect different mechanisms: defending
 body temperature in cold conditions or temperature-dependent processes in
 a warming body.
 
-## Trace a trade-off to its consequence
-
-Compare an insulated mammal and a basking reptile in a cool habitat. Ask where
-their heat comes from, how body temperature affects activity, what food and
-water costs occur, and when behaviour can change the outcome. Do not conclude
-that the reptile “cannot regulate” or that the mammal's temperature never changes.
-Support your account with a predicted measurement, such as body temperature
-through the day together with activity and oxygen use. Continue to
+Practise with the [exercises](exercise.qmd), then continue to
 [gas exchange and circulation](../gas-circulation/index.qmd).

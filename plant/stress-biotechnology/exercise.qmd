@@ -1,81 +1,418 @@
 ---
-title: "P5 exercise — Evaluate a physiological intervention"
+title: "P5 exercises — Stress, defence and biotechnology"
 ---
 
-Use the [tutorial](index.qmd). Allow 60–75 minutes, including a short group
-discussion. All evidence records and numeric trial results below are invented
-for this exercise. They are not copied from a database or a published study.
-No transformation, culture or release activity is requested.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Explain survival versus performance
+## Abiotic stress
 
-A fictional line closes stomata earlier during drying. It retains more leaf
-water but makes fewer seeds under one drought regime. Draw a mechanism linking
-the intervention to both observations. What additional measurements would test
-the carbon-gain and leaf-temperature explanations? Could the same response be
-beneficial under a more severe regime? Define the outcome before saying “better”.
+### 1.1
 
-## 2. Separate annotation from evidence
+For each stress, name the main physiological problem it causes.
 
-Use this offline record; an optional comparison with a real
-[TAIR](https://www.arabidopsis.org/) entry can be made if access is available.
-
-| Field | Fictional record |
+| Stress | Main problem |
 | --- | --- |
-| Identifier | TEACH-GC1 (invented; not a TAIR locus) |
-| Annotation | Candidate membrane transport regulator |
-| Expression | Reporter detected mainly in guard cells under tested conditions |
-| Perturbation | One transformed line has earlier closure |
-| Similarity | Related sequence in another species has an annotated transport role |
-
-Rank the claims: observed reporter location; proven native-protein location;
-proven causal control of closure; plausible mechanistic hypothesis. Which
-evidence is direct and which is inferred? Explain why searching a gene name
-and copying the first description would lose essential uncertainty.
-
-## 3. Design controls before interpreting a transformed line
-
-The line in task 2 was regenerated through tissue culture. Propose appropriate
-background and culture controls, multiple independent events and a way to
-test association with the intended change. Explain what a tissue-specific
-promoter is intended to achieve and why its specificity needs measurement.
-Distinguish stable transformation, transient expression and editing.
-
-## 4. Read a small factorial comparison
-
-The following invented means are seeds per plant from equally sized groups;
-variation and replication details have deliberately not been supplied.
-
-| Line | No herbivores | Herbivores present |
-| --- | ---: | ---: |
-| Control | 100 | 50 |
-| Defence-enhanced | 85 | 75 |
-
-Calculate the line difference in each environment. Explain how the pattern
-could reflect a defence cost and protection benefit. List the missing design
-and uncertainty information needed before recommending the line. Do not infer
-statistical significance from four means.
+| Drought | |
+| Salinity | |
+| Heat | |
+| Freezing | |
 
 ::: {.callout-note collapse="true"}
-## Direction check
+## Answer
 
-Enhanced minus control is −15 seeds without herbivores and +25 with herbivores.
-The pattern is condition-dependent. It does not establish the molecular
-mechanism, the long-term field effect or significance.
+| Stress | Main problem |
+| --- | --- |
+| Drought | Low soil water potential; reduced water uptake and loss of turgor |
+| Salinity | Osmotic effect (low soil water potential) plus ion toxicity, mainly from Na⁺ and Cl⁻ |
+| Heat | Protein denaturation and increased membrane fluidity |
+| Freezing | Ice formation in extracellular spaces dehydrates cells; ice crystals can damage membranes |
 :::
 
-## 5. Write a reasoned recommendation
+### 1.2
 
-Choose either fictional intervention and write 250–350 words addressing its
-mechanism, intended setting, evidence, limitations and next measurement. Include
-one potential benefit, one context-specific ecological concern and one question
-of access or decision power. Identify at least one empirical question and one
-value judgement. Compare with a stated alternative rather than an unspecified
-“natural” plant. A recommendation to collect more evidence is valid if you name
-the evidence and explain how it would affect the decision.
+Which hormone accumulates in leaves during drought, and what is its main
+immediate effect?
 
-## Completion check
+::: {.callout-note collapse="true"}
+## Answer
 
-Keep physiological, empirical and ethical reasoning connected. A label such
-as “GM”, “natural” or “stress-tolerant” does not supply a complete evaluation.
-Finish with the [self-check](quiz.qmd).
+Abscisic acid (ABA). It causes stomatal closure, which reduces transpiration.
+:::
+
+### 1.3
+
+What is the cost to the plant of the response in 1.2?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Closed stomata also reduce CO₂ uptake, so photosynthesis falls. Less
+transpiration also means less evaporative cooling, so leaf temperature rises.
+:::
+
+### 1.4
+
+Name two kinds of compatible solutes, and explain how accumulating them helps
+a plant under drought or salinity.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Examples are proline, glycine betaine and sugars or sugar alcohols such as
+sucrose and mannitol. They lower the cell's solute potential, so the cell can
+keep taking up water from a soil with low water potential. They do so without
+inhibiting enzymes.
+:::
+
+### 1.5
+
+Name two classes of proteins induced by heat or drought stress that help
+protect cells.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Heat shock proteins (chaperones that refold or stabilise proteins) and
+dehydrins/LEA (late embryogenesis abundant) proteins. Antioxidant enzymes such
+as superoxide dismutase and catalase are also accepted.
+:::
+
+### 1.6
+
+Reactive oxygen species (ROS) can damage cells. Name one other role they play
+in plants.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Signalling. For example, ROS act in stress signalling, stomatal closure and
+defence against pathogens.
+:::
+
+### 1.7
+
+Classify each as acclimation or evolutionary adaptation.
+
+a. Plants of a species become more freezing-tolerant after two weeks at 4 °C.
+b. A population on saline coastal soil has heritably higher salt tolerance
+   than inland populations grown under the same conditions.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Acclimation (cold acclimation). b. Evolutionary adaptation.
+:::
+
+## Biotic stress and defence
+
+### 2.1
+
+Name two constitutive (pre-existing) defences and two induced defences of plants.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Constitutive: the cuticle, cell walls, thorns or trichomes, and stored
+specialised metabolites. Induced: callose deposition, phytoalexin production,
+proteinase inhibitors, and the hypersensitive response.
+:::
+
+### 2.2
+
+Match each attacker to the main defence hormone pathway: salicylic acid (SA)
+or jasmonic acid (JA).
+
+a. A biotrophic pathogen that feeds on living tissue
+b. A chewing caterpillar
+c. A necrotrophic fungus that kills tissue before feeding on it
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. SA. b. JA. c. JA, together with ethylene. The SA and JA pathways often
+act antagonistically.
+:::
+
+### 2.3
+
+What is the hypersensitive response, and why is it effective against biotrophic
+pathogens?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+It is rapid, localised death of the plant cells at the infection site. A
+biotrophic pathogen needs living host cells, so killing the infected cells
+deprives it of nutrients and limits its spread.
+:::
+
+### 2.4
+
+What is systemic acquired resistance (SAR), and which hormone is required for it?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+SAR is long-lasting, broad-spectrum resistance in uninfected parts of the plant
+after a local infection. It requires salicylic acid.
+:::
+
+### 2.5
+
+Name the three major classes of plant specialised (secondary) metabolites,
+and give one example of each.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- Terpenoids, e.g. pyrethrins, essential oils such as menthol, or carotenoids.
+- Phenolics, e.g. flavonoids, tannins or lignin.
+- Nitrogen-containing compounds, e.g. alkaloids such as nicotine, caffeine
+  or morphine, and cyanogenic glycosides.
+:::
+
+### 2.6
+
+Why are many defence compounds stored as inactive precursors, such as
+glucosinolates or cyanogenic glycosides?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The active compound is toxic to the plant itself. The precursor is stored
+separately from the activating enzyme, and they meet only when tissue is
+damaged by a herbivore. The toxin is therefore released only at the site of
+attack.
+:::
+
+### 2.7
+
+True or false? Correct any false statements.
+
+a. Defence compounds use carbon and nitrogen that could otherwise be used for growth.
+b. A plant with constitutively activated jasmonate signalling grows larger
+   than a wild-type plant.
+c. Natural plant compounds are harmless to humans.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. True. This is the basis of the growth–defence trade-off.
+b. False. Constitutive defence activation usually reduces growth.
+c. False. Many, such as nicotine, ricin or cyanogenic glycosides, are toxic.
+:::
+
+## Model systems
+
+### 3.1
+
+Give three properties that make *Arabidopsis thaliana* a useful model plant.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Any three of: a short life cycle (about 6–8 weeks); small size; a small,
+fully sequenced genome; self-pollination; many seeds; easy transformation
+with *Agrobacterium* (floral dip); large collections of mutants.
+:::
+
+## Transformation and tissue culture
+
+### 4.1
+
+Put the steps of *Agrobacterium*-mediated transformation in order.
+
+a. Regenerate whole plants from the transformed cells
+b. Insert the gene of interest into the T-DNA of a binary vector
+c. Select transformed cells on medium containing an antibiotic or herbicide
+d. Co-cultivate plant explants with *Agrobacterium*
+e. Confirm the insertion and expression of the transgene
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → c → a → e.
+:::
+
+### 4.2
+
+What is a selectable marker gene? Give an example.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+It is a gene, transferred together with the gene of interest, that allows only
+transformed cells to survive on a selective medium. Examples are *nptII*
+(kanamycin resistance), *hpt* (hygromycin resistance) and *bar* (resistance
+to the herbicide glufosinate).
+:::
+
+### 4.3
+
+What is the difference between stable transformation and transient expression?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+In stable transformation, the transgene is integrated into the plant genome
+and inherited by the offspring. In transient expression, the introduced DNA
+is expressed for a few days without integration and is not inherited.
+:::
+
+### 4.4
+
+Name a method for delivering DNA into plant cells that does not use
+*Agrobacterium*.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Particle bombardment (biolistics). Protoplast transformation, using
+polyethylene glycol or electroporation, is also accepted.
+:::
+
+### 4.5
+
+What property of plant cells makes it possible to regenerate a whole plant
+from a single transformed cell?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Totipotency: many differentiated plant cells can dedifferentiate and
+regenerate all the organs of a whole plant.
+:::
+
+### 4.6
+
+In tissue culture, what does an explant form at each auxin-to-cytokinin ratio?
+
+a. High auxin : cytokinin
+b. Intermediate (roughly balanced)
+c. Low auxin : cytokinin (high cytokinin)
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Roots. b. Undifferentiated callus. c. Shoots. The exact concentrations
+depend on species and tissue.
+:::
+
+### 4.7
+
+Why must several independent transgenic lines be analysed, rather than one?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The T-DNA inserts at a random position in the genome. It can disrupt or
+activate a native gene, and tissue culture can itself cause mutations
+(somaclonal variation). A phenotype seen consistently in independent lines
+is more likely to be caused by the transgene.
+:::
+
+## Promoters and reporters
+
+### 5.1
+
+Match each promoter type to its expression pattern.
+
+| Promoter | Pattern |
+| --- | --- |
+| a. Constitutive (e.g. CaMV 35S) | 1. Expressed only after exposure to a signal |
+| b. Tissue-specific | 2. Expressed in nearly all tissues at all times |
+| c. Inducible | 3. Expressed only in particular cell types, e.g. guard cells |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a–2, b–3, c–1.
+:::
+
+### 5.2
+
+Name two reporter genes used in plants, and how each one is detected.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- GUS (β-glucuronidase): a blue product after staining with X-Gluc.
+- GFP (green fluorescent protein): fluorescence under blue/UV light.
+- Luciferase: light emission when luciferin is supplied.
+:::
+
+## Genetically modified crops
+
+### 6.1
+
+Match each GM trait to the gene or mechanism used.
+
+| Trait | Gene or mechanism |
+| --- | --- |
+| a. Insect resistance | 1. Bacterial EPSP synthase insensitive to glyphosate |
+| b. Herbicide tolerance | 2. Carotenoid biosynthesis genes in the endosperm |
+| c. Golden Rice | 3. *Cry* toxin gene from *Bacillus thuringiensis* |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a–3, b–1, c–2. Golden Rice makes β-carotene (provitamin A) in the grain.
+:::
+
+### 6.2
+
+How does the Bt (Cry) protein kill insect larvae, and why is it harmless to
+mammals?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+In the alkaline gut of susceptible larvae, the protoxin is activated by
+proteases. It binds to specific receptors on the gut epithelium and forms
+pores, so the gut cells lyse. Mammals have an acidic stomach and lack these
+receptors.
+:::
+
+### 6.3
+
+What is a refuge strategy in Bt crop cultivation, and what problem does it delay?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Non-Bt plants are grown next to the Bt crop. Susceptible insects survive on
+the refuge and mate with any resistant insects, which keeps the resistance
+alleles rare. This delays the evolution of Bt resistance in the pest.
+:::
+
+### 6.4
+
+How does genome editing with CRISPR–Cas9 differ from classical transgenesis?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Classical transgenesis inserts foreign DNA into the genome. CRISPR–Cas9 makes
+a targeted cut in an existing gene, which can create a small mutation in that
+gene. The Cas9 construct can then be removed by crossing, so the final plant
+may contain no foreign DNA.
+:::
+
+### 6.5
+
+Classify each question as empirical (it can be answered by measurement) or
+value-based.
+
+a. Does pollen from a GM crop reach a wild relative 100 m away?
+b. How much uncertainty about environmental effects is acceptable?
+c. Does a Bt crop reduce insecticide use in a region?
+d. Who should decide whether a GM crop is grown?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Empirical. b. Value-based. c. Empirical. d. Value-based.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

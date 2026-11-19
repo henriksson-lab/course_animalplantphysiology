@@ -7,8 +7,8 @@ predecessor's four module weights are 6, 1.5, 5 and 2.5 ECTS.
 
 ## Contents and preparation
 
-- [Animal exercise solutions and facilitation](animal.md)
-- [Plant exercise solutions and facilitation](plant.md)
+- [Animal block facilitation](animal.md)
+- [Plant block facilitation](plant.md)
 - [Practical calculation keys and facilitation](practicals.md)
 - [Course evidence and textbook mapping](../plan/evidence.md)
 - [Optional computing decision](../plan/computing.md)
@@ -16,12 +16,12 @@ predecessor's four module weights are 6, 1.5, 5 and 2.5 ECTS.
 
 The site contains ten units, each with a tutorial, slide deck, exercise and
 self-check quiz. The slides are prompts for explanation and discussion; they
-are not replacements for the tutorials. Exercise solutions are instructor
-documents, while the quizzes have student-visible collapsible feedback.
+are not replacements for the tutorials. Exercises and quizzes both show
+student-visible collapsible answers.
 All supplied practical measurements are explicitly simulated.
 
 Before each unit, identify essential terminology and review the corresponding
-exercise key. Ask students to predict an outcome or draw a pathway before
+exercise answers. Ask students to predict an outcome or draw a pathway before
 showing the explanation. Use the final quiz after discussion, then revisit
 an explanation at the next meeting to check retention.
 

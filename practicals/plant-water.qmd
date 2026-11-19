@@ -5,7 +5,7 @@ title: "Practical: water loss, leaf area and a mass balance"
 ## Question and study design
 
 How does moving air relate to water loss from a hypothetical plant setup?
-This 90-minute classroom practical uses the [plant-water CSV](../data/plant-water.csv)
+This classroom practical uses the [plant-water CSV](../data/plant-water.csv)
 and [data dictionary](../data/README.md). No plant manipulation or apparatus
 procedure is required. Use the course's actual laboratory protocol for any
 future measurements.

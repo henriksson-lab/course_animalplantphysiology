@@ -1,71 +1,403 @@
 ---
-title: "P4 exercise — Distinguish signal from mechanism"
+title: "P4 exercises — Signals, growth and reproduction"
 ---
 
-Allow about 60 minutes using the [tutorial](index.qmd). All treatment results
-below are invented teaching observations. The aim is to build explanations and
-identify experiments that discriminate between them; no wet-lab procedure is
-specified here.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Draw a response chain
+## Plant hormones
 
-A seedling bends towards unilateral blue light. Draw cue → perception →
-unequal cellular response → organ curvature. Name a relevant receptor class
-and distinguish the signalling role of light from its energy contribution.
-Propose controls for gravity, handling and general loss of seedling vigour.
+### 1.1
 
-## 2. A hormone rescue is informative but limited
+Match each hormone to the effect that best describes it: auxin, cytokinin,
+gibberellin, abscisic acid (ABA), ethylene, brassinosteroid.
 
-An invented dwarf line is short without added gibberellin and approaches the
-untreated wild-type height with added hormone. Untreated wild type is taller
-than untreated dwarf; hormone-treated wild type is taller still. Suggest a
-defect compatible with these observations and one unsupported conclusion.
-What would a failure to respond to hormone suggest, and why would uptake or
-dosage still need checking?
-
-::: {.callout-tip collapse="true"}
-## Separate synthesis from response
-
-Rescue is compatible with inadequate hormone production, but an external
-treatment can bypass several upstream problems. A phenotype plus rescue does
-not identify a specific mutated gene.
-:::
-
-## 3. Count germination correctly
-
-Each of four independently prepared dishes contains 20 seeds. At day five,
-control dishes show 12 and 14 radicle emergences; treated dishes show 16 and
-18. Calculate percentages for each dish and the mean within each group.
-What must be true about treatment assignment for dishes to be independent
-treatment units? Explain why non-germinated seeds cannot all be labelled dead.
+| | Effect |
+| --- | --- |
+| A | A gas that promotes ripening of climacteric fruits and leaf abscission |
+| B | Promotes cell division in shoot meristems and delays leaf senescence |
+| C | Promotes stomatal closure during drought and maintains seed dormancy |
+| D | Promotes stem elongation (bolting) and breaks seed dormancy |
+| E | Moves by polar transport from the shoot tip; maintains apical dominance and promotes root formation on cuttings |
+| F | A steroid that promotes cell expansion; deficient mutants are dark-green dwarfs |
 
 ::: {.callout-note collapse="true"}
-## Arithmetic check
+## Answer
 
-Control dishes: 60% and 70%, mean 65%. Treated dishes: 80% and 90%, mean 85%.
-The descriptive difference is 20 percentage points. The sample is only two
-dishes per condition; no general mechanistic or inferential claim follows
-from the percentages alone.
+A: ethylene. B: cytokinin. C: ABA. D: gibberellin. E: auxin.
+F: brassinosteroid.
 :::
 
-## 4. Evaluate a mobile flowering signal
+### 1.2
 
-Read the abstract of [Corbesier and colleagues' primary study](https://pubmed.ncbi.nlm.nih.gov/17446353/).
-Identify the species, proposed moving signal and two kinds of evidence used.
-Why is detecting a protein in a receiver region more informative about movement
-than measuring only flowering time? Why does a tagged construct need functional
-controls? Distinguish expression of the gene from movement of its product.
+Predict whether the lateral buds of a pea shoot grow out or stay inhibited
+after each treatment.
 
-## 5. Interpret reproductive and ageing outcomes
+a. intact plant
+b. shoot apex removed (decapitated)
+c. shoot apex removed and auxin (IAA) in lanolin paste applied to the cut stump
+d. shoot apex removed and plain lanolin applied to the cut stump
+e. intact plant with cytokinin applied directly to a lateral bud
 
-Two groups make equal flower numbers, but one makes fewer viable seeds.
-List three stages after flower initiation that could account for the difference.
-Then compare normal leaf senescence with sudden tissue damage: what time-course,
-nutrient-remobilisation or contextual evidence would help distinguish them?
-Do not use yellow colour alone as a decisive mechanism test.
+::: {.callout-note collapse="true"}
+## Answer
 
-## Completion check
+a. Inhibited. b. Grow out. c. Inhibited: auxin replaces the apex.
+d. Grow out: lanolin alone has no effect. e. Grows out: cytokinin promotes
+bud outgrowth.
 
-Your explanations should connect signalling to cell behaviour and distinguish
-germination, establishment, flowering, fertilisation and seed production.
-Complete the [self-check](quiz.qmd).
+Auxin moving down the stem does not enter the bud. It acts indirectly, by
+lowering cytokinin supply to the bud and raising strigolactone synthesis.
+:::
+
+### 1.3
+
+Put the steps of starch mobilisation in a germinating barley grain in order.
+
+a. α-amylase is secreted into the starchy endosperm
+b. the embryo releases gibberellin
+c. sugars are absorbed by the scutellum and supply the growing embryo
+d. gibberellin reaches the aleurone layer and induces α-amylase gene expression
+e. starch is hydrolysed to sugars
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → a → e → c. ABA antagonises this response by inhibiting the
+gibberellin-induced expression of α-amylase.
+:::
+
+### 1.4
+
+Two dwarf pea mutants are sprayed with gibberellin. Mutant A grows to normal
+height. Mutant B stays dwarf. Which mutant is most likely defective in
+gibberellin biosynthesis, and which in gibberellin perception or signalling?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Mutant A: biosynthesis. The added hormone replaces what the plant cannot make.
+Mutant B: perception or signalling. The plant cannot respond to the hormone
+even when it is supplied.
+:::
+
+### 1.5
+
+Etiolated (dark-grown) Arabidopsis seedlings are exposed to ethylene.
+
+a. Name the three features of the *triple response*.
+b. What do ethylene-treated seedlings of the ethylene-insensitive mutant
+   *etr1* look like?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Shorter hypocotyl (and root), thicker (radially swollen) hypocotyl, and
+   an exaggerated apical hook.
+b. Like untreated dark-grown seedlings: long, thin hypocotyls with a normal
+   apical hook. The ETR1 receptor cannot pass on the ethylene signal.
+:::
+
+## Tropisms
+
+### 2.1
+
+A coleoptile is lit from one side with blue light. Complete the sentences.
+
+a. The light is detected by the photoreceptor ______.
+b. Auxin is redistributed towards the ______ side.
+c. Cells on the ______ side elongate faster.
+d. The coleoptile therefore bends ______ the light.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Phototropin. b. Shaded. c. Shaded. d. Towards.
+
+This is the Cholodny–Went model: lateral auxin transport causes unequal
+growth on the two sides of the organ.
+:::
+
+### 2.2
+
+Grass coleoptiles are lit from one side after each treatment. Predict whether
+each coleoptile bends towards the light.
+
+a. untreated
+b. tip removed
+c. tip covered with an opaque cap
+d. tip covered with a transparent cap
+e. opaque collar around the region below the tip, tip exposed
+f. tip cut off and replaced on a thin gelatin block
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Bends. b. No bending. c. No bending. d. Bends. e. Bends. f. Bends.
+
+The light is perceived at the tip, and a signal that can diffuse through
+gelatin (auxin) moves down to the growing region below.
+:::
+
+### 2.3
+
+A vertically growing root is turned horizontal.
+
+a. Which cells perceive gravity, and which organelles act as statoliths?
+b. On which side does auxin accumulate?
+c. Which side elongates faster, and in which direction does the root bend?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Columella cells of the root cap. Starch-filled amyloplasts sediment to the
+   lower side of the cell.
+b. The lower side.
+c. The upper side elongates faster, because high auxin concentrations inhibit
+   elongation in roots. The root bends downwards.
+:::
+
+## Light signalling
+
+### 3.1
+
+Complete the table for phytochrome.
+
+| | Pr | Pfr |
+| --- | --- | --- |
+| Absorption maximum (colour and approximate wavelength) | | |
+| Converted to | | |
+| Biologically active form? | | |
+| Form in which phytochrome is synthesised? | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Pr | Pfr |
+| --- | --- | --- |
+| Absorption maximum (colour and approximate wavelength) | Red, about 660 nm | Far-red, about 730 nm |
+| Converted to | Pfr | Pr |
+| Biologically active form? | No | Yes |
+| Form in which phytochrome is synthesised? | Yes | No |
+:::
+
+### 3.2
+
+Imbibed lettuce seeds are given brief flashes of red (R) and far-red (FR)
+light and then kept in the dark. Predict whether most seeds germinate.
+
+a. dark only
+b. R
+c. R → FR
+d. R → FR → R
+e. R → FR → R → FR
+f. R → FR → R → FR → R
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. No. b. Yes. c. No. d. Yes. e. No. f. Yes.
+
+The last flash decides the outcome. Red light leaves phytochrome mainly as
+Pfr, which promotes germination. Far-red light converts it back to Pr.
+:::
+
+### 3.3
+
+A seedling grows under a dense leaf canopy.
+
+a. Is the red : far-red ratio higher or lower than in direct sunlight? Why?
+b. How does this change the proportion of phytochrome in the Pfr form?
+c. Name two shade-avoidance responses.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Lower. Chlorophyll absorbs red light but transmits and reflects far-red
+   light.
+b. The proportion of Pfr falls.
+c. Any two of: faster stem and petiole elongation, upward leaf movement,
+   reduced branching, earlier flowering.
+:::
+
+### 3.4
+
+Match each photoreceptor to the light it absorbs and to one response it
+controls: phytochrome, cryptochrome, phototropin, UVR8.
+
+Light: blue/UV-A; blue/UV-A; red/far-red; UV-B.
+
+Responses: phototropism and chloroplast movement; seed germination and shade
+avoidance; inhibition of hypocotyl elongation and entrainment of the
+circadian clock; UV-protective responses.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Photoreceptor | Light | Response |
+| --- | --- | --- |
+| Phytochrome | Red/far-red | Seed germination and shade avoidance |
+| Cryptochrome | Blue/UV-A | Inhibition of hypocotyl elongation; circadian clock entrainment |
+| Phototropin | Blue/UV-A | Phototropism and chloroplast movement (also stomatal opening) |
+| UVR8 | UV-B | UV-protective responses |
+:::
+
+## Germination and dormancy
+
+### 4.1
+
+Classify each seed as dormant or quiescent.
+
+a. Dry seeds stored in a packet.
+b. Freshly harvested seeds do not germinate on moist paper at 20 °C, but do
+   after several months of dry storage.
+c. Seeds in dry soil germinate after the first rain.
+d. Seeds germinate only after several weeks of moist chilling.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Quiescent. b. Dormant (released by after-ripening). c. Quiescent.
+d. Dormant (released by cold stratification).
+:::
+
+### 4.2
+
+Predict the germination behaviour of:
+
+a. an ABA-deficient mutant
+b. a gibberellin-deficient mutant
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Reduced dormancy. Seeds may germinate while still on the mother plant
+   (vivipary).
+b. Seeds fail to germinate unless gibberellin is supplied.
+
+The ABA : gibberellin balance regulates dormancy: ABA maintains it, and
+gibberellin promotes germination.
+:::
+
+### 4.3
+
+Four dishes each contain 20 seeds. By day 5, radicles have emerged from 12
+and 14 seeds in the two control dishes, and from 16 and 18 seeds in the two
+treated dishes. Calculate the germination percentage of each dish and the
+mean for each group.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Control: 60% and 70%, mean 65%. Treated: 80% and 90%, mean 85%.
+:::
+
+## Flowering and reproduction
+
+### 5.1
+
+A short-day plant (SDP) and a long-day plant (LDP) both have a critical night
+length of 11 h. Predict whether each plant flowers under each 24 h cycle.
+
+a. 16 h light / 8 h dark
+b. 8 h light / 16 h dark
+c. 8 h light / 16 h dark, with the night interrupted in the middle by a brief red flash
+d. as c, but the red flash is followed immediately by a far-red flash
+e. 8 h light / 16 h dark, with the light period interrupted by 1 h of darkness
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | SDP | LDP |
+| --- | --- | --- |
+| a | No | Yes |
+| b | Yes | No |
+| c | No | Yes |
+| d | Yes | No |
+| e | Yes | No |
+
+The length of the uninterrupted night is the deciding factor. A red night
+break divides the long night into two short ones. Far-red reverses the red
+effect, so phytochrome perceives the night break. Darkness during the day has
+no effect.
+:::
+
+### 5.2
+
+In Arabidopsis under long days, name:
+
+a. the organ that perceives the photoperiod
+b. the mobile protein that signals floral induction
+c. the tissue through which it moves
+d. the site where it acts to start flower formation
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Leaves. b. FLOWERING LOCUS T (FT). c. Phloem. d. Shoot apical meristem,
+where FT with the transcription factor FD activates floral meristem identity
+genes.
+:::
+
+### 5.3
+
+True or false? Correct any false statements.
+
+a. Vernalisation makes a plant flower while it is still in the cold.
+b. Vernalisation is perceived by the shoot apex.
+c. In Arabidopsis, vernalisation represses the flowering repressor *FLC*.
+d. The vernalised state is passed on to the plant's seeds.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Prolonged cold gives the competence to flower. Flowering itself
+   usually happens later, under warmer, inductive conditions.
+b. True.
+c. True. *FLC* stays repressed through later cell divisions after the cold.
+d. False. The vernalised state is reset in each generation, so the offspring
+   need cold again.
+:::
+
+### 5.4
+
+Complete the table for double fertilisation in a typical angiosperm.
+
+| Structure | Formed from | Ploidy |
+| --- | --- | --- |
+| Zygote | | |
+| Endosperm | | |
+| Seed coat | | |
+| Fruit wall (pericarp) | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Structure | Formed from | Ploidy |
+| --- | --- | --- |
+| Zygote | One sperm cell + egg cell | 2n |
+| Endosperm | Second sperm cell + central cell (two polar nuclei) | 3n |
+| Seed coat | Integuments of the ovule (maternal) | 2n |
+| Fruit wall (pericarp) | Ovary wall (maternal) | 2n |
+:::
+
+## Senescence
+
+### 6.1
+
+a. Name the hormone that delays leaf senescence and two hormones that promote it.
+b. Which of these nutrients are efficiently remobilised from a senescing leaf
+   to the seeds: nitrogen, phosphorus, potassium, calcium?
+c. Through which tissue are remobilised nutrients exported from the leaf?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Cytokinin delays senescence. Ethylene, ABA and jasmonic acid promote it
+   (any two).
+b. Nitrogen, phosphorus and potassium. Calcium is immobile in the phloem and
+   stays in the leaf.
+c. Phloem.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

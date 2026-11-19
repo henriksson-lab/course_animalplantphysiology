@@ -1,68 +1,393 @@
 ---
-title: "P3 exercise — Interpret a carbon budget"
+title: "P3 exercises — Light, carbon and the whole-plant budget"
 ---
 
-Use the [tutorial](index.qmd). Allow 50–60 minutes. The numbers below are
-invented for classroom analysis; they are not predictions for any species.
-Leave with a hand-drawn response plot and a whole-plant explanation.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Trace atoms, energy and compartments
+## Light reactions
 
-Draw a chloroplast with thylakoids and stroma. Label where water supplies
-electrons, oxygen is released, ATP/NADPH are generated and CO2 is fixed. Add a
-mitochondrion and explain why it remains relevant in an illuminated leaf.
-Correct the statement: “The leaf splits CO2 to release oxygen and stores
-light directly as ATP for transport to roots.”
+### 1.1
 
-## 2. Plot the measured response
+Complete the table.
 
-The same leaf is measured at each light level after an equilibration period.
-Other chamber settings are held constant. Positive values indicate net uptake.
+| | Light reactions | Calvin–Benson cycle |
+| --- | --- | --- |
+| Location in the chloroplast | | |
+| Inputs | | |
+| Outputs | | |
 
-| Light (µmol photons m⁻² s⁻¹) | Net CO2 exchange (µmol CO2 m⁻² s⁻¹) |
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Light reactions | Calvin–Benson cycle |
+| --- | --- | --- |
+| Location in the chloroplast | Thylakoid membranes | Stroma |
+| Inputs | Light, H₂O, ADP + Pᵢ, NADP⁺ | CO₂, ATP, NADPH |
+| Outputs | O₂, ATP, NADPH | Triose phosphate (sugars), ADP + Pᵢ, NADP⁺ |
+:::
+
+### 1.2
+
+The O₂ released in photosynthesis comes from:
+
+a. CO₂
+b. H₂O
+c. glucose
+d. ribulose 1,5-bisphosphate
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b. Water is oxidised at photosystem II, supplying electrons and releasing O₂.
+CO₂ supplies the carbon of the sugars.
+:::
+
+### 1.3
+
+Put the carriers of linear (non-cyclic) electron flow in order, starting with
+water: ferredoxin, photosystem I, plastoquinone, NADP⁺, photosystem II,
+plastocyanin, cytochrome *b*₆*f* complex.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+H₂O → photosystem II → plastoquinone → cytochrome *b*₆*f* complex →
+plastocyanin → photosystem I → ferredoxin → NADP⁺ (via
+ferredoxin–NADP⁺ reductase).
+:::
+
+### 1.4
+
+Complete the table comparing linear and cyclic electron flow (yes/no).
+
+| | Linear flow | Cyclic flow |
+| --- | --- | --- |
+| Photosystem II involved | | |
+| O₂ released | | |
+| NADPH formed | | |
+| ATP formed | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Linear flow | Cyclic flow |
+| --- | --- | --- |
+| Photosystem II involved | Yes | No |
+| O₂ released | Yes | No |
+| NADPH formed | Yes | No |
+| ATP formed | Yes | Yes |
+:::
+
+### 1.5
+
+How is the energy of the proton gradient across the thylakoid membrane used,
+and in which direction do protons flow through the enzyme?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+ATP synthase uses it to make ATP from ADP and Pᵢ. Protons flow from the
+thylakoid lumen (high H⁺) to the stroma (low H⁺), so ATP is formed in the
+stroma.
+:::
+
+## The Calvin–Benson cycle and photorespiration
+
+### 2.1
+
+Name the three phases of the Calvin–Benson cycle in order, and the enzyme that
+catalyses the first.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Carboxylation → reduction → regeneration of ribulose 1,5-bisphosphate (RuBP).
+Carboxylation is catalysed by Rubisco (ribulose-1,5-bisphosphate
+carboxylase/oxygenase), which adds CO₂ to RuBP to form two molecules of
+3-phosphoglycerate.
+:::
+
+### 2.2
+
+Fixing 3 CO₂ into one net triose phosphate requires 9 ATP and 6 NADPH.
+
+a. How much ATP and NADPH are needed to fix 6 CO₂, the carbon of one hexose?
+b. What is the ATP : NADPH ratio required?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 18 ATP and 12 NADPH.
+b. 3 : 2 (1.5 ATP per NADPH).
+:::
+
+### 2.3
+
+True or false? Correct any false statements.
+
+a. The Calvin–Benson cycle runs all night because it is a "dark reaction".
+b. Rubisco can react with O₂ as well as CO₂.
+c. Photorespiration is the same process as mitochondrial respiration.
+d. Photorespiration releases CO₂ that has already been fixed.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. The cycle needs ATP and NADPH from the light reactions, and several
+   of its enzymes are activated in light; it stops soon after darkness begins.
+b. True.
+c. False. Photorespiration starts with Rubisco oxygenation and recycles
+   2-phosphoglycolate; mitochondrial respiration oxidises sugars to make ATP.
+d. True. CO₂ is released in the mitochondria when glycine is converted to
+   serine.
+:::
+
+### 2.4
+
+Name the three organelles involved in the photorespiratory pathway.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Chloroplast, peroxisome and mitochondrion.
+:::
+
+### 2.5
+
+State whether each change increases or decreases the rate of
+photorespiration relative to carboxylation in a C3 leaf.
+
+a. Higher leaf temperature
+b. Stomatal closure during drought
+c. Higher atmospheric CO₂ concentration
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Increases (the solubility of CO₂ falls more than that of O₂, and Rubisco's
+   specificity for CO₂ decreases).
+b. Increases (the CO₂ concentration inside the leaf falls).
+c. Decreases.
+:::
+
+## C3, C4 and CAM
+
+### 3.1
+
+Complete the table.
+
+| | C3 | C4 | CAM |
+| --- | --- | --- | --- |
+| Enzyme of initial CO₂ fixation | | | |
+| First stable product | | | |
+| Separation of initial fixation and Calvin cycle | | | |
+| Stomata open mainly | | | |
+| Photorespiration | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | C3 | C4 | CAM |
+| --- | --- | --- | --- |
+| Enzyme of initial CO₂ fixation | Rubisco | PEP carboxylase | PEP carboxylase |
+| First stable product | 3-phosphoglycerate (3 C) | Oxaloacetate (4 C) | Oxaloacetate (4 C), stored as malate |
+| Separation of initial fixation and Calvin cycle | None | Spatial: mesophyll and bundle-sheath cells | Temporal: night and day |
+| Stomata open mainly | Day | Day | Night |
+| Photorespiration | High in warm conditions | Low | Low |
+
+In all three, the CO₂ is finally fixed by Rubisco in the Calvin–Benson cycle.
+:::
+
+### 3.2
+
+Classify each plant as C3, C4 or CAM: maize, wheat, pineapple, sugarcane,
+rice, prickly pear cactus (*Opuntia*).
+
+::: {.callout-note collapse="true"}
+## Answer
+
+C3: wheat, rice. C4: maize, sugarcane. CAM: pineapple, *Opuntia*.
+:::
+
+### 3.3
+
+Which observation is characteristic of a CAM plant?
+
+a. Bundle-sheath cells packed with chloroplasts
+b. Acidity of the leaf tissue rises during the night and falls during the day
+c. Stomata open only at midday
+d. Rubisco is absent
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b. Malic acid accumulates in the vacuole at night and is decarboxylated during
+the day to supply CO₂ to Rubisco. Option a describes C4 (Kranz) anatomy.
+:::
+
+### 3.4
+
+Name the advantage and the cost of the C4 CO₂-concentrating mechanism.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Advantage: high CO₂ around Rubisco in the bundle sheath suppresses
+photorespiration, giving higher photosynthesis and water-use efficiency in
+warm, bright conditions. Cost: extra ATP (2 ATP per CO₂) to regenerate
+PEP from pyruvate.
+:::
+
+## Light-response curves and units
+
+### 4.1
+
+The net CO₂ exchange of one leaf is measured at four light levels. Positive
+values are net uptake.
+
+| Light (µmol photons m⁻² s⁻¹) | Net CO₂ exchange (µmol CO₂ m⁻² s⁻¹) |
 | ---: | ---: |
 | 0 | −2 |
 | 50 | 0 |
 | 200 | 6 |
 | 800 | 9 |
 
-Plot points, label axes/units, identify the observed compensation condition
-and describe the change in response per added light. What additional evidence
-would you need to identify the high-light limitation? Do not fit a straight
-line across the whole range or treat the four readings as four plants.
-
-## 3. Keep units through the calculation
-
-A leaf maintains net uptake of 6 µmol CO2 m⁻² s⁻¹ over 0.02 m² for 600 s.
-Calculate total net uptake in µmol CO2, assuming the rate remains constant.
-Explain why this does not by itself give whole-plant dry-mass gain.
+a. What is the rate of respiration in darkness?
+b. What is the light compensation point?
+c. Calculate the increase in net CO₂ uptake per additional µmol photons
+   between 50 and 200, and between 200 and 800 µmol photons m⁻² s⁻¹.
+d. Assuming respiration is unchanged in light, what is gross photosynthesis at
+   200 µmol photons m⁻² s⁻¹?
 
 ::: {.callout-note collapse="true"}
-## Worked units
+## Answer
 
-6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO2. Leaf area and time cancel.
-Other organs respire; carbon may be exported or stored; biomass composition
-and longer-term variation have not been measured.
+a. 2 µmol CO₂ m⁻² s⁻¹.
+b. 50 µmol photons m⁻² s⁻¹, where net exchange is zero.
+c. 6 / 150 = 0.04 µmol CO₂ per µmol photons; 3 / 600 = 0.005 µmol CO₂ per
+   µmol photons. The response saturates at high light.
+d. 6 + 2 = 8 µmol CO₂ m⁻² s⁻¹.
 :::
 
-## 4. Compare strategies under specified conditions
+### 4.2
 
-Explain the advantage and cost of CO2 concentration in a C4 leaf under warm,
-bright conditions. Compare spatial concentration with a CAM plant's typical
-night/day separation. Propose one observation supporting CAM, and one reason
-that an overnight gas-exchange trace alone may need further verification.
+A leaf of area 0.02 m² takes up CO₂ at a constant net rate of
+6 µmol CO₂ m⁻² s⁻¹ for 10 min.
 
-## 5. Sources, sinks and nitrogen
+a. Calculate the total net CO₂ uptake in µmol.
+b. Convert it to mg CO₂ (M(CO₂) = 44 g mol⁻¹).
 
-During seed filling, a mature leaf exports carbon to developing seeds. Later,
-a stored underground organ supports regrowth. Draw each source–sink relation.
-Explain why “phloem carries sugar downwards” fails in at least one case.
-Predict why severely oxygen-limited roots may have poor nutrient uptake even
-when shoot photosynthesis continues. Connect carbon skeletons and energy to
-nitrogen assimilation rather than treating nutrient supply as independent.
+::: {.callout-note collapse="true"}
+## Answer
 
-## Completion check
+a. 6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO₂.
+b. 72 × 10⁻⁶ mol × 44 g mol⁻¹ = 3.2 × 10⁻³ g = 3.2 mg CO₂.
+:::
 
-Distinguish gross component processes from net exchange; amount from rate;
-photorespiration from mitochondrial respiration; source role from organ name.
-Continue with the [self-check](quiz.qmd).
+## Sources, sinks and phloem transport
+
+### 5.1
+
+Classify each organ as a source or a sink.
+
+a. Mature, illuminated leaf
+b. Developing fruit
+c. Root tip
+d. Young, expanding leaf
+e. Potato tuber sprouting in spring
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Source. b. Sink. c. Sink. d. Sink. e. Source (stored starch is mobilised
+to supply the new shoot).
+:::
+
+### 5.2
+
+Put the steps of the pressure-flow model of phloem transport in order:
+
+a. hydrostatic pressure rises in the sieve tubes at the source
+b. sucrose is loaded into the sieve-element–companion-cell complex
+c. sucrose is unloaded at the sink and water leaves the sieve tubes
+d. water enters the sieve tubes from the xylem by osmosis
+e. sap moves by bulk flow towards the sink
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → a → e → c.
+:::
+
+### 5.3
+
+Name the main sugar transported in the phloem of most plants and the main
+storage carbohydrate in chloroplasts.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Sucrose is transported in the phloem; starch is stored in chloroplasts.
+:::
+
+## Respiration and nitrogen assimilation
+
+### 6.1
+
+Complete the table for aerobic respiration.
+
+| Stage | Location | Main products |
+| --- | --- | --- |
+| Glycolysis | | |
+| Tricarboxylic acid (citric acid) cycle | | |
+| Electron transport and oxidative phosphorylation | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Stage | Location | Main products |
+| --- | --- | --- |
+| Glycolysis | Cytosol (and plastids) | Pyruvate, ATP, NADH |
+| Tricarboxylic acid (citric acid) cycle | Mitochondrial matrix | CO₂, NADH, FADH₂, ATP |
+| Electron transport and oxidative phosphorylation | Inner mitochondrial membrane | ATP, H₂O (O₂ is the final electron acceptor) |
+:::
+
+### 6.2
+
+Roots of a flooded plant switch to fermentation.
+
+a. Why can glycolysis continue during fermentation?
+b. Name the main fermentation products in plant roots.
+c. About how many ATP are formed per glucose by fermentation, compared with
+   complete aerobic oxidation?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Fermentation regenerates NAD⁺ from NADH, which glycolysis requires.
+b. Ethanol and CO₂ (and some lactate).
+c. 2 ATP per glucose by fermentation, compared with about 30 ATP by aerobic
+   respiration.
+:::
+
+### 6.3
+
+Put the steps of nitrate assimilation in order and name the enzyme for each
+step: ammonium → glutamine; nitrite → ammonium; nitrate → nitrite;
+glutamine + 2-oxoglutarate → glutamate.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1. Nitrate → nitrite: nitrate reductase (cytosol).
+2. Nitrite → ammonium: nitrite reductase (plastid).
+3. Ammonium + glutamate → glutamine: glutamine synthetase (GS).
+4. Glutamine + 2-oxoglutarate → 2 glutamate: glutamate synthase (GOGAT).
+
+The reducing power, ATP and carbon skeletons (2-oxoglutarate) come from
+photosynthesis and respiration, so nitrogen assimilation depends on carbon
+metabolism.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

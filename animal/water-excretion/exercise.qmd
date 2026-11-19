@@ -1,79 +1,501 @@
 ---
-title: "A4 exercises — Osmotic challenges and renal accounting"
+title: "A4 exercises — Water, ions and excretion"
 ---
 
-Use the [tutorial](index.qmd). These tasks use supplied hypothetical data and
-schematics, with no sampling or fluid-manipulation procedure. Allow 60–90
-minutes. Leave with a habitat comparison, a labelled nephron and an excretion
-calculation that distinguishes amount from concentration.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. State the membrane and the tendency
+## Osmotic concentration and tonicity
 
-A hypothetical animal's body fluids have osmolarity 300 mOsm L⁻¹. Compare
-two external media: 10 and 1,000 mOsm L⁻¹. Assuming the relevant surface
-allows water exchange, predict the water tendency in each. Which additional
-information would be needed to predict the flux of a particular ion?
+### 1.1
 
-For ideal solutions, estimate osmolarities of 0.15 mol L⁻¹ glucose and
-0.15 mol L⁻¹ NaCl, treating NaCl as fully dissociated. Explain why an equal
-total osmolarity does not guarantee equal tonicity for a cell membrane.
+Calculate the osmolarity (mOsm L⁻¹) of each solution. Treat the solutions as
+ideal and the salts as fully dissociated.
 
-## 2. Compare freshwater and seawater teleosts
+a. 0.15 mol L⁻¹ glucose
+b. 0.15 mol L⁻¹ NaCl
+c. 0.10 mol L⁻¹ CaCl₂
+d. 0.10 mol L⁻¹ NaCl + 0.10 mol L⁻¹ urea
 
-Draw one water arrow and one net salt-challenge arrow for each fish. Add
-drinking behaviour, the role of gill transport and expected relative urine
-volume. Explain why these examples cannot be transferred unchanged to a
-marine shark or every marine invertebrate.
+::: {.callout-note collapse="true"}
+## Answer
 
-Your figure should distinguish a passive tendency from an active compensating
-process, using different arrow labels.
-
-## 3. Account for a substance in the kidney
-
-For a hypothetical solute, glomerular filtration rate is 0.10 L min⁻¹ and
-plasma concentration 5 mmol L⁻¹. Assume the solute is freely filtered.
-Reabsorption is 0.40 mmol min⁻¹ and secretion 0.02 mmol min⁻¹.
-
-Calculate filtered load and excretion rate. Urine flow is 0.002 L min⁻¹:
-calculate urine concentration. Check that concentration × urine flow returns
-the excretion rate.
-
-Then halve urine flow while holding that excretion rate fixed. What happens
-to urine concentration? Does this require the amount of solute excreted per
-minute to increase?
-
-::: {.callout-tip collapse="true"}
-## Hint
-
-Filtered load is filtration rate × plasma concentration. Keep L min⁻¹,
-mmol L⁻¹ and mmol min⁻¹ distinct at each step.
+a. 150 mOsm L⁻¹ (glucose does not dissociate).
+b. 300 mOsm L⁻¹ (Na⁺ + Cl⁻: 2 particles per formula unit).
+c. 300 mOsm L⁻¹ (Ca²⁺ + 2 Cl⁻: 3 particles per formula unit).
+d. 300 mOsm L⁻¹ (200 from NaCl + 100 from urea).
 :::
 
-## 4. Trace water recovery and feedback
+### 1.2
 
-Draw a nephron route from glomerulus to collecting duct, with arrows for
-filtration, reabsorption and secretion. Explain how a medullary gradient and
-collecting-duct water permeability work together. Predict the direction of
-change in urine volume when ADH action rises, provided the relevant gradient
-and kidney function are intact.
+An animal's body fluids have an osmolarity of 300 mOsm L⁻¹. For each external
+medium, state whether the medium is hyperosmotic, isosmotic or hyposmotic to
+the body fluids, and the direction in which water tends to move across a
+water-permeable body surface.
 
-Complete a negative-feedback explanation for an increase in body-fluid osmotic
-concentration. Identify what is sensed, what responds and how the initial
-disturbance is reduced. Explain why ADH does not create water.
+a. 10 mOsm L⁻¹ (fresh water)
+b. 300 mOsm L⁻¹
+c. 1,000 mOsm L⁻¹ (seawater)
 
-## 5. Connect nitrogen form to trade-offs
+::: {.callout-note collapse="true"}
+## Answer
 
-Compare ammonia, urea and uric acid in terms of conversion costs, water demands
-and physiological context. Explain why “uric acid is best because it saves
-water” is incomplete. Distinguish nitrogen excretion from loss of undigested
-food in faeces.
+a. Hyposmotic; water tends to enter the animal.
+b. Isosmotic; no net osmotic water movement.
+c. Hyperosmotic; water tends to leave the animal.
+:::
 
-## 6. Interpret a described kidney section
+### 1.3
 
-An invented description reports many epithelial rings around lumens and some
-capillary tufts within surrounding spaces. Propose an organ and tissue features
-supporting that interpretation. Explain why one ring cannot confidently identify
-a nephron segment without additional features. Connect one observed feature
-to filtration and another to selective transport.
+Red blood cells (intracellular osmolarity 300 mOsm L⁻¹) are placed in each
+solution. State whether the cells swell, shrink or keep their volume.
+The membrane is permeable to urea but effectively impermeable to NaCl.
 
-Finish with the [quiz](quiz.qmd).
+a. 300 mOsm L⁻¹ NaCl
+b. 150 mOsm L⁻¹ NaCl
+c. 600 mOsm L⁻¹ NaCl
+d. 300 mOsm L⁻¹ urea
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Keep their volume (isotonic).
+b. Swell (hypotonic).
+c. Shrink (hypertonic).
+d. Swell, and eventually burst. Urea enters the cells until its concentration
+   is equal on both sides, so it exerts no lasting osmotic effect. The cells'
+   own trapped solutes then draw water in. The solution is isosmotic but
+   hypotonic.
+:::
+
+### 1.4
+
+True or false? Correct any false statements.
+
+a. Two solutions with the same osmolarity always have the same effect on cell
+   volume.
+b. Osmolarity depends on the number of dissolved particles, not on their mass.
+c. An osmoconformer keeps every internal ion at the same concentration as
+   seawater.
+d. A hydrostatic pressure can stop net osmotic water movement before the
+   solute concentrations on the two sides become equal.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Tonicity depends only on solutes that cannot cross the membrane, so
+   isosmotic solutions can differ in tonicity (see 1.3 d).
+b. True.
+c. False. An osmoconformer matches the *total* osmotic concentration of its
+   medium but may still regulate individual ions.
+d. True.
+:::
+
+## Fish in fresh water and seawater
+
+### 2.1
+
+Complete the table for typical teleost (bony) fishes.
+
+| | Freshwater teleost | Marine teleost |
+| --- | --- | --- |
+| Body fluids compared with the medium | | |
+| Passive water movement | | |
+| Passive salt movement | | |
+| Drinking | | |
+| Urine volume and concentration | | |
+| Direction of active NaCl transport at the gills | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Freshwater teleost | Marine teleost |
+| --- | --- | --- |
+| Body fluids compared with the medium | Hyperosmotic | Hyposmotic |
+| Passive water movement | Inward (gain) | Outward (loss) |
+| Passive salt movement | Outward (loss) | Inward (gain) |
+| Drinking | Little or none | Drinks seawater |
+| Urine volume and concentration | Large volume, dilute | Small volume, about isosmotic to plasma |
+| Direction of active NaCl transport at the gills | Uptake from water into blood | Secretion from blood into water |
+
+Food also supplies ions to the freshwater fish. In the marine fish, the kidney
+excretes most of the excess divalent ions (Mg²⁺, SO₄²⁻).
+:::
+
+### 2.2
+
+Marine sharks have a body-fluid osmolarity slightly above that of seawater.
+
+a. Which two organic solutes do they retain to raise their osmolarity?
+b. In which direction does water tend to move across their gills?
+c. Which organ secretes their excess NaCl?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Urea and trimethylamine oxide (TMAO). TMAO counteracts the destabilising
+   effect of urea on proteins.
+b. Slightly inward, so sharks do not need to drink seawater.
+c. The rectal gland.
+:::
+
+## Epithelial transport
+
+### 3.1
+
+In a typical transporting epithelial cell:
+
+a. On which membrane, apical or basolateral, is the Na⁺/K⁺-ATPase located?
+b. How many Na⁺ and K⁺ ions does it move per ATP, and in which directions?
+c. Why is the pump needed for Na⁺ to enter the cell passively across the
+   other membrane?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. The basolateral membrane.
+b. 3 Na⁺ out of the cell and 2 K⁺ into the cell per ATP hydrolysed.
+c. By removing Na⁺, the pump keeps intracellular Na⁺ low (and the inside
+   negative). This creates an inward electrochemical gradient for Na⁺ across
+   the apical membrane, which channels and cotransporters use.
+:::
+
+### 3.2
+
+True or false? Correct any false statements.
+
+a. The kidney reabsorbs water by active transport of water molecules.
+b. Water crosses epithelia through aquaporins and between cells, following an
+   osmotic gradient created by solute transport.
+c. A list of transporters is enough to predict the direction of net transport
+   across an epithelium.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. No pump transports water. Water follows osmotic gradients set up by
+   active solute transport.
+b. True.
+c. False. You also need to know whether each transporter is on the apical or
+   basolateral membrane.
+:::
+
+## The nephron
+
+### 4.1
+
+Put the structures in the order that filtrate passes through them.
+
+a. collecting duct
+b. distal convoluted tubule
+c. Bowman's capsule
+d. thick ascending limb of the loop of Henle
+e. proximal convoluted tubule
+f. descending limb of the loop of Henle
+g. renal pelvis
+
+::: {.callout-note collapse="true"}
+## Answer
+
+c → e → f → d → b → a → g.
+:::
+
+### 4.2
+
+Match each nephron segment (1–5) with its main transport function (A–E).
+
+| | Segment |
+| --- | --- |
+| 1 | Proximal convoluted tubule |
+| 2 | Descending limb of the loop of Henle |
+| 3 | Thick ascending limb of the loop of Henle |
+| 4 | Distal convoluted tubule |
+| 5 | Collecting duct |
+
+| | Function |
+| --- | --- |
+| A | Reabsorbs NaCl (Na⁺–K⁺–2Cl⁻ cotransporter) but is impermeable to water, so the tubular fluid becomes dilute |
+| B | Water reabsorption regulated by ADH; Na⁺ reabsorption regulated by aldosterone |
+| C | Reabsorbs about two thirds of the filtered Na⁺ and water, and nearly all filtered glucose and amino acids |
+| D | Permeable to water but has low permeability to NaCl; water leaves into the hyperosmotic medulla |
+| E | Fine-tunes reabsorption of NaCl and Ca²⁺; its fluid is still hyposmotic to plasma |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1–C, 2–D, 3–A, 4–E, 5–B.
+:::
+
+### 4.3
+
+Define *filtration*, *reabsorption*, *secretion* and *excretion* in the kidney,
+stating the direction of movement for each.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **Filtration:** bulk flow of plasma water and small solutes from the
+  glomerular capillaries into Bowman's capsule.
+- **Reabsorption:** movement of a substance from the tubular fluid back into
+  the blood.
+- **Secretion:** movement of a substance from the blood (via the interstitial
+  fluid) into the tubular fluid.
+- **Excretion:** the amount of a substance that leaves the body in the urine.
+:::
+
+### 4.4
+
+Name the three layers of the glomerular filtration barrier, and state which
+plasma components are normally almost absent from the filtrate.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1. Fenestrated capillary endothelium.
+2. Glomerular basement membrane.
+3. Filtration slits between the foot processes of podocytes.
+
+Blood cells and large plasma proteins such as albumin are almost absent from
+the filtrate.
+:::
+
+## Renal calculations
+
+### 5.1
+
+For a freely filtered solute, the glomerular filtration rate (GFR) is
+0.10 L min⁻¹ and the plasma concentration is 5 mmol L⁻¹. Reabsorption is
+0.40 mmol min⁻¹ and secretion is 0.02 mmol min⁻¹. Urine flow is
+0.002 L min⁻¹.
+
+a. Calculate the filtered load.
+b. Calculate the excretion rate.
+c. Calculate the urine concentration of the solute.
+d. Urine flow is halved while the excretion rate stays the same. What is the
+   new urine concentration?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Filtered load = GFR × plasma concentration = 0.10 L min⁻¹ × 5 mmol L⁻¹
+   = 0.50 mmol min⁻¹.
+b. Excretion = 0.50 − 0.40 + 0.02 = 0.12 mmol min⁻¹.
+c. Urine concentration = excretion ÷ urine flow = 0.12 ÷ 0.002
+   = 60 mmol L⁻¹.
+d. 0.12 ÷ 0.001 = 120 mmol L⁻¹. The concentration doubles although the amount
+   excreted per minute is unchanged.
+:::
+
+### 5.2
+
+The renal clearance of a substance is $C = U \times V / P$, where $U$ is its
+urine concentration, $V$ the urine flow and $P$ its plasma concentration.
+Inulin is infused into a subject. Plasma inulin is 0.20 mg mL⁻¹, urine inulin
+is 25 mg mL⁻¹ and urine flow is 1.0 mL min⁻¹.
+
+a. Calculate the inulin clearance.
+b. Why does inulin clearance equal the GFR?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. $C = 25 \times 1.0 / 0.20 = 125$ mL min⁻¹.
+b. Inulin is freely filtered and is neither reabsorbed, secreted nor
+   metabolised by the tubule. All filtered inulin is therefore excreted, and
+   the volume of plasma cleared per minute equals the volume filtered per
+   minute.
+:::
+
+### 5.3
+
+The GFR is 125 mL min⁻¹. Four freely filtered substances have the clearances
+below. For each, state whether the tubule shows net reabsorption, net
+secretion or neither.
+
+a. Glucose: 0 mL min⁻¹
+b. Urea: 60 mL min⁻¹
+c. Substance X: 125 mL min⁻¹
+d. Para-aminohippuric acid (PAH): 600 mL min⁻¹
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Net reabsorption (complete).
+b. Net reabsorption (partial).
+c. Neither, like inulin.
+d. Net secretion.
+
+Clearance below the GFR means net reabsorption; clearance above the GFR means
+net secretion.
+:::
+
+### 5.4
+
+A person has a GFR of 125 mL min⁻¹ and a plasma glucose concentration of
+5 mmol L⁻¹.
+
+a. Calculate the filtered load of glucose in mmol min⁻¹.
+b. The maximum rate of tubular glucose reabsorption (transport maximum, $T_m$)
+   is 2.0 mmol min⁻¹. How much glucose is excreted at this plasma
+   concentration?
+c. In uncontrolled diabetes, plasma glucose rises to 20 mmol L⁻¹. Calculate
+   the glucose excretion rate.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 0.125 L min⁻¹ × 5 mmol L⁻¹ = 0.625 mmol min⁻¹.
+b. None. The filtered load is below $T_m$, so all of it is reabsorbed.
+c. Filtered load = 0.125 × 20 = 2.5 mmol min⁻¹. Excretion = 2.5 − 2.0 =
+   0.5 mmol min⁻¹.
+:::
+
+### 5.5
+
+A human kidney filters 180 L of plasma per day and produces 1.5 L of urine per
+day. What percentage of the filtered water is reabsorbed?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+(180 − 1.5) / 180 × 100 = 99.2 %.
+:::
+
+## Concentrating the urine
+
+### 6.1
+
+Put the steps in order for the response to dehydration.
+
+a. Aquaporin-2 water channels are inserted into the apical membrane of
+   collecting-duct cells.
+b. Plasma osmolarity rises.
+c. ADH binds to V2 receptors on collecting-duct cells.
+d. Osmoreceptors in the hypothalamus detect the change.
+e. Water moves from the collecting duct into the hyperosmotic medullary
+   interstitium, and a small volume of concentrated urine is produced.
+f. ADH is released from the posterior pituitary.
+g. Plasma osmolarity falls and ADH release decreases.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → f → c → a → e → g. Step g is the negative feedback.
+:::
+
+### 6.2
+
+A person must excrete 600 mOsm of solute per day. The maximum urine
+osmolarity in humans is about 1,200 mOsm L⁻¹.
+
+a. What is the minimum daily urine volume?
+b. A person who lacks ADH (diabetes insipidus) produces urine of
+   100 mOsm L⁻¹. What is their daily urine volume for the same solute load?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 600 mOsm ÷ 1,200 mOsm L⁻¹ = 0.5 L day⁻¹.
+b. 600 mOsm ÷ 100 mOsm L⁻¹ = 6 L day⁻¹.
+:::
+
+### 6.3
+
+True or false? Correct any false statements.
+
+a. Tubular fluid leaving the thick ascending limb is hyposmotic to plasma.
+b. ADH increases urine concentration mainly by reducing the GFR.
+c. Without ADH, the collecting duct has low water permeability and the urine
+   stays dilute.
+d. Urea contributes to the osmotic gradient of the inner medulla.
+e. Desert rodents that produce very concentrated urine tend to have
+   relatively long loops of Henle.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. True (about 100 mOsm L⁻¹), because NaCl is removed without water.
+b. False. ADH increases the water permeability of the collecting duct, so more
+   water is reabsorbed into the medulla.
+c. True.
+d. True.
+e. True. A longer loop (and a thicker medulla) builds a larger
+   corticomedullary gradient.
+:::
+
+## Nitrogenous waste
+
+### 7.1
+
+Complete the table.
+
+| | Ammonia | Urea | Uric acid |
+| --- | --- | --- | --- |
+| Toxicity | | | |
+| Solubility in water | | | |
+| Water needed to excrete it | | | |
+| Energy cost of synthesis | | | |
+| Example animal group | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Ammonia | Urea | Uric acid |
+| --- | --- | --- | --- |
+| Toxicity | High | Low | Very low |
+| Solubility in water | High | High | Very low |
+| Water needed to excrete it | Large amounts | Moderate | Very little (excreted as a paste) |
+| Energy cost of synthesis | None | Moderate | High |
+| Example animal group | Teleost fishes, most aquatic invertebrates | Mammals, adult amphibians, sharks | Birds, most reptiles, insects |
+:::
+
+### 7.2
+
+Classify each animal as ammonotelic, ureotelic or uricotelic.
+
+a. goldfish
+b. human
+c. chicken
+d. tadpole
+e. adult frog
+f. desert locust
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Ammonotelic. b. Ureotelic. c. Uricotelic. d. Ammonotelic.
+e. Ureotelic. f. Uricotelic.
+:::
+
+### 7.3
+
+Why is uric acid, rather than urea, the nitrogenous waste of embryos that
+develop inside a shelled (cleidoic) egg?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The egg is a closed system: wastes cannot leave it. Uric acid is insoluble, so
+it precipitates and is stored in solid form, where it is neither toxic nor
+osmotically active. Urea would stay dissolved and accumulate to toxic
+concentrations.
+:::
+
+### 7.4
+
+Put the steps of urine formation in an insect in order.
+
+a. Water, ions and useful solutes are reabsorbed in the rectum.
+b. K⁺ is actively secreted into the lumen of the Malpighian tubules.
+c. Dry waste, including precipitated uric acid, is eliminated with the faeces.
+d. Water and solutes, including uric acid, follow into the tubule lumen.
+e. The tubule fluid empties into the hindgut.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → e → a → c. The Malpighian tubules produce a fluid isosmotic to the
+haemolymph by secretion, not by filtration; the hindgut recovers water.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

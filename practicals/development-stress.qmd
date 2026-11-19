@@ -6,7 +6,7 @@ title: "Practical: growth under reduced watering"
 
 Do supplied height measurements support a difference in growth between
 watering treatments, and what physiological explanations remain possible?
-This 90-minute practical uses [simulated growth data](../data/growth-stress.csv)
+This practical uses [simulated growth data](../data/growth-stress.csv)
 with the [data dictionary](../data/README.md). It can be completed with paper
 and a calculator. These are invented observations, not evidence about an
 actual species, watering recommendation or live experiment.

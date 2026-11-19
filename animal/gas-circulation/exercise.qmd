@@ -2,78 +2,346 @@
 title: "A3 exercises — Exchange, blood and flow"
 ---
 
-Refer to the [tutorial](index.qmd). Values are simplified invented examples.
-Allow 60–90 minutes; leave with a transport-path diagram, calculations with
-units and a comparative explanation. No physiological recording is requested.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Separate transport processes
+## Diffusion and exchange surfaces
 
-Trace oxygen from environmental air to a mammalian muscle mitochondrion.
-For each arrow, state whether the main process is bulk flow, diffusion or
-binding/unbinding. Then identify how the route differs in an insect.
+### 1.1
 
-Where would a thickened exchange barrier act? Where would reduced ventilation
-act? Why need not increasing heart rate correct either problem completely?
+For each step in the path of oxygen from air to a mammalian muscle
+mitochondrion, state whether the main process is bulk flow or diffusion.
 
-## 2. Compare barriers quantitatively
+a. air moving through the trachea and bronchi to the alveoli
+b. O₂ crossing the alveolar wall and capillary endothelium into the plasma
+c. blood carrying O₂ from the lungs to the muscle
+d. O₂ moving from the muscle capillary to the mitochondria
 
-Hold diffusion properties constant and use $\dot M\propto A\Delta P/L$.
-A hypothetical exchange surface has area 10 units, thickness 2 units and
-gradient 4 units. A second has twice the area, twice the thickness and half
-the gradient. Calculate the second surface's predicted transfer rate relative
-to the first. Explain which variables were held fixed.
+::: {.callout-note collapse="true"}
+## Answer
 
-What does the calculation omit about a real heterogeneous organ with flowing
-fluids? Give one example.
-
-## 3. Keep local countercurrent gradients explicit
-
-The invented values below represent partial pressures in compatible units
-at positions along a gill. Water moves from left to right; blood moves from
-right to left. Values are schematic and are not a fitted physiological model.
-
-| Position, left → right | 1 | 2 | 3 | 4 |
-| --- | ---: | ---: | ---: | ---: |
-| Water oxygen partial pressure | 100 | 80 | 60 | 40 |
-| Blood oxygen partial pressure | 90 | 70 | 50 | 30 |
-
-Draw both flow arrows and mark diffusion direction at each position. Identify
-the water inlet/outlet and blood inlet/outlet. Explain why blood leaving with
-a value of 90 does not mean oxygen diffused uphill from water leaving at 40.
-Which values must be compared locally?
-
-## 4. Calculate oxygen use and cardiac output
-
-In a hypothetical steady state, blood flow is 4 L min⁻¹, arterial oxygen
-content 190 mL O₂ L⁻¹ and venous content 140 mL O₂ L⁻¹. Calculate oxygen
-use. Heart rate is 80 beats min⁻¹ and stroke volume 0.050 L beat⁻¹: verify
-the flow using those values.
-
-Then use an activity state of heart rate 120 beats min⁻¹, stroke volume
-0.080 L beat⁻¹ and arterial–venous difference 100 mL O₂ L⁻¹. Calculate
-output and oxygen use. State why inserting oxygen partial pressures instead
-of contents would be wrong.
-
-::: {.callout-tip collapse="true"}
-## Hint
-
-Cancel units explicitly. Beats cancel in heart rate × stroke volume; litres
-of blood cancel in flow × oxygen-content difference.
+a. Bulk flow (ventilation). b. Diffusion. c. Bulk flow (circulation).
+d. Diffusion.
 :::
 
-## 5. Read tissue architecture
+### 1.2
 
-Compare these invented descriptions: a very thin endothelial tube close to
-an exchange epithelium; a round vessel with a thick muscular wall; and an
-irregular partly collapsed vessel with a relatively thin wall and wide lumen.
-Suggest identities, functions and limits of inference. What would distinguish
-a conducting airway from a gas-exchange region in a real lung section?
+Dry air at sea level has a total pressure of 101.3 kPa and contains 20.9 %
+O₂. Calculate the partial pressure of O₂.
 
-## 6. Build an evidence-based comparison
+::: {.callout-note collapse="true"}
+## Answer
 
-In 150–200 words compare a fish's single circulation and a mammal's pulmonary/
-systemic circuits. Trace the pump and exchange regions rather than simply
-counting chambers. Include one consequence for pressure and one feature that
-cannot be predicted from the words “open” or “closed” alone.
+$P_{\rm O_2}=0.209\times101.3\ \text{kPa}=21.2$ kPa (about 159 mmHg).
+:::
 
-Finish with the [quiz](quiz.qmd).
+### 1.3
+
+Use Fick's relationship $\dot M\propto A\,\Delta P/L$, with the diffusion
+properties of the barrier held constant. Surface 1 has area 10 units,
+thickness 2 units and partial-pressure difference 4 units. Surface 2 has twice
+the area, twice the thickness and half the partial-pressure difference.
+Calculate the transfer rate across surface 2 relative to surface 1.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Surface 1: $10\times4/2=20$. Surface 2: $20\times2/4=10$. Transfer across
+surface 2 is half that across surface 1 ($2\times\tfrac12/2=0.5$).
+:::
+
+### 1.4
+
+Define *ventilation* and *perfusion*, and state how each helps to maintain the
+partial-pressure gradient across a respiratory surface.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **Ventilation:** bulk flow of the respiratory medium (air or water) over the
+  respiratory surface. It replaces medium from which O₂ has been taken, keeping
+  external $P_{\rm O_2}$ high.
+- **Perfusion:** bulk flow of blood (or other internal fluid) through the
+  respiratory surface. It removes O₂-loaded blood and brings O₂-poor blood,
+  keeping internal $P_{\rm O_2}$ low.
+:::
+
+## Gills, lungs and tracheae
+
+### 2.1
+
+Name the main gas-exchange structure in each animal.
+
+a. bony fish
+b. mammal
+c. bird
+d. insect
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Gill lamellae (secondary lamellae of the gill filaments). b. Alveoli of the
+lungs. c. Air capillaries of the parabronchi in the lungs. d. Tracheoles, the
+fine endings of the tracheal system.
+:::
+
+### 2.2
+
+The values below are O₂ partial pressures (kPa) along a fish gill lamella.
+Water flows from position 1 to position 4; blood flows from position 4 to
+position 1.
+
+| Position | 1 | 2 | 3 | 4 |
+| --- | ---: | ---: | ---: | ---: |
+| Water $P_{\rm O_2}$ | 20 | 16 | 12 | 8 |
+| Blood $P_{\rm O_2}$ | 18 | 14 | 10 | 6 |
+
+a. Give the $P_{\rm O_2}$ of the water entering and leaving, and of the blood
+   entering and leaving the lamella.
+b. In which direction does O₂ diffuse at each position, and what is the local
+   partial-pressure difference?
+c. What is this flow arrangement called?
+d. If blood and water flowed in the same direction, could the blood leave with
+   a higher $P_{\rm O_2}$ than the water leaving? Explain.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Water enters at 20 kPa and leaves at 8 kPa. Blood enters at 6 kPa and
+   leaves at 18 kPa.
+b. From water to blood at every position; the difference is 2 kPa everywhere.
+c. Countercurrent exchange.
+d. No. In co-current flow the two streams approach the same $P_{\rm O_2}$, so
+   blood can at most equal the $P_{\rm O_2}$ of the water leaving. In
+   countercurrent flow, blood leaves at 18 kPa, higher than the water leaving
+   (8 kPa), although O₂ always diffuses down the local gradient.
+:::
+
+### 2.3
+
+True or false? Correct any false statements.
+
+a. In mammals, air flows in one direction through the lungs.
+b. In birds, the air sacs are the main gas-exchange surface.
+c. In insects, the haemolymph carries most of the O₂ to the tissues.
+d. Part of each breath in a mammal stays in the conducting airways and does
+   not reach the alveoli.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Mammalian ventilation is tidal: air moves in and out through the same
+   airways.
+b. False. Exchange occurs in the parabronchi of the rigid lungs; the air sacs
+   act as bellows that ventilate the lungs, giving one-way flow through the
+   parabronchi.
+c. False. The tracheal system carries O₂ in gas phase directly to the tissues;
+   haemolymph has a small role in O₂ transport.
+d. True. This volume is the anatomical dead space.
+:::
+
+## Oxygen and carbon dioxide in blood
+
+### 3.1
+
+Define *partial pressure of O₂*, *haemoglobin saturation* and *O₂ content*
+of blood, and give a unit for each.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **$P_{\rm O_2}$:** the pressure exerted by O₂ (in blood, by the dissolved,
+  unbound O₂); kPa or mmHg.
+- **Saturation:** the percentage of haemoglobin O₂-binding sites that are
+  occupied; %.
+- **O₂ content:** the total amount of O₂ (bound plus dissolved) per volume of
+  blood; mL O₂ L⁻¹.
+:::
+
+### 3.2
+
+Each gram of haemoglobin binds at most 1.34 mL O₂. Blood contains 150 g
+haemoglobin per litre. Ignore dissolved O₂.
+
+a. Calculate the O₂ content at 100 % saturation.
+b. Calculate the O₂ content at 75 % saturation.
+c. An anaemic person has 75 g haemoglobin per litre and the same arterial
+   $P_{\rm O_2}$ and saturation (98 %) as a healthy person. Calculate their
+   arterial O₂ content and state which of $P_{\rm O_2}$, saturation and
+   content differ from the healthy person.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. $150\times1.34=201$ mL O₂ L⁻¹.
+b. $0.75\times201=151$ mL O₂ L⁻¹.
+c. $75\times1.34\times0.98=98$ mL O₂ L⁻¹. Only the content differs (it is
+   halved); $P_{\rm O_2}$ and saturation are unchanged.
+:::
+
+### 3.3
+
+Why is the haemoglobin–O₂ dissociation curve sigmoid (S-shaped)?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Haemoglobin has four subunits that bind O₂ cooperatively: binding of O₂ to one
+subunit increases the O₂ affinity of the others. Affinity is therefore low at
+low $P_{\rm O_2}$ and high at intermediate $P_{\rm O_2}$, giving a steep middle
+part to the curve.
+:::
+
+### 3.4
+
+State whether each change shifts the haemoglobin–O₂ dissociation curve to the
+right or to the left, and whether it favours O₂ unloading in the tissues.
+
+a. increased $P_{\rm CO_2}$
+b. decreased pH
+c. decreased temperature
+d. increased 2,3-bisphosphoglycerate (2,3-BPG) in red blood cells
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Right; favours unloading. b. Right; favours unloading (Bohr effect).
+c. Left; reduces unloading. d. Right; favours unloading.
+
+A right shift means lower affinity: less O₂ is bound at a given $P_{\rm O_2}$.
+:::
+
+### 3.5
+
+a. Name the three forms in which CO₂ is carried in mammalian blood, from the
+   largest to the smallest fraction.
+b. Write the reaction catalysed by carbonic anhydrase in red blood cells,
+   including the dissociation of the product.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Bicarbonate ions (about 70 %), bound to haemoglobin as carbamino compounds
+   (about 20 %), dissolved CO₂ (about 10 %).
+b. $\mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons H^+ + HCO_3^-}$.
+   Carbonic anhydrase catalyses the first step.
+:::
+
+## Circulation
+
+### 4.1
+
+Put the structures in order, starting from the systemic veins, for blood
+flowing through a mammal: left atrium, pulmonary veins, right ventricle,
+systemic arteries, lung capillaries, left ventricle, right atrium, pulmonary
+arteries.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Systemic veins → right atrium → right ventricle → pulmonary arteries → lung
+capillaries → pulmonary veins → left atrium → left ventricle → systemic
+arteries.
+:::
+
+### 4.2
+
+True or false? Correct any false statements.
+
+a. Arteries always carry oxygenated blood.
+b. Heart valves prevent the backflow of blood.
+c. In a fish, blood passes through the heart once for each complete circuit
+   of the body.
+d. In an open circulatory system, the circulating fluid does not move.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Arteries carry blood away from the heart. The pulmonary arteries
+   carry deoxygenated blood.
+b. True.
+c. True. Fish have a single circulation: heart → gills → systemic tissues →
+   heart.
+d. False. Haemolymph is pumped by the heart and flows through vessels and
+   body spaces (sinuses) before returning to the heart.
+:::
+
+### 4.3
+
+Classify the circulatory system of each animal as open or closed.
+
+a. earthworm
+b. grasshopper
+c. octopus
+d. mussel
+e. frog
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Closed. b. Open. c. Closed. d. Open. e. Closed.
+:::
+
+### 4.4
+
+Complete the table.
+
+| | Artery | Capillary | Vein |
+| --- | --- | --- | --- |
+| Direction of flow relative to the heart | | | |
+| Wall | | | |
+| Blood pressure | | | |
+| Main function | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Artery | Capillary | Vein |
+| --- | --- | --- | --- |
+| Direction of flow relative to the heart | Away from the heart | Between arterioles and venules | Towards the heart |
+| Wall | Thick, with much elastic tissue and smooth muscle | Endothelium only, one cell thick | Thin, with little smooth muscle; valves in many limb veins |
+| Blood pressure | High, pulsatile | Low | Lowest |
+| Main function | Carry blood under pressure to the tissues | Exchange with the tissues | Return blood to the heart; hold most of the blood volume |
+:::
+
+### 4.5
+
+Use $Q=\Delta P/R$.
+
+a. The pressure difference across a vascular bed stays constant while its
+   resistance doubles. By what factor does flow change?
+b. Resistance of a tube is proportional to $1/r^4$, where $r$ is the radius.
+   By what factor does resistance change when an arteriole constricts to half
+   its radius?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Flow halves.
+b. $2^4=16$: resistance increases sixteen-fold, so at constant $\Delta P$
+   flow falls to 1/16.
+:::
+
+### 4.6
+
+At rest, heart rate is 80 beats min⁻¹, stroke volume 0.050 L beat⁻¹,
+arterial O₂ content 190 mL O₂ L⁻¹ and mixed venous O₂ content 140 mL O₂ L⁻¹.
+During exercise, heart rate is 120 beats min⁻¹, stroke volume 0.080 L beat⁻¹
+and the arterial–venous O₂ content difference 100 mL O₂ L⁻¹.
+
+a. Calculate cardiac output at rest and during exercise.
+b. Calculate whole-body O₂ consumption at rest and during exercise (Fick
+   principle).
+c. By what factor does O₂ consumption increase?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Rest: $80\times0.050=4.0$ L min⁻¹. Exercise: $120\times0.080=9.6$ L min⁻¹.
+b. Rest: $4.0\times(190-140)=200$ mL O₂ min⁻¹. Exercise:
+   $9.6\times100=960$ mL O₂ min⁻¹.
+c. $960/200=4.8$. Both cardiac output and the O₂ extraction from each litre of
+   blood increased.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

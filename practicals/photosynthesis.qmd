@@ -5,7 +5,7 @@ title: "Practical: reading a photosynthetic light response"
 ## Question and measurements
 
 How does net leaf CO₂ exchange vary across supplied light settings, and what
-does that tell us about photosynthesis? Spend 90 minutes analysing the
+does that tell us about photosynthesis? Analyse the
 [simulated measurements](../data/photosynthesis.csv). Use the
 [data dictionary](../data/README.md), a calculator and graph paper. No
 gas-exchange instrument or live plant is required. The data illustrate a

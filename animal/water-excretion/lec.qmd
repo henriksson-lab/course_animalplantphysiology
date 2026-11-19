@@ -122,9 +122,6 @@ Less water can increase concentration without increasing solute loss per minute.
 - Compare waste removal, ion balance and water recovery first.
 - Egestion is not metabolic nitrogen excretion.
 
-## Connect structure to an explanation
-
-What supports a renal-corpuscle identification? What suggests a transport
-epithelium? What more is needed to name a segment?
+## Next
 
 [Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

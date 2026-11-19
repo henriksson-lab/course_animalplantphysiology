@@ -170,4 +170,8 @@ for epithelial organisation around a lumen in tubules. These descriptions
 are preparation for the real slide set, not proof that a particular specimen
 is available. Finally, connect anatomy to the environment: a water-saving
 animal may also change behaviour, diet, ventilation and heat exchange.
-Continue to [integration, movement and reproduction](../integration/index.qmd).
+
+## Next
+
+Work through the [exercises](exercise.qmd) and the [self-check quiz](quiz.qmd).
+Then continue to [integration, movement and reproduction](../integration/index.qmd).

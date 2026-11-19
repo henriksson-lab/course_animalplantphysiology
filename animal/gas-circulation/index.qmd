@@ -160,9 +160,5 @@ Increasing heart rate is only one way to change output, and a measured rate
 alone does not establish how much blood or oxygen reaches a tissue. Local
 metabolites and neural/endocrine signals help coordinate supply and demand.
 
-Explain an exercise response by naming each link: ATP demand changes;
-tissue conditions change; ventilation and circulation respond; transport
-and exchange change; the resulting tissue conditions influence the response.
-Check whether your account confuses a pump action, a flow, a pressure, a gas
-content or a diffusion gradient. Continue to
+Practise with the [exercises](exercise.qmd), then continue to
 [water, ions and excretion](../water-excretion/index.qmd).

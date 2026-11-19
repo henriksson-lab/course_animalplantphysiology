@@ -197,10 +197,6 @@ how that reduces the deviation.
 :::
 ::::
 
-## Explain before you leave
-
-1. Why can a large animal not be understood as a smooth enlarged cube?
-2. Which evidence distinguishes an epithelium from connective tissue?
-3. Which response opposes the initial disturbance in your feedback loop?
+## Next
 
 [Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

@@ -79,8 +79,8 @@ modulatory signals helps make context-dependent responses possible.
 
 Skeletal muscle contains fibres with organised contractile machinery. Within
 sarcomeres, interactions between actin and myosin generate force through
-cycles requiring ATP. Calcium exposes regulatory sites in the skeletal-muscle
-thin filament by acting through troponin and tropomyosin. ATP binding permits
+cycles requiring ATP. In skeletal muscle, calcium binds troponin, which moves
+tropomyosin and exposes the myosin-binding sites on actin. ATP binding permits
 myosin to detach; ATP hydrolysis prepares subsequent interactions. Therefore
 ATP is necessary for controlled cycling and relaxation as well as work.
 
@@ -169,13 +169,7 @@ provide information about surroundings. In a seasonal breeder, a prediction
 about reproductive timing should therefore consider environmental cues and
 physiological state rather than one hormone measurement alone.
 
-## Bring the animal half together
+## Next
 
-Use a terrestrial animal escaping a threat as a final integration case. Trace
-sensory detection, neural signalling, motor-unit recruitment, ATP use, oxygen
-transport, heat production and water costs. Then ask which processes can
-change immediately and which require sustained adjustment. For histology,
-use described muscle and neural features as pre-lab practice; actual tissue
-recognition must use the established slide collection. Your final explanation
-should show coordinated mechanisms and their limits, not merely name systems.
-Return to the [animal route](../index.qmd) for revision.
+Work through the [exercises](exercise.qmd) and the [self-check quiz](quiz.qmd).
+Then return to the [animal route](../index.qmd) for revision.

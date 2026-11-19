@@ -119,9 +119,6 @@ Oxygen use = blood flow × (arterial − venous oxygen content).
 - Open circulations still have directed fluid movement.
 - Count transport constraints, not just chambers.
 
-## Coordinate an activity response
-
-Explain how ventilation, cardiac output, local flow and tissue extraction can
-change together. Which measurement would distinguish them?
+## Practice
 
 [Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

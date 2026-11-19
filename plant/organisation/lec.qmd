@@ -88,8 +88,6 @@ Nuclear, plastid and mitochondrial expression support one cell.
 
 A protein destination does not identify its gene location.
 
-## Explain before naming
-
-Trace CO2, water and exported carbohydrate through a leaf.
+## Continue
 
 Use the [tutorial](index.qmd), [exercise](exercise.qmd) and [self-check](quiz.qmd).

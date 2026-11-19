@@ -1,76 +1,405 @@
 ---
-title: "P2 exercise — Account for water movement"
+title: "P2 exercises — Water, minerals and transport"
 ---
 
-Use paper and a calculator if useful. Allow 50–60 minutes. All numerical
-observations are invented teaching examples, not a recovered laboratory dataset.
-The [tutorial](index.qmd) defines the terms. Leave with calculations, a pathway
-diagram and a short experimental-design critique.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Predict an initial direction
+## Water potential
 
-For each cell calculate Ψ = Ψs + Ψp in MPa. Ignore gravity/matric terms for this
-small system. Both cells contact the same external solution at −0.4 MPa.
+### 1.1
 
-| Cell | Ψs (MPa) | Ψp (MPa) |
+Define *water potential* (Ψ), state its usual unit in plant physiology, and
+give the water potential of pure water at atmospheric pressure.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Water potential is the chemical potential (free energy per unit volume) of
+water relative to that of pure water at atmospheric pressure and the same
+temperature. It is expressed in megapascals (MPa). Pure water at atmospheric
+pressure has Ψ = 0 MPa.
+:::
+
+### 1.2
+
+Arrange from the highest to the lowest water potential: −0.8 MPa, 0 MPa,
+−1.5 MPa, −0.2 MPa. In which direction does water move passively?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+0 > −0.2 > −0.8 > −1.5 MPa. Water moves passively from higher (less negative)
+to lower (more negative) water potential.
+:::
+
+### 1.3
+
+Use Ψ = Ψs + Ψp (ignore gravity and matric potential). Both cells are placed in
+the same external solution with Ψ = −0.4 MPa.
+
+| Cell | Ψs (MPa) | Ψp (MPa) | Ψ (MPa) | Initial net water movement |
+| --- | ---: | ---: | ---: | --- |
+| A | −0.8 | +0.2 | | |
+| B | −0.7 | +0.5 | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Cell | Ψs (MPa) | Ψp (MPa) | Ψ (MPa) | Initial net water movement |
+| --- | ---: | ---: | ---: | --- |
+| A | −0.8 | +0.2 | −0.6 | Into the cell (−0.4 > −0.6) |
+| B | −0.7 | +0.5 | −0.2 | Out of the cell (−0.2 > −0.4) |
+
+Cell B loses water even though its solute potential is more negative than the
+external solution, because total Ψ determines direction.
+:::
+
+### 1.4
+
+Calculate the solute potential at 25 °C (298 K) of
+
+a. 0.1 mol L⁻¹ sucrose
+b. 0.1 mol L⁻¹ NaCl (assume complete dissociation)
+
+Use Ψs = −*cRT*, where *c* is the osmolar concentration and
+*R* = 0.008314 L MPa mol⁻¹ K⁻¹.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Ψs = −(0.1 mol L⁻¹)(0.008314 L MPa mol⁻¹ K⁻¹)(298 K) = −0.25 MPa.
+b. NaCl gives two particles, so *c* = 0.2 osmol L⁻¹ and Ψs = −0.50 MPa.
+:::
+
+### 1.5
+
+A flaccid cell (Ψp = 0) has Ψs = −0.6 MPa. Assume the cell volume, and hence
+Ψs, does not change.
+
+a. What is its Ψ?
+b. It is placed in pure water. What are Ψ and Ψp at equilibrium?
+c. It is instead placed in a solution with Ψ = −0.8 MPa. In which direction does
+   water move, and what is Ψp at the end?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Ψ = −0.6 + 0 = −0.6 MPa.
+b. Water enters until Ψ = 0 MPa; then Ψp = 0 − (−0.6) = +0.6 MPa.
+c. Water leaves the cell (−0.6 > −0.8). Ψp stays at 0 (it cannot become
+   strongly negative in a living cell); the protoplast shrinks away from the
+   wall (plasmolysis).
+:::
+
+### 1.6
+
+A root cell has Ψ = −0.4 MPa. Give the initial direction of net water movement
+between the cell and the soil solution when the soil solution has
+
+a. Ψ = −0.1 MPa
+b. Ψ = −0.6 MPa (saline soil)
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. From soil into the root cell.
+b. From the root cell into the soil. Saline soil can therefore cause water
+   stress although it is wet.
+:::
+
+## Uptake by roots
+
+### 2.1
+
+Name the three routes by which water crosses the root cortex and state which
+structure each route passes through.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **Apoplastic:** through cell walls and intercellular spaces, without
+  crossing membranes.
+- **Symplastic:** from cytoplasm to cytoplasm through plasmodesmata.
+- **Transmembrane (transcellular):** across the plasma membrane (and tonoplast)
+  of each successive cell.
+:::
+
+### 2.2
+
+a. In which cell layer is the Casparian strip found?
+b. Which compounds make it?
+c. What is its function?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. The endodermis, in the radial and transverse walls.
+b. Suberin (with lignin).
+c. It blocks the apoplastic route into the stele, so water and solutes must
+   cross a plasma membrane, which allows selective uptake.
+:::
+
+### 2.3
+
+True or false? Correct any false statements.
+
+a. Aquaporins pump water into root cells using ATP.
+b. The plasma-membrane H⁺-ATPase uses ATP to build an electrochemical proton gradient.
+c. A proton-coupled carrier can move a nutrient ion against its own concentration gradient.
+d. Inhibiting the H⁺-ATPase directly stops passive water flow through aquaporins.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Aquaporins are channels that increase membrane permeability to water;
+   water moves passively down its potential gradient.
+b. True.
+c. True. Energy comes from protons moving down their electrochemical gradient
+   (secondary active transport).
+d. False. It reduces proton-coupled solute uptake; water flow through
+   aquaporins is passive and not directly driven by ATP.
+:::
+
+### 2.4
+
+Waterlogged soil contains plenty of water, yet mineral uptake by roots falls.
+Give the chain of causes.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Water fills the soil pores → little O₂ reaches the roots → aerobic respiration
+falls → less ATP → H⁺-ATPase activity and the proton gradient decline →
+less active (proton-coupled) uptake of mineral ions.
+:::
+
+## Xylem transport and transpiration
+
+### 3.1
+
+Arrange the steps of water movement in a transpiring plant in order:
+
+a. water vapour diffuses out through the stomatal pore
+b. water crosses the root endodermis
+c. water evaporates from mesophyll cell walls into the air spaces
+d. water enters the root from the soil
+e. water moves up the xylem under tension
+
+::: {.callout-note collapse="true"}
+## Answer
+
+d → b → e → c → a.
+:::
+
+### 3.2
+
+Match each term to its definition: cohesion, adhesion, tension, cavitation.
+
+1. Negative hydrostatic pressure in the xylem water
+2. Attraction between water molecules through hydrogen bonding
+3. Breakage of the water column and formation of a gas bubble in a conduit
+4. Attraction between water molecules and the conduit walls
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Cohesion–2, adhesion–4, tension–1, cavitation–3. A gas-filled conduit after
+cavitation is said to be embolised.
+:::
+
+### 3.3
+
+Typical water potentials in a transpiring plant are listed. Arrange them in the
+order water passes and state what drives the flow.
+
+Leaf cells: −0.8 MPa. Soil: −0.1 MPa. Atmosphere (50 % relative humidity):
+−95 MPa. Root xylem: −0.4 MPa.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Soil (−0.1) → root xylem (−0.4) → leaf cells (−0.8) → atmosphere (−95 MPa).
+Water moves passively down this gradient of decreasing water potential. The
+energy comes from evaporation at the leaf (ultimately solar energy); the plant
+does not pump water.
+:::
+
+### 3.4
+
+Four pots are weighed over 4 h. Unplanted soil controls lose 4 g per pot over
+the same time.
+
+| Pot | Mass loss (g) | Leaf area (m²) |
 | --- | ---: | ---: |
-| A | −0.8 | +0.2 |
-| B | −0.7 | +0.5 |
+| 1 | 24 | 0.10 |
+| 2 | 27 | 0.12 |
+| 3 | 22 | 0.10 |
+| 4 | 25 | 0.11 |
 
-Predict initial net movement for each cell. Why is its final water content not
-determined just by retaining these initial values?
-
-::: {.callout-note collapse="true"}
-## Worked comparison
-
-A has −0.6 MPa, so water initially tends to enter from −0.4 MPa. B has
-−0.2 MPa, so water initially tends to leave towards −0.4 MPa. Pressure and
-solute concentration can change during movement; these are initial predictions.
-:::
-
-## 2. Explain an energy-dependent uptake system
-
-A root-cell proton pump is inhibited while other conditions are initially
-unchanged. Predict effects on a proton-coupled nutrient carrier, and distinguish
-that from passive water movement through an aquaporin. Your explanation must
-name the relevant energy source or gradient. Would every transported ion
-necessarily respond identically?
-
-## 3. What did the pot actually lose?
-
-Four individually treated pots lose 24, 27, 22 and 25 g over four hours.
-Their leaf areas are 0.10, 0.12, 0.10 and 0.11 m². Unplanted soil controls
-under the same conditions lose a mean of 4 g per pot. For a teaching estimate,
-subtract 4 g from each loss, then divide by time and leaf area.
-
-Calculate the first pot's rate in g m⁻² h⁻¹. List two assumptions in this
-correction. Does leaf-area normalisation guarantee fair physiological comparison?
+a. Calculate the transpiration rate of each pot in g m⁻² h⁻¹ after subtracting
+   soil evaporation.
+b. Calculate the mean rate.
+c. Convert the rate of pot 1 to mmol H₂O m⁻² s⁻¹ (M(H₂O) = 18 g mol⁻¹).
 
 ::: {.callout-note collapse="true"}
-## Check the first rate
+## Answer
 
-(24 − 4) / (4 × 0.10) = 50 g m⁻² h⁻¹. The correction assumes comparable
-soil evaporation and negligible other mass changes. Covering soils, checking
-conditions and documenting uncertainty would improve the interpretation.
+a. Rate = (loss − 4 g) / (4 h × leaf area).
+
+| Pot | Corrected loss (g) | Rate (g m⁻² h⁻¹) |
+| --- | ---: | ---: |
+| 1 | 20 | 50.0 |
+| 2 | 23 | 47.9 |
+| 3 | 18 | 45.0 |
+| 4 | 21 | 47.7 |
+
+b. (50.0 + 47.9 + 45.0 + 47.7) / 4 = 47.7 g m⁻² h⁻¹.
+c. 50 g m⁻² h⁻¹ ÷ 18 g mol⁻¹ = 2.78 mol m⁻² h⁻¹; ÷ 3600 s h⁻¹ =
+   7.7 × 10⁻⁴ mol m⁻² s⁻¹ = 0.77 mmol m⁻² s⁻¹.
 :::
 
-## 4. Independent units and water stress
+### 3.5
 
-One tray is watered and one tray is kept dry. Each contains ten pots, and
-three leaves are measured per plant. Explain why 30 leaf measurements per
-condition are not 30 independent applications of the tray-level treatment.
-Propose a design that can separate treatment from tray/location effects.
-State which conclusions remain possible from the original observations.
+State whether each change increases or decreases the transpiration rate when
+stomatal conductance stays the same.
 
-## 5. A yellow leaf needs a differential explanation
+a. Lower air humidity
+b. Higher leaf temperature
+c. Stronger wind removing the boundary layer
+d. Smaller total leaf area
 
-Older leaves yellow while younger leaves remain green. Suggest a nutrient
-remobilisation explanation and two alternatives. Name measurements/controls
-that would help distinguish them. Then explain why saline soil can produce
-water stress even while remaining visibly wet.
+::: {.callout-note collapse="true"}
+## Answer
 
-## Completion check
+a. Increases (larger vapour pressure difference between leaf and air).
+b. Increases (higher vapour pressure inside the leaf).
+c. Increases (thinner boundary layer, lower resistance).
+d. Decreases (less evaporating surface per plant).
+:::
 
-Check every potential sign and unit. A good answer to a water-stress question
-connects physics, structure and regulation rather than naming ABA alone.
-Try the [self-check](quiz.qmd).
+## Stomata
+
+### 4.1
+
+Put the steps of light-induced stomatal opening in order:
+
+a. guard-cell water potential falls
+b. blue light activates the guard-cell plasma-membrane H⁺-ATPase
+c. turgor rises and the guard cells bow apart, opening the pore
+d. K⁺ enters through inward-rectifying channels, with Cl⁻ uptake and malate synthesis
+e. the membrane hyperpolarises
+f. water enters the guard cells
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → e → d → a → f → c.
+:::
+
+### 4.2
+
+State whether each condition causes stomata to open or close.
+
+a. Blue light at dawn
+b. High intercellular CO₂ concentration
+c. Increased ABA in the leaf
+d. Low intercellular CO₂ concentration
+e. Low leaf water potential (drought)
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Open. b. Close. c. Close. d. Open. e. Close.
+:::
+
+### 4.3
+
+How does abscisic acid (ABA) close stomata? Give the sequence from ABA
+perception to pore closure.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+ABA binds receptors in the guard cells → anion channels open and anions leave →
+the membrane depolarises → K⁺ leaves through outward-rectifying channels →
+guard-cell Ψs and Ψ rise → water leaves → turgor falls → the pore closes.
+ABA acts as a signal; it does not plug the pore.
+:::
+
+## Mineral nutrition
+
+### 5.1
+
+Define an *essential element*.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+An element without which the plant cannot complete its life cycle, or which is
+part of an essential molecule or structure of the plant; its function cannot be
+replaced by another element.
+:::
+
+### 5.2
+
+Classify each element as a macronutrient or a micronutrient: N, Fe, K, Zn, Mg,
+Mo, P, Mn, S, Cu, Ca, B.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Macronutrients: N, K, Mg, P, S, Ca. Micronutrients: Fe, Zn, Mo, Mn, Cu, B.
+The classification refers to the amount required, not to importance.
+:::
+
+### 5.3
+
+Match each element to one role.
+
+| | Element |
+| --- | --- |
+| A | Nitrogen |
+| B | Phosphorus |
+| C | Potassium |
+| D | Magnesium |
+| E | Iron |
+
+Roles: (1) central atom of chlorophyll; (2) main cation for osmotic regulation,
+e.g. in guard cells; (3) component of amino acids, proteins and nucleotides;
+(4) component of cytochromes and Fe–S proteins in electron transport;
+(5) component of ATP, nucleic acids and phospholipids.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+A–3, B–5, C–2, D–1, E–4.
+:::
+
+### 5.4
+
+Deficiency of nitrogen first causes yellowing of the older leaves, whereas iron
+deficiency first causes yellowing of the young leaves. Explain the difference.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Nitrogen is mobile in the phloem: it is remobilised from old leaves to new
+growth, so old leaves show symptoms first. Iron is relatively immobile and
+cannot be withdrawn from old leaves, so new leaves, which depend on current
+uptake, show symptoms first.
+:::
+
+### 5.5
+
+What does each partner gain in an arbuscular mycorrhizal symbiosis?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The plant gains mineral nutrients, especially phosphate, and water taken up by
+the fungal hyphae from a larger soil volume. The fungus gains carbon
+(sugars and lipids) from the plant.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

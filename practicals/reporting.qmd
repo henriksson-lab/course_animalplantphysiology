@@ -9,7 +9,7 @@ were obtained, what the results show and how far the physiological explanation
 can go. Use one of the supplied analysis practicals or the instructor's actual
 laboratory activity. This is a teaching template and feedback framework,
 **not an approved grading scheme or official submission instruction**.
-Allow a first 60-minute drafting session and a second revision session.
+Write a first draft, then revise it after feedback.
 
 No programming is required. A clear calculation table and labelled figure can
 meet this activity's goals. If software is used, preserve source data and the

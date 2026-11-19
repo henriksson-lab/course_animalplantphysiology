@@ -72,7 +72,7 @@ Explain every arrow.
 - Ca²⁺ regulates access to skeletal-muscle actin sites through regulatory proteins.
 - ATP binding allows myosin detachment; hydrolysis supports cycling.
 - Calcium recovery contributes to relaxation.
-- No ATP use is not the same as no shortening.
+- No shortening does not mean no ATP use (e.g. isometric contraction).
 
 ## Force, work and power
 
@@ -118,12 +118,6 @@ Connect gamete production, steroid secretion and target response.
 - An LH surge is not an endlessly amplifying loop.
 - This example is not every animal's reproductive strategy.
 
-## Integrate the animal half
-
-Trace escape: detection → neural response → muscle recruitment → ATP demand
-→ oxygen delivery → heat and water costs.
-
-Which changes are immediate? Which need sustained adjustment? How might
-resource availability also affect reproduction?
+## Next
 
 [Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

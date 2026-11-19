@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A4 exercises — Osmotic challenges and renal accounting – Animal and Plant Physiology</title>
+<title>A4 exercises — Water, ions and excretion – Animal and Plant Physiology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -686,12 +715,51 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#state-the-membrane-and-the-tendency" id="toc-state-the-membrane-and-the-tendency" class="nav-link active" data-scroll-target="#state-the-membrane-and-the-tendency">1. State the membrane and the tendency</a></li>
-  <li><a href="#compare-freshwater-and-seawater-teleosts" id="toc-compare-freshwater-and-seawater-teleosts" class="nav-link" data-scroll-target="#compare-freshwater-and-seawater-teleosts">2. Compare freshwater and seawater teleosts</a></li>
-  <li><a href="#account-for-a-substance-in-the-kidney" id="toc-account-for-a-substance-in-the-kidney" class="nav-link" data-scroll-target="#account-for-a-substance-in-the-kidney">3. Account for a substance in the kidney</a></li>
-  <li><a href="#trace-water-recovery-and-feedback" id="toc-trace-water-recovery-and-feedback" class="nav-link" data-scroll-target="#trace-water-recovery-and-feedback">4. Trace water recovery and feedback</a></li>
-  <li><a href="#connect-nitrogen-form-to-trade-offs" id="toc-connect-nitrogen-form-to-trade-offs" class="nav-link" data-scroll-target="#connect-nitrogen-form-to-trade-offs">5. Connect nitrogen form to trade-offs</a></li>
-  <li><a href="#interpret-a-described-kidney-section" id="toc-interpret-a-described-kidney-section" class="nav-link" data-scroll-target="#interpret-a-described-kidney-section">6. Interpret a described kidney section</a></li>
+  <li><a href="#osmotic-concentration-and-tonicity" id="toc-osmotic-concentration-and-tonicity" class="nav-link active" data-scroll-target="#osmotic-concentration-and-tonicity">Osmotic concentration and tonicity</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1.3</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1.4</a></li>
+  </ul></li>
+  <li><a href="#fish-in-fresh-water-and-seawater" id="toc-fish-in-fresh-water-and-seawater" class="nav-link" data-scroll-target="#fish-in-fresh-water-and-seawater">Fish in fresh water and seawater</a>
+  <ul class="collapse">
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2.1</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">2.2</a></li>
+  </ul></li>
+  <li><a href="#epithelial-transport" id="toc-epithelial-transport" class="nav-link" data-scroll-target="#epithelial-transport">Epithelial transport</a>
+  <ul class="collapse">
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">3.1</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">3.2</a></li>
+  </ul></li>
+  <li><a href="#the-nephron" id="toc-the-nephron" class="nav-link" data-scroll-target="#the-nephron">The nephron</a>
+  <ul class="collapse">
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">4.1</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">4.2</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">4.3</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">4.4</a></li>
+  </ul></li>
+  <li><a href="#renal-calculations" id="toc-renal-calculations" class="nav-link" data-scroll-target="#renal-calculations">Renal calculations</a>
+  <ul class="collapse">
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">5.1</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">5.2</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">5.3</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">5.4</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">5.5</a></li>
+  </ul></li>
+  <li><a href="#concentrating-the-urine" id="toc-concentrating-the-urine" class="nav-link" data-scroll-target="#concentrating-the-urine">Concentrating the urine</a>
+  <ul class="collapse">
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">6.1</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">6.2</a></li>
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">6.3</a></li>
+  </ul></li>
+  <li><a href="#nitrogenous-waste" id="toc-nitrogenous-waste" class="nav-link" data-scroll-target="#nitrogenous-waste">Nitrogenous waste</a>
+  <ul class="collapse">
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">7.1</a></li>
+  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">7.2</a></li>
+  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">7.3</a></li>
+  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">7.4</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -700,7 +768,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../animal/index.html">Animal physiology</a></li><li class="breadcrumb-item"><a href="../../animal/water-excretion/index.html">A4: Water and excretion</a></li><li class="breadcrumb-item"><a href="../../animal/water-excretion/exercise.html">Exercises</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">A4 exercises — Osmotic challenges and renal accounting</h1>
+<h1 class="title">A4 exercises — Water, ions and excretion</h1>
 </div>
 
 
@@ -717,54 +785,924 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use the <a href="../../animal/water-excretion/index.html">tutorial</a>. These tasks use supplied hypothetical data and schematics, with no sampling or fluid-manipulation procedure. Allow 60–90 minutes. Leave with a habitat comparison, a labelled nephron and an excretion calculation that distinguishes amount from concentration.</p>
-<section id="state-the-membrane-and-the-tendency" class="level2">
-<h2 class="anchored" data-anchor-id="state-the-membrane-and-the-tendency">1. State the membrane and the tendency</h2>
-<p>A hypothetical animal’s body fluids have osmolarity 300 mOsm L⁻¹. Compare two external media: 10 and 1,000 mOsm L⁻¹. Assuming the relevant surface allows water exchange, predict the water tendency in each. Which additional information would be needed to predict the flux of a particular ion?</p>
-<p>For ideal solutions, estimate osmolarities of 0.15 mol L⁻¹ glucose and 0.15 mol L⁻¹ NaCl, treating NaCl as fully dissociated. Explain why an equal total osmolarity does not guarantee equal tonicity for a cell membrane.</p>
-</section>
-<section id="compare-freshwater-and-seawater-teleosts" class="level2">
-<h2 class="anchored" data-anchor-id="compare-freshwater-and-seawater-teleosts">2. Compare freshwater and seawater teleosts</h2>
-<p>Draw one water arrow and one net salt-challenge arrow for each fish. Add drinking behaviour, the role of gill transport and expected relative urine volume. Explain why these examples cannot be transferred unchanged to a marine shark or every marine invertebrate.</p>
-<p>Your figure should distinguish a passive tendency from an active compensating process, using different arrow labels.</p>
-</section>
-<section id="account-for-a-substance-in-the-kidney" class="level2">
-<h2 class="anchored" data-anchor-id="account-for-a-substance-in-the-kidney">3. Account for a substance in the kidney</h2>
-<p>For a hypothetical solute, glomerular filtration rate is 0.10 L min⁻¹ and plasma concentration 5 mmol L⁻¹. Assume the solute is freely filtered. Reabsorption is 0.40 mmol min⁻¹ and secretion 0.02 mmol min⁻¹.</p>
-<p>Calculate filtered load and excretion rate. Urine flow is 0.002 L min⁻¹: calculate urine concentration. Check that concentration × urine flow returns the excretion rate.</p>
-<p>Then halve urine flow while holding that excretion rate fixed. What happens to urine concentration? Does this require the amount of solute excreted per minute to increase?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<p>The questions follow the <a href="../../animal/water-excretion/index.html">tutorial</a> and <a href="../../animal/water-excretion/lec.html">slides</a>. Answer each question before opening its answer.</p>
+<section id="osmotic-concentration-and-tonicity" class="level2">
+<h2 class="anchored" data-anchor-id="osmotic-concentration-and-tonicity">Osmotic concentration and tonicity</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">1.1</h3>
+<p>Calculate the osmolarity (mOsm L⁻¹) of each solution. Treat the solutions as ideal and the salts as fully dissociated.</p>
+<ol type="a">
+<li>0.15 mol L⁻¹ glucose</li>
+<li>0.15 mol L⁻¹ NaCl</li>
+<li>0.10 mol L⁻¹ CaCl₂</li>
+<li>0.10 mol L⁻¹ NaCl + 0.10 mol L⁻¹ urea</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hint
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Filtered load is filtration rate × plasma concentration. Keep L min⁻¹, mmol L⁻¹ and mmol min⁻¹ distinct at each step.</p>
+<ol type="a">
+<li>150 mOsm L⁻¹ (glucose does not dissociate).</li>
+<li>300 mOsm L⁻¹ (Na⁺ + Cl⁻: 2 particles per formula unit).</li>
+<li>300 mOsm L⁻¹ (Ca²⁺ + 2 Cl⁻: 3 particles per formula unit).</li>
+<li>300 mOsm L⁻¹ (200 from NaCl + 100 from urea).</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="trace-water-recovery-and-feedback" class="level2">
-<h2 class="anchored" data-anchor-id="trace-water-recovery-and-feedback">4. Trace water recovery and feedback</h2>
-<p>Draw a nephron route from glomerulus to collecting duct, with arrows for filtration, reabsorption and secretion. Explain how a medullary gradient and collecting-duct water permeability work together. Predict the direction of change in urine volume when ADH action rises, provided the relevant gradient and kidney function are intact.</p>
-<p>Complete a negative-feedback explanation for an increase in body-fluid osmotic concentration. Identify what is sensed, what responds and how the initial disturbance is reduced. Explain why ADH does not create water.</p>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">1.2</h3>
+<p>An animal’s body fluids have an osmolarity of 300 mOsm L⁻¹. For each external medium, state whether the medium is hyperosmotic, isosmotic or hyposmotic to the body fluids, and the direction in which water tends to move across a water-permeable body surface.</p>
+<ol type="a">
+<li>10 mOsm L⁻¹ (fresh water)</li>
+<li>300 mOsm L⁻¹</li>
+<li>1,000 mOsm L⁻¹ (seawater)</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Hyposmotic; water tends to enter the animal.</li>
+<li>Isosmotic; no net osmotic water movement.</li>
+<li>Hyperosmotic; water tends to leave the animal.</li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section id="connect-nitrogen-form-to-trade-offs" class="level2">
-<h2 class="anchored" data-anchor-id="connect-nitrogen-form-to-trade-offs">5. Connect nitrogen form to trade-offs</h2>
-<p>Compare ammonia, urea and uric acid in terms of conversion costs, water demands and physiological context. Explain why “uric acid is best because it saves water” is incomplete. Distinguish nitrogen excretion from loss of undigested food in faeces.</p>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">1.3</h3>
+<p>Red blood cells (intracellular osmolarity 300 mOsm L⁻¹) are placed in each solution. State whether the cells swell, shrink or keep their volume. The membrane is permeable to urea but effectively impermeable to NaCl.</p>
+<ol type="a">
+<li>300 mOsm L⁻¹ NaCl</li>
+<li>150 mOsm L⁻¹ NaCl</li>
+<li>600 mOsm L⁻¹ NaCl</li>
+<li>300 mOsm L⁻¹ urea</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Keep their volume (isotonic).</li>
+<li>Swell (hypotonic).</li>
+<li>Shrink (hypertonic).</li>
+<li>Swell, and eventually burst. Urea enters the cells until its concentration is equal on both sides, so it exerts no lasting osmotic effect. The cells’ own trapped solutes then draw water in. The solution is isosmotic but hypotonic.</li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section id="interpret-a-described-kidney-section" class="level2">
-<h2 class="anchored" data-anchor-id="interpret-a-described-kidney-section">6. Interpret a described kidney section</h2>
-<p>An invented description reports many epithelial rings around lumens and some capillary tufts within surrounding spaces. Propose an organ and tissue features supporting that interpretation. Explain why one ring cannot confidently identify a nephron segment without additional features. Connect one observed feature to filtration and another to selective transport.</p>
-<p>Finish with the <a href="../../animal/water-excretion/quiz.html">quiz</a>.</p>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">1.4</h3>
+<p>True or false? Correct any false statements.</p>
+<ol type="a">
+<li>Two solutions with the same osmolarity always have the same effect on cell volume.</li>
+<li>Osmolarity depends on the number of dissolved particles, not on their mass.</li>
+<li>An osmoconformer keeps every internal ion at the same concentration as seawater.</li>
+<li>A hydrostatic pressure can stop net osmotic water movement before the solute concentrations on the two sides become equal.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>False. Tonicity depends only on solutes that cannot cross the membrane, so isosmotic solutions can differ in tonicity (see 1.3 d).</li>
+<li>True.</li>
+<li>False. An osmoconformer matches the <em>total</em> osmotic concentration of its medium but may still regulate individual ions.</li>
+<li>True.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="fish-in-fresh-water-and-seawater" class="level2">
+<h2 class="anchored" data-anchor-id="fish-in-fresh-water-and-seawater">Fish in fresh water and seawater</h2>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">2.1</h3>
+<p>Complete the table for typical teleost (bony) fishes.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Freshwater teleost</th>
+<th>Marine teleost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body fluids compared with the medium</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Passive water movement</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Passive salt movement</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Drinking</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Urine volume and concentration</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Direction of active NaCl transport at the gills</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Freshwater teleost</th>
+<th>Marine teleost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body fluids compared with the medium</td>
+<td>Hyperosmotic</td>
+<td>Hyposmotic</td>
+</tr>
+<tr class="even">
+<td>Passive water movement</td>
+<td>Inward (gain)</td>
+<td>Outward (loss)</td>
+</tr>
+<tr class="odd">
+<td>Passive salt movement</td>
+<td>Outward (loss)</td>
+<td>Inward (gain)</td>
+</tr>
+<tr class="even">
+<td>Drinking</td>
+<td>Little or none</td>
+<td>Drinks seawater</td>
+</tr>
+<tr class="odd">
+<td>Urine volume and concentration</td>
+<td>Large volume, dilute</td>
+<td>Small volume, about isosmotic to plasma</td>
+</tr>
+<tr class="even">
+<td>Direction of active NaCl transport at the gills</td>
+<td>Uptake from water into blood</td>
+<td>Secretion from blood into water</td>
+</tr>
+</tbody>
+</table>
+<p>Food also supplies ions to the freshwater fish. In the marine fish, the kidney excretes most of the excess divalent ions (Mg²⁺, SO₄²⁻).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">2.2</h3>
+<p>Marine sharks have a body-fluid osmolarity slightly above that of seawater.</p>
+<ol type="a">
+<li>Which two organic solutes do they retain to raise their osmolarity?</li>
+<li>In which direction does water tend to move across their gills?</li>
+<li>Which organ secretes their excess NaCl?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Urea and trimethylamine oxide (TMAO). TMAO counteracts the destabilising effect of urea on proteins.</li>
+<li>Slightly inward, so sharks do not need to drink seawater.</li>
+<li>The rectal gland.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="epithelial-transport" class="level2">
+<h2 class="anchored" data-anchor-id="epithelial-transport">Epithelial transport</h2>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">3.1</h3>
+<p>In a typical transporting epithelial cell:</p>
+<ol type="a">
+<li>On which membrane, apical or basolateral, is the Na⁺/K⁺-ATPase located?</li>
+<li>How many Na⁺ and K⁺ ions does it move per ATP, and in which directions?</li>
+<li>Why is the pump needed for Na⁺ to enter the cell passively across the other membrane?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>The basolateral membrane.</li>
+<li>3 Na⁺ out of the cell and 2 K⁺ into the cell per ATP hydrolysed.</li>
+<li>By removing Na⁺, the pump keeps intracellular Na⁺ low (and the inside negative). This creates an inward electrochemical gradient for Na⁺ across the apical membrane, which channels and cotransporters use.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">3.2</h3>
+<p>True or false? Correct any false statements.</p>
+<ol type="a">
+<li>The kidney reabsorbs water by active transport of water molecules.</li>
+<li>Water crosses epithelia through aquaporins and between cells, following an osmotic gradient created by solute transport.</li>
+<li>A list of transporters is enough to predict the direction of net transport across an epithelium.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>False. No pump transports water. Water follows osmotic gradients set up by active solute transport.</li>
+<li>True.</li>
+<li>False. You also need to know whether each transporter is on the apical or basolateral membrane.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-nephron" class="level2">
+<h2 class="anchored" data-anchor-id="the-nephron">The nephron</h2>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">4.1</h3>
+<p>Put the structures in the order that filtrate passes through them.</p>
+<ol type="a">
+<li>collecting duct</li>
+<li>distal convoluted tubule</li>
+<li>Bowman’s capsule</li>
+<li>thick ascending limb of the loop of Henle</li>
+<li>proximal convoluted tubule</li>
+<li>descending limb of the loop of Henle</li>
+<li>renal pelvis</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>c → e → f → d → b → a → g.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">4.2</h3>
+<p>Match each nephron segment (1–5) with its main transport function (A–E).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Segment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Proximal convoluted tubule</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Descending limb of the loop of Henle</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Thick ascending limb of the loop of Henle</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Distal convoluted tubule</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Collecting duct</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Reabsorbs NaCl (Na⁺–K⁺–2Cl⁻ cotransporter) but is impermeable to water, so the tubular fluid becomes dilute</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Water reabsorption regulated by ADH; Na⁺ reabsorption regulated by aldosterone</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Reabsorbs about two thirds of the filtered Na⁺ and water, and nearly all filtered glucose and amino acids</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>Permeable to water but has low permeability to NaCl; water leaves into the hyperosmotic medulla</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Fine-tunes reabsorption of NaCl and Ca²⁺; its fluid is still hyposmotic to plasma</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1–C, 2–D, 3–A, 4–E, 5–B.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">4.3</h3>
+<p>Define <em>filtration</em>, <em>reabsorption</em>, <em>secretion</em> and <em>excretion</em> in the kidney, stating the direction of movement for each.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Filtration:</strong> bulk flow of plasma water and small solutes from the glomerular capillaries into Bowman’s capsule.</li>
+<li><strong>Reabsorption:</strong> movement of a substance from the tubular fluid back into the blood.</li>
+<li><strong>Secretion:</strong> movement of a substance from the blood (via the interstitial fluid) into the tubular fluid.</li>
+<li><strong>Excretion:</strong> the amount of a substance that leaves the body in the urine.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">4.4</h3>
+<p>Name the three layers of the glomerular filtration barrier, and state which plasma components are normally almost absent from the filtrate.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Fenestrated capillary endothelium.</li>
+<li>Glomerular basement membrane.</li>
+<li>Filtration slits between the foot processes of podocytes.</li>
+</ol>
+<p>Blood cells and large plasma proteins such as albumin are almost absent from the filtrate.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="renal-calculations" class="level2">
+<h2 class="anchored" data-anchor-id="renal-calculations">Renal calculations</h2>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">5.1</h3>
+<p>For a freely filtered solute, the glomerular filtration rate (GFR) is 0.10 L min⁻¹ and the plasma concentration is 5 mmol L⁻¹. Reabsorption is 0.40 mmol min⁻¹ and secretion is 0.02 mmol min⁻¹. Urine flow is 0.002 L min⁻¹.</p>
+<ol type="a">
+<li>Calculate the filtered load.</li>
+<li>Calculate the excretion rate.</li>
+<li>Calculate the urine concentration of the solute.</li>
+<li>Urine flow is halved while the excretion rate stays the same. What is the new urine concentration?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Filtered load = GFR × plasma concentration = 0.10 L min⁻¹ × 5 mmol L⁻¹ = 0.50 mmol min⁻¹.</li>
+<li>Excretion = 0.50 − 0.40 + 0.02 = 0.12 mmol min⁻¹.</li>
+<li>Urine concentration = excretion ÷ urine flow = 0.12 ÷ 0.002 = 60 mmol L⁻¹.</li>
+<li>0.12 ÷ 0.001 = 120 mmol L⁻¹. The concentration doubles although the amount excreted per minute is unchanged.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">5.2</h3>
+<p>The renal clearance of a substance is <span class="math inline">\(C = U \times V / P\)</span>, where <span class="math inline">\(U\)</span> is its urine concentration, <span class="math inline">\(V\)</span> the urine flow and <span class="math inline">\(P\)</span> its plasma concentration. Inulin is infused into a subject. Plasma inulin is 0.20 mg mL⁻¹, urine inulin is 25 mg mL⁻¹ and urine flow is 1.0 mL min⁻¹.</p>
+<ol type="a">
+<li>Calculate the inulin clearance.</li>
+<li>Why does inulin clearance equal the GFR?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><span class="math inline">\(C = 25 \times 1.0 / 0.20 = 125\)</span> mL min⁻¹.</li>
+<li>Inulin is freely filtered and is neither reabsorbed, secreted nor metabolised by the tubule. All filtered inulin is therefore excreted, and the volume of plasma cleared per minute equals the volume filtered per minute.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">5.3</h3>
+<p>The GFR is 125 mL min⁻¹. Four freely filtered substances have the clearances below. For each, state whether the tubule shows net reabsorption, net secretion or neither.</p>
+<ol type="a">
+<li>Glucose: 0 mL min⁻¹</li>
+<li>Urea: 60 mL min⁻¹</li>
+<li>Substance X: 125 mL min⁻¹</li>
+<li>Para-aminohippuric acid (PAH): 600 mL min⁻¹</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Net reabsorption (complete).</li>
+<li>Net reabsorption (partial).</li>
+<li>Neither, like inulin.</li>
+<li>Net secretion.</li>
+</ol>
+<p>Clearance below the GFR means net reabsorption; clearance above the GFR means net secretion.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">5.4</h3>
+<p>A person has a GFR of 125 mL min⁻¹ and a plasma glucose concentration of 5 mmol L⁻¹.</p>
+<ol type="a">
+<li>Calculate the filtered load of glucose in mmol min⁻¹.</li>
+<li>The maximum rate of tubular glucose reabsorption (transport maximum, <span class="math inline">\(T_m\)</span>) is 2.0 mmol min⁻¹. How much glucose is excreted at this plasma concentration?</li>
+<li>In uncontrolled diabetes, plasma glucose rises to 20 mmol L⁻¹. Calculate the glucose excretion rate.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>0.125 L min⁻¹ × 5 mmol L⁻¹ = 0.625 mmol min⁻¹.</li>
+<li>None. The filtered load is below <span class="math inline">\(T_m\)</span>, so all of it is reabsorbed.</li>
+<li>Filtered load = 0.125 × 20 = 2.5 mmol min⁻¹. Excretion = 2.5 − 2.0 = 0.5 mmol min⁻¹.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">5.5</h3>
+<p>A human kidney filters 180 L of plasma per day and produces 1.5 L of urine per day. What percentage of the filtered water is reabsorbed?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>(180 − 1.5) / 180 × 100 = 99.2 %.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="concentrating-the-urine" class="level2">
+<h2 class="anchored" data-anchor-id="concentrating-the-urine">Concentrating the urine</h2>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">6.1</h3>
+<p>Put the steps in order for the response to dehydration.</p>
+<ol type="a">
+<li>Aquaporin-2 water channels are inserted into the apical membrane of collecting-duct cells.</li>
+<li>Plasma osmolarity rises.</li>
+<li>ADH binds to V2 receptors on collecting-duct cells.</li>
+<li>Osmoreceptors in the hypothalamus detect the change.</li>
+<li>Water moves from the collecting duct into the hyperosmotic medullary interstitium, and a small volume of concentrated urine is produced.</li>
+<li>ADH is released from the posterior pituitary.</li>
+<li>Plasma osmolarity falls and ADH release decreases.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>b → d → f → c → a → e → g. Step g is the negative feedback.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">6.2</h3>
+<p>A person must excrete 600 mOsm of solute per day. The maximum urine osmolarity in humans is about 1,200 mOsm L⁻¹.</p>
+<ol type="a">
+<li>What is the minimum daily urine volume?</li>
+<li>A person who lacks ADH (diabetes insipidus) produces urine of 100 mOsm L⁻¹. What is their daily urine volume for the same solute load?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>600 mOsm ÷ 1,200 mOsm L⁻¹ = 0.5 L day⁻¹.</li>
+<li>600 mOsm ÷ 100 mOsm L⁻¹ = 6 L day⁻¹.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">6.3</h3>
+<p>True or false? Correct any false statements.</p>
+<ol type="a">
+<li>Tubular fluid leaving the thick ascending limb is hyposmotic to plasma.</li>
+<li>ADH increases urine concentration mainly by reducing the GFR.</li>
+<li>Without ADH, the collecting duct has low water permeability and the urine stays dilute.</li>
+<li>Urea contributes to the osmotic gradient of the inner medulla.</li>
+<li>Desert rodents that produce very concentrated urine tend to have relatively long loops of Henle.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>True (about 100 mOsm L⁻¹), because NaCl is removed without water.</li>
+<li>False. ADH increases the water permeability of the collecting duct, so more water is reabsorbed into the medulla.</li>
+<li>True.</li>
+<li>True.</li>
+<li>True. A longer loop (and a thicker medulla) builds a larger corticomedullary gradient.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="nitrogenous-waste" class="level2">
+<h2 class="anchored" data-anchor-id="nitrogenous-waste">Nitrogenous waste</h2>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">7.1</h3>
+<p>Complete the table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Ammonia</th>
+<th>Urea</th>
+<th>Uric acid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toxicity</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Solubility in water</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Water needed to excrete it</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Energy cost of synthesis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Example animal group</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ammonia</th>
+<th>Urea</th>
+<th>Uric acid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toxicity</td>
+<td>High</td>
+<td>Low</td>
+<td>Very low</td>
+</tr>
+<tr class="even">
+<td>Solubility in water</td>
+<td>High</td>
+<td>High</td>
+<td>Very low</td>
+</tr>
+<tr class="odd">
+<td>Water needed to excrete it</td>
+<td>Large amounts</td>
+<td>Moderate</td>
+<td>Very little (excreted as a paste)</td>
+</tr>
+<tr class="even">
+<td>Energy cost of synthesis</td>
+<td>None</td>
+<td>Moderate</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Example animal group</td>
+<td>Teleost fishes, most aquatic invertebrates</td>
+<td>Mammals, adult amphibians, sharks</td>
+<td>Birds, most reptiles, insects</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-21" class="level3">
+<h3 class="anchored" data-anchor-id="section-21">7.2</h3>
+<p>Classify each animal as ammonotelic, ureotelic or uricotelic.</p>
+<ol type="a">
+<li>goldfish</li>
+<li>human</li>
+<li>chicken</li>
+<li>tadpole</li>
+<li>adult frog</li>
+<li>desert locust</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Ammonotelic. b. Ureotelic. c.&nbsp;Uricotelic. d.&nbsp;Ammonotelic.</li>
+<li>Ureotelic. f.&nbsp;Uricotelic.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-22" class="level3">
+<h3 class="anchored" data-anchor-id="section-22">7.3</h3>
+<p>Why is uric acid, rather than urea, the nitrogenous waste of embryos that develop inside a shelled (cleidoic) egg?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The egg is a closed system: wastes cannot leave it. Uric acid is insoluble, so it precipitates and is stored in solid form, where it is neither toxic nor osmotically active. Urea would stay dissolved and accumulate to toxic concentrations.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-23" class="level3">
+<h3 class="anchored" data-anchor-id="section-23">7.4</h3>
+<p>Put the steps of urine formation in an insect in order.</p>
+<ol type="a">
+<li>Water, ions and useful solutes are reabsorbed in the rectum.</li>
+<li>K⁺ is actively secreted into the lumen of the Malpighian tubules.</li>
+<li>Dry waste, including precipitated uric acid, is eliminated with the faeces.</li>
+<li>Water and solutes, including uric acid, follow into the tubule lumen.</li>
+<li>The tubule fluid empties into the hindgut.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>b → d → e → a → c.&nbsp;The Malpighian tubules produce a fluid isosmotic to the haemolymph by secretion, not by filtration; the hindgut recovers water.</p>
+</div>
+</div>
+</div>
+<p>Continue with the <a href="../../animal/water-excretion/quiz.html">self-check quiz</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

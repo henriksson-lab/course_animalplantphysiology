@@ -1,76 +1,342 @@
 ---
-title: "P1 exercise — Explain the structure"
+title: "P1 exercises — Building a functioning plant"
 ---
 
-Work from the [tutorial](index.qmd). Allow about 45–60 minutes, including
-discussion. These classroom descriptions are invented; they are not substitute
-microscope images or instructions for handling specimens. Leave with labelled
-drawings and short mechanistic explanations. No software is needed.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Follow material through a leaf
+## Cell compartments
 
-Draw epidermis, a stomatal pore, an internal air space, mesophyll, xylem and
-phloem. Trace CO2, water and exported carbohydrate using separate labelled
-arrows. Mark where at least one membrane must be crossed. Explain why opening
-the pore can increase both carbon access and water loss. Do not draw phloem as
-an extension of the stomatal pore.
+### 1.1
 
-::: {.callout-tip collapse="true"}
-## Start with compartments
+Match each structure to its main function.
 
-CO2 reaches mesophyll from the atmosphere; water arrives through vascular
-tissue. A photosynthetic product's eventual export is a different pathway.
-An arrow between organs is not a claim that no membranes lie along the route.
-:::
-
-## 2. Classify evidence, not just names
-
-For each invented observation, identify a plausible cell/tissue function and
-one additional feature needed before a confident identification.
-
-| Description | Observation |
+| | Structure |
 | --- | --- |
-| A | An elongated conducting element lacks living contents and has thick lignified walls |
-| B | A living photosynthetic cell borders a large internal air space |
-| C | A living epidermal cell has a long extension into the surrounding soil |
-| D | A population near a shoot tip contains small actively dividing cells |
+| A | Plasma membrane |
+| B | Primary cell wall |
+| C | Tonoplast |
+| D | Chloroplast |
+| E | Mitochondrion |
 
-Why would “thick wall” alone fail to identify xylem? Why does a text exercise
-not demonstrate that you can recognise the tissue on an actual slide?
-
-## 3. Root growth has more than one explanation
-
-In this invented simplified model, a marked root segment contains 100 cells
-arranged end to end. Ignore gaps and assume the measured cell length represents
-the whole segment. Mean length is 40 µm before and 70 µm after a period with
-no divisions. Calculate segment length at both times in millimetres and its
-increase. Compare with a second case containing 175 cells of 40 µm each.
+Functions: (1) membrane surrounding the central vacuole; (2) site of
+photosynthesis; (3) selective control of exchange between the cytoplasm and
+the outside of the cell; (4) site of aerobic respiration; (5) resists
+deformation and constrains the direction of expansion.
 
 ::: {.callout-note collapse="true"}
-## Check the scale
+## Answer
 
-100 × 40 µm = 4000 µm = 4 mm; 100 × 70 µm = 7 mm. The increase is 3 mm.
-175 × 40 µm is also 7 mm. Equal final lengths can arise through different
-cellular processes. Real tissue has heterogeneous cell lengths and geometry.
+A–3, B–5, C–1, D–2, E–4.
 :::
 
-## 4. Pressure is not the entire growth mechanism
+### 1.2
 
-A cell rapidly takes up water but does not undergo irreversible expansion.
-Offer two compatible explanations involving the wall or growth state. What
-observation would distinguish temporary swelling from lasting growth? Explain
-why wall loosening and synthesis must be coordinated.
+Define *turgor pressure* and state what happens to a non-woody shoot when
+turgor falls.
 
-## 5. Three genomes, one cell
+::: {.callout-note collapse="true"}
+## Answer
 
-An invented mutation changes a nuclear gene encoding a protein imported into
-chloroplasts. The chloroplast DNA sequence is unchanged, but photosynthetic
-performance decreases. Is this contradictory? Explain protein location versus
-gene location. Then explain how two tissues sharing a nuclear genome can have
-different organelles and functions without invoking different DNA sequences.
+Turgor pressure is the positive hydrostatic pressure of the cell contents
+against the cell wall, produced when water enters a cell with a resisting wall.
+When turgor falls, the cells lose rigidity and the shoot wilts, even though the
+cells may still be alive.
+:::
 
-## Completion check
+### 1.3
 
-Your answers should distinguish tissues from organs, membranes from walls,
-division from expansion and gene location from protein destination. Return to
-the [self-check](quiz.qmd) after revising one explanation from discussion.
+Name three functions of the large central vacuole of a mature plant cell.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Any three of: storage of solutes (ions, sugars, organic acids, pigments,
+defensive compounds); generation of turgor by solute accumulation and water
+uptake; regulation of cytoplasmic pH; degradation of cellular material;
+allowing the cell to enlarge without making a corresponding volume of
+cytoplasm.
+:::
+
+### 1.4
+
+True or false? Correct any false statements.
+
+a. All plastids are chloroplasts.
+b. Leaf cells respire only in darkness.
+c. The cell wall is selectively permeable and controls which solutes enter the cell.
+d. Many root cells lack photosynthetically active chloroplasts.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Chloroplasts are one type of plastid; others include amyloplasts
+   (starch storage) and chromoplasts (pigments).
+b. False. Mitochondrial respiration continues in light and darkness.
+c. False. Water and small solutes pass through the wall; selective control is
+   exercised by the plasma membrane.
+d. True.
+:::
+
+## Cell walls, growth and cell connections
+
+### 2.1
+
+Name the main load-bearing component of the primary cell wall and the polymer
+that reinforces secondary walls of xylem conduits.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Cellulose microfibrils (embedded in a matrix of hemicelluloses, pectins and
+proteins). Secondary walls of xylem conduits are reinforced by lignin.
+:::
+
+### 2.2
+
+Turgor pressure is present, but a cell does not enlarge irreversibly. Name the
+wall property that must change to allow growth, and the two materials that
+must be supplied as the cell enlarges.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The wall must be loosened so that it yields (extends irreversibly) under
+turgor. New wall material and new plasma membrane must be supplied.
+:::
+
+### 2.3
+
+Define *apoplast*, *symplast* and *plasmodesma*.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **Apoplast:** the continuous system of cell walls and extracellular spaces
+  outside the plasma membranes (including the lumens of dead xylem conduits).
+- **Symplast:** the cytoplasm of cells connected through plasmodesmata.
+- **Plasmodesma:** a membrane-lined channel through the cell wall that connects
+  the cytoplasm of neighbouring cells.
+:::
+
+### 2.4
+
+A solute moves from the apoplast into the symplast. Which structure must it
+cross?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The plasma membrane of a cell.
+:::
+
+## Tissues and organs
+
+### 3.1
+
+Complete the table for the three tissue systems.
+
+| Tissue system | Main functions | One example of a cell or tissue type |
+| --- | --- | --- |
+| Dermal | | |
+| Ground | | |
+| Vascular | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Tissue system | Main functions | One example of a cell or tissue type |
+| --- | --- | --- |
+| Dermal | Protection; control of exchange with the environment | Epidermis, guard cells, root hairs |
+| Ground | Photosynthesis, storage, support | Mesophyll (parenchyma), collenchyma, sclerenchyma |
+| Vascular | Long-distance transport; support | Xylem, phloem |
+:::
+
+### 3.2
+
+Complete the table for the three ground-tissue cell types.
+
+| | Parenchyma | Collenchyma | Sclerenchyma |
+| --- | --- | --- | --- |
+| Living at maturity? | | | |
+| Wall | | | |
+| Main function | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Parenchyma | Collenchyma | Sclerenchyma |
+| --- | --- | --- | --- |
+| Living at maturity? | Yes | Yes | Usually no |
+| Wall | Thin primary wall | Unevenly thickened primary wall | Thick, lignified secondary wall |
+| Main function | Metabolism, photosynthesis, storage | Flexible support of growing organs | Rigid support (fibres, sclereids) |
+:::
+
+### 3.3
+
+Name the cell or tissue that matches each description.
+
+| | Description |
+| --- | --- |
+| A | Elongated conducting cell, dead at maturity, with thick lignified walls and perforated end walls |
+| B | Living conducting cell without a nucleus, joined end to end through sieve plates |
+| C | Living cell with a nucleus that lies beside B and supports its function |
+| D | Pair of cells that border a pore in the leaf epidermis |
+| E | Tubular extension of a root epidermal cell |
+| F | Cell layer around the root vascular cylinder carrying the Casparian strip |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+A: vessel element (xylem). B: sieve-tube element (phloem). C: companion cell.
+D: guard cells. E: root hair. F: endodermis.
+:::
+
+### 3.4
+
+Complete the table comparing xylem and phloem.
+
+| | Xylem | Phloem |
+| --- | --- | --- |
+| Main substances transported | | |
+| Conducting cells | | |
+| Conducting cells living at maturity? | | |
+| Direction of transport | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Xylem | Phloem |
+| --- | --- | --- |
+| Main substances transported | Water and mineral ions | Sugars (mainly sucrose), amino acids, signals |
+| Conducting cells | Tracheids and vessel elements | Sieve-tube elements (with companion cells) |
+| Conducting cells living at maturity? | No | Yes, but without a nucleus |
+| Direction of transport | Roots to shoot | From sources to sinks, up or down |
+
+Xylem as a tissue still contains living parenchyma cells; only the conducting
+cells are dead.
+:::
+
+### 3.5
+
+Give the order in which CO₂ passes these leaf structures on its way from the
+atmosphere to the site of fixation: mesophyll cell, stomatal pore, chloroplast
+stroma, intercellular air space, plasma membrane.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Stomatal pore → intercellular air space → plasma membrane → mesophyll cell
+(cytosol) → chloroplast stroma. CO₂ dissolves in the water of the wet cell
+wall before crossing the plasma membrane.
+:::
+
+### 3.6
+
+Why does opening the stomata increase both CO₂ uptake and water loss?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+CO₂ diffuses in and water vapour diffuses out through the same pore. The
+cuticle is nearly impermeable to both, so opening the pore raises the
+conductance for both gases at once.
+:::
+
+## Meristems and growth
+
+### 4.1
+
+Name the meristem responsible for each of the following.
+
+a. Increase in length of a root
+b. Production of secondary xylem and secondary phloem
+c. Production of the protective outer bark tissue (periderm)
+d. Regrowth of a grass leaf after its tip has been cut
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Root apical meristem. b. Vascular cambium (secondary xylem inward,
+secondary phloem outward). c. Cork cambium (phellogen). d. Intercalary
+(basal) meristem.
+:::
+
+### 4.2
+
+A root segment contains 100 cells arranged end to end. Ignore spaces between
+cells.
+
+a. Calculate the segment length in mm when the mean cell length is 40 µm.
+b. With no cell division, the mean cell length becomes 70 µm. Calculate the new
+   segment length and the increase.
+c. How many 40 µm cells would give the same final length as in (b)?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 100 × 40 µm = 4000 µm = 4 mm.
+b. 100 × 70 µm = 7000 µm = 7 mm; increase = 3 mm.
+c. 7000 µm / 40 µm = 175 cells. The same length can result from cell
+   expansion or from cell division, so length alone does not identify the
+   process.
+:::
+
+### 4.3
+
+True or false? Correct any false statements.
+
+a. Cell differentiation requires a change in the DNA sequence.
+b. Primary growth increases the length of roots and shoots.
+c. Every mature plant cell can regenerate a whole plant under any conditions.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Differentiation results from differences in gene expression; the
+   DNA sequence is unchanged.
+b. True.
+c. False. Some cells can resume division and regenerate, but this depends on
+   genotype, developmental state and culture conditions.
+:::
+
+## Three genomes
+
+### 5.1
+
+Name the three genomes of a plant cell and state which one encodes most of
+the proteins that function inside chloroplasts.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Nuclear, plastid (chloroplast) and mitochondrial genomes. Most chloroplast
+proteins are encoded in the nucleus, synthesised in the cytosol and imported
+into the chloroplast.
+:::
+
+### 5.2
+
+A mutation in a nuclear gene encoding a chloroplast-imported protein reduces
+photosynthesis, while the chloroplast DNA is unchanged. Is this possible?
+Explain in one sentence.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Yes. The protein functions in the chloroplast but its gene is in the nucleus,
+so a nuclear mutation can impair chloroplast function.
+:::
+
+### 5.3
+
+Leaf and root cells of one plant have the same nuclear genome but different
+functions. What is the reason?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+They express different sets of genes (tissue-specific gene expression).
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

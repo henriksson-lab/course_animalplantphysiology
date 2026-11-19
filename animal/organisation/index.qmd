@@ -166,10 +166,7 @@ how it evolved. Comparisons are strongest when they connect environment,
 mechanism, performance and relevant evidence, while allowing for trade-offs
 and shared ancestry.
 
-## Prepare a defensible explanation
+## Next
 
-Before leaving, write a six-sentence comparison of oxygen delivery in two
-animals: the environmental problem, the exchange surface, the transport path,
-the tissue consequence, one trade-off and one observation that would test the
-explanation. Check that every arrow in your account names a process. Continue
-to [nutrition, energy and temperature](../energy-temperature/index.qmd).
+Work through the [exercises](exercise.qmd) and the [self-check quiz](quiz.qmd).
+Then continue to [nutrition, energy and temperature](../energy-temperature/index.qmd).

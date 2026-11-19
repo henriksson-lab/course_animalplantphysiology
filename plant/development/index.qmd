@@ -117,9 +117,10 @@ but interpreting it requires knowledge of species and environmental history.
 
 ## Flowering connects leaves and the shoot apex
 
-Plants integrate age, resource status, temperature and light timing. Photoperiod
-responses depend on the species and can involve the duration of the night as
-well as the day. Vernalisation refers to promotion of flowering competence by
+Plants integrate age, resource status, temperature and light timing. Photoperiodic
+plants measure the length of the uninterrupted night: a short-day plant flowers
+when the night exceeds a critical length, and a brief light break in the
+middle of the night prevents it. Vernalisation refers to promotion of flowering competence by
 extended cold in responsive plants. It is different from a universal direct
 trigger that makes every cold-treated plant flower immediately.
 

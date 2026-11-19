@@ -2,91 +2,328 @@
 title: "A1 exercises — Structure, scale and feedback"
 ---
 
-Use the [tutorial](index.qmd) as a reference. These are paper-and-discussion
-tasks, not specimen identifications or instructions for animal experiments.
-Allow roughly 60–90 minutes including discussion. Leave with an annotated
-comparison, a tissue-evidence table and a feedback diagram.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Put the boundaries back
+## Levels of organisation
 
-Draw a nutrient's route from the mammalian gut lumen to the cytoplasm of a
-skeletal-muscle cell. Include the absorptive epithelial cell, internal transport
-fluid and muscle-cell membrane. Mark at least two places where selective
-membrane transport matters. Explain why finding glucose in the gut lumen
-does not establish that it has been absorbed.
+### 1.1
 
-::: {.callout-tip collapse="true"}
-## Hint
-
-The gut lumen is continuous with the exterior. Name what lies on both sides
-of each boundary; “goes into the body” is not a sufficiently precise arrow.
-:::
-
-## 2. Work the small geometry case
-
-For hypothetical cubic bodies with side lengths 1, 2 and 4 mm, calculate
-surface area, volume and surface-area-to-volume ratio. Give units for all
-three. Then predict how characteristic diffusion time changes when a transport
-distance rises from 0.1 to 1 mm, assuming the same medium and substance.
-
-Explain why neither calculation proves that a large animal cannot exchange
-enough oxygen. Name two structural/process changes that the simple cube lacks.
-Show your arithmetic, not only the final ratio.
+Arrange from the smallest to the largest level: organ, organism, cell,
+organ system, tissue.
 
 ::: {.callout-note collapse="true"}
-## Numerical checkpoint
+## Answer
 
-At 4 mm, area is 96 mm² and volume is 64 mm³. Check what happens when you
-divide them. The tenfold distance change concerns a squared relationship.
+Cell → tissue → organ → organ system → organism.
 :::
 
-## 3. Recognise features before naming tissue
+### 1.2
 
-The following are invented descriptions, not observations from real slides.
-For each, propose a primary tissue category, two supporting features and one
-possible function. State what extra evidence would be needed to name an organ.
+In a multicellular animal, most cells exchange materials directly with:
 
-| Description | Features supplied |
+a. the external environment
+b. interstitial fluid
+c. blood plasma
+d. the gut lumen
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b. Interstitial (extracellular) fluid surrounds the cells; blood, where present,
+transports material between exchange organs and the tissues.
+:::
+
+### 1.3
+
+The intestinal wall contains all four primary tissue types. For each tissue
+type, give its main function in the intestine.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Tissue | Function in the intestine |
 | --- | --- |
-| A | One thin layer of closely associated cells around a lumen; little intervening matrix |
+| Epithelium | Lines the lumen; secretion and absorption |
+| Connective tissue | Supports the epithelium and carries blood vessels |
+| Smooth muscle | Mixes and moves the contents |
+| Nervous tissue | Coordinates secretion and muscle activity |
+:::
+
+### 1.4
+
+Put the steps in order for a glucose molecule moving from the gut lumen into
+a skeletal-muscle cell:
+
+a. crosses the muscle-cell membrane
+b. crosses the apical membrane of the intestinal epithelial cell
+c. is carried in the blood
+d. crosses the basolateral membrane of the intestinal epithelial cell
+e. enters the interstitial fluid around the muscle fibre
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → c → e → a. Glucose in the lumen has not yet been absorbed, because the
+lumen is continuous with the outside of the body.
+:::
+
+## Surface area, volume and diffusion
+
+### 2.1
+
+Complete the table for cubes with side length $L$.
+
+| $L$ (mm) | Surface area (mm²) | Volume (mm³) | Surface area : volume (mm⁻¹) |
+| ---: | ---: | ---: | ---: |
+| 1 | | | |
+| 2 | | | |
+| 4 | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| $L$ (mm) | Surface area (mm²) | Volume (mm³) | Surface area : volume (mm⁻¹) |
+| ---: | ---: | ---: | ---: |
+| 1 | 6 | 1 | 6 |
+| 2 | 24 | 8 | 3 |
+| 4 | 96 | 64 | 1.5 |
+
+The ratio is $6L^2 / L^3 = 6/L$, so each doubling of $L$ halves it.
+:::
+
+### 2.2
+
+The time needed for diffusion is proportional to the square of the distance.
+By what factor does the diffusion time change when the distance increases
+from:
+
+a. 1 µm to 3 µm
+b. 0.1 mm to 1 mm
+c. 20 µm to 10 µm
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 3² = 9 times longer.
+b. 10² = 100 times longer.
+c. (1/2)² = 1/4, i.e. four times shorter.
+:::
+
+### 2.3
+
+Name three ways in which large animals overcome the low surface-area-to-volume
+ratio of a large body.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1. Folding, branching or subdivision of exchange surfaces increases the area
+   (e.g. alveoli, gill lamellae, intestinal villi).
+2. Thin exchange barriers shorten the diffusion distance.
+3. Bulk flow (ventilation and circulation) moves material over long distances.
+:::
+
+## Tissues
+
+### 3.1
+
+Name the primary tissue type that matches each description.
+
+| | Description |
+| --- | --- |
+| A | One layer of closely packed cells lining a lumen, with little material between the cells |
 | B | Widely spaced cells among abundant parallel extracellular fibres |
-| C | Long, parallel, striated fibres containing multiple nuclei |
-| D | Cell bodies with long processes among numerous smaller supporting cells |
+| C | Long, cylindrical, striated fibres with many nuclei per fibre |
+| D | Cells with long processes, surrounded by many smaller supporting cells |
 
-Now explain why a circular empty-looking profile alone cannot identify a
-blood vessel. Suggest how section angle could change a tubular structure's
-appearance.
+::: {.callout-note collapse="true"}
+## Answer
 
-## 4. Repair a feedback explanation
+A: epithelial tissue (simple epithelium). B: connective tissue (dense regular
+connective tissue, e.g. tendon). C: muscle tissue (skeletal muscle).
+D: nervous tissue (neurons and glial cells).
+:::
 
-A student writes: “When an animal gets hot, it sweats, so that is positive
-feedback because sweating is helpful.” Rewrite this account using a regulated
-variable, a disturbance, a sensor/control process, an effector and the effect
-on the original deviation. Then identify two limits: not all animals sweat,
-and evaporation depends on environmental conditions.
+### 3.2
 
-Draw the loop and label the arrow that opposes the initial disturbance.
+Complete the table.
 
-## 5. Separate time scales and evidence
+| | Skeletal muscle | Cardiac muscle | Smooth muscle |
+| --- | --- | --- | --- |
+| Striated? | | | |
+| Cell shape | | | |
+| Nuclei per cell | | | |
+| Specialised cell junctions | | | |
 
-Classify each example as an acute response, an individual's acclimatory change,
-or a proposed evolutionary adaptation. Explain the evidence needed for the
-last classification.
+::: {.callout-note collapse="true"}
+## Answer
 
-1. Ventilation changes within minutes when an animal becomes active.
-2. A fish's performance changes after several weeks at a new temperature.
-3. A heritable gill feature is proposed to improve performance in a population's
-   usual habitat over generations.
+| | Skeletal muscle | Cardiac muscle | Smooth muscle |
+| --- | --- | --- | --- |
+| Striated? | Yes | Yes | No |
+| Cell shape | Long cylindrical fibres | Branched cells | Spindle-shaped cells |
+| Nuclei per cell | Many | One (sometimes two) | One |
+| Specialised cell junctions | No | Intercalated discs | Gap junctions in many smooth muscles |
+:::
 
-Would measuring a useful function in one individual be enough to establish
-the feature's evolutionary origin? Explain.
+### 3.3
 
-## 6. Compare two solutions
+Which type of epithelium best suits each function: simple squamous or
+stratified squamous?
 
-Write 150–200 words comparing oxygen delivery in an insect and a mammal.
-Include the environmental medium, exchange pathway, internal transport route,
-two shared physical constraints and one trade-off. End with a measurement
-that could test part of your explanation. Avoid ranking the animals as
-“primitive” and “advanced”.
+a. gas exchange
+b. protection against abrasion
 
-Finish with the [self-check quiz](quiz.qmd).
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Simple squamous: a single thin layer gives a short diffusion distance.
+b. Stratified squamous: several cell layers protect the tissue beneath.
+:::
+
+### 3.4
+
+Define the terms *lumen*, *apical surface* and *basal surface*.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **Lumen:** the inner space of a tube or cavity, such as the gut or a blood vessel.
+- **Apical surface:** the side of an epithelial cell that faces the lumen or
+  the outside.
+- **Basal surface:** the side of an epithelial cell that faces the basement
+  membrane and underlying tissue.
+:::
+
+### 3.5
+
+A section shows a circular profile with an empty centre. Why is this not
+enough to identify it as a blood vessel?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Any tube (such as a duct, gland, gut or vessel) cut in cross-section gives a
+ring. An oblique cut through the same tube gives an oval. Identification also
+needs the wall structure, its tissue layers and the scale.
+:::
+
+## Homeostasis and feedback
+
+### 4.1
+
+Define homeostasis.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Homeostasis is the active maintenance of internal conditions (such as
+temperature or the composition of extracellular fluid) within a range
+compatible with life, despite external and internal disturbances.
+:::
+
+### 4.2
+
+Body temperature in a mammal rises during exercise. Match each item to its
+role in the feedback loop: regulated variable, sensor, control centre, effector.
+
+a. sweat glands
+b. hypothalamus
+c. body temperature
+d. thermoreceptors
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. effector; b. control centre; c. regulated variable; d. sensor.
+:::
+
+### 4.3
+
+State whether each example is negative or positive feedback.
+
+a. A rise in blood glucose increases insulin secretion, which lowers blood glucose.
+b. Uterine contractions increase oxytocin release, which strengthens the contractions.
+c. A rise in body temperature increases sweating.
+d. Activated clotting factors activate more clotting factors.
+e. A fall in blood pressure increases heart rate through the baroreceptor reflex.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Negative. b. Positive. c. Negative. d. Positive. e. Negative.
+:::
+
+### 4.4
+
+True or false? Correct any false statements.
+
+a. Positive feedback means that the response is good for the animal.
+b. In negative feedback, the response reduces the deviation that triggered it.
+c. Positive feedback must have a way to stop.
+d. A stable internal concentration means that no transport is taking place.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. "Positive" refers to the direction of the loop: the response
+   amplifies the original change. It says nothing about benefit.
+b. True.
+c. True. Otherwise the change keeps growing, as in an action potential or
+   during birth.
+d. False. Inputs and outputs can balance while transport continues.
+:::
+
+## Responses, acclimation and adaptation
+
+### 5.1
+
+Classify each example as an acute response, acclimation or evolutionary
+adaptation.
+
+a. Ventilation increases within seconds when an animal starts running.
+b. A fish kept at a higher temperature for four weeks changes its enzyme levels.
+c. A population of fish living in hypoxic water has inherited larger gill surfaces.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Acute response. b. Acclimation. c. Evolutionary adaptation.
+:::
+
+### 5.2
+
+What is the difference between *acclimation* and *acclimatisation*?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Both are reversible changes within one individual. Acclimation describes the
+response to a change in one condition, usually in the laboratory.
+Acclimatisation describes the response to changes in the natural environment.
+:::
+
+### 5.3
+
+Complete the table comparing oxygen delivery to the tissues.
+
+| | Insect | Mammal |
+| --- | --- | --- |
+| Respiratory medium | | |
+| Exchange surface | | |
+| Route from exchange surface to the tissue cells | | |
+| Role of the circulatory system in O₂ transport | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Insect | Mammal |
+| --- | --- | --- |
+| Respiratory medium | Air | Air |
+| Exchange surface | Tracheoles, the fine endings of the tracheae, at the tissues | Alveoli in the lungs |
+| Route from exchange surface to the tissue cells | Air-filled tracheae branch directly to the tissues | Blood carries O₂, mostly bound to haemoglobin, from lungs to tissues |
+| Role of the circulatory system in O₂ transport | Small | Essential |
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

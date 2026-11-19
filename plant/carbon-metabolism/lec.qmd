@@ -88,4 +88,4 @@ Nitrogen assimilation requires energy and carbon skeletons; roots need oxygen.
 
 6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO2.
 
-Explain limits in the [exercise](exercise.qmd); then [self-check](quiz.qmd).
+Continue with the [exercise](exercise.qmd) and [self-check](quiz.qmd).

@@ -1,74 +1,493 @@
 ---
-title: "A5 exercises — Signals, muscle and reproduction"
+title: "A5 exercises — Nerve, muscle, hormones and reproduction"
 ---
 
-Use the [tutorial](index.qmd). Values and response descriptions are invented
-teaching examples. These tasks require no recordings, stimulation or human/
-animal intervention. Allow 60–90 minutes. Leave with a linked response pathway,
-one work/power calculation and a reproductive feedback explanation.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Repair a membrane explanation
+## Membrane potential
 
-A student writes: “The sodium pump opens when the neuron fires, pushes sodium
-into the cell, and makes a bigger spike when the stimulus is stronger.”
-Identify at least three errors. Replace the account with ion gradients,
-selective channels, a representative action-potential sequence and one way
-stronger stimulation can be encoded.
+### 1.1
 
-What must be known, besides channel identity, to determine the direction
-of net ion movement?
+The Nernst equation at 37 °C is
 
-## 2. Trace a reflex and a synapse
+$$E_\text{ion} = \frac{61.5\ \text{mV}}{z}\,\log_{10}\frac{[\text{ion}]_\text{out}}{[\text{ion}]_\text{in}},$$
 
-Draw stimulus → sensory receptor/afferent → integration → motor neuron →
-effector. Expand one chemical synapse to include presynaptic electrical change,
-calcium entry, transmitter release, receptor binding and postsynaptic effect.
+where $z$ is the charge of the ion. Calculate the equilibrium potential of
+each ion in a mammalian neuron.
 
-Explain why a neurotransmitter name alone does not prove whether the receiving
-cell will be excited or inhibited. Which part of a simple withdrawal pathway
-need not wait for conscious decision?
+| Ion | Outside (mmol L⁻¹) | Inside (mmol L⁻¹) |
+| --- | ---: | ---: |
+| K⁺ | 5 | 140 |
+| Na⁺ | 145 | 15 |
+| Cl⁻ | 110 | 10 |
 
-## 3. Link excitation to contraction
+::: {.callout-note collapse="true"}
+## Answer
 
-Create an ordered account from a motor-neuron action potential to skeletal
-muscle force and then relaxation. Include the neuromuscular junction,
-muscle electrical activity, calcium release, regulatory proteins, actin–myosin
-cycling, ATP and calcium recovery. Explain why ATP is needed even when
-the muscle eventually relaxes.
+- $E_\text{K} = 61.5 \log_{10}(5/140) = 61.5 \times (-1.45) \approx -89$ mV.
+- $E_\text{Na} = 61.5 \log_{10}(145/15) = 61.5 \times 0.985 \approx +61$ mV.
+- $E_\text{Cl} = -61.5 \log_{10}(110/10) = -61.5 \times 1.04 \approx -64$ mV
+  ($z = -1$).
+:::
 
-An invented skeletal-muscle section contains long striated fibres with many
-nuclei. Which features support that interpretation? Contrast it with smooth
-and cardiac muscle, without treating a textual description as real-slide
-recognition.
+### 1.2
 
-## 4. Keep work, power and ATP use separate
+The neuron in 1.1 has a resting membrane potential of −70 mV.
 
-A hypothetical muscle lifts a load with a constant force of 20 N through
-0.10 m in 0.50 s. Force and displacement are aligned. Calculate external
-mechanical work and mean external mechanical power.
+a. Which ion's equilibrium potential is the resting potential closest to, and
+   what does this tell you about the resting membrane?
+b. In which direction is the net electrochemical driving force on Na⁺?
+c. In which direction is the net electrochemical driving force on K⁺?
 
-It then holds the load at the same height for 5 s. Calculate external work
-over that stationary interval using $W=Fd$. Does your answer establish that
-ATP consumption is zero? Explain. What would be needed to estimate metabolic
-efficiency rather than external work alone?
+::: {.callout-note collapse="true"}
+## Answer
 
-## 5. Compare hormones and responses
+a. K⁺. At rest the membrane is far more permeable to K⁺ (through leak
+   channels) than to Na⁺.
+b. Inward: both the concentration gradient and the negative inside favour Na⁺
+   entry.
+c. Outward. The membrane potential (−70 mV) is less negative than $E_\text{K}$
+   (−89 mV), so the concentration gradient outweighs the electrical attraction.
+:::
 
-Two target tissues are exposed to the same circulating hormone concentration,
-but one changes its activity and the other does not. Give three possible
-mechanistic explanations that do not require a measurement error. Distinguish
-a surface-receptor pathway from an intracellular-receptor pathway, and explain
-why neither the words “neural” nor “endocrine” alone fixes response duration.
+### 1.3
 
-## 6. Bring reproduction and the whole animal together
+Extracellular K⁺ is raised from 5 to 10 mmol L⁻¹ (intracellular K⁺ stays at
+140 mmol L⁻¹). Calculate the new $E_\text{K}$. Does the membrane depolarise or
+hyperpolarise?
 
-Draw a mammalian hypothalamus → pituitary → gonad axis. Label GnRH,
-gonadotropins and a gonadal feedback signal. Explain the usual stabilising
-role of negative feedback and the different role of positive feedback around
-the pre-ovulatory LH surge under appropriate conditions.
+::: {.callout-note collapse="true"}
+## Answer
 
-Then write 150–200 words tracing a terrestrial animal's escape response
-through sensation, muscle recruitment, ATP demand, oxygen transport and heat/
-water costs. Identify one immediate response and one sustained adjustment.
-Finish by explaining why resource availability can also influence reproductive
-investment. Check your concepts with the [quiz](quiz.qmd).
+$E_\text{K} = 61.5 \log_{10}(10/140) \approx -70.5$ mV. $E_\text{K}$ becomes
+less negative, so the resting membrane depolarises.
+:::
+
+### 1.4
+
+True or false? Correct any false statements.
+
+a. The Na⁺/K⁺-ATPase moves 3 Na⁺ out and 2 K⁺ into the cell per ATP.
+b. The Na⁺/K⁺-ATPase directly produces the rising phase of the action
+   potential.
+c. The inside of a resting neuron is negative because all the molecules in
+   the cytoplasm are negatively charged.
+d. During a single action potential, the intracellular Na⁺ concentration
+   changes only very slightly.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. True.
+b. False. The rising phase is caused by Na⁺ flowing in through voltage-gated
+   Na⁺ channels, down its electrochemical gradient. The pump maintains the
+   gradients over the longer term.
+c. False. The cytoplasm as a whole is electrically neutral; only a very small
+   excess of negative charge lies next to the membrane.
+d. True. Very few ions need to cross the membrane to change the voltage.
+:::
+
+## The action potential
+
+### 2.1
+
+Put the events of an axonal action potential in order.
+
+a. Voltage-gated K⁺ channels open and K⁺ leaves the cell.
+b. The membrane is depolarised to threshold.
+c. The membrane briefly hyperpolarises below the resting potential.
+d. Voltage-gated Na⁺ channels open and Na⁺ enters the cell.
+e. Na⁺ channels inactivate.
+f. The membrane potential rises rapidly and becomes positive (overshoot).
+g. K⁺ channels close and the resting potential is restored.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → f → e → a → c → g. Na⁺-channel inactivation and K⁺-channel opening
+together cause repolarisation.
+:::
+
+### 2.2
+
+Define the *absolute* and the *relative refractory period*, and give the cause
+of each.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+- **Absolute refractory period:** no stimulus, however strong, can trigger a
+  second action potential. Cause: the voltage-gated Na⁺ channels are
+  inactivated.
+- **Relative refractory period:** a stronger-than-normal stimulus is needed
+  to trigger an action potential. Cause: some Na⁺ channels are still
+  inactivated and K⁺ conductance is still raised (the membrane is
+  hyperpolarised).
+
+The refractory period makes the action potential travel in one direction
+only.
+:::
+
+### 2.3
+
+A stronger stimulus is applied to a sensory receptor. Which two properties of
+the sensory signal increase? Which property stays the same?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The frequency of action potentials in each neuron and the number of neurons
+recruited both increase. The amplitude of each action potential stays the
+same, because the action potential is all-or-none.
+:::
+
+### 2.4
+
+a. Name two properties of an axon that increase its conduction velocity.
+b. An action potential travels 0.60 m from the spinal cord to a foot muscle
+   in 12 ms. Calculate the conduction velocity in m s⁻¹.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. A larger axon diameter, and myelination (saltatory conduction between nodes
+   of Ranvier).
+b. 0.60 m ÷ 0.012 s = 50 m s⁻¹.
+:::
+
+## Synapses and reflexes
+
+### 3.1
+
+Put the events at a chemical synapse in order.
+
+a. Transmitter binds to receptors on the postsynaptic membrane.
+b. Voltage-gated Ca²⁺ channels open in the presynaptic terminal.
+c. An action potential arrives at the presynaptic terminal.
+d. Synaptic vesicles fuse with the presynaptic membrane and release
+   transmitter by exocytosis.
+e. Ca²⁺ enters the terminal.
+f. Ion channels open and the postsynaptic membrane potential changes.
+g. Transmitter is removed by enzymatic breakdown or reuptake.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+c → b → e → d → a → f → g.
+:::
+
+### 3.2
+
+State whether each postsynaptic response is excitatory or inhibitory.
+
+a. Acetylcholine opens cation channels (nicotinic receptors) on a skeletal
+   muscle fibre.
+b. Acetylcholine binds muscarinic receptors on cardiac pacemaker cells and
+   opens K⁺ channels.
+c. GABA opens Cl⁻ channels, and the membrane potential moves towards
+   $E_\text{Cl}$ (−70 mV) from a threshold of −55 mV.
+d. Glutamate opens channels permeable to Na⁺ and K⁺.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Excitatory. b. Inhibitory (it slows the heart). c. Inhibitory.
+d. Excitatory.
+
+Examples a and b show that the same transmitter can excite or inhibit: the
+effect depends on the receptor.
+:::
+
+### 3.3
+
+Name each component of the knee-jerk (patellar) reflex.
+
+| Component | Structure in the knee-jerk reflex |
+| --- | --- |
+| Receptor | |
+| Afferent pathway | |
+| Integrating centre | |
+| Efferent pathway | |
+| Effector | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Component | Structure in the knee-jerk reflex |
+| --- | --- |
+| Receptor | Muscle spindle (stretch receptor) in the quadriceps |
+| Afferent pathway | Sensory neuron |
+| Integrating centre | Spinal cord (one synapse: a monosynaptic reflex) |
+| Efferent pathway | Motor neuron |
+| Effector | Quadriceps muscle |
+
+The reflex does not need the brain, so it is faster than a voluntary
+response.
+:::
+
+## Skeletal muscle
+
+### 4.1
+
+Put the steps of excitation–contraction coupling in skeletal muscle in order.
+
+a. Ca²⁺ binds to troponin.
+b. Acetylcholine is released at the neuromuscular junction.
+c. Ca²⁺ is released from the sarcoplasmic reticulum.
+d. An action potential arrives at the motor-neuron terminal.
+e. Tropomyosin moves and exposes the myosin-binding sites on actin.
+f. The muscle action potential spreads along the sarcolemma and into the
+   T tubules.
+g. Myosin heads bind actin and perform power strokes.
+h. An end-plate potential depolarises the muscle fibre to threshold.
+i. Voltage-sensing (dihydropyridine) receptors in the T-tubule membrane open
+   the ryanodine receptors of the sarcoplasmic reticulum.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+d → b → h → f → i → c → a → e → g.
+
+Relaxation follows when acetylcholine is broken down by acetylcholinesterase
+and Ca²⁺ is pumped back into the sarcoplasmic reticulum by an ATP-driven
+Ca²⁺ pump.
+:::
+
+### 4.2
+
+Give the role of each step in the cross-bridge cycle.
+
+a. ATP binding to myosin
+b. ATP hydrolysis by myosin
+c. Release of phosphate from myosin
+
+Why do muscles become rigid after death (rigor mortis)?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Detaches the myosin head from actin.
+b. Re-cocks the myosin head into its high-energy position.
+c. Triggers the power stroke, which pulls the thin filament towards the
+   centre of the sarcomere.
+
+After death ATP runs out, so myosin heads stay bound to actin and cannot
+detach.
+:::
+
+### 4.3
+
+When a sarcomere shortens, which of the following become shorter and which
+stay the same length?
+
+a. A band
+b. I band
+c. H zone
+d. Distance between Z discs
+e. Thick (myosin) filaments
+f. Thin (actin) filaments
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Shorter: b, c and d. Unchanged: a, e and f. The filaments slide past each
+other without changing length (sliding-filament model).
+:::
+
+### 4.4
+
+A muscle lifts a load with a constant force of 20 N through 0.10 m in
+0.50 s, with force and displacement in the same direction. It then holds the
+load still for 5 s.
+
+a. Calculate the external mechanical work done while lifting.
+b. Calculate the mean external mechanical power while lifting.
+c. Calculate the external work done while holding the load still.
+d. True or false: the muscle uses no ATP while holding the load still.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. $W = Fd = 20 \times 0.10 = 2.0$ J.
+b. $P = W/t = 2.0 / 0.50 = 4.0$ W.
+c. 0 J, because there is no displacement.
+d. False. Cross-bridges keep cycling to maintain force (isometric
+   contraction), and Ca²⁺ pumping continues, so ATP is consumed.
+:::
+
+### 4.5
+
+True or false? Correct any false statements.
+
+a. A motor unit is one motor neuron together with all the muscle fibres it
+   innervates.
+b. Whole-muscle force can be increased by recruiting more motor units.
+c. Whole-muscle force can be increased by raising the frequency of action
+   potentials, so that twitches summate into tetanus.
+d. Whole-muscle force is increased by making each motor-neuron action
+   potential larger.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. True. b. True. c. True.
+d. False. Action potentials are all-or-none; force is graded by recruitment
+   and firing frequency.
+:::
+
+### 4.6
+
+In smooth muscle, Ca²⁺ also triggers contraction, but not through troponin.
+Name the Ca²⁺-binding protein and the enzyme it activates, and state what
+the enzyme does.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Ca²⁺ binds calmodulin. Ca²⁺–calmodulin activates myosin light-chain kinase
+(MLCK), which phosphorylates the myosin light chains. This allows myosin to
+bind actin and cycle.
+:::
+
+## Nervous systems and hormones
+
+### 5.1
+
+Match each animal with its type of nervous system.
+
+| | Animal |
+| --- | --- |
+| 1 | *Hydra* (cnidarian) |
+| 2 | Earthworm |
+| 3 | Mammal |
+
+| | Nervous system |
+| --- | --- |
+| A | Brain and spinal cord (dorsal, hollow nerve cord) forming a CNS, plus a peripheral nervous system |
+| B | Diffuse nerve net with no brain |
+| C | Cerebral ganglia and a ventral nerve cord with a ganglion in each segment |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1–B, 2–C, 3–A.
+:::
+
+### 5.2
+
+Complete the table comparing two classes of hormone.
+
+| | Peptide hormones | Steroid hormones |
+| --- | --- | --- |
+| Solubility | | |
+| Transport in blood | | |
+| Location of receptor | | |
+| Main mechanism of action | | |
+| Two examples | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Peptide hormones | Steroid hormones |
+| --- | --- | --- |
+| Solubility | Water-soluble | Lipid-soluble |
+| Transport in blood | Dissolved in plasma | Mostly bound to carrier proteins |
+| Location of receptor | Cell surface (plasma membrane) | Inside the cell (cytoplasm or nucleus) |
+| Main mechanism of action | Second messengers (e.g. cAMP) alter the activity of existing proteins | Hormone–receptor complex binds DNA and changes gene transcription |
+| Two examples | Insulin, ADH (also LH, FSH, oxytocin) | Cortisol, testosterone (also oestradiol, progesterone, aldosterone) |
+
+A cell responds to a hormone only if it has the matching receptor, so the
+same hormone concentration can affect one tissue and not another.
+:::
+
+### 5.3
+
+Name the gland (or cells) that secretes each hormone.
+
+a. GnRH
+b. LH and FSH
+c. ADH and oxytocin (site of release into the blood)
+d. Testosterone
+e. Progesterone after ovulation
+f. Insulin
+g. Adrenaline
+h. Cortisol
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Hypothalamus.
+b. Anterior pituitary.
+c. Posterior pituitary (the hormones are made by hypothalamic neurons).
+d. Leydig (interstitial) cells of the testis.
+e. Corpus luteum of the ovary.
+f. β cells of the pancreatic islets.
+g. Adrenal medulla.
+h. Adrenal cortex.
+:::
+
+## Reproduction
+
+### 6.1
+
+Complete the table for the mammalian hypothalamic–pituitary–gonadal axis.
+
+| Hormone | Target cells | Main effect |
+| --- | --- | --- |
+| GnRH | | |
+| LH in the male | | |
+| FSH in the male | | |
+| FSH in the female | | |
+| LH surge in the female | | |
+| Inhibin | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Hormone | Target cells | Main effect |
+| --- | --- | --- |
+| GnRH | Gonadotroph cells of the anterior pituitary | Stimulates LH and FSH secretion |
+| LH in the male | Leydig cells | Stimulates testosterone secretion |
+| FSH in the male | Sertoli cells | Supports spermatogenesis |
+| FSH in the female | Granulosa cells of the follicle | Stimulates follicle growth and oestradiol production |
+| LH surge in the female | Mature (Graafian) follicle | Triggers ovulation and formation of the corpus luteum |
+| Inhibin | Anterior pituitary | Inhibits FSH secretion |
+:::
+
+### 6.2
+
+State whether each example is negative or positive feedback.
+
+a. Testosterone inhibits GnRH and LH secretion.
+b. A sustained high oestradiol concentration late in the follicular phase
+   triggers the LH surge.
+c. Progesterone from the corpus luteum inhibits GnRH, LH and FSH secretion.
+d. Inhibin reduces FSH secretion.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Negative. b. Positive. c. Negative. d. Negative.
+:::
+
+### 6.3
+
+Put the events of the human ovarian cycle in order, starting at the beginning
+of the follicular phase.
+
+a. Ovulation
+b. Oestradiol concentration rises to a high level
+c. The corpus luteum forms and secretes progesterone and oestradiol
+d. FSH stimulates the growth of several follicles
+e. The LH surge
+f. Without pregnancy, the corpus luteum regresses and progesterone falls
+g. Menstruation begins and FSH rises again
+
+::: {.callout-note collapse="true"}
+## Answer
+
+d → b → e → a → c → f → g.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

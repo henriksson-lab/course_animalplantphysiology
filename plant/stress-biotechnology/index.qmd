@@ -95,9 +95,8 @@ Use a curated resource such as [TAIR](https://www.arabidopsis.org/) to identify
 a locus, aliases, evidence type and linked literature. Record the stable
 identifier and access date. Distinguish an annotation based on direct
 experiments from similarity-based inference. Expression in a tissue suggests
-where a gene might act; it does not alone prove function. Database access can
-vary, so the exercise also supplies an offline evidence record and does not
-require a subscription or programming.
+where a gene might act; it does not alone prove function. No subscription or
+programming is needed.
 
 ## Transformation and regeneration are separate steps
 
@@ -110,8 +109,9 @@ in the final selected line. The actual result must be verified.
 
 Tissue culture can support growth and regeneration under controlled conditions.
 An explant may form callus, shoots or roots depending on species, genotype,
-developmental state and medium. Hormone balance is one influence, not a
-universal recipe. These notes explain principles and do not supply a
+developmental state and medium. The auxin-to-cytokinin ratio is the classic
+control: a high ratio favours roots, a low ratio favours shoots and an
+intermediate ratio gives callus. These notes explain principles and do not supply a
 transformation or culture protocol.
 
 Selection and regeneration can introduce additional differences. Evaluate
@@ -169,8 +169,5 @@ distribution of benefits, costs and decision power, including farmers,
 consumers, workers and affected ecosystems. Avoid treating an uncertainty as
 proof of danger or a lack of detected harm as proof of zero risk.
 
-The [exercise](exercise.qmd) uses a clearly invented proposal and offline
-evidence record. Build a recommendation with a mechanism, supporting evidence,
-limitations, stakeholder considerations and a measurable follow-up. Finish
-with the [self-check](quiz.qmd) and connect the plant half back to the
-[course route](../index.qmd).
+Work through the [exercises](exercise.qmd) and the [self-check quiz](quiz.qmd),
+then return to the [course route](../index.qmd).

@@ -6,7 +6,7 @@ title: "Practical: what does an oxygen decline measure?"
 
 In a supplied hypothetical experiment, does an aquatic invertebrate's
 mass-specific oxygen consumption differ between 15 and 25 °C? This
-90-minute classroom analysis connects metabolism, temperature and measurement
+classroom analysis connects metabolism, temperature and measurement
 design. It uses [simulated respirometry data](../data/animal-respirometry.csv)
 and the [data dictionary](../data/README.md). Complete it with a calculator
 and a hand-drawn plot. No animal handling or apparatus operation is required.

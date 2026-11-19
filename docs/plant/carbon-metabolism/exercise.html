@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>P3 exercise — Interpret a carbon budget – Animal and Plant Physiology</title>
+<title>P3 exercises — Light, carbon and the whole-plant budget – Animal and Plant Physiology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -686,12 +686,46 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#trace-atoms-energy-and-compartments" id="toc-trace-atoms-energy-and-compartments" class="nav-link active" data-scroll-target="#trace-atoms-energy-and-compartments">1. Trace atoms, energy and compartments</a></li>
-  <li><a href="#plot-the-measured-response" id="toc-plot-the-measured-response" class="nav-link" data-scroll-target="#plot-the-measured-response">2. Plot the measured response</a></li>
-  <li><a href="#keep-units-through-the-calculation" id="toc-keep-units-through-the-calculation" class="nav-link" data-scroll-target="#keep-units-through-the-calculation">3. Keep units through the calculation</a></li>
-  <li><a href="#compare-strategies-under-specified-conditions" id="toc-compare-strategies-under-specified-conditions" class="nav-link" data-scroll-target="#compare-strategies-under-specified-conditions">4. Compare strategies under specified conditions</a></li>
-  <li><a href="#sources-sinks-and-nitrogen" id="toc-sources-sinks-and-nitrogen" class="nav-link" data-scroll-target="#sources-sinks-and-nitrogen">5. Sources, sinks and nitrogen</a></li>
-  <li><a href="#completion-check" id="toc-completion-check" class="nav-link" data-scroll-target="#completion-check">Completion check</a></li>
+  <li><a href="#light-reactions" id="toc-light-reactions" class="nav-link active" data-scroll-target="#light-reactions">Light reactions</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1.3</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1.4</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">1.5</a></li>
+  </ul></li>
+  <li><a href="#the-calvinbenson-cycle-and-photorespiration" id="toc-the-calvinbenson-cycle-and-photorespiration" class="nav-link" data-scroll-target="#the-calvinbenson-cycle-and-photorespiration">The Calvin–Benson cycle and photorespiration</a>
+  <ul class="collapse">
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">2.1</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">2.2</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">2.3</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">2.4</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">2.5</a></li>
+  </ul></li>
+  <li><a href="#c3-c4-and-cam" id="toc-c3-c4-and-cam" class="nav-link" data-scroll-target="#c3-c4-and-cam">C3, C4 and CAM</a>
+  <ul class="collapse">
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">3.1</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">3.2</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">3.3</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">3.4</a></li>
+  </ul></li>
+  <li><a href="#light-response-curves-and-units" id="toc-light-response-curves-and-units" class="nav-link" data-scroll-target="#light-response-curves-and-units">Light-response curves and units</a>
+  <ul class="collapse">
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">4.1</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">4.2</a></li>
+  </ul></li>
+  <li><a href="#sources-sinks-and-phloem-transport" id="toc-sources-sinks-and-phloem-transport" class="nav-link" data-scroll-target="#sources-sinks-and-phloem-transport">Sources, sinks and phloem transport</a>
+  <ul class="collapse">
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">5.1</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">5.2</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">5.3</a></li>
+  </ul></li>
+  <li><a href="#respiration-and-nitrogen-assimilation" id="toc-respiration-and-nitrogen-assimilation" class="nav-link" data-scroll-target="#respiration-and-nitrogen-assimilation">Respiration and nitrogen assimilation</a>
+  <ul class="collapse">
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">6.1</a></li>
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">6.2</a></li>
+  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">6.3</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -700,7 +734,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../plant/index.html">Plant physiology</a></li><li class="breadcrumb-item"><a href="../../plant/carbon-metabolism/index.html">P3: Carbon and metabolism</a></li><li class="breadcrumb-item"><a href="../../plant/carbon-metabolism/exercise.html">Exercises</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">P3 exercise — Interpret a carbon budget</h1>
+<h1 class="title">P3 exercises — Light, carbon and the whole-plant budget</h1>
 </div>
 
 
@@ -717,19 +751,556 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use the <a href="../../plant/carbon-metabolism/index.html">tutorial</a>. Allow 50–60 minutes. The numbers below are invented for classroom analysis; they are not predictions for any species. Leave with a hand-drawn response plot and a whole-plant explanation.</p>
-<section id="trace-atoms-energy-and-compartments" class="level2">
-<h2 class="anchored" data-anchor-id="trace-atoms-energy-and-compartments">1. Trace atoms, energy and compartments</h2>
-<p>Draw a chloroplast with thylakoids and stroma. Label where water supplies electrons, oxygen is released, ATP/NADPH are generated and CO2 is fixed. Add a mitochondrion and explain why it remains relevant in an illuminated leaf. Correct the statement: “The leaf splits CO2 to release oxygen and stores light directly as ATP for transport to roots.”</p>
+<p>The questions follow the <a href="../../plant/carbon-metabolism/index.html">tutorial</a> and <a href="../../plant/carbon-metabolism/lec.html">slides</a>. Answer each question before opening its answer.</p>
+<section id="light-reactions" class="level2">
+<h2 class="anchored" data-anchor-id="light-reactions">Light reactions</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">1.1</h3>
+<p>Complete the table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Light reactions</th>
+<th>Calvin–Benson cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Location in the chloroplast</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Inputs</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Outputs</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Light reactions</th>
+<th>Calvin–Benson cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Location in the chloroplast</td>
+<td>Thylakoid membranes</td>
+<td>Stroma</td>
+</tr>
+<tr class="even">
+<td>Inputs</td>
+<td>Light, H₂O, ADP + Pᵢ, NADP⁺</td>
+<td>CO₂, ATP, NADPH</td>
+</tr>
+<tr class="odd">
+<td>Outputs</td>
+<td>O₂, ATP, NADPH</td>
+<td>Triose phosphate (sugars), ADP + Pᵢ, NADP⁺</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
-<section id="plot-the-measured-response" class="level2">
-<h2 class="anchored" data-anchor-id="plot-the-measured-response">2. Plot the measured response</h2>
-<p>The same leaf is measured at each light level after an equilibration period. Other chamber settings are held constant. Positive values indicate net uptake.</p>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">1.2</h3>
+<p>The O₂ released in photosynthesis comes from:</p>
+<ol type="a">
+<li>CO₂</li>
+<li>H₂O</li>
+<li>glucose</li>
+<li>ribulose 1,5-bisphosphate</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li>Water is oxidised at photosystem II, supplying electrons and releasing O₂. CO₂ supplies the carbon of the sugars.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">1.3</h3>
+<p>Put the carriers of linear (non-cyclic) electron flow in order, starting with water: ferredoxin, photosystem I, plastoquinone, NADP⁺, photosystem II, plastocyanin, cytochrome <em>b</em>₆<em>f</em> complex.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>H₂O → photosystem II → plastoquinone → cytochrome <em>b</em>₆<em>f</em> complex → plastocyanin → photosystem I → ferredoxin → NADP⁺ (via ferredoxin–NADP⁺ reductase).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">1.4</h3>
+<p>Complete the table comparing linear and cyclic electron flow (yes/no).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Linear flow</th>
+<th>Cyclic flow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Photosystem II involved</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>O₂ released</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>NADPH formed</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ATP formed</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Linear flow</th>
+<th>Cyclic flow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Photosystem II involved</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>O₂ released</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>NADPH formed</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>ATP formed</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">1.5</h3>
+<p>How is the energy of the proton gradient across the thylakoid membrane used, and in which direction do protons flow through the enzyme?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>ATP synthase uses it to make ATP from ADP and Pᵢ. Protons flow from the thylakoid lumen (high H⁺) to the stroma (low H⁺), so ATP is formed in the stroma.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-calvinbenson-cycle-and-photorespiration" class="level2">
+<h2 class="anchored" data-anchor-id="the-calvinbenson-cycle-and-photorespiration">The Calvin–Benson cycle and photorespiration</h2>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">2.1</h3>
+<p>Name the three phases of the Calvin–Benson cycle in order, and the enzyme that catalyses the first.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Carboxylation → reduction → regeneration of ribulose 1,5-bisphosphate (RuBP). Carboxylation is catalysed by Rubisco (ribulose-1,5-bisphosphate carboxylase/oxygenase), which adds CO₂ to RuBP to form two molecules of 3-phosphoglycerate.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">2.2</h3>
+<p>Fixing 3 CO₂ into one net triose phosphate requires 9 ATP and 6 NADPH.</p>
+<ol type="a">
+<li>How much ATP and NADPH are needed to fix 6 CO₂, the carbon of one hexose?</li>
+<li>What is the ATP : NADPH ratio required?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>18 ATP and 12 NADPH.</li>
+<li>3 : 2 (1.5 ATP per NADPH).</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">2.3</h3>
+<p>True or false? Correct any false statements.</p>
+<ol type="a">
+<li>The Calvin–Benson cycle runs all night because it is a “dark reaction”.</li>
+<li>Rubisco can react with O₂ as well as CO₂.</li>
+<li>Photorespiration is the same process as mitochondrial respiration.</li>
+<li>Photorespiration releases CO₂ that has already been fixed.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>False. The cycle needs ATP and NADPH from the light reactions, and several of its enzymes are activated in light; it stops soon after darkness begins.</li>
+<li>True.</li>
+<li>False. Photorespiration starts with Rubisco oxygenation and recycles 2-phosphoglycolate; mitochondrial respiration oxidises sugars to make ATP.</li>
+<li>True. CO₂ is released in the mitochondria when glycine is converted to serine.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">2.4</h3>
+<p>Name the three organelles involved in the photorespiratory pathway.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Chloroplast, peroxisome and mitochondrion.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">2.5</h3>
+<p>State whether each change increases or decreases the rate of photorespiration relative to carboxylation in a C3 leaf.</p>
+<ol type="a">
+<li>Higher leaf temperature</li>
+<li>Stomatal closure during drought</li>
+<li>Higher atmospheric CO₂ concentration</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Increases (the solubility of CO₂ falls more than that of O₂, and Rubisco’s specificity for CO₂ decreases).</li>
+<li>Increases (the CO₂ concentration inside the leaf falls).</li>
+<li>Decreases.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="c3-c4-and-cam" class="level2">
+<h2 class="anchored" data-anchor-id="c3-c4-and-cam">C3, C4 and CAM</h2>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">3.1</h3>
+<p>Complete the table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>C3</th>
+<th>C4</th>
+<th>CAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enzyme of initial CO₂ fixation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>First stable product</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Separation of initial fixation and Calvin cycle</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Stomata open mainly</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Photorespiration</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>C3</th>
+<th>C4</th>
+<th>CAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enzyme of initial CO₂ fixation</td>
+<td>Rubisco</td>
+<td>PEP carboxylase</td>
+<td>PEP carboxylase</td>
+</tr>
+<tr class="even">
+<td>First stable product</td>
+<td>3-phosphoglycerate (3 C)</td>
+<td>Oxaloacetate (4 C)</td>
+<td>Oxaloacetate (4 C), stored as malate</td>
+</tr>
+<tr class="odd">
+<td>Separation of initial fixation and Calvin cycle</td>
+<td>None</td>
+<td>Spatial: mesophyll and bundle-sheath cells</td>
+<td>Temporal: night and day</td>
+</tr>
+<tr class="even">
+<td>Stomata open mainly</td>
+<td>Day</td>
+<td>Day</td>
+<td>Night</td>
+</tr>
+<tr class="odd">
+<td>Photorespiration</td>
+<td>High in warm conditions</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<p>In all three, the CO₂ is finally fixed by Rubisco in the Calvin–Benson cycle.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">3.2</h3>
+<p>Classify each plant as C3, C4 or CAM: maize, wheat, pineapple, sugarcane, rice, prickly pear cactus (<em>Opuntia</em>).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>C3: wheat, rice. C4: maize, sugarcane. CAM: pineapple, <em>Opuntia</em>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">3.3</h3>
+<p>Which observation is characteristic of a CAM plant?</p>
+<ol type="a">
+<li>Bundle-sheath cells packed with chloroplasts</li>
+<li>Acidity of the leaf tissue rises during the night and falls during the day</li>
+<li>Stomata open only at midday</li>
+<li>Rubisco is absent</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol start="2" type="a">
+<li>Malic acid accumulates in the vacuole at night and is decarboxylated during the day to supply CO₂ to Rubisco. Option a describes C4 (Kranz) anatomy.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">3.4</h3>
+<p>Name the advantage and the cost of the C4 CO₂-concentrating mechanism.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Advantage: high CO₂ around Rubisco in the bundle sheath suppresses photorespiration, giving higher photosynthesis and water-use efficiency in warm, bright conditions. Cost: extra ATP (2 ATP per CO₂) to regenerate PEP from pyruvate.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="light-response-curves-and-units" class="level2">
+<h2 class="anchored" data-anchor-id="light-response-curves-and-units">Light-response curves and units</h2>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">4.1</h3>
+<p>The net CO₂ exchange of one leaf is measured at four light levels. Positive values are net uptake.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: right;">Light (µmol photons m⁻² s⁻¹)</th>
-<th style="text-align: right;">Net CO2 exchange (µmol CO2 m⁻² s⁻¹)</th>
+<th style="text-align: right;">Net CO₂ exchange (µmol CO₂ m⁻² s⁻¹)</th>
 </tr>
 </thead>
 <tbody>
@@ -751,41 +1322,277 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Plot points, label axes/units, identify the observed compensation condition and describe the change in response per added light. What additional evidence would you need to identify the high-light limitation? Do not fit a straight line across the whole range or treat the four readings as four plants.</p>
-</section>
-<section id="keep-units-through-the-calculation" class="level2">
-<h2 class="anchored" data-anchor-id="keep-units-through-the-calculation">3. Keep units through the calculation</h2>
-<p>A leaf maintains net uptake of 6 µmol CO2 m⁻² s⁻¹ over 0.02 m² for 600 s. Calculate total net uptake in µmol CO2, assuming the rate remains constant. Explain why this does not by itself give whole-plant dry-mass gain.</p>
+<ol type="a">
+<li>What is the rate of respiration in darkness?</li>
+<li>What is the light compensation point?</li>
+<li>Calculate the increase in net CO₂ uptake per additional µmol photons between 50 and 200, and between 200 and 800 µmol photons m⁻² s⁻¹.</li>
+<li>Assuming respiration is unchanged in light, what is gross photosynthesis at 200 µmol photons m⁻² s⁻¹?</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Worked units
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO2. Leaf area and time cancel. Other organs respire; carbon may be exported or stored; biomass composition and longer-term variation have not been measured.</p>
+<ol type="a">
+<li>2 µmol CO₂ m⁻² s⁻¹.</li>
+<li>50 µmol photons m⁻² s⁻¹, where net exchange is zero.</li>
+<li>6 / 150 = 0.04 µmol CO₂ per µmol photons; 3 / 600 = 0.005 µmol CO₂ per µmol photons. The response saturates at high light.</li>
+<li>6 + 2 = 8 µmol CO₂ m⁻² s⁻¹.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="compare-strategies-under-specified-conditions" class="level2">
-<h2 class="anchored" data-anchor-id="compare-strategies-under-specified-conditions">4. Compare strategies under specified conditions</h2>
-<p>Explain the advantage and cost of CO2 concentration in a C4 leaf under warm, bright conditions. Compare spatial concentration with a CAM plant’s typical night/day separation. Propose one observation supporting CAM, and one reason that an overnight gas-exchange trace alone may need further verification.</p>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">4.2</h3>
+<p>A leaf of area 0.02 m² takes up CO₂ at a constant net rate of 6 µmol CO₂ m⁻² s⁻¹ for 10 min.</p>
+<ol type="a">
+<li>Calculate the total net CO₂ uptake in µmol.</li>
+<li>Convert it to mg CO₂ (M(CO₂) = 44 g mol⁻¹).</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO₂.</li>
+<li>72 × 10⁻⁶ mol × 44 g mol⁻¹ = 3.2 × 10⁻³ g = 3.2 mg CO₂.</li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section id="sources-sinks-and-nitrogen" class="level2">
-<h2 class="anchored" data-anchor-id="sources-sinks-and-nitrogen">5. Sources, sinks and nitrogen</h2>
-<p>During seed filling, a mature leaf exports carbon to developing seeds. Later, a stored underground organ supports regrowth. Draw each source–sink relation. Explain why “phloem carries sugar downwards” fails in at least one case. Predict why severely oxygen-limited roots may have poor nutrient uptake even when shoot photosynthesis continues. Connect carbon skeletons and energy to nitrogen assimilation rather than treating nutrient supply as independent.</p>
 </section>
-<section id="completion-check" class="level2">
-<h2 class="anchored" data-anchor-id="completion-check">Completion check</h2>
-<p>Distinguish gross component processes from net exchange; amount from rate; photorespiration from mitochondrial respiration; source role from organ name. Continue with the <a href="../../plant/carbon-metabolism/quiz.html">self-check</a>.</p>
+<section id="sources-sinks-and-phloem-transport" class="level2">
+<h2 class="anchored" data-anchor-id="sources-sinks-and-phloem-transport">Sources, sinks and phloem transport</h2>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">5.1</h3>
+<p>Classify each organ as a source or a sink.</p>
+<ol type="a">
+<li>Mature, illuminated leaf</li>
+<li>Developing fruit</li>
+<li>Root tip</li>
+<li>Young, expanding leaf</li>
+<li>Potato tuber sprouting in spring</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Source. b. Sink. c.&nbsp;Sink. d.&nbsp;Sink. e. Source (stored starch is mobilised to supply the new shoot).</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">5.2</h3>
+<p>Put the steps of the pressure-flow model of phloem transport in order:</p>
+<ol type="a">
+<li>hydrostatic pressure rises in the sieve tubes at the source</li>
+<li>sucrose is loaded into the sieve-element–companion-cell complex</li>
+<li>sucrose is unloaded at the sink and water leaves the sieve tubes</li>
+<li>water enters the sieve tubes from the xylem by osmosis</li>
+<li>sap moves by bulk flow towards the sink</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>b → d → a → e → c.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">5.3</h3>
+<p>Name the main sugar transported in the phloem of most plants and the main storage carbohydrate in chloroplasts.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sucrose is transported in the phloem; starch is stored in chloroplasts.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="respiration-and-nitrogen-assimilation" class="level2">
+<h2 class="anchored" data-anchor-id="respiration-and-nitrogen-assimilation">Respiration and nitrogen assimilation</h2>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">6.1</h3>
+<p>Complete the table for aerobic respiration.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Location</th>
+<th>Main products</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Glycolysis</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tricarboxylic acid (citric acid) cycle</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Electron transport and oxidative phosphorylation</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Location</th>
+<th>Main products</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Glycolysis</td>
+<td>Cytosol (and plastids)</td>
+<td>Pyruvate, ATP, NADH</td>
+</tr>
+<tr class="even">
+<td>Tricarboxylic acid (citric acid) cycle</td>
+<td>Mitochondrial matrix</td>
+<td>CO₂, NADH, FADH₂, ATP</td>
+</tr>
+<tr class="odd">
+<td>Electron transport and oxidative phosphorylation</td>
+<td>Inner mitochondrial membrane</td>
+<td>ATP, H₂O (O₂ is the final electron acceptor)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">6.2</h3>
+<p>Roots of a flooded plant switch to fermentation.</p>
+<ol type="a">
+<li>Why can glycolysis continue during fermentation?</li>
+<li>Name the main fermentation products in plant roots.</li>
+<li>About how many ATP are formed per glucose by fermentation, compared with complete aerobic oxidation?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Fermentation regenerates NAD⁺ from NADH, which glycolysis requires.</li>
+<li>Ethanol and CO₂ (and some lactate).</li>
+<li>2 ATP per glucose by fermentation, compared with about 30 ATP by aerobic respiration.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-21" class="level3">
+<h3 class="anchored" data-anchor-id="section-21">6.3</h3>
+<p>Put the steps of nitrate assimilation in order and name the enzyme for each step: ammonium → glutamine; nitrite → ammonium; nitrate → nitrite; glutamine + 2-oxoglutarate → glutamate.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Nitrate → nitrite: nitrate reductase (cytosol).</li>
+<li>Nitrite → ammonium: nitrite reductase (plastid).</li>
+<li>Ammonium + glutamate → glutamine: glutamine synthetase (GS).</li>
+<li>Glutamine + 2-oxoglutarate → 2 glutamate: glutamate synthase (GOGAT).</li>
+</ol>
+<p>The reducing power, ATP and carbon skeletons (2-oxoglutarate) come from photosynthesis and respiration, so nitrogen assimilation depends on carbon metabolism.</p>
+</div>
+</div>
+</div>
+<p>Continue with the <a href="../../plant/carbon-metabolism/quiz.html">self-check quiz</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

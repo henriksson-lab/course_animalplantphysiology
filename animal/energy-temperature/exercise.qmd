@@ -2,86 +2,413 @@
 title: "A2 exercises — Feeding, metabolism and temperature"
 ---
 
-Use the [tutorial](index.qmd). All numerical observations below are invented
-teaching examples. This is analysis of supplied information, not an animal
-handling or respirometry protocol. Allow 60–90 minutes. Leave with a labelled
-energy budget, rate calculations and one mechanistic comparison.
+The questions follow the [tutorial](index.qmd) and [slides](lec.qmd). Answer
+each question before opening its answer.
 
-## 1. Follow a meal
+## Digestion and absorption
 
-Trace a starch molecule from ingestion to absorbed sugar and subsequent ATP
-production in an animal cell. Distinguish mechanical processing, hydrolysis,
-membrane transport and cellular metabolism. Where does the gut lumen sit
-relative to the internal environment?
+### 1.1
 
-Compare a foregut fermenter with a hindgut fermenter. Why do microbial
-location and retention time matter? Give one benefit and one cost/trade-off
-of microbial fermentation without claiming one arrangement is always best.
+Define each term: *ingestion*, *digestion*, *absorption*, *egestion* and
+*excretion*.
 
-## 2. Make the energy account balance
+::: {.callout-note collapse="true"}
+## Answer
 
-For one animal over one day, supplied values are ingested energy 150 kJ,
-faecal loss 40 kJ, chemical energy excreted 10 kJ and metabolic expenditure
-85 kJ. Calculate retained energy, and express metabolic expenditure as a
-mean power in watts over that day. Use 1 kJ = 1,000 J and 1 day = 86,400 s.
-
-What changes if metabolic expenditure becomes 110 kJ with other terms held
-fixed? Explain the biological meaning of a negative retained balance. State
-why neither budget alone proves whether protein supply was adequate.
-
-::: {.callout-tip collapse="true"}
-## Hint
-
-Use the same time interval for every energy term. Watts are J s⁻¹, not kJ day⁻¹.
+- **Ingestion:** taking food into the digestive tract.
+- **Digestion:** breaking food down, mechanically and chemically (mainly by
+  enzymatic hydrolysis), into molecules small enough to be absorbed.
+- **Absorption:** uptake of the products of digestion across the gut
+  epithelium into the internal environment (blood or lymph).
+- **Egestion:** elimination of unabsorbed material from the gut as faeces.
+- **Excretion:** elimination of metabolic wastes produced inside the body,
+  such as urea.
 :::
 
-## 3. Calculate and compare oxygen-use rates
+### 1.2
 
-A hypothetical 0.20 L water chamber is followed for 10 min. Oxygen decline
-for an empty-chamber blank over the same interval is 0.05 mg L⁻¹.
-Each row below represents a different animal in its own chamber; all animals
-have mass 2.0 g. Conditions other than the labelled temperature are stipulated
-to be comparable for this arithmetic exercise.
+True or false? Correct any false statements.
 
-| Animal | Temperature (°C) | Oxygen decline (mg L⁻¹ per 10 min) |
+a. A starch grain in the lumen of the small intestine is inside the body's
+   internal environment.
+b. Faeces are the main route for the excretion of nitrogenous waste in mammals.
+c. Bile is a digestive enzyme that hydrolyses fats.
+d. Chemical digestion of food is mostly by hydrolysis.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. The gut lumen is continuous with the outside world. Material is
+   inside the internal environment only after it has crossed the epithelium.
+b. False. Faeces are mainly egested, unabsorbed material. Nitrogenous waste
+   (urea) is excreted mainly in urine.
+c. False. Bile contains no digestive enzymes. Its bile salts emulsify fats into
+   small droplets, which increases the surface area for lipase.
+d. True.
+:::
+
+### 1.3
+
+Complete the table for a mammal.
+
+| Enzyme | Main source | Substrate | Main products |
+| --- | --- | --- | --- |
+| Salivary and pancreatic amylase | | | |
+| Pepsin | | | |
+| Trypsin | | | |
+| Pancreatic lipase | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Enzyme | Main source | Substrate | Main products |
+| --- | --- | --- | --- |
+| Salivary and pancreatic amylase | Salivary glands, pancreas | Starch | Maltose and other short oligosaccharides |
+| Pepsin | Stomach (chief cells) | Proteins | Peptides |
+| Trypsin | Pancreas | Proteins and peptides | Smaller peptides |
+| Pancreatic lipase | Pancreas | Triglycerides (fats) | Fatty acids and monoglycerides |
+:::
+
+### 1.4
+
+Put the steps in order for starch in a mammalian meal:
+
+a. glucose crosses the basolateral membrane of the enterocyte into the blood
+b. salivary amylase begins to hydrolyse starch in the mouth
+c. glucose is taken up across the apical membrane of the enterocyte
+d. pancreatic amylase hydrolyses starch in the small intestine
+e. brush-border enzymes (such as maltase) hydrolyse disaccharides to glucose
+f. blood from the intestine reaches the liver in the hepatic portal vein
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b → d → e → c → a → f.
+:::
+
+### 1.5
+
+Name three structural features of the mammalian small intestine that increase
+its absorptive surface area, from the largest to the smallest scale.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1. Circular folds of the intestinal wall.
+2. Villi: finger-like projections of the mucosa.
+3. Microvilli: projections of the apical membrane of each epithelial cell
+   (the brush border).
+:::
+
+### 1.6
+
+State whether each absorbed product enters the blood capillaries or the
+lacteals (lymphatic vessels) of a villus.
+
+a. glucose
+b. amino acids
+c. long-chain fatty acids and monoglycerides, repackaged as chylomicrons
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Blood capillaries. b. Blood capillaries. c. Lacteals. Chylomicrons are too
+large to enter the blood capillaries, so they enter the lymph and reach the
+blood later.
+:::
+
+## Microbial fermentation
+
+### 2.1
+
+Why do most herbivorous vertebrates depend on symbiotic microbes to use
+plant cell walls, and which main products do the microbes supply to the host?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Vertebrates do not produce cellulase, so they cannot hydrolyse cellulose
+themselves. Microbes ferment the cellulose and supply short-chain (volatile)
+fatty acids, such as acetate, propionate and butyrate, which the host absorbs
+and uses as fuel. The microbes themselves are also a source of protein.
+:::
+
+### 2.2
+
+Classify each animal as a foregut fermenter or a hindgut fermenter.
+
+a. cow
+b. horse
+c. sheep
+d. rabbit
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Foregut (ruminant). b. Hindgut (caecum and colon). c. Foregut (ruminant).
+d. Hindgut (caecum).
+:::
+
+### 2.3
+
+In which type of fermenter is microbial protein digested and absorbed in the
+small intestine, and why? How do rabbits recover microbial protein?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+In a foregut fermenter. The fermentation chamber lies before the stomach and
+small intestine, so microbes washed out of it are digested in the small
+intestine like other food protein. In a hindgut fermenter the microbes grow
+after the small intestine and are mostly lost in the faeces. Rabbits recover
+them by caecotrophy: they eat the soft faeces produced from the caecum
+(coprophagy).
+:::
+
+## Energy budgets
+
+### 3.1
+
+Over one day, an animal has ingested energy 150 kJ, faecal loss 40 kJ,
+chemical energy excreted (in urine) 10 kJ and metabolic expenditure 85 kJ.
+Use the budget
+
+$$
+E_{\rm ingested}=E_{\rm faeces}+E_{\rm excreted}+E_{\rm metabolic}+E_{\rm retained}.
+$$
+
+a. Calculate the retained energy.
+b. Calculate the absorbed energy as a percentage of ingested energy.
+c. Calculate the retained energy if metabolic expenditure rises to 110 kJ,
+   with the other terms unchanged. What does the sign of the result mean?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. $150-40-10-85=15$ kJ.
+b. Absorbed energy is $150-40=110$ kJ, i.e. $110/150=73\,\%$ of ingested energy.
+c. $150-40-10-110=-10$ kJ. The animal spends more than it takes up, so it
+   draws on its energy stores (such as fat or glycogen) and loses body energy.
+:::
+
+### 3.2
+
+Express the metabolic expenditure of 85 kJ day⁻¹ from 3.1 as a mean power in
+watts. (1 day = 86 400 s.)
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$85\,000\ \text{J} / 86\,400\ \text{s} = 0.98$ J s⁻¹ $= 0.98$ W.
+:::
+
+### 3.3
+
+Which quantity is energy and which is power? Give the SI unit of each.
+
+a. 2 000 kJ of food eaten in a day
+b. a resting metabolic rate of 80 W
+c. 60 J transferred in 10 s
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Energy (J). b. Power (W = J s⁻¹). c. Energy (J); it corresponds to a mean
+power of $60/10=6$ W.
+:::
+
+## ATP supply and respirometry
+
+### 4.1
+
+Complete the table comparing ATP supply from glucose in a vertebrate muscle
+cell.
+
+| | Anaerobic glycolysis | Aerobic metabolism |
+| --- | --- | --- |
+| Location in the cell | | |
+| Requires O₂? | | |
+| End product(s) | | |
+| Approximate ATP yield per glucose | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Anaerobic glycolysis | Aerobic metabolism |
+| --- | --- | --- |
+| Location in the cell | Cytosol | Cytosol (glycolysis) and mitochondria (citric acid cycle, electron transport chain) |
+| Requires O₂? | No | Yes, as the final electron acceptor |
+| End product(s) | Lactate | CO₂ and H₂O |
+| Approximate ATP yield per glucose | 2 | About 30 |
+:::
+
+### 4.2
+
+Why does an animal's oxygen consumption during a sprint underestimate its
+total rate of ATP use?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+During a sprint, part of the ATP comes from anaerobic sources (phosphocreatine
+and glycolysis to lactate), which do not consume O₂. Oxygen consumption
+measures only aerobic ATP production.
+:::
+
+### 4.3
+
+A respirometry chamber contains 0.20 L of water and is followed for 10 min.
+An empty chamber (blank) loses 0.05 mg O₂ L⁻¹ over the same interval. Each row
+is a different animal of mass 2.0 g in its own chamber.
+
+| Animal | Temperature (°C) | O₂ decline (mg L⁻¹ per 10 min) |
 | --- | ---: | ---: |
 | C1 | 10 | 0.25 |
 | C2 | 10 | 0.30 |
 | W1 | 20 | 0.45 |
 | W2 | 20 | 0.55 |
 
-Calculate blank-corrected oxygen consumption in mg min⁻¹ and then
-mg min⁻¹ g⁻¹ for each animal. Find the mean rate at each temperature and
-the apparent $Q_{10}$ from those means. Show one full row calculation.
+a. Calculate each animal's blank-corrected O₂ consumption in mg min⁻¹ and in
+   mg min⁻¹ g⁻¹.
+b. Calculate the mean mass-specific rate at each temperature.
+c. Calculate $Q_{10}$ from the two means.
 
-What is the independent experimental unit? Would ten sensor readings from
-C1 increase the number of independent animals? Explain why the two animals
-per condition and stipulated design provide limited biological evidence.
+::: {.callout-note collapse="true"}
+## Answer
 
-## 4. Read the temperature mechanism
+a. For C1: $(0.25-0.05)\ \text{mg L}^{-1} \times 0.20\ \text{L} = 0.040$ mg
+   in 10 min $= 0.0040$ mg min⁻¹; divided by 2.0 g gives 0.0020 mg min⁻¹ g⁻¹.
 
-An ectotherm has increasing oxygen consumption from 10 to 20 °C. An insulated
-endotherm has increasing resting oxygen consumption as air cools from 15 to
-5 °C. Explain how both observations can occur without contradiction. State
-which body-temperature measurements would help distinguish the mechanisms.
+| Animal | O₂ consumption (mg min⁻¹) | Mass-specific (mg min⁻¹ g⁻¹) |
+| --- | ---: | ---: |
+| C1 | 0.0040 | 0.0020 |
+| C2 | 0.0050 | 0.0025 |
+| W1 | 0.0080 | 0.0040 |
+| W2 | 0.0100 | 0.0050 |
 
-Why should a measured $Q_{10}$ not be used to predict performance at any
-temperature? Name two conditions other than temperature that should be checked.
+b. 10 °C: 0.00225 mg min⁻¹ g⁻¹. 20 °C: 0.0045 mg min⁻¹ g⁻¹.
 
-## 5. Connect gut histology to function
+c. $Q_{10} = (0.0045/0.00225)^{10/10} = 2.0$.
+:::
 
-Sketch an idealised intestinal villus and label lumen, absorptive epithelium,
-underlying support and internal transport route. Predict the consequences
-of reducing absorptive area while keeping diet and other conditions fixed.
-Then state what your sketch cannot establish about an actual section's organ
-identity or physiological performance.
+### 4.4
 
-## 6. Design an interpretation, not a new method
+In 4.3, what is the independent replicate? How many are there at each
+temperature?
 
-Write a short results paragraph for task 3 giving direction, size, units,
-replicate count and one physiological explanation. Follow it with one limitation
-and a proposed improvement. Do not claim that mass normalisation removes all
-size effects, or that oxygen consumption measures every contribution to ATP
-supply during rapid activity.
+::: {.callout-note collapse="true"}
+## Answer
 
-Check your concepts with the [quiz](quiz.qmd).
+The individual animal (each in its own chamber). There are two at each
+temperature. Repeated readings from the same animal are not independent
+replicates.
+:::
+
+## Temperature and metabolism
+
+### 5.1
+
+Use $Q_{10}=(R_2/R_1)^{10/(T_2-T_1)}$.
+
+a. A rate rises from 2.0 to 8.0 units between 10 and 30 °C. Calculate $Q_{10}$.
+b. A process has $Q_{10}=2.5$ and a rate of 4.0 units at 20 °C. Predict the
+   rate at 30 °C.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. $Q_{10}=(8.0/2.0)^{10/20}=4^{0.5}=2.0$.
+b. $4.0\times2.5=10$ units.
+:::
+
+### 5.2
+
+Match each term to its definition: ectotherm, endotherm, poikilotherm,
+homeotherm.
+
+a. an animal whose body temperature varies with environmental temperature
+b. an animal whose body temperature is determined mainly by external heat
+   sources
+c. an animal that keeps a relatively constant body temperature
+d. an animal that warms its body mainly with its own metabolic heat
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Poikilotherm. b. Ectotherm. c. Homeotherm. d. Endotherm.
+
+Ectothermy and endothermy refer to the source of body heat; poikilothermy and
+homeothermy refer to how much body temperature varies.
+:::
+
+### 5.3
+
+True or false? Correct any false statements.
+
+a. Ectotherms cannot regulate their body temperature.
+b. In a resting ectotherm, metabolic rate usually rises when environmental
+   temperature rises over a moderate range.
+c. In a resting endotherm, metabolic rate is lowest within the thermoneutral
+   zone.
+d. A measured $Q_{10}$ can be used to predict rates at any temperature.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. False. Many ectotherms regulate body temperature by behaviour, such as
+   basking, seeking shade and changing posture.
+b. True. Body temperature follows environmental temperature, and reaction
+   rates rise with temperature.
+c. True.
+d. False. $Q_{10}$ describes only the measured temperature range. Outside it,
+   rates level off and fall as proteins and membranes are damaged.
+:::
+
+### 5.4
+
+The graph of resting metabolic rate against ambient temperature for a mammal
+has three regions. Name the region in which metabolic rate is at its minimum
+and constant, and the temperature at its lower boundary. What happens to
+metabolic rate below that boundary, and why?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The thermoneutral zone; its lower boundary is the lower critical temperature.
+Below the lower critical temperature, metabolic rate rises as ambient
+temperature falls, because the animal must produce more heat (by shivering
+and non-shivering thermogenesis) to replace the faster heat loss and keep body
+temperature constant.
+:::
+
+### 5.5
+
+Name the route of heat exchange in each example: conduction, convection,
+radiation or evaporation.
+
+a. A lizard warms itself in sunlight.
+b. A dog pants on a hot day.
+c. A snake lies on a warm rock.
+d. Wind cools a bird's body surface.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Radiation. b. Evaporation. c. Conduction. d. Convection.
+:::
+
+### 5.6
+
+Name four ways in which a mammal reduces heat loss or increases heat
+production in the cold.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Any four of: thicker fur or fat (insulation); piloerection (raising the fur);
+vasoconstriction of skin blood vessels; countercurrent heat exchange in the
+limbs; curling up (posture) and huddling; shivering thermogenesis;
+non-shivering thermogenesis in brown adipose tissue.
+:::
+
+Continue with the [self-check quiz](quiz.qmd).

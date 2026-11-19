@@ -122,7 +122,7 @@ an incomplete prediction unless the limiting resource and context are stated.
 ## Drought and salinity have overlapping effects
 
 Drying soil lowers water availability and can reduce hydraulic connectivity.
-Salts lower solution potential and can cause ion toxicity or nutrient imbalance.
+Salts lower the solute (osmotic) potential and can cause ion toxicity or nutrient imbalance.
 Compatible-solute accumulation can contribute to osmotic adjustment but carries
 costs. Conserving water through closure can reduce carbon gain. A plant may
 survive a treatment without maintaining growth or reproduction.

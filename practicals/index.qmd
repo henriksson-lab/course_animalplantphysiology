@@ -10,18 +10,17 @@ assessment rules and local protocols come from the teaching team.
 
 ## Your route
 
-| Activity | Focus | Suggested working time |
-| --- | --- | --- |
-| [Anatomy and histology](anatomy-histology.qmd) | Evidence for tissue identity and comparative structure/function | 75–90 min plus actual specimen practice |
-| [Animal oxygen consumption](animal-measurements.qmd) | Background correction, units, temperature and metabolism | 90 min |
-| [Plant water balance](plant-water.qmd) | Mass balance, area normalisation and water potential | 90 min |
-| [Photosynthetic light response](photosynthesis.qmd) | Repeated readings, compensation and net/gross exchange | 90 min |
-| [Growth and stress](development-stress.qmd) | Within-plant change, treatment comparison and mechanisms | 90 min |
-| [Scientific reporting](reporting.qmd) | Scientific argument and peer review | Drafting and revision sessions |
-| [Literature and presentation](literature-presentation.qmd) | Critical reading, biotechnology and ethics | Preparation, group discussion and presentation |
+| Activity | Focus |
+| --- | --- |
+| [Anatomy and histology](anatomy-histology.qmd) | Evidence for tissue identity and comparative structure/function |
+| [Animal oxygen consumption](animal-measurements.qmd) | Background correction, units, temperature and metabolism |
+| [Plant water balance](plant-water.qmd) | Mass balance, area normalisation and water potential |
+| [Photosynthetic light response](photosynthesis.qmd) | Repeated readings, compensation and net/gross exchange |
+| [Growth and stress](development-stress.qmd) | Within-plant change, treatment comparison and mechanisms |
+| [Scientific reporting](reporting.qmd) | Scientific argument and peer review |
+| [Literature and presentation](literature-presentation.qmd) | Critical reading, biotechnology and ethics |
 
-Times are planning suggestions, not booked contact hours. Accompany the
-corresponding animal/plant lessons rather than creating a computing block.
+Accompany the corresponding animal/plant lessons rather than creating a computing block.
 Keep the [simulated-data dictionary](../data/README.md) with each CSV. Compare
 your first plot with the [worked-figure gallery](../figures.qmd).
 

@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -688,22 +717,49 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#animal-half" id="toc-animal-half" class="nav-link active" data-scroll-target="#animal-half">Animal half</a>
   <ul class="collapse">
-  <li><a href="#from-tissue-to-oxygen-demand" id="toc-from-tissue-to-oxygen-demand" class="nav-link" data-scroll-target="#from-tissue-to-oxygen-demand">1. From tissue to oxygen demand</a></li>
-  <li><a href="#energy-and-temperature" id="toc-energy-and-temperature" class="nav-link" data-scroll-target="#energy-and-temperature">2. Energy and temperature</a></li>
-  <li><a href="#two-osmotic-environments" id="toc-two-osmotic-environments" class="nav-link" data-scroll-target="#two-osmotic-environments">3. Two osmotic environments</a></li>
-  <li><a href="#a-signal-to-movement" id="toc-a-signal-to-movement" class="nav-link" data-scroll-target="#a-signal-to-movement">4. A signal to movement</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.1</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1.2</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">1.3</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1.4</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">1.5</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">1.6</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">1.7</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">1.8</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">1.9</a></li>
+  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">1.10</a></li>
+  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">1.11</a></li>
+  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">1.12</a></li>
+  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">1.13</a></li>
+  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">1.14</a></li>
+  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">1.15</a></li>
+  <li><a href="#section-15" id="toc-section-15" class="nav-link" data-scroll-target="#section-15">1.16</a></li>
   </ul></li>
   <li><a href="#plant-half" id="toc-plant-half" class="nav-link" data-scroll-target="#plant-half">Plant half</a>
   <ul class="collapse">
-  <li><a href="#water-and-carbon-together" id="toc-water-and-carbon-together" class="nav-link" data-scroll-target="#water-and-carbon-together">5. Water and carbon together</a></li>
-  <li><a href="#net-exchange-is-a-balance" id="toc-net-exchange-is-a-balance" class="nav-link" data-scroll-target="#net-exchange-is-a-balance">6. Net exchange is a balance</a></li>
-  <li><a href="#a-developmental-response" id="toc-a-developmental-response" class="nav-link" data-scroll-target="#a-developmental-response">7. A developmental response</a></li>
-  <li><a href="#an-application-claim" id="toc-an-application-claim" class="nav-link" data-scroll-target="#an-application-claim">8. An application claim</a></li>
+  <li><a href="#section-16" id="toc-section-16" class="nav-link" data-scroll-target="#section-16">2.1</a></li>
+  <li><a href="#section-17" id="toc-section-17" class="nav-link" data-scroll-target="#section-17">2.2</a></li>
+  <li><a href="#section-18" id="toc-section-18" class="nav-link" data-scroll-target="#section-18">2.3</a></li>
+  <li><a href="#section-19" id="toc-section-19" class="nav-link" data-scroll-target="#section-19">2.4</a></li>
+  <li><a href="#section-20" id="toc-section-20" class="nav-link" data-scroll-target="#section-20">2.5</a></li>
+  <li><a href="#section-21" id="toc-section-21" class="nav-link" data-scroll-target="#section-21">2.6</a></li>
+  <li><a href="#section-22" id="toc-section-22" class="nav-link" data-scroll-target="#section-22">2.7</a></li>
+  <li><a href="#section-23" id="toc-section-23" class="nav-link" data-scroll-target="#section-23">2.8</a></li>
+  <li><a href="#section-24" id="toc-section-24" class="nav-link" data-scroll-target="#section-24">2.9</a></li>
+  <li><a href="#section-25" id="toc-section-25" class="nav-link" data-scroll-target="#section-25">2.10</a></li>
+  <li><a href="#section-26" id="toc-section-26" class="nav-link" data-scroll-target="#section-26">2.11</a></li>
+  <li><a href="#section-27" id="toc-section-27" class="nav-link" data-scroll-target="#section-27">2.12</a></li>
+  <li><a href="#section-28" id="toc-section-28" class="nav-link" data-scroll-target="#section-28">2.13</a></li>
+  <li><a href="#section-29" id="toc-section-29" class="nav-link" data-scroll-target="#section-29">2.14</a></li>
+  <li><a href="#section-30" id="toc-section-30" class="nav-link" data-scroll-target="#section-30">2.15</a></li>
+  <li><a href="#section-31" id="toc-section-31" class="nav-link" data-scroll-target="#section-31">2.16</a></li>
   </ul></li>
-  <li><a href="#integrating-both-halves" id="toc-integrating-both-halves" class="nav-link" data-scroll-target="#integrating-both-halves">Integrating both halves</a>
+  <li><a href="#integration" id="toc-integration" class="nav-link" data-scroll-target="#integration">Integrating both halves</a>
   <ul class="collapse">
-  <li><a href="#transport-is-gradient-plus-pathway" id="toc-transport-is-gradient-plus-pathway" class="nav-link" data-scroll-target="#transport-is-gradient-plus-pathway">9. Transport is gradient plus pathway</a></li>
-  <li><a href="#evidence-before-an-explanation" id="toc-evidence-before-an-explanation" class="nav-link" data-scroll-target="#evidence-before-an-explanation">10. Evidence before an explanation</a></li>
+  <li><a href="#section-32" id="toc-section-32" class="nav-link" data-scroll-target="#section-32">3.1</a></li>
+  <li><a href="#section-33" id="toc-section-33" class="nav-link" data-scroll-target="#section-33">3.2</a></li>
+  <li><a href="#section-34" id="toc-section-34" class="nav-link" data-scroll-target="#section-34">3.3</a></li>
+  <li><a href="#section-35" id="toc-section-35" class="nav-link" data-scroll-target="#section-35">3.4</a></li>
+  <li><a href="#section-36" id="toc-section-36" class="nav-link" data-scroll-target="#section-36">3.5</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -730,85 +786,608 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>These are formative study tasks, not an official examination or a prediction of its questions. Attempt each explanation before opening the feedback. Include the causal chain: structure or signal → process → physiological consequence.</p>
+<p>The questions combine material from all units of each half of the course. Answer each question before opening its answer.</p>
 <section id="animal-half" class="level2">
 <h2 class="anchored" data-anchor-id="animal-half">Animal half</h2>
-<section id="from-tissue-to-oxygen-demand" class="level3">
-<h3 class="anchored" data-anchor-id="from-tissue-to-oxygen-demand">1. From tissue to oxygen demand</h3>
-<p>Compare a thin exchange epithelium with a thick stratified protective epithelium. Explain why their structures suit different functions. Then trace how an increase in muscle oxygen demand can be met through ventilation, exchange and circulation. Name one observation you would need before classifying a real tissue section.</p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">1.1</h3>
+<p>Put the steps in order for an oxygen molecule moving from the atmosphere to a mitochondrion in a mammalian skeletal-muscle fibre:</p>
+<ol type="a">
+<li>O₂ binds to haemoglobin in a red blood cell</li>
+<li>O₂ dissociates from haemoglobin in a systemic capillary</li>
+<li>inspired air moves through the conducting airways to the alveoli</li>
+<li>blood flows through the pulmonary veins, left atrium, left ventricle and systemic arteries</li>
+<li>O₂ diffuses across the alveolar wall and capillary endothelium into the plasma</li>
+<li>O₂ diffuses through interstitial fluid into the muscle fibre and is reduced to water by the mitochondrial electron transport chain</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>A short diffusion distance favours exchange; multiple layers can protect against abrasion. Neither alone identifies an organ. Cell shape, layering, lumen, extracellular material and neighbouring tissues provide evidence. Ventilation renews the respiratory medium, diffusion crosses the exchange barrier, blood flow distributes oxygen, and tissues extract it. Increased demand need not be met by changing just one step. Microscopy interpretation must use the actual image and scale, not a guessed label from a written clue.</p>
+<p>c → e → a → d → b → f.&nbsp;Steps c and d are bulk flow (ventilation and circulation); steps e and f are diffusion down a partial-pressure gradient.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="energy-and-temperature" class="level3">
-<h3 class="anchored" data-anchor-id="energy-and-temperature">2. Energy and temperature</h3>
-<p>Two simulated animals consume 18 and 30 µmol oxygen over six minutes. Both have mass 0.5 g. Calculate the whole-animal and mass-specific mean rates. The animals differ in both temperature and feeding history. What comparison is possible, and what causal claim is unsupported?</p>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">1.2</h3>
+<p>Two animals, each of mass 0.5 g, consume 18 and 30 µmol O₂ in 6 minutes.</p>
+<ol type="a">
+<li>Calculate the whole-animal rate of oxygen consumption for each animal.</li>
+<li>Calculate the mass-specific rate for each animal.</li>
+<li>The two animals were measured at different temperatures and had different feeding histories. True or false: the data show that temperature caused the difference in rate.</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Whole-animal rates are 3 and 5 µmol min⁻¹. Mass-specific values are 6 and 10 µmol min⁻¹ g⁻¹. The observed rates differ, but temperature and feeding history are confounded; neither cause can be isolated. Oxygen consumption is an indicator of aerobic metabolism under the stated conditions, not a direct measure of all energy use or a fitness score.</p>
+<ol type="a">
+<li>18/6 = 3 µmol O₂ min⁻¹ and 30/6 = 5 µmol O₂ min⁻¹.</li>
+<li>3/0.5 = 6 µmol O₂ min⁻¹ g⁻¹ and 5/0.5 = 10 µmol O₂ min⁻¹ g⁻¹.</li>
+<li>False. Temperature and feeding history differ together (they are confounded), so the effect of either cannot be separated.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="two-osmotic-environments" class="level3">
-<h3 class="anchored" data-anchor-id="two-osmotic-environments">3. Two osmotic environments</h3>
-<p>Compare the water-balance problems faced by a freshwater fish and a terrestrial mammal. Explain how exchange surfaces, ion transport and excretion contribute. Why does “water follows salt” fail as a complete explanation of kidney function?</p>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">1.3</h3>
+<p>The metabolic rate of an ectotherm is 2 units at 10 °C and 8 units at 30 °C. Calculate <span class="math inline">\(Q_{10}\)</span> for this interval.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>A typical freshwater teleost gains water osmotically and loses ions across permeable surfaces; dilute urine and active ion uptake help maintain balance. A terrestrial mammal loses water to the environment and must balance intake, metabolic production and losses. Kidney filtration, selective reabsorption, secretion, medullary gradients and regulated collecting-duct permeability all matter. Water movement depends on a pathway as well as a driving gradient. There are diverse exceptions to broad group descriptions.</p>
+<p><span class="math inline">\(Q_{10} = (R_2/R_1)^{10/(T_2-T_1)} = (8/2)^{10/20} = 4^{0.5} = 2\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="a-signal-to-movement" class="level3">
-<h3 class="anchored" data-anchor-id="a-signal-to-movement">4. A signal to movement</h3>
-<p>Explain how a neural signal can produce skeletal-muscle force, and how endocrine signals can influence the resources available for activity. Distinguish changes in action-potential frequency from changes in action-potential amplitude.</p>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">1.4</h3>
+<p>Over one day an animal ingests 200 kJ. Its faeces contain 50 kJ, its excreted nitrogenous waste contains 10 kJ and its metabolic expenditure is 120 kJ. Calculate:</p>
+<ol type="a">
+<li>the absorbed energy</li>
+<li>the retained energy (growth and storage)</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In a vertebrate example, a motor neuron activates the neuromuscular junction, muscle membrane excitation triggers calcium release, and calcium permits actin–myosin interaction. ATP supports cross-bridge cycling and calcium handling. Recruitment and activation frequency contribute to force regulation. Hormones can alter fuel mobilisation and longer-term tissue properties. A stronger stimulus generally changes firing/recruitment rather than scaling each regenerative action potential as if it were an analogue voltage signal.</p>
+<ol type="a">
+<li>200 − 50 = 150 kJ day⁻¹.</li>
+<li>200 − 50 − 10 − 120 = 20 kJ day⁻¹.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">1.5</h3>
+<p>A person at rest has a cardiac output of 5 L min⁻¹, an arterial O₂ content of 200 mL O₂ L⁻¹ and a mixed-venous O₂ content of 150 mL O₂ L⁻¹. During heavy exercise, cardiac output is 20 L min⁻¹ and mixed-venous O₂ content falls to 100 mL O₂ L⁻¹, while arterial content is unchanged.</p>
+<ol type="a">
+<li>Calculate the whole-body O₂ consumption at rest and during exercise.</li>
+<li>By what factor did O₂ consumption increase?</li>
+<li>By what factors did cardiac output and the arterial–venous O₂ difference change?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Rest: 5 × (200 − 150) = 250 mL O₂ min⁻¹. Exercise: 20 × (200 − 100) = 2000 mL O₂ min⁻¹.</li>
+<li>2000/250 = 8 times.</li>
+<li>Cardiac output increased 4 times; the arterial–venous difference doubled (50 → 100 mL O₂ L⁻¹). 4 × 2 = 8.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">1.6</h3>
+<p>True or false? Correct any false statements.</p>
+<ol type="a">
+<li>A rightward shift of the haemoglobin–oxygen dissociation curve means a higher oxygen affinity.</li>
+<li>Higher temperature, higher CO₂ and lower pH shift the curve to the right.</li>
+<li>Blood with a normal O₂ partial pressure but a low haemoglobin concentration has a normal O₂ content.</li>
+<li>The pulmonary veins carry oxygen-rich blood.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>False. A rightward shift means lower affinity: a higher partial pressure is needed for the same saturation, which favours unloading in the tissues.</li>
+<li>True.</li>
+<li>False. Most O₂ in blood is bound to haemoglobin, so less haemoglobin means lower O₂ content at the same partial pressure.</li>
+<li>True. Veins carry blood towards the heart; the name does not depend on the oxygen content.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">1.7</h3>
+<p>Classify each event as ingestion, digestion, absorption, egestion or excretion.</p>
+<ol type="a">
+<li>Pancreatic lipase hydrolyses triglycerides in the small intestine.</li>
+<li>Glucose crosses the intestinal epithelium into the blood.</li>
+<li>Undigested plant fibre leaves the body in the faeces.</li>
+<li>Urea leaves the body in the urine.</li>
+<li>A cow takes grass into its mouth.</li>
+</ol>
+<p>In a ruminant, does microbial fermentation take place before or after the small intestine?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Digestion. b. Absorption. c.&nbsp;Egestion. d.&nbsp;Excretion. e. Ingestion.</li>
+</ol>
+<p>Before: fermentation occurs in the rumen, so microbes and their products then pass on to the small intestine.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-7" class="level3">
+<h3 class="anchored" data-anchor-id="section-7">1.8</h3>
+<p>Complete the table for typical teleost fishes.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Freshwater teleost</th>
+<th>Marine teleost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body fluids compared with the surrounding water (hyperosmotic or hypo-osmotic)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Passive water movement across gills and skin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Passive ion movement across gills and skin</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Drinking</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Urine</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Active ion transport at the gills</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Freshwater teleost</th>
+<th>Marine teleost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body fluids compared with the surrounding water</td>
+<td>Hyperosmotic</td>
+<td>Hypo-osmotic</td>
+</tr>
+<tr class="even">
+<td>Passive water movement across gills and skin</td>
+<td>Gain</td>
+<td>Loss</td>
+</tr>
+<tr class="odd">
+<td>Passive ion movement across gills and skin</td>
+<td>Loss</td>
+<td>Gain</td>
+</tr>
+<tr class="even">
+<td>Drinking</td>
+<td>Little or none</td>
+<td>Drinks seawater</td>
+</tr>
+<tr class="odd">
+<td>Urine</td>
+<td>Large volume, dilute</td>
+<td>Small volume, about isosmotic to plasma</td>
+</tr>
+<tr class="even">
+<td>Active ion transport at the gills</td>
+<td>Uptake of Na⁺ and Cl⁻</td>
+<td>Secretion of Na⁺ and Cl⁻</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-8" class="level3">
+<h3 class="anchored" data-anchor-id="section-8">1.9</h3>
+<p>Assume complete dissociation and that the inside of a red blood cell is about 0.30 Osm L⁻¹.</p>
+<ol type="a">
+<li>Calculate the osmolarity of 0.15 mol L⁻¹ NaCl, 0.30 mol L⁻¹ sucrose and 0.30 mol L⁻¹ urea.</li>
+<li>Red blood cells are placed in each solution. The membrane is impermeable to Na⁺, Cl⁻ and sucrose but permeable to urea. State whether each solution is isotonic, hypotonic or hypertonic to the cells.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>All three are 0.30 Osm L⁻¹ (NaCl gives two particles per formula unit).</li>
+<li>NaCl: isotonic. Sucrose: isotonic. Urea: hypotonic. Urea enters the cells, water follows, and the cells swell and lyse. The solutions are isosmotic, but they do not have the same tonicity.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-9" class="level3">
+<h3 class="anchored" data-anchor-id="section-9">1.10</h3>
+<p>For substance X: plasma concentration 2 mmol L⁻¹, glomerular filtration rate 0.12 L min⁻¹, tubular reabsorption 0.20 mmol min⁻¹, tubular secretion 0.01 mmol min⁻¹ and urine flow 0.002 L min⁻¹. Calculate:</p>
+<ol type="a">
+<li>the filtered load of X</li>
+<li>the excretion rate of X</li>
+<li>the concentration of X in the urine</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>2 mmol L⁻¹ × 0.12 L min⁻¹ = 0.24 mmol min⁻¹.</li>
+<li>0.24 − 0.20 + 0.01 = 0.05 mmol min⁻¹.</li>
+<li>0.05 mmol min⁻¹ / 0.002 L min⁻¹ = 25 mmol L⁻¹.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-10" class="level3">
+<h3 class="anchored" data-anchor-id="section-10">1.11</h3>
+<p>Put these parts of a mammalian nephron in the order that filtrate passes through them: distal tubule, Bowman’s capsule, collecting duct, ascending limb of the loop of Henle, proximal tubule, descending limb of the loop of Henle.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Bowman’s capsule → proximal tubule → descending limb → ascending limb → distal tubule → collecting duct.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-11" class="level3">
+<h3 class="anchored" data-anchor-id="section-11">1.12</h3>
+<p>Plasma osmolality rises after a mammal loses water. Match each item to its role in the feedback loop: regulated variable, sensor, effector, signal.</p>
+<ol type="a">
+<li>antidiuretic hormone (ADH, vasopressin)</li>
+<li>collecting-duct epithelial cells</li>
+<li>plasma osmolality</li>
+<li>osmoreceptors in the hypothalamus</li>
+</ol>
+<p>What does ADH change in the collecting duct, and what happens to urine volume and concentration?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>signal; b. effector; c.&nbsp;regulated variable; d.&nbsp;sensor.</li>
+</ol>
+<p>ADH increases the water permeability of the collecting duct by inserting aquaporins into the apical membrane. More water is reabsorbed into the hyperosmotic medulla, so urine volume falls and urine concentration rises. This is negative feedback: the response lowers plasma osmolality.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-12" class="level3">
+<h3 class="anchored" data-anchor-id="section-12">1.13</h3>
+<p>Complete the table of nitrogenous wastes.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Ammonia</th>
+<th>Urea</th>
+<th>Uric acid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toxicity</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Water needed for excretion</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Energy cost of synthesis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Example animal group</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ammonia</th>
+<th>Urea</th>
+<th>Uric acid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toxicity</td>
+<td>High</td>
+<td>Low</td>
+<td>Very low</td>
+</tr>
+<tr class="even">
+<td>Water needed for excretion</td>
+<td>Much</td>
+<td>Moderate</td>
+<td>Little</td>
+</tr>
+<tr class="odd">
+<td>Energy cost of synthesis</td>
+<td>None (direct product)</td>
+<td>Moderate</td>
+<td>Highest</td>
+</tr>
+<tr class="even">
+<td>Example animal group</td>
+<td>Teleost fishes, many aquatic invertebrates</td>
+<td>Mammals, sharks</td>
+<td>Birds, reptiles, insects</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-13" class="level3">
+<h3 class="anchored" data-anchor-id="section-13">1.14</h3>
+<p>Put the steps in order, from a motor-neuron action potential to skeletal-muscle contraction:</p>
+<ol type="a">
+<li>Ca²⁺ is released from the sarcoplasmic reticulum</li>
+<li>acetylcholine binds to receptors on the muscle fibre</li>
+<li>the action potential reaches the motor-neuron terminal</li>
+<li>Ca²⁺ binds to troponin, and tropomyosin moves to expose binding sites on actin</li>
+<li>voltage-gated Ca²⁺ channels open and Ca²⁺ enters the nerve terminal</li>
+<li>myosin cross-bridges cycle, using ATP</li>
+<li>an action potential spreads along the muscle membrane and into the T-tubules</li>
+<li>acetylcholine is released into the synaptic cleft</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>c → e → h → b → g → a → d → f.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-14" class="level3">
+<h3 class="anchored" data-anchor-id="section-14">1.15</h3>
+<p>True or false? Correct any false statements.</p>
+<ol type="a">
+<li>The inside of a resting neuron is negative relative to the outside.</li>
+<li>The Na⁺/K⁺-ATPase moves 3 Na⁺ out of the cell and 2 K⁺ into it for each ATP hydrolysed.</li>
+<li>A stronger stimulus produces larger action potentials in a sensory neuron.</li>
+<li>Whole-muscle force can be increased by recruiting more motor units.</li>
+<li>ATP is needed for myosin to detach from actin.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>True.</li>
+<li>True.</li>
+<li>False. Action potentials are all-or-none with a roughly fixed amplitude. A stronger stimulus increases their frequency (and may recruit more neurons).</li>
+<li>True.</li>
+<li>True. Without ATP, cross-bridges stay attached (as in rigor mortis).</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="level3">
+<h3 class="anchored" data-anchor-id="section-15">1.16</h3>
+<p>Name the gland or tissue that secretes or releases each hormone.</p>
+<ol type="a">
+<li>GnRH</li>
+<li>LH and FSH</li>
+<li>ADH (released into the blood)</li>
+<li>insulin</li>
+<li>oestrogen</li>
+</ol>
+<p>Which type of feedback from oestrogen produces the LH surge that triggers ovulation?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Hypothalamus. b. Anterior pituitary. c.&nbsp;Posterior pituitary (it is made by hypothalamic neurons). d.&nbsp;β-cells of the pancreatic islets. e. Ovary (follicle cells).</li>
+</ol>
+<p>Positive feedback: sustained high oestrogen increases GnRH/LH release.</p>
 </div>
 </div>
 </div>
@@ -816,125 +1395,1000 @@ Feedback
 </section>
 <section id="plant-half" class="level2">
 <h2 class="anchored" data-anchor-id="plant-half">Plant half</h2>
-<section id="water-and-carbon-together" class="level3">
-<h3 class="anchored" data-anchor-id="water-and-carbon-together">5. Water and carbon together</h3>
-<p>Explain how dry air can increase the demand for water loss, why stomatal closure can reduce that loss, and how closure can constrain carbon assimilation. Does this imply every leaf under drought has the same photosynthetic rate?</p>
+<section id="section-16" class="level3">
+<h3 class="anchored" data-anchor-id="section-16">2.1</h3>
+<p>A plant cell has Ψs = −1.2 MPa and Ψp = +0.5 MPa.</p>
+<ol type="a">
+<li>Calculate its water potential.</li>
+<li>State the initial direction of net water movement when the cell is placed in pure water (Ψ = 0 MPa), and in a solution with Ψ = −0.9 MPa.</li>
+<li>A root cell has Ψ = −0.4 MPa. In which direction does water initially move when the soil solution is −0.1 MPa, and when a saline soil solution is −0.6 MPa?</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Water-vapour loss depends on the vapour gradient and pathway conductance. Closing stomata lowers conductance but also restricts CO₂ entry. Leaf temperature, boundary layer, soil/root hydraulic supply, biochemistry, species and acclimation also matter. Describe a trade-off and its conditions, not a universal numerical response. Stomata are regulated pores, rather than actively pumping water vapour.</p>
+<ol type="a">
+<li>Ψ = Ψs + Ψp = −1.2 + 0.5 = −0.7 MPa.</li>
+<li>Pure water: into the cell. −0.9 MPa solution: out of the cell. Water moves from higher (less negative) to lower (more negative) potential.</li>
+<li>−0.1 MPa soil: into the root cell. −0.6 MPa saline soil: out of the root cell.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="net-exchange-is-a-balance" class="level3">
-<h3 class="anchored" data-anchor-id="net-exchange-is-a-balance">6. Net exchange is a balance</h3>
-<p>A teaching model gives gross fixation of 14 and respiratory loss of 3 µmol CO₂ m⁻² s⁻¹ under one light condition. Calculate net uptake. In a second condition net uptake is zero. Does zero net uptake show that all metabolism has stopped? What extra assumption would be needed to estimate gross fixation from a dark-respiration measurement?</p>
+<section id="section-17" class="level3">
+<h3 class="anchored" data-anchor-id="section-17">2.2</h3>
+<p>Arrange from highest to lowest water potential in a transpiring plant: leaf mesophyll cell walls, atmosphere, soil water, root xylem.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Net uptake is 11 µmol CO₂ m⁻² s⁻¹ under the supplied simplified balance. Zero net uptake means opposing fluxes balance; processes can remain active. Using a dark rate to correct a light measurement assumes the relevant respiratory loss is suitably represented under illumination. Real measurements can also involve photorespiration and condition-dependent fluxes. State what the teaching model includes before interpreting it as a full carbon budget.</p>
+<p>Soil water → root xylem → leaf mesophyll cell walls → atmosphere. Water moves passively down this gradient; the largest drop is from the leaf to the air.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="a-developmental-response" class="level3">
-<h3 class="anchored" data-anchor-id="a-developmental-response">7. A developmental response</h3>
-<p>Propose how to distinguish failure of seed germination from failure to supply permissive conditions. Include viability, water, temperature, light where relevant, and dormancy. Explain why a hormone response depends on tissue and stage.</p>
+<section id="section-18" class="level3">
+<h3 class="anchored" data-anchor-id="section-18">2.3</h3>
+<ol type="a">
+<li><p>Put the steps in order for water moving from the soil to the atmosphere:</p>
+<ol type="1">
+<li>evaporation from mesophyll cell walls into the leaf air spaces</li>
+<li>entry into a root hair</li>
+<li>crossing the endodermis</li>
+<li>diffusion of water vapour out through a stoma</li>
+<li>movement through the root cortex</li>
+<li>bulk flow up the xylem of the stem</li>
+</ol></li>
+<li><p>What structure forces water and solutes to cross a plasma membrane at the endodermis, and what is it made of?</p></li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Use a suitable viable seed lot, record environmental conditions, include an appropriate reference and define germination before counting. Non-germination can reflect dead seeds, unsuitable conditions or dormancy; the observation alone does not distinguish them. Hormone responses depend on receptors, downstream machinery, sensitivity, other signals and developmental competence. Different tissues need not respond identically to the same external dose.</p>
+<ol type="a">
+<li>2 → 5 → 3 → 6 → 1 → 4.</li>
+<li>The Casparian strip, a band of suberin (and lignin) in the radial and transverse walls of endodermal cells. It blocks the apoplastic route.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="an-application-claim" class="level3">
-<h3 class="anchored" data-anchor-id="an-application-claim">8. An application claim</h3>
-<p>A line of modified plants has greater dry mass than its comparison line in one controlled trial. Draft a conclusion about the observation, then list evidence needed before recommending deployment under field drought.</p>
+<section id="section-19" class="level3">
+<h3 class="anchored" data-anchor-id="section-19">2.4</h3>
+<p>Complete the table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Xylem</th>
+<th>Phloem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conducting cells</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Living at functional maturity?</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Main substances transported</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Direction of flow</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Pressure in the conducting cells</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Source of the driving force</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The observed dry-mass difference applies to the measured lines and conditions. Check independent allocation, genetic-background controls, replication, measurement timing and water use. Field performance, yield, environmental interactions, non-target effects, management, access and stakeholder priorities need evidence. Neither the modification method alone nor greater biomass in one setting determines the whole benefit–risk judgement.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Xylem</th>
+<th>Phloem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conducting cells</td>
+<td>Tracheids and vessel elements</td>
+<td>Sieve-tube elements (with companion cells)</td>
+</tr>
+<tr class="even">
+<td>Living at functional maturity?</td>
+<td>No</td>
+<td>Yes (without a nucleus)</td>
+</tr>
+<tr class="odd">
+<td>Main substances transported</td>
+<td>Water and mineral ions</td>
+<td>Sucrose and other assimilates</td>
+</tr>
+<tr class="even">
+<td>Direction of flow</td>
+<td>From roots to shoots</td>
+<td>From sources to sinks (up or down)</td>
+</tr>
+<tr class="odd">
+<td>Pressure in the conducting cells</td>
+<td>Negative (tension)</td>
+<td>Positive</td>
+</tr>
+<tr class="even">
+<td>Source of the driving force</td>
+<td>Evaporation from leaves (cohesion–tension)</td>
+<td>Loading of sugar at sources draws in water osmotically (pressure flow)</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="integrating-both-halves" class="level2">
-<h2 class="anchored" data-anchor-id="integrating-both-halves">Integrating both halves</h2>
-<section id="transport-is-gradient-plus-pathway" class="level3">
-<h3 class="anchored" data-anchor-id="transport-is-gradient-plus-pathway">9. Transport is gradient plus pathway</h3>
-<p>Make a comparison table for a gill, a kidney epithelial pathway and a root-to-leaf water pathway. For each identify the transported substance, driving force, barrier/pathway, regulatory process and a cost or limitation. Do not assume that all three use the same mechanism because all transport material.</p>
+<section id="section-20" class="level3">
+<h3 class="anchored" data-anchor-id="section-20">2.5</h3>
+<p>Match each description to one cell type: parenchyma, collenchyma, sclerenchyma, guard cell, companion cell.</p>
+<ol type="a">
+<li>Living cells with unevenly thickened primary walls that support growing stems</li>
+<li>Cells with thick lignified secondary walls, often dead at maturity</li>
+<li>Thin-walled living cells used for photosynthesis or storage</li>
+<li>Paired epidermal cells that border a pore</li>
+<li>A nucleated cell connected to a sieve-tube element by many plasmodesmata</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Gill oxygen crosses along a partial-pressure gradient; ventilation and blood flow help maintain it. Kidney epithelia combine selective channels/transporters with ion gradients and regulated water permeability. Root-to-leaf water flow depends on water-potential differences and hydraulic pathways, with evaporation and stomatal regulation important in transpiring plants. Diffusion distance, energy for gradient maintenance and hydraulic resistance impose different constraints. Distinguish bulk flow from membrane transport.</p>
+<ol type="a">
+<li>Collenchyma. b. Sclerenchyma. c.&nbsp;Parenchyma. d.&nbsp;Guard cell. e. Companion cell.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="evidence-before-an-explanation" class="level3">
-<h3 class="anchored" data-anchor-id="evidence-before-an-explanation">10. Evidence before an explanation</h3>
-<p>Choose one supplied practical dataset. Write five sentences: the question; the independent unit and comparison; a result with units; a mechanism consistent with that result; and a limitation or alternative explanation. Draw the result without using R. Swap explanations with a partner and identify any sentence that states more than the design supports.</p>
+<section id="section-21" class="level3">
+<h3 class="anchored" data-anchor-id="section-21">2.6</h3>
+<ol type="a">
+<li><p>Put the steps of stomatal opening in order:</p>
+<ol type="1">
+<li>water enters the guard cells by osmosis</li>
+<li>blue light activates the plasma-membrane H⁺-ATPase of the guard cells</li>
+<li>guard-cell turgor rises and the pore opens</li>
+<li>K⁺ (with Cl⁻ and malate) accumulates in the guard cells</li>
+<li>the membrane hyperpolarises and K⁺ channels open</li>
+</ol></li>
+<li><p>Which hormone causes stomatal closure during drought?</p></li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feedback criteria
+Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>A complete response separates observation from mechanism and mechanism from proof. The calculation and figure must match the data dictionary. An explanation should be consistent with the unit tutorial, while the limitation should name a specific design/measurement issue. No particular software or p-value is required to achieve this.</p>
+<ol type="a">
+<li>2 → 5 → 4 → 1 → 3.</li>
+<li>Abscisic acid (ABA). It causes K⁺ and anion efflux from the guard cells, so water leaves, turgor falls and the pore closes.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-22" class="level3">
+<h3 class="anchored" data-anchor-id="section-22">2.7</h3>
+<p>Net CO₂ uptake of a leaf (µmol CO₂ m⁻² s⁻¹) was measured at four light intensities (µmol photons m⁻² s⁻¹):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Light</th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">50</th>
+<th style="text-align: right;">200</th>
+<th style="text-align: right;">800</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Net CO₂ uptake</td>
+<td style="text-align: right;">−2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li>What is the rate of respiration in darkness?</li>
+<li>At which light intensity is the light compensation point?</li>
+<li>Assume that respiration in the light equals respiration in the dark. Calculate gross photosynthesis at 200 µmol photons m⁻² s⁻¹.</li>
+<li>True or false: at the light compensation point, photosynthesis and respiration have stopped.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>2 µmol CO₂ m⁻² s⁻¹ (CO₂ release).</li>
+<li>About 50 µmol photons m⁻² s⁻¹, where net uptake is zero.</li>
+<li>Gross = net + respiration = 6 + 2 = 8 µmol CO₂ m⁻² s⁻¹.</li>
+<li>False. Both continue; CO₂ uptake by photosynthesis equals CO₂ release by respiration.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-23" class="level3">
+<h3 class="anchored" data-anchor-id="section-23">2.8</h3>
+<ol type="a">
+<li>Complete the table.</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Light-dependent reactions</th>
+<th>Calvin–Benson cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Location in the chloroplast</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Inputs</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Outputs</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="a">
+<li><p>Three CO₂ fixed in the Calvin–Benson cycle give one triose phosphate and use 9 ATP and 6 NADPH. How much CO₂, ATP and NADPH are needed for one glucose (two triose phosphates)?</p></li>
+<li><p>What is the source of the O₂ released in photosynthesis?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>a.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Light-dependent reactions</th>
+<th>Calvin–Benson cycle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Location in the chloroplast</td>
+<td>Thylakoid membranes</td>
+<td>Stroma</td>
+</tr>
+<tr class="even">
+<td>Inputs</td>
+<td>Light, H₂O, ADP + Pᵢ, NADP⁺</td>
+<td>CO₂, ATP, NADPH (and RuBP, regenerated)</td>
+</tr>
+<tr class="odd">
+<td>Outputs</td>
+<td>O₂, ATP, NADPH</td>
+<td>Triose phosphate, ADP + Pᵢ, NADP⁺</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="a">
+<li>6 CO₂, 18 ATP and 12 NADPH.</li>
+<li>Water, split at photosystem II.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-24" class="level3">
+<h3 class="anchored" data-anchor-id="section-24">2.9</h3>
+<p>Complete the table.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>C3</th>
+<th>C4</th>
+<th>CAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enzyme that first fixes CO₂</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>First stable product</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>How initial fixation is separated from the Calvin–Benson cycle</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>When stomata are mainly open</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Photorespiration in hot, bright conditions</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>C3</th>
+<th>C4</th>
+<th>CAM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enzyme that first fixes CO₂</td>
+<td>Rubisco</td>
+<td>PEP carboxylase</td>
+<td>PEP carboxylase</td>
+</tr>
+<tr class="even">
+<td>First stable product</td>
+<td>3-phosphoglycerate (3C)</td>
+<td>Oxaloacetate (4C)</td>
+<td>Oxaloacetate (4C), stored as malate</td>
+</tr>
+<tr class="odd">
+<td>How initial fixation is separated from the Calvin–Benson cycle</td>
+<td>Not separated</td>
+<td>In space: mesophyll and bundle-sheath cells</td>
+<td>In time: night and day</td>
+</tr>
+<tr class="even">
+<td>When stomata are mainly open</td>
+<td>Day</td>
+<td>Day</td>
+<td>Night</td>
+</tr>
+<tr class="odd">
+<td>Photorespiration in hot, bright conditions</td>
+<td>High</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-25" class="level3">
+<h3 class="anchored" data-anchor-id="section-25">2.10</h3>
+<p>Classify each organ as a source or a sink of sugar.</p>
+<ol type="a">
+<li>a mature, illuminated leaf</li>
+<li>a developing fruit</li>
+<li>a growing root tip</li>
+<li>a potato tuber sprouting in spring</li>
+<li>a young, expanding leaf</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Source. b. Sink. c.&nbsp;Sink. d.&nbsp;Source (its stored starch is mobilised for the new shoots). e. Sink.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-26" class="level3">
+<h3 class="anchored" data-anchor-id="section-26">2.11</h3>
+<p>Match each plant hormone to one response: auxin, gibberellin, abscisic acid, ethylene, cytokinin, jasmonate, salicylic acid.</p>
+<ol type="a">
+<li>ripening of climacteric fruits such as tomato and banana</li>
+<li>bending of a shoot towards light</li>
+<li>stem elongation and breaking of seed dormancy</li>
+<li>cell division in shoot meristems</li>
+<li>stomatal closure and maintenance of seed dormancy</li>
+<li>defence against chewing insects after wounding</li>
+<li>defence against biotrophic pathogens</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Ethylene. b. Auxin. c.&nbsp;Gibberellin. d.&nbsp;Cytokinin. e. Abscisic acid.</li>
+<li>Jasmonate. g. Salicylic acid.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-27" class="level3">
+<h3 class="anchored" data-anchor-id="section-27">2.12</h3>
+<ol type="a">
+<li>Name the photoreceptor family that detects (i) red and far-red light and
+<ol start="2" type="i">
+<li>blue light for phototropism.</li>
+</ol></li>
+<li>Under a leaf canopy the ratio of red to far-red light falls. What growth response does this cause in a shade-avoiding seedling?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><ol type="i">
+<li>Phytochromes. (ii) Phototropins (cryptochromes also detect blue light).</li>
+</ol></li>
+<li>Increased stem and petiole elongation (shade-avoidance response).</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-28" class="level3">
+<h3 class="anchored" data-anchor-id="section-28">2.13</h3>
+<ol type="a">
+<li>Classify each case as dormancy or quiescence:
+<ol type="i">
+<li>a dry seed stored in a packet;</li>
+<li>a viable seed in warm, moist soil that will not germinate until it has been exposed to cold.</li>
+</ol></li>
+<li>Twelve of 20 seeds have germinated by day 5. Calculate the germination percentage.</li>
+<li>True or false: the other eight seeds are dead.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><ol type="i">
+<li>Quiescence: external conditions (water) are unsuitable.</li>
+<li>Dormancy: a viable seed does not germinate under otherwise suitable conditions.</li>
+</ol></li>
+<li>12/20 × 100 = 60%.</li>
+<li>False. They may be dormant, may germinate later or may be non-viable; the count alone cannot tell.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-29" class="level3">
+<h3 class="anchored" data-anchor-id="section-29">2.14</h3>
+<ol type="a">
+<li><p>Match each element to one role: nitrogen, phosphorus, potassium, magnesium, iron.</p>
+<ol type="1">
+<li>central atom of chlorophyll</li>
+<li>part of amino acids and nucleotides</li>
+<li>main ion for osmotic adjustment in guard cells</li>
+<li>part of ATP and nucleic acids</li>
+<li>component of cytochromes and electron-transfer proteins</li>
+</ol></li>
+<li><p>Nitrogen is mobile in the phloem; iron is not. In which leaves do deficiency symptoms of each first appear?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Magnesium: 1. Nitrogen: 2. Potassium: 3. Phosphorus: 4. Iron: 5.</li>
+<li>Nitrogen: older leaves, because it is remobilised to new growth. Iron: young leaves, because it cannot be moved out of older leaves.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-30" class="level3">
+<h3 class="anchored" data-anchor-id="section-30">2.15</h3>
+<p>Classify each example as an acute response, acclimation or evolutionary adaptation.</p>
+<ol type="a">
+<li>Stomata close within minutes after the roots are exposed to drying soil.</li>
+<li>Plants grown for several weeks in cool conditions increase the proportion of unsaturated fatty acids in their membranes.</li>
+<li>A desert population has inherited CAM photosynthesis.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Acute response. b. Acclimation. c.&nbsp;Evolutionary adaptation.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-31" class="level3">
+<h3 class="anchored" data-anchor-id="section-31">2.16</h3>
+<p>Match each term to its definition: transformation, regeneration, promoter, reporter gene, genome editing, <em>Agrobacterium tumefaciens</em>.</p>
+<ol type="a">
+<li>a DNA sequence that controls where and when a gene is transcribed</li>
+<li>a bacterium that transfers a DNA segment (T-DNA) into plant cells</li>
+<li>the introduction of foreign DNA into a cell</li>
+<li>a targeted change in an existing DNA sequence of the organism</li>
+<li>the growth of a whole plant from cultured cells or tissue</li>
+<li>a gene whose product is easy to detect, such as GFP or GUS</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Promoter. b. <em>Agrobacterium tumefaciens</em>. c.&nbsp;Transformation.</li>
+<li>Genome editing. e. Regeneration. f.&nbsp;Reporter gene.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="integration" class="level2">
+<h2 class="anchored" data-anchor-id="integration">Integrating both halves</h2>
+<section id="section-32" class="level3">
+<h3 class="anchored" data-anchor-id="section-32">3.1</h3>
+<p>Classify each movement as diffusion, osmosis, bulk flow or primary active transport.</p>
+<ol type="a">
+<li>blood flowing through the aorta</li>
+<li>O₂ crossing the alveolar wall</li>
+<li>sap rising in the xylem</li>
+<li>sucrose solution moving along sieve tubes</li>
+<li>H⁺ pumped out of a root cell by the plasma-membrane H⁺-ATPase</li>
+<li>Na⁺ moved out of a neuron by the Na⁺/K⁺-ATPase</li>
+<li>CO₂ moving from a leaf air space into a mesophyll cell</li>
+<li>water entering a guard cell through aquaporins</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Bulk flow. b. Diffusion. c.&nbsp;Bulk flow. d.&nbsp;Bulk flow.</li>
+<li>Primary active transport. f.&nbsp;Primary active transport. g. Diffusion.</li>
+<li>Osmosis.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-33" class="level3">
+<h3 class="anchored" data-anchor-id="section-33">3.2</h3>
+<p>Complete the table comparing water movement into the root xylem of a plant and out of the collecting duct of a mammalian kidney.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Plant root</th>
+<th>Mammalian collecting duct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Is water actively pumped?</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Membrane proteins that increase water permeability</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Origin of the gradient that drives water movement</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Structure that blocks the route between cells</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hormone that reduces water loss from the organism</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Plant root</th>
+<th>Mammalian collecting duct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Is water actively pumped?</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Membrane proteins that increase water permeability</td>
+<td>Aquaporins</td>
+<td>Aquaporins</td>
+</tr>
+<tr class="odd">
+<td>Origin of the gradient that drives water movement</td>
+<td>Lower water potential in the xylem, mainly from transpiration (and solutes loaded into the xylem)</td>
+<td>High osmolality of the medullary interstitium, built by ion transport in the loop of Henle and by urea</td>
+</tr>
+<tr class="even">
+<td>Structure that blocks the route between cells</td>
+<td>Casparian strip</td>
+<td>Tight junctions</td>
+</tr>
+<tr class="odd">
+<td>Hormone that reduces water loss from the organism</td>
+<td>Abscisic acid (stomatal closure)</td>
+<td>ADH (more water reabsorbed)</td>
+</tr>
+</tbody>
+</table>
+<p>In both cases active ion transport creates the gradient, and water follows passively.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-34" class="level3">
+<h3 class="anchored" data-anchor-id="section-34">3.3</h3>
+<p>Complete the table comparing three gas-exchange organs.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Fish gill</th>
+<th>Mammalian lung</th>
+<th>Leaf</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Respiratory medium</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Exchange surface</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Pattern of flow of the medium</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Gas mainly taken up in daylight</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Fish gill</th>
+<th>Mammalian lung</th>
+<th>Leaf</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Respiratory medium</td>
+<td>Water</td>
+<td>Air</td>
+<td>Air</td>
+</tr>
+<tr class="even">
+<td>Exchange surface</td>
+<td>Gill lamellae</td>
+<td>Alveoli</td>
+<td>Walls of mesophyll cells facing the air spaces</td>
+</tr>
+<tr class="odd">
+<td>Pattern of flow of the medium</td>
+<td>One-way, countercurrent to blood</td>
+<td>Tidal (in and out by the same airways)</td>
+<td>No ventilation; diffusion through stomata</td>
+</tr>
+<tr class="even">
+<td>Gas mainly taken up in daylight</td>
+<td>O₂</td>
+<td>O₂</td>
+<td>CO₂</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="section-35" class="level3">
+<h3 class="anchored" data-anchor-id="section-35">3.4</h3>
+<p>State whether each process produces O₂, consumes O₂ or neither.</p>
+<ol type="a">
+<li>photosynthetic electron transport at photosystem II</li>
+<li>mitochondrial respiration in a leaf cell in the light</li>
+<li>mitochondrial respiration in a muscle fibre</li>
+<li>photorespiration</li>
+<li>lactate fermentation in muscle</li>
+<li>ethanol fermentation in a waterlogged root</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Produces. b. Consumes. c.&nbsp;Consumes. d.&nbsp;Consumes (Rubisco oxygenation).</li>
+<li>Neither. f.&nbsp;Neither.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-36" class="level3">
+<h3 class="anchored" data-anchor-id="section-36">3.5</h3>
+<p>A red blood cell and a plant cell are both placed in pure water. The red blood cell bursts; the plant cell does not. Name the structure responsible for the difference, and the pressure that builds up in the plant cell.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The cell wall. Turgor (pressure potential, Ψp) rises until the water potential of the cell equals that of the surrounding water, so net water entry stops.</p>
 </div>
 </div>
 </div>
