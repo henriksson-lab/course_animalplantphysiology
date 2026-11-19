@@ -25,12 +25,12 @@ Images were resized to at most 1000 px wide. The SVG figures are original and ge
 - Licence: Public domain
 - Shows: Transmission electron microscope image of a thin longitudinal section cut through an area of human skeletal muscle tissue. Image shows several myofibrils, each with distinct banding pattern of individual sarcomeres. Image of muscle sarcomeres shows d
 
-## neuromuscular-junction-tem.jpg
+## motor-end-plates.jpg
 
-- Source: <https://commons.wikimedia.org/wiki/File:HeuserNeuro.jpg>
-- Author: Jgheuser (Commons: User:Jgheuser)
-- Licence: Public domain
-- Shows: TEM micrograph of neuromuscular synapse
+- Source: <https://commons.wikimedia.org/wiki/File:%E8%BF%90%E5%8A%A8%E7%BB%88%E6%9D%BF.JPG>
+- Author: Hlj55567516 (Commons: User:Hlj55567516)
+- Licence: CC BY-SA 3.0 (<https://creativecommons.org/licenses/by-sa/3.0>), also GFDL
+- Shows: 运动终板 (motor end plate): light micrograph of skeletal muscle fibres with stained motor axons ending in motor end plates. Used at its original 800 px width; replaces an earlier 330 px TEM thumbnail.
 
 ## graafian-follicle.jpg
 

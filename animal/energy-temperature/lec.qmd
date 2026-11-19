@@ -508,11 +508,13 @@ Exercise 5.4. The figure is the classic U-shaped curve: flat in the middle, risi
 ```
 
 ::: notes
-The thermoneutral-zone curve for a 25 g mouse (red) next to a 25 g lizard (blue) whose body follows the air. Drag the gold handle along the temperature axis, or use the presets. At 20 °C the mouse is below its lower critical temperature and spends about 40 kJ a day, roughly 90 times the lizard. Move to 32 °C: the mouse is in its thermoneutral zone and the ratio drops to about 10, the 5–10× of the previous slides. Go to 0 °C: the mouse's cost climbs steeply while the lizard's falls. Now add fur ("Thick winter fur"): the lower critical temperature moves down and the cost at 0 °C falls by a factor of four, which is why insulation is the first line of defence (next slide). Tick "Log scale" to see the lizard properly: its Q₁₀ curve becomes a straight line, and the Q₁₀ slider changes its slope. Model: basal rate 0.20 W, heat loss = conductance × (37 − Ta), conductance divided by the insulation factor; lizard rate = basal/8 at 37 °C scaled by Q₁₀.
+The thermoneutral-zone curve for a 25 g mouse (red) next to a 25 g lizard (blue) whose body follows the air. Drag the gold handle along the temperature axis, or use the presets. At 20 °C the mouse is below its lower critical temperature and spends about 40 kJ a day, roughly 90 times the lizard. Move to 32 °C: the mouse is in its thermoneutral zone and the ratio drops to about 13, close to the 5–10× of the previous slides. Go to 0 °C: the mouse's cost climbs steeply while the lizard's falls. Now add fur ("Thick winter fur"): the lower critical temperature moves down and the cost at 0 °C falls by a factor of four, which is why insulation is the first line of defence (next slide). Tick "Log scale" to see the lizard properly: its Q₁₀ curve becomes a straight line, and the Q₁₀ slider changes its slope. Model: basal rate 0.20 W, heat loss = conductance × (37 − Ta), conductance divided by the insulation factor; lizard rate = basal/8 at 37 °C scaled by Q₁₀.
 :::
 
 ## Staying warm in the cold
 
+:::: {.columns}
+::: {.column width="55%"}
 **Reduce heat loss**
 
 - **Insulation:** fur, feathers, fat; **piloerection** traps more air.
@@ -525,9 +527,16 @@ The thermoneutral-zone curve for a 25 g mouse (red) next to a 25 g lizard (blue)
 - **Shivering:** contraction without movement; ATP use becomes heat.
 - **Brown adipose tissue:** UCP1 lets protons leak back into mitochondria,
   so fuel is oxidised without making ATP: all heat.
+:::
+::: {.column width="45%"}
+![](figures/brown-adipose-tissue.jpg){width="100%" height="300" style="object-fit: contain;" fig-alt="Light micrograph of brown adipose tissue: each cell has a central nucleus and many small, pale fat droplets in a pink, granular cytoplasm."}
+
+[Micrograph: unknown author (US government), Public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tecido_adiposo_multilocular_brown_adipose_tissue.gif){.credit}
+:::
+::::
 
 ::: notes
-Exercise 5.6 asks for four of these. Each one can be mapped to the previous slides: insulation and posture reduce conduction and convection; countercurrent exchange is the same principle we will see for O₂ in fish gills in A3; brown fat reuses the ATP slide, because it short-circuits the electron transport chain. Brown fat is prominent in newborn mammals, small mammals and hibernators arousing from torpor. Each brown adipocyte holds many small fat droplets (multilocular) rather than one large one, and its cytoplasm is packed with mitochondria, which give the tissue its colour. Huddling also uses surface-to-volume: a group of mice behaves like one larger animal.
+Exercise 5.6 asks for four of these. Each one can be mapped to the previous slides: insulation and posture reduce conduction and convection; countercurrent exchange is the same principle we will see for O₂ in fish gills in A3; brown fat reuses the ATP slide, because it short-circuits the electron transport chain. Brown fat is prominent in newborn mammals, small mammals and hibernators arousing from torpor. The micrograph shows brown adipose tissue: each brown adipocyte holds many small fat droplets (multilocular) rather than one large one, with a central nucleus, and its granular cytoplasm is packed with mitochondria, which give the tissue its colour. Compare white fat, where one large droplet pushes the nucleus to the edge. Huddling also uses surface-to-volume: a group of mice behaves like one larger animal.
 :::
 
 ## Back to the opening problem: mouse versus lizard

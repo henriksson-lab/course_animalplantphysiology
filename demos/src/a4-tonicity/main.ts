@@ -173,7 +173,8 @@ function mount(host: HTMLElement): void {
     title.textContent = `bath: ${total} mOsm L⁻¹`;
     verdict.textContent = `${osm}, but ${ton}`;
     verdict.style.color = ton === "isotonic" ? "#397646" : ton === "hypotonic" ? "#b64853" : "#267a91";
-    if (osm.slice(0, 3) === ton.slice(0, 3)) verdict.textContent = `${osm} and ${ton}`;
+    const cls = (s: string) => s.startsWith("hyper") ? 1 : s.startsWith("iso") ? 0 : -1;
+    if (cls(osm) === cls(ton)) verdict.textContent = `${osm} and ${ton}`;
     const fin = traj.burst >= 0 ? "bursts" : `${traj.V[traj.V.length - 1].toFixed(2)}×`;
     ro.textContent = `total outside      ${total} mOsm L⁻¹\nnon-penetrating    ${effective} mOsm L⁻¹\nfinal cell volume  ${fin}`;
     t0 = performance.now();

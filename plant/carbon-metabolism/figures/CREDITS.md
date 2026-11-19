@@ -10,3 +10,4 @@ Photos downloaded from Wikimedia Commons, resized to at most 1000 px wide. Diagr
 | `pineapple-cam-plant.jpg` | <https://commons.wikimedia.org/wiki/File:AnanasComosusOnPlant.jpg> | Markus Leupold-Löwenthal | CC BY-SA 3.0 |
 | `potato-tuber-sprouting.jpg` | <https://commons.wikimedia.org/wiki/File:Lateral_View_of_sprouting_potato.JPG> | Bmerva | CC BY-SA 3.0 |
 | `aphids-on-stem.jpg` | <https://commons.wikimedia.org/wiki/File:Aphids_on_nasturtium_stem_1730b.JPG> | Lamiot | CC BY-SA 3.0 |
+| `li6800-gas-exchange.jpg` | <https://commons.wikimedia.org/wiki/File:Photosynthesis_System_analysing_a_maize_leaf.jpg> | Viséan | CC BY-SA 4.0 |

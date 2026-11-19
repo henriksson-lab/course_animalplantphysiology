@@ -339,4 +339,151 @@ functions. What is the reason?
 They express different sets of genes (tissue-specific gene expression).
 :::
 
+## Explore: Growth of a walled cell {#explore-p1-cellgrowth}
+
+The demo models one elongating cell with the Lockhart equation, relative growth
+rate r = φ(P − Y), where P is turgor, Y the wall yield threshold (both in MPa)
+and φ the wall extensibility (MPa⁻¹ h⁻¹). Set the sliders or click a preset;
+the readout gives r and the doubling time, and "Grow for 8 h" grows the cell
+from 20 µm.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p1-cellgrowth"></div>
+<script src="../../demos/dist/p1-cellgrowth.js"></script>
+```
+
+### E1.1
+
+Use the default settings (P = 0.60, Y = 0.30, φ = 1.0). What is the growth
+rate r, the doubling time, and the cell length after 8 h (to the nearest µm)?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+r = 1.0 × (0.60 − 0.30) = 0.30 h⁻¹; doubling time ln 2 / 0.30 = 2.3 h;
+length after 8 h = 20 × e^(0.30 × 8) ≈ 220 µm.
+:::
+
+### E1.2
+
+Click "Stiff wall: P < Y" (P = 0.60, Y = 0.70). The cell is fully turgid. What
+is the growth rate, and why?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+r = 0. Turgor (0.60 MPa) does not exceed the yield threshold (0.70 MPa), so
+the wall only stretches elastically and does not yield. A turgid cell is not
+necessarily a growing cell.
+:::
+
+### E1.3
+
+Keep Y = 0.30. Which change gives the larger growth rate: (a) doubling φ to
+2.0 with P = 0.60, or (b) raising P to 0.90 with φ = 1.0?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Neither: both give r = 0.60 h⁻¹ (2.0 × 0.30 and 1.0 × 0.60), with a doubling
+time of 1.2 h. Doubling the extensibility has the same effect as doubling the
+excess of turgor over the yield threshold.
+:::
+
+### E1.4
+
+Click "Acid growth (auxin)" (P = 0.60, Y = 0.20, φ = 1.5). What is r, and by
+what factor is it higher than in the default? Which wall proteins, activated
+by low wall pH, does this preset represent?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+r = 1.5 × (0.60 − 0.20) = 0.60 h⁻¹, twice the default 0.30 h⁻¹. Turgor is
+unchanged; the wall was loosened. Auxin stimulates plasma-membrane H⁺-ATPases,
+the wall acidifies and expansins loosen the cellulose–hemicellulose network
+(higher φ, lower Y).
+:::
+
+### E1.5
+
+Click "Low turgor" (P = 0.35, Y = 0.30, φ = 1.0), as in a mildly
+water-stressed root. What is r and the doubling time? Roughly how long is the
+cell after 8 h?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+r = 1.0 × 0.05 = 0.05 h⁻¹, doubling time 13.9 h; after 8 h the cell is only
+about 30 µm (20 × e^0.4 ≈ 29.8 µm). A small drop in turgor nearly stops growth
+because only the excess above Y drives expansion.
+:::
+
+## Explore: Root growth, more cells or longer cells? {#explore-p1-roottip}
+
+Two root tips, A and B, are shown with the tip held still on the right. Each
+meristem produces new cells at a set rate per cell file; each cell leaves the
+meristem at 10 µm, elongates to a set final length and then matures. Set the
+two sliders for each root and press "Grow for 8 h"; the readouts give the
+number of new cells, the distance the tip moved, and the growth rate.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p1-roottip"></div>
+<script src="../../demos/dist/p1-roottip.js"></script>
+```
+
+### E2.1
+
+Use the "Slide example" (A: 2.2 cells/h, final length 40 µm; B: 1.25 cells/h,
+70 µm) and grow for 8 h. How many new cells does each root make, and how far
+does each tip move?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+A: 17 new cells, B: 10 new cells. Both tips move 0.70 mm (growth rates
+2.2 × 40 = 88 µm/h and 1.25 × 70 = 87.5 µm/h). Root length alone cannot tell
+the two roots apart.
+:::
+
+### E2.2
+
+A drug that blocks cell division halves root A's cell production to 1.1
+cells/h without changing the final cell length (40 µm). What is A's growth
+rate, and how far does its tip move in 8 h?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1.1 × 40 = 44 µm/h (0.044 mm/h); the tip moves 0.35 mm in 8 h, half as far
+as before.
+:::
+
+### E2.3
+
+Set root B's cell production to 1.10 cells/h. Which final cell length (slider
+in steps of 5 µm) makes B grow at exactly the same rate as the default root A?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+80 µm: 1.1 × 80 = 88 µm/h = 2.2 × 40. Both tips then move 0.70 mm in 8 h.
+:::
+
+### E2.4
+
+Click "Identical roots" (1.5 cells/h, 60 µm). Then set A's final cell length
+to 120 µm, as in a mutant with more extensible walls. By what factor does A's
+growth rate change, and which zone of the root tip is responsible?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+It doubles (from 1.5 × 60 = 90 µm/h to 1.5 × 120 = 180 µm/h). The change is
+in the elongation zone, where cells expand; the meristem still produces the
+same number of cells.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

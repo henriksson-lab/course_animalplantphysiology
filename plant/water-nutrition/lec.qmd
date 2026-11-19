@@ -548,6 +548,8 @@ The whole water path in one steady-state model. Transpiration is set in the vapo
 
 ## Essential elements
 
+:::: {.columns}
+::: {.column width="64%"}
 An element is **essential** if the plant cannot complete its life cycle
 without it, or it is part of an essential molecule, and no other element can
 replace it.
@@ -560,6 +562,14 @@ replace it.
 | Mg | 0.2 | B | 20 |
 | P | 0.2 | Cu | 6 |
 | S | 0.1 | Mo | 0.1 |
+:::
+::: {.column width="36%"}
+
+![](figures/n-deficiency-bean.jpg){width="100%" height="400" fig-alt="A nitrogen-deficient bean plant in a garden bed: all its leaves are pale yellow-green, while the healthy bean plants at the edges of the photo are dark green."}
+
+[Photo: Rasbak, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg){.credit}
+:::
+::::
 
 - "Macro" and "micro" refer to the **amount needed**, not to importance:
   without 0.1 mg kg⁻¹ of Mo the plant dies just as surely.
@@ -568,7 +578,7 @@ replace it.
 **What does each element do, and how do you recognise a deficiency?**
 
 ::: notes
-Exercises 5.1 and 5.2. The concentrations are the standard values from Epstein, as quoted in Taiz & Zeiger: nitrogen is needed at about 10⁵ times the concentration of molybdenum. Students should be able to sort the twelve elements into the two groups. Essentiality is tested by growing plants in hydroponic solutions lacking one element.
+Exercises 5.1 and 5.2. The concentrations are the standard values from Epstein, as quoted in Taiz & Zeiger: nitrogen is needed at about 10⁵ times the concentration of molybdenum. Students should be able to sort the twelve elements into the two groups. Essentiality is tested by growing plants in hydroponic solutions lacking one element. The photo shows what lack of the most-needed element looks like: a nitrogen-starved bean plant is pale yellow-green all over, compared with the dark green healthy plants at the edges. Nitrogen is in chlorophyll and in every protein, so the whole plant pales and grows slowly; the next two slides explain which leaves go first.
 :::
 
 ## Roles of elements and where symptoms appear {.smaller}

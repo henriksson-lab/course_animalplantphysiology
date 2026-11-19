@@ -411,4 +411,102 @@ limbs; curling up (posture) and huddling; shivering thermogenesis;
 non-shivering thermogenesis in brown adipose tissue.
 :::
 
+## Explore: Endotherm versus ectotherm {#explore-a2-thermal}
+
+The demo plots metabolic rate against air temperature for a 25 g mouse (red)
+that keeps its body at 37 °C, and a 25 g lizard (blue) whose body follows the
+air. Drag the gold handle or use the air-temperature slider; the readout gives
+both rates, the food energy per day, the mouse's thermal zone and its lower
+critical temperature (LCT).
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a2-thermal"></div>
+<script src="../../demos/dist/a2-thermal.js"></script>
+```
+
+### E1
+
+Press **Reset (20 °C)**. Read off:
+
+a. the mouse's metabolic rate in kJ day⁻¹
+b. the lizard's metabolic rate in kJ day⁻¹
+c. how many times more energy the mouse needs
+d. which thermal zone the mouse is in
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 42 kJ day⁻¹ (0.49 W).
+b. 0.5 kJ day⁻¹ (0.005 W).
+c. About 92 times.
+d. Below its LCT (30 °C), so it must make extra heat to stay at 37 °C.
+:::
+
+### E2
+
+Press **Warm day 32 °C**.
+
+a. What is the mouse's metabolic rate in kJ day⁻¹, and which zone is it in?
+b. How many times more energy than the lizard does it now need?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 17 kJ day⁻¹ (0.20 W, the basal rate); the thermoneutral zone.
+b. About 13 times. Inside the thermoneutral zone the difference between the
+   endotherm and the ectotherm is close to the 5–10× from the lecture; below
+   the LCT it grows quickly.
+:::
+
+### E3
+
+Press **Winter night 0 °C**, then **Thick winter fur** (insulation × 4, still
+0 °C). For each, read the mouse's rate in kJ day⁻¹ and its LCT.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Mouse rate | LCT |
+| --- | --- | --- |
+| Thin fur (× 1) | 91 kJ day⁻¹ (1.06 W) | 30 °C |
+| Thick fur (× 4) | 23 kJ day⁻¹ (0.26 W) | 9 °C |
+
+Four times the insulation divides the heat loss, and hence the cost of
+staying warm, by four. It also moves the LCT down from 30 °C to 9 °C, which
+widens the thermoneutral zone.
+:::
+
+### E4
+
+At 0 °C, increase the fur insulation step by step. What is the smallest
+setting at which 0 °C lies inside the mouse's thermoneutral zone (LCT below
+0 °C)?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+× 5.5 (LCT −1.5 °C, shown as −2 °C). At × 5.0 the LCT is 2 °C. In the model
+LCT = 37 − 7 × (insulation) °C, so LCT reaches 0 °C at insulation 37/7 ≈ 5.3.
+:::
+
+### E5
+
+Press **Reset** and keep the lizard's Q₁₀ at 2.5. Read the lizard's rate in W
+at 37 °C and at 27 °C. Then set Q₁₀ to 2.0 and read the rate at 27 °C again.
+
+a. By what factor does the rate change between 37 and 27 °C at Q₁₀ = 2.5?
+b. Does the lizard's rate at 27 °C increase or decrease when Q₁₀ is lowered
+   to 2.0?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 0.025 W at 37 °C and 0.010 W at 27 °C: a factor of 2.5, which is the
+   definition of Q₁₀ (the change in rate for a 10 °C change in temperature).
+b. It increases, to 0.013 W. A lower Q₁₀ means the rate falls less on cooling
+   by 10 °C (factor 2.0 instead of 2.5). With **Log scale** ticked the lizard's
+   curve is a straight line whose slope is set by Q₁₀.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

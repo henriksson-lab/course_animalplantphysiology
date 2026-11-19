@@ -69,6 +69,10 @@ website:
           text: Lecture slides
         - href: animal/organisation/exercise.qmd
           text: Exercises
+        - href: animal/organisation/exercise.qmd#explore-a1-scaling
+          text: "Demo: Diffusion limits body size"
+        - href: animal/organisation/exercise.qmd#explore-a1-feedback
+          text: "Demo: Feedback control of body temperature"
         - href: animal/organisation/quiz.qmd
           text: Self-check quiz
       - section: 'A2: Energy and temperature'
@@ -79,6 +83,8 @@ website:
           text: Lecture slides
         - href: animal/energy-temperature/exercise.qmd
           text: Exercises
+        - href: animal/energy-temperature/exercise.qmd#explore-a2-thermal
+          text: "Demo: Endotherm versus ectotherm"
         - href: animal/energy-temperature/quiz.qmd
           text: Self-check quiz
       - section: 'A3: Gas exchange and circulation'
@@ -89,6 +95,10 @@ website:
           text: Lecture slides
         - href: animal/gas-circulation/exercise.qmd
           text: Exercises
+        - href: animal/gas-circulation/exercise.qmd#explore-a3-dissociation
+          text: "Demo: Haemoglobin loading and unloading"
+        - href: animal/gas-circulation/exercise.qmd#explore-a3-countercurrent
+          text: "Demo: Countercurrent exchange in the gill"
         - href: animal/gas-circulation/quiz.qmd
           text: Self-check quiz
       - section: 'A4: Water and excretion'
@@ -99,6 +109,10 @@ website:
           text: Lecture slides
         - href: animal/water-excretion/exercise.qmd
           text: Exercises
+        - href: animal/water-excretion/exercise.qmd#explore-a4-tonicity
+          text: "Demo: Tonicity and cell volume"
+        - href: animal/water-excretion/exercise.qmd#explore-a4-renal
+          text: "Demo: Glucose transport maximum"
         - href: animal/water-excretion/quiz.qmd
           text: Self-check quiz
       - section: 'A5: Integration and movement'
@@ -109,6 +123,12 @@ website:
           text: Lecture slides
         - href: animal/integration/exercise.qmd
           text: Exercises
+        - href: animal/integration/exercise.qmd#explore-a5-membrane
+          text: "Demo: Ion gradients and membrane potential"
+        - href: animal/integration/exercise.qmd#explore-a5-spike
+          text: "Demo: Threshold and refractory periods"
+        - href: animal/integration/exercise.qmd#explore-a5-twitch
+          text: "Demo: Summation, tetanus and recruitment"
         - href: animal/integration/quiz.qmd
           text: Self-check quiz
     - section: Plant physiology
@@ -123,6 +143,10 @@ website:
           text: Lecture slides
         - href: plant/organisation/exercise.qmd
           text: Exercises
+        - href: plant/organisation/exercise.qmd#explore-p1-cellgrowth
+          text: "Demo: Growth of a walled cell"
+        - href: plant/organisation/exercise.qmd#explore-p1-roottip
+          text: "Demo: Root growth: more cells or longer cells?"
         - href: plant/organisation/quiz.qmd
           text: Self-check quiz
       - section: 'P2: Water and nutrition'
@@ -133,6 +157,10 @@ website:
           text: Lecture slides
         - href: plant/water-nutrition/exercise.qmd
           text: Exercises
+        - href: plant/water-nutrition/exercise.qmd#explore-p2-waterpotential
+          text: "Demo: A plant cell in a solution"
+        - href: plant/water-nutrition/exercise.qmd#explore-p2-soilplantair
+          text: "Demo: The soil–plant–air continuum"
         - href: plant/water-nutrition/quiz.qmd
           text: Self-check quiz
       - section: 'P3: Carbon and metabolism'
@@ -143,6 +171,8 @@ website:
           text: Lecture slides
         - href: plant/carbon-metabolism/exercise.qmd
           text: Exercises
+        - href: plant/carbon-metabolism/exercise.qmd#explore-p3-lightcurve
+          text: "Demo: Light-response curve"
         - href: plant/carbon-metabolism/quiz.qmd
           text: Self-check quiz
       - section: 'P4: Development'
@@ -153,6 +183,10 @@ website:
           text: Lecture slides
         - href: plant/development/exercise.qmd
           text: Exercises
+        - href: plant/development/exercise.qmd#explore-p4-phytochrome
+          text: "Demo: Phytochrome switch in lettuce seeds"
+        - href: plant/development/exercise.qmd#explore-p4-photoperiod
+          text: "Demo: Photoperiod and night breaks"
         - href: plant/development/quiz.qmd
           text: Self-check quiz
       - section: 'P5: Stress and biotechnology'
@@ -163,6 +197,12 @@ website:
           text: Lecture slides
         - href: plant/stress-biotechnology/exercise.qmd
           text: Exercises
+        - href: plant/stress-biotechnology/exercise.qmd#explore-p5-stomata
+          text: "Demo: Stomata, ABA and drought"
+        - href: plant/stress-biotechnology/exercise.qmd#explore-p5-tissueculture
+          text: "Demo: Auxin and cytokinin in tissue culture"
+        - href: plant/stress-biotechnology/exercise.qmd#explore-p5-refuge
+          text: "Demo: Refuges and Bt resistance"
         - href: plant/stress-biotechnology/quiz.qmd
           text: Self-check quiz
     - section: Practical work

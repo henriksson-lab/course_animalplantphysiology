@@ -38,3 +38,10 @@ Images were resized to at most 1000 px wide. The SVG figures are original and ge
 - Author: George Harrison (Commons: Harrison, George)
 - Licence: Public domain
 - Shows: Kangaroo Rat (Dipodomys ingens)
+
+## bird-droppings-urates.jpg
+
+- Source: <https://commons.wikimedia.org/wiki/File:Chicken-feces.jpg>
+- Author: AmbroseHem (Commons: User:AmbroseHem)
+- Licence: CC0 (<http://creativecommons.org/publicdomain/zero/1.0/>)
+- Shows: The waste from a seven-year-old Ameraucana chicken taken in Visalia, California. Note the distinct separation of urates and feces. (Cropped and resized.)

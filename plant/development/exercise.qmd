@@ -400,4 +400,144 @@ b. Nitrogen, phosphorus and potassium. Calcium is immobile in the phloem and
 c. Phloem.
 :::
 
+## Explore: Phytochrome switch in lettuce seeds {#explore-p4-phytochrome}
+
+The demo repeats the lettuce-seed experiment. Give imbibed seeds brief red
+(660 nm) or far-red (730 nm) flashes; the chart shows the fraction of
+phytochrome in the active Pfr form after each flash. Then press "Incubate 2
+days in darkness" to see how many of the 20 seeds germinate. The "Lecture
+sequences" buttons load ready-made sequences.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p4-phytochrome"></div>
+<script src="../../demos/dist/p4-phytochrome.js"></script>
+```
+
+### E1.1
+
+Press "dark" and incubate. How many of the 20 seeds germinate, and what is
+the Pfr fraction? Why?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+0 of 20 germinate, and Pfr is 0 %. Phytochrome is synthesised as the
+inactive Pr form, so a seed that has seen no light has no Pfr.
+:::
+
+### E1.2
+
+Press "R" and incubate. What fraction of the phytochrome is Pfr after the
+flash, how many seeds germinate, and why is Pfr not 100 %?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Pfr is 85 % and 18 of 20 seeds (90 %) germinate. Pfr also absorbs some red
+light and is converted back to Pr, so saturating red light gives a
+photoequilibrium of about 85 % Pfr, not 100 %.
+:::
+
+### E1.3
+
+Predict, then test, the number of germinating seeds (out of 20) after each
+sequence: R FR; R FR R; R FR R FR; R R FR FR R.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Sequence | Last flash | Pfr | Germinated |
+| --- | --- | ---: | ---: |
+| R FR | far-red | 3 % | 0 |
+| R FR R | red | 85 % | 18 |
+| R FR R FR | far-red | 3 % | 0 |
+| R R FR FR R | red | 85 % | 18 |
+
+Only the last flash matters: it sets the Pfr fraction, and the seed responds
+to the Pfr present when it is returned to darkness. This red/far-red
+reversibility is the signature of a phytochrome response.
+:::
+
+## Explore: Photoperiod and night breaks {#explore-p4-photoperiod}
+
+The clock shows one 24-hour cycle with noon at the top. Set the day length,
+add a brief flash during the night (red, red then far-red, or far-red only)
+and move it with "Flash at" (% of the way from dusk to dawn). The bar below
+shows the dark periods the plant measures, with the critical night length
+(11 h) as a dashed line, and the two plants show whether a short-day plant
+(SDP) and a long-day plant (LDP) flower.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p4-photoperiod" data-day="8" data-critical="11"></div>
+<script src="../../demos/dist/p4-photoperiod.js"></script>
+```
+
+### E2.1
+
+For each lecture case, give the longest dark period and whether the SDP and
+the LDP flower: 16 L / 8 D; 8 L / 16 D; 8 L / 16 D + red break;
+8 L / 16 D + red, far-red; 8 L / 16 D + 1 h dark in the day.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Case | Longest dark period | SDP | LDP |
+| --- | ---: | --- | --- |
+| 16 L / 8 D | 8 h | vegetative | flowers |
+| 8 L / 16 D | 16 h | flowers | vegetative |
+| + red break (middle of night) | 8 h | vegetative | flowers |
+| + red, then far-red | 16 h | flowers | vegetative |
+| + 1 h dark in the day | 16 h | flowers | vegetative |
+
+The plant measures the length of the uninterrupted night, not the day: a red
+flash splits the night, far-red right after cancels it, and darkness during
+the day has no effect.
+:::
+
+### E2.2
+
+With no flash, move the day length slider (steps of 0.5 h). What is the
+longest day length at which the SDP still flowers? What is the night length
+then?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+13 h of light, giving an 11 h night, exactly the critical night length. At
+13.5 h of light the night is 10.5 h, the SDP stays vegetative and the LDP
+flowers. Both plants switch at the same day length; they respond in opposite
+directions to the same measured night.
+:::
+
+### E2.3
+
+Press "+ red break" (8 h day, 16 h night, flash at 50 %). Move "Flash at"
+in steps of 5 %. Over which range of flash positions does the SDP stay
+vegetative?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+From 35 % to 65 %. At 30 % the night is split into 4.8 h + 11.2 h, and the
+11.2 h fragment is longer than the critical 11 h, so the SDP flowers again
+(likewise at 70 %: 11.2 h + 4.8 h). A night break works only if neither
+fragment reaches the critical night length, which is why growers place it
+near the middle of the night.
+:::
+
+### E2.4
+
+Press "far-red only" with an 8 h day. Does the SDP flower? Why does far-red
+alone have no effect?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Yes, the SDP flowers (longest dark period 16 h). At night phytochrome is
+already mostly in the inactive Pr form, so far-red has almost no Pfr to
+convert; the night is not interrupted.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

@@ -390,4 +390,113 @@ photosynthesis and respiration, so nitrogen assimilation depends on carbon
 metabolism.
 :::
 
+## Explore: Light-response curve {#explore-p3-lightcurve}
+
+The demo plots net CO₂ uptake of one sun leaf against light, for a C3 leaf
+(wheat) or a C4 leaf (maize). Use the Light slider (or drag the round handle)
+to read the curve; the table gives net and gross photosynthesis, dark
+respiration, the CO₂ released by photorespiration, the light compensation
+point and what limits the rate. The scenario buttons ("Hot, dry", "1000 ppm",
+"Cool, 12 °C") change CO₂, temperature and stomata but keep the light where it
+is. Press Reset before each question.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p3-lightcurve" data-pathway="C3" data-co2="420" data-temp="25" data-light="600"></div>
+<script src="../../demos/dist/p3-lightcurve.js"></script>
+```
+
+### E1.1
+
+Start values: C3 leaf, 420 ppm CO₂, 25 °C, light 600 µmol photons m⁻² s⁻¹.
+
+a. Read off net uptake, gross photosynthesis and dark respiration. Show that
+   the three numbers are consistent.
+b. What limits the rate at this light: light or Rubisco?
+c. Move the light to 0. What is the net uptake now, and why is it negative?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Net 14.7, gross 15.9 and respiration 1.2 µmol m⁻² s⁻¹. Net = gross −
+   respiration: 15.9 − 1.2 = 14.7.
+b. Light. At 2000 µmol photons m⁻² s⁻¹ the limit switches to Rubisco
+   (net about 16), where the curve flattens.
+c. −1.2 µmol m⁻² s⁻¹. In darkness there is no photosynthesis, but
+   mitochondrial respiration continues and releases CO₂.
+:::
+
+### E1.2
+
+Tick "Zoom in on low light". Read off the light compensation point of the C3
+leaf at 25 °C, then press "C4 leaf (maize)" and read it again. Which leaf has
+the lower compensation point, and by about how much?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+C3: 25 µmol photons m⁻² s⁻¹. C4: 23 µmol photons m⁻² s⁻¹. The two are almost
+the same: at 25 °C both leaves have the same dark respiration (1.2), and at
+low light the C4 leaf's extra ATP cost per CO₂ roughly cancels the C3 leaf's
+loss to photorespiration.
+:::
+
+### E1.3
+
+Reset (C3, light 600) and press "Hot, dry" (38 °C, stomata nearly closed).
+
+a. Read off net uptake, the CO₂ released by photorespiration (with the
+   number of O₂ fixed per CO₂) and dark respiration. Compare with E1.1.
+b. Now press "C4 leaf (maize)" and "Hot, dry" again. What is the net uptake
+   of the C4 leaf?
+c. Which enzyme explains the difference between b and a?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Net uptake falls from 14.7 to 1.5 µmol m⁻² s⁻¹. Photorespiration rises
+   from 2.7 to 5.4 µmol m⁻² s⁻¹ (O₂/CO₂ from 0.29 to 1.10), and respiration
+   rises from 1.2 to 3.0. Closed stomata lower the CO₂ inside the leaf, and
+   heat raises Rubisco's oxygenation relative to carboxylation.
+b. 13.8 µmol m⁻² s⁻¹, about nine times the C3 leaf.
+c. PEP carboxylase. It does not react with O₂ and binds CO₂ (as HCO₃⁻) at
+   low concentration, so the C4 leaf concentrates CO₂ around Rubisco in the
+   bundle sheath and photorespiration stays near zero (0.3).
+:::
+
+### E1.4
+
+Reset and press "1000 ppm" (a greenhouse with CO₂ enrichment), light 600.
+
+a. Read off net uptake and photorespiration of the C3 leaf.
+b. Press "C4 leaf (maize)". Does raising CO₂ from 420 to 1000 ppm increase
+   the net uptake of the C4 leaf at this light?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Net 18.9 µmol m⁻² s⁻¹ (up from 14.7); photorespiration 1.3 µmol m⁻² s⁻¹
+   (down from 2.7; O₂/CO₂ 0.12). More CO₂ wins the competition with O₂ at
+   Rubisco's active site.
+b. No: it stays at 29.7 µmol m⁻² s⁻¹, because the C4 leaf already
+   concentrates CO₂ and is light-limited at 600. This is why CO₂ enrichment
+   benefits C3 crops more than C4 crops.
+:::
+
+### E1.5
+
+Reset and press "Cool, 12 °C" (light 600). Read off net uptake for the C3 leaf,
+then press "C4 leaf (maize)" and "Cool, 12 °C". Which leaf takes up more CO₂,
+and what limits the C4 leaf?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+C3: 10.1 µmol m⁻² s⁻¹. C4: 6.0 µmol m⁻² s⁻¹. The C3 leaf wins. The C4 leaf
+is limited by enzyme capacity: its enzymes are cold-sensitive, and it pays
+2 extra ATP per CO₂, which is not worth it when photorespiration is already
+low in the cold (C3 O₂/CO₂ is only 0.15 at 12 °C). This is why C4 grasses
+dominate warm regions and C3 grasses cool ones.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

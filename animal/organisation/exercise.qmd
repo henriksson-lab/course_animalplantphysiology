@@ -326,4 +326,195 @@ Complete the table comparing oxygen delivery to the tissues.
 | Role of the circulatory system in O₂ transport | Small | Essential |
 :::
 
+## Explore: Diffusion limits body size {#explore-a1-scaling}
+
+The demo shows a ball (or flat sheet) of tissue in air-saturated water that
+gets O₂ only by diffusion from its surface. Colour shows the O₂ level and the
+readouts give A/V, the diffusion time to the centre, the largest size that
+diffusion can supply and the O₂ at the centre. Use the radius and O₂-use
+sliders, or the preset buttons.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a1-scaling"></div>
+<script src="../../demos/dist/a1-scaling.js"></script>
+```
+
+### E1
+
+Press **Reset** (sphere, radius 0.50 mm, O₂ use 0.20 mL g⁻¹ h⁻¹). Read off:
+
+a. A/V
+b. the diffusion time to the centre
+c. the O₂ at the centre, as % of the surface value
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 6.00 mm⁻¹ (= 3/r for a sphere).
+b. About 62 s ($t \approx x^2/2D$ with $x$ = 0.5 mm and $D$ = 2 × 10⁻⁹ m² s⁻¹).
+c. 81 %. Every cell gets O₂.
+:::
+
+### E2
+
+From Reset, drag the radius up to 1.0 mm.
+
+a. By what factor has A/V changed?
+b. By what factor has the diffusion time to the centre changed?
+c. What does the readout give as the largest radius that diffusion alone can
+   supply?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. It halves, from 6.00 to 3.00 mm⁻¹ (A/V ∝ 1/r).
+b. It increases four times, from about 62 s to 250 s (shown as 4 min),
+   because diffusion time ∝ r².
+c. 1.14 mm. Above this radius an anoxic core appears; at 1.0 mm the centre
+   still has about 23 % O₂.
+:::
+
+### E3
+
+Press **5 mm ball**. What percentage of the tissue gets no O₂?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+About 64 %. The radius is more than four times the largest radius (1.14 mm)
+that diffusion can supply, so most of the volume is anoxic.
+:::
+
+### E4
+
+Press **Mouse tissue** (radius 0.50 mm, O₂ use 2.5 mL g⁻¹ h⁻¹, about 12 times
+the Reset value).
+
+a. What is now the largest radius that diffusion can supply?
+b. Which statement explains the change? (i) the largest radius falls in
+   proportion to the O₂ use; (ii) the largest radius falls in proportion to
+   the square root of the O₂ use; (iii) the largest radius does not depend
+   on the O₂ use.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 323 µm (0.32 mm), so the 0.50 mm ball now has an anoxic core (17 % of the
+   tissue).
+b. (ii). The largest radius is $\sqrt{6DC_0/M}$; 12.5 times the O₂ use gives
+   $\sqrt{12.5} \approx 3.5$ times smaller radius (1.14 mm → 0.32 mm). A
+   tissue with a mammalian metabolic rate must therefore be supplied over much
+   shorter distances, by capillaries.
+:::
+
+### E5
+
+Press **Flatworm** (flat sheet, 0.15 mm half-thickness).
+
+a. What is the largest half-thickness that diffusion can supply?
+b. Does this limit depend on the length and width of the sheet?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 660 µm (0.66 mm), i.e. a sheet up to about 1.3 mm thick. For a flat sheet
+   the limit is $\sqrt{2DC_0/M}$, which is $1/\sqrt{3}$ of the sphere's limit.
+b. No. Only the thickness sets the diffusion distance, so a flatworm can be
+   several centimetres long and wide as long as it stays thin.
+:::
+
+## Explore: Feedback control of body temperature {#explore-a1-feedback}
+
+The demo simulates body temperature under a heat load from exercise (or cold)
+between minute 10 and minute 40. The effector response is proportional to the
+deviation from the 37 °C set point. Choose the type of loop with the buttons,
+set the gain, response delay and disturbance with the sliders, and read the
+deviations in the readout.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a1-feedback"></div>
+<script src="../../demos/dist/a1-feedback.js"></script>
+```
+
+### E6
+
+Press **Reset** (negative feedback, gain 0.5, no delay, disturbance
++0.30 °C min⁻¹).
+
+a. What is the deviation from the set point at minute 40?
+b. Is the temperature back at 37 ± 0.1 °C at 60 min?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. +0.55 °C. Some deviation remains during the whole exercise period, because
+   the effector response is driven by the deviation itself.
+b. Yes.
+:::
+
+### E7
+
+Keep negative feedback and set the gain to 1.0, then to 2.0 (**Strong, fast**).
+Read the deviation at minute 40 each time. What happens to the remaining
+error when the gain is doubled?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Gain 1.0: +0.29 °C. Gain 2.0: +0.15 °C. Doubling the gain roughly halves the
+remaining error; a stronger response holds the regulated variable closer to
+the set point, but never exactly on it.
+:::
+
+### E8
+
+Return to **Reset** and press **None**, then **Positive feedback**. For each,
+read the deviation at minute 40 and say whether the temperature is back at
+37 °C by 60 min.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Loop | Deviation at minute 40 | Back at 37 °C at 60 min? |
+| --- | --- | --- |
+| None | +4.66 °C | No |
+| Positive feedback | +13.00 °C (runs off the top of the plot) | No |
+
+Without feedback the heat load drives a drift of several degrees. With
+positive feedback the response amplifies the deviation, so temperature runs
+away out of the survivable range and does not return when exercise stops.
+:::
+
+### E9
+
+Press **Strong, slow** (gain 2.0, delay 1.5 min). Then lower the gain to 0.5
+while keeping the 1.5 min delay.
+
+a. What happens with gain 2.0 and the delay?
+b. What is the largest deviation with gain 0.5 and the delay?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. The temperature overshoots the set point and oscillates with growing
+   amplitude until it leaves the survivable range: a strong response that
+   acts on old information over-corrects.
+b. +0.69 °C (compared with +0.55 °C without delay). With a weaker response
+   the delay causes only a small overshoot, and temperature returns to 37 °C.
+:::
+
+### E10
+
+Press **Cold** (disturbance −0.30 °C min⁻¹). What is the deviation at minute
+40, and is the effector cooling or heating the body?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+−0.55 °C, the mirror image of Reset. The effector trace lies below the line:
+it is heating (for example shivering), opposing the fall in temperature.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

@@ -490,4 +490,247 @@ g. Menstruation begins and FSH rises again
 d → b → e → a → c → f → g.
 :::
 
+## Explore: Ion gradients and membrane potential {#explore-a5-membrane}
+
+The left panel shows K⁺ (green) and Na⁺ (red) on both sides of the membrane,
+with the channel widths showing the relative permeability; the right panel
+places $E_\text{K}$, $E_\text{Na}$ (Nernst) and the membrane potential $V_m$
+(Goldman equation) on one voltage scale. Use the sliders or the preset buttons,
+and read the values from the readout below the buttons.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a5-membrane" data-preset="rest"></div>
+<script src="../../demos/dist/a5-membrane.js"></script>
+```
+
+### E1.1
+
+Click **Rest**. Read off $E_\text{K}$, $E_\text{Na}$ and $V_m$. Is $V_m$ closer
+to $E_\text{K}$ or to $E_\text{Na}$?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$E_\text{K}$ = −89 mV, $E_\text{Na}$ = +61 mV, $V_m$ = −69 mV (the same values
+as in 1.1). $V_m$ is much closer to $E_\text{K}$, because at rest
+$P_\text{Na}/P_\text{K}$ is only 0.04.
+:::
+
+### E1.2
+
+Click **K⁺ channels only** ($P_\text{Na}/P_\text{K} \approx 0$). What is $V_m$
+now, and what is the K⁺ driving force?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$V_m$ = −88 mV, practically equal to $E_\text{K}$ (−89 mV); the K⁺ driving
+force is only +1 mV. A membrane permeable to one ion only sits at that ion's
+Nernst potential.
+:::
+
+### E1.3
+
+Click **Rest**, then drag **K⁺ outside** from 5 to 10. Read off $E_\text{K}$ and
+$V_m$. Then click **K⁺ out = 20** and read them again. Does raising
+extracellular K⁺ depolarise or hyperpolarise the cell?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| K⁺ outside (mmol L⁻¹) | $E_\text{K}$ | $V_m$ |
+| ---: | ---: | ---: |
+| 5 | −89 mV | −69 mV |
+| 10 | −70 mV | −58 mV |
+| 20 | −52 mV | −45 mV |
+
+It depolarises the cell (compare 1.3). This is why hyperkalaemia is dangerous:
+excitable cells, including heart muscle, are pushed towards and past threshold.
+:::
+
+### E1.4
+
+Click **Na⁺ channels open** ($P_\text{Na}/P_\text{K}$ = 20). What is $V_m$? Did
+the number of ion dots on either side change noticeably?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$V_m$ = +50 mV, close to $E_\text{Na}$ (+61 mV), as at the peak of an action
+potential. The dots do not change: the potential reverses through a change in
+permeability, not in concentration; very few ions need to cross.
+:::
+
+### E1.5
+
+Click **Rest**, then set $P_\text{Na}/P_\text{K}$ to 1 (equal permeabilities).
+Which value is closest to $V_m$: −89, −69, −1 or +61 mV?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+−1 mV. With equal permeabilities $V_m$ lies roughly midway between
+$E_\text{K}$ and $E_\text{Na}$: the membrane potential is a
+permeability-weighted compromise between the equilibrium potentials.
+:::
+
+## Explore: Threshold and refractory periods {#explore-a5-spike}
+
+A Hodgkin–Huxley axon receives two brief current pulses, S1 and S2 (each
+0.5 ms). Set their strengths and the S1 → S2 interval with the sliders or the
+preset buttons. The lower panel shows the fraction of Na⁺ channels that are not
+inactivated (green) and the open K⁺ channels (gold); the verdict and readout
+below the buttons report the spikes.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a5-spike" data-a1="40" data-a2="40" data-gap="3"></div>
+<script src="../../demos/dist/a5-spike.js"></script>
+```
+
+### E2.1
+
+Click **Too weak** (S1 = 12, no S2), then raise **S1 strength** one step at a
+time. What is the smallest S1 that produces a spike?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+16. At 15 the membrane depolarises a little and returns to rest; at 16 a full
+spike follows. This is the threshold.
+:::
+
+### E2.2
+
+Click **One spike** (S1 = 40) and read the peak Vm. Then set S1 to 20 and to 80.
+What happens to the peak?
+
+a. It roughly doubles from S1 = 20 to S1 = 80.
+b. It stays about the same (+26 to +32 mV).
+c. The spike disappears at S1 = 80.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b. Peak Vm is +30 mV at S1 = 40, +26 mV at 20 and +32 mV at 80. Above
+threshold the spike is all-or-none: a stronger stimulus does not give a bigger
+spike (stimulus strength is coded by spike frequency instead). The lowest Vm,
+the undershoot, is −81 mV in every case.
+:::
+
+### E2.3
+
+Click **2nd at 1.5 ms, 8×** (S2 = 320, eight times S1). Is there a second spike?
+Which refractory period is this, and what does the green trace show?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No second spike, even at S2 = 320: the absolute refractory period. The green
+trace shows that almost all Na⁺ channels are still inactivated, so no stimulus
+can open enough of them.
+:::
+
+### E2.4
+
+Click **2nd at 3 ms** (S2 = 40). Does S2 fire? According to the verdict, what
+S2 strength is needed at this interval? Then click **3 ms, 2× stronger**: how
+many spikes now?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+S2 = 40 fails; the verdict says S2 needs about 60 (relative refractory period).
+At S2 = 80 there are 2 spikes. In the relative refractory period a spike is
+possible, but only with a stronger stimulus, because some Na⁺ channels are
+still inactivated and K⁺ channels are still open.
+:::
+
+### E2.5
+
+Keep S1 = S2 = 40 and drag **S1 → S2** upwards from 2 ms in 0.5 ms steps. At
+which interval does the second spike first appear?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+At 4.0 ms (at 3.5 ms S2 would need about 45). Refractoriness limits the maximum
+spike frequency and makes spikes travel in one direction only.
+:::
+
+## Explore: Summation, tetanus and recruitment {#explore-a5-twitch}
+
+The plot shows the force of a muscle of four motor units (sizes 1 to 4, stacked
+colours) when its motor neurons fire at the chosen rate for 500 ms; red ticks
+below are the spikes. Set **Stimulus rate** (0 = one stimulus) and **Motor
+units** with the sliders or buttons and read the verdict and readout.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a5-twitch" data-hz="0" data-units="4"></div>
+<script src="../../demos/dist/a5-twitch.js"></script>
+```
+
+### E3.1
+
+With 4 motor units, click **5 Hz**, **15 Hz**, **30 Hz** and **80 Hz** in turn.
+For each, give the verdict and the "peak force / one twitch" value.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Rate | Verdict | Peak force / one twitch |
+| ---: | --- | ---: |
+| 5 Hz | Separate twitches | 1.0× |
+| 15 Hz | Summation: unfused tetanus | 1.6× |
+| 30 Hz | Fused tetanus | 2.4× |
+| 80 Hz | Fused tetanus | 3.4× |
+
+At higher rates Ca²⁺ is released again before the previous release has been
+pumped back into the sarcoplasmic reticulum, so the twitches summate.
+:::
+
+### E3.2
+
+Drag the rate slider upwards from 20 Hz. At which rate does the verdict first
+change to "Fused tetanus"?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+30 Hz. Force keeps rising beyond that (2.4× at 30 Hz, 3.4× at 80 Hz) even
+though the trace is already smooth.
+:::
+
+### E3.3
+
+Set the rate to 80 Hz. Read the peak total force with 1, 2, 3 and 4 motor units
+recruited. Which unit adds the largest step?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+0.9, 2.8, 5.7 and 9.4. The fourth (largest) unit adds the largest step (3.7).
+Units are recruited smallest first (size principle), so force is graded finely
+at low force and in large steps at high force.
+:::
+
+### E3.4
+
+Click **Single twitch** with 4 units, then **80 Hz** with 4 units. Which of the
+following changed between the two runs?
+
+a. The size of each motor-neuron spike
+b. The number of motor-neuron spikes
+c. The number of motor units recruited
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Only b (1 stimulus versus 40). Peak total force rose from 2.8 to 9.4 because
+the muscle summates many twitches; spikes are all-or-none and never got bigger.
+Muscle force is graded by firing rate and by recruitment (c, not changed here).
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

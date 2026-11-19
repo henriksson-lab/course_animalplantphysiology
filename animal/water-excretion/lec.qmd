@@ -527,16 +527,38 @@ This turns the concentrating mechanism into a number. The same solute load needs
 Amino-acid breakdown produces ammonia; the question is whether to excrete it as is or convert it first. Read the table as a trade-off between water and energy. The tadpole-to-frog switch is the clearest example that the choice follows the water supply, not the taxonomic group. Exercise 7.2 asks students to classify animals; the rule is habitat plus lineage, with the three examples in the table.
 :::
 
-## Uric acid: the egg and the insect {.smaller}
+## Uric acid: the egg and the bird
 
 :::: {.columns}
 ::: {.column width="45%"}
 **The shelled (cleidoic) egg** is closed: wastes stay inside until hatching.
-Urea would stay dissolved and reach toxic levels; uric acid **precipitates**
-and is neither toxic nor osmotically active.
 
-**The insect: Malpighian tubules**
+- Urea would stay dissolved and reach toxic levels.
+- Uric acid **precipitates**: neither toxic nor osmotically active.
 
+**The adult bird** keeps the same waste:
+
+- Uric acid leaves as a white **paste** of urates, mixed with faeces in the
+  cloaca: little water is lost with it.
+- Light and water-saving: useful for flight and for dry habitats.
+:::
+::: {.column width="55%"}
+![](figures/bird-droppings-urates.jpg){width="100%" height="330" style="object-fit: contain;" fig-alt="Chicken dropping on grass: a white, chalky cap of urates (uric acid) beside darker brown faecal material."}
+
+[Photo: AmbroseHem, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chicken-feces.jpg){.credit}
+:::
+::::
+
+**Insects also make uric acid, but have no nephrons. How do they excrete it?**
+
+::: notes
+The cleidoic egg is the classic argument: a closed system cannot dilute or remove a soluble waste, so the embryo stores its nitrogen as an insoluble solid. Birds and most reptiles keep uric acid as adults. The photo is a chicken dropping: the white part is urates (uric acid and its salts) from the kidneys, the brown part is faeces from the intestine; both leave together through the cloaca. Because uric acid is excreted as a semi-solid paste, the water lost per gram of nitrogen is small (about 10 mL, from the table). Exercise 7.2 links the waste to habitat and development.
+:::
+
+## Insects: Malpighian tubules
+
+:::: {.columns}
+::: {.column width="45%"}
 1. No filtration: tubules **secrete K⁺**; water and solutes (with uric acid)
    follow, isosmotic to haemolymph.
 2. The tubules empty into the hindgut.
@@ -553,7 +575,7 @@ and is neither toxic nor osmotically active.
 **Same tasks as the nephron, built from secretion instead of filtration.**
 
 ::: notes
-Two cases where uric acid is the obvious answer. The cleidoic egg is the classic argument: a closed system cannot dilute or remove a soluble waste. In the photo of a dissected cockroach, the arrow marks the tuft of fine Malpighian tubules where midgut meets hindgut; each tubule is a blind-ended tube bathed in haemolymph. The insect excretory system is a useful contrast with the nephron: the primary urine is made by active secretion of K⁺ rather than by pressure filtration, but the later steps are the same logic, a large flow of fluid followed by selective recovery. A desert locust's rectum can extract nearly all the water, leaving dry pellets. Exercise 7.4 asks for this sequence.
+In the photo of a dissected cockroach, the arrow marks the tuft of fine Malpighian tubules where midgut meets hindgut; each tubule is a blind-ended tube bathed in haemolymph. The insect excretory system is a useful contrast with the nephron: the primary urine is made by active secretion of K⁺ rather than by pressure filtration, but the later steps are the same logic, a large flow of fluid followed by selective recovery. A desert locust's rectum can extract nearly all the water, leaving dry pellets. Exercise 7.4 asks for this sequence.
 :::
 
 ## Summary {.smaller}

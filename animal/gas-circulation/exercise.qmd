@@ -344,4 +344,174 @@ c. $960/200=4.8$. Both cardiac output and the O₂ extraction from each litre of
    blood increased.
 :::
 
+## Explore: Haemoglobin loading and unloading {#explore-a3-dissociation}
+
+The blue curve is haemoglobin under lung conditions, where blood loads at the
+arterial PO₂; the red curve is the same haemoglobin under the tissue's pH and
+temperature, where it unloads at the tissue PO₂. Use the sliders or presets, or
+drag the red point; read the results from the readout below the sliders.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a3-dissociation"></div>
+<script src="../../demos/dist/a3-dissociation.js"></script>
+```
+
+### E1
+
+Press **Rest**. Read off (a) the tissue P₅₀, (b) the percentage of
+haemoglobin that is unloaded (gold bar) and (c) the O₂ delivered per litre of
+blood. Compare (c) with the arterial–venous O₂ difference at rest in
+question 4.6.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. 3.6 kPa (tissue pH 7.37 shifts the curve very slightly right of 3.5 kPa).
+b. 24 % (arterial 97 %, venous 74 %).
+c. 48 mL O₂ L⁻¹ (196 − 148). This is close to the 50 mL O₂ L⁻¹ a–v difference
+   in question 4.6: at rest only about a quarter of the O₂ is used.
+:::
+
+### E2
+
+Press **Exercise, no shift** and read the O₂ delivered per litre. Then press
+**Exercise** and read it again. Starting from the rest value in E1, which
+contributes more to the extra O₂ delivered during exercise?
+
+a. the fall in tissue PO₂ from 5.3 to 2.7 kPa
+b. the right shift of the curve (pH 7.2, 39 °C)
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Exercise, no shift: 129 mL O₂ L⁻¹. Exercise: 162 mL O₂ L⁻¹.
+
+a. The fall in tissue PO₂ adds 129 − 48 = 81 mL O₂ L⁻¹; the right shift adds a
+further 162 − 129 = 33 mL O₂ L⁻¹. The low PO₂ lies on the steep part of the
+curve, where a small drop in PO₂ releases a lot of O₂.
+:::
+
+### E3
+
+Press **Exercise**. Set **Tissue temp.** back to 37 °C (pH stays at 7.2) and
+read the O₂ delivered. Then press **Exercise** again and set **Tissue pH** back
+to 7.40 (temperature stays at 39 °C) and read it again. Which part of the
+exercise right shift, acidity (Bohr effect) or warming, contributes more in this
+model?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+pH 7.2 at 37 °C: 153 mL O₂ L⁻¹ (P₅₀ 4.4 kPa). pH 7.4 at 39 °C: 142 mL O₂ L⁻¹
+(P₅₀ 3.9 kPa). Acidity contributes more: it alone gives most of the
+33 mL O₂ L⁻¹ gain of the full exercise shift.
+:::
+
+### E4
+
+Press **Altitude** (arterial PO₂ 6.5 kPa, about half the sea-level value). Read
+off the arterial saturation and arterial O₂ content, and compare them with the
+**Rest** values (97 %, 196 mL O₂ L⁻¹). Which statement is correct?
+
+a. Saturation falls in proportion to PO₂, to about half.
+b. Saturation falls much less than PO₂, because sea-level loading takes place on
+   the flat top of the curve.
+c. Saturation does not change, because the curve is flat everywhere above
+   5 kPa.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Arterial saturation 84 %, content 169 mL O₂ L⁻¹. b: halving PO₂ lowers
+saturation by only 13 percentage points, because the arterial point moves from
+the plateau down onto the shoulder of the sigmoid curve.
+:::
+
+### E5
+
+Press **Anaemia** ([Hb] 100 instead of 150 g L⁻¹) and compare with **Rest**.
+Which of the readouts change? Give the O₂ delivered per litre.
+
+a. the percentage unloaded only
+b. the O₂ contents and the O₂ delivered only
+c. both
+
+::: {.callout-note collapse="true"}
+## Answer
+
+b. The saturations (97 % and 74 %) and the 24 % unloaded are the same as at
+rest, because the curve depends on PO₂, pH and temperature, not on how much
+haemoglobin there is. The O₂ delivered falls from 48 to 32 mL O₂ L⁻¹, by one
+third, in proportion to [Hb] (capacity 1.34 mL O₂ per g Hb).
+:::
+
+## Explore: Countercurrent exchange in the gill {#explore-a3-countercurrent}
+
+A model gill lamella: water enters at 20 kPa from the left, blood enters at
+2 kPa, from the right (countercurrent) or from the left (co-current). Switch the
+arrangement with the buttons and change the exchanger size and the blood-to-water
+flow ratio with the sliders; the readout gives the outflowing PO₂ values and the
+share of O₂ taken from the water.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a3-countercurrent"></div>
+<script src="../../demos/dist/a3-countercurrent.js"></script>
+```
+
+### E6
+
+Press **Reset** (countercurrent, exchanger size 5, blood ÷ water flow 1.00).
+Read off the PO₂ of the blood and the water leaving the lamella, the mean
+water–blood gradient and the O₂ taken from the water. Then press **Co-current**
+and read the same four values.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Blood out | Water out | Mean gradient | O₂ taken |
+| --- | ---: | ---: | ---: | ---: |
+| Countercurrent | 17.0 kPa | 5.0 kPa | 3.0 kPa | 75 % |
+| Co-current | 11.0 kPa | 11.0 kPa | 1.9 kPa | 45 % |
+
+In co-current flow the two streams approach the same PO₂ and the exchange
+stops; in countercurrent flow a gradient is kept along the whole lamella.
+:::
+
+### E7
+
+Set the exchanger size to 10 (flow ratio 1.00) and read the blood PO₂ out in
+each arrangement. In which arrangement can the blood leave with a higher PO₂
+than the water leaving the gill?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Countercurrent: 18.4 kPa (water leaves at 3.6 kPa). Co-current: 11.0 kPa, the
+same as at size 5. Only countercurrent: in co-current flow the blood can at best
+equilibrate with the outflowing water, the mixed value of 11 kPa, however large
+the exchanger.
+:::
+
+### E8
+
+In countercurrent mode with exchanger size 5, set **Blood ÷ water flow** to
+0.50 and then to 2.00. For each, read the blood PO₂ out and the O₂ taken from
+the water. Which statement is correct?
+
+a. Low blood flow gives the highest blood PO₂ but extracts less of the O₂ in the
+   water.
+b. High blood flow gives both the highest blood PO₂ and the highest extraction.
+c. The flow ratio does not matter in countercurrent exchange.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Ratio 0.50: blood out 19.9 kPa, 45 % taken. Ratio 2.00: blood out 10.6 kPa,
+86 % taken. a: slow blood almost reaches the inlet water's PO₂, while fast
+blood strips more O₂ from the water but leaves less saturated. Fish adjust
+ventilation and lamellar perfusion to match the two.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

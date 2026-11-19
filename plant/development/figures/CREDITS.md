@@ -10,3 +10,9 @@ Photos downloaded from Wikimedia Commons, resized to at most 1000 px wide. Diagr
 | `etiolated-bluebells.jpg` | <https://commons.wikimedia.org/wiki/File:Etiolated_Spanish_Bluebells_Hyacinthoides_hispanica.JPG> | Chiswick Chap | CC BY-SA 3.0 |
 | `phototropism-seedlings.jpg` | <https://commons.wikimedia.org/wiki/File:Onions_reach_for_light.jpg> | Dennis Brown | CC BY-SA 3.0 |
 | `arabidopsis-flowering.jpg` | <https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3176_Arabidopsis_in_growth_cabinet_at_the_CSIRO_Discovery_Centre_labs_Black_Mountain_ACT.jpg> | Carl Davies, CSIRO | CC BY 3.0 |
+| `vivipary-tomato.jpg` | <https://commons.wikimedia.org/wiki/File:Vivipary_in_tomato_2.jpg> | Gaiacoyote | CC0 |
+| `gravitropism-kalanchoe.jpg` | <https://commons.wikimedia.org/wiki/File:Gravitropism_in_Kalanchoe_blossfeldiana.jpg> | Trio3D | CC BY-SA 4.0 |
+| `oak-leaves-senescence.jpg` | <https://commons.wikimedia.org/wiki/File:Oak_leaves_with_autumn_coloration.jpg> | Stanature | CC0 |
+| `winter-wheat-sprouting.jpg` | <https://commons.wikimedia.org/wiki/File:Sprouting_Winter_Wheat_-_geograph.org.uk_-_2837235.jpg> | Nigel Mykura | CC BY-SA 2.0 |
+| `lettuce-seedlings.jpg` | <https://commons.wikimedia.org/wiki/File:Sla-kiemend.jpg> | Rasbak (nl.wikipedia) | CC BY-SA 3.0 |
+| `shade-avoidance-trees.jpg` | <https://commons.wikimedia.org/wiki/File:Schattenflucht_B%C3%A4ume.jpg> | Jugrü | CC BY-SA 3.0 |

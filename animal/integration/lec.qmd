@@ -299,16 +299,16 @@ This brings the first half of the lecture together in one real loop: receptor po
 - The large safety margin means one motor-neuron spike = one muscle spike.
 :::
 ::: {.column width="60%"}
-![](figures/neuromuscular-junction-tem.jpg){width="100%" height="330" style="object-fit: contain;" fig-alt="Electron micrograph of a neuromuscular junction: a nerve terminal packed with round synaptic vesicles lies against the folded membrane of a muscle fibre."}
+![](figures/motor-end-plates.jpg){width="100%" height="360" style="object-fit: contain;" fig-alt="Light micrograph of stained skeletal muscle: a dark bundle of motor axons fans out across pale, cross-striated muscle fibres, and each fine axon branch ends in a small dark motor end plate on a fibre."}
 
-[Micrograph: Jgheuser, Public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HeuserNeuro.jpg){.credit}
+[Micrograph: Hlj55567516, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:%E8%BF%90%E5%8A%A8%E7%BB%88%E6%9D%BF.JPG){.credit}
 :::
 ::::
 
 **How does a spike on the surface reach myofibrils deep inside the fibre?**
 
 ::: notes
-The neuromuscular junction is the synapse students already know from two slides back, with the muscle fibre as the postsynaptic cell. In the micrograph, the nerve terminal is full of synaptic vesicles containing acetylcholine, and the muscle membrane opposite is folded, which increases the area for ACh receptors. Unlike a synapse between neurons, where one EPSP is small and must summate, the end-plate potential is large enough to fire the muscle fibre every time: a large safety margin. Curare blocks the nicotinic receptors here; nerve agents block acetylcholinesterase, so ACh accumulates and the muscles cannot relax.
+The neuromuscular junction is the synapse students already know from two slides back, with the muscle fibre as the postsynaptic cell. In the light micrograph, a bundle of motor axons fans out over the striated muscle fibres, and each axon branch ends in a dark motor end plate on a fibre: one motor neuron, many fibres, and one junction per fibre. At electron-microscope scale (not shown), the nerve terminal is full of synaptic vesicles containing acetylcholine, and the muscle membrane opposite is folded, which increases the area for ACh receptors. Unlike a synapse between neurons, where one EPSP is small and must summate, the end-plate potential is large enough to fire the muscle fibre every time: a large safety margin. Curare blocks the nicotinic receptors here; nerve agents block acetylcholinesterase, so ACh accumulates and the muscles cannot relax.
 :::
 
 ## Excitation–contraction coupling

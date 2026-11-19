@@ -498,4 +498,178 @@ b → d → e → a → c. The Malpighian tubules produce a fluid isosmotic to t
 haemolymph by secretion, not by filtration; the hindgut recovers water.
 :::
 
+## Explore: Tonicity and cell volume {#explore-a4-tonicity}
+
+A red cell with 300 mOsm L⁻¹ of trapped solute sits in a bath of NaCl, which
+cannot cross the membrane, and urea, which can. Set the bath with the sliders or
+presets and watch the cell volume over time; the readout gives the total and the
+non-penetrating osmolarity outside and the final cell volume.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a4-tonicity" data-nacl="150" data-urea="150"></div>
+<script src="../../demos/dist/a4-tonicity.js"></script>
+```
+
+### E1
+
+The demo opens with NaCl 150 + urea 150 mOsm L⁻¹. Read off the total
+osmolarity outside, the non-penetrating osmolarity, the verdict and the final
+cell volume.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Total 300 mOsm L⁻¹, non-penetrating 150 mOsm L⁻¹, "isosmotic, but
+hypotonic", final volume 1.67×. Urea diffuses into the cell and water follows,
+so only the NaCl counts for tonicity.
+:::
+
+### E2
+
+Press **NaCl 200** and then **NaCl 400**. Give the final cell volume for each
+and say whether each bath is hypotonic, isotonic or hypertonic.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+NaCl 200: 1.35×, hypotonic (the cell swells). NaCl 400: 0.83×, hypertonic (the
+cell shrinks and crenates). With only non-penetrating solute, osmolarity and
+tonicity agree.
+:::
+
+### E3
+
+Press **Urea 300**. Which is the outcome?
+
+a. The cell keeps its volume, because the bath is isosmotic.
+b. The cell shrinks, because urea draws water out.
+c. The cell swells until it bursts.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+c. The bath is isosmotic (300 mOsm L⁻¹) but its non-penetrating osmolarity is
+0, so it is as hypotonic as pure water: urea and water both enter until the cell
+bursts (haemolysis).
+:::
+
+### E4
+
+Press **NaCl 150 + urea 150** and untick **Membrane lets urea through**. Give
+the final cell volume and the verdict. What does the comparison with E1 show?
+
+a. Tonicity depends on the solution alone.
+b. Tonicity depends on the solution and on the permeability of the membrane.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Final volume 1.00×, "isosmotic and isotonic". b: the same bath is hypotonic to
+a urea-permeable cell and isotonic to a urea-impermeable one.
+:::
+
+### E5
+
+Tick the urea box again and set NaCl 300 + urea 300 mOsm L⁻¹ with the
+sliders. Before running it, predict the final volume: smaller than 1, 1.00, or
+larger than 1? Then check the verdict and the final volume.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+1.00×, "hyperosmotic, but isotonic" (total 600, non-penetrating
+300 mOsm L⁻¹). The cell shrinks briefly while water leaves faster than urea
+enters, then recovers as urea equilibrates.
+:::
+
+## Explore: Glucose transport maximum {#explore-a4-renal}
+
+The kidney filters glucose at a rate GFR × plasma glucose and reabsorbs it up to
+a transport maximum, Tm. Change plasma glucose, GFR and Tm with the sliders or
+presets; the bar shows one minute of filtered glucose split into reabsorbed
+(green) and excreted (gold), and the readout gives the rates and the glucose
+clearance.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a4-renal" data-p="5" data-gfr="125" data-tm="2"></div>
+<script src="../../demos/dist/a4-renal.js"></script>
+```
+
+### E6
+
+Press **Fasting**. Read off the threshold, the filtered load, the excreted
+glucose and the glucose clearance.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Threshold 16.0 mmol L⁻¹ (= Tm ÷ GFR = 2 ÷ 0.125 L min⁻¹). Filtered load
+0.63 mmol min⁻¹ (0.125 × 5), all reabsorbed: excreted 0.00 mmol min⁻¹,
+clearance 0 mL min⁻¹.
+:::
+
+### E7
+
+Press **Untreated diabetes** (plasma glucose 20 mmol L⁻¹). Read off the
+filtered, reabsorbed and excreted glucose and the clearance.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Filtered 2.50, reabsorbed 2.00 (= Tm), excreted 0.50 mmol min⁻¹. Clearance
+0.50 ÷ 20 mmol L⁻¹ = 0.025 L min⁻¹ = 25 mL min⁻¹, below the GFR of 125, because
+glucose is reabsorbed.
+:::
+
+### E8
+
+Press **Diabetes + low GFR** (GFR 60 mL min⁻¹, plasma glucose still
+20 mmol L⁻¹). Read off the threshold and the excreted glucose. Which
+statement is correct?
+
+a. Glucose disappears from the urine because the patient's diabetes is now
+   controlled.
+b. Glucose disappears from the urine because the filtered load (1.20 mmol min⁻¹)
+   is now below Tm.
+c. Glucose excretion doubles because less of the filtrate is reabsorbed.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Threshold 33.3 mmol L⁻¹, excreted 0.00 mmol min⁻¹. b: with a low GFR, less
+glucose is filtered than the tubule can take back, so a negative urine test does
+not rule out high plasma glucose in kidney disease.
+:::
+
+### E9
+
+Press **Fasting**, then set **Tm** to 1.0 mmol min⁻¹, as with a drug that
+blocks tubular glucose transporters. Read off the new threshold. Then set plasma
+glucose to 10 mmol L⁻¹ and read off the excreted glucose.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Threshold 8.0 mmol L⁻¹ (1.0 ÷ 0.125). At 10 mmol L⁻¹: filtered 1.25,
+reabsorbed 1.00, excreted 0.25 mmol min⁻¹. Halving Tm halves the threshold, so
+glucose appears in the urine at a plasma concentration that was previously fully
+reabsorbed.
+:::
+
+### E10
+
+Set plasma glucose to 30 mmol L⁻¹, GFR to 180 mL min⁻¹ and Tm to
+2.0 mmol min⁻¹. Read off the clearance. Can any combination of the sliders make
+the glucose clearance larger than the GFR?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Clearance 113 mL min⁻¹ (excreted 3.40 mmol min⁻¹ ÷ 30 mmol L⁻¹), below the GFR
+of 180. No: glucose is only filtered and reabsorbed, never secreted, so the
+excreted amount can never exceed the filtered load and clearance stays below GFR.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

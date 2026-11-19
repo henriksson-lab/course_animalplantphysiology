@@ -122,14 +122,36 @@ This is the logic of hormone genetics and appears in exercises 1.4 and 1.5. The 
 | Example | Dry seeds in a packet; seeds in dry soil | Fresh seeds that need months of dry storage |
 | Released by | Water | **After-ripening** (dry storage), **stratification** (moist cold), light |
 
-- **ABA maintains dormancy; gibberellin promotes germination.** The balance decides.
+- Dormancy stops a seed germinating in the wrong season, for example in autumn
+  just before winter.
+- Stratification is why many temperate seeds germinate in spring.
+
+**What holds a dormant seed back?**
+
+::: notes
+Dormancy is an internal block; quiescence is only a lack of water or warmth. Stratification is why many temperate seeds germinate in spring after a winter in moist soil, not in autumn. Transition: the block is set by a balance between two hormones.
+:::
+
+## ABA versus gibberellin: the balance decides
+
+:::: {.columns}
+::: {.column width="55%"}
+- **ABA maintains dormancy; gibberellin promotes germination.**
 - ABA-deficient maize mutants show **vivipary**: seeds germinate on the cob.
 - GA-deficient mutants do not germinate unless GA is supplied.
 - Germination (radicle emergence) is scored at a stated time: 12 of 20 seeds by
   day 5 = **60%**.
+:::
+::: {.column width="45%"}
+
+![](figures/vivipary-tomato.jpg){width="100%" height="380" fig-alt="A ripe red tomato with several green seedlings growing out through its skin: the seeds have germinated inside the fruit."}
+
+[Photo: Gaiacoyote, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Vivipary_in_tomato_2.jpg){.credit}
+:::
+::::
 
 ::: notes
-Dormancy is an internal block; quiescence is only a lack of water or warmth. Stratification is why many temperate seeds germinate in spring after a winter in moist soil, not in autumn. The two mutant phenotypes show the ABA : GA balance from both sides (exercise 4.2). The germination percentage needs a denominator and a time point (exercise 4.3); non-germinated seeds may be dormant, slow or dead. Transition: once germination starts, what does gibberellin actually do in the seed?
+The two mutant phenotypes show the ABA : GA balance from both sides (exercise 4.2). The photo shows vivipary in an overripe tomato: the seeds have germinated inside the fruit and the seedlings push out through the skin. Normally ABA in the seeds and the osmotic pull of the fruit flesh keep them dormant; when that block fails, as in ABA-deficient or ABA-insensitive mutants, the seeds germinate where they sit. The germination percentage needs a denominator and a time point (exercise 4.3); non-germinated seeds may be dormant, slow or dead. Transition: once germination starts, what does gibberellin actually do in the seed?
 :::
 
 ## Germination: gibberellin mobilises the reserves
@@ -224,6 +246,8 @@ Students should be able to fill this table from memory (exercise 3.1). The key i
 
 ## The lettuce seed experiment
 
+:::: {.columns}
+::: {.column width="58%"}
 Imbibed lettuce seeds, brief light flashes, then darkness:
 
 | Flash sequence | Last flash | Phytochrome | Germinate? |
@@ -233,6 +257,14 @@ Imbibed lettuce seeds, brief light flashes, then darkness:
 | R → FR | FR | Pr | No |
 | R → FR → R | R | Pfr | **Yes** |
 | R → FR → R → FR | FR | Pr | No |
+:::
+::: {.column width="42%"}
+
+![](figures/lettuce-seedlings.jpg){width="100%" height="260" fig-alt="Germinating lettuce seeds on moist paper: each has a white radicle covered in fine root hairs, and some still carry the dark seed coat on their pale cotyledons."}
+
+[Photo: Rasbak, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sla-kiemend.jpg){.credit}
+:::
+::::
 
 - **The last flash decides.** This photoreversibility identified phytochrome
   (Borthwick and Hendricks, 1950s).
@@ -241,7 +273,7 @@ Imbibed lettuce seeds, brief light flashes, then darkness:
 **Light under a canopy has a different colour. What does phytochrome tell the plant there?**
 
 ::: notes
-Work the sequence column by column; exercise 3.2 extends it to five flashes. The ecological meaning: small-seeded weeds germinate after ploughing because the soil is turned and seeds get a flash of light. Transition to shade: phytochrome does not just detect light versus dark, it detects the ratio of red to far-red.
+The photo shows what "germinate" means in this experiment: lettuce seeds on moist paper with the radicle out and covered in root hairs; the seed coat is still on some of the cotyledons. Work the sequence column by column; exercise 3.2 extends it to five flashes. The ecological meaning: small-seeded weeds germinate after ploughing because the soil is turned and seeds get a flash of light. Transition to shade: phytochrome does not just detect light versus dark, it detects the ratio of red to far-red.
 :::
 
 ## Try it: flash the lettuce seeds
@@ -258,6 +290,8 @@ Live version of the lettuce-seed table. The buttons give a brief, saturating red
 
 ## Shade avoidance
 
+:::: {.columns}
+::: {.column width="64%"}
 - Chlorophyll **absorbs red** light but **transmits and reflects far-red**.
 - Under a canopy, the **red : far-red ratio falls** (sunlight ~1.2; deep shade ~0.2).
 - Less red → **less Pfr**. The plant reads this as "neighbours above me".
@@ -270,9 +304,17 @@ Live version of the lettuce-seed table. The buttons give a brief, saturating red
 | Earlier flowering | Seeds are set before resources run out |
 
 - The cost: thin, weak stems and less root growth. Dense crops lose yield to this.
+:::
+::: {.column width="36%"}
+
+![](figures/shade-avoidance-trees.jpg){width="100%" height="470" fig-alt="Four photos: a solitary beech with a broad crown branching to the ground beside tall, slender, unbranched beech trunks in a dense wood; below, the same contrast for a solitary birch and birches in a dense stand."}
+
+[Photo: Jugrü, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Schattenflucht_B%C3%A4ume.jpg){.credit}
+:::
+::::
 
 ::: notes
-Exercise 3.3. Emphasise that the plant responds to reflected far-red from neighbours even before it is actually shaded, which is an early warning. The cost row connects to agriculture: crop breeders have selected plants with weaker shade avoidance to allow dense planting. Transition: phytochrome reads colour; the direction of light is read by a different receptor and causes the shoot to bend.
+The photo compares trees of the same species growing alone (left: broad, low-branched crowns) and in a dense stand (right: tall, slender, unbranched trunks with the leaves only at the top); beech above, birch below. The stand trees show the shade-avoidance syndrome from the table at the scale of a whole forest. Exercise 3.3. Emphasise that the plant responds to reflected far-red from neighbours even before it is actually shaded, which is an early warning. The cost row connects to agriculture: crop breeders have selected plants with weaker shade avoidance to allow dense planting. Transition: phytochrome reads colour; the direction of light is read by a different receptor and causes the shoot to bend.
 :::
 
 ## Phototropism: bending towards light
@@ -348,7 +390,29 @@ shoot bends **up**.
 **Same signal, same redistribution, opposite outcome: the response depends on the tissue.**
 
 ::: notes
-Exercise 2.3. The root cap is the sensor: remove it and the root still grows but no longer bends. The contrast between root and shoot is the clearest demonstration of the first slide's point that the response depends on the responding tissue's sensitivity to auxin. Transition: auxin flowing down the shoot also decides whether side branches grow.
+Exercise 2.3. The root cap is the sensor: remove it and the root still grows but no longer bends. The contrast between root and shoot is the clearest demonstration of the first slide's point that the response depends on the responding tissue's sensitivity to auxin. The next slide shows the shoot half in a real plant.
+:::
+
+## Gravitropism in a shoot
+
+:::: {.columns}
+::: {.column width="38%"}
+- These *Kalanchoe* stems fell over under their own weight.
+- Each tip has turned **upwards** again.
+- Auxin on the **lower** side made the lower flank grow faster.
+- The old, horizontal part of the stem has stopped growing, so it stays bent:
+  only the **growing zone** responds.
+:::
+::: {.column width="62%"}
+
+![](figures/gravitropism-kalanchoe.jpg){width="100%" height="380" fig-alt="A potted Kalanchoe whose stems have flopped over the rim and lie almost horizontal; every branch tip curves upwards again."}
+
+[Photo: Trio3D, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gravitropism_in_Kalanchoe_blossfeldiana.jpg){.credit}
+:::
+::::
+
+::: notes
+The photo shows shoot gravitropism in an ordinary house plant: Kalanchoe blossfeldiana stems bent over the rim of the pot under their own weight, and each growing tip has curved back up. The bend is confined to the young part near each tip; the older stem does not straighten, because mature cells can no longer elongate. Ask the room which side of each bend has more auxin (the lower side) and whether the same auxin level would make a root bend up or down (down). Transition: auxin flowing down the shoot also decides whether side branches grow.
 :::
 
 ## Apical dominance: should the plant branch?
@@ -457,6 +521,8 @@ Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells on
 
 ## Vernalisation: remembering winter
 
+:::: {.columns}
+::: {.column width="58%"}
 - **Vernalisation:** prolonged cold (weeks at ~0–10 °C) gives the
   **competence** to flower. Examples: winter wheat, winter-annual Arabidopsis.
 - The plant does **not** flower in the cold. It flowers later, in warm, long days.
@@ -464,6 +530,14 @@ Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells on
 - In Arabidopsis, cold **represses *FLC***, a repressor of flowering. *FLC* stays
   off through later cell divisions: an epigenetic memory of winter.
 - The memory is **reset** in each generation: seeds need cold again.
+:::
+::: {.column width="42%"}
+
+![](figures/winter-wheat-sprouting.jpg){width="100%" height="320" fig-alt="A field in late winter covered in rows of short green winter wheat seedlings, sown the previous autumn."}
+
+[Photo: Nigel Mykura, CC BY-SA 2.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sprouting_Winter_Wheat_-_geograph.org.uk_-_2837235.jpg){.credit}
+:::
+::::
 
 | Plant | Cold received | Outcome in spring long days |
 | --- | --- | --- |
@@ -471,7 +545,7 @@ Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells on
 | Winter wheat sown in spring | No | Stays vegetative |
 
 ::: notes
-Exercise 5.3 is a true/false set on these bullets; the common misconceptions are that cold triggers flowering directly and that the vernalised state is inherited. The point of vernalisation is to prevent flowering in autumn, when days are short in the run-up to winter; flowering waits for the spring after a winter has passed. Transition: once the flower opens and is pollinated, the next generation begins.
+Exercise 5.3 is a true/false set on these bullets; the common misconceptions are that cold triggers flowering directly and that the vernalised state is inherited. The photo shows winter wheat in an English field in winter: sown in autumn, it overwinters as a short leafy seedling, receives its weeks of cold in the field, and only flowers in the long days of the following summer. The point of vernalisation is to prevent flowering in autumn, when days are short in the run-up to winter; flowering waits for the spring after a winter has passed. Transition: once the flower opens and is pollinated, the next generation begins.
 :::
 
 ## Double fertilisation: building the seed
@@ -503,10 +577,11 @@ Exercise 5.4. The pollen tube delivers two sperm cells and both fertilise: doubl
 
 ## Senescence: recycling the leaf
 
+:::: {.columns}
+::: {.column width="66%"}
 - **Senescence** is a regulated, programmed process, not passive decay.
 - Chlorophyll and proteins (including Rubisco) are broken down first, so the leaf yellows.
 - Nutrients are **remobilised** through the **phloem** to seeds and young leaves.
-
 - **N, P and K** are phloem-mobile and are exported. **Ca** is phloem-immobile
   and stays in the leaf.
 
@@ -517,9 +592,17 @@ Exercise 5.4. The pollen tube delivers two sperm cells and both fertilise: doubl
 
 - Tobacco expressing a cytokinin-synthesis gene from a senescence promoter keeps
   its leaves green much longer (Gan and Amasino, 1995).
+:::
+::: {.column width="34%"}
+
+![](figures/oak-leaves-senescence.jpg){width="100%" height="460" fig-alt="Four oak leaves from one young tree at different stages of autumn senescence: green, yellow with green veins, and two brown."}
+
+[Photo: Stanature, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Oak_leaves_with_autumn_coloration.jpg){.credit}
+:::
+::::
 
 ::: notes
-Exercise 6.1. The phloem-mobility rule comes from P2: calcium moves in the xylem only, so it cannot be exported from an old leaf, and calcium deficiency appears in young tissue. A yellow leaf alone does not show senescence; deficiency or stress also yields yellowing, so tissue age and growth conditions must be known. The Gan and Amasino experiment is a neat feedback loop: senescence switches on cytokinin production, which delays senescence. It also introduces the idea of a stage-specific promoter, which returns in P5.
+Exercise 6.1. The photo shows four leaves from one young oak tree in autumn, in order of senescence: green (chlorophyll intact), yellow (chlorophyll broken down, revealing the carotenoids, with the last green along the veins), and two brown leaves whose cells have died after the nutrients were exported. The phloem-mobility rule comes from P2: calcium moves in the xylem only, so it cannot be exported from an old leaf, and calcium deficiency appears in young tissue. A yellow leaf alone does not show senescence; deficiency or stress also yields yellowing, so tissue age and growth conditions must be known. The Gan and Amasino experiment is a neat feedback loop: senescence switches on cytokinin production, which delays senescence. It also introduces the idea of a stage-specific promoter, which returns in P5.
 :::
 
 ## Summary {.smaller}

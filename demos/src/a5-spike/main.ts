@@ -87,7 +87,7 @@ function mount(host: HTMLElement): void {
   const sl1 = slider(panel, "S1 strength", 0, 80, 1, st.a1, v => { st.a1 = v; draw(); }, v => v.toFixed(0));
   const sl2 = slider(panel, "S2 strength", 0, S2MAX, 5, st.a2, v => { st.a2 = v; draw(); }, v => v.toFixed(0));
   const slG = slider(panel, "S1 → S2 (ms)", 0.5, 15, 0.5, st.gap, v => { st.gap = v; draw(); }, v => v.toFixed(1));
-  htmlEl("div", "qb-note", "Each stimulus is a 0.5 ms current pulse (µA cm⁻²). Threshold for one pulse ≈ 17.", panel);
+  htmlEl("div", "qb-note", "Each stimulus is a 0.5 ms current pulse (µA cm⁻²). Threshold for one pulse ≈ 16.", panel);
   const btns = presets(panel, [
     { label: "Too weak", apply: () => set(12, 0, 3) },
     { label: "One spike", apply: () => set(40, 0, 3) },

@@ -284,15 +284,15 @@ Exercise 2.3a and 2.3d. In the micrograph, the bronchiole is a conducting airway
 :::
 ::: {.column width="60%"}
 
-![](figures/bird-air-sacs.jpg){width="100%" height="360" fig-alt="Illustration of a bird skeleton in flight showing the small lung with anterior air sacs in front of it and posterior air sacs behind it."}
+![](figures/bird-air-sacs.jpg){width="100%" height="360" style="object-fit: contain;" fig-alt="Labelled diagram of the bird respiratory system: the trachea and primary bronchi lead to an intrapulmonary bronchus, which connects to large anterior and posterior air sacs; between them the lung is a block of many parallel parabronchi joining ventrobronchi and dorsobronchi."}
 
-[Photo: Zina Deretsky, National Science Foundation, Public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dino_bird_h.jpg){.credit}
+[Figure: Cruithne9, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bird%27s_respiratory_system.jpg){.credit}
 
 :::
 ::::
 
 ::: notes
-Exercise 2.1c and 2.3b. The illustration (cropped from an NSF comparison with a theropod dinosaur, whose bones show the same air-sac connections) shows how much of a bird's body is taken up by air sacs; the lung itself is small and does not change volume. Air takes two breath cycles to pass through: inspiration 1 fills the posterior sacs, expiration 1 pushes that air through the lung, inspiration 2 moves it into the anterior sacs and expiration 2 sends it out. The result is that the lung always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle.
+Exercise 2.1c and 2.3b. The diagram shows the plumbing: the trachea leads through the primary and intrapulmonary bronchus to the posterior air sacs, and the lung between the anterior and posterior sacs is a stack of parallel parabronchi, open at both ends, where the air capillaries branch off. The air sacs are large balloons; the lung itself is small and does not change volume. Air takes two breath cycles to pass through: inspiration 1 fills the posterior sacs, expiration 1 pushes that air through the lung, inspiration 2 moves it into the anterior sacs and expiration 2 sends it out. The result is that the lung always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle.
 :::
 
 ## Insects: air piped to the cells
@@ -508,22 +508,24 @@ Exercise 4.4 is this table. Relate each wall to its job and its tissue types fro
 ## An artery and a vein in section
 
 :::: {.columns}
-::: {.column width="40%"}
-- **Artery:** thick muscular wall, round, small lumen.
-- **Vein:** thin wall, wide or collapsed lumen; it can look like a slit.
-- Identify vessels by **wall layers**, not outline (A1).
-
-**Pressure drops along the circuit. What sets how much flows where?**
+::: {.column width="50%"}
+![](figures/artery-vein.svg){width="100%" height="340" fig-alt="An artery and a vein drawn side by side in cross-section, with a small capillary: the artery has a thick, round wall of elastic tissue and smooth muscle; the vein has a thin wall and a wider, flattened lumen; the capillary wall is a single endothelial cell."}
 :::
-::: {.column width="60%"}
+::: {.column width="50%"}
+![](figures/artery-vein-micrograph.jpg){width="100%" height="340" style="object-fit: contain;" fig-alt="Light micrograph (H&E) of an artery and a vein lying side by side in fatty connective tissue: the artery is round with a thick pink muscular wall and a small, wavy-edged lumen; the vein has a thinner wall and a wide, flattened, irregular lumen."}
 
-![](figures/artery-vein.svg){width="100%" height="360" fig-alt="An artery and a vein drawn side by side in cross-section, with a small capillary: the artery has a thick, round wall of elastic tissue and smooth muscle; the vein has a thin wall and a wider, flattened lumen; the capillary wall is a single endothelial cell."}
-
+[Micrograph: OpenStax College (Regents of the University of Michigan Medical School), CC BY 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2102_Comparison_of_Artery_and_Vein.jpg){.credit}
 :::
 ::::
 
+- **Artery:** thick muscular wall, round, small lumen. **Vein:** thin wall,
+  wide or collapsed lumen; it can look like a slit.
+- Identify vessels by **wall layers**, not outline (A1).
+
+**Pressure drops along the circuit. What sets how much flows where?**
+
 ::: notes
-This is the comparison students make in the histology practical, where artery and vein usually lie side by side in the same bundle. The artery has the thick wall of smooth muscle and elastic tissue and a round lumen. The vein beside it carries the same flow back at a much lower pressure, so it needs only a thin wall; its lumen is wider and often collapsed or irregular in a fixed section. The capillary, shown as a small inset, is a single endothelial cell around a lumen barely wide enough for one red cell. Transition: in this circuit, pressure falls from the aorta to the veins; what decides how much blood each organ receives?
+This is the comparison students make in the histology practical, where artery and vein usually lie side by side in the same bundle: the micrograph on the right is exactly that, a muscular artery and its companion vein in fatty connective tissue. The artery has the thick wall of smooth muscle and elastic tissue and a round lumen. The vein beside it carries the same flow back at a much lower pressure, so it needs only a thin wall; its lumen is wider and often collapsed or irregular in a fixed section. The capillary, shown as a small inset, is a single endothelial cell around a lumen barely wide enough for one red cell. Transition: in this circuit, pressure falls from the aorta to the veins; what decides how much blood each organ receives?
 :::
 
 ## Pressure, resistance and flow
@@ -554,6 +556,8 @@ Exercise 4.5. Doubling resistance at constant pressure halves flow. Because resi
 
 ## Cardiac output and the Fick principle
 
+:::: {.columns}
+::: {.column width="58%"}
 **Cardiac output** = heart rate × stroke volume
 
 **O₂ use** = cardiac output × (arterial − venous O₂ content)
@@ -567,11 +571,18 @@ Exercise 4.5. Doubling resistance at constant pressure halves flow. Because resi
 | **O₂ use** (mL min⁻¹) | 245 | 2 805 |
 
 The Fick principle uses **content**, not $P_{\rm O_2}$.
+:::
+::: {.column width="42%"}
+![](figures/sheep-heart-ventricles.jpg){width="100%" height="300" style="object-fit: contain;" fig-alt="A sheep heart cut across the ventricles, held in two hands: a thick-walled, round left ventricle and, wrapped around it, the thin-walled, crescent-shaped right ventricle."}
+
+[Photo: Lucyin, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:C%C3%B4paedje_roydicirrece_cour_bedot.jpg){.credit}
+:::
+::::
 
 **How does the body produce that elevenfold increase?**
 
 ::: notes
-Exercise 4.6 is the same calculation with other numbers. The product is a mass balance: every litre of blood passing through the tissues gives up the difference between arterial and venous content, so total uptake is flow times that difference. At rest this matches the 250 mL min⁻¹ from the opening slide. Ask students which factors increased: cardiac output nearly fourfold and extraction threefold. The next slide puts all the mechanisms from today together.
+Exercise 4.6 is the same calculation with other numbers. The photo is a sheep heart cut across the ventricles: the left ventricle (left in the photo) has the thick, round wall, the right ventricle is a thin crescent wrapped around it. Both eject the same stroke volume, so cardiac output is the same for the two circulations, but the left ventricle works against about five times the pressure. The product is a mass balance: every litre of blood passing through the tissues gives up the difference between arterial and venous content, so total uptake is flow times that difference. At rest this matches the 250 mL min⁻¹ from the opening slide. Ask students which factors increased: cardiac output nearly fourfold and extraction threefold. The next slide puts all the mechanisms from today together.
 :::
 
 ## Back to the runner

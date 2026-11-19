@@ -113,12 +113,33 @@ Start at "well watered" and read out water loss, CO₂ uptake and leaf temperatu
 ## Osmotic adjustment and salt
 
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="45%"}
 **Compatible solutes** (proline, glycine betaine, sucrose, mannitol) lower ψ<sub>s</sub>
 without inhibiting enzymes, so water still flows **into** the root.
 
-**Salinity** also needs Na⁺ kept out of the cytoplasm:
+**Salinity** harms a plant twice:
 
+1. **Osmotic:** salty soil water has a low ψ, so uptake is hard, as in drought.
+2. **Ionic:** Na⁺ that does get in is toxic to enzymes in the cytoplasm.
+:::
+::: {.column width="55%"}
+
+![](figures/saline-land-wheatbelt.jpg){width="100%" height="360" fig-alt="Bare, white, salt-crusted ground with an eroded channel, dead tree trunks and no living plants, with a line of trees in the distance."}
+
+[Photo: Willem van Aken, CSIRO, CC BY 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_4467_Saline_area_in_the_Western_Australian_wheat_belt_near_Bannister_WA_1981.jpg){.credit}
+:::
+::::
+
+**How does a cell keep Na⁺ out of its cytoplasm?**
+
+::: notes
+Exercise 1.4. Recall from P2 that water potential = solute potential + pressure potential: accumulating solutes makes the cell's water potential more negative than the soil's, so uptake continues. "Compatible" means the solute can reach high concentrations without disrupting protein function, unlike Na⁺. The photo shows the extreme case: land in the Western Australian wheat belt (1981) where clearing of deep-rooted native vegetation let saline groundwater rise; salt has crusted the surface and killed the trees, and no crop can establish. Salt tolerance therefore has two parts: the osmotic part, shared with drought, and the ion part, on the next slide.
+:::
+
+## Salt: keeping Na⁺ out of the cytoplasm
+
+:::: {.columns}
+::: {.column width="40%"}
 - **SOS1** pumps Na⁺ back out of root cells.
 - **NHX** stores Na⁺ in the **vacuole**, where it helps lower ψ<sub>s</sub>.
 - The cytoplasm keeps a high **K⁺ : Na⁺** ratio.
@@ -131,7 +152,7 @@ without inhibiting enzymes, so water still flows **into** the root.
 ::::
 
 ::: notes
-Exercise 1.4. Recall from P2 that water potential = solute potential + pressure potential: accumulating solutes makes the cell's water potential more negative than the soil's, so uptake continues. "Compatible" means the solute can reach high concentrations without disrupting protein function, unlike Na⁺. Salt tolerance therefore has two parts: the osmotic part, shared with drought, and the ion part, solved by exclusion and vacuolar storage. Transition: whatever the stress, proteins and membranes need protection.
+Exercise 1.4. The ion part of salt tolerance is solved by exclusion and vacuolar storage: SOS1 is a Na⁺/H⁺ antiporter in the plasma membrane and NHX one in the tonoplast, both driven by the proton gradients from P2. Na⁺ stored in the vacuole is not wasted: it lowers the vacuole's ψs and so contributes to osmotic adjustment. Transition: whatever the stress, proteins and membranes need protection.
 :::
 
 ## Protecting the cell, and acclimating

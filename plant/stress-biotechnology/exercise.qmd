@@ -415,4 +415,216 @@ d. Who should decide whether a GM crop is grown?
 a. Empirical. b. Value-based. c. Empirical. d. Value-based.
 :::
 
+## Explore: Stomata, ABA and drought {#explore-p5-stomata}
+
+The demo shows a stoma closing as ABA rises in the guard cells, and how
+conductance, water loss, CO₂ uptake, CO₂ gained per water lost and leaf
+temperature (leaf minus air) change. Use the drought buttons or the ABA
+slider; "Air dryness" sets the vapour pressure deficit (VPD) of the air. The
+curves show water loss and CO₂ uptake as % of the fully open value.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p5-stomata" data-aba="0" data-vpd="2"></div>
+<script src="../../demos/dist/p5-stomata.js"></script>
+```
+
+### E1.1
+
+Keep air dryness at 2 kPa. Fill in the table from the readout for "Well
+watered", "Mild drought" and "Severe drought".
+
+| | Conductance (mol m⁻² s⁻¹) | Water loss (mmol m⁻² s⁻¹) | CO₂ uptake (µmol m⁻² s⁻¹) | Leaf − air (°C) |
+| --- | ---: | ---: | ---: | ---: |
+| Well watered (ABA 0) | | | | |
+| Mild drought (ABA 1) | | | | |
+| Severe drought (ABA 4) | | | | |
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | Conductance | Water loss | CO₂ uptake | Leaf − air |
+| --- | ---: | ---: | ---: | ---: |
+| Well watered (ABA 0) | 0.50 | 9.9 | 28.0 | −0.8 |
+| Mild drought (ABA 1) | 0.25 | 4.9 | 22.6 | +4.2 |
+| Severe drought (ABA 4) | 0.03 | 0.6 | 5.7 | +8.5 |
+
+Less transpiration means less evaporative cooling, so the leaf warms: with
+severe drought it is about 8 °C above air temperature.
+:::
+
+### E1.2
+
+Compare well watered with mild drought.
+
+a. By what percentage does water loss fall, and by what percentage does
+   CO₂ uptake fall?
+b. Does CO₂ gained per water lost increase or decrease? Give both values.
+c. Why does CO₂ uptake fall less than water loss?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Water loss falls by 50 % (9.9 → 4.9); CO₂ uptake falls by only about
+   20 % (28.0 → 22.6).
+b. It increases, from 2.8 to 4.6 µmol CO₂ per mmol H₂O.
+c. Water loss is proportional to stomatal conductance, but CO₂ uptake is
+   limited by two steps in series, the stomata and carboxylation in the
+   chloroplast. Partly closing the stomata therefore costs less carbon than
+   water.
+:::
+
+### E1.3
+
+Set ABA to 0 and move air dryness from 2 to 4 kPa. Which of these change:
+conductance, water loss, CO₂ uptake, leaf temperature? Give the new water
+loss.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Water loss doubles to 19.7 mmol m⁻² s⁻¹ and the leaf cools (to −10.7 °C
+relative to the air). Conductance (0.50) and CO₂ uptake (28.0) do not change:
+in this model dry air drives transpiration through the same open stomata.
+Real plants also close their stomata partly in dry air.
+:::
+
+## Explore: Auxin and cytokinin in tissue culture {#explore-p5-tissueculture}
+
+An explant grows on a medium with auxin and cytokinin. Set the two
+concentrations with the sliders (log scale, mg/L), drag the dot on the map,
+or use the preset buttons; the dish shows the explant after four weeks and
+the readout gives the outcome and the auxin : cytokinin ratio. "Infected by
+wild Agrobacterium" adds the hormones that a crown-gall T-DNA makes inside
+the plant cells. The model is a rule of thumb, not fitted to data.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p5-tissueculture" data-auxin="0.3" data-cytokinin="0.3"></div>
+<script src="../../demos/dist/p5-tissueculture.js"></script>
+```
+
+### E2.1
+
+Press each preset and record the outcome and the auxin : cytokinin ratio:
+Rooting, Callus, Shoots, No hormones.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Preset | Auxin (mg/L) | Cytokinin (mg/L) | Ratio | Outcome |
+| --- | ---: | ---: | ---: | --- |
+| Rooting | 2.0 | 0.020 | 100 | Roots |
+| Callus | 1.0 | 1.0 | 1.0 | Callus |
+| Shoots | 0.032 | 2.0 | 0.02 | Shoots |
+| No hormones | 0.010 | 0.010 | 1.0 | Little growth |
+
+High auxin : cytokinin gives roots, low gives shoots, and a balance gives
+undifferentiated callus (Skoog and Miller). The No-hormones medium has the
+same ratio as Callus, but too little of either hormone for growth: the
+absolute level matters too.
+:::
+
+### E2.2
+
+Set cytokinin to 0.10 mg/L and auxin to 0.10 mg/L, then raise auxin in steps.
+At what auxin concentration does the outcome first change from Callus, and
+to what? What is the ratio then?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+At 0.56 mg/L auxin it changes to "Roots from callus" (ratio 5.6); from
+0.71 mg/L it is "Roots". Up to 0.50 mg/L (ratio 5.0) the explant forms only
+callus. Swapping the two hormones gives the mirror result: shoots from
+callus once cytokinin reaches 0.56 mg/L at 0.10 mg/L auxin.
+:::
+
+### E2.3
+
+Press "No hormones" and tick "Infected by wild Agrobacterium". What does the
+explant form? Then press "Rooting" with the box still ticked: what is the
+outcome and the ratio now?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+With no hormones in the medium it forms a tumour (crown gall), with ratio
+1.0. On the rooting medium it is still a tumour, and the ratio falls from
+100 to 2.9. The wild T-DNA carries genes for auxin and cytokinin synthesis,
+so the infected cells make their own hormones and proliferate whatever the
+medium. Disarmed strains used for transformation lack these genes.
+:::
+
+## Explore: Refuges and Bt resistance {#explore-p5-refuge}
+
+The demo follows the frequency of a resistance allele R in a pest over
+generations. Bt maize kills 99 % of susceptible (SS) larvae; a refuge of
+non-Bt maize lets all genotypes survive, and adults from both mate at
+random. Set the refuge size, the dominance of R (h = 0: recessive, h = 1:
+dominant) and the starting frequency of R. The readout gives the number of
+generations until R reaches 50 % and the fitness of each genotype.
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p5-refuge" data-refuge="0" data-h="0" data-p0="0.001"></div>
+<script src="../../demos/dist/p5-refuge.js"></script>
+```
+
+### E3.1
+
+Keep the starting frequency at 0.001 and h = 0. How many generations does it
+take for R to reach 50 % with no refuge, a 5 % refuge, a 10 % refuge and a
+20 % refuge?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| Refuge | Generations to 50 % R |
+| ---: | ---: |
+| 0 % | 15 |
+| 5 % | 70 |
+| 10 % | 129 |
+| 20 % | more than 150 |
+
+Susceptible adults from the refuge mate with the rare resistant survivors,
+so most R alleles end up in RS offspring, which are killed on Bt maize when R
+is recessive.
+:::
+
+### E3.2
+
+Press "20% refuge", then "20%, dominant R". Read off the generations to 50 %
+and the fitness of RS for each. Which is the more important condition for the
+refuge to work?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+| | RS fitness | Generations to 50 % R |
+| --- | ---: | ---: |
+| 20 % refuge, h = 0 | 0.208 | more than 150 |
+| 20 % refuge, h = 1 | 1.000 | 6 |
+
+With dominant resistance, RS larvae survive on Bt maize as well as RR, and
+the refuge no longer slows resistance (6 generations, faster even than no
+refuge with a recessive allele). The refuge strategy therefore requires a
+high-dose Bt crop that kills heterozygotes, which makes R effectively
+recessive.
+:::
+
+### E3.3
+
+Set a 20 % refuge, h = 0, and the starting frequency of R to 0.01 instead of
+0.001. How many generations does R take to reach 50 %?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+31 generations (compared with more than 150 at 0.001). The refuge works best
+when R is very rare, because almost all R alleles are then in heterozygotes.
+Refuges must be in place from the first Bt planting, not added after
+resistance has been detected.
+:::
+
 Continue with the [self-check quiz](quiz.qmd).

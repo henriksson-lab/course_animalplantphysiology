@@ -376,6 +376,8 @@ Live version of the light-response curve, for a sun leaf (a standard leaf photos
 
 ## From a rate to an amount
 
+:::: {.columns}
+::: {.column width="70%"}
 A leaf of **0.02 m²** takes up CO₂ at **6 µmol m⁻² s⁻¹** for **10 min**:
 
 $$6\ \frac{\mu\text{mol}}{\text{m}^2\,\text{s}} \times 0.02\ \text{m}^2 \times 600\ \text{s} = 72\ \mu\text{mol CO}_2$$
@@ -384,11 +386,19 @@ $$72\times10^{-6}\ \text{mol} \times 44\ \text{g mol}^{-1} = 3.2\times10^{-3}\ \
 
 - Multiply by **area** and by **time in seconds**; the m⁻² and s⁻¹ cancel.
 - Carry the units through every step; most errors are in minutes → seconds.
+:::
+::: {.column width="30%"}
+
+![](figures/li6800-gas-exchange.jpg){width="100%" height="450" fig-alt="A portable photosynthesis system in a maize plot: a leaf chamber on a tripod clamps a maize leaf, connected by a cable to a green control console on the ground."}
+
+[Photo: Viséan, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Photosynthesis_System_analysing_a_maize_leaf.jpg){.credit}
+:::
+::::
 
 **That carbon is made in the leaf. How does it reach a root or a fruit?**
 
 ::: notes
-Exercise 4.2. This is the same unit logic as the transpiration calculation in P2. Show the cancellation of units explicitly. Transition to transport: carbon fixed in a leaf is exported as sucrose through the phloem from P1.
+The photo shows where such numbers come from: a portable gas-exchange system (LI-6800) clamped onto a maize leaf in a field trial. The chamber encloses a known leaf area, sets light and CO₂, and measures the CO₂ and water-vapour difference between incoming and outgoing air, so it reports net photosynthesis directly in µmol CO₂ m⁻² s⁻¹; the light-response curve on the previous slides is made with such an instrument. Exercise 4.2. This is the same unit logic as the transpiration calculation in P2. Show the cancellation of units explicitly. Transition to transport: carbon fixed in a leaf is exported as sucrose through the phloem from P1.
 :::
 
 ## Sources and sinks
