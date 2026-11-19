@@ -1,0 +1,159 @@
+---
+title: "P1 — Building a functioning plant"
+---
+
+## The question
+
+A seedling has no mouth, circulating blood or skeleton. Nevertheless, it must
+obtain carbon, water and minerals, transport material between organs and support
+itself against gravity. Its solution depends on how cells are connected and
+specialised. Explain walls, vacuoles, plastids and three tissue systems;
+distinguish division from expansion; and connect nuclear and organellar genomes
+to cell function.
+
+## Compartments make different processes possible
+
+A plasma membrane surrounds each living cell and controls exchange. A
+cellulose-containing wall lies outside it. The wall resists deformation and
+helps connect cells, but it does not replace selective membrane transport.
+Water and many small solutes can move through wall spaces; crossing a membrane
+is a different step. Always distinguish the boundary being crossed.
+
+The large central vacuole in many mature cells is surrounded by the tonoplast.
+It stores solutes, contributes to pH regulation and degradation, and allows
+a cell to enlarge without filling the entire volume with cytoplasm. Solute
+accumulation can promote water entry. The resulting pressure against the wall,
+**turgor**, supports non-woody tissues. A plant can wilt before its cells die:
+reduced turgor changes organ mechanics.
+
+Chloroplasts capture light energy and support carbon fixation. They are one
+type of plastid; other plastids store starch or contain pigments. Many root
+cells lack photosynthetically active chloroplasts. Mitochondria support
+respiration in green cells as well as roots. Photosynthesis does not remove a
+leaf's need for respiration. Different organelles contribute to the same cell.
+
+## A resisting wall must also permit growth
+
+Primary walls contain cellulose microfibrils within a matrix of other
+polysaccharides and proteins. Their organisation influences the direction and
+ease of expansion. Turgor supplies force, while controlled wall loosening
+permits irreversible enlargement. Raising water pressure is not a complete
+growth explanation: a stiff wall can resist it, and new membrane and wall
+material must be supplied as a cell enlarges.
+
+In an elongating root cell, water enters, the wall yields and length increases.
+Reinforcing components help constrain expansion. Later, some specialised cells
+deposit a secondary wall inside the primary wall. Lignified secondary walls
+provide support and resist collapse in conducting xylem elements. Expanding
+leaf cells and conducting tubes face different mechanical demands; their walls
+are not interchangeable containers.
+
+Neighbouring cells communicate through **plasmodesmata**, membrane-lined
+connections through walls. Connected cytoplasm forms the **symplast**; walls
+and extracellular spaces form the **apoplast**. These terms describe routes,
+not separate organs. A solute moving through the apoplast can subsequently
+cross a membrane and enter the symplast. This distinction becomes important
+for [root uptake](../water-nutrition/index.qmd).
+
+## Tissues connect cellular features to function
+
+Roots and shoots contain organs such as leaves, stems and flowers. An organ
+contains several tissues. Three systems provide a useful starting framework:
+
+| Tissue system | Contributions | Structure–function example |
+| --- | --- | --- |
+| Dermal | Protection and exchange | Cuticle limits uncontrolled water loss; stomata permit adjustable gas exchange |
+| Ground | Photosynthesis, storage and support | Mesophyll exposes photosynthetic cells to internal air spaces |
+| Vascular | Transport and support | Xylem supplies water/minerals; phloem connects carbon sources and sinks |
+
+Ground tissues include different cell types. Parenchyma often retains living
+contents for metabolism or storage. Collenchyma supplies flexible support in
+growing regions. Sclerenchyma commonly has strongly reinforced secondary walls.
+Use names to predict observations: wall thickness, living contents, air spaces,
+cell arrangement and position. One characteristic rarely identifies a specimen
+unambiguously. Combine features and relationships with surrounding tissues.
+
+A leaf illustrates coordination. CO2 enters an internal air space through a
+stoma and reaches mesophyll. Light reaches chloroplasts. Water arrives through
+xylem, and exported sugars leave through phloem. Opening stomata supports CO2
+entry but also allows water vapour to escape. The arrangement links carbon
+acquisition to water balance.
+
+```{mermaid}
+flowchart LR
+  air[Atmospheric CO2] --> pore[Stoma and air spaces]
+  pore --> mes[Mesophyll chloroplasts]
+  roots[Root water uptake] --> xy[Xylem]
+  xy --> mes
+  light[Light] --> mes
+  mes --> sugars[Exported assimilate]
+  sugars --> ph[Phloem]
+  ph --> sink[Growing or storage tissues]
+```
+
+This original schematic shows functional connections; it is not an anatomical
+section and does not imply that all transported carbon follows one route.
+
+## Conducting tissues differ
+
+Water-conducting tracheids and vessel elements are dead at functional maturity;
+their reinforced walls remain. Living xylem parenchyma occurs alongside them,
+so calling the whole tissue dead is inaccurate. In flowering plants,
+sieve-tube elements remain living but lose their nuclei during maturation.
+Companion cells support their function. Damage to living membranes can therefore
+affect phloem differently from an intact water-filled xylem conduit.
+
+Compare roots and leaves. Root hairs are extensions of epidermal cells that
+increase contact with soil, not tiny roots. The endodermis helps control routes
+into the root vascular region. Leaf mesophyll is arranged around light and gas
+exchange. The organs share basic cell biology but emphasise different tasks.
+
+## Meristems permit continuing organ production
+
+An embryo establishes a body axis, but much of the mature plant develops after
+germination. **Meristems** maintain populations of dividing cells. Root and
+shoot apical meristems contribute to primary growth in length. Lateral
+meristems support secondary thickening in plants that undergo it. Vascular
+cambium produces secondary xylem inward and secondary phloem outward; cork
+cambium contributes protective outer tissue. Grasses can retain basal growth
+regions, allowing leaves to elongate after exposed tips are cut.
+
+Cell production, expansion and differentiation are different processes. A root
+can become longer through more cells, larger cells, or both. Regions near its
+tip emphasise these processes differently, with transitions rather than
+perfectly separated compartments. A short root does not automatically establish
+slower division. Compare cell numbers, cell lengths and transition positions.
+
+Differentiation changes gene expression and cellular organisation without
+necessarily changing DNA sequence. Some mature cells can resume division under
+suitable conditions, which matters in regeneration. However, regeneration
+depends on genotype, developmental state and culture conditions. Every mature
+cell is not guaranteed to produce a whole plant.
+
+## Three genomes cooperate
+
+Plant cells contain nuclear, plastid and mitochondrial genomes. Nuclear DNA
+encodes most cellular proteins, including many that function inside the two
+organelles. Such proteins are synthesised outside the organelle and imported.
+Organellar genomes encode smaller sets of essential products. Function depends
+on coordination across compartments rather than three self-sufficient systems.
+
+A gene is a DNA region whose expression contributes a functional RNA or protein.
+Changing expression can alter a process without changing sequence. Leaf and
+root cells can share a nuclear genome while using different gene sets.
+Tissue-specific expression later helps explain development and biotechnology.
+Organellar inheritance is often uniparental, but patterns vary among species;
+do not assume a universal maternal rule.
+
+## Make a testable prediction
+
+A plant with intact green leaves but reduced root hairs may struggle to obtain
+resources in some soils. Other root properties could compensate. Reduced hairs
+alone do not establish which transporter or hormone changed. Explain the chain:
+structure → exchange opportunity → resource availability → whole-plant effect.
+
+For another introductory account of organ and tissue organisation, use the
+[OpenStax plant-body overview](https://openstax.org/books/biology-2e/pages/30-1-the-plant-body).
+The schematic and teaching examples here are original. Continue with the
+[exercise](exercise.qmd), [self-check](quiz.qmd) and
+[P2](../water-nutrition/index.qmd).

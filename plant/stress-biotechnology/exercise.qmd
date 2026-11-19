@@ -1,0 +1,81 @@
+---
+title: "P5 exercise — Evaluate a physiological intervention"
+---
+
+Use the [tutorial](index.qmd). Allow 60–75 minutes, including a short group
+discussion. All evidence records and numeric trial results below are invented
+for this exercise. They are not copied from a database or a published study.
+No transformation, culture or release activity is requested.
+
+## 1. Explain survival versus performance
+
+A fictional line closes stomata earlier during drying. It retains more leaf
+water but makes fewer seeds under one drought regime. Draw a mechanism linking
+the intervention to both observations. What additional measurements would test
+the carbon-gain and leaf-temperature explanations? Could the same response be
+beneficial under a more severe regime? Define the outcome before saying “better”.
+
+## 2. Separate annotation from evidence
+
+Use this offline record; an optional comparison with a real
+[TAIR](https://www.arabidopsis.org/) entry can be made if access is available.
+
+| Field | Fictional record |
+| --- | --- |
+| Identifier | TEACH-GC1 (invented; not a TAIR locus) |
+| Annotation | Candidate membrane transport regulator |
+| Expression | Reporter detected mainly in guard cells under tested conditions |
+| Perturbation | One transformed line has earlier closure |
+| Similarity | Related sequence in another species has an annotated transport role |
+
+Rank the claims: observed reporter location; proven native-protein location;
+proven causal control of closure; plausible mechanistic hypothesis. Which
+evidence is direct and which is inferred? Explain why searching a gene name
+and copying the first description would lose essential uncertainty.
+
+## 3. Design controls before interpreting a transformed line
+
+The line in task 2 was regenerated through tissue culture. Propose appropriate
+background and culture controls, multiple independent events and a way to
+test association with the intended change. Explain what a tissue-specific
+promoter is intended to achieve and why its specificity needs measurement.
+Distinguish stable transformation, transient expression and editing.
+
+## 4. Read a small factorial comparison
+
+The following invented means are seeds per plant from equally sized groups;
+variation and replication details have deliberately not been supplied.
+
+| Line | No herbivores | Herbivores present |
+| --- | ---: | ---: |
+| Control | 100 | 50 |
+| Defence-enhanced | 85 | 75 |
+
+Calculate the line difference in each environment. Explain how the pattern
+could reflect a defence cost and protection benefit. List the missing design
+and uncertainty information needed before recommending the line. Do not infer
+statistical significance from four means.
+
+::: {.callout-note collapse="true"}
+## Direction check
+
+Enhanced minus control is −15 seeds without herbivores and +25 with herbivores.
+The pattern is condition-dependent. It does not establish the molecular
+mechanism, the long-term field effect or significance.
+:::
+
+## 5. Write a reasoned recommendation
+
+Choose either fictional intervention and write 250–350 words addressing its
+mechanism, intended setting, evidence, limitations and next measurement. Include
+one potential benefit, one context-specific ecological concern and one question
+of access or decision power. Identify at least one empirical question and one
+value judgement. Compare with a stated alternative rather than an unspecified
+“natural” plant. A recommendation to collect more evidence is valid if you name
+the evidence and explain how it would affect the decision.
+
+## Completion check
+
+Keep physiological, empirical and ethical reasoning connected. A label such
+as “GM”, “natural” or “stress-tolerant” does not supply a complete evaluation.
+Finish with the [self-check](quiz.qmd).

@@ -1,0 +1,65 @@
+---
+title: "P3 — Carbon and metabolism self-check"
+---
+
+Answer before opening the explanations. Explain one mechanism aloud and revisit
+the [tutorial](index.qmd) if you can recall a term but cannot connect its steps.
+
+## 1. What supplies the oxygen released by oxygenic photosynthesis?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+Water, through electron donation associated with photosystem II; it is not released directly from splitting CO2.
+:::
+
+## 2. Why is “dark reactions” misleading?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+The Calvin–Benson cycle does not use photons directly but depends on resources and regulation coupled to light. The name does not imply nighttime operation.
+:::
+
+## 3. Do green cells respire during the day?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+Yes. Mitochondrial metabolism supports ATP supply and intermediates in illuminated tissues as well as non-green tissues.
+:::
+
+## 4. Does a C4 pathway replace the Calvin–Benson cycle?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. It concentrates CO2 near Rubisco, usually using spatial separation and additional energy. CAM commonly separates initial uptake and release in time.
+:::
+
+## 5. What does a measured net exchange of zero mean?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+CO2 uptake and release balance under those measurement conditions. It does not mean all photosynthetic and respiratory processes have stopped.
+:::
+
+## 6. Is a storage organ always a sink?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. It can export reserves during regrowth and function as a source. Source/sink describes current carbon balance.
+:::
+
+## 7. Can more nitrate alone guarantee more growth?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Reduction and assimilation need energy and carbon skeletons, and other resources or stresses can limit growth.
+:::
+
+Compare your reasoning with the [exercise](exercise.qmd). Correct an explanation
+rather than recording only a score.

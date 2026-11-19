@@ -1,0 +1,181 @@
+---
+title: "A5 — Integration, movement and reproduction"
+---
+
+## How does an animal coordinate a response?
+
+An animal detecting food, escaping a threat or reproducing must connect
+information to action. Neural activity, endocrine signals and muscle do not
+operate as isolated topics. They link sensory input and internal state to
+effectors while using the transport and metabolic support developed in earlier
+units. This unit builds those links from membrane properties to whole-organism
+behaviour and reproductive regulation.
+
+You should explain membrane potential and action potentials without confusing
+voltage with ion concentration; trace a chemical synapse and a reflex pathway;
+connect calcium, ATP and muscle force; distinguish hormone concentration from
+target-cell response; and explain a reproductive feedback loop. Use the
+[slides](lec.qmd), [exercises](exercise.qmd) and [quiz](quiz.qmd).
+
+## Ion gradients create possibilities for electrical signals
+
+A membrane potential is a voltage difference across a cell membrane. Ion
+concentrations differ inside and outside cells, and membranes are selectively
+permeable. The combined electrical and chemical tendencies determine each
+ion's electrochemical driving force. Resting membranes are often more permeable
+to some ions than others. ATP-dependent transport, including the sodium–potassium
+pump in many animal cells, maintains gradients that leak pathways would
+otherwise dissipate.
+
+The inside of a resting neuron is commonly negative relative to the outside.
+This does not mean that all intracellular material is negatively charged:
+only a small charge separation near the membrane is needed for a voltage.
+Opening a channel changes permeability; the direction of ion movement depends
+on that ion's electrochemical gradient. A sodium channel is not itself an
+ATP-driven sodium pump.
+
+A small local electrical change may decay with distance. An **action potential**
+is regenerated when voltage-dependent channels activate in adjacent membrane.
+In a typical vertebrate axon, rapid sodium entry drives depolarisation and
+subsequent channel changes, including potassium conductance, contribute to
+repolarisation. Refractory properties limit immediate re-excitation and help
+organise propagation. Exact waveforms and ion contributions differ among
+cell types, so treat this as a representative mechanism, not a universal
+recipe for every excitable cell. The supporting reading explains
+[neuronal communication](https://openstax.org/books/biology-2e/pages/35-2-how-neurons-communicate).
+
+## A signal can be coded without becoming a larger spike
+
+Once threshold is reached under comparable conditions, an individual action
+potential is approximately stereotyped. Stronger stimulation can change firing
+frequency, timing and the number of recruited neurons rather than making
+each spike proportionately taller. A sensory neuron is also selective: receptor
+properties and neural pathways determine what kind of change it can encode.
+An electrical recording alone does not reveal the animal's conscious experience.
+
+At a **chemical synapse**, arrival of an action potential can open presynaptic
+calcium channels. Calcium entry promotes neurotransmitter release. Transmitter
+acts on postsynaptic receptors, changing the receiving cell's activity. Effects
+depend on receptor type and the target cell's conditions; the same transmitter
+name is not a complete explanation of excitation or inhibition.
+
+```{mermaid}
+flowchart LR
+  S[Stimulus] --> R[Sensory receptor and afferent neuron]
+  R --> I[Integration in neural circuit]
+  I --> M[Motor neuron]
+  M --> E[Muscle or other effector]
+  E --> O[Response changes conditions]
+```
+
+This original reflex sketch shows a functional route rather than a detailed
+anatomical circuit. A simple reflex can operate without waiting for conscious
+decision, while information may also reach other brain regions. The existence
+of a fast local pathway does not imply that the entire nervous system has
+one linear input and one output. Integrating excitatory, inhibitory and
+modulatory signals helps make context-dependent responses possible.
+
+## Muscle converts chemical energy into force
+
+Skeletal muscle contains fibres with organised contractile machinery. Within
+sarcomeres, interactions between actin and myosin generate force through
+cycles requiring ATP. Calcium exposes regulatory sites in the skeletal-muscle
+thin filament by acting through troponin and tropomyosin. ATP binding permits
+myosin to detach; ATP hydrolysis prepares subsequent interactions. Therefore
+ATP is necessary for controlled cycling and relaxation as well as work.
+
+At a vertebrate neuromuscular junction, motor-neuron signalling triggers a
+muscle electrical response. That response reaches internal membrane systems
+and promotes calcium release from intracellular stores. Calcium recovery helps
+end activation. The sequence connects a neural signal to a mechanical effect:
+it is more informative than saying “the nerve contracts the muscle”. OpenStax
+provides a supporting account of
+[muscle contraction](https://openstax.org/books/biology-2e/pages/38-4-muscle-contraction-and-locomotion).
+
+An **isometric** contraction develops force without an overall change in
+muscle length. Mechanical work on a load requires displacement; for a constant
+force aligned with movement, $W=Fd$. A muscle can consume ATP while holding
+a load stationary even though the external mechanical work in that simple
+calculation is zero. Efficiency calculations must define which energy input
+and output are being compared.
+
+Force varies with recruitment, activation timing, muscle length and loading
+conditions. A **motor unit** consists of a motor neuron and the muscle fibres
+it innervates. Recruiting more units can increase whole-muscle force without
+changing the amplitude of each axon's action potentials. Smooth and cardiac
+muscle share actin–myosin interactions but differ in organisation and control.
+Smooth muscle is not simply skeletal muscle without visible stripes; its
+calcium regulation and activation patterns differ.
+
+## Nervous systems are diverse
+
+Cnidarian nerve nets, ganglia and longitudinal nerve cords in many invertebrates,
+and vertebrate central/peripheral systems illustrate different organisations.
+Cephalisation concentrates sensory and integrating structures near a leading
+end in many bilaterally organised animals. These arrangements reflect body
+plans and behaviour, rather than a single scale of intelligence.
+
+Sensory systems detect mechanical, chemical, light and other changes through
+specialised receptor processes. A receptor converts a stimulus into a cellular
+signal; subsequent neural pathways carry and interpret information. Adaptation
+of a sensory response to a continuing stimulus differs from evolutionary
+adaptation. Biological clocks add an internal timing component: daily rhythms
+can persist under constant conditions while environmental cues entrain their
+phase. State whether “adaptation” refers to receptor response, an individual's
+adjustment or a heritable population feature.
+
+## Hormones work through responsive target cells
+
+An **endocrine hormone** enters internal transport fluid and can reach distant
+cells. Only cells with suitable receptors and downstream machinery respond
+in the relevant way. Peptide hormones often signal through surface receptors;
+many steroid hormones act through intracellular receptors. The eventual
+response can involve enzyme activity, transport, gene expression or several
+of these together. “Hormones are always slow” is an unreliable rule: some
+effects appear rapidly, while others require longer changes in cellular state.
+
+The response depends on secretion, transport, breakdown, receptor abundance
+and interactions with other signals. A high measured hormone concentration
+does not guarantee a large effect at every target. Neuroendocrine cells
+connect neural input to hormone release. Negative feedback can occur at
+several levels of a regulatory axis, allowing the state of a target process
+to influence upstream secretion. The reading on
+[hormone action](https://openstax.org/books/biology-2e/pages/37-2-how-hormones-work)
+expands this distinction between signal and response.
+
+## Reproduction integrates timing, resources and feedback
+
+Reproduction includes gamete production, fertilisation, development and the
+allocation of parental resources. Species vary in internal/external fertilisation,
+sex organisation, reproductive cycles and parental investment. A mammalian
+endocrine example provides a concrete feedback model without representing
+all animals.
+
+Hypothalamic GnRH stimulates pituitary release of gonadotropins, including
+LH and FSH. These act on gonadal cells involved in steroid production and
+gametogenesis. Gonadal signals feed back on hypothalamic/pituitary activity.
+The sign and timing of feedback can change: sustained high oestrogen under
+appropriate conditions can contribute to positive feedback leading to an LH
+surge and ovulation. It would be incorrect to describe the entire reproductive
+cycle as one unchanging negative-feedback loop. In male mammals, gonadal
+and other signals also provide feedback governing endocrine activity and
+sperm production. Consult the supporting account of
+[hormonal reproductive control](https://openstax.org/books/biology-2e/pages/43-4-hormonal-control-of-human-reproduction).
+
+Energy availability, environmental timing and stress can influence reproduction.
+These links explain why studying reproductive organs alone is insufficient.
+The circulation carries signals, tissues need fuel, and neural pathways
+provide information about surroundings. In a seasonal breeder, a prediction
+about reproductive timing should therefore consider environmental cues and
+physiological state rather than one hormone measurement alone.
+
+## Bring the animal half together
+
+Use a terrestrial animal escaping a threat as a final integration case. Trace
+sensory detection, neural signalling, motor-unit recruitment, ATP use, oxygen
+transport, heat production and water costs. Then ask which processes can
+change immediately and which require sustained adjustment. For histology,
+use described muscle and neural features as pre-lab practice; actual tissue
+recognition must use the established slide collection. Your final explanation
+should show coordinated mechanisms and their limits, not merely name systems.
+Return to the [animal route](../index.qmd) for revision.

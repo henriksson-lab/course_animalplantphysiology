@@ -2,8 +2,10 @@
 title: "Scope and learning goals"
 ---
 
-This proposed course retains the scope of the documented 5MO101 predecessor.
-It is not an approved syllabus for its 2027 successor, 5MO00S.
+This first teaching draft retains the scope of the documented 5MO101 predecessor.
+It is not an approved syllabus for its 2027 successor, 5MO00S. The tutorials and
+classroom activities implement the proposed topic sequence; practical protocols
+and official assessment instructions still need the local teaching materials.
 
 ## Course components
 

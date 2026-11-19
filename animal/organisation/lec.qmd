@@ -1,0 +1,111 @@
+---
+title: "A1 — Organisation, diversity and regulation"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## One need, several solutions
+
+- Every living cell needs suitable supplies and conditions.
+- Compare an aquatic invertebrate, an insect and a mammal.
+- Explain a transport path rather than listing organs.
+
+## Levels are connected
+
+- Cell → tissue → organ → interacting systems → organism.
+- An intestine contains epithelium, connective tissue, muscle and nerves.
+- A tissue category does not identify an entire organ.
+
+## Where is the internal environment?
+
+- Gut lumen is continuous with the exterior.
+- Absorption crosses a selective epithelial barrier.
+- Most cells exchange with interstitial fluid.
+- Circulation connects distant exchange regions and tissues.
+
+## Size changes the geometry
+
+For a cube: area $=6L^2$; volume $=L^3$; ratio $=6/L$.
+
+- Double length: area ×4, volume ×8.
+- Ratios need units: mm⁻¹, for example.
+- Larger bodies can fold surfaces and move fluids.
+
+## Distance is costly
+
+- Simple diffusion time scale grows with distance squared.
+- Tenfold distance → roughly hundredfold time scale.
+- Bulk flow covers long distances; diffusion crosses final barriers.
+
+## Epithelium: a boundary with two sides
+
+- Closely associated cells form sheets.
+- Apical and basal domains can differ.
+- Thin exchange barriers and layered protective barriers solve different tasks.
+- Identify lumen, layers and shape before guessing an organ.
+
+## Connective tissue: examine the matrix
+
+- Cells occur within extracellular material.
+- Matrix can be fibrous, flexible, mineralised or fluid.
+- Tendon and blood belong to this broad category.
+- Pale regions in a section are not automatically empty.
+
+## Muscle and nervous tissue
+
+- Muscle produces force; its arrangement affects function.
+- Skeletal, cardiac and smooth muscle differ.
+- Neurons receive, integrate and transmit signals.
+- Glial cells support neural function.
+
+## A histology claim needs evidence
+
+Record scale, section orientation, cell features, layers, matrix and lumens.
+
+Then propose identity and alternatives.
+
+A ring can be a cut tube. Text descriptions prepare for, but do not replace,
+the actual slide collection.
+
+## Stability can require continual work
+
+- Homeostasis maintains suitable internal conditions.
+- Constant values do not imply zero flux or inactivity.
+- Different variables can vary on different time scales.
+
+## Explain negative feedback
+
+Disturbance → sensed deviation → control → effector → opposing consequence.
+
+For rising body temperature: identify how heat loss/production changes and
+how that reduces the deviation.
+
+## Avoid two feedback errors
+
+- “Negative” describes loop direction, not a harmful effect.
+- An effector response is not necessarily the regulated variable.
+- Positive feedback amplifies a change and needs termination.
+
+## Responses and evolutionary change
+
+- Acute response: minutes or less in the example.
+- Acclimation: adjustment within an individual's lifetime.
+- Evolutionary adaptation: heritable population change across generations.
+- A useful function alone does not establish evolutionary origin.
+
+## Compare without a ladder
+
+- Insect: branching tracheal transport brings gases near tissues.
+- Mammal: lung exchange plus blood oxygen transport.
+- Both need gradients and short final diffusion paths.
+- Ask about trade-offs and environment, not which animal is “more advanced”.
+
+## Explain before you leave
+
+1. Why can a large animal not be understood as a smooth enlarged cube?
+2. Which evidence distinguishes an epithelium from connective tissue?
+3. Which response opposes the initial disturbance in your feedback loop?
+
+[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

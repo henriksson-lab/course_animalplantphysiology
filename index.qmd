@@ -3,10 +3,11 @@ title: "Animal and Plant Physiology"
 ---
 
 ::: {.callout-note}
-## Course material under development
+## First teaching draft
 
-This is a planning scaffold. Topic order and readings are provisional;
-complete lessons, laboratory instructions and assessment details will follow.
+Tutorials, lecture slides, exercises, self-check quizzes and classroom practical
+activities are available. Live laboratory protocols, specimen resources and
+official assessment details still come from the teaching team.
 :::
 
 How do animals and plants maintain function, obtain resources, regulate their
@@ -18,11 +19,14 @@ The working scope retains an equal animal and plant balance across 15 ECTS.
 It follows the documented predecessor course while the successor's formal
 details are checked.
 
+- [Start here](start.qmd) and follow the [ten-week route](schedule.qmd).
 - [Course scope and learning goals](overview.qmd)
-- [Animal physiology topics](animal/index.qmd)
-- [Plant physiology topics](plant/index.qmd)
+- [Animal physiology lessons](animal/index.qmd)
+- [Plant physiology lessons](plant/index.qmd)
 - [Practical work and communication](practicals/index.qmd)
 - [Reading and evidence](references.qmd)
 
 Practical work develops physiological understanding and scientific reporting.
-There is currently no required R component in this proposal.
+The [data and files](downloads.qmd) support complete classroom analysis by hand
+or calculator. There is no required R component; an optional worked example
+reuses a familiar workflow from Intro Computing.

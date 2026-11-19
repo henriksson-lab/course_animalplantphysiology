@@ -1,0 +1,76 @@
+---
+title: "P2 exercise — Account for water movement"
+---
+
+Use paper and a calculator if useful. Allow 50–60 minutes. All numerical
+observations are invented teaching examples, not a recovered laboratory dataset.
+The [tutorial](index.qmd) defines the terms. Leave with calculations, a pathway
+diagram and a short experimental-design critique.
+
+## 1. Predict an initial direction
+
+For each cell calculate Ψ = Ψs + Ψp in MPa. Ignore gravity/matric terms for this
+small system. Both cells contact the same external solution at −0.4 MPa.
+
+| Cell | Ψs (MPa) | Ψp (MPa) |
+| --- | ---: | ---: |
+| A | −0.8 | +0.2 |
+| B | −0.7 | +0.5 |
+
+Predict initial net movement for each cell. Why is its final water content not
+determined just by retaining these initial values?
+
+::: {.callout-note collapse="true"}
+## Worked comparison
+
+A has −0.6 MPa, so water initially tends to enter from −0.4 MPa. B has
+−0.2 MPa, so water initially tends to leave towards −0.4 MPa. Pressure and
+solute concentration can change during movement; these are initial predictions.
+:::
+
+## 2. Explain an energy-dependent uptake system
+
+A root-cell proton pump is inhibited while other conditions are initially
+unchanged. Predict effects on a proton-coupled nutrient carrier, and distinguish
+that from passive water movement through an aquaporin. Your explanation must
+name the relevant energy source or gradient. Would every transported ion
+necessarily respond identically?
+
+## 3. What did the pot actually lose?
+
+Four individually treated pots lose 24, 27, 22 and 25 g over four hours.
+Their leaf areas are 0.10, 0.12, 0.10 and 0.11 m². Unplanted soil controls
+under the same conditions lose a mean of 4 g per pot. For a teaching estimate,
+subtract 4 g from each loss, then divide by time and leaf area.
+
+Calculate the first pot's rate in g m⁻² h⁻¹. List two assumptions in this
+correction. Does leaf-area normalisation guarantee fair physiological comparison?
+
+::: {.callout-note collapse="true"}
+## Check the first rate
+
+(24 − 4) / (4 × 0.10) = 50 g m⁻² h⁻¹. The correction assumes comparable
+soil evaporation and negligible other mass changes. Covering soils, checking
+conditions and documenting uncertainty would improve the interpretation.
+:::
+
+## 4. Independent units and water stress
+
+One tray is watered and one tray is kept dry. Each contains ten pots, and
+three leaves are measured per plant. Explain why 30 leaf measurements per
+condition are not 30 independent applications of the tray-level treatment.
+Propose a design that can separate treatment from tray/location effects.
+State which conclusions remain possible from the original observations.
+
+## 5. A yellow leaf needs a differential explanation
+
+Older leaves yellow while younger leaves remain green. Suggest a nutrient
+remobilisation explanation and two alternatives. Name measurements/controls
+that would help distinguish them. Then explain why saline soil can produce
+water stress even while remaining visibly wet.
+
+## Completion check
+
+Check every potential sign and unit. A good answer to a water-stress question
+connects physics, structure and regulation rather than naming ABA alone.
+Try the [self-check](quiz.qmd).

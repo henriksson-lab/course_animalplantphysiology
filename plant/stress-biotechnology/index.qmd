@@ -1,0 +1,176 @@
+---
+title: "P5 — Stress, defence and biotechnology"
+---
+
+## The question
+
+A plant survives drought but produces fewer seeds. Another resists an insect
+after a gene-expression change. What evidence is needed to evaluate those
+outcomes and decide whether an intervention is useful? Connect physiological
+mechanisms with experimental design, model systems and reasoned discussion of
+benefits, risks and ethics.
+
+## Stress is defined in context
+
+Conditions become stressful when they challenge function beyond a suitable
+range for the organism. A temperature tolerated by one genotype can disrupt
+another. Separate the external exposure, immediate cellular response, damage,
+acclimation and longer-term performance. Survival, biomass and reproductive
+success are different outcomes.
+
+Drought can reduce water availability, restrict transport and promote stomatal
+closure. Salinity adds osmotic effects and potentially specific ion toxicity.
+Heat can disrupt protein and membrane function; chilling or freezing presents
+different physical and biochemical challenges. Plants can change membrane
+composition, solute accumulation, protective proteins and developmental
+allocation. These responses carry costs and have limits.
+
+Reactive oxygen species can damage cellular components when their production
+and removal are imbalanced, but they also participate in signalling. A measured
+increase does not by itself establish whether a response is beneficial or
+harmful. Measure the relevant timing, location and downstream function rather
+than assuming one molecule has a single role.
+
+Acclimation occurs within an organism's lifetime. Evolutionary adaptation
+involves heritable population change across generations. A seedling recovering
+after watering is not evidence that its population has evolved drought
+adaptation. Comparing species or provenances also requires common conditions
+to distinguish environmental history from inherited differences.
+
+## Defence combines barriers and induced responses
+
+Cuticles, cell walls and pre-existing chemicals can limit entry or feeding.
+After detection, plants can reinforce barriers, alter metabolism and recruit
+local or systemic responses. Recognition of microbial features and perception
+of pathogen activity contribute to immune signalling. Herbivory also creates
+wounds and provides attacker-associated information. Damage alone does not
+identify the attacker or the complete defence pathway.
+
+Jasmonates are important in many wound and herbivore responses; salicylic acid
+is central to many pathogen responses. These are useful associations, not an
+exclusive “insect hormone versus microbe hormone” rule. Attackers differ in
+feeding strategy, and pathways interact with ethylene, ABA and developmental
+signals. Simultaneous drought and infection can produce outcomes different
+from adding the isolated responses.
+
+## Natural products connect metabolism and ecology
+
+Plants make diverse specialised metabolites, including many alkaloids,
+terpenoids and phenolics. They can contribute to defence, attraction,
+communication or protection. “Natural” does not mean harmless, and laboratory
+toxicity does not automatically establish ecological effectiveness. Dose,
+exposure, location and organism sensitivity matter.
+
+A defensive compound may be concentrated in a tissue likely to be attacked,
+stored in a less-reactive form or produced after damage. Tissue-specific
+expression and compartmentation can therefore be as important as the total
+amount in a whole-plant extract. A stronger extract effect might arise from
+changed concentration rather than a new compound.
+
+## Growth and defence share regulation and resources
+
+Carbon, nitrogen and energy invested in defence may limit other uses, but the
+relationship is not a fixed conservation law linking every defence increase
+to the same growth decrease. Regulation, environmental resource supply and
+protection from actual damage all influence the outcome. Defence can improve
+reproductive success under attack even if it reduces growth without attack.
+
+One primary Arabidopsis study used combinations of JAZ-repressor mutations to
+examine growth, defence and reproduction. Strong deregulation was associated
+with defence-related metabolic costs and poor performance. This is a useful
+mechanistic example, not a universal quantitative prediction for crops. Read
+[the study abstract and figures](https://pubmed.ncbi.nlm.nih.gov/30348775/)
+and identify measured outcomes before generalising.
+
+## Models help isolate mechanisms
+
+Arabidopsis provides genetic resources and a tractable experimental system.
+Other models suit other questions: cereals, legumes, trees and non-vascular
+plants have features that a single small flowering model cannot represent.
+A conserved gene does not guarantee identical organ behaviour or agricultural
+performance. Transfer requires checking expression, tissue context, environment
+and whole-plant trade-offs.
+
+Use a curated resource such as [TAIR](https://www.arabidopsis.org/) to identify
+a locus, aliases, evidence type and linked literature. Record the stable
+identifier and access date. Distinguish an annotation based on direct
+experiments from similarity-based inference. Expression in a tissue suggests
+where a gene might act; it does not alone prove function. Database access can
+vary, so the exercise also supplies an offline evidence record and does not
+require a subscription or programming.
+
+## Transformation and regeneration are separate steps
+
+Transformation introduces genetic material into cells. Agrobacterium-mediated
+delivery exploits a biological transfer system; physical delivery methods
+such as particle bombardment provide alternatives. Stable integration,
+transient expression and genome editing describe different outcomes. Editing
+may change an endogenous sequence and need not leave the delivery construct
+in the final selected line. The actual result must be verified.
+
+Tissue culture can support growth and regeneration under controlled conditions.
+An explant may form callus, shoots or roots depending on species, genotype,
+developmental state and medium. Hormone balance is one influence, not a
+universal recipe. These notes explain principles and do not supply a
+transformation or culture protocol.
+
+Selection and regeneration can introduce additional differences. Evaluate
+multiple independent events, appropriate parental/background controls and
+where possible segregation or complementation evidence. A phenotype in one
+transformed plant does not by itself establish that the intended gene change
+caused it. Insertion effects, tissue-culture variation and environmental
+differences are alternative explanations.
+
+## Tissue-specific expression changes the intervention
+
+A promoter helps specify where and when a transgene is expressed. Constitutive
+expression differs from root-specific, guard-cell-associated or stress-induced
+expression. Targeting a tissue can potentially reduce unwanted effects
+elsewhere, but actual specificity must be measured. Reporter fluorescence is
+evidence about the reporter system, with limits from detection, stability and
+sampling; it is not automatically a direct measurement of the native protein.
+
+Consider a proposed guard-cell intervention reducing water loss. Ask whether
+CO2 uptake, leaf temperature and yield also change. Improved water retention
+in a short chamber experiment is insufficient evidence of improved seasonal
+performance. Physiological knowledge specifies the missing measurements.
+
+## A plant can report chemical exposure
+
+A chemical-responsive promoter can drive a visible or fluorescent reporter.
+In principle, a change in reporter signal could indicate exposure to a target
+chemical. This is a **biosensor concept**, not a validated detector merely
+because a reporter changes. The promoter might also respond to wounding,
+temperature or another chemical. Reporter accumulation can lag behind exposure
+and depend on tissue health, light and developmental state.
+
+To evaluate such a system, compare known concentrations including zero,
+appropriate non-target chemicals and plants with a control reporter construct.
+Define signal range, background, response time and recovery. Check whether the
+reporter system or exposure itself alters growth and metabolism. A damaged
+plant losing fluorescence is different from a healthy plant activating a
+specific exposure response. Field use additionally requires understanding
+environmental variation. The physiological task is to separate chemical
+recognition from general stress and measurement artefacts; no sensor
+construction or exposure protocol is proposed here.
+
+## Evaluate benefits, risks and ethical choices
+
+Define the intervention, intended use, environment and comparator. A benefit
+could be reduced crop loss or improved nutritional quality. Potential concerns
+include non-target effects, gene flow where compatible relatives occur,
+resistance evolution, unequal access and changes in farming practice. Their
+relevance depends on the trait and setting, not solely on the label “GM”.
+
+Separate empirical questions from value judgements. Whether pollen reaches
+a compatible relative can be investigated; what degree of uncertainty is
+acceptable and who should decide involves values and governance. Consider
+distribution of benefits, costs and decision power, including farmers,
+consumers, workers and affected ecosystems. Avoid treating an uncertainty as
+proof of danger or a lack of detected harm as proof of zero risk.
+
+The [exercise](exercise.qmd) uses a clearly invented proposal and offline
+evidence record. Build a recommendation with a mechanism, supporting evidence,
+limitations, stakeholder considerations and a measurable follow-up. Finish
+with the [self-check](quiz.qmd) and connect the plant half back to the
+[course route](../index.qmd).

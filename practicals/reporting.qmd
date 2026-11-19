@@ -1,0 +1,115 @@
+---
+title: "Practical: write a physiological report"
+---
+
+## Purpose
+
+A report should let a reader understand what was asked, how the observations
+were obtained, what the results show and how far the physiological explanation
+can go. Use one of the supplied analysis practicals or the instructor's actual
+laboratory activity. This is a teaching template and feedback framework,
+**not an approved grading scheme or official submission instruction**.
+Allow a first 60-minute drafting session and a second revision session.
+
+No programming is required. A clear calculation table and labelled figure can
+meet this activity's goals. If software is used, preserve source data and the
+steps producing the result. The [worked-figure gallery](../figures.qmd) gives
+examples for comparison after your own first attempt. Any formal assessment
+follows the current course instructions.
+
+## Report structure and prompts
+
+### Title and question
+
+Name the process, comparison and organism/system if known. “Lab report 2”
+does not tell a reader what was investigated. End the introduction with one
+answerable question and an explicit prediction justified by physiology.
+Explain the essential mechanism in your own words before citing a reference.
+
+For the simulated respirometry example, an appropriate question is whether
+mass-specific oxygen consumption differs between the supplied temperature
+groups. Calling the activity an experiment you personally carried out would
+misrepresent its provenance.
+
+### Methods and design
+
+State whether observations are measured, supplied or simulated. Identify the
+independent unit, allocation, conditions, measurement interval, controls,
+variables and units. Define the calculation, including correction and
+normalisation. Keep enough detail for the analysis to be reconstructed while
+using the actual local protocol for live laboratory methods.
+
+Write what happened, rather than a list of commands. Explain why the method
+answers the question. If an assumption is stipulated in the exercise, identify
+it as such; do not claim you verified calibration or randomisation in a dataset
+you did not collect. Note missing observations and how they were handled.
+
+### Results
+
+Show individual observations where feasible, a relevant summary and one
+worked calculation or sufficiently documented computational step. Every
+figure needs axis labels, units and a caption identifying its units of
+replication. Say whether uncertainty marks represent SD, SE or a confidence
+interval. If there are no error bars, do not describe them.
+
+State the direction and size of the comparison in words, using an explicit
+subtraction order. “There was a difference” is incomplete; “the warm-group
+mean was higher by 0.125 µmol O₂ min⁻¹ g⁻¹” specifies an interpretable
+quantity in the respirometry example. Keep the simulated-data qualifier nearby.
+No p-value is needed merely to make a report look scientific.
+
+### Discussion
+
+Answer the original question first. Connect the pattern to a plausible
+mechanism, identifying which mechanistic variables were actually measured.
+Discuss design limits, measurement limits and limits of generalisation.
+Choose one concrete improvement linked to one limitation. “Use better
+equipment” is less useful than specifying a calibration check or matched blank.
+
+Separate absence of evidence from evidence of absence. A wide interval or
+small sample may leave multiple effects compatible with observations.
+Likewise, a large difference in a constructed example is not a biological
+discovery. Do not translate respiration into growth, height into biomass,
+or leaf gas exchange into field yield without evidence.
+
+### References and provenance
+
+Cite sources supporting mechanisms and definitions, using author/year or
+another consistent style. Give direct source identifiers so a reader can
+find them. Identify course-generated simulated data by file and dictionary.
+Do not cite a paper as the origin of an invented dataset. Do not copy its
+figure or legend unless reuse is permitted and attributed.
+
+## Peer-review task
+
+Exchange drafts. The reviewer should locate the independent unit, a unit-bearing
+calculation, the main figure and the sentence answering the question. If any
+cannot be found, ask for clarification rather than silently repairing it.
+Write three short comments: one statement supported well, one ambiguity and
+one specific revision that would improve physiological reasoning.
+
+| Dimension | Evidence of a clear report | Revision needed if… |
+| --- | --- | --- |
+| Question and physiology | Question and prediction connect to a mechanism | A general topic replaces an answerable question |
+| Design and measurement | Unit, conditions, controls and provenance are explicit | Repeated readings are counted as new organisms |
+| Calculation and presentation | Units, correction, direction and individual values are clear | A result cannot be traced to observations |
+| Interpretation | Size, mechanism and limitations are distinguished | A proxy or association is presented as proof of mechanism |
+| Communication | Figures, captions, sources and writing support the argument | Formatting hides missing methods or unexplained claims |
+
+These dimensions guide feedback; they assign neither marks nor grade boundaries.
+
+## Final revision checklist
+
+Can another person reconstruct one result from the source table? Can they tell
+which organism or pot is independent? Does the figure support the reported
+comparison? Do the question, calculation and conclusion use the same outcome?
+Are simulated data identified? Is every cited source traceable? Does the
+discussion name one uncertainty that matters to the conclusion?
+
+Leave with a revised report, figure and original data, plus a note saying what
+changed after feedback. If using R Markdown optionally, retain the `.Rmd` and
+render after restarting R. Producing HTML is a reproducibility check, not
+proof that the biological interpretation is correct.
+
+Continue to [literature and presentation](literature-presentation.qmd) or the
+[practical route](index.qmd).

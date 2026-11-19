@@ -69,7 +69,7 @@ them. Normal-tissue identification still needs the course's specimen manual.
 
 ### Plant reference
 
-Taiz, Møller, Murphy and Zieger, *Plant Physiology and Development*, seventh
+Taiz, Møller, Murphy and Zeiger, *Plant Physiology and Development*, seventh
 edition (2022), print ISBN **9780197577240**.
 [Publisher contents](https://www.oup.com.au/books/higher-education/biology/9780197577240).
 

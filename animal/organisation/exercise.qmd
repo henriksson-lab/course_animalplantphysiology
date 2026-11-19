@@ -1,0 +1,92 @@
+---
+title: "A1 exercises — Structure, scale and feedback"
+---
+
+Use the [tutorial](index.qmd) as a reference. These are paper-and-discussion
+tasks, not specimen identifications or instructions for animal experiments.
+Allow roughly 60–90 minutes including discussion. Leave with an annotated
+comparison, a tissue-evidence table and a feedback diagram.
+
+## 1. Put the boundaries back
+
+Draw a nutrient's route from the mammalian gut lumen to the cytoplasm of a
+skeletal-muscle cell. Include the absorptive epithelial cell, internal transport
+fluid and muscle-cell membrane. Mark at least two places where selective
+membrane transport matters. Explain why finding glucose in the gut lumen
+does not establish that it has been absorbed.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+The gut lumen is continuous with the exterior. Name what lies on both sides
+of each boundary; “goes into the body” is not a sufficiently precise arrow.
+:::
+
+## 2. Work the small geometry case
+
+For hypothetical cubic bodies with side lengths 1, 2 and 4 mm, calculate
+surface area, volume and surface-area-to-volume ratio. Give units for all
+three. Then predict how characteristic diffusion time changes when a transport
+distance rises from 0.1 to 1 mm, assuming the same medium and substance.
+
+Explain why neither calculation proves that a large animal cannot exchange
+enough oxygen. Name two structural/process changes that the simple cube lacks.
+Show your arithmetic, not only the final ratio.
+
+::: {.callout-note collapse="true"}
+## Numerical checkpoint
+
+At 4 mm, area is 96 mm² and volume is 64 mm³. Check what happens when you
+divide them. The tenfold distance change concerns a squared relationship.
+:::
+
+## 3. Recognise features before naming tissue
+
+The following are invented descriptions, not observations from real slides.
+For each, propose a primary tissue category, two supporting features and one
+possible function. State what extra evidence would be needed to name an organ.
+
+| Description | Features supplied |
+| --- | --- |
+| A | One thin layer of closely associated cells around a lumen; little intervening matrix |
+| B | Widely spaced cells among abundant parallel extracellular fibres |
+| C | Long, parallel, striated fibres containing multiple nuclei |
+| D | Cell bodies with long processes among numerous smaller supporting cells |
+
+Now explain why a circular empty-looking profile alone cannot identify a
+blood vessel. Suggest how section angle could change a tubular structure's
+appearance.
+
+## 4. Repair a feedback explanation
+
+A student writes: “When an animal gets hot, it sweats, so that is positive
+feedback because sweating is helpful.” Rewrite this account using a regulated
+variable, a disturbance, a sensor/control process, an effector and the effect
+on the original deviation. Then identify two limits: not all animals sweat,
+and evaporation depends on environmental conditions.
+
+Draw the loop and label the arrow that opposes the initial disturbance.
+
+## 5. Separate time scales and evidence
+
+Classify each example as an acute response, an individual's acclimatory change,
+or a proposed evolutionary adaptation. Explain the evidence needed for the
+last classification.
+
+1. Ventilation changes within minutes when an animal becomes active.
+2. A fish's performance changes after several weeks at a new temperature.
+3. A heritable gill feature is proposed to improve performance in a population's
+   usual habitat over generations.
+
+Would measuring a useful function in one individual be enough to establish
+the feature's evolutionary origin? Explain.
+
+## 6. Compare two solutions
+
+Write 150–200 words comparing oxygen delivery in an insect and a mammal.
+Include the environmental medium, exchange pathway, internal transport route,
+two shared physical constraints and one trade-off. End with a measurement
+that could test part of your explanation. Avoid ranking the animals as
+“primitive” and “advanced”.
+
+Finish with the [self-check quiz](quiz.qmd).

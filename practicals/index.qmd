@@ -2,8 +2,28 @@
 title: "Practical work and communication"
 ---
 
-This page describes the proposed scope. It is not a laboratory protocol or
-an instruction to begin an experiment.
+These activities form a first classroom teaching draft. They use supplied
+textual observations and simulated datasets; core analysis works with paper
+and a calculator. They support but do not replace established laboratory
+protocols, actual specimens or supervised practical skills sessions. Formal
+assessment rules and local protocols come from the teaching team.
+
+## Your route
+
+| Activity | Focus | Suggested working time |
+| --- | --- | --- |
+| [Anatomy and histology](anatomy-histology.qmd) | Evidence for tissue identity and comparative structure/function | 75–90 min plus actual specimen practice |
+| [Animal oxygen consumption](animal-measurements.qmd) | Background correction, units, temperature and metabolism | 90 min |
+| [Plant water balance](plant-water.qmd) | Mass balance, area normalisation and water potential | 90 min |
+| [Photosynthetic light response](photosynthesis.qmd) | Repeated readings, compensation and net/gross exchange | 90 min |
+| [Growth and stress](development-stress.qmd) | Within-plant change, treatment comparison and mechanisms | 90 min |
+| [Scientific reporting](reporting.qmd) | Scientific argument and peer review | Drafting and revision sessions |
+| [Literature and presentation](literature-presentation.qmd) | Critical reading, biotechnology and ethics | Preparation, group discussion and presentation |
+
+Times are planning suggestions, not booked contact hours. Accompany the
+corresponding animal/plant lessons rather than creating a computing block.
+Keep the [simulated-data dictionary](../data/README.md) with each CSV. Compare
+your first plot with the [worked-figure gallery](../figures.qmd).
 
 ## Anatomy and histology
 
@@ -18,15 +38,17 @@ the question, experimental unit, controls, measurements and units before
 interpreting results. Preserve observations and distinguish variation among
 organisms from repeated measurements of one organism.
 
-The practical manual, equipment, specimen list and timetable will determine
-the experiments. No new experiment is specified by this outline.
+The local practical manual, equipment, specimens and timetable determine live
+experiments. Supplied classroom observations do not verify specimen-handling
+or experimental skills.
 
 ## Scientific reporting
 
 A report should connect the physiological question, methods, results and
 interpretation. Explain figures, uncertainty and limitations rather than
-presenting numbers alone. Software requirements will follow the actual
-practical instructions; this proposal requires no R component.
+presenting numbers alone. No R is required. An
+[optional supplied R walkthrough](../optional-computing/index.qmd) repeats
+the animal analysis if the teacher trials computing within existing analysis time.
 
 ## Literature and presentation
 

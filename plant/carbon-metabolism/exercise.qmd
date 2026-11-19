@@ -1,0 +1,68 @@
+---
+title: "P3 exercise — Interpret a carbon budget"
+---
+
+Use the [tutorial](index.qmd). Allow 50–60 minutes. The numbers below are
+invented for classroom analysis; they are not predictions for any species.
+Leave with a hand-drawn response plot and a whole-plant explanation.
+
+## 1. Trace atoms, energy and compartments
+
+Draw a chloroplast with thylakoids and stroma. Label where water supplies
+electrons, oxygen is released, ATP/NADPH are generated and CO2 is fixed. Add a
+mitochondrion and explain why it remains relevant in an illuminated leaf.
+Correct the statement: “The leaf splits CO2 to release oxygen and stores
+light directly as ATP for transport to roots.”
+
+## 2. Plot the measured response
+
+The same leaf is measured at each light level after an equilibration period.
+Other chamber settings are held constant. Positive values indicate net uptake.
+
+| Light (µmol photons m⁻² s⁻¹) | Net CO2 exchange (µmol CO2 m⁻² s⁻¹) |
+| ---: | ---: |
+| 0 | −2 |
+| 50 | 0 |
+| 200 | 6 |
+| 800 | 9 |
+
+Plot points, label axes/units, identify the observed compensation condition
+and describe the change in response per added light. What additional evidence
+would you need to identify the high-light limitation? Do not fit a straight
+line across the whole range or treat the four readings as four plants.
+
+## 3. Keep units through the calculation
+
+A leaf maintains net uptake of 6 µmol CO2 m⁻² s⁻¹ over 0.02 m² for 600 s.
+Calculate total net uptake in µmol CO2, assuming the rate remains constant.
+Explain why this does not by itself give whole-plant dry-mass gain.
+
+::: {.callout-note collapse="true"}
+## Worked units
+
+6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO2. Leaf area and time cancel.
+Other organs respire; carbon may be exported or stored; biomass composition
+and longer-term variation have not been measured.
+:::
+
+## 4. Compare strategies under specified conditions
+
+Explain the advantage and cost of CO2 concentration in a C4 leaf under warm,
+bright conditions. Compare spatial concentration with a CAM plant's typical
+night/day separation. Propose one observation supporting CAM, and one reason
+that an overnight gas-exchange trace alone may need further verification.
+
+## 5. Sources, sinks and nitrogen
+
+During seed filling, a mature leaf exports carbon to developing seeds. Later,
+a stored underground organ supports regrowth. Draw each source–sink relation.
+Explain why “phloem carries sugar downwards” fails in at least one case.
+Predict why severely oxygen-limited roots may have poor nutrient uptake even
+when shoot photosynthesis continues. Connect carbon skeletons and energy to
+nitrogen assimilation rather than treating nutrient supply as independent.
+
+## Completion check
+
+Distinguish gross component processes from net exchange; amount from rate;
+photorespiration from mitochondrial respiration; source role from organ name.
+Continue with the [self-check](quiz.qmd).

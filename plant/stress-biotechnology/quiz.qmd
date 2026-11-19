@@ -1,0 +1,65 @@
+---
+title: "P5 — Stress and biotechnology self-check"
+---
+
+Answer before opening the explanations. Explain one mechanism aloud and revisit
+the [tutorial](index.qmd) if you can recall a term but cannot connect its steps.
+
+## 1. Does survival establish unchanged fitness or yield?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. A surviving plant can have reduced growth, reproduction or seed viability. State and measure the actual performance outcome.
+:::
+
+## 2. Does short-term acclimation prove evolutionary adaptation?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Acclimation occurs within an organism; adaptation involves heritable population change across generations.
+:::
+
+## 3. Are natural products necessarily harmless?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Effects depend on compound, dose, exposure and the receiving organism.
+:::
+
+## 4. Does expression in guard cells prove a gene controls closure?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Expression supports a location hypothesis. Causal evidence needs appropriate perturbations, controls and phenotype measurements.
+:::
+
+## 5. Why test multiple independent transformation events?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+To distinguish a reproducible consequence of the intended change from event-specific insertion, culture or background effects.
+:::
+
+## 6. Does more fluorescence prove detection of the intended chemical?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Check specificity, background, calibration, timing and plant condition; other stimuli or measurement artefacts may change the signal.
+:::
+
+## 7. Name an empirical question and a value judgement in a biotechnology decision.
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+Whether compatible relatives receive pollen is empirical. Who should decide an acceptable level of uncertainty involves values and governance. Both deserve explicit treatment.
+:::
+
+Compare your reasoning with the [exercise](exercise.qmd). Correct an explanation
+rather than recording only a score.

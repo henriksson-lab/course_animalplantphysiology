@@ -1,0 +1,87 @@
+---
+title: "A2 exercises — Feeding, metabolism and temperature"
+---
+
+Use the [tutorial](index.qmd). All numerical observations below are invented
+teaching examples. This is analysis of supplied information, not an animal
+handling or respirometry protocol. Allow 60–90 minutes. Leave with a labelled
+energy budget, rate calculations and one mechanistic comparison.
+
+## 1. Follow a meal
+
+Trace a starch molecule from ingestion to absorbed sugar and subsequent ATP
+production in an animal cell. Distinguish mechanical processing, hydrolysis,
+membrane transport and cellular metabolism. Where does the gut lumen sit
+relative to the internal environment?
+
+Compare a foregut fermenter with a hindgut fermenter. Why do microbial
+location and retention time matter? Give one benefit and one cost/trade-off
+of microbial fermentation without claiming one arrangement is always best.
+
+## 2. Make the energy account balance
+
+For one animal over one day, supplied values are ingested energy 150 kJ,
+faecal loss 40 kJ, chemical energy excreted 10 kJ and metabolic expenditure
+85 kJ. Calculate retained energy, and express metabolic expenditure as a
+mean power in watts over that day. Use 1 kJ = 1,000 J and 1 day = 86,400 s.
+
+What changes if metabolic expenditure becomes 110 kJ with other terms held
+fixed? Explain the biological meaning of a negative retained balance. State
+why neither budget alone proves whether protein supply was adequate.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Use the same time interval for every energy term. Watts are J s⁻¹, not kJ day⁻¹.
+:::
+
+## 3. Calculate and compare oxygen-use rates
+
+A hypothetical 0.20 L water chamber is followed for 10 min. Oxygen decline
+for an empty-chamber blank over the same interval is 0.05 mg L⁻¹.
+Each row below represents a different animal in its own chamber; all animals
+have mass 2.0 g. Conditions other than the labelled temperature are stipulated
+to be comparable for this arithmetic exercise.
+
+| Animal | Temperature (°C) | Oxygen decline (mg L⁻¹ per 10 min) |
+| --- | ---: | ---: |
+| C1 | 10 | 0.25 |
+| C2 | 10 | 0.30 |
+| W1 | 20 | 0.45 |
+| W2 | 20 | 0.55 |
+
+Calculate blank-corrected oxygen consumption in mg min⁻¹ and then
+mg min⁻¹ g⁻¹ for each animal. Find the mean rate at each temperature and
+the apparent $Q_{10}$ from those means. Show one full row calculation.
+
+What is the independent experimental unit? Would ten sensor readings from
+C1 increase the number of independent animals? Explain why the two animals
+per condition and stipulated design provide limited biological evidence.
+
+## 4. Read the temperature mechanism
+
+An ectotherm has increasing oxygen consumption from 10 to 20 °C. An insulated
+endotherm has increasing resting oxygen consumption as air cools from 15 to
+5 °C. Explain how both observations can occur without contradiction. State
+which body-temperature measurements would help distinguish the mechanisms.
+
+Why should a measured $Q_{10}$ not be used to predict performance at any
+temperature? Name two conditions other than temperature that should be checked.
+
+## 5. Connect gut histology to function
+
+Sketch an idealised intestinal villus and label lumen, absorptive epithelium,
+underlying support and internal transport route. Predict the consequences
+of reducing absorptive area while keeping diet and other conditions fixed.
+Then state what your sketch cannot establish about an actual section's organ
+identity or physiological performance.
+
+## 6. Design an interpretation, not a new method
+
+Write a short results paragraph for task 3 giving direction, size, units,
+replicate count and one physiological explanation. Follow it with one limitation
+and a proposed improvement. Do not claim that mass normalisation removes all
+size effects, or that oxygen consumption measures every contribution to ATP
+supply during rapid activity.
+
+Check your concepts with the [quiz](quiz.qmd).

@@ -1,0 +1,69 @@
+---
+title: "A5 self-check — Signalling and integration"
+---
+
+Explain each mechanism before opening its answer. Refer to the
+[tutorial](index.qmd) for a connected account.
+
+## 1. Does a sodium channel pump sodium against its gradient using ATP?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. A channel allows ions to move down their electrochemical driving force.
+ATP-dependent transport maintains gradients over time. Channel opening and
+active transport are different mechanisms.
+:::
+
+## 2. How can a stronger stimulus be represented without taller action potentials?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Firing frequency, timing and recruitment of additional neurons can change.
+Individual spikes remain approximately stereotyped under comparable conditions.
+Encoding depends on receptor and circuit properties.
+:::
+
+## 3. What connects a presynaptic action potential to transmitter release at a typical chemical synapse?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Voltage-dependent calcium entry into the presynaptic terminal promotes vesicle
+release. The transmitter then acts on postsynaptic receptors; the receptor
+and cell's state determine the effect.
+:::
+
+## 4. Does zero external work during a stationary hold imply zero ATP use?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. With no displacement, the simple external $Fd$ work is zero, but force
+maintenance and ion handling can consume ATP. Mechanical output is not the
+entire metabolic expenditure.
+:::
+
+## 5. Must equal circulating hormone concentrations cause equal responses in all tissues?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Receptors, downstream pathways, hormone access, breakdown and sensitivity
+can differ. A signal concentration is one component of a response mechanism.
+:::
+
+## 6. Is all mammalian reproductive feedback negative?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Negative feedback contributes to regulation, but appropriate sustained
+oestrogen signalling can promote positive feedback before an LH surge. The
+sign depends on physiological context and timing; the loop is not an endlessly
+amplifying event.
+:::
+
+Return to the [animal route](../index.qmd), or revisit the
+[A5 exercises](exercise.qmd).

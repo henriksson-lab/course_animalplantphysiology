@@ -1,0 +1,67 @@
+---
+title: "A4 self-check — Water and excretion"
+---
+
+State the boundary, units and direction before opening each answer. Use the
+[tutorial](index.qmd) if you need to rebuild a mechanism.
+
+## 1. What water tendency does a typical freshwater teleost face?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Its internal fluids are more concentrated than surrounding freshwater, so
+water tends to enter across permeable surfaces. Ion loss is a separate challenge.
+Compensation includes ion uptake and production of relatively abundant dilute urine.
+:::
+
+## 2. Does osmoconformity imply every internal ion equals its seawater concentration?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Total osmotic concentration can be similar while selected ions are
+regulated. “Conformer” must be interpreted for the variable being compared.
+:::
+
+## 3. Is a filtered glucose molecule already excreted?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. It is in tubular fluid and can be reabsorbed. Excretion is the amount
+that finally leaves in urine. Filtration, reabsorption and secretion have
+different directions.
+:::
+
+## 4. Filtered load 10, reabsorption 7, secretion 2 mmol min⁻¹: what is excreted?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$10-7+2=5$ mmol min⁻¹. All terms are rates of the same substance. Concentrations
+cannot be inserted into this balance without the appropriate flow.
+:::
+
+## 5. Can ADH action conserve water without creating water?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Yes. Increased collecting-duct water permeability allows greater recovery
+when an appropriate medullary gradient exists. This reduces water leaving
+in urine; it does not add new water to the body's total inputs.
+:::
+
+## 6. Is concentrated urine necessarily a larger solute loss per minute?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Excretion rate is concentration × urine flow. Halving flow while doubling
+concentration leaves solute excretion unchanged. Always distinguish amount,
+concentration and amount per time.
+:::
+
+Continue to [A5](../integration/index.qmd), or revisit the
+[A4 exercises](exercise.qmd).

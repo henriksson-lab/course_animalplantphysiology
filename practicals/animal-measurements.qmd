@@ -1,0 +1,116 @@
+---
+title: "Practical: what does an oxygen decline measure?"
+---
+
+## Biological question
+
+In a supplied hypothetical experiment, does an aquatic invertebrate's
+mass-specific oxygen consumption differ between 15 and 25 °C? This
+90-minute classroom analysis connects metabolism, temperature and measurement
+design. It uses [simulated respirometry data](../data/animal-respirometry.csv)
+and the [data dictionary](../data/README.md). Complete it with a calculator
+and a hand-drawn plot. No animal handling or apparatus operation is required.
+Real respirometry must use the established local protocol.
+
+Twelve animals were randomly allocated, six per temperature. Each occupied
+one chamber and was measured once after a common acclimation interval.
+Measurement order and apparatus were balanced. Assume calibrated, well-mixed,
+leak-free chambers with adequate oxygen and quiescent animals. The dictionary
+defines the effective water volume and matched blank measurements.
+
+## Read the measurement before interpreting it
+
+The sensor measures concentration in µmol O₂ L⁻¹. A concentration decline is
+not yet an amount consumed: it must be multiplied by the effective volume.
+A no-animal chamber also shows a small decline. Subtract that background
+decline before attributing consumption to the animal. Do not subtract body
+mass or divide concentration directly by temperature.
+
+For this exercise use:
+
+$$
+ n_{O_2}=(C_{initial}-C_{final}-\Delta C_{blank})V
+$$
+
+$$
+ r=\frac{n_{O_2}}{t\,m}.
+$$
+
+Here $n_{O_2}$ is corrected amount (µmol), $V$ volume (L), $t$
+elapsed time (min), and $m$ wet body mass (g). The rate is therefore
+µmol O₂ min⁻¹ g⁻¹. This mass-specific normalisation is a stated convention;
+it is not proof of linear scaling of metabolic rate with body mass.
+
+### Worked example: A01
+
+Initial concentration is 250, final concentration 230, and blank decline 2
+µmol L⁻¹. Corrected decline is 18 µmol L⁻¹. In 0.10 L, the corrected amount
+is 1.8 µmol. Over 10 minutes for a 1.0 g animal, the rate is **0.18 µmol
+min⁻¹ g⁻¹**. Without blank correction it would be 0.20, an overestimate.
+
+## Your analysis
+
+1. Inspect the table. How many independent animals and readings are there?
+   What are the treatment allocation and the matched blank intended to control?
+2. Calculate the corrected rate for every animal. First check A02 by hand;
+   retain intermediate amount, time and mass units.
+3. Plot each rate against its temperature group. Label axes and show every
+   animal, rather than drawing two bars that hide observations.
+4. Calculate each group's mean and range. Describe the between-group
+   difference and within-group variation. A hypothesis test is not required.
+5. Explain a plausible physiological reason for higher consumption over this
+   temperature range in an ectotherm. Why does the table not establish that
+   warming always increases metabolism or improves performance?
+6. Write one limitation about activity, body size, oxygen availability or
+   acclimation that would matter in a real study. Separate supplied assumptions
+   from conditions actually checked by a real investigator.
+
+::: {.callout-tip collapse="true"}
+## Hint: check the units
+
+A02 has an observed decline of 18 µmol L⁻¹; after subtracting 2, multiplying
+by 0.10 L, dividing by 10 min and dividing by 0.8 g, the rate is 0.20.
+Do not treat the six animals' body masses as six extra outcomes.
+:::
+
+## What the result means
+
+Oxygen consumption is evidence about aerobic metabolism under the stated
+conditions. It does not directly measure total ATP production, anaerobic
+energy supply, growth or fitness. Converting oxygen to energetic expenditure
+requires further assumptions about substrate use and measurement conditions.
+
+The group means are 0.20 and 0.325 µmol min⁻¹ g⁻¹: a difference of 0.125.
+The ratio is 1.625. Since the temperatures are 10 °C apart, the ratio also
+equals an apparent two-temperature $Q_{10}$ for this example. Use that as a
+description of these conditions, not a universal species constant or proof of
+a single controlling enzyme. The two groups contain different animals, so
+the ratio is not a within-animal response.
+
+## Improve the design
+
+Suppose instead every 15 °C measurement used chamber 1 in the morning and every
+25 °C measurement used chamber 2 in the afternoon. Explain why temperature,
+apparatus and time would be confounded even with six animals per group.
+Propose balanced allocation across apparatus and measurement order. Explain
+why measuring one animal 100 times does not supply 100 independent animals.
+
+## Deliverable and self-check
+
+Submit a one-page result with the calculation for A02, a labelled observation
+plot, group summaries, a three-sentence physiological interpretation and a
+design limitation. Use the [reporting guide](reporting.qmd) for a longer report.
+
+::: {.callout-note collapse="true"}
+## Numerical check
+
+At 15 °C the rates span 0.18–0.22; at 25 °C they span 0.30–0.35.
+A07's corrected rate is 0.30. The independent biological units are 12 animals,
+six per allocation group. Blank runs are controls for measurement background,
+not additional animals. The invented data illustrate a pattern; they do not
+establish a result for an actual invertebrate species.
+:::
+
+An [optional R walkthrough](../optional-computing/index.qmd) reproduces exactly
+this analysis if the teacher chooses to trial it. It is not needed for the
+practical or its interpretation. Return to the [practical route](index.qmd).

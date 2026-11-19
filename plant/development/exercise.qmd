@@ -1,0 +1,71 @@
+---
+title: "P4 exercise — Distinguish signal from mechanism"
+---
+
+Allow about 60 minutes using the [tutorial](index.qmd). All treatment results
+below are invented teaching observations. The aim is to build explanations and
+identify experiments that discriminate between them; no wet-lab procedure is
+specified here.
+
+## 1. Draw a response chain
+
+A seedling bends towards unilateral blue light. Draw cue → perception →
+unequal cellular response → organ curvature. Name a relevant receptor class
+and distinguish the signalling role of light from its energy contribution.
+Propose controls for gravity, handling and general loss of seedling vigour.
+
+## 2. A hormone rescue is informative but limited
+
+An invented dwarf line is short without added gibberellin and approaches the
+untreated wild-type height with added hormone. Untreated wild type is taller
+than untreated dwarf; hormone-treated wild type is taller still. Suggest a
+defect compatible with these observations and one unsupported conclusion.
+What would a failure to respond to hormone suggest, and why would uptake or
+dosage still need checking?
+
+::: {.callout-tip collapse="true"}
+## Separate synthesis from response
+
+Rescue is compatible with inadequate hormone production, but an external
+treatment can bypass several upstream problems. A phenotype plus rescue does
+not identify a specific mutated gene.
+:::
+
+## 3. Count germination correctly
+
+Each of four independently prepared dishes contains 20 seeds. At day five,
+control dishes show 12 and 14 radicle emergences; treated dishes show 16 and
+18. Calculate percentages for each dish and the mean within each group.
+What must be true about treatment assignment for dishes to be independent
+treatment units? Explain why non-germinated seeds cannot all be labelled dead.
+
+::: {.callout-note collapse="true"}
+## Arithmetic check
+
+Control dishes: 60% and 70%, mean 65%. Treated dishes: 80% and 90%, mean 85%.
+The descriptive difference is 20 percentage points. The sample is only two
+dishes per condition; no general mechanistic or inferential claim follows
+from the percentages alone.
+:::
+
+## 4. Evaluate a mobile flowering signal
+
+Read the abstract of [Corbesier and colleagues' primary study](https://pubmed.ncbi.nlm.nih.gov/17446353/).
+Identify the species, proposed moving signal and two kinds of evidence used.
+Why is detecting a protein in a receiver region more informative about movement
+than measuring only flowering time? Why does a tagged construct need functional
+controls? Distinguish expression of the gene from movement of its product.
+
+## 5. Interpret reproductive and ageing outcomes
+
+Two groups make equal flower numbers, but one makes fewer viable seeds.
+List three stages after flower initiation that could account for the difference.
+Then compare normal leaf senescence with sudden tissue damage: what time-course,
+nutrient-remobilisation or contextual evidence would help distinguish them?
+Do not use yellow colour alone as a decisive mechanism test.
+
+## Completion check
+
+Your explanations should connect signalling to cell behaviour and distinguish
+germination, establishment, flowering, fertilisation and seed production.
+Complete the [self-check](quiz.qmd).

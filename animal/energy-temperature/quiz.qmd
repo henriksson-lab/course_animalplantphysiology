@@ -1,0 +1,69 @@
+---
+title: "A2 self-check — Energy and temperature"
+---
+
+Try each explanation before opening the answer. Use the [tutorial](index.qmd)
+for definitions and worked examples.
+
+## 1. Are digestion, absorption and cellular ATP production the same process?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Digestion makes smaller molecules available, absorption moves material
+across an epithelial barrier, and cellular metabolism transforms fuels and
+supplies ATP. A complete account connects these processes rather than merging them.
+:::
+
+## 2. Intake is 100 kJ day⁻¹; losses are 20 faecal, 5 excreted and 80 metabolic. What is retained?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$100-20-5-80=-5$ kJ day⁻¹. The animal draws down retained stores in this
+simplified budget. It has not created negative energy, and the calculation
+does not diagnose which nutrient may be limiting.
+:::
+
+## 3. A 0.10 L chamber loses 0.20 mg L⁻¹ oxygen in 5 min. What is its apparent rate before blank correction?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The amount decline is $0.10\times0.20=0.020$ mg; dividing by 5 min gives
+0.0040 mg min⁻¹. Concentration decline alone is not the amount consumed.
+An appropriate blank and the protocol's other assumptions still need checking.
+:::
+
+## 4. Does dividing oxygen consumption by body mass remove every size effect?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. It gives a mass-specific rate, but metabolic rate need not scale linearly
+with mass. Activity, temperature, feeding state and design can also differ.
+Normalisation is a stated calculation, not a guarantee of comparability.
+:::
+
+## 5. Must an ectotherm have no temperature regulation?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. An ectotherm can select microhabitats, bask or change behaviour. Ectothermy
+describes major heat sources; it is not identical to uncontrolled body-temperature
+variation. Endotherms can also allow body temperature to vary.
+:::
+
+## 6. A rate doubles from 10 to 20 °C. May we assume it doubles every further 10 °C?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The measured $Q_{10}$ is 2 for that interval. Extrapolation can fail as
+conditions, physiology or thermal limits change. Acclimation, activity and
+feeding state must be considered before comparisons.
+:::
+
+Continue to [A3](../gas-circulation/index.qmd), or revisit the
+[A2 exercises](exercise.qmd).

@@ -1,0 +1,65 @@
+---
+title: "P4 — Development self-check"
+---
+
+Answer before opening the explanations. Explain one mechanism aloud and revisit
+the [tutorial](index.qmd) if you can recall a term but cannot connect its steps.
+
+## 1. Must a signalling response involve new DNA sequence?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Existing protein activity and gene-expression changes can alter physiology without changing sequence.
+:::
+
+## 2. Does one hormone specify exactly one response?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Effects depend on dose, tissue, development, sensitivity, transport and interactions with other pathways.
+:::
+
+## 3. How does dormancy differ from quiescence?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+A dormant viable seed fails to germinate despite otherwise suitable conditions; quiescence reflects unsuitable external conditions.
+:::
+
+## 4. What is 18 germinated seeds out of 24?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+75%, at the specified observation time. The remaining six are not necessarily dead.
+:::
+
+## 5. What does Arabidopsis FT illustrate?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+A mobile protein signal contributing to communication between leaves and the shoot apex during floral induction; gene expression and product movement are distinct.
+:::
+
+## 6. Do equal flower numbers establish equal reproductive success?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Pollination, fertilisation, seed development and viability can differ after flowers form.
+:::
+
+## 7. Is every yellow leaf proof of programmed senescence?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Deficiency, injury and other stress can produce yellowing. Time course, context and physiological evidence are needed.
+:::
+
+Compare your reasoning with the [exercise](exercise.qmd). Correct an explanation
+rather than recording only a score.

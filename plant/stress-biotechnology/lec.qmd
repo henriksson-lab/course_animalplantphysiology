@@ -1,0 +1,79 @@
+---
+title: "P5 — Stress and applications"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## What does “better” mean?
+
+Survival, carbon gain, biomass and viable seeds are distinct outcomes.
+
+State the intended environment and comparator.
+
+## Exposure to performance
+
+External challenge → response → possible damage/acclimation → longer-term outcome.
+
+Acclimation is not evolutionary adaptation.
+
+## Abiotic stresses differ
+
+Drought, salinity, heat and freezing share some responses but pose different problems.
+
+Salt adds possible ion toxicity to osmotic stress.
+
+## Defence has several layers
+
+Pre-existing barriers and chemicals; local and systemic induced responses.
+
+Hormone pathways interact; attacker context matters.
+
+## Natural products have context
+
+Dose, compartment, exposure and target determine effect.
+
+“Natural” does not establish harmlessness.
+
+## Growth and defence
+
+Costs and protection benefits depend on conditions.
+
+[Primary JAZ study](https://pubmed.ncbi.nlm.nih.gov/30348775/) provides a specific mechanistic case.
+
+## Models and databases
+
+Record species, stable identifier, evidence and source.
+
+Annotation or expression is not automatically causal proof.
+
+## Transformation differs from regeneration
+
+Delivery, stable/transient outcomes and editing are distinct.
+
+Culture response varies by genotype and tissue.
+
+## Controls protect interpretation
+
+Background and culture controls; multiple independent events; association/complementation where appropriate.
+
+One line is insufficient.
+
+## Tissue-specific expression
+
+A promoter can target expression in place/time. Verify specificity.
+
+Check CO2 uptake, temperature and yield alongside water retention.
+
+## A chemical detector concept
+
+Responsive promoter + reporter may indicate exposure.
+
+Test specificity, calibration, timing, background and plant condition.
+
+## Evidence and ethics
+
+Separate empirical questions from value judgements; consider benefits, costs and decision power.
+
+Apply to the [exercise](exercise.qmd) and [self-check](quiz.qmd).

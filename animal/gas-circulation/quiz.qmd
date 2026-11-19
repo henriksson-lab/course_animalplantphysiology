@@ -1,0 +1,68 @@
+---
+title: "A3 self-check — Gas exchange and flow"
+---
+
+Explain each answer before opening the callout. See the [tutorial](index.qmd)
+for the complete transport path.
+
+## 1. Is ventilation the same as diffusion into the blood?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Ventilation moves the environmental medium by bulk flow. Diffusion crosses
+an exchange barrier down a local driving gradient. Perfusion supplies blood
+to the other side of that barrier.
+:::
+
+## 2. If area doubles and thickness doubles, with all else unchanged, what happens to predicted transfer?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+It is unchanged in the simple proportional model: $2A/(2L)=A/L$. Real organs
+also have heterogeneous flow and gradients, so the comparison is conditional.
+:::
+
+## 3. Is countercurrent exchange an example of oxygen diffusing uphill?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Opposite flow directions can maintain a gradient along the exchange
+path. At each location oxygen still moves down the local partial-pressure
+gradient. Comparing remote inlet and outlet values confuses position with
+local exchange.
+:::
+
+## 4. Does a normal oxygen partial pressure guarantee normal blood oxygen content?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Oxygen content also depends strongly on haemoglobin amount and binding.
+The same partial pressure can coexist with different total oxygen amounts
+per litre of blood. Pressure, saturation and content are distinct quantities.
+:::
+
+## 5. Are pulmonary arteries named incorrectly because their blood is relatively deoxygenated?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Arteries carry blood away from the heart, and veins return it. The names
+refer to direction relative to the heart, not oxygenation state.
+:::
+
+## 6. Flow is 3 L min⁻¹ and arterial–venous content difference 40 mL O₂ L⁻¹. What oxygen-use rate follows?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+$3\times40=120$ mL O₂ min⁻¹ under the stated steady-state assumptions.
+Litres of blood cancel. Substituting a partial-pressure difference would
+not give the required amount balance.
+:::
+
+Continue to [A4](../water-excretion/index.qmd), or revisit the
+[A3 exercises](exercise.qmd).

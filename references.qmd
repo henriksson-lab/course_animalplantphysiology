@@ -9,16 +9,38 @@ documents the predecessor's scope, modules, outcomes and assessments. Its
 reading list is unavailable online. The formal syllabus and literature list
 for successor 5MO00S remain unverified here.
 
-## Candidate references
+## How to use the readings
+
+Each unit provides original explanations and links to relevant public sources.
+Read a source with a specific question: what process is being described, what
+evidence supports it, and what conditions limit the explanation? The
+[literature activity](practicals/literature-presentation.qmd) develops this into
+a structured critical reading and presentation.
+
+For prerequisite support, [OpenStax Biology 2e](https://openstax.org/details/books/biology-2e)
+offers an open introductory biology reference. Links within the units point to
+more focused sections. Optional R uses the documentation linked from its own
+page, rather than requiring a separate computing textbook.
+
+## Candidate specialist references
 
 These are planning references, **not confirmed required purchases**. Assigned
 sections and the actual course reading list will be provided later.
 
 - Hill, Cavanaugh and Anderson, *Animal Physiology*, fifth edition.
   [Publisher information](https://www.oup.com.au/books/higher-education/biology/9780197552438).
-- Taiz, Møller, Murphy and Zieger, *Plant Physiology and Development*, seventh
+- Taiz, Møller, Murphy and Zeiger, *Plant Physiology and Development*, seventh
   edition. [Publisher information](https://www.oup.com.au/books/higher-education/biology/9780197577240).
 
-Selected sections can support the proposed topics. Practical instructions,
-tissue resources and research readings will need the established course's
-own materials.
+Selected sections can support the topics. The instructor evidence record maps
+the proposed units to chapter ranges. Exact adopted editions and section/page
+assignments still need the actual literature list.
+
+## Practical materials
+
+The [supplied datasets](downloads.qmd) are simulated and have a design and units
+dictionary. They were constructed for these activities, not taken from either
+textbook. Tissue identification in the classroom pages prepares students to
+describe structure; real-image and specimen recognition still requires the
+teaching team's resources. The current materials do not reproduce commercial
+textbook figures, laboratory manuals or an official question bank.

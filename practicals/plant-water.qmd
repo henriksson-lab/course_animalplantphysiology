@@ -1,0 +1,107 @@
+---
+title: "Practical: water loss, leaf area and a mass balance"
+---
+
+## Question and study design
+
+How does moving air relate to water loss from a hypothetical plant setup?
+This 90-minute classroom practical uses the [plant-water CSV](../data/plant-water.csv)
+and [data dictionary](../data/README.md). No plant manipulation or apparatus
+procedure is required. Use the course's actual laboratory protocol for any
+future measurements.
+
+Eight independently potted plants are randomised to still or moving air,
+four per group. Each pot receives its setting independently; temperature,
+humidity, illumination and position are controlled or balanced. Soil surfaces
+are covered. Matched plant-free covered setups lose 0.10 g during the interval.
+Assume that background applies to each experimental setup. These are supplied
+simplifications, not observations you should claim to have verified.
+
+## From a balance reading to a physiological quantity
+
+An initial-to-final mass difference is a whole-setup measurement. In this
+exercise we attribute corrected mass loss primarily to transpired water.
+This is an approximation: real mass balances also require attention to leaks,
+soil evaporation, material added/removed and other fluxes. A balance does not
+measure a stomatal aperture or distinguish stomatal from cuticular water loss.
+
+Calculate:
+
+$$
+ \Delta m_{corrected}=m_{initial}-m_{final}-\Delta m_{blank}
+$$
+
+$$
+ E_{area}=\frac{1000\,\Delta m_{corrected}}{A\,(t/60)}.
+$$
+
+The mass values are in g, $A$ is the stated **one-sided** leaf area in
+cm², and $t$ is in min. The result is mg cm⁻² h⁻¹. One-sided area is
+a measurement convention; state it consistently rather than switching to
+two-sided area midway through a comparison.
+
+### Worked check
+
+W01 loses 0.80 g. After a 0.10 g background correction, 0.70 g = 700 mg
+is attributed to the plant. Its area is 50 cm² and the interval 0.5 h.
+The area-specific loss is $700/(50\times0.5)=28$ mg cm⁻² h⁻¹.
+The correction is subtracted once per setup, not once per leaf.
+
+## Tasks
+
+1. Identify the experimental unit, allocation groups and number of independent
+   replicates. Why would one shared still-air cabinet and one shared moving-air
+   cabinet weaken a treatment comparison?
+2. Calculate corrected water loss and area-specific rate for all eight pots.
+   Check W06 by hand before summarising the groups.
+3. Draw an observation plot and calculate group means. Describe the size and
+   variation of the difference in the given units.
+4. Draw the path from soil water through root, xylem, leaf air spaces and
+   stomata to the atmosphere. Mark where vapour diffusion occurs.
+5. Explain how moving air can change the boundary layer at the leaf surface.
+   Why might stomatal regulation prevent a simple proportional response to
+   wind speed in a real plant?
+6. Decide whether the data establish stomatal opening, photosynthetic rate or
+   a species' drought tolerance. Explain what further measurements each claim
+   would need.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+W06's observed 2.0 g loss becomes 1.9 g after correction, then 1900 mg.
+Divide by 25 cm² h, not by 1500 cm² min while labelling the answer per hour.
+:::
+
+## Water potential: use the sign, not just the magnitude
+
+For a short cell-level comparison neglect gravity and matric components and
+use $\Psi_w=\Psi_s+\Psi_p$. A cell has solute potential −0.8 MPa and
+pressure potential +0.3 MPa, so its water potential is −0.5 MPa. The adjacent
+solution has water potential −0.2 MPa. Predict the initial direction of net
+water movement across a permeable membrane, assuming the relevant solutes
+do not freely cross. Explain why the movement slows as cell state changes.
+
+Then consider an adjacent solution at −0.9 MPa. The direction reverses:
+water moves from the higher water potential (less negative value) toward the
+lower water potential. The two cases do not allow you to compute a flux
+without hydraulic conductance, area and other information. Do not equate a
+potential difference in MPa with a mass-loss rate.
+
+## Completion check
+
+Submit a labelled water-path diagram, a worked W06 calculation, the eight
+rates and group means, and an interpretation linking gas exchange and water
+conservation. Include one design limitation and your water-potential predictions.
+
+::: {.callout-note collapse="true"}
+## Self-check
+
+Still-air rates: 28, 36, 44 and 36 mg cm⁻² h⁻¹; moving-air rates: 60,
+76, 92 and 76. Means are 36 and 76, a difference of 40. The cell in
+−0.2 MPa solution initially gains water; in −0.9 MPa solution it loses water.
+More water loss alone does not establish greater carbon gain or drought tolerance.
+:::
+
+For background, read the water-potential and transpiration sections in
+[OpenStax: transport of water and solutes](https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants).
+Return to the [practical route](index.qmd).

@@ -1,0 +1,113 @@
+---
+title: "A3 — Gas exchange and circulation"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## Oxygen must reach the working cell
+
+Environmental medium → respiratory surface → internal transport → tissue →
+mitochondrion.
+
+Which steps are bulk flow, diffusion and binding?
+
+## An exchange surface has physical constraints
+
+$$\dot M\propto A\Delta P/L.$$
+
+- More area and gradient favour transfer.
+- Greater thickness reduces it.
+- Thin, moist surfaces need support and protection.
+
+## Pressure is not content
+
+- Partial pressure concerns the gas's pressure contribution.
+- Oxygen-binding pigments raise total oxygen content.
+- Equal partial pressures need not mean equal oxygen amounts per litre.
+
+## Renew both sides
+
+- Ventilation moves environmental medium.
+- Perfusion supplies internal fluid.
+- Both influence available gradients.
+- More ventilation cannot resolve every perfusion limitation.
+
+## Fish gills: compare locally
+
+- Water and blood commonly flow in opposite directions.
+- Countercurrent organisation sustains local gradients.
+- Oxygen still diffuses down each local gradient.
+- Do not compare one stream's inlet with the other's outlet as a local pair.
+
+## Mammalian and bird lungs
+
+- Mammals: tidal flow through shared conducting routes; alveolar exchange.
+- Birds: exchange lungs and ventilating air sacs have different roles.
+- Air sacs are not the principal exchange surface.
+- Anatomical names do not guarantee identical flow arrangements.
+
+## An insect is a useful counterexample
+
+- Tracheae and finer tracheoles bring gases close to tissues.
+- Diffusion and ventilation contribute.
+- Haemolymph generally carries less of the oxygen-delivery task than vertebrate blood.
+
+## Haemoglobin loading and unloading
+
+- Saturation: fraction of sites occupied.
+- Content: oxygen amount per blood volume.
+- Affinity depends on conditions including pH, temperature and CO₂.
+- Lower affinity at a given pressure can favour tissue unloading.
+
+## Carbon dioxide links gas and acid–base balance
+
+- CO₂ returns dissolved, bound and as bicarbonate.
+- Ventilation changes CO₂ loss.
+- Tissue production, transport and lung exchange are connected.
+- “More breathing is always better” is not a physiological explanation.
+
+## Trace the mammalian circuit
+
+Systemic veins → right heart → pulmonary arteries → lungs → pulmonary veins
+→ left heart → systemic arteries → tissues.
+
+Artery = away from heart. Vein = towards heart.
+
+## Pressure, resistance and flow
+
+$$Q=\Delta P/R.$$
+
+- A pressure difference drives bulk flow.
+- Vessel calibre affects resistance and distribution.
+- Many vessels in parallel differ from one narrow tube.
+
+## Read vessel walls as functional evidence
+
+- Muscular arterial walls withstand/control pressure-driven flow.
+- Thin capillary barriers favour exchange.
+- Veins hold substantial volume at lower pressure.
+- Section orientation and collapse affect appearance.
+
+## Calculate delivery and use
+
+Output = heart rate × stroke volume.
+
+Oxygen use = blood flow × (arterial − venous oxygen content).
+
+5 L min⁻¹ × 50 mL O₂ L⁻¹ = **250 mL O₂ min⁻¹**.
+
+## Compare whole circuits
+
+- Fish: heart → gills → systemic tissues → heart.
+- Mammal: pulmonary and systemic circuits are separated.
+- Open circulations still have directed fluid movement.
+- Count transport constraints, not just chambers.
+
+## Coordinate an activity response
+
+Explain how ventilation, cardiac output, local flow and tissue extraction can
+change together. Which measurement would distinguish them?
+
+[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

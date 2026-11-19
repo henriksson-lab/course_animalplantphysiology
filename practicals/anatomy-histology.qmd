@@ -1,0 +1,133 @@
+---
+title: "Practical: evidence for tissue identity and function"
+---
+
+## Question and preparation
+
+What observations justify naming a tissue, and how does that tissue help an
+organ work? Work in pairs for 75–90 minutes, then submit one individual
+observation sheet. You need paper and a pencil; the cases below supply textual
+observations. They are deliberately constructed descriptions, **not microscope
+images or records of actual specimens**. This activity practises reasoning
+before a specimen session; passing it does not establish visual identification
+or dissection skill. Those require the course's actual slides, atlas and
+instructor-led practical.
+
+Review the four broad tissue categories: epithelium forms linings and
+interfaces; connective tissue supports and links structures; muscle generates
+force; nervous tissue supports information processing and transmission.
+Actual organs contain several categories. A kidney section is not a single
+homogeneous tissue.
+
+## A reproducible observation record
+
+For each case record: the features explicitly supplied; the most defensible
+tissue class; two features supporting it; a likely function; one plausible
+alternative; and an observation that would discriminate between the two.
+Keep observation separate from inference. “Several layers of cells” is an
+observation; “protects against abrasion” is a functional interpretation.
+Do not infer a named organ from a common epithelial shape alone.
+
+### Station 1: interfaces
+
+**Case A:** a continuous lining appears one cell thick. Cells are flattened,
+and nuclei interrupt an otherwise thin barrier. A capillary is immediately
+adjacent; no thick keratin layer is described.
+
+**Case B:** a lining contains several cell layers. Surface cells are flattened.
+Deeper cells appear less flattened. The tissue borders a surface exposed to
+friction.
+
+**Case C:** a tubular profile has a single layer of approximately cube-shaped
+cells around a lumen. Nuclei are central. Other sections show many similar
+tubules, but no specialised border can be resolved.
+
+1. Classify the epithelia by layer number and surface-cell shape.
+2. Explain why A is compatible with exchange and B with protection. Do not
+   claim every thin lining has the same transport properties.
+3. Could C establish “kidney” on its own? Name an additional contextual
+   feature you would ask to inspect.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+“Simple” and “stratified” describe layers; “squamous”, “cuboidal” and
+“columnar” describe cell shape. Function also depends on junctions,
+membrane proteins and the surrounding structures.
+:::
+
+### Station 2: force and information
+
+**Case D:** long parallel fibres show repeated transverse bands. Multiple
+nuclei lie near fibre edges; fibres are not described as branching.
+
+**Case E:** short branching fibres show transverse bands and central nuclei.
+Distinct cell-to-cell junction regions are visible.
+
+**Case F:** spindle-shaped cells each have a central nucleus. No transverse
+bands are visible; bundles surround a hollow organ.
+
+**Case G:** large cell bodies contain prominent nuclei and several processes;
+many smaller supporting cells surround them. The description alone does not
+specify which processes are axons or dendrites.
+
+4. Identify the best broad tissue interpretation for each case, explaining
+   the features rather than matching a keyword.
+5. Which two cases are striated? Why is “striated means skeletal” insufficient?
+6. Predict consequences of disrupting coordinated contraction in E and
+   sustained contraction in F. Link the prediction to organ function, not
+   diagnosis of a disease.
+
+### Station 3: organ architecture
+
+Sketch a cross-section of a generic transport tube with an inner lining,
+connective support and a muscular layer. Label the lumen and identify which
+side contacts the transported material. Explain how a change in muscular
+diameter can alter flow. Then explain why a tube described this way cannot
+be identified confidently as either a blood vessel or a gut segment without
+further observations.
+
+Draw a fish gill lamella and a mammalian alveolar interface as **conceptual
+diagrams**, not replicas of slides. Mark the environmental medium, a thin
+exchange barrier and blood. Write two common exchange requirements and one
+important difference in ventilation or medium. A functional resemblance does
+not establish the same evolutionary origin of every component.
+
+## Turning descriptions into genuine visual practice
+
+Use the institution's provided normal-tissue slides when available. For each
+unknown, begin at low magnification, orient the tissue, then inspect selected
+features at higher magnification under the local microscope instructions.
+Record image/slide ID, magnification or scale bar, orientation and two
+diagnostic observations. Distinguish sectioning angle from biological shape:
+a longitudinal tube and its cross-section can look very different.
+
+Do not invent a scale or copy an atlas label onto an uncertain feature. Return
+to the specimen if two alternatives fit. A descriptive record with justified
+uncertainty is better evidence than a confident name without observations.
+
+## Completion check
+
+Leave with the seven case records, two conceptual exchange diagrams and a
+paragraph answering: “What extra evidence would I need before identifying an
+unknown organ?” End by naming the visual skill this text exercise cannot
+verify. Review representative tissue images through the linked learning
+resources or the course atlas; no image-reuse rights are implied here.
+
+::: {.callout-note collapse="true"}
+## Self-check
+
+A: simple squamous; B: stratified squamous; C: simple cuboidal. D: skeletal
+muscle; E: cardiac muscle; F: smooth muscle; G: nervous tissue. C's shape
+alone cannot establish a kidney origin. The diagrams should show thin barriers
+and large exchange area, while distinguishing water passing gills from air
+ventilating lungs. These answers do not replace visual specimen assessment.
+:::
+
+## Reading
+
+[OpenStax: animal primary tissues](https://openstax.org/books/biology-2e/pages/33-2-animal-primary-tissues)
+provides an accessible classification reference. For the muscle comparison,
+see [OpenStax: muscle chapter review](https://openstax.org/books/anatomy-and-physiology-2e/pages/10-chapter-review).
+
+Return to the [practical route](index.qmd).

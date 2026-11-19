@@ -1,0 +1,61 @@
+---
+title: "Physiology glossary"
+---
+
+Use these short definitions to orient yourself, then return to the relevant
+unit for the mechanism and its limits. Terms describe a process in context;
+similar words do not always imply the same mechanism in plants and animals.
+
+| Term | Working meaning |
+| --- | --- |
+| Acclimation | A change in an individual's phenotype in response to conditions during its lifetime |
+| Adaptation | A heritable feature shaped by evolution that contributes to function in a particular environment |
+| Action potential | A regenerative change in membrane voltage produced by changes in ion conductance |
+| Active transport | Transport coupled to an energy source that can move a substance against its electrochemical gradient |
+| Apoplast | Plant cell-wall and extracellular continuum outside the plasma membranes |
+| Assimilation | Incorporation of a resource into organic material; specify carbon, nitrogen or another resource |
+| Autotroph | An organism using inorganic carbon as a major carbon source; the energy source must also be specified |
+| Chemical potential | A quantity describing a substance's tendency to move or react under given conditions |
+| Compensation point | Conditions at which opposing fluxes balance; specify the measured net flux |
+| Conductance | Ease of movement of a particular current or flux through a pathway |
+| Control | A comparison or reference condition used to help interpret an experimental change |
+| Differentiation | Development of specialised cell properties and functions |
+| Diffusion | Net movement down a chemical-potential gradient arising from molecular motion |
+| Electrochemical gradient | Combined chemical and electrical driving force acting on an ion |
+| Endothermy | Substantial use of metabolic heat to maintain body temperature |
+| Ectothermy | Predominant reliance on external heat sources for body heat balance |
+| Experimental unit | The smallest unit independently assigned to a treatment in the design |
+| Feedback | A response that influences the process or variable that generated the response |
+| Filtration | Pressure-driven movement of fluid and permeable solutes across a barrier |
+| Gross photosynthesis | Photosynthetic carbon fixation before subtracting the losses specified by the measurement/model |
+| Homeostasis | Dynamic regulation of internal variables within a functional range |
+| Hormone | A signalling substance whose effect depends on receptors, context and concentration |
+| Hydraulic conductivity | Ease of water movement through a pathway for a specified driving gradient |
+| Meristem | A plant region with cells that maintain the capacity for division and contribute to growth |
+| Metabolism | The connected chemical transformations that sustain living systems |
+| Net gas exchange | The measured balance of opposing gas fluxes under the stated conditions |
+| Osmosis | Water movement across a selectively permeable membrane driven by a water-potential difference |
+| Osmolarity | Total concentration of osmotically active particles per litre of solution |
+| Osmoregulation | Regulation of body fluid water and solute relationships |
+| Phloem | Vascular tissue involved in transport of assimilates and other substances between sources and sinks |
+| Photoperiod | Duration of light in a daily cycle; responses often depend on associated night duration |
+| Photosynthate | Organic product of photosynthesis, including carbohydrates |
+| Plasticity | Ability of a genotype to produce different phenotypes under different conditions |
+| Receptor | A molecule that detects a signal and participates in initiating a response |
+| Replicate | A repeat whose level of independence must be specified; technical repeats differ from independent experimental units |
+| Respiration | Metabolic processes that transfer energy from substrates; distinguish cellular respiration from ventilation |
+| Senescence | Regulated age- or context-associated changes leading toward loss of function and often resource remobilisation |
+| Sink | A tissue or organ importing assimilates for use or storage under the stated conditions |
+| Source | A tissue or organ supplying assimilates for export under the stated conditions |
+| Standard deviation | A measure of spread among observations; not itself uncertainty in a group mean |
+| Stoma | An epidermal pore regulated by guard cells, contributing to gas exchange and water loss |
+| Symplast | Cytoplasmic continuum of plant cells connected by plasmodesmata |
+| Transpiration | Loss of water vapour from plant surfaces, principally through stomata in many leaves |
+| Turgor | Hydrostatic pressure of cell contents against the wall |
+| Ventilation | Bulk movement of respiratory medium across an exchange surface |
+| Water potential | Water's potential energy per unit volume relative to a reference, useful for predicting its movement |
+| Xylem | Vascular tissue that conducts water and solutes and contributes structural support |
+
+The tutorials introduce these ideas through examples. For background and more
+detailed definitions, see [OpenStax Biology 2e](https://openstax.org/details/books/biology-2e)
+and the [reading guide](references.qmd).

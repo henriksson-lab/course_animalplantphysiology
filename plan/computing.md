@@ -115,3 +115,12 @@ consistent with the actual syllabus and equal access to the required tools.
 Proceed with the physiology course map and recovery of existing teaching
 materials. Defer R adoption. If a suitable established practical emerges,
 trial one familiar analysis step; otherwise teach the core without an R addition.
+
+## Implemented optional support
+
+The first teaching draft includes `optional-computing/index.qmd`, a complete
+R script and an R Markdown report for the simulated animal respirometry activity.
+This is a supplied example for review and reuse, not a scheduled pilot or a
+new requirement. The same calculation is fully explained by hand in the core
+practical. It does not establish feasibility with the actual students or the
+existing course's laboratory data.

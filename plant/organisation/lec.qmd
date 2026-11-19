@@ -1,0 +1,81 @@
+---
+title: "P1 — Building a plant"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## How does a seedling function?
+
+Obtain resources, transport material, support growth.
+
+Explain the connection from cell feature to whole-plant function.
+
+## A cell has several boundaries
+
+- Plasma membrane: selective exchange
+- Wall: extracellular mechanics and connections
+- Tonoplast: vacuolar boundary
+
+## Vacuole and turgor
+
+Solutes and water contribute to pressure against a resisting wall.
+
+Wilting can change mechanics before cells die.
+
+## Plastids and mitochondria
+
+Chloroplasts support photosynthesis; other plastids have other roles.
+
+Green cells also respire.
+
+## Expansion needs coordination
+
+Turgor supplies force.
+
+Wall yielding, synthesis and membrane addition permit lasting expansion.
+
+## Two routes
+
+**Apoplast:** walls and extracellular spaces.
+
+**Symplast:** connected cytoplasm. Membrane crossing changes the route.
+
+## Three tissue systems
+
+- Dermal: protection and exchange
+- Ground: photosynthesis, storage, support
+- Vascular: transport and support
+
+## Xylem and phloem differ
+
+Conducting xylem elements are dead at maturity.
+
+Sieve tubes remain living; companion cells support them. Whole xylem also contains living cells.
+
+## Where does growth occur?
+
+Apical meristems contribute length.
+
+Lateral meristems contribute thickening where present.
+
+## More cells or longer cells?
+
+100 × 40 µm = 4 mm.
+
+100 × 70 µm = 7 mm; 175 × 40 µm also = 7 mm.
+
+Length alone does not identify the mechanism.
+
+## Three genomes cooperate
+
+Nuclear, plastid and mitochondrial expression support one cell.
+
+A protein destination does not identify its gene location.
+
+## Explain before naming
+
+Trace CO2, water and exported carbohydrate through a leaf.
+
+Use the [tutorial](index.qmd), [exercise](exercise.qmd) and [self-check](quiz.qmd).

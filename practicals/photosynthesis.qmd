@@ -1,0 +1,115 @@
+---
+title: "Practical: reading a photosynthetic light response"
+---
+
+## Question and measurements
+
+How does net leaf CO₂ exchange vary across supplied light settings, and what
+does that tell us about photosynthesis? Spend 90 minutes analysing the
+[simulated measurements](../data/photosynthesis.csv). Use the
+[data dictionary](../data/README.md), a calculator and graph paper. No
+gas-exchange instrument or live plant is required. The data illustrate a
+physiological distinction, not a measurement protocol or species estimate.
+
+Three independently grown plants each contribute one leaf. The same leaf is
+measured at 0, 50, 200, 600 and 1200 µmol photons m⁻² s⁻¹, always in that
+order. Assume constant leaf temperature, external CO₂ and humidity, with
+calibrated readings after a common settling criterion. Each plant is an
+independent biological unit; its five readings are a repeated series.
+
+The net CO₂ exchange convention is **positive for uptake by the leaf** and
+negative for release. Distinguish µmol photons in the light axis from µmol
+CO₂ in the exchange axis. Both are expressed per area and per second but
+describe different quantities. Units alone do not identify a physiological
+process.
+
+## First predict the shape
+
+Before plotting, sketch a prediction for a leaf that releases CO₂ in darkness,
+has increasing net uptake at low light, and approaches a plateau at higher
+light. Label zero net exchange. A positive low-light slope need not continue
+indefinitely: carbon supply, biochemical capacity and other processes can
+limit net assimilation when light is no longer the dominant limitation.
+
+1. Plot the observed net rate against light, using a separate symbol or line
+   for each plant. Connect only measurements belonging to the same plant.
+2. Calculate the mean net rate across the three plants at each light level.
+   Add those values to a table; keep the individual traces visible.
+3. Estimate the light compensation point: the light level at which net CO₂
+   exchange is zero. Explain why it is not the light intensity at which no
+   photochemistry occurs.
+4. Describe the change between 200 and 600, then between 600 and 1200.
+   Would one straight line be a good description over the full range?
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+The mean at darkness is −2.0 µmol CO₂ m⁻² s⁻¹; at light 50 it is zero.
+A net-zero leaf may still be fixing carbon while also releasing carbon.
+The net flux is the balance, not a switch showing that all processes stopped.
+:::
+
+## Net exchange is not gross photosynthesis
+
+A simplified bookkeeping relationship is net carbon gain = gross carbon
+fixation − carbon release through photorespiration and mitochondrial
+respiration. The instrument does not separate all of these fluxes from one
+net measurement. In the dark, the −2.0 mean indicates net CO₂ release under
+those dark measurement conditions.
+
+Suppose a worksheet says “gross photosynthesis at light 600 is 12 because
+net assimilation is 10 and dark respiration is 2”. The arithmetic is valid
+for the **stipulated approximation**, but the label needs qualification.
+Dark respiration need not equal mitochondrial respiration in light, and
+photorespiration is not separately measured here. Adding the dark release
+to net uptake therefore gives an apparent respiration-corrected estimate
+under assumptions, not an independently established true gross rate.
+
+5. Write the approximate calculation with units and list its assumptions.
+   Explain why the three traces alone cannot verify those assumptions.
+6. Does a net-zero mean at light 50 imply every individual leaf has exactly
+   zero net exchange? Use the individual values to answer.
+
+## Design determines the conclusion
+
+Light was increased in a fixed sequence. A change in time, acclimation or
+instrument drift could accompany the light change. A physiological pattern
+consistent with a light response is visible, but this design does not isolate
+light from every order effect. Propose a feasible improvement to be checked
+against an actual instrument protocol: repeated reference measurements,
+appropriate equilibration and balanced orders, for example. Random order
+alone does not remove the need for acclimation and stable instrument readings.
+
+Do not run a t-test treating the 15 rows as unrelated leaves. Explain why the
+sample size for independent plant responses is three. If future work needs
+formal inference over repeated light levels, the analysis must account for
+that structure; no new statistical method is required here.
+
+## Link the curve to the plant
+
+7. Predict how stomatal closure during water shortage could alter the light
+   response. Distinguish a plausible mechanism from one measured here.
+8. Explain why a higher leaf-area-specific net rate measured for a few minutes
+   does not by itself establish higher whole-plant growth or crop yield.
+   Consider duration, leaf area, respiration, allocation and environmental change.
+
+## Deliverable and check
+
+Submit the individual traces, five mean values, compensation-point estimate,
+an explanation of net versus gross exchange and a design improvement.
+
+::: {.callout-note collapse="true"}
+## Numerical check
+
+Mean net rates at the five light levels are −2, 0, 5, 10 and 11 µmol CO₂
+m⁻² s⁻¹. Mean increments are +5 from 200 to 600 and +1 from 600 to 1200.
+At light 50 the three readings are 0, −0.2 and +0.2: a zero mean does not
+mean identical leaves. The simple dark-correction estimate at 600 is 12,
+with the limitations stated above. The light response approaches a plateau
+over these values; the data do not establish a universal saturation point.
+:::
+
+For a primary-research example connecting leaf gas exchange with stomatal
+traits, see [Karavolias and colleagues (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10231365/).
+The [literature practical](literature-presentation.qmd) guides its interpretation.
+Return to the [practical route](index.qmd).

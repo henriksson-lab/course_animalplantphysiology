@@ -4,6 +4,14 @@ Working proposal, 18 November 2026. **Plan the established physiology course
 first; consider computing only after its lectures, practicals and assessments
 are secured.** A complete course with no added R is an acceptable result.
 
+**Implementation, 19 November 2026:** the first teaching draft now supplies
+ten tutorial units with slides, exercises and quizzes, classroom practicals,
+simulated datasets, reporting/literature guidance, revision and instructor keys.
+The student route starts at `index.qmd`. Actual laboratory protocols, specimen
+resources, adopted readings and official assessment details still require
+local course materials. One optional R example repeats an existing calculation;
+the core has no required R sessions.
+
 ## 1. Scope and evidence
 
 Use the documented 15 ECTS predecessor, **5MO101**, as the core baseline.

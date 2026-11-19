@@ -1,0 +1,132 @@
+---
+title: "Start here: how to study physiology"
+---
+
+## Work from a question to a mechanism
+
+A fish moves water across its gills; a leaf loses water through stomata. Both
+have an exchange surface, a gradient and a transport pathway, but the structures
+and regulatory mechanisms differ. Learning physiology means explaining those
+connections. Naming a part is the start of an explanation.
+
+For each unit, read the tutorial, use the short slides to revisit the main
+connections, attempt the exercises and then try the self-check quiz. Explain
+your answers before opening a solution. A correct choice with an incorrect
+mechanism needs another attempt.
+
+Use the [ten-week route](schedule.qmd) to organise work and the
+[glossary](glossary.qmd) to recover terminology. Unit reading links are provided
+for context; the course's adopted textbook and page assignments still require
+confirmation. You do not need to buy the candidate textbooks to use these
+original tutorials.
+
+## A small prerequisite bridge
+
+### Compartments and membranes
+
+A cell membrane separates aqueous compartments. Its lipid bilayer restricts
+many polar and charged substances, while specific proteins provide pathways.
+An ion channel permits movement down an electrochemical gradient when open.
+A transporter binds a substance and changes conformation; some transporters
+couple movement to an energy source. A concentration difference alone does
+not fully predict an ion's movement because voltage also matters.
+
+Diffusion moves material down a chemical-potential gradient without requiring
+the cell to expend ATP at that step. ATP-consuming pumps can establish the
+gradients that later power other movements. Thus passive movement and active
+gradient maintenance can be parts of the same physiological system.
+
+**Explain it:** why can a cell require ATP while glucose enters by a transporter
+that does not itself split ATP? Identify both the immediate transport step and
+the machinery that maintains its driving gradient.
+
+::: {.callout-note collapse="true"}
+## Check your explanation
+
+In a sodium–glucose cotransport example, glucose entry is coupled to sodium
+moving down its electrochemical gradient. A sodium/potassium pump elsewhere
+in the membrane uses ATP to maintain the sodium gradient. The coupled uptake
+depends indirectly on that ATP expenditure.
+:::
+
+### Enzymes, energy and matter
+
+Enzymes speed reactions; they do not create energy or change the overall
+equilibrium of a reaction. Metabolic pathways couple energetically favourable
+and unfavourable processes. ATP is an energy-transfer molecule, while carbon
+compounds can supply both building material and chemical energy. Trace carbon
+atoms separately from energy transfer when studying photosynthesis or respiration.
+
+An animal obtains organic carbon from food. A green plant can incorporate
+inorganic carbon into organic molecules using photosynthetic energy input.
+Both require respiration and regulated transport. A plant root does not
+normally obtain its carbon supply by photosynthesising underground.
+
+### Genes, signals and development
+
+A gene is a DNA sequence whose expression contributes a functional product,
+such as an RNA or a protein. Expression can differ between tissues even when
+their cells contain broadly the same nuclear genome. A signal can alter protein
+activity quickly or alter gene expression over a longer period. A cell's response
+also depends on its receptors, developmental state and other signals.
+
+Organismal development involves regulated division, expansion, differentiation
+and cell death. More cells and larger cells are different mechanisms of growth.
+Having a gene does not guarantee that every tissue expresses it at the same
+level or produces the same phenotype in every environment.
+
+### Feedback and adaptation
+
+In negative feedback, the response opposes a deviation in a regulated variable.
+The variable still fluctuates; a steady average does not mean nothing is
+happening. Positive feedback reinforces a change and often requires an external
+ending event. Neither label tells you whether a process is beneficial.
+
+An individual can acclimate during its lifetime. Evolutionary adaptation concerns
+heritable differences across generations in a population. A single before–after
+experiment cannot demonstrate evolutionary adaptation.
+
+## Read quantities before calculating
+
+Write down the measured quantity, its unit, the direction of a difference and
+what one observation represents. Then check one small example by hand.
+
+| Expression | Meaning | Example |
+| --- | --- | --- |
+| Final − initial | Signed change | 4.6 g − 5.0 g = −0.4 g |
+| Change / time | Average rate over an interval | 12 µmol / 4 min = 3 µmol min⁻¹ |
+| 100 × change / initial | Relative change in percent | −0.4 / 5.0 × 100 = −8% |
+| Quantity / mass | Value expressed per unit mass | 3 µmol min⁻¹ / 0.5 g = 6 µmol min⁻¹ g⁻¹ |
+
+A negative mass change describes loss under this definition. Water-loss
+magnitude would instead be initial minus final. Always state the convention.
+A value per gram is not proof that all body-size effects have been removed.
+
+## Working with practical data
+
+The supplied CSVs are simulated teaching data. They support checking calculations,
+plotting observations and reasoning about design. They are not observations of
+actual organisms or evidence for a real treatment effect. The data dictionary
+states what each row means and how the data were constructed.
+
+Use paper, a calculator or an established supported analysis method for the core
+activities. [Optional R support](optional-computing/index.qmd) repeats one analysis
+for students and teachers who choose it; core learning does not depend on R.
+
+Keep the original measurements. Explain an unusual value using records and
+experimental context before changing or excluding it. Repeated readings from
+one animal, pot or chamber do not automatically create independent replicates.
+
+## What is ready, and what your teacher supplies
+
+The tutorials, slides, exercises, quizzes and classroom analysis activities form
+a first teaching draft. Live specimen sessions need the teacher's actual images,
+specimens and laboratory protocols. The official timetable, adopted readings,
+compulsory elements and assessment arrangements come from the teaching team.
+The classroom activities here do not replace hands-on anatomy or experimentation.
+
+## Supporting reference
+
+The open textbook [OpenStax Biology 2e](https://openstax.org/details/books/biology-2e)
+provides background on membranes, metabolism, gene expression and organismal
+physiology. Specific unit pages link more focused readings.

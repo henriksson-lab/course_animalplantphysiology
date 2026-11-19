@@ -1,0 +1,115 @@
+---
+title: "A5 — Integration, movement and reproduction"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## Connect information to action
+
+Stimulus → sensory signal → integration → motor/endocrine output → response.
+
+Fuel, circulation and water balance support every step.
+
+## Membrane potential is a voltage difference
+
+- Ion concentrations and selective permeability differ across a membrane.
+- A small charge separation produces voltage.
+- Electrochemical driving force determines ion movement through channels.
+- ATP-dependent transport maintains gradients.
+
+## A representative axonal action potential
+
+- Voltage-dependent channel changes regenerate a signal.
+- Rapid Na⁺ entry contributes to depolarisation.
+- Channel changes including K⁺ conductance restore voltage.
+- Refractory properties affect re-excitation and propagation.
+
+## Stronger stimulus does not mean a taller spike
+
+- Firing frequency, timing and recruitment can change.
+- Individual spikes are approximately stereotyped under comparable conditions.
+- Receptor and circuit properties shape information encoding.
+
+## Chemical synapses
+
+Electrical arrival → presynaptic Ca²⁺ entry → transmitter release → receptor
+activation → postsynaptic effect.
+
+The receptor and target state matter; transmitter name alone is insufficient.
+
+## Reflexes are functional pathways
+
+- Sensory afferent → integrating circuit → motor output.
+- A local response need not wait for conscious decision.
+- Information may also reach other regions.
+- Real neural networks are not all one linear chain.
+
+## Excitation reaches muscle machinery
+
+Motor signal → neuromuscular transmission → muscle electrical response →
+internal Ca²⁺ release → activation of contractile interactions.
+
+Explain every arrow.
+
+## Calcium and ATP have different roles
+
+- Ca²⁺ regulates access to skeletal-muscle actin sites through regulatory proteins.
+- ATP binding allows myosin detachment; hydrolysis supports cycling.
+- Calcium recovery contributes to relaxation.
+- No ATP use is not the same as no shortening.
+
+## Force, work and power
+
+$W=Fd$ for constant aligned force and displacement.
+
+20 N × 0.10 m = **2 J**; in 0.50 s gives **4 W** external power.
+
+Holding stationary: zero external work in this calculation, but ATP can still be used.
+
+## Muscle types and recruitment
+
+- Motor unit: a motor neuron plus its innervated fibres.
+- Recruitment changes whole-muscle force.
+- Skeletal, cardiac and smooth muscle differ in arrangement/control.
+- Textual recognition clues are preparation for real histology.
+
+## Compare neural organisation
+
+- Nerve nets, ganglia/cords and vertebrate central/peripheral systems differ.
+- Receptors transduce particular kinds of stimuli.
+- Biological clocks add internal timing and can be entrained.
+- Do not rank body plans on a single scale of complexity.
+
+## A circulating signal needs a responsive target
+
+- Hormones act through appropriate receptors and downstream pathways.
+- Concentration, breakdown and sensitivity affect response.
+- Surface and intracellular receptors support different routes.
+- Endocrine does not always mean slow; neural does not always mean brief.
+
+## Reproductive regulation: a mammalian example
+
+Hypothalamic GnRH → pituitary LH/FSH → gonadal activity.
+
+Gonadal signals feed back upstream.
+
+Connect gamete production, steroid secretion and target response.
+
+## Feedback changes with physiological context
+
+- Negative feedback contributes to stability.
+- Appropriate sustained oestrogen signalling can promote pre-ovulatory positive feedback.
+- An LH surge is not an endlessly amplifying loop.
+- This example is not every animal's reproductive strategy.
+
+## Integrate the animal half
+
+Trace escape: detection → neural response → muscle recruitment → ATP demand
+→ oxygen delivery → heat and water costs.
+
+Which changes are immediate? Which need sustained adjustment? How might
+resource availability also affect reproduction?
+
+[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

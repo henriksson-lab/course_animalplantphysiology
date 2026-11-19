@@ -1,0 +1,37 @@
+---
+title: "Data and student files"
+---
+
+## Download the classroom materials
+
+[Download the student project ZIP](downloads/physiology-student-files.zip).
+Extract it before opening files. It contains the simulated datasets, their
+dictionary, a project file and the optional R example. It excludes instructor
+solutions. The core practical pages supply calculation instructions that work
+with a calculator and paper; opening the R project is optional.
+
+| File | Classroom use |
+| --- | --- |
+| [Animal respirometry](data/animal-respirometry.csv) | Correct and interpret an oxygen-consumption measurement |
+| [Plant water measurements](data/plant-water.csv) | Examine mass change and water relations |
+| [Photosynthesis measurements](data/photosynthesis.csv) | Interpret a light-response series |
+| [Growth and stress](data/growth-stress.csv) | Connect treatment allocation, growth and inference |
+| [Data dictionary](data/README.md) | Read the design, units, column meanings and simulation provenance before calculating |
+
+## Reuse one workflow in R, if helpful
+
+The [optional example](optional-computing/index.qmd) repeats the animal
+measurement analysis with supplied code. The project includes
+[physiology.Rproj](physiology.Rproj),
+[the R script](optional-computing/analysis.R) and
+[the report source](optional-computing/respirometry.Rmd).
+Keep the extracted directory structure intact: the report expects its data
+in the supplied relative location. The optional example documents packages
+and how to render from a fresh session.
+
+## Use the data honestly
+
+These numbers were constructed for teaching. Do not describe them as a real
+experiment or use them to support a biological treatment recommendation.
+Retain the raw CSV; calculate new quantities separately. Record units and
+the independent experimental unit in every figure or report.

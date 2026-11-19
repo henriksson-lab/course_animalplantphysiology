@@ -1,0 +1,191 @@
+---
+title: "Revision and integration"
+---
+
+These are formative study tasks, not an official examination or a prediction
+of its questions. Attempt each explanation before opening the feedback. Include
+the causal chain: structure or signal → process → physiological consequence.
+
+## Animal half {#animal-half}
+
+### 1. From tissue to oxygen demand
+
+Compare a thin exchange epithelium with a thick stratified protective epithelium.
+Explain why their structures suit different functions. Then trace how an increase
+in muscle oxygen demand can be met through ventilation, exchange and circulation.
+Name one observation you would need before classifying a real tissue section.
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+A short diffusion distance favours exchange; multiple layers can protect
+against abrasion. Neither alone identifies an organ. Cell shape, layering,
+lumen, extracellular material and neighbouring tissues provide evidence.
+Ventilation renews the respiratory medium, diffusion crosses the exchange
+barrier, blood flow distributes oxygen, and tissues extract it. Increased
+demand need not be met by changing just one step. Microscopy interpretation
+must use the actual image and scale, not a guessed label from a written clue.
+:::
+
+### 2. Energy and temperature
+
+Two simulated animals consume 18 and 30 µmol oxygen over six minutes. Both
+have mass 0.5 g. Calculate the whole-animal and mass-specific mean rates.
+The animals differ in both temperature and feeding history. What comparison
+is possible, and what causal claim is unsupported?
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+Whole-animal rates are 3 and 5 µmol min⁻¹. Mass-specific values are 6 and
+10 µmol min⁻¹ g⁻¹. The observed rates differ, but temperature and feeding
+history are confounded; neither cause can be isolated. Oxygen consumption
+is an indicator of aerobic metabolism under the stated conditions, not a
+direct measure of all energy use or a fitness score.
+:::
+
+### 3. Two osmotic environments
+
+Compare the water-balance problems faced by a freshwater fish and a terrestrial
+mammal. Explain how exchange surfaces, ion transport and excretion contribute.
+Why does “water follows salt” fail as a complete explanation of kidney function?
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+A typical freshwater teleost gains water osmotically and loses ions across
+permeable surfaces; dilute urine and active ion uptake help maintain balance.
+A terrestrial mammal loses water to the environment and must balance intake,
+metabolic production and losses. Kidney filtration, selective reabsorption,
+secretion, medullary gradients and regulated collecting-duct permeability
+all matter. Water movement depends on a pathway as well as a driving gradient.
+There are diverse exceptions to broad group descriptions.
+:::
+
+### 4. A signal to movement
+
+Explain how a neural signal can produce skeletal-muscle force, and how endocrine
+signals can influence the resources available for activity. Distinguish changes
+in action-potential frequency from changes in action-potential amplitude.
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+In a vertebrate example, a motor neuron activates the neuromuscular junction,
+muscle membrane excitation triggers calcium release, and calcium permits
+actin–myosin interaction. ATP supports cross-bridge cycling and calcium handling.
+Recruitment and activation frequency contribute to force regulation. Hormones
+can alter fuel mobilisation and longer-term tissue properties. A stronger
+stimulus generally changes firing/recruitment rather than scaling each
+regenerative action potential as if it were an analogue voltage signal.
+:::
+
+## Plant half {#plant-half}
+
+### 5. Water and carbon together
+
+Explain how dry air can increase the demand for water loss, why stomatal closure
+can reduce that loss, and how closure can constrain carbon assimilation. Does
+this imply every leaf under drought has the same photosynthetic rate?
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+Water-vapour loss depends on the vapour gradient and pathway conductance.
+Closing stomata lowers conductance but also restricts CO₂ entry. Leaf temperature,
+boundary layer, soil/root hydraulic supply, biochemistry, species and acclimation
+also matter. Describe a trade-off and its conditions, not a universal numerical
+response. Stomata are regulated pores, rather than actively pumping water vapour.
+:::
+
+### 6. Net exchange is a balance
+
+A teaching model gives gross fixation of 14 and respiratory loss of 3
+µmol CO₂ m⁻² s⁻¹ under one light condition. Calculate net uptake. In a second
+condition net uptake is zero. Does zero net uptake show that all metabolism
+has stopped? What extra assumption would be needed to estimate gross fixation
+from a dark-respiration measurement?
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+Net uptake is 11 µmol CO₂ m⁻² s⁻¹ under the supplied simplified balance.
+Zero net uptake means opposing fluxes balance; processes can remain active.
+Using a dark rate to correct a light measurement assumes the relevant
+respiratory loss is suitably represented under illumination. Real measurements
+can also involve photorespiration and condition-dependent fluxes. State what
+the teaching model includes before interpreting it as a full carbon budget.
+:::
+
+### 7. A developmental response
+
+Propose how to distinguish failure of seed germination from failure to supply
+permissive conditions. Include viability, water, temperature, light where
+relevant, and dormancy. Explain why a hormone response depends on tissue and stage.
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+Use a suitable viable seed lot, record environmental conditions, include an
+appropriate reference and define germination before counting. Non-germination
+can reflect dead seeds, unsuitable conditions or dormancy; the observation
+alone does not distinguish them. Hormone responses depend on receptors,
+downstream machinery, sensitivity, other signals and developmental competence.
+Different tissues need not respond identically to the same external dose.
+:::
+
+### 8. An application claim
+
+A line of modified plants has greater dry mass than its comparison line in
+one controlled trial. Draft a conclusion about the observation, then list
+evidence needed before recommending deployment under field drought.
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+The observed dry-mass difference applies to the measured lines and conditions.
+Check independent allocation, genetic-background controls, replication,
+measurement timing and water use. Field performance, yield, environmental
+interactions, non-target effects, management, access and stakeholder priorities
+need evidence. Neither the modification method alone nor greater biomass in
+one setting determines the whole benefit–risk judgement.
+:::
+
+## Integrating both halves
+
+### 9. Transport is gradient plus pathway
+
+Make a comparison table for a gill, a kidney epithelial pathway and a root-to-leaf
+water pathway. For each identify the transported substance, driving force,
+barrier/pathway, regulatory process and a cost or limitation. Do not assume
+that all three use the same mechanism because all transport material.
+
+::: {.callout-note collapse="true"}
+## Feedback
+
+Gill oxygen crosses along a partial-pressure gradient; ventilation and blood
+flow help maintain it. Kidney epithelia combine selective channels/transporters
+with ion gradients and regulated water permeability. Root-to-leaf water flow
+depends on water-potential differences and hydraulic pathways, with evaporation
+and stomatal regulation important in transpiring plants. Diffusion distance,
+energy for gradient maintenance and hydraulic resistance impose different
+constraints. Distinguish bulk flow from membrane transport.
+:::
+
+### 10. Evidence before an explanation
+
+Choose one supplied practical dataset. Write five sentences: the question;
+the independent unit and comparison; a result with units; a mechanism consistent
+with that result; and a limitation or alternative explanation. Draw the result
+without using R. Swap explanations with a partner and identify any sentence
+that states more than the design supports.
+
+::: {.callout-note collapse="true"}
+## Feedback criteria
+
+A complete response separates observation from mechanism and mechanism from
+proof. The calculation and figure must match the data dictionary. An explanation
+should be consistent with the unit tutorial, while the limitation should name
+a specific design/measurement issue. No particular software or p-value is
+required to achieve this.
+:::

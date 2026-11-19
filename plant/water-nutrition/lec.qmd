@@ -1,0 +1,79 @@
+---
+title: "P2 — Water and nutrition"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## Why can wet salty soil be difficult?
+
+Water access depends on potential, pathways and regulation.
+
+Wetness alone is insufficient.
+
+## Direction uses total potential
+
+Water tends from higher to lower Ψ.
+
+−0.2 MPa is higher than −0.8 MPa.
+
+## State the approximation
+
+For the small cell examples: Ψ = Ψs + Ψp.
+
+Gravity and matric effects matter in other settings.
+
+## Work one cell
+
+Ψs = −0.9 MPa; Ψp = +0.4 MPa.
+
+Total = −0.5 MPa. Water initially enters from surroundings at −0.2 MPa.
+
+## Routes and barriers
+
+Apoplast, symplast and transmembrane movement.
+
+The endodermal barrier restricts an unrestricted wall-space route into the stele.
+
+## Transport energy
+
+ATP-driven proton pumps establish gradients.
+
+Coupled carriers can use them. Aquaporins alter permeability, not passive direction.
+
+## Cohesion and tension
+
+Evaporation links leaf water to negative pressure in xylem.
+
+Conduit structure matters; embolism can disrupt transport.
+
+## Stomatal regulation
+
+Guard-cell transport → water movement/turgor → pore change.
+
+CO2 access and vapour loss share a pathway.
+
+## ABA is a signal
+
+Drought responses include channel regulation and later changes.
+
+A hormone is not a physical pore plug.
+
+## Essential minerals
+
+Required amounts differ from importance.
+
+Symptoms depend on mobility, age, roots, pH and other stresses.
+
+## Measure the right loss
+
+Pot mass loss = soil evaporation + plant water loss + other changes.
+
+Controls and units determine interpretation.
+
+## Check the experimental unit
+
+Multiple leaves do not create multiple independently treated trays.
+
+Continue with [exercise](exercise.qmd) and [self-check](quiz.qmd).

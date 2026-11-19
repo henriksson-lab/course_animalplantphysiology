@@ -1,0 +1,160 @@
+---
+title: "A2 — Nutrition, energy and temperature"
+---
+
+## What does an animal spend its food on?
+
+Two animals can eat equal masses of food yet differ in growth, activity and
+heat production. Food mass alone does not tell us how much energy was absorbed,
+which essential nutrients were obtained, or how that energy was used. This unit
+connects digestion to cellular metabolism and whole-animal energy balance,
+then asks how temperature changes the demands and limits of that system.
+
+You should become able to distinguish ingestion, digestion and absorption;
+explain digestive specialisation; interpret a simple energy budget and oxygen
+consumption rate; distinguish aerobic and anaerobic ATP supply; and compare
+thermal strategies without equating ectothermy with inactivity. Use the
+[slides](lec.qmd), [exercises](exercise.qmd) and [quiz](quiz.qmd).
+
+## From food to an absorbed molecule
+
+**Ingestion** brings food into the digestive system. Mechanical processing
+changes particle size and mixes contents. Chemical digestion uses reactions,
+often enzyme-catalysed hydrolysis, to make smaller molecules available for
+absorption. Enzymes have particular substrates and working conditions; a
+digestive tract contains regions with different secretions and environments.
+The gut lumen is continuous with the outside world. A nutrient reaches the
+internal environment only after crossing an absorptive barrier.
+
+In a mammalian small intestine, folds, villi and microscopic projections on
+epithelial cells increase the area available for absorption. Capillaries and
+lymphatic routes remove absorbed materials, helping maintain transport.
+Carbohydrate-derived monosaccharides and amino acids commonly enter blood,
+while much absorbed dietary lipid is packaged and enters lymph first. These
+routes show why “absorption” is not one identical membrane process for every
+nutrient. The organs supplying secretions also matter: pancreatic enzymes and
+bile contribute to processing food in the intestine.
+
+Eliminating unabsorbed material in faeces is **egestion**. Removing metabolic
+wastes produced within the animal is **excretion**. The distinction matters
+when constructing an energy budget or explaining a kidney's function. OpenStax
+offers a supporting account of
+[digestive processes](https://openstax.org/books/biology-2e/pages/34-3-digestive-system-processes).
+
+## Digestive form follows the food problem
+
+Animal diets differ in nutrient concentration, physical structure and chemical
+defences. A predatory animal faces different processing demands from an animal
+eating fibrous plant tissue. Many animals lack enzymes that directly digest
+cellulose effectively. Symbiotic microbes can break down plant polymers and
+produce compounds the host can use. The host must provide conditions and
+retention time that sustain that fermentation.
+
+In a ruminant, microbial fermentation occurs before the small intestine.
+Microbes and their products can then contribute to the host's nutrition.
+Hindgut fermenters maintain substantial fermentation later in the tract.
+Where fermentation occurs changes which products are readily absorbed and
+whether microbial biomass reaches major sites of protein digestion. These
+strategies involve trade-offs in passage time, food intake and nutrient recovery;
+one is not universally superior for every food supply or body size.
+
+For histology, relate an absorptive epithelium to its lumen and underlying
+transport tissues. Smooth muscle layers help propel contents, while glands
+and specialised epithelial cells contribute secretions. A diagram that labels
+“villus” without showing the lumen, epithelial barrier and internal removal
+route misses the functional explanation. The broad comparative anatomy is
+covered in the reading on
+[digestive systems](https://openstax.org/books/biology-2e/pages/34-1-digestive-systems).
+
+## Keep energy accounting explicit
+
+For a simplified animal over a stated interval, ingested energy is divided
+between material not absorbed and absorbed energy. After accounting for
+energy leaving in excreted products, the remaining energy can support metabolic
+expenditure and net storage or production. Exact ecological bookkeeping
+conventions vary, so define your terms before calculating. Here we use:
+
+$$
+E_{\rm ingested}=E_{\rm faeces}+E_{\rm excreted}+E_{\rm metabolic}+E_{\rm retained}.
+$$
+
+All quantities refer to the same interval. If intake is 100 kJ day⁻¹, faecal
+loss 25, excreted chemical energy 5 and metabolic expenditure 60 kJ day⁻¹,
+retained energy is 10 kJ day⁻¹. Retained energy can contribute to new tissue,
+reserves or reproductive products. A negative retained balance can mean the
+animal is drawing down stores. This arithmetic does not identify which nutrient
+limited growth, because energy and essential nutrient supplies are distinct.
+
+Avoid double counting. Internal mechanical work ultimately dissipates largely
+as heat, so a budget that already includes it in metabolic expenditure should
+not add the same energy again as an independent heat cost. Also distinguish
+**energy** in joules from **power**, an energy rate in watts. One watt is one
+joule per second. A daily intake and an instantaneous metabolic power cannot
+be subtracted until converted to compatible units and time intervals.
+
+## ATP supply, work and oxygen consumption
+
+ATP links fuel metabolism to processes such as transport and muscle activity.
+Aerobic metabolism uses oxygen in mitochondrial electron transfer and can
+support sustained ATP supply when fuels, oxygen delivery and waste removal
+are adequate. Anaerobic pathways can supply ATP without that immediate oxygen
+use, but their ATP yield per unit substrate and sustainable rates differ.
+An animal may use both during a single bout of activity. Oxygen consumption
+therefore provides useful information about aerobic metabolism without being
+a complete record of every ATP-producing process at every instant.
+
+Imagine a supplied respirometry observation: a chamber contains 0.10 L of water,
+and oxygen concentration falls by 0.40 mg L⁻¹ in 10 minutes. The chamber's oxygen
+loss is $0.10\times0.40=0.040$ mg, giving an apparent rate of 0.0040 mg min⁻¹.
+If a comparable empty chamber loses 0.0010 mg min⁻¹, the blank-corrected animal
+rate is 0.0030 mg min⁻¹. The example is a calculation with supplied data, not
+a procedure for keeping animals in sealed containers.
+
+Rate comparisons require the right denominator and context. Dividing by body
+mass produces a mass-specific rate, but does not automatically remove all
+effects of body size. Activity, temperature, feeding state, stress and time
+of day can also matter. Repeated readings from one animal do not create new
+independent animals. Any actual experiment must use the established approved
+protocol and conditions; physiological interpretation begins by understanding
+what the measurement system measures.
+
+## Temperature changes both rates and costs
+
+An **ectotherm** obtains much of the heat determining its body temperature
+from external sources. An **endotherm** generates substantial metabolic heat
+for temperature regulation. These terms concern heat sources. They are not
+identical to **poikilothermy** and **homeothermy**, which describe variation or
+relative stability of body temperature. An ectotherm can regulate temperature
+behaviourally, and an endotherm may allow body temperature to vary.
+
+Temperature affects reaction rates, membranes and protein function. A rise can
+increase some physiological rates within a suitable range, yet eventually
+performance declines as other processes become limiting or damaged. A simple
+$Q_{10}$ describes the rate ratio over a 10 °C interval:
+
+$$Q_{10}=\left(\frac{R_2}{R_1}\right)^{10/(T_2-T_1)}.$$
+
+If a rate increases from 2 to 4 units between 10 and 20 °C, $Q_{10}=2$.
+It is a description over those conditions, not a universal constant or a
+license to extrapolate into thermal extremes. Use rates measured under
+comparable feeding, activity and acclimation conditions.
+
+Endotherms face an energy cost when heat loss must be replaced. Insulation,
+posture, peripheral blood flow and behaviour alter heat exchange. Below a
+species- and condition-dependent thermoneutral range, resting metabolic
+heat production often rises as ambient temperature falls. Above a suitable
+range, cooling can become demanding; evaporation loses water. An ectotherm's
+metabolic rate may rise with environmental warming over a moderate range.
+Thus two rising metabolic rates can reflect different mechanisms: defending
+body temperature in cold conditions or temperature-dependent processes in
+a warming body.
+
+## Trace a trade-off to its consequence
+
+Compare an insulated mammal and a basking reptile in a cool habitat. Ask where
+their heat comes from, how body temperature affects activity, what food and
+water costs occur, and when behaviour can change the outcome. Do not conclude
+that the reptile “cannot regulate” or that the mammal's temperature never changes.
+Support your account with a predicted measurement, such as body temperature
+through the day together with activity and oxygen use. Continue to
+[gas exchange and circulation](../gas-circulation/index.qmd).

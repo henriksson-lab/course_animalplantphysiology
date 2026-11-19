@@ -1,0 +1,69 @@
+---
+title: "A1 self-check — Organisation and regulation"
+---
+
+Answer before opening each explanation. If an answer is uncertain, return
+to the [tutorial](index.qmd) and redraw the relevant mechanism.
+
+## 1. Is glucose in the gut lumen already absorbed?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Absorption requires crossing the absorptive epithelium into an internal
+route. The lumen is continuous with the exterior; digestion and absorption
+are different processes.
+:::
+
+## 2. Double a cube's side: what happens to its area-to-volume ratio?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Area increases fourfold and volume eightfold, so the ratio halves. Since
+$A/V=6/L$, its units are inverse length. A real animal can increase functional
+area with folds or branching and use bulk flow over long distances.
+:::
+
+## 3. Does one layer of flat cells prove that a section is a lung?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. It supports a thin epithelial arrangement compatible with exchange, but
+many locations contain thin epithelia. Organ identification needs surrounding
+architecture, scale and other features. Observe first; support the inference.
+:::
+
+## 4. Is a helpful response positive feedback?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+Not necessarily. Feedback sign describes whether the consequence opposes or
+amplifies the initial change. A response that reduces a temperature rise is
+negative feedback even if it is beneficial.
+:::
+
+## 5. Does a stable internal concentration mean no transport is occurring?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+No. Inputs and outputs can balance while substantial transport and energy use
+continue. Homeostasis is dynamic maintenance, not universal inactivity.
+:::
+
+## 6. Has a fish evolved if its physiology changes after weeks in warmer water?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+That observation describes adjustment within an individual, compatible with
+acclimation. Demonstrating evolutionary adaptation requires evidence about
+heritable features and population change across generations, not just one
+individual's useful response.
+:::
+
+Continue to [A2](../energy-temperature/index.qmd), or revisit the
+[A1 exercises](exercise.qmd).

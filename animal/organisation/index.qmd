@@ -1,0 +1,175 @@
+---
+title: "A1 — Organisation, diversity and regulation"
+---
+
+## Start with a physiological problem
+
+A small aquatic animal and a mammal must both deliver oxygen to living cells.
+They face the same physical need but differ in body size, body organisation,
+environment and activity. Explaining their differences requires more than
+listing organs. We need to connect a structure to a process, identify the
+constraint that the structure addresses, and ask what evidence supports the
+explanation.
+
+After this unit, you should be able to connect cells, tissues and organ systems;
+explain an exchange constraint using size and distance; recognise the four
+primary tissue categories from described features; construct a negative-feedback
+explanation; and distinguish an individual's response from evolutionary change.
+Use the [slides](lec.qmd), then the [exercises](exercise.qmd) and
+[self-check quiz](quiz.qmd). No programming is needed.
+
+## From cells to an organism
+
+A cell is surrounded by a selectively permeable membrane. The membrane helps
+maintain differences between the cell and its surroundings. Transport proteins,
+metabolic reactions and signalling processes contribute to those differences.
+A multicellular animal adds extracellular fluid: most cells exchange with
+nearby interstitial fluid rather than directly with the outside environment.
+Blood, where present, transports materials between exchange organs and tissues.
+This arrangement means the circulation, respiratory surface and cell membrane
+are successive parts of one transport pathway.
+
+A **tissue** combines cells and extracellular material in a functional
+arrangement. An **organ** contains several tissue types. In the intestine,
+an epithelial lining performs secretion and absorption, connective tissue
+supports it, smooth muscle moves its contents, and nervous tissue coordinates
+activity. An organ system groups interacting organs, but the boundaries of
+systems are teaching conveniences: digestion depends on circulation, nervous
+control and hormonal signals.
+
+Draw an arrow from food in the gut to an absorbed nutrient in a muscle cell.
+The nutrient must cross the gut epithelium, enter a transport route and cross
+the muscle-cell membrane. Saying that digestion “gives the cells energy” skips
+these steps and also skips metabolism. Digestion releases absorbable molecules;
+cells subsequently transform chemical energy into ATP and other usable forms.
+
+## Why geometry matters
+
+Transport across a surface depends on how much surface is available and how
+far material must move. To isolate the geometrical issue, imagine a cube with
+side length $L$. Its surface area is $6L^2$ and its volume is $L^3$, so its
+surface-area-to-volume ratio is $6/L$. The ratio has units of inverse length.
+For a cube of side 1 mm it is 6 mm⁻¹; for a cube of side 2 mm it is 3 mm⁻¹.
+Doubling length gives four times the surface but eight times the volume.
+
+This does not mean that all large animals have low functional exchange areas.
+It explains why their exchange surfaces cannot simply be smooth scaled-up
+versions of a small body. Folding, branching and subdivision increase area;
+thin barriers shorten diffusion paths; bulk flow transports material across
+long distances. A mammal's lungs and circulation solve different parts of
+the transport problem. Blood flow does not replace diffusion across the final
+barrier between a capillary and a tissue cell.
+
+Diffusion over a long distance is slow. In a simple comparison with the same
+diffusing substance and conditions, the characteristic diffusion time grows
+with the square of distance. Increasing distance tenfold therefore makes this
+time scale roughly one hundredfold. This proportional argument explains the
+value of thin exchange barriers without requiring an exact diffusion coefficient.
+Real tissues also contain barriers, binding and flow, so the toy calculation
+is a mechanism-building aid rather than a complete physiological prediction.
+
+## Four tissue categories, many arrangements
+
+For histology, start with what is visible and then make a functional inference.
+**Epithelial tissue** forms sheets and boundaries. Cells are closely associated,
+and one surface may face a lumen, meaning the inside space of a tube or cavity.
+An epithelium has an apical side and a basal side; their transport proteins and
+neighbours can differ. A thin single layer can support exchange, whereas several
+layers can provide protection. Neither function follows from thickness alone:
+location, junctions and specialised surfaces also matter.
+
+**Connective tissue** contains cells within an extracellular matrix. The matrix
+may be flexible, strong, mineralised or fluid. Tendon, cartilage, bone and blood
+therefore differ substantially even though they belong to the same broad
+category. A connective-tissue description should mention matrix organisation
+rather than treating every pale space in a section as empty.
+
+**Muscle tissue** develops force. Skeletal muscle typically has long striated
+fibres with multiple nuclei. Cardiac muscle has striated branching cells and
+specialised cell connections. Smooth muscle has spindle-shaped cells without
+the same visible striation pattern. These are useful recognition clues, but
+section angle and preparation affect appearance. **Nervous tissue** contains
+neurons and supporting glial cells. Neurons receive, integrate and transmit
+signals; glia contribute to the environment in which those signals operate.
+
+In an actual section, record scale, orientation, cell shape, nuclear position,
+layering, matrix and lumen relationships before proposing an identity. A circular
+profile could be a cross-section of a tube rather than a spherical structure.
+An organ name without supporting features is a guess. The descriptions used
+in our exercises practise reasoning; they do not replace identifying the actual
+course specimens. OpenStax provides openly accessible examples of the
+[four primary tissue types](https://openstax.org/books/biology-2e/pages/33-2-animal-primary-tissues).
+
+## Regulated variables and negative feedback
+
+An animal survives within ranges of temperature, fluid composition and other
+conditions. **Homeostasis** is the active maintenance of suitable internal
+conditions despite disturbances. It is dynamic: material and energy can enter
+and leave while a measured variable remains approximately stable. Stability
+does not mean that every organ is inactive or that every variable is constant.
+
+A useful feedback explanation identifies a regulated variable, a disturbance,
+a sensor, a control process, an effector and the consequence of the response.
+For example, increased body temperature can be detected by thermosensory
+systems. Neural control changes heat-loss or heat-production processes.
+Those changes can oppose the original rise in temperature. In **negative
+feedback**, the response reduces the deviation that helped trigger it.
+
+The control process is not necessarily a single anatomical “control centre”,
+and a target range can change with time or physiological state. Positive
+feedback instead amplifies a change and needs some terminating condition.
+It can be useful during a finite event, but it is not the standard explanation
+for long-term stability. Feedback terminology refers to the direction of the
+loop, not whether its consequences are desirable.
+
+```{mermaid}
+flowchart LR
+  D[Disturbance raises body temperature] --> S[Temperature sensing]
+  S --> C[Neural control]
+  C --> E[Heat loss increases or heat production falls]
+  E --> T[Body temperature moves towards defended range]
+  T -->|Reduced deviation reduces response| S
+```
+
+This original functional sketch omits interacting pathways. Identify the
+opposing effect of the response, rather than inferring feedback merely from
+the diagram containing a loop.
+
+Separate a controlled variable from an effector. In a thermal example, body
+temperature may be the regulated variable, while skin blood flow is one
+response that affects heat exchange. Observing increased blood flow does not
+establish that blood flow itself was the variable defended by the system.
+Use the [homeostasis reading](https://openstax.org/books/biology-2e/pages/33-3-homeostasis)
+to compare another feedback loop with this example.
+
+## Comparison without a ladder of “better” animals
+
+Different body plans face different constraints. A flat body can shorten
+distances to the environment, but it also limits possible geometry. A hard
+external covering can support and protect an animal while making exchange
+through the whole body surface more difficult. An insect's tracheal system
+delivers gases through branching air-filled tubes, whereas a mammal uses blood
+for most oxygen delivery beyond the lung. These are alternative combinations
+of mechanisms, not stages on a ladder towards a mammal.
+
+Evolutionary **adaptation** concerns heritable features shaped across
+generations. **Acclimation** concerns an individual's adjustment to changed
+conditions, often under controlled conditions; acclimatisation is commonly
+used for adjustment in a natural setting. A fish changing its physiological
+performance after several weeks at a new temperature has not evolved during
+that experiment. A short-term response, such as changing ventilation within
+minutes, is also different from a sustained acclimatory change.
+
+When explaining a trait, distinguish its current function from evidence about
+its evolutionary origin. A structure being useful does not by itself prove
+how it evolved. Comparisons are strongest when they connect environment,
+mechanism, performance and relevant evidence, while allowing for trade-offs
+and shared ancestry.
+
+## Prepare a defensible explanation
+
+Before leaving, write a six-sentence comparison of oxygen delivery in two
+animals: the environmental problem, the exchange surface, the transport path,
+the tissue consequence, one trade-off and one observation that would test the
+explanation. Check that every arrow in your account names a process. Continue
+to [nutrition, energy and temperature](../energy-temperature/index.qmd).

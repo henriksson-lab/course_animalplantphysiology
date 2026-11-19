@@ -1,0 +1,93 @@
+---
+title: "Oxygen consumption: a supplied reproducible analysis"
+author: "Animal and Plant Physiology teaching draft"
+output:
+  html_document:
+    self_contained: true
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 6, fig.height = 4)
+source("analysis.R", local = knitr::knit_global())
+```
+
+# Question and provenance
+
+Does mass-specific oxygen consumption differ between the two temperature
+groups in the supplied **simulated** example? These are constructed teaching
+values, not measurements or a result from an actual species. The classroom
+practical can be completed without this optional report.
+
+# Design and calculation
+
+Twelve hypothetical aquatic invertebrates were allocated randomly, six per
+temperature, with one animal per separately measured chamber. Measurement
+order and apparatus are assumed balanced. The example stipulates common
+acclimation, calibrated well-mixed leak-free chambers, adequate oxygen and
+quiescent animals. These assumptions were not verified by us through an
+experiment. The data dictionary is `../data/README.md`.
+
+Corrected oxygen amount is the initial minus final concentration minus the
+matched blank decline, multiplied by the effective water volume. Divide the
+amount by duration and wet body mass to obtain µmol O₂ min⁻¹ g⁻¹. A01's
+calculation is `(250 - 230 - 2) * 0.10 / 10 / 1.0 = 0.18`.
+
+```{r analyse}
+# R Markdown evaluates relative paths from this document's folder.
+analysis <- analyse_respirometry("../data/animal-respirometry.csv")
+analysis$rates
+```
+
+# Results
+
+```{r summary}
+knitr::kable(analysis$summary, digits = 3,
+             caption = "Mass-specific rates, µmol O2 min^-1 g^-1. SD describes variation among animals.")
+```
+
+```{r plot, fig.cap="Simulated mass-specific oxygen consumption. Each point is one independent animal; horizontal displacement separates overlapping observations only."}
+analysis$plot
+```
+
+```{r comparison}
+cool_mean <- analysis$summary$mean_rate[
+  analysis$summary$temperature_c == 15
+]
+warm_mean <- analysis$summary$mean_rate[
+  analysis$summary$temperature_c == 25
+]
+difference <- warm_mean - cool_mean
+ratio <- warm_mean / cool_mean
+```
+
+The simulated means are `r round(cool_mean, 3)` at 15 °C and
+`r round(warm_mean, 3)` µmol O₂ min⁻¹ g⁻¹ at 25 °C. The warm-minus-cool
+difference is `r round(difference, 3)` µmol O₂ min⁻¹ g⁻¹ and the ratio is
+`r round(ratio, 3)`. There are six independent animals per group, rather
+than repeated temperature measurements from the same animal.
+
+# Physiological interpretation and limitations
+
+Higher oxygen consumption in the warmer group is consistent with increased
+aerobic metabolic demand in an ectotherm over this temperature range. The
+example does not establish an effect for an actual species, a response above
+its thermal limits or improved performance. Oxygen consumption is not a
+direct measure of growth, fitness or anaerobic energy supply.
+
+Common activity and adequate oxygen are stipulated; real measurements would
+need records supporting those conditions. Dividing by mass does not prove
+that all body-size effects have been controlled. A matched no-animal blank
+helps correct measurement background, but is not another independent animal.
+No significance test is needed for the descriptive purpose of this exercise.
+
+# Reproduction
+
+Keep this `.Rmd`, `analysis.R` and the `data/` folder in their supplied
+relative positions. Restart R and render this document without running
+analysis lines in the console first. The source function only reads its
+input; it does not modify raw data or install packages.
+
+```{r software}
+sessionInfo()
+```

@@ -15,12 +15,17 @@ the core from actual course materials before making a computing decision.
 
 ## Current state
 
-- Implemented: reduced QuantBio-derived Quarto scaffold, core content proposal,
-  evidence/book mapping, optional computing review and this sequence.
-- Scaffold only: animal, plant and practical overview pages. There are no
-  complete lecture decks, protocols, quizzes, datasets or assessment tasks yet.
-- Pending: actual materials listed in steps 1–3. No contacts have been messaged,
-  textbook adoption assumed or computing sessions scheduled.
+- Implemented: QuantBio-derived Quarto teaching site; ten tutorials with slide
+  decks, exercises and quizzes; seven practical/communication activities;
+  simulated data and dictionary; student archive; optional R analysis/report;
+  study route, bridge, glossary, revision and instructor solution guides.
+- The original proposal and evidence records remain as design documentation.
+  The draft covers the proposed sequence without a required computing component.
+- Pending: actual materials listed in steps 1–3, real-image/specimen recognition,
+  local experimental protocols, adopted readings and official assessment rules.
+  Live experiments and formal assessments have not been replaced by the supplied
+  classroom activities. No contacts have been messaged or required R sessions
+  scheduled.
 
 ## Conventions for the next authoring pass
 

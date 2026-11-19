@@ -1,0 +1,119 @@
+---
+title: "Practical: evaluate evidence and present a biotechnology case"
+---
+
+## The question
+
+Could altering stomatal development help a crop conserve water without losing
+carbon gain, and what evidence would justify using such a plant? This activity
+connects anatomy, water relations, photosynthesis, genetics and ethics. It
+does not ask for a general vote for or against all genetically modified plants.
+Prepare independently for 60 minutes, discuss in a group for 45 minutes, then
+give a short individual presentation.
+
+## Sources to read
+
+Use the original article by **Karavolias and colleagues (2023), “Paralog
+editing tunes rice stomatal density to maintain photosynthesis and improve
+drought tolerance,” Plant Physiology 192, 1168–1182**, DOI
+10.1093/plphys/kiad183. The [open full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC10231365/)
+includes methods, figures and limitations. The
+[PubMed record](https://pubmed.ncbi.nlm.nih.gov/36960567/) gives bibliographic
+details. Read the abstract and introduction, then focus on stomatal density,
+gas exchange and water conservation. Inspect figure legends and relevant
+methods; do not rely on the abstract alone.
+
+For broader context use **National Academies (2016), Genetically Engineered
+Crops: Experiences and Prospects**, [summary](https://www.nationalacademies.org/read/23395/chapter/3).
+This is an evidence synthesis, not a second primary experiment. It supports
+discussion of different kinds of evidence and societal questions. It is not
+a statement of current local law; regulatory decisions require current official
+information and are outside this exercise.
+
+## Vocabulary bridge
+
+A **paralog** is a member of a gene family arising through duplication.
+Related genes need not have identical expression or effects. A **knockout**
+disrupts gene function. **Stomatal density** counts stomata per surface area;
+**stomatal aperture** describes individual pore openings. Both can affect
+conductance, so fewer stomata do not automatically predict a proportional
+fall in measured gas exchange.
+
+The research compares edited rice lines with a reference background, using
+anatomical and physiological measurements. Connect a developmental change
+with functional evidence while checking trade-offs and experimental scope.
+Do not assume a greenhouse result establishes performance in every farming
+environment.
+
+## Individual evidence sheet
+
+Choose one figure comparing gas exchange and one comparing water conservation
+or performance. Record actual figure/panel identifiers from the article.
+For each, answer in your own words:
+
+1. What question does this comparison address, and what is the outcome variable?
+2. Which lines/conditions are compared? What reference is appropriate?
+3. What do the axes and units mean? What does one point represent?
+4. How does the caption define sample size and error bars? Does a repeated
+   measurement create a new independent plant?
+5. What pattern is supported? Use a numerical value only if its source and
+   precision are clear; do not guess exact values from a small image.
+6. Which proposed mechanism is directly measured, and which is inferred?
+7. What would challenge an overly broad claim that fewer stomata always
+   improve performance?
+
+Trace one result to its methods. Record whether measurements were made in
+a greenhouse, chamber or field and whether the same conditions apply to
+every result. If a detail cannot be located, say so and identify where you
+looked. Resolve uncertainty rather than inventing a number.
+
+## Group discussion: three kinds of question
+
+**Physiological:** Can a developmental manipulation conserve water while
+maintaining gas exchange under the conditions tested? Explain a mechanism
+and possible trade-offs involving cooling, carbon supply or changing light.
+
+**Evidential:** What tests are needed for a different cultivar, soil, climate,
+drought regime or field setting? Water conservation is not automatically a
+yield benefit. Describe one follow-up comparison with a relevant reference,
+independent units and a clear outcome.
+
+**Ethical and societal:** Who might benefit, bear costs or make decisions?
+Consider access to seed, affordability, farmer choice, local priorities,
+environmental effects and alternatives such as breeding or management.
+Distinguish empirical claims needing data from value judgments about what
+should be prioritised. A possible benefit does not erase a possible risk;
+a possible risk does not establish that it occurs.
+
+Each group writes a decision scenario with an explicit context—for example,
+a proposed locally evaluated drought-response cultivar—and lists the evidence
+it would request. Do not claim the article proves a particular product is
+currently approved or commercially available.
+
+## Individual presentation
+
+Prepare a **five-minute presentation plus two minutes of questions**. This
+timing is a teaching suggestion, not a formal examination rule. Use up to
+five slides or an equivalent spoken explanation:
+
+1. The physiological problem and the stomatal trade-off.
+2. The developmental intervention and comparison design.
+3. One anatomical finding and one physiological result.
+4. Limits, an alternative explanation or a needed follow-up.
+5. A conclusion separating evidence from ethical priorities.
+
+Cite the original article and synthesis. If showing a figure, check its licence
+and attribution requirements; a reference alone is not permission to reuse
+every element. Alternatively, draw your own conceptual diagram and describe
+findings orally. Questions should probe reasoning, not demand memorisation
+of every molecular detail.
+
+## Feedback and completion
+
+Listeners record one well-supported claim, one scope limit and one question.
+Then write a 150-word revision explaining how feedback clarifies your
+conclusion. Keep the evidence sheet, sources, presentation and revision.
+Feedback should address reasoning, source use and physiological accuracy,
+not require a preferred political position.
+
+Return to the [practical route](index.qmd).

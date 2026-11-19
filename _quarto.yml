@@ -1,47 +1,187 @@
+# Explicit student-source patterns exclude instructor/ and plan/.
 project:
   type: website
   output-dir: docs
   render:
-    - index.qmd
-    - overview.qmd
-    - animal/index.qmd
-    - plant/index.qmd
-    - practicals/index.qmd
-    - references.qmd
-
+  - '*.qmd'
+  - animal/index.qmd
+  - animal/*/*.qmd
+  - plant/index.qmd
+  - plant/*/*.qmd
+  - practicals/*.qmd
+  - optional-computing/index.qmd
+  resources:
+  - data/*.csv
+  - data/README.md
+  - downloads/*.zip
+  - optional-computing/*.R
+  - optional-computing/*.Rmd
+  - physiology.Rproj
 website:
-  title: "Animal and Plant Physiology"
+  title: Animal and Plant Physiology
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - href: overview.qmd
-        text: Course overview
+    - href: index.qmd
+      text: Home
+    - href: schedule.qmd
+      text: Study route
+    - href: downloads.qmd
+      text: Data and files
   sidebar:
     style: docked
     search: true
+    collapse-level: 1
     contents:
-      - href: index.qmd
-        text: Home
-      - section: "Course information"
+    - href: index.qmd
+      text: Home
+    - section: Course information
+      contents:
+      - href: start.qmd
+        text: Start here
+      - href: overview.qmd
+        text: Scope and learning goals
+      - href: schedule.qmd
+        text: Ten-week route
+      - href: glossary.qmd
+        text: Glossary
+      - href: references.qmd
+        text: Reading and sources
+      - href: downloads.qmd
+        text: Data and files
+    - section: Animal physiology
+      contents:
+      - href: animal/index.qmd
+        text: Animal route
+      - section: 'A1: Organisation and diversity'
         contents:
-          - href: overview.qmd
-            text: Scope and learning goals
-          - href: references.qmd
-            text: Reading and sources
-      - section: "Animal physiology"
+        - href: animal/organisation/index.qmd
+          text: Tutorial
+        - href: animal/organisation/lec.qmd
+          text: Lecture slides
+        - href: animal/organisation/exercise.qmd
+          text: Exercises
+        - href: animal/organisation/quiz.qmd
+          text: Self-check quiz
+      - section: 'A2: Energy and temperature'
         contents:
-          - href: animal/index.qmd
-            text: Proposed topics
-      - section: "Plant physiology"
+        - href: animal/energy-temperature/index.qmd
+          text: Tutorial
+        - href: animal/energy-temperature/lec.qmd
+          text: Lecture slides
+        - href: animal/energy-temperature/exercise.qmd
+          text: Exercises
+        - href: animal/energy-temperature/quiz.qmd
+          text: Self-check quiz
+      - section: 'A3: Gas exchange and circulation'
         contents:
-          - href: plant/index.qmd
-            text: Proposed topics
-      - section: "Practical work"
+        - href: animal/gas-circulation/index.qmd
+          text: Tutorial
+        - href: animal/gas-circulation/lec.qmd
+          text: Lecture slides
+        - href: animal/gas-circulation/exercise.qmd
+          text: Exercises
+        - href: animal/gas-circulation/quiz.qmd
+          text: Self-check quiz
+      - section: 'A4: Water and excretion'
         contents:
-          - href: practicals/index.qmd
-            text: Anatomy, experiments and communication
-
+        - href: animal/water-excretion/index.qmd
+          text: Tutorial
+        - href: animal/water-excretion/lec.qmd
+          text: Lecture slides
+        - href: animal/water-excretion/exercise.qmd
+          text: Exercises
+        - href: animal/water-excretion/quiz.qmd
+          text: Self-check quiz
+      - section: 'A5: Integration and movement'
+        contents:
+        - href: animal/integration/index.qmd
+          text: Tutorial
+        - href: animal/integration/lec.qmd
+          text: Lecture slides
+        - href: animal/integration/exercise.qmd
+          text: Exercises
+        - href: animal/integration/quiz.qmd
+          text: Self-check quiz
+    - section: Plant physiology
+      contents:
+      - href: plant/index.qmd
+        text: Plant route
+      - section: 'P1: Plant organisation'
+        contents:
+        - href: plant/organisation/index.qmd
+          text: Tutorial
+        - href: plant/organisation/lec.qmd
+          text: Lecture slides
+        - href: plant/organisation/exercise.qmd
+          text: Exercises
+        - href: plant/organisation/quiz.qmd
+          text: Self-check quiz
+      - section: 'P2: Water and nutrition'
+        contents:
+        - href: plant/water-nutrition/index.qmd
+          text: Tutorial
+        - href: plant/water-nutrition/lec.qmd
+          text: Lecture slides
+        - href: plant/water-nutrition/exercise.qmd
+          text: Exercises
+        - href: plant/water-nutrition/quiz.qmd
+          text: Self-check quiz
+      - section: 'P3: Carbon and metabolism'
+        contents:
+        - href: plant/carbon-metabolism/index.qmd
+          text: Tutorial
+        - href: plant/carbon-metabolism/lec.qmd
+          text: Lecture slides
+        - href: plant/carbon-metabolism/exercise.qmd
+          text: Exercises
+        - href: plant/carbon-metabolism/quiz.qmd
+          text: Self-check quiz
+      - section: 'P4: Development'
+        contents:
+        - href: plant/development/index.qmd
+          text: Tutorial
+        - href: plant/development/lec.qmd
+          text: Lecture slides
+        - href: plant/development/exercise.qmd
+          text: Exercises
+        - href: plant/development/quiz.qmd
+          text: Self-check quiz
+      - section: 'P5: Stress and biotechnology'
+        contents:
+        - href: plant/stress-biotechnology/index.qmd
+          text: Tutorial
+        - href: plant/stress-biotechnology/lec.qmd
+          text: Lecture slides
+        - href: plant/stress-biotechnology/exercise.qmd
+          text: Exercises
+        - href: plant/stress-biotechnology/quiz.qmd
+          text: Self-check quiz
+    - section: Practical work
+      contents:
+      - href: practicals/index.qmd
+        text: Practical route
+      - href: practicals/anatomy-histology.qmd
+        text: Anatomy and normal tissues
+      - href: practicals/animal-measurements.qmd
+        text: Animal measurements
+      - href: practicals/plant-water.qmd
+        text: Plant water relations
+      - href: practicals/photosynthesis.qmd
+        text: Photosynthesis
+      - href: practicals/development-stress.qmd
+        text: Development and stress
+      - href: practicals/reporting.qmd
+        text: Scientific reporting
+      - href: practicals/literature-presentation.qmd
+        text: Literature and presentation
+    - section: Revision and optional support
+      contents:
+      - href: revision.qmd
+        text: Revision and integration
+      - href: figures.qmd
+        text: Worked figure examples
+      - href: optional-computing/index.qmd
+        text: Optional R example
 format:
   html:
     toc: true
@@ -50,9 +190,8 @@ format:
     highlight-style: github
     theme: cosmo
     css: styles.css
-
-# Retained from QuantBio for future lecture decks. A deck must explicitly
-# declare format: revealjs and theme: [simple, ../theme.scss].
 controls: true
 controls-layout: edges
 controls-back-arrows: visible
+execute:
+  enabled: false

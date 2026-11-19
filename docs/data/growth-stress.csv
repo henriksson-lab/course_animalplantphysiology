@@ -1,0 +1,13 @@
+pot_id,treatment,initial_height_mm,final_height_mm,day_interval
+G01,watered,30,48,7
+G02,watered,32,52,7
+G03,watered,28,50,7
+G04,watered,31,50,7
+G05,watered,29,50,7
+G06,watered,30,50,7
+G07,reduced-water,31,41,7
+G08,reduced-water,29,41,7
+G09,reduced-water,30,44,7
+G10,reduced-water,32,43,7
+G11,reduced-water,28,41,7
+G12,reduced-water,30,42,7

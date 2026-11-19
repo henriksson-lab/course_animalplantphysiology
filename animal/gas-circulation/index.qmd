@@ -1,0 +1,168 @@
+---
+title: "A3 — Gas exchange and circulation"
+---
+
+## Follow oxygen all the way to a working cell
+
+During increased activity, muscle ATP demand rises. Breathing faster is only
+one possible response. Oxygen must reach the respiratory surface, cross a
+barrier, enter an internal transport system where needed, leave that system
+near the tissue and reach mitochondria. This unit follows that pathway and
+connects ventilation, exchange surfaces, blood and the pump.
+
+By the end, explain diffusion and bulk flow as different processes; compare
+fish, mammalian and insect gas transport; interpret oxygen content separately
+from partial pressure; trace mammalian circulation; and connect vessel and
+respiratory histology to function. Work through the [slides](lec.qmd),
+[exercises](exercise.qmd) and [quiz](quiz.qmd).
+
+## Diffusion needs a gradient and a suitable barrier
+
+A gas diffuses according to differences in its chemical potential, commonly
+described in physiology using partial pressure. **Partial pressure** is the
+pressure contribution of one gas in a mixture. A gas in solution also has
+an associated partial pressure related to dissolved, unbound gas. Oxygen
+can have the same partial pressure in two fluids while their total oxygen
+contents differ greatly because one contains an oxygen-binding pigment.
+
+For a simple barrier, transfer rate increases with area and the partial-pressure
+difference and decreases with barrier thickness. We can write the proportional
+relationship as $\dot M \propto A\Delta P/L$, holding the material's diffusion
+properties constant. Doubling area doubles predicted transfer; doubling
+thickness halves it. This is a simplified comparison, because actual respiratory
+surfaces also have flow, varying gradients and heterogeneous structure.
+
+Thinness and large area bring costs. A delicate moist surface needs protection,
+and a surface exposed to air can lose water. A respiratory organ must therefore
+combine exchange efficiency with support, protection and ventilation. In
+mammalian lung tissue, thin alveolar walls and nearby capillaries shorten the
+route between air and blood. Larger airways have a different task: conducting
+air, with supporting and protective structures rather than gas exchange across
+their full walls. See the openly accessible overview of
+[exchange systems](https://openstax.org/books/biology-2e/pages/39-1-systems-of-gas-exchange).
+
+## Ventilation and perfusion renew the two sides
+
+**Ventilation** moves environmental medium over a respiratory surface.
+**Perfusion** supplies internal fluid, often blood, to that surface. Both
+can maintain gradients by replacing fluid that has already exchanged gases.
+Increasing one alone may do little if the other is severely limiting.
+
+A fish gill presents a large thin area to water. Water and blood commonly move
+in opposite directions across exchange regions. In an ideal countercurrent
+arrangement, a gradient can persist along the exchange path, allowing more
+complete extraction than a comparable co-current arrangement. It is not
+necessary for oxygen to move “uphill”: at every exchange location the net
+diffusion remains down a local partial-pressure gradient. Maintaining flow
+and supporting the gill are themselves physiological tasks.
+
+Mammalian lungs use tidal ventilation: air moves in and out along shared
+conducting pathways. Fresh incoming air mixes with air already present, and
+not every part of an inspired breath reaches exchange regions. Birds provide
+a useful contrast: their rigid exchange lungs and air-sac ventilation support
+a different flow arrangement. Avoid describing air sacs themselves as the main
+gas-exchanging surface. The details of avian flow exceed this first explanation;
+the key point is that lungs are not all built as mammalian alveolar sacs.
+
+Insects provide a further contrast. Tracheae and finer tracheoles bring gases
+close to tissues; ventilation and diffusion contribute to transport. Their
+circulating haemolymph generally has a smaller role in oxygen transport than
+vertebrate blood. This is an important counterexample to the claim that every
+active animal requires a vertebrate-style blood oxygen pathway.
+
+## Oxygen pressure, content and delivery
+
+In many vertebrates, haemoglobin carries most blood oxygen. Dissolved oxygen
+contributes to partial pressure; haemoglobin-bound oxygen greatly increases
+content. **Saturation** is the fraction of available binding sites occupied,
+whereas **oxygen content** is an amount per volume of blood. Neither is a
+synonym for partial pressure. A blood sample can have a normal oxygen partial
+pressure yet carry less total oxygen if it contains less haemoglobin.
+
+Cooperative oxygen binding produces an S-shaped relationship between
+haemoglobin saturation and oxygen partial pressure under typical conditions.
+The relation supports loading at high partial pressure and unloading as
+partial pressure falls in tissues. Temperature, pH and carbon dioxide influence
+affinity, helping coordinate delivery with local conditions. A rightward shift
+means lower affinity at a stated partial pressure; it does not mean oxygen
+has disappeared from the system.
+
+Carbon dioxide returns from tissues in several forms, including bicarbonate,
+bound compounds and dissolved gas. Conversion between carbon dioxide and
+bicarbonate connects gas transport with acid–base balance. Ventilation can
+change carbon dioxide loss, but oxygen and carbon dioxide regulation should
+not be collapsed into a single “more breathing is always better” rule.
+The supporting reading distinguishes
+[gas exchange and transport](https://openstax.org/books/biology-2e/pages/39-2-gas-exchange-across-respiratory-surfaces).
+
+For a simplified steady-state accounting, oxygen use equals blood flow
+multiplied by the arterial–venous oxygen-content difference. If flow is
+5 L min⁻¹, arterial content 200 mL O₂ L⁻¹ and venous content 150 mL O₂ L⁻¹,
+oxygen use is $5(200-150)=250$ mL O₂ min⁻¹. The product uses content,
+not oxygen partial pressure. The calculation is a whole-system balance and
+requires representative measurements under the assumed conditions.
+
+## A circuit needs pressure differences and valves
+
+In mammalian circulation, the right heart sends blood towards the lungs and
+the left heart sends blood towards systemic tissues. Trace the circuit:
+systemic veins → right atrium → right ventricle → pulmonary arteries → lungs
+→ pulmonary veins → left atrium → left ventricle → systemic arteries.
+An artery carries blood away from the heart; a vein returns it. Oxygenation
+does not define these vessel names.
+
+```{mermaid}
+flowchart LR
+  V[Systemic veins] --> RH[Right heart]
+  RH --> PA[Pulmonary arteries]
+  PA --> L[Lung exchange]
+  L --> PV[Pulmonary veins]
+  PV --> LH[Left heart]
+  LH --> SA[Systemic arteries]
+  SA --> T[Tissue exchange]
+  T --> V
+```
+
+This original circuit sketch shows direction, not anatomical position or the
+relative size of its compartments.
+
+Valves help prevent reverse flow as chamber pressures change. The ventricular
+wall develops pressure, but pressure is not identical to flow. A simple
+relation is flow $Q=\Delta P/R$, where $R$ is vascular resistance. With a
+fixed pressure difference, higher resistance gives lower flow. Smooth muscle
+can alter vessel calibre and distribute flow among tissues. Narrow vessels
+have high resistance individually, yet many small vessels arranged in parallel
+can support substantial total flow and a very large exchange area.
+
+Arteries generally have walls suited to pressure and its fluctuations.
+Capillaries provide short exchange paths. Veins can hold a substantial blood
+volume at relatively low pressure, and return is influenced by pressure
+gradients, surrounding muscle and valves in appropriate locations. An empty
+or collapsed vessel in a section can look different from a blood-filled one;
+describe wall layers and surrounding tissue before naming it.
+
+## Comparative circuits and coordinated responses
+
+A fish typically sends blood from its heart through gills and then systemic
+tissues in a single circuit. Mammals separate pulmonary and systemic circuits
+with a four-chambered heart. Other vertebrates have other arrangements,
+including variable separation of blood streams. Open circulations move
+haemolymph through vessels and body spaces; closed circulations keep the main
+transport fluid within vessels. “Open” does not mean motionless, and “closed”
+does not automatically identify the animal's metabolic rate. Compare the
+actual route, pressure, control and exchange requirements. A useful overview
+is the reading on
+[circulatory organisation](https://openstax.org/books/biology-2e/pages/40-1-overview-of-the-circulatory-system).
+
+At the onset of exercise, ventilation, cardiac activity and local vascular
+responses can act together. Cardiac output is heart rate times stroke volume.
+Increasing heart rate is only one way to change output, and a measured rate
+alone does not establish how much blood or oxygen reaches a tissue. Local
+metabolites and neural/endocrine signals help coordinate supply and demand.
+
+Explain an exercise response by naming each link: ATP demand changes;
+tissue conditions change; ventilation and circulation respond; transport
+and exchange change; the resulting tissue conditions influence the response.
+Check whether your account confuses a pump action, a flow, a pressure, a gas
+content or a diffusion gradient. Continue to
+[water, ions and excretion](../water-excretion/index.qmd).

@@ -1,0 +1,74 @@
+---
+title: "A5 exercises — Signals, muscle and reproduction"
+---
+
+Use the [tutorial](index.qmd). Values and response descriptions are invented
+teaching examples. These tasks require no recordings, stimulation or human/
+animal intervention. Allow 60–90 minutes. Leave with a linked response pathway,
+one work/power calculation and a reproductive feedback explanation.
+
+## 1. Repair a membrane explanation
+
+A student writes: “The sodium pump opens when the neuron fires, pushes sodium
+into the cell, and makes a bigger spike when the stimulus is stronger.”
+Identify at least three errors. Replace the account with ion gradients,
+selective channels, a representative action-potential sequence and one way
+stronger stimulation can be encoded.
+
+What must be known, besides channel identity, to determine the direction
+of net ion movement?
+
+## 2. Trace a reflex and a synapse
+
+Draw stimulus → sensory receptor/afferent → integration → motor neuron →
+effector. Expand one chemical synapse to include presynaptic electrical change,
+calcium entry, transmitter release, receptor binding and postsynaptic effect.
+
+Explain why a neurotransmitter name alone does not prove whether the receiving
+cell will be excited or inhibited. Which part of a simple withdrawal pathway
+need not wait for conscious decision?
+
+## 3. Link excitation to contraction
+
+Create an ordered account from a motor-neuron action potential to skeletal
+muscle force and then relaxation. Include the neuromuscular junction,
+muscle electrical activity, calcium release, regulatory proteins, actin–myosin
+cycling, ATP and calcium recovery. Explain why ATP is needed even when
+the muscle eventually relaxes.
+
+An invented skeletal-muscle section contains long striated fibres with many
+nuclei. Which features support that interpretation? Contrast it with smooth
+and cardiac muscle, without treating a textual description as real-slide
+recognition.
+
+## 4. Keep work, power and ATP use separate
+
+A hypothetical muscle lifts a load with a constant force of 20 N through
+0.10 m in 0.50 s. Force and displacement are aligned. Calculate external
+mechanical work and mean external mechanical power.
+
+It then holds the load at the same height for 5 s. Calculate external work
+over that stationary interval using $W=Fd$. Does your answer establish that
+ATP consumption is zero? Explain. What would be needed to estimate metabolic
+efficiency rather than external work alone?
+
+## 5. Compare hormones and responses
+
+Two target tissues are exposed to the same circulating hormone concentration,
+but one changes its activity and the other does not. Give three possible
+mechanistic explanations that do not require a measurement error. Distinguish
+a surface-receptor pathway from an intracellular-receptor pathway, and explain
+why neither the words “neural” nor “endocrine” alone fixes response duration.
+
+## 6. Bring reproduction and the whole animal together
+
+Draw a mammalian hypothalamus → pituitary → gonad axis. Label GnRH,
+gonadotropins and a gonadal feedback signal. Explain the usual stabilising
+role of negative feedback and the different role of positive feedback around
+the pre-ovulatory LH surge under appropriate conditions.
+
+Then write 150–200 words tracing a terrestrial animal's escape response
+through sensation, muscle recruitment, ATP demand, oxygen transport and heat/
+water costs. Identify one immediate response and one sustained adjustment.
+Finish by explaining why resource availability can also influence reproductive
+investment. Check your concepts with the [quiz](quiz.qmd).

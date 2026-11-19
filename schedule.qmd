@@ -1,0 +1,48 @@
+---
+title: "Ten-week study route"
+---
+
+This route organises a first teaching draft of 15 ECTS. It preserves the
+predecessor's equal animal/plant balance and different practical-credit weights.
+It is not a room timetable or a statement of official assessment dates.
+
+## A repeatable weekly rhythm
+
+Begin with the biological question and a short prerequisite check. Read the
+tutorial in sections, using the slides for discussion and the exercise for
+application. Complete the practical activity alongside the relevant mechanism,
+then revisit the quiz after a delay. Reserve time for reading, observation,
+writing and feedback rather than treating every topic as another lecture.
+
+| Week | Main route | Practical or discussion | Evidence of learning to keep |
+| --- | --- | --- | --- |
+| 1 | [A1: organisation](animal/organisation/index.qmd); begin [A2](animal/energy-temperature/index.qmd) | [Tissue and anatomy preparation](practicals/anatomy-histology.qmd); distinguish cell/tissue/organ and observation/inference | Annotated structure–function explanation and comparison between two animals |
+| 2 | [A2: energy and temperature](animal/energy-temperature/index.qmd) | [Animal measurements](practicals/animal-measurements.qmd); introduce neural/endocrine coordination as mechanisms recur | Checked rate calculation, individual observations and physiological explanation |
+| 3 | [A3: gas exchange and circulation](animal/gas-circulation/index.qmd) | Compare respiratory/circulatory arrangements; return to normal tissue evidence | Labelled pathway and explanation connecting demand, transport and exchange |
+| 4 | [A4: water and excretion](animal/water-excretion/index.qmd) | Explain transport and a comparative osmotic challenge; draft animal report | Water/solute balance explanation, report draft and a limitation |
+| 5 | [A5: integration](animal/integration/index.qmd); revisit mechanisms introduced earlier | [Animal revision](revision.qmd#animal-half); thematic discussion and report feedback | Integrated neural/endocrine/muscle explanation and corrected exercise work |
+| 6 | [P1: organisation](plant/organisation/index.qmd); begin [P2](plant/water-nutrition/index.qmd) | Plant tissue observations; [water-relations activity](practicals/plant-water.qmd) preparation | Root-to-leaf pathway and tissue–function explanations |
+| 7 | [P2: water and nutrition](plant/water-nutrition/index.qmd) | [Water-relations activity](practicals/plant-water.qmd); discuss soil/root/leaf conditions | Checked water calculation, figure and explanation of competing processes |
+| 8 | [P3: carbon and metabolism](plant/carbon-metabolism/index.qmd) | [Photosynthesis activity](practicals/photosynthesis.qmd); connect source/sink and respiration | Light-response interpretation distinguishing net exchange and gross assimilation |
+| 9 | [P4: development](plant/development/index.qmd) | [Development/stress activity](practicals/development-stress.qmd); begin [literature/presentation work](practicals/literature-presentation.qmd) | Developmental mechanism, experimental-design critique and evidence table |
+| 10 | [P5: stress and biotechnology](plant/stress-biotechnology/index.qmd); integrate both halves | Presentation/discussion; [plant revision and integration](revision.qmd#plant-half); finish reports | Evidence-based biotechnology argument and linked organismal explanation |
+
+Where the actual course includes live growth experiments, arrange their setup
+and observation windows before fixing the timetable. Supplied-data activities
+can run immediately, but do not stand in for carrying out the approved experiment.
+
+## During each half
+
+Use the [report guidance](practicals/reporting.qmd) from the first practical.
+Leave time for revision after feedback. Normal histology needs repeated image
+and specimen recognition with the teacher's actual resources, not only a
+single reading session. Comparative explanation should recur throughout the
+animal block; developmental and molecular connections should recur throughout
+the plant block.
+
+## Review without adding methods
+
+At the end of each half, attempt the corresponding revision tasks without the
+solutions visible. Reopen the unit where your mechanism is weak. A labelled
+diagram, a small calculation and a clear explanation usually reveal more
+than repeatedly rereading a list of terms. There is no extra computing week.

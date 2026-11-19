@@ -1,0 +1,76 @@
+---
+title: "P1 exercise — Explain the structure"
+---
+
+Work from the [tutorial](index.qmd). Allow about 45–60 minutes, including
+discussion. These classroom descriptions are invented; they are not substitute
+microscope images or instructions for handling specimens. Leave with labelled
+drawings and short mechanistic explanations. No software is needed.
+
+## 1. Follow material through a leaf
+
+Draw epidermis, a stomatal pore, an internal air space, mesophyll, xylem and
+phloem. Trace CO2, water and exported carbohydrate using separate labelled
+arrows. Mark where at least one membrane must be crossed. Explain why opening
+the pore can increase both carbon access and water loss. Do not draw phloem as
+an extension of the stomatal pore.
+
+::: {.callout-tip collapse="true"}
+## Start with compartments
+
+CO2 reaches mesophyll from the atmosphere; water arrives through vascular
+tissue. A photosynthetic product's eventual export is a different pathway.
+An arrow between organs is not a claim that no membranes lie along the route.
+:::
+
+## 2. Classify evidence, not just names
+
+For each invented observation, identify a plausible cell/tissue function and
+one additional feature needed before a confident identification.
+
+| Description | Observation |
+| --- | --- |
+| A | An elongated conducting element lacks living contents and has thick lignified walls |
+| B | A living photosynthetic cell borders a large internal air space |
+| C | A living epidermal cell has a long extension into the surrounding soil |
+| D | A population near a shoot tip contains small actively dividing cells |
+
+Why would “thick wall” alone fail to identify xylem? Why does a text exercise
+not demonstrate that you can recognise the tissue on an actual slide?
+
+## 3. Root growth has more than one explanation
+
+In this invented simplified model, a marked root segment contains 100 cells
+arranged end to end. Ignore gaps and assume the measured cell length represents
+the whole segment. Mean length is 40 µm before and 70 µm after a period with
+no divisions. Calculate segment length at both times in millimetres and its
+increase. Compare with a second case containing 175 cells of 40 µm each.
+
+::: {.callout-note collapse="true"}
+## Check the scale
+
+100 × 40 µm = 4000 µm = 4 mm; 100 × 70 µm = 7 mm. The increase is 3 mm.
+175 × 40 µm is also 7 mm. Equal final lengths can arise through different
+cellular processes. Real tissue has heterogeneous cell lengths and geometry.
+:::
+
+## 4. Pressure is not the entire growth mechanism
+
+A cell rapidly takes up water but does not undergo irreversible expansion.
+Offer two compatible explanations involving the wall or growth state. What
+observation would distinguish temporary swelling from lasting growth? Explain
+why wall loosening and synthesis must be coordinated.
+
+## 5. Three genomes, one cell
+
+An invented mutation changes a nuclear gene encoding a protein imported into
+chloroplasts. The chloroplast DNA sequence is unchanged, but photosynthetic
+performance decreases. Is this contradictory? Explain protein location versus
+gene location. Then explain how two tissues sharing a nuclear genome can have
+different organelles and functions without invoking different DNA sequences.
+
+## Completion check
+
+Your answers should distinguish tissues from organs, membranes from walls,
+division from expansion and gene location from protein destination. Return to
+the [self-check](quiz.qmd) after revising one explanation from discussion.

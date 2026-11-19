@@ -1,0 +1,79 @@
+---
+title: "P4 — Developmental signals"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## How does a cue change an organ?
+
+Cue → receptor → cellular changes → development.
+
+Locate the evidence along the chain.
+
+## Different timescales
+
+Existing protein activity can change rapidly.
+
+Gene expression and tissue development can add slower responses.
+
+## Hormones interact
+
+One signal can affect several processes.
+
+Outcome depends on tissue, dose, transport, sensitivity and state.
+
+## Light is information
+
+Phytochromes: red/far-red.
+
+Cryptochromes/phototropins: blue-light responses. Energy supply is a separate question.
+
+## Directional growth
+
+Perception → asymmetric response → curvature.
+
+Control gravity, handling and general vigour before inferring a mechanism.
+
+## Dormancy or quiescence?
+
+Dormancy: viable seed held from germination despite otherwise suitable conditions.
+
+Quiescence: external conditions unsuitable.
+
+## Count at a defined time
+
+18 of 24 seeds = 75% by the observation time.
+
+Non-germinated does not necessarily mean dead.
+
+## Vegetative regulation
+
+Meristem activity, expansion, branching and allocation interact.
+
+Apex removal changes more than one variable.
+
+## Flowering integrates cues
+
+Age, carbon status, temperature and light timing contribute.
+
+Vernalisation is not a universal instant flowering trigger.
+
+## A mobile signal example
+
+Arabidopsis FT protein links leaf and shoot-apex activity.
+
+[Primary study](https://pubmed.ncbi.nlm.nih.gov/17446353/): distinguish expression, movement and response.
+
+## Reproduction has stages
+
+Flower formation → pollination → fertilisation → seed development.
+
+Equal flower counts need not mean equal viable seed output.
+
+## Ageing requires context
+
+Senescence can remobilise resources. Yellowing alone cannot distinguish it from stress.
+
+[Exercise](exercise.qmd) and [self-check](quiz.qmd).

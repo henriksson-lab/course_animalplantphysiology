@@ -1,0 +1,79 @@
+---
+title: "A4 exercises — Osmotic challenges and renal accounting"
+---
+
+Use the [tutorial](index.qmd). These tasks use supplied hypothetical data and
+schematics, with no sampling or fluid-manipulation procedure. Allow 60–90
+minutes. Leave with a habitat comparison, a labelled nephron and an excretion
+calculation that distinguishes amount from concentration.
+
+## 1. State the membrane and the tendency
+
+A hypothetical animal's body fluids have osmolarity 300 mOsm L⁻¹. Compare
+two external media: 10 and 1,000 mOsm L⁻¹. Assuming the relevant surface
+allows water exchange, predict the water tendency in each. Which additional
+information would be needed to predict the flux of a particular ion?
+
+For ideal solutions, estimate osmolarities of 0.15 mol L⁻¹ glucose and
+0.15 mol L⁻¹ NaCl, treating NaCl as fully dissociated. Explain why an equal
+total osmolarity does not guarantee equal tonicity for a cell membrane.
+
+## 2. Compare freshwater and seawater teleosts
+
+Draw one water arrow and one net salt-challenge arrow for each fish. Add
+drinking behaviour, the role of gill transport and expected relative urine
+volume. Explain why these examples cannot be transferred unchanged to a
+marine shark or every marine invertebrate.
+
+Your figure should distinguish a passive tendency from an active compensating
+process, using different arrow labels.
+
+## 3. Account for a substance in the kidney
+
+For a hypothetical solute, glomerular filtration rate is 0.10 L min⁻¹ and
+plasma concentration 5 mmol L⁻¹. Assume the solute is freely filtered.
+Reabsorption is 0.40 mmol min⁻¹ and secretion 0.02 mmol min⁻¹.
+
+Calculate filtered load and excretion rate. Urine flow is 0.002 L min⁻¹:
+calculate urine concentration. Check that concentration × urine flow returns
+the excretion rate.
+
+Then halve urine flow while holding that excretion rate fixed. What happens
+to urine concentration? Does this require the amount of solute excreted per
+minute to increase?
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Filtered load is filtration rate × plasma concentration. Keep L min⁻¹,
+mmol L⁻¹ and mmol min⁻¹ distinct at each step.
+:::
+
+## 4. Trace water recovery and feedback
+
+Draw a nephron route from glomerulus to collecting duct, with arrows for
+filtration, reabsorption and secretion. Explain how a medullary gradient and
+collecting-duct water permeability work together. Predict the direction of
+change in urine volume when ADH action rises, provided the relevant gradient
+and kidney function are intact.
+
+Complete a negative-feedback explanation for an increase in body-fluid osmotic
+concentration. Identify what is sensed, what responds and how the initial
+disturbance is reduced. Explain why ADH does not create water.
+
+## 5. Connect nitrogen form to trade-offs
+
+Compare ammonia, urea and uric acid in terms of conversion costs, water demands
+and physiological context. Explain why “uric acid is best because it saves
+water” is incomplete. Distinguish nitrogen excretion from loss of undigested
+food in faeces.
+
+## 6. Interpret a described kidney section
+
+An invented description reports many epithelial rings around lumens and some
+capillary tufts within surrounding spaces. Propose an organ and tissue features
+supporting that interpretation. Explain why one ring cannot confidently identify
+a nephron segment without additional features. Connect one observed feature
+to filtration and another to selective transport.
+
+Finish with the [quiz](quiz.qmd).

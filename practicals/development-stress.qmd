@@ -1,0 +1,108 @@
+---
+title: "Practical: growth under reduced watering"
+---
+
+## Question and scope
+
+Do supplied height measurements support a difference in growth between
+watering treatments, and what physiological explanations remain possible?
+This 90-minute practical uses [simulated growth data](../data/growth-stress.csv)
+with the [data dictionary](../data/README.md). It can be completed with paper
+and a calculator. These are invented observations, not evidence about an
+actual species, watering recommendation or live experiment.
+
+Twelve plants in separate pots were allocated randomly, six per treatment,
+after baseline height measurement. Watering is applied individually; pots
+are interspersed in a common growth space with positions balanced. The same
+plant is measured seven days later. Assume the defined treatments are the
+intended difference; real experiments would need records of watering doses,
+soil moisture, environment, handling and compliance.
+
+## Growth is a change, not a final size
+
+Calculate height increment as final minus initial height, in mm. A taller
+plant at the end may have started taller; that is why baseline measurements
+matter. Here the table permits a within-plant change, followed by a comparison
+of those changes between independent treatment groups. It is not a paired
+comparison between a watered plant and an unrelated reduced-water plant.
+
+G01 changes from 30 to 48 mm, an 18 mm increment over seven days. Its average
+height-increment rate is $18/7=2.57$ mm day⁻¹. This average is not proof
+of constant daily growth: two observations cannot reveal a detailed growth
+trajectory.
+
+## Analysis tasks
+
+1. Check the identifiers, group counts and measurement units. Count the
+   independent pots. Explain why the baseline and final readings do not
+   double that count.
+2. Calculate each plant's increment and mean daily rate. Check G07 explicitly.
+3. Plot the individual increments by group and calculate group means and
+   ranges. Describe the difference as reduced-water minus watered.
+4. Calculate the relative reduction compared with the watered mean. Explain
+   the difference between a reduction of 8 mm and a reduction of 40%.
+5. Write a short interpretation using the terms observation, explanation and
+   limitation accurately. No significance test is required.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+G07 starts at 31 mm and ends at 41 mm, giving 10 mm rather than 41 mm growth.
+The denominator for relative reduction is the reference group's mean
+increment, not its final mean height.
+:::
+
+## Mechanisms: what could connect water supply to height?
+
+Plant expansion depends on cell-wall properties and water relations; cell
+production and developmental allocation also influence organ growth. Reduced
+water availability may alter turgor, stomatal conductance, carbon acquisition
+and hormonal signalling. These are candidate connections to the observed
+response, not mechanisms established by measuring height alone.
+
+6. Draw two distinct causal pathways from reduced watering to lower height
+   increment: one involving cell expansion/water status and one involving
+   gas exchange or carbon supply. Mark which variables this dataset actually
+   measures and which would need new observations.
+7. A student says “shorter plants have less auxin, so the hormone caused this”.
+   Explain the unsupported steps. How could hormone sensitivity or spatial
+   distribution complicate an interpretation based on one hormone measurement?
+8. Propose one non-destructive follow-up observation for each pathway and
+   state what result would be consistent with it. A consistent result is not
+   necessarily exclusive evidence; name an alternative explanation.
+
+## Development and stress must be distinguished
+
+Plants may alter allocation, leaf area, root growth or the timing of
+development under changed conditions. A lower height increment is not always
+equivalent to lower total biomass, lower survival or a failed adaptation.
+Conversely, surviving while ceasing growth does not establish that a crop
+maintains yield. The outcome used to define “tolerance” must be explicit.
+
+Design a follow-up comparison of two hypothetical genotypes under watered
+and reduced-water conditions. Draw the four genotype × treatment groups.
+Specify independent pots, allocation across positions, a relevant outcome
+and the same measurement time. Do not place all genotype 1 plants in one
+cabinet and genotype 2 plants in another. Keep the treatment contrast
+available within each genotype and the genotype contrast within each treatment.
+
+## Reporting and completion check
+
+Submit the increment table, observation plot, mean comparison, two mechanism
+diagrams and a follow-up design. In the discussion distinguish the strong
+claim supported by this constructed example—different height increments
+under its stipulated conditions—from broader untested claims about drought
+resistance, carbon balance, hormones or field performance.
+
+::: {.callout-note collapse="true"}
+## Numerical check
+
+Watered increments are 18, 20, 22, 19, 21 and 20 mm, mean 20 and range
+18–22. Reduced-water increments are 10, 12, 14, 11, 13 and 12 mm, mean
+12 and range 10–14. Reduced-water minus watered is −8 mm; the relative
+reduction is 40%. Mean daily rates are about 2.86 and 1.71 mm day⁻¹.
+The constructed table has six independent pots per treatment.
+:::
+
+Continue to [scientific reporting](reporting.qmd) or return to the
+[practical route](index.qmd).

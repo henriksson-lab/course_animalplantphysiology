@@ -1,0 +1,173 @@
+---
+title: "A4 — Water, ions and excretion"
+---
+
+## Why does living in water not solve water balance?
+
+A freshwater fish is surrounded by water yet must control water entry and
+replace ions. A marine bony fish faces the opposite tendencies: it loses water
+and gains salts. A terrestrial mammal can conserve water, but eliminating
+nitrogen and dissipating heat still create costs. This unit connects the
+physical tendencies of water and solutes with epithelial transport, excretory
+organs and whole-animal regulation.
+
+You should become able to predict osmotic tendencies, distinguish osmotic
+concentration from tonicity, compare aquatic strategies, trace a nephron,
+calculate excretion from filtration/reabsorption/secretion, and explain how
+water and nitrogen balance interact. Use the [slides](lec.qmd),
+[exercises](exercise.qmd) and [quiz](quiz.qmd).
+
+## Begin with a boundary and a permeability
+
+Water moves across a selectively permeable membrane in response to differences
+in water chemical potential. In an elementary osmotic comparison at equal
+pressure, the side containing more effectively retained solute tends to draw
+water from the other side. State which boundary is being considered: the skin,
+gill, intestinal wall, capillary wall and cell membrane are not interchangeable.
+Water entry into the animal and water entry into one of its cells are different
+questions.
+
+**Osmolarity** counts osmotically active particles per litre of solution, often
+in osmoles L⁻¹ or milliosmoles L⁻¹. For an ideal teaching example, 0.10 mol L⁻¹
+glucose contributes about 0.10 Osm L⁻¹, while 0.10 mol L⁻¹ NaCl contributes
+about 0.20 Osm L⁻¹ if treated as fully dissociated. Real solutions need not
+behave ideally. These particle counts are useful because osmosis depends on
+particle concentration, not simply the mass of dissolved material.
+
+**Tonicity** predicts sustained effects on cell volume and depends on solutes
+that do not readily equilibrate across the relevant membrane. Two solutions
+with equal total osmolarity need not have the same effect if their solutes
+cross a membrane differently. Avoid treating every dissolved molecule as a
+permanently trapped osmotic particle. Hydrostatic pressure also matters:
+movement need not continue until solute concentrations are equal if an opposing
+pressure develops. The supporting reading introduces
+[osmotic balance](https://openstax.org/books/biology-2e/pages/41-1-osmoregulation-and-osmotic-balance).
+
+## A permeable surface creates a transport problem
+
+Respiratory surfaces must exchange gases, but permeability creates opportunities
+for water and ions to move as well. An animal cannot always make its surface
+perfectly impermeable while preserving other functions. It can instead alter
+surface properties, drink or stop drinking, move ions actively, and change urine
+volume and composition.
+
+A typical freshwater teleost has body fluids more concentrated than the
+surrounding water. Water tends to enter and ions tend to be lost. It produces
+relatively large volumes of dilute urine and obtains ions through specialised
+transport processes and food. A typical marine teleost has body fluids less
+concentrated than seawater. It drinks seawater, absorbs water through the gut
+and eliminates excess salts through gill and renal processes. The two fish
+therefore use related epithelia to address different net challenges.
+
+These are broad teleost examples, not descriptions of every fish. Marine
+elasmobranchs, such as sharks, retain organic osmolytes including urea and
+have a different strategy. Many marine invertebrates have total internal
+osmotic concentrations near those of their environment, yet may still regulate
+particular ions. An **osmoconformer** need not have every internal solute
+identical to seawater, and an **osmoregulator** need not maintain an absolutely
+unchanging internal concentration at every salinity. State the species and
+conditions before generalising.
+
+## Epithelia can move material against a tendency
+
+An epithelial transport cell has different membrane domains facing different
+fluids. ATP-driven pumps establish ion gradients. Other proteins couple a
+solute's movement to those gradients; channels allow selected ions to move
+down electrochemical gradients. Water can follow osmotic gradients through
+membranes and water channels. The epithelium and its cell junctions determine
+which routes are available.
+
+This polarity makes directional transport possible. A list of pumps without
+their locations does not explain net movement from the environment to blood.
+Draw both boundaries of a cell and show how each protein contributes to an
+overall route. Energy expenditure can occur at one step while another step
+is passive. “Water is actively pumped by the kidney” is therefore a poor
+description of water following gradients produced by solute transport.
+
+## The nephron separates filtration from selective recovery
+
+In a mammalian kidney, blood enters a glomerular capillary network. Filtration
+produces fluid in the nephron that normally contains water and many small
+solutes but few cells and little large plasma protein. A filtered molecule
+has left the blood and entered the tubular lumen; it has not necessarily
+left the body. Much of that filtered material is subsequently returned to blood.
+
+**Reabsorption** moves material from tubular fluid towards blood.
+**Secretion** moves material from blood/interstitium towards tubular fluid.
+**Excretion** is the amount finally leaving in urine. For a stated substance
+and time interval, use the accounting relation:
+
+$$\text{excretion}=\text{filtered load}-\text{reabsorption}+\text{secretion}.$$
+
+For example, a filtered load of 100 arbitrary amount units min⁻¹, reabsorption
+of 98 and secretion of 1 gives excretion of 3 units min⁻¹. Keep amount per
+time distinct from concentration. If urine concentration is 2 mmol L⁻¹ and
+urine flow is 0.001 L min⁻¹, excretion is 0.002 mmol min⁻¹. Concentrated urine
+does not alone establish a large total amount excreted.
+
+```{mermaid}
+flowchart LR
+  B[Blood in glomerular capillaries] -->|Filtration| F[Fluid in nephron lumen]
+  F --> T[Proximal tubule → loop → distal tubule]
+  T --> C[Collecting duct]
+  C --> U[Urine leaving kidney]
+  T -->|Reabsorption| R[Blood around tubule]
+  R -->|Secretion| T
+```
+
+The diagram is an original functional sketch; it does not show physical scale
+or every nephron connection. The collecting duct receives fluid from multiple
+nephrons. Use it to keep transport direction explicit while reading the account
+of [kidneys and osmoregulatory organs](https://openstax.org/books/biology-2e/pages/41-2-the-kidneys-and-osmoregulatory-organs).
+
+## How can urine become more concentrated than plasma?
+
+Water reabsorption requires an osmotic driving force and a water-permeable
+route. In the mammalian kidney, specialised loop segments differ in water
+permeability and solute transport. Their arrangement, together with other
+transport and urea-handling processes, helps establish a medullary osmotic
+gradient. Blood vessels serving the medulla help preserve this organisation
+while supplying tissue. The collecting duct passes through that gradient.
+
+Antidiuretic hormone, ADH or vasopressin, can increase collecting-duct water
+permeability. More water then leaves the tubular fluid when an appropriate
+gradient exists, reducing urine volume and increasing its concentration.
+The hormone does not manufacture water or simply “make the kidney filter less”.
+The full concentrating mechanism is more complex than one salt pump or one
+hairpin loop. Here, be able to explain differential permeability, gradient,
+water recovery and hormonal control before memorising segment names.
+
+When osmotic concentration of body fluids rises, sensing and control processes
+can increase ADH release and promote drinking. When the disturbance is corrected,
+feedback reduces the response. Blood-volume/pressure signals can also influence
+water conservation; it is not a one-input switch. Compare this loop with A1's
+temperature example. The reading on
+[hormonal regulation](https://openstax.org/books/biology-2e/pages/37-3-regulation-of-body-processes)
+provides a complementary account.
+
+## Nitrogen disposal is part of the water budget
+
+Breaking down amino acids creates nitrogen-containing waste. Ammonia can be
+released with relatively little conversion, but its handling requires attention
+to toxicity, concentration and removal. Urea costs energy to synthesise but
+can be retained or excreted at concentrations suitable for many animals.
+Uric acid can be eliminated with little water in a semi-solid form, though
+its production also has costs. No product is universally best: water availability,
+life stage, habitat and other physiological demands matter.
+
+Terrestrial insects use Malpighian tubules and hindgut processes rather than
+mammalian nephrons. Many annelids and other invertebrates use different tubular
+excretory arrangements. Compare the tasks—removing waste, controlling ions,
+recovering water—before comparing anatomical names. Egestion of undigested
+food remains different from excretion of metabolically produced nitrogen.
+
+## Read structure and behaviour together
+
+A kidney section may contain round tubule profiles, glomeruli and blood
+vessels, but section angle can change apparent shape. Look for a capillary
+tuft within a surrounding space when identifying a renal corpuscle; look
+for epithelial organisation around a lumen in tubules. These descriptions
+are preparation for the real slide set, not proof that a particular specimen
+is available. Finally, connect anatomy to the environment: a water-saving
+animal may also change behaviour, diet, ventilation and heat exchange.
+Continue to [integration, movement and reproduction](../integration/index.qmd).

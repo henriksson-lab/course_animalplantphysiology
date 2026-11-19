@@ -1,0 +1,85 @@
+---
+title: "Optional R: repeat one familiar analysis"
+---
+
+This walkthrough repeats the [animal oxygen-consumption practical](../practicals/animal-measurements.qmd).
+**It is optional and adds no core physiology outcome.** Complete the biological
+question, independent-unit discussion and one worked calculation first. The
+teacher may use this supplied code within the existing analysis time or leave
+it out entirely.
+
+## What you need
+
+Use the downloaded student project with `physiology.Rproj`, `data/` and
+`optional-computing/` kept in their supplied relative positions. R and RStudio
+with the Intro Computing packages `readr`, `dplyr`, `ggplot2`, `knitr` and
+`rmarkdown` are needed to run and render. Set up packages before the session
+using the supported Intro Computing instructions; do not put installation
+commands in an analysis report. HTML rendering also needs Pandoc, supplied
+by RStudio or Quarto in the teaching environment.
+
+The source files are [analysis.R](analysis.R) and
+[respirometry.Rmd](respirometry.Rmd). The input is
+[animal-respirometry.csv](../data/animal-respirometry.csv), documented in the
+[data dictionary](../data/README.md). These values are simulated.
+
+## Read before running
+
+The function in `analysis.R` imports and checks the table, calculates a
+background-corrected amount, divides by time and mass, summarises groups and
+plots each animal. Its checks suit this deliberately complete teaching
+dataset; a real dataset needs protocol-specific checks and explicit handling
+of missing or unexpected readings.
+
+The calculation is the same one already used by hand:
+
+```r
+oxygen_used_umol <- (initial - final - blank) * water_volume_l
+rate_umol_min_g <- oxygen_used_umol / duration_min / mass_g
+```
+
+Each row is one animal, so grouped counts are animal counts here. That would
+not automatically be true for repeated measurements from one animal.
+
+## Run from the project root
+
+Open `physiology.Rproj` and create a source script or use the supplied script
+as a reference. In the R console, starting at the project root, run:
+
+```r
+source("optional-computing/analysis.R")
+analysis <- analyse_respirometry("data/animal-respirometry.csv")
+analysis$rates
+analysis$summary
+analysis$plot
+```
+
+Locate A01 and A02 in the output. Their rates should be 0.18 and 0.20 µmol
+O₂ min⁻¹ g⁻¹. Group means should be 0.20 and 0.325. Explain why the mean
+is higher in the warmer simulated group, and why this alone does not show
+better growth or performance.
+
+## Render the supplied report
+
+Open `optional-computing/respirometry.Rmd` and use **Knit**. R Markdown
+evaluates relative input paths from that document's folder, so the report
+uses `../data/animal-respirometry.csv` and sources `analysis.R` beside it.
+The project-root commands above instead use `data/...`. These are two
+descriptions of the same file from different working directories.
+
+The complete report produces a self-contained HTML file next to the `.Rmd`.
+Read its design, calculation and limitations, not only its figure. Restart R
+and Knit again without creating console objects first. Keep the source,
+function, dictionary and input with the HTML if sharing the work.
+
+## A small adaptation task
+
+Copy the report before changing it. Add one sentence explaining the independent
+unit and one identifying an assumption you would need to check in a real
+experiment. In the plotting function, improve one axis label without changing
+the physiological quantity or units. Re-render and confirm the numerical
+results are unchanged. No new statistics or data reshaping is required.
+
+If paths or rendering take over the practical, return to the worked table and
+hand-drawn plot. The aim is physiological interpretation. Teachers can supply
+the complete figure and result rather than requiring independent code writing.

@@ -1,34 +1,25 @@
 ---
-title: "Plant physiology: proposed topics"
+title: "Plant physiology"
 ---
 
-These units organise the planned plant half. They are outlines rather than
-complete lessons or a confirmed teaching order.
+Plants acquire resources, build organs and respond to their surroundings while
+remaining rooted in place. Follow a leaf from its construction through transport
+and metabolism to development, defence and biotechnology.
 
-## Plant organisation
+This first teaching draft supplies explanations and classroom investigations.
+Departmental laboratory protocols and formal assessment instructions remain
+separate. No programming is required.
 
-Connect cells, walls, tissues, meristems and genomes with growth and function.
+| Unit | Guiding question | Study route |
+| --- | --- | --- |
+| P1. Organisation | How does a plant build a functioning body? | [Read](organisation/index.qmd), [slides](organisation/lec.qmd), [exercise](organisation/exercise.qmd), [self-check](organisation/quiz.qmd) |
+| P2. Water and nutrition | How do resources enter and move through a plant? | [Read](water-nutrition/index.qmd), [slides](water-nutrition/lec.qmd), [exercise](water-nutrition/exercise.qmd), [self-check](water-nutrition/quiz.qmd) |
+| P3. Carbon and metabolism | How does captured light support the whole organism? | [Read](carbon-metabolism/index.qmd), [slides](carbon-metabolism/lec.qmd), [exercise](carbon-metabolism/exercise.qmd), [self-check](carbon-metabolism/quiz.qmd) |
+| P4. Development | How does a signal change growth and reproduction? | [Read](development/index.qmd), [slides](development/lec.qmd), [exercise](development/exercise.qmd), [self-check](development/quiz.qmd) |
+| P5. Stress and biotechnology | How can physiology inform an intervention? | [Read](stress-biotechnology/index.qmd), [slides](stress-biotechnology/lec.qmd), [exercise](stress-biotechnology/exercise.qmd), [self-check](stress-biotechnology/quiz.qmd) |
 
-## Resource acquisition and transport
-
-Explain water balance, roots, xylem, transpiration, stomata, minerals and
-membrane transport.
-
-## Carbon and metabolism
-
-Connect photosynthesis, environmental conditions, carbon allocation,
-respiration and nutrient assimilation to growth.
-
-## Regulation and development
-
-Follow signals and hormones through germination, vegetative growth,
-flowering, reproduction, senescence and cell death.
-
-## Environment and applications
-
-Explain stress, biotic interactions, natural products and growth–defence
-relationships. Connect model systems, transformation, tissue culture and
-gene expression to plant biotechnology and its ethical questions.
-
-Experiments, literature discussion and scientific communication accompany
-these topics. Actual protocols and experiment durations remain to be confirmed.
+Draw compartments, label movement and predict what changes if one step is
+disrupted. Invented exercise observations are labelled as teaching examples;
+they do not reproduce an actual experiment's results. Use the reading, then the
+short lecture deck, then exercises and self-checks. A scientific explanation
+needs a mechanism and evidence, not just a named hormone or pathway.

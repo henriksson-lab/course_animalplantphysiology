@@ -1,0 +1,79 @@
+---
+title: "A3 exercises — Exchange, blood and flow"
+---
+
+Refer to the [tutorial](index.qmd). Values are simplified invented examples.
+Allow 60–90 minutes; leave with a transport-path diagram, calculations with
+units and a comparative explanation. No physiological recording is requested.
+
+## 1. Separate transport processes
+
+Trace oxygen from environmental air to a mammalian muscle mitochondrion.
+For each arrow, state whether the main process is bulk flow, diffusion or
+binding/unbinding. Then identify how the route differs in an insect.
+
+Where would a thickened exchange barrier act? Where would reduced ventilation
+act? Why need not increasing heart rate correct either problem completely?
+
+## 2. Compare barriers quantitatively
+
+Hold diffusion properties constant and use $\dot M\propto A\Delta P/L$.
+A hypothetical exchange surface has area 10 units, thickness 2 units and
+gradient 4 units. A second has twice the area, twice the thickness and half
+the gradient. Calculate the second surface's predicted transfer rate relative
+to the first. Explain which variables were held fixed.
+
+What does the calculation omit about a real heterogeneous organ with flowing
+fluids? Give one example.
+
+## 3. Keep local countercurrent gradients explicit
+
+The invented values below represent partial pressures in compatible units
+at positions along a gill. Water moves from left to right; blood moves from
+right to left. Values are schematic and are not a fitted physiological model.
+
+| Position, left → right | 1 | 2 | 3 | 4 |
+| --- | ---: | ---: | ---: | ---: |
+| Water oxygen partial pressure | 100 | 80 | 60 | 40 |
+| Blood oxygen partial pressure | 90 | 70 | 50 | 30 |
+
+Draw both flow arrows and mark diffusion direction at each position. Identify
+the water inlet/outlet and blood inlet/outlet. Explain why blood leaving with
+a value of 90 does not mean oxygen diffused uphill from water leaving at 40.
+Which values must be compared locally?
+
+## 4. Calculate oxygen use and cardiac output
+
+In a hypothetical steady state, blood flow is 4 L min⁻¹, arterial oxygen
+content 190 mL O₂ L⁻¹ and venous content 140 mL O₂ L⁻¹. Calculate oxygen
+use. Heart rate is 80 beats min⁻¹ and stroke volume 0.050 L beat⁻¹: verify
+the flow using those values.
+
+Then use an activity state of heart rate 120 beats min⁻¹, stroke volume
+0.080 L beat⁻¹ and arterial–venous difference 100 mL O₂ L⁻¹. Calculate
+output and oxygen use. State why inserting oxygen partial pressures instead
+of contents would be wrong.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Cancel units explicitly. Beats cancel in heart rate × stroke volume; litres
+of blood cancel in flow × oxygen-content difference.
+:::
+
+## 5. Read tissue architecture
+
+Compare these invented descriptions: a very thin endothelial tube close to
+an exchange epithelium; a round vessel with a thick muscular wall; and an
+irregular partly collapsed vessel with a relatively thin wall and wide lumen.
+Suggest identities, functions and limits of inference. What would distinguish
+a conducting airway from a gas-exchange region in a real lung section?
+
+## 6. Build an evidence-based comparison
+
+In 150–200 words compare a fish's single circulation and a mammal's pulmonary/
+systemic circuits. Trace the pump and exchange regions rather than simply
+counting chambers. Include one consequence for pressure and one feature that
+cannot be predicted from the words “open” or “closed” alone.
+
+Finish with the [quiz](quiz.qmd).

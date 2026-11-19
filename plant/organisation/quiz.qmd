@@ -1,0 +1,57 @@
+---
+title: "P1 — Organisation self-check"
+---
+
+Answer before opening the explanations. Explain one mechanism aloud and revisit
+the [tutorial](index.qmd) if you can recall a term but cannot connect its steps.
+
+## 1. Does a wall replace the plasma membrane as a selective boundary?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. The wall provides mechanical and extracellular properties; selective membrane transport remains necessary.
+:::
+
+## 2. A plant wilts. Must its cells already be dead?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Reduced turgor can change tissue mechanics while cells remain viable. Recovery and additional observations are needed.
+:::
+
+## 3. Name two mechanisms producing a longer root.
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+Production of more cells and expansion of existing cells; real growth can combine both.
+:::
+
+## 4. Are all xylem cells dead?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Conducting tracheids/vessel elements are dead at functional maturity, while living parenchyma also occurs in xylem.
+:::
+
+## 5. A chloroplast protein is defective. Must its gene lie in plastid DNA?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Many chloroplast proteins are nuclear encoded and imported. Gene location and protein destination differ.
+:::
+
+## 6. Does a shared genome force root and leaf cells to function identically?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Gene expression, developmental state and cellular organisation differ. Different functions do not require different sequences.
+:::
+
+Compare your reasoning with the [exercise](exercise.qmd). Correct an explanation
+rather than recording only a score.

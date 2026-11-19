@@ -1,0 +1,77 @@
+---
+title: "P3 — Carbon and metabolism"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## How does a root receive leaf carbon?
+
+Energy capture, fixation, export and respiration connect organs.
+
+A leaf rate is not a whole-plant budget.
+
+## Thylakoids capture energy
+
+Light drives electron transfer and a proton gradient.
+
+ATP/NADPH support downstream processes.
+
+## Where does released oxygen originate?
+
+Water supplies electrons to photosystem II.
+
+CO2 supplies carbon; it is not the direct source of released O2.
+
+## Stroma fixes carbon
+
+Rubisco-mediated fixation, reduction and acceptor regeneration.
+
+Three CO2: standard net triose-equivalent accounting uses 9 ATP and 6 NADPH.
+
+## Not a nighttime cycle
+
+“Dark reactions” does not imply independence from light-coupled resources or regulation.
+
+## Photorespiration differs
+
+Rubisco oxygenation initiates carbon recovery with energy costs and CO2 release.
+
+Do not equate it with mitochondrial respiration.
+
+## C4 and CAM concentrate CO2
+
+C4 commonly separates initial capture and release spatially.
+
+CAM commonly separates them in time. Both retain Calvin–Benson fixation.
+
+## Read a net response
+
+At compensation, uptake and release balance.
+
+A high-light plateau does not identify its own limiting mechanism.
+
+## Sources and sinks change
+
+A source exports assimilate; a sink imports it.
+
+A storage organ can become a source during regrowth.
+
+## Phloem pressure flow
+
+Loading and unloading support pressure differences.
+
+Direction follows source–sink relations, not a universal downward rule.
+
+## Respiration and assimilation
+
+Green and non-green tissues respire.
+
+Nitrogen assimilation requires energy and carbon skeletons; roots need oxygen.
+
+## Carry units through
+
+6 µmol m⁻² s⁻¹ × 0.02 m² × 600 s = 72 µmol CO2.
+
+Explain limits in the [exercise](exercise.qmd); then [self-check](quiz.qmd).

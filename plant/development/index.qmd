@@ -1,0 +1,164 @@
+---
+title: "P4 — Signals, growth and reproduction"
+---
+
+## The question
+
+A seed can remain dormant in apparently suitable soil. A shoot bends towards
+light, and a mature plant begins flowering after the season changes. Explain
+how perception, signalling, altered cellular activity and organ development
+connect. Distinguish a response from proof of its underlying mechanism.
+
+## From stimulus to response
+
+A signal must be detected by an appropriate receptor. Detection changes
+downstream activity, which can modify existing proteins, transport, metabolism
+or gene expression. The response depends on tissue, developmental state and
+other signals. A receptor is not the final response itself, and the amount of
+a hormone is not the only determinant of sensitivity.
+
+Gene expression connects a shared genome to specialised behaviour. Transcription
+produces RNA; some RNAs support protein synthesis and others act directly.
+Regulatory proteins can change which genes are used and when. Changing gene
+expression does not require changing DNA sequence. Fast ion-channel responses
+can precede slower changes in organ anatomy.
+
+```{mermaid}
+flowchart LR
+  cue[Environmental or internal cue] --> receptor[Perception]
+  receptor --> fast[Existing protein and transport activity]
+  receptor --> expr[Gene-expression changes]
+  fast --> cell[Cell physiology]
+  expr --> cell
+  cell --> organ[Growth or developmental response]
+  state[Tissue and developmental state] --> cell
+```
+
+This original scheme is a reasoning framework. Actual pathways have feedback,
+interactions and distinct timescales. Use it to locate the evidence: does an
+experiment measure a stimulus, an intermediate or the final phenotype?
+
+## Hormones operate in interacting networks
+
+Plant hormones are signalling molecules active at low concentrations. Their
+effects depend on production, transport, metabolism and perception. One hormone
+can affect several processes, and several hormones can affect one process.
+The following are useful entry points rather than one-to-one rules:
+
+| Signal class | Useful example | Interpretation caution |
+| --- | --- | --- |
+| Auxin | Directional growth, root initiation and developmental patterning | Concentration, transport and tissue sensitivity matter |
+| Cytokinins | Cell division, meristem activity and resource-related responses | Effects interact with other signals and developmental state |
+| Gibberellins | Germination and stem elongation in appropriate contexts | Not every dwarf plant lacks gibberellin |
+| ABA | Dormancy and water-stress responses | ABA responses include both rapid physiology and longer-term development |
+| Ethylene | Fruit ripening in responsive species and other developmental/stress responses | Not all fruits use identical ripening regulation |
+| Brassinosteroids | Growth and differentiation | Effects depend on interaction with other pathways |
+| Jasmonates and salicylic acid | Defence and associated growth changes | Different attackers and conditions recruit different combinations |
+
+Memorising this table is insufficient. Explain a case as signal → cellular
+process → organ consequence. For example, a change in auxin distribution can
+produce unequal expansion across an organ. Root and shoot growth responses
+to the same auxin change can differ. “Auxin promotes growth” hides this
+important context dependence.
+
+## Light supplies information as well as energy
+
+Photoreceptors allow plants to detect spectral composition, direction and
+timing. Phytochromes respond to red/far-red light, while blue-light receptors
+include cryptochromes and phototropins. These signals influence developmental
+choices beyond photosynthetic energy supply. A seedling can change form after
+a small informative light exposure without obtaining much fixed carbon from it.
+
+Red/far-red balance can provide information about neighbouring vegetation.
+A shoot may respond with altered elongation and resource allocation. This
+can improve access to light but can also increase vulnerability or reduce
+investment elsewhere. A response is conditional, not evidence that plants
+predict an intentional goal.
+
+Phototropism involves directional light perception and differential growth.
+Gravitropism involves gravity perception, signal redistribution and asymmetric
+responses. Gravitational orientation and light direction are different cues;
+an experimental design must separate them before assigning a mechanism.
+Rotating a pot changes several physical relationships and requires controls.
+
+## Germination depends on state and conditions
+
+Imbibition restores hydration, and metabolism resumes as conditions permit.
+Reserve mobilisation supports the developing seedling. Radicle emergence is
+a commonly used operational measure of germination, but later establishment
+requires further growth and resource acquisition.
+
+**Dormancy** means a viable seed does not germinate despite otherwise suitable
+conditions. **Quiescence** reflects unsuitable external conditions such as
+insufficient water. Dormancy can involve embryo state, surrounding tissues and
+signal balance. ABA and gibberellin pathways provide a useful model of
+interacting regulation, but species differ in requirements for temperature,
+light or other cues.
+
+A germination percentage needs a clear denominator and time. Twelve germinated
+seeds out of twenty by day five gives 60%, not proof that eight are dead.
+They could germinate later, be dormant, or be non-viable. Independent dishes
+or pots matter when environmental treatment is shared. Twenty seeds in one
+dish do not automatically give twenty independent temperature treatments.
+
+## Vegetative growth combines production and allocation
+
+Meristems generate organs while expansion changes their dimensions. Hormones,
+nutrients, carbon status and environment coordinate these processes. Apical
+dominance illustrates integration: shoot-tip activity influences lateral bud
+outgrowth through several interacting signals and resource relations. Removing
+an apex changes more than one hormone concentration and creates a wound.
+An altered branching pattern alone cannot identify the complete mechanism.
+
+Secondary growth increases girth through lateral meristems. Cambial activity
+must be coordinated with transport and support as the shoot enlarges. Seasonal
+activity can alter xylem properties. A ring or tissue pattern records growth,
+but interpreting it requires knowledge of species and environmental history.
+
+## Flowering connects leaves and the shoot apex
+
+Plants integrate age, resource status, temperature and light timing. Photoperiod
+responses depend on the species and can involve the duration of the night as
+well as the day. Vernalisation refers to promotion of flowering competence by
+extended cold in responsive plants. It is different from a universal direct
+trigger that makes every cold-treated plant flower immediately.
+
+In Arabidopsis, FT provides an example of a mobile signal linking leaves with
+the shoot apex. Experiments expressing tagged FT and using grafts supported
+protein movement contributing to floral induction. This is evidence for a
+particular mechanism in a model system, not proof that all flowering control
+is identical. See the primary study by
+[Corbesier and colleagues](https://pubmed.ncbi.nlm.nih.gov/17446353/).
+
+At the apex, altered gene activity changes meristem identity and organ
+development. Flower induction, formation of floral organs, gametophyte
+development, pollination, fertilisation and fruit development are distinct
+steps. Failure at one step need not mean that flowering was not induced.
+
+## Reproduction links generations
+
+In flowering plants, pollen delivers sperm cells to the female gametophyte.
+Double fertilisation produces a zygote and endosperm, with the latter supporting
+seed development in an appropriate species-specific pattern. Embryogenesis
+establishes the next plant's body organisation. Fruit derives from maternal
+tissue and can assist protection and dispersal; a seed and a fruit are not
+equivalent structures.
+
+Developing seeds and fruits draw resources as sinks. Carbon limitation, water
+stress or temperature can affect reproductive success after a normal-looking
+flower forms. Measure seed number, viability or yield separately from flower
+number when those are the actual biological goals.
+
+## Senescence can redistribute resources
+
+Senescence is a regulated developmental process that can mobilise nutrients
+from ageing tissues. Programmed cell death participates in development and
+defence, but it should not be treated as synonymous with every senescence
+stage or every form of accidental injury. A yellowing leaf may reflect normal
+ageing, deficiency, stress or several processes. Tissue age and environmental
+controls are needed to distinguish explanations.
+
+For an accessible introduction to light and hormone responses, consult
+[OpenStax plant sensory systems](https://openstax.org/books/biology-2e/pages/30-6-plant-sensory-systems-and-responses).
+Work through the [exercise](exercise.qmd) and [self-check](quiz.qmd) before
+the final unit connects these signals to stress and applications.

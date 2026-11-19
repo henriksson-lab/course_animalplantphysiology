@@ -1,0 +1,145 @@
+---
+title: "P3 — Light, carbon and the whole-plant budget"
+---
+
+## The question
+
+A well-lit leaf exports sugar while a root consumes it. What connects the two,
+and why can the same leaf release CO2 in darkness? Explain energy capture,
+carbon fixation, transport, respiration and nutrient assimilation. Interpret a
+response without assuming that light is its only limitation.
+
+## Capturing energy differs from fixing carbon
+
+Pigments in chloroplast thylakoids absorb light. Excitation reaches reaction
+centres, and electron transfer supports a proton electrochemical gradient.
+ATP synthase uses that gradient to form ATP. Water supplies electrons to
+photosystem II and oxygen is released; photosynthetic oxygen does not come
+directly from splitting CO2.
+
+Linear electron flow supports ATP and NADPH formation. Cyclic flow can
+contribute additional ATP without equivalent net NADPH or oxygen production.
+ATP and reducing power are intermediate resources, not the final carbohydrate
+supply for the entire plant. Their production must be coordinated with use.
+
+The Calvin–Benson cycle operates in the stroma. Rubisco adds CO2 to ribulose
+bisphosphate. Subsequent reactions use ATP and NADPH to reduce the products;
+some carbon becomes available for synthesis and export while the rest
+regenerates the acceptor. In standard cycle accounting, three fixed CO2 and
+nine ATP plus six NADPH support one net triose-phosphate equivalent. This
+does not represent every energetic cost of building a plant.
+
+“Dark reactions” is a misleading name. These reactions do not consume photons
+directly, but light-dependent resources and regulation support them. Ordinary
+carbon fixation cannot continue indefinitely in darkness just because the
+cycle is described as light-independent.
+
+## Oxygenation imposes additional costs
+
+Rubisco can react with oxygen instead of CO2. The resulting photorespiratory
+pathway recovers carbon while releasing some CO2 and consuming energy. It
+involves chloroplasts, peroxisomes and mitochondria. Photorespiration is distinct
+from mitochondrial respiration, even though both can contribute CO2 release.
+Under relevant conditions, warming and reduced internal CO2 favour a greater
+relative oxygenation rate.
+
+Water stress can close stomata and reduce CO2 supply. Net uptake may decline
+despite bright light. Later limitations may involve metabolism or tissue
+damage. A lower measured rate alone cannot identify stomatal, photochemical
+or biochemical limitation. It is an integrated outcome requiring more evidence.
+
+## C3, C4 and CAM change carbon delivery
+
+In C3 plants, initial Rubisco products are three-carbon compounds. C4 plants
+first capture inorganic carbon through PEP carboxylase into four-carbon
+compounds. In the common two-cell arrangement, these compounds release CO2
+near Rubisco in bundle-sheath cells. Concentrating CO2 can suppress
+photorespiration but costs additional energy. Warm, bright conditions often
+favour this strategy; it is not universally superior.
+
+CAM plants commonly take up CO2 at night and store carbon in organic acids,
+then release it for fixation during the day. Separating these steps in time
+can reduce water loss. Storage and rate constraints remain. C4 and CAM deliver
+concentrated CO2 to the Calvin–Benson cycle rather than replacing it.
+
+Predict different evidence for each hypothesis. A nocturnal rise in acid
+content informs a CAM hypothesis; anatomy and gas-exchange responses inform
+a C4 hypothesis. A single observation may not establish the entire pathway.
+Some species show intermediate or flexible behaviour.
+
+## A response curve describes a balance
+
+Net CO2 exchange balances uptake and release under the measurement conditions.
+At low light, increased irradiance can increase net uptake. The light
+compensation point is the condition at which uptake and release balance.
+At greater light, CO2 supply, biochemical capacity or another process can
+become limiting. Excess excitation can be dissipated protectively; damage
+exceeding repair can cause photoinhibition.
+
+Imagine invented net rates of −2, 0, 6 and 9 µmol CO2 m⁻² s⁻¹ at 0, 50,
+200 and 800 µmol photons m⁻² s⁻¹. Compensation is near the second observation.
+The smaller response per additional photon at high light does not prove which
+process limits it. Record temperature, CO2, humidity, leaf age and measurement
+order. Repeated conditions on one leaf are not separate independent plants.
+
+Pigment concentration, chlorophyll fluorescence and CO2 exchange measure
+different properties. Fluorescence informs photochemical behaviour, whereas
+net gas exchange includes additional processes. A greener leaf need not have
+proportionally greater carbon uptake.
+
+## Sources and sinks change with development
+
+A **source** exports assimilate; a **sink** imports it for use or storage.
+A mature illuminated leaf is commonly a source and a root or developing fruit
+a sink. A storage organ can become a source during regrowth. These are current
+carbon roles rather than immutable organ identities.
+
+Phloem loading raises solute content near a source, favouring water entry and
+pressure development. Unloading and carbon use at sinks help maintain a
+pressure difference driving bulk flow. Species differ in loading routes.
+Different tubes can carry assimilate in different directions, so phloem is
+not simply an exclusively downward counterpart to xylem.
+
+```{mermaid}
+flowchart LR
+  light[Illuminated mature leaf] --> suc[Sucrose loading]
+  suc --> pressure[Water entry and source pressure]
+  pressure --> flow[Phloem bulk flow]
+  flow --> young[Growing organs]
+  flow --> store[Storage organs]
+  store -->|During remobilisation| export[New source supplying growth]
+```
+
+This original schematic separates carbon roles from organ location. It omits
+many transport steps and does not imply that every species loads identically.
+
+Starch can bridge day and night. Storage, export and growth demand are
+regulated together; reduced sink demand can change source activity. Transport
+is not independent of flowering, seed filling or senescence.
+
+## Respiration supplies more than CO2
+
+Glycolysis, the tricarboxylic-acid cycle and mitochondrial electron transport
+connect carbohydrate breakdown to ATP and metabolic intermediates. Plants
+respire in light and darkness. Roots use carbon for uptake, maintenance and
+growth; leaves also require mitochondrial function. Respiration is not merely
+wasteful reversal of photosynthesis.
+
+When oxygen is restricted, oxidative ATP generation is limited. Fermentation
+can regenerate NAD+ and permit continued glycolysis, with much lower ATP yield
+than complete aerobic oxidation. Waterlogged roots can therefore develop
+energy and transport limitations despite well-lit leaves. Many seeds also use
+lipid reserves during establishment, connecting reserve mobilisation and
+organelle metabolism to developmental stage.
+
+Nitrate must be reduced before incorporation into organic nitrogen. Ammonium
+assimilation requires carbon skeletons and energy. Nutrient supply can alter
+photosynthetic capacity, while carbon supply can limit nutrient assimilation.
+Whole-plant budgets require both sides. More nitrogen cannot necessarily
+compensate for inadequate light or lack of oxygen at roots.
+
+For pathway introductions, consult
+[light-dependent reactions](https://openstax.org/books/biology-2e/pages/8-2-the-light-dependent-reactions-of-photosynthesis)
+and [carbon fixation](https://openstax.org/books/biology-2e/pages/8-3-using-light-energy-to-make-organic-molecules).
+The [exercise](exercise.qmd) and [self-check](quiz.qmd) connect these component
+processes to whole-plant explanations.

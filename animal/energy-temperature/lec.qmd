@@ -1,0 +1,119 @@
+---
+title: "A2 — Nutrition, energy and temperature"
+format:
+  revealjs:
+    theme: [simple, ../../theme.scss]
+    slide-number: true
+---
+
+## Equal food mass, unequal outcome?
+
+- Intake differs from absorption.
+- Energy supply differs from essential nutrient supply.
+- Expenditure, storage and reproduction share resources.
+
+## Trace the processes
+
+Ingestion → mechanical/chemical digestion → absorption → transport → metabolism.
+
+The gut lumen is not the internal environment.
+
+Undigested material lost in faeces differs from metabolic waste excretion.
+
+## Absorption depends on structure
+
+- Folds, villi and cell-surface projections increase area.
+- Epithelial transport crosses a selective barrier.
+- Blood and lymph remove absorbed materials.
+- A villus label alone does not explain the transport path.
+
+## Microbes change the food problem
+
+- Plant structural material can be difficult for host enzymes.
+- Microbial fermentation supplies usable products.
+- Foregut and hindgut locations change nutrient recovery.
+- Retention, passage rate and intake create trade-offs.
+
+## Define an energy budget
+
+In this course example:
+
+$$E_{\rm intake}=E_{\rm faeces}+E_{\rm excreted}+E_{\rm metabolic}+E_{\rm retained}.$$
+
+All terms refer to the same interval. State conventions and avoid double counting.
+
+## Calculate the retained balance
+
+150 kJ intake − 40 faeces − 10 excreted − 85 expenditure = **15 kJ retained**.
+
+If expenditure becomes 110 kJ, retention is **−10 kJ**.
+
+Energy accounting does not identify every nutrient limitation.
+
+## Energy is not power
+
+- Energy: J or kJ.
+- Power: J s⁻¹ = W.
+- Convert intervals before comparing rates.
+- ATP links fuel use to cellular processes.
+
+## Aerobic and anaerobic supply
+
+- Aerobic ATP production depends on oxygen delivery and fuel.
+- Anaerobic pathways contribute without immediate oxygen use.
+- One activity bout can use both.
+- Oxygen uptake is useful, but not every ATP flux at every instant.
+
+## A rate needs a measurement model
+
+0.10 L water × 0.40 mg L⁻¹ decline / 10 min = 0.0040 mg min⁻¹.
+
+Subtract an appropriate blank rate of 0.0010 mg min⁻¹:
+**0.0030 mg min⁻¹** apparent animal oxygen use.
+
+Supplied arithmetic example, not an animal-handling protocol.
+
+## Comparisons need context
+
+- Temperature, activity, feeding and acclimation can matter.
+- Repeated sensor readings are not new animals.
+- Dividing by mass does not remove every size effect.
+- Identify the independent organism/chamber arrangement.
+
+## Heat source and temperature variation
+
+- Ectothermy/endothermy concern major heat sources.
+- Poikilothermy/homeothermy concern temperature variability.
+- Ectotherms can regulate behaviourally.
+- Endotherms need not have perfectly constant temperature.
+
+## Describe a temperature effect
+
+$$Q_{10}=(R_2/R_1)^{10/(T_2-T_1)}.$$
+
+A rate rising from 2 to 4 between 10 and 20 °C gives $Q_{10}=2$.
+
+This describes the measured interval; it is not a universal extrapolation rule.
+
+## Cold can increase an endotherm's costs
+
+- Heat loss may require greater metabolic heat production.
+- Insulation, posture and blood flow alter exchange.
+- Cooling in heat can cost water.
+- State ambient and body temperature separately.
+
+## Warming can increase an ectotherm's rate
+
+- Body temperature often follows environmental change.
+- Rates may rise over a moderate range.
+- Performance eventually faces limits.
+- A similar oxygen-rate trend need not imply the same mechanism.
+
+## Explain the trade-off
+
+Compare a basking reptile and an insulated mammal in cool conditions.
+
+Where does heat come from? When is activity possible? What are food and water
+costs? What observations would test the explanation?
+
+[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)

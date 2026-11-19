@@ -1,0 +1,146 @@
+---
+title: "P2 — Water, minerals and transport"
+---
+
+## The question
+
+How does water reach a leaf several metres above soil, and why can salt make
+water harder to obtain from wet soil? Explain water potential, root uptake,
+xylem transport and stomatal regulation. Connect mineral nutrition to root and
+shoot function, using units and compartments carefully.
+
+## Water moves down a potential gradient
+
+**Water potential**, Ψ, expresses water's chemical potential relative to a
+reference in pressure units. Here we use megapascals, MPa. Net passive movement
+occurs from higher to lower potential when a pathway is available. Less-negative
+values are higher: −0.2 MPa exceeds −0.8 MPa. Total potential determines
+direction, not solute concentration alone when pressure differs.
+
+For a small hydrated-cell system we often simplify to:
+
+$$\Psi = \Psi_s + \Psi_p.$$
+
+Solute potential Ψs becomes more negative as dissolved-particle concentration
+increases. Ψp is pressure potential. A fuller account includes gravity and
+matric effects, important for tall plants, soil and drying tissues. Omitting
+them is a stated approximation for this small system.
+
+A cell with Ψs = −0.9 MPa and Ψp = +0.4 MPa has Ψ = −0.5 MPa. Surroundings
+at −0.2 MPa initially favour inward movement. As water enters, wall resistance
+can raise pressure and dilution can change solute potential. Initial values do
+not remain fixed. At equilibrium there is no net movement, although molecular
+exchange continues. Positive turgor can coexist with negative total Ψ.
+
+## Roots contain pathways and selective barriers
+
+Water crosses tissues by apoplastic, symplastic and transmembrane routes.
+Aquaporins increase membrane permeability in appropriate states; they do not
+pump water uphill. Permeability affects how readily movement occurs, while the
+potential difference explains passive direction.
+
+The endodermis surrounds the vascular region. Its Casparian strip restricts an
+uninterrupted wall-space route into the stele, helping ensure substances
+encounter selective membranes. Developing roots acquire additional barriers.
+Consequently, an entire root is not a uniform filter with constant permeability.
+
+Roots take up mineral ions through channels and carriers. Plasma-membrane
+proton pumps use ATP to establish electrochemical gradients. Coupling to those
+gradients can drive uptake of other solutes against their own gradients.
+This is distinct from actively pumping water. Root respiration supports many
+uptake processes, so waterlogging can impair mineral nutrition when oxygen is
+limited even though water is abundant.
+
+## Evaporation connects leaves to xylem tension
+
+Water evaporates from wet internal wall surfaces and vapour diffuses towards
+the atmosphere. Negative pressure can develop in the xylem water. Cohesion and
+adhesion help transmit tension through the conducting pathway. The
+**cohesion–tension mechanism** supports long-distance movement without a pump
+at each height.
+
+Xylem water columns can become discontinuous through cavitation and embolism.
+Hydraulic efficiency and vulnerability depend on conduit structure and
+conditions. Root pressure contributes in some situations but is not a general
+explanation for supplying tall transpiring tree crowns.
+
+```{mermaid}
+flowchart TB
+  soil[Soil water: relatively high potential] --> root[Root pathways and endodermis]
+  root --> xyl[Water-filled xylem under tension]
+  xyl --> wall[Wet leaf cell walls]
+  wall --> spaces[Leaf air spaces]
+  spaces --> stoma[Stomatal pore]
+  stoma --> air[Atmosphere: low water potential]
+  signal[Guard-cell signals] --> stoma
+```
+
+This original schematic represents a transpiring plant with a favourable
+soil-to-air gradient. Values and flow rates change with conditions. It shows
+neither all anatomical routes nor a guarantee of an intact water column.
+
+Transpiration depends on energy, humidity, air movement, temperature and leaf
+area. A larger vapour pressure deficit can favour water loss if conductance
+is maintained. A chamber changes the leaf environment. Document these factors
+before attributing a difference entirely to plant genotype or treatment.
+
+## Stomata regulate carbon gain and water loss
+
+A stoma is a pore bordered by guard cells. Ion transport changes guard-cell
+osmotic conditions, water movement and turgor; wall geometry converts these
+changes into pore movement. Light, CO2, water status and signals influence the
+response. Opening assists carbon acquisition while increasing vapour loss.
+Closing conserves water but can reduce carbon gain and evaporative cooling.
+
+Abscisic acid, ABA, participates in drought signalling and stomatal closure.
+It influences ion-channel activity and other cellular processes rather than
+physically plugging a pore. Channel responses and subsequent growth changes
+operate on different timescales. Cuticle, rooting depth, hydraulic conductance
+and leaf area also matter. Similar stomatal conductance therefore does not
+guarantee identical whole-plant water status.
+
+## Essential minerals have specific roles
+
+An essential element is required to complete the life cycle and has a role
+another element cannot simply replace. “Macro” and “micro” indicate typical
+required quantities rather than importance. Nitrogen contributes to amino
+acids and nucleotides; phosphorus to phosphorylated metabolites and nucleic
+acids; potassium to osmotic regulation and enzyme activity. Magnesium is part
+of chlorophyll, and iron participates in electron-transfer systems.
+
+A yellow leaf does not uniquely diagnose one deficiency. Age, symptom pattern,
+element mobility, root condition and pH all matter. A readily remobilised
+element may leave old tissues to support new growth, making old leaves useful
+diagnostic clues. Nevertheless, symptoms require verification. Excess can also
+be harmful, and total soil content is not the same as root availability.
+
+Mycorrhizal fungi can extend access to resources while receiving plant carbon.
+Nitrogen-fixing symbioses also connect resource acquisition to carbon supply.
+Benefits vary with host, partner and conditions. “Microbes improve growth” is
+an incomplete prediction unless the limiting resource and context are stated.
+
+## Drought and salinity have overlapping effects
+
+Drying soil lowers water availability and can reduce hydraulic connectivity.
+Salts lower solution potential and can cause ion toxicity or nutrient imbalance.
+Compatible-solute accumulation can contribute to osmotic adjustment but carries
+costs. Conserving water through closure can reduce carbon gain. A plant may
+survive a treatment without maintaining growth or reproduction.
+
+Consider soil at −0.1 MPa versus saline soil solution at −0.6 MPa. A root cell
+initially at −0.4 MPa has a favourable inward gradient in the first setting
+and an outward one in the second, all else equal. Real compartments respond.
+The calculation identifies the initial challenge rather than final yield.
+
+## Match measurement and claim
+
+A pot loses water through soil evaporation as well as transpiration. A soil
+cover or appropriate unplanted control can help distinguish them. Five leaves
+from one pot do not supply five independent pots when watering was assigned
+to pots. Describe measurements at their actual level before choosing an
+analysis. Advanced statistics cannot manufacture independent treatment units.
+
+For the potential terms and transport routes, see
+[OpenStax's transport introduction](https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants).
+The [exercise](exercise.qmd) applies these ideas to invented observations.
+Use the [self-check](quiz.qmd) before [P3](../carbon-metabolism/index.qmd).

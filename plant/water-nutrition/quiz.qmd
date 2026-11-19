@@ -1,0 +1,65 @@
+---
+title: "P2 — Water and nutrition self-check"
+---
+
+Answer before opening the explanations. Explain one mechanism aloud and revisit
+the [tutorial](index.qmd) if you can recall a term but cannot connect its steps.
+
+## 1. Which potential is higher: −0.2 or −0.8 MPa?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+−0.2 MPa. Net passive movement tends towards lower total potential if a pathway is available.
+:::
+
+## 2. Calculate Ψ for Ψs = −1.0 MPa and Ψp = +0.6 MPa.
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+−0.4 MPa, using the stated two-term approximation. Positive pressure and negative total potential can coexist.
+:::
+
+## 3. Do aquaporins pump water?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. They affect permeability; water still moves passively according to the potential difference.
+:::
+
+## 4. Why can waterlogging impair nutrient uptake?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+Low oxygen can restrict root respiration and ATP supply, impairing energy-dependent transport and other functions.
+:::
+
+## 5. Does stomatal closure improve every aspect of performance?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. It can conserve water while restricting CO2 entry and evaporative cooling. Outcomes depend on conditions and timescale.
+:::
+
+## 6. Are ten leaves from one treated tray ten independent treatment replicates?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Shared tray treatment can confound treatment with tray conditions; within-tray leaves are subsamples.
+:::
+
+## 7. Does yellowing uniquely identify nitrogen deficiency?
+
+::: {.callout-note collapse="true"}
+## Explanation
+
+No. Ageing, other deficiencies, damage and environmental stress can cause similar observations. Context and measurements matter.
+:::
+
+Compare your reasoning with the [exercise](exercise.qmd). Correct an explanation
+rather than recording only a score.

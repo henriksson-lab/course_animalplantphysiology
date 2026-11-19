@@ -1,0 +1,9 @@
+pot_id,air_treatment,initial_mass_g,final_mass_g,leaf_area_cm2,duration_min,blank_loss_g
+W01,still,121,120.2,50,30,0.1
+W02,still,122,121,50,30,0.1
+W03,still,123,121.8,50,30,0.1
+W04,still,124,123,50,30,0.1
+W05,moving,125,123.4,50,30,0.1
+W06,moving,126,124,50,30,0.1
+W07,moving,127,124.6,50,30,0.1
+W08,moving,128,126,50,30,0.1
