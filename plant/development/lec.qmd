@@ -1,5 +1,6 @@
 ---
-title: P4 — Developmental signals
+title: "P4 — Signals, growth and reproduction"
+subtitle: "Week 9 — How a plant decides what to build, and when"
 format:
   revealjs:
     theme:
@@ -20,74 +21,421 @@ format:
 author: Animal and Plant Physiology
 ---
 
-## How does a cue change an organ?
+## About this lecture
 
-Cue → receptor → cellular changes → development.
+By the end of P3 our plant has water, minerals and sugar. But a plant cannot
+move. It must decide **when** to germinate, **which way** to grow, **whether**
+to branch, **when** to flower and **when** to let a leaf die, using only what
+it can sense where it stands. **How does a plant turn light, gravity and
+season into these decisions?** Today we follow one plant from seed to
+senescence and ask, at each stage, which signal is in charge.
 
-Locate the evidence along the chain.
+- **Signals:** the chain from cue to response, and the main plant hormones.
+- **Seed:** dormancy, germination and the ABA : gibberellin balance.
+- **Light as information:** photoreceptors, and phytochrome as a red/far-red switch.
+- **Growing the right way:** phototropism, gravitropism and apical dominance.
+- **Flowering:** day length, night breaks, florigen and vernalisation.
+- **The end of the cycle:** double fertilisation and senescence.
 
-## Different timescales
+::: notes
+Frame the lecture as a life cycle: seed, seedling, shoot, flower, seed again, and finally an ageing leaf. At each stage the plant makes a decision, and the question is always the same: what does it sense, what carries the signal, and what does the signal change? Link back to P3: carbon and nutrients are the raw material; today is about the control of how that material is used. P5 then uses the same signalling machinery for stress and defence.
+:::
 
-Existing protein activity can change rapidly.
+## From cue to response
 
-Gene expression and tissue development can add slower responses.
+```{mermaid}
+flowchart LR
+  cue[Cue: light, gravity,<br/>temperature, hormone] --> rec[Receptor]
+  rec --> trans[Signal transduction]
+  trans --> fast[Fast: ion fluxes,<br/>protein activity]
+  trans --> slow[Slow: gene<br/>expression]
+  fast --> resp[Cell growth,<br/>division, death]
+  slow --> resp
+```
 
-## Hormones interact
+- Every response needs a **receptor**. A cue the plant cannot perceive has no effect.
+- **Fast** responses (seconds to minutes) modify existing proteins: stomata
+  closing, a pulvinus folding.
+- **Slow** responses (hours to weeks) change gene expression: a flower forming.
+- The same signal can give different responses in different tissues.
 
-One signal can affect several processes.
+**Many of the signals inside the plant are hormones. Which ones?**
 
-Outcome depends on tissue, dose, transport, sensitivity and state.
+::: notes
+This is the framework for every example in the lecture: whenever we meet a response, ask what the cue is, what the receptor is, and whether the change is in existing proteins or in gene expression. Point out the last bullet: auxin promotes elongation in shoots but inhibits it in roots at the same concentration, so the response depends on the responding cell, not only on the signal. The next slide lists the hormones.
+:::
 
-## Light is information
+## The plant hormones
 
-Phytochromes: red/far-red.
+| Hormone | Made in / moves by | Main effects | Example |
+| --- | --- | --- | --- |
+| **Auxin** (IAA) | Shoot apex, young leaves; **polar transport** downwards | Cell elongation, tropisms, apical dominance, root initiation | Rooting powder for cuttings |
+| **Cytokinin** | Mainly roots; xylem | Cell division, bud outgrowth, **delays senescence** | Leaf discs stay green |
+| **Gibberellin** (GA) | Young tissues, embryo | Stem elongation, bolting, **breaks seed dormancy** | Tall vs dwarf pea (Mendel) |
+| **Abscisic acid** (ABA) | Leaves and roots under water deficit | **Stomatal closure**, seed **dormancy** | Seeds stay dormant in the fruit |
+| **Ethylene** | Most tissues; a **gas** | **Climacteric fruit ripening**, abscission, triple response | One ripe banana ripens the rest |
+| **Brassinosteroids** | Most tissues | Cell expansion | Mutants are dark-green dwarfs |
+| **Strigolactones** | Roots | Inhibit bud outgrowth | Mutants are bushy |
 
-Cryptochromes/phototropins: blue-light responses. Energy supply is a separate question.
+Jasmonic acid and salicylic acid control defence; we meet them in P5.
 
-## Directional growth
+::: notes
+Students must be able to match hormone and effect (exercise 1.1). Go through the example column, because concrete cases are easier to recall than lists: rooting powder is synthetic auxin; ethylene from one ripe fruit triggers ripening in its neighbours in climacteric fruits such as banana, tomato and apple, but not in non-climacteric fruits such as citrus or grape. Strigolactones are included because they appear on the apical dominance slide. Transition: how do we find out what a hormone does? Mostly from mutants.
+:::
 
-Perception → asymmetric response → curvature.
+## Reading a hormone mutant
 
-Control gravity, handling and general vigour before inferring a mechanism.
+**Spray gibberellin on two dwarf pea mutants:**
 
-## Dormancy or quiescence?
+| Mutant | Response to GA | Defect |
+| --- | --- | --- |
+| A | Grows to normal height | **Biosynthesis**: cannot make GA (Mendel's *le* dwarf) |
+| B | Stays dwarf | **Perception or signalling**: cannot respond to GA |
 
-Dormancy: viable seed held from germination despite otherwise suitable conditions.
+**Ethylene and dark-grown seedlings: the triple response**
 
-Quiescence: external conditions unsuitable.
+- Wild type + ethylene: **short, thick hypocotyl** and an **exaggerated apical hook**.
+- *etr1* (ethylene receptor mutant) + ethylene: **long, thin hypocotyl**, normal hook.
+  The hormone is present, but the receptor cannot pass on the signal.
 
-## Count at a defined time
+**Rule:** if adding the hormone rescues the mutant, the defect is in making it.
 
-18 of 24 seeds = 75% by the observation time.
+::: notes
+This is the logic of hormone genetics and appears in exercises 1.4 and 1.5. A biosynthesis mutant is rescued by the hormone; a receptor or signalling mutant is not. The Green Revolution semi-dwarf wheats (Rht genes) are GA-insensitive, which is the second class. The triple response screen found the ethylene receptor ETR1: mutants that ignore ethylene look like untreated seedlings. Transition: we start the life cycle, with the seed, where two of these hormones are in direct opposition.
+:::
 
-Non-germinated does not necessarily mean dead.
+## The seed: dormant or just waiting?
 
-## Vegetative regulation
+| | **Quiescent** | **Dormant** |
+| --- | --- | --- |
+| Definition | Will germinate as soon as conditions allow | Will not germinate even in water, O₂ and warmth |
+| Example | Dry seeds in a packet; seeds in dry soil | Fresh seeds that need months of dry storage |
+| Released by | Water | **After-ripening** (dry storage), **stratification** (moist cold), light |
 
-Meristem activity, expansion, branching and allocation interact.
+- **ABA maintains dormancy; gibberellin promotes germination.** The balance decides.
+- ABA-deficient maize mutants show **vivipary**: seeds germinate on the cob.
+- GA-deficient mutants do not germinate unless GA is supplied.
+- Germination (radicle emergence) is scored at a stated time: 12 of 20 seeds by
+  day 5 = **60%**.
 
-Apex removal changes more than one variable.
+::: notes
+Dormancy is an internal block; quiescence is only a lack of water or warmth. Stratification is why many temperate seeds germinate in spring after a winter in moist soil, not in autumn. The two mutant phenotypes show the ABA : GA balance from both sides (exercise 4.2). The germination percentage needs a denominator and a time point (exercise 4.3); non-germinated seeds may be dormant, slow or dead. Transition: once germination starts, what does gibberellin actually do in the seed?
+:::
 
-## Flowering integrates cues
+## Germination: gibberellin mobilises the reserves
 
-Age, carbon status, temperature and light timing contribute.
+```{mermaid}
+flowchart LR
+  E[Embryo releases GA] --> A[Aleurone layer:<br/>α-amylase gene on]
+  A --> S[α-amylase secreted<br/>into endosperm]
+  S --> H[Starch → sugars]
+  H --> U[Scutellum absorbs<br/>sugars → embryo]
+```
 
-Vernalisation is not a universal instant flowering trigger.
+- In a barley grain the starchy **endosperm is dead tissue**. The living
+  **aleurone layer** around it makes the enzymes.
+- The embryo signals with **GA**; the aleurone responds by **transcribing** α-amylase.
+- **ABA blocks** this response, so a dormant grain keeps its reserves.
+- The malting industry uses exactly this: barley is germinated, with added GA,
+  to produce sugar for brewing.
 
-## A mobile signal example
+**But many small seeds also check something outside: is there light?**
 
-Arabidopsis FT protein links leaf and shoot-apex activity.
+::: notes
+This is the best-understood hormone response in a seed and is the order asked in exercise 1.3: GA from embryo, induction in the aleurone, secretion, hydrolysis, uptake via the scutellum. It is also a clear example of a slow, gene-expression response from the first slide. ABA antagonism ties back to the ABA : GA balance. Transition: small seeds such as lettuce have few reserves and should only germinate near the surface, which they detect with light.
+:::
 
-[Primary study](https://pubmed.ncbi.nlm.nih.gov/17446353/): distinguish expression, movement and response.
+## Light is information as well as energy
 
-## Reproduction has stages
+| Photoreceptor | Light absorbed | Example responses |
+| --- | --- | --- |
+| **Phytochrome** | Red / far-red | Seed germination, shade avoidance, photoperiod |
+| **Cryptochrome** | Blue / UV-A | Inhibits hypocotyl elongation; entrains the circadian clock |
+| **Phototropin** | Blue / UV-A | **Phototropism**, chloroplast movement, stomatal opening |
+| **UVR8** | UV-B | UV-protective responses (e.g. flavonoid sunscreens) |
 
-Flower formation → pollination → fertilisation → seed development.
+- A seedling responds to a light flash far too dim to support photosynthesis.
+  These receptors read the **colour, direction and timing** of light.
+- A dark-grown seedling is **etiolated**: long, pale, hooked. Light triggers
+  **de-etiolation**: the hook opens, leaves expand, chlorophyll forms.
 
-Equal flower counts need not mean equal viable seed output.
+**The red/far-red receptor is the key to germination and to flowering. How does it work?**
 
-## Ageing requires context
+::: notes
+Distinguish light as energy (P3) from light as a signal. The match between photoreceptor, wavelength and response is exercise 3.4. Etiolation is a strategy: a buried seedling puts all its reserves into elongation until it reaches light. Phytochrome gets the next three slides because it underlies germination, shade avoidance and the night-break experiments in flowering.
+:::
 
-Senescence can remobilise resources. Yellowing alone cannot distinguish it from stress.
+## Phytochrome: a red/far-red switch
 
-[Exercise](exercise.qmd) and [self-check](quiz.qmd).
+| | **Pr** | **Pfr** |
+| --- | --- | --- |
+| Absorbs | Red, ~660 nm | Far-red, ~730 nm |
+| Converted by light to | Pfr | Pr |
+| Biologically active? | No | **Yes** |
+| Synthesised as? | **Yes** | No |
+
+- Red light → mostly **Pfr** (active). Far-red light → mostly **Pr** (inactive).
+- The conversion is **photoreversible**: the last light treatment decides the state.
+- Active Pfr moves into the **nucleus** and changes gene expression.
+- In darkness, Pfr slowly reverts or is degraded, so the Pfr level falls overnight.
+
+::: notes
+Students should be able to fill this table from memory (exercise 3.1). The key idea is a switch with two stable states, each converted to the other by the light it absorbs. Phytochrome is made as inactive Pr, which is why a seed in darkness has no active phytochrome. The last bullet matters for photoperiod: the plant can use the decline in Pfr during the night. The next slide shows the classic experiment that proved photoreversibility.
+:::
+
+## The lettuce seed experiment
+
+Imbibed lettuce seeds, brief light flashes, then darkness:
+
+| Flash sequence | Last flash | Phytochrome | Germinate? |
+| --- | --- | --- | --- |
+| Dark only | none | Pr | No |
+| R | R | Pfr | **Yes** |
+| R → FR | FR | Pr | No |
+| R → FR → R | R | Pfr | **Yes** |
+| R → FR → R → FR | FR | Pr | No |
+
+- **The last flash decides.** This photoreversibility identified phytochrome
+  (Borthwick and Hendricks, 1950s).
+- Why it matters: a buried seed sees no light and stays dormant until the soil is disturbed.
+
+**Light under a canopy has a different colour. What does phytochrome tell the plant there?**
+
+::: notes
+Work the sequence column by column; exercise 3.2 extends it to five flashes. The ecological meaning: small-seeded weeds germinate after ploughing because the soil is turned and seeds get a flash of light. Transition to shade: phytochrome does not just detect light versus dark, it detects the ratio of red to far-red.
+:::
+
+## Shade avoidance
+
+- Chlorophyll **absorbs red** light but **transmits and reflects far-red**.
+- Under a canopy, the **red : far-red ratio falls** (sunlight ~1.2; deep shade ~0.2).
+- Less red → **less Pfr**. The plant reads this as "neighbours above me".
+
+| Shade-avoidance response | Benefit |
+| --- | --- |
+| Faster stem and petiole elongation | Leaves reach light before the competitor's |
+| Leaves angled upwards | Less self-shading |
+| Less branching | Resources go into height |
+| Earlier flowering | Seeds are set before resources run out |
+
+- The cost: thin, weak stems and less root growth. Dense crops lose yield to this.
+
+::: notes
+Exercise 3.3. Emphasise that the plant responds to reflected far-red from neighbours even before it is actually shaded, which is an early warning. The cost row connects to agriculture: crop breeders have selected plants with weaker shade avoidance to allow dense planting. Transition: phytochrome reads colour; the direction of light is read by a different receptor and causes the shoot to bend.
+:::
+
+## Phototropism: bending towards light
+
+| Coleoptile treatment, lit from one side | Bends? |
+| --- | --- |
+| Untreated | **Yes** |
+| Tip removed, or covered with an opaque cap | No |
+| Tip in a transparent cap | **Yes** |
+| Opaque collar below the tip, tip exposed | **Yes** |
+| Tip cut off and replaced on a gelatin block | **Yes** |
+
+- **Light is perceived at the tip**, by **phototropin** (blue light).
+- A diffusible signal, **auxin**, moves down to the growing zone.
+- **Cholodny–Went model:** auxin is moved to the **shaded side**; cells there
+  elongate faster, so the shoot bends **towards** the light.
+
+::: notes
+The table summarises Darwin (1880, caps and collars) and Boysen-Jensen (1913, gelatin block); Went (1928) then collected the signal in agar blocks and named it auxin. Each row asks: where is light perceived, and can the signal pass through gelatin? This is exercises 2.1 and 2.2. Transition: the same auxin redistribution explains a response to gravity, but in roots auxin has the opposite effect.
+:::
+
+## Gravitropism: the root grows down
+
+:::: {.columns}
+::: {.column width="50%"}
+**Root turned horizontal:**
+
+1. **Columella cells** of the root cap perceive gravity.
+2. Starch-filled **amyloplasts** (statoliths) sediment to the lower side.
+3. Auxin is redirected to the **lower side** of the root.
+4. In roots, high auxin **inhibits** elongation.
+5. The upper side grows faster: the root bends **down**.
+:::
+::: {.column width="50%"}
+**Shoot turned horizontal:**
+
+- Auxin also accumulates on the **lower side**.
+- In shoots, auxin **promotes** elongation.
+- The lower side grows faster: the shoot bends **up**.
+
+Same signal, same redistribution, opposite outcome: the response depends on
+the **tissue's sensitivity** to auxin.
+:::
+::::
+
+::: notes
+Exercise 2.3. The root cap is the sensor: remove it and the root still grows but no longer bends. The contrast between root and shoot is the clearest demonstration of the first slide's point that the response depends on the responding tissue. Transition: auxin flowing down the shoot also decides whether side branches grow.
+:::
+
+## Apical dominance: should the plant branch?
+
+| Pea shoot treatment | Lateral buds |
+| --- | --- |
+| Intact | Inhibited |
+| Apex removed | **Grow out** |
+| Apex removed + auxin paste on stump | Inhibited |
+| Apex removed + plain lanolin on stump | **Grow out** |
+| Intact + cytokinin on a bud | **Grows out** |
+
+- Auxin from the apex **replaces the apex** (Thimann and Skoog, 1934).
+- Auxin does **not enter the bud**. It acts indirectly: it lowers **cytokinin**
+  supply to the bud and raises **strigolactone** synthesis.
+- Gardeners use this: pinching out the tip makes a bushier plant.
+
+**The shoot is now built. When does it stop making leaves and make flowers?**
+
+::: notes
+Exercise 1.2. The lanolin-only control is essential: it shows that the paste itself does nothing, so the effect is due to auxin. The indirect mechanism is the modern view; the old idea that auxin enters the bud and inhibits it directly does not fit the transport data. Transition to flowering: the biggest developmental decision of an annual plant.
+:::
+
+## Flowering: measuring the night
+
+- **Short-day plants (SDP)** flower when the night is **longer** than a
+  critical night length (chrysanthemum, soybean, poinsettia).
+- **Long-day plants (LDP)** flower when the night is **shorter** than it
+  (Arabidopsis, spinach, wheat).
+- What the plant measures is the **uninterrupted dark period**.
+
+Critical night length 11 h:
+
+| 24 h cycle | Longest dark period | SDP | LDP |
+| --- | --- | --- | --- |
+| 16 h light / 8 h dark | 8 h | No | **Yes** |
+| 8 h light / 16 h dark | 16 h | **Yes** | No |
+| 8 h light (with 1 h dark in the middle) / 16 h dark | 16 h | **Yes** | No |
+
+**What happens if we interrupt the night instead of the day?**
+
+::: notes
+The names are historical: they refer to day length, but experiments showed that night length is what is measured. The third row shows that darkness during the day does nothing, because the night is unchanged. Exercise 5.1 uses exactly this setup. Transition: a brief light flash in the middle of the night has a large effect, and the colour of that flash tells us which receptor reads the night.
+:::
+
+## Night breaks reveal phytochrome
+
+8 h light / 16 h dark, with a brief flash in the middle of the night:
+
+| Night break | Phytochrome after flash | Longest dark period (as perceived) | SDP | LDP |
+| --- | --- | --- | --- | --- |
+| None | — | 16 h | **Yes** | No |
+| Red | Pfr | 8 h | No | **Yes** |
+| Red → far-red | Pr | 16 h | **Yes** | No |
+
+- A few minutes of red light **splits a long night into two short ones**.
+- Far-red immediately after **reverses** the red effect, so phytochrome is the receptor.
+- Commercial use: growers light chrysanthemums at night to delay flowering
+  until the market wants them.
+
+::: notes
+Exercise 5.1 c and d. Connect to the lettuce seed slide: the same last-flash rule, applied to a night instead of a seed. Students often think the red flash adds "day"; stress that it only matters because it breaks the dark period. Transition: day length is measured in the leaves, but flowers form at the shoot apex. How does the message get there?
+:::
+
+## Florigen: a protein from leaf to apex
+
+```{mermaid}
+flowchart LR
+  L[Leaf senses long days:<br/>CONSTANS → FT gene on] --> P[FT protein moves<br/>in the phloem]
+  P --> M[Shoot apical meristem:<br/>FT + FD]
+  M --> F[Floral meristem identity<br/>genes on → flower]
+```
+
+- Grafting experiments in the 1930s showed that an induced leaf sends a
+  signal, named **florigen**.
+- In Arabidopsis, florigen is the protein **FLOWERING LOCUS T (FT)**.
+  FT tagged with GFP is made in leaves and found at the apex (Corbesier et al., 2007).
+- The **leaf perceives**, the **phloem transports**, the **apex responds**.
+
+::: notes
+Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells only when long days give light at the end of the day, which is how day length is converted into a molecular signal. FT is small enough to move through plasmodesmata into sieve tubes and travels with the assimilate flow from P3. At the apex it pairs with the transcription factor FD to switch on floral identity genes such as APETALA1. Transition: some plants need a second condition before they can respond to day length, namely a winter.
+:::
+
+## Vernalisation: remembering winter
+
+- **Vernalisation:** prolonged cold (weeks at ~0–10 °C) gives the
+  **competence** to flower. Examples: winter wheat, winter-annual Arabidopsis.
+- The plant does **not** flower in the cold. It flowers later, in warm, long days.
+- The cold is perceived by the **shoot apex**.
+- In Arabidopsis, cold **represses *FLC***, a repressor of flowering. *FLC* stays
+  off through later cell divisions: an epigenetic memory of winter.
+- The memory is **reset** in each generation: seeds need cold again.
+
+| Plant | Cold received | Outcome in spring long days |
+| --- | --- | --- |
+| Winter wheat sown in autumn | Yes | Flowers, sets grain |
+| Winter wheat sown in spring | No | Stays vegetative |
+
+::: notes
+Exercise 5.3 is a true/false set on these bullets; the common misconceptions are that cold triggers flowering directly and that the vernalised state is inherited. The point of vernalisation is to prevent flowering in autumn, when days are short in the run-up to winter; flowering waits for the spring after a winter has passed. Transition: once the flower opens and is pollinated, the next generation begins.
+:::
+
+## Double fertilisation: building the seed
+
+| Structure | Formed from | Ploidy |
+| --- | --- | --- |
+| **Zygote** → embryo | Sperm cell 1 + egg cell | 2n |
+| **Endosperm** | Sperm cell 2 + central cell (two polar nuclei) | 3n |
+| **Seed coat** | Integuments of the ovule (maternal) | 2n |
+| **Fruit wall** (pericarp) | Ovary wall (maternal) | 2n |
+
+- The pollen tube delivers **two sperm cells**; both fertilise: **double fertilisation**.
+- The endosperm is the food store we met in the barley grain.
+- The seed coat and fruit are **maternal tissue**, not the next generation.
+- Developing seeds are strong **sinks** (P3): they draw sugar and nutrients from the leaves.
+
+**Where do those nutrients come from at the end of the season?**
+
+::: notes
+Exercise 5.4. Close the loop to the start of the lecture: the endosperm made here is the starch store mobilised by gibberellin in the next generation. The ploidy column is the usual exam check. The sink bullet links back to phloem transport in P3 and leads into senescence: the old leaves become the nutrient source for the seeds.
+:::
+
+## Senescence: recycling the leaf
+
+- **Senescence** is a regulated, programmed process, not passive decay.
+- Chlorophyll and proteins (including Rubisco) are broken down first, so the leaf yellows.
+- Nutrients are **remobilised** through the **phloem** to seeds and young leaves.
+
+- **N, P and K** are phloem-mobile and are exported. **Ca** is phloem-immobile
+  and stays in the leaf.
+
+| Hormone | Effect on senescence |
+| --- | --- |
+| **Cytokinin** | **Delays** it |
+| Ethylene, ABA, jasmonic acid | **Promote** it |
+
+- Tobacco expressing a cytokinin-synthesis gene from a senescence promoter keeps
+  its leaves green much longer (Gan and Amasino, 1995).
+
+::: notes
+Exercise 6.1. The phloem-mobility rule comes from P2: calcium moves in the xylem only, so it cannot be exported from an old leaf, and calcium deficiency appears in young tissue. A yellow leaf alone does not show senescence; deficiency or stress also yields yellowing, so tissue age and growth conditions must be known. The Gan and Amasino experiment is a neat feedback loop: senescence switches on cytokinin production, which delays senescence. It also introduces the idea of a stage-specific promoter, which returns in P5.
+:::
+
+## Summary {.smaller}
+
+| Concept | Key fact |
+| --- | --- |
+| Signal chain | cue → receptor → transduction → fast (protein) or slow (gene expression) response |
+| Hormones | auxin, cytokinin, GA, ABA, ethylene, brassinosteroids, strigolactones |
+| Hormone mutants | rescued by the hormone → biosynthesis defect; not rescued → perception/signalling |
+| Dormancy | ABA maintains it; GA breaks it; quiescence is only lack of water or warmth |
+| Barley aleurone | GA → α-amylase → starch to sugar; ABA blocks |
+| Phytochrome | Pr (660 nm) ⇄ Pfr (730 nm); Pfr active; last flash decides |
+| Shade avoidance | low R:FR → less Pfr → elongation, earlier flowering |
+| Tropisms | auxin to the shaded / lower side; promotes shoot, inhibits root elongation |
+| Apical dominance | apical auxin lowers cytokinin, raises strigolactone at buds |
+| Photoperiod | plants measure the uninterrupted night; a red night break splits it |
+| Florigen | FT protein: leaf → phloem → apex |
+| Vernalisation | cold represses *FLC*; competence, not flowering; reset each generation |
+| Senescence | cytokinin delays; N, P, K remobilised via phloem; Ca stays |
+
+**Next (P5 — Stress, defence and biotechnology):** the same signals, ABA,
+jasmonic acid and salicylic acid among them, let a plant survive drought,
+salt and attack. And knowing the genes lets us change them.
+
+[Tutorial](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+
+::: notes
+Read the table as the life cycle: signal framework and hormones, then seed, seedling, growth direction, branching, flowering, the next seed and the ageing leaf. P5 reuses three ideas from today: ABA as a water-stress signal, hormone pathways as switches that can be turned on by an attacker, and promoters that express a gene in one tissue or condition.
+:::

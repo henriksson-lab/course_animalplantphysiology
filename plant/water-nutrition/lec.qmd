@@ -1,5 +1,6 @@
 ---
-title: P2 — Water and nutrition
+title: "P2 — Water, minerals and transport"
+subtitle: "Week 7 — How water and minerals enter and move through a plant"
 format:
   revealjs:
     theme:
@@ -20,74 +21,509 @@ format:
 author: Animal and Plant Physiology
 ---
 
-## Why can wet salty soil be difficult?
+## About this lecture
 
-Water access depends on potential, pathways and regulation.
+The tallest living tree, a coast redwood, is 115 m high. Water climbs from
+its roots to its top leaves every day, and there is no heart anywhere in the
+tree. Yet a tomato plant standing in wet, salty soil can wilt as if the soil
+were dry. **What moves water through a plant, and why does wet soil not
+guarantee water?** In P1 we built the plant: walled cells with turgor,
+apoplast and symplast, root hairs and endodermis, xylem and stomata. Today
+we make water and minerals flow through it.
 
-Wetness alone is insufficient.
+- **Water potential:** one quantity, Ψ, that predicts the direction of water
+  movement, and how to calculate it.
+- **Into the root:** three routes, the endodermis, and the energy cost of
+  taking up ions.
+- **Up the xylem:** cohesion–tension, driven by evaporation from the leaf.
+- **Out of the leaf:** measuring transpiration, and how stomata regulate it.
+- **Minerals:** which elements a plant needs, what they do, and partners in
+  the soil.
 
-## Direction uses total potential
+::: notes
+The running example is the path of one water molecule from the soil to the air: soil, root, xylem, leaf, stomatal pore, atmosphere. Every section of the lecture is one stage of that path, plus the minerals that travel with the water. The salty-soil question is answered with a water-potential calculation halfway through, and the redwood question with cohesion–tension.
+:::
 
-Water tends from higher to lower Ψ.
+## The problem: water in, water out
 
-−0.2 MPa is higher than −0.8 MPa.
+- A plant loses **~500 water molecules for every CO₂ molecule it fixes**.
+  Of the water a plant takes up, **~97 %** evaporates from its leaves.
+- A maize plant transpires ~200 L over a growing season.
+- The water has to travel from soil to leaf: up to **100 m** in a tall tree,
+  far beyond the reach of diffusion (A1: ~7 h for 1 cm).
+- So, as in an animal, long distances need **bulk flow**. But the plant has
+  no pump.
 
-## State the approximation
+**Before asking how water moves, we need a rule for which way it moves.**
 
-For the small cell examples: Ψ = Ψs + Ψp.
+::: notes
+Start with the numbers so students see that water transport in a plant is a huge flux, not a trickle. The water loss is the price of opening stomata to let CO₂ in (P1, leaf slide). Link back to the A1 diffusion table: bulk flow is required. The puzzle is the energy source. The next slides give the rule for direction: water potential.
+:::
 
-Gravity and matric effects matter in other settings.
+## Water potential: which way water moves
 
-## Work one cell
+:::: {.columns}
+::: {.column width="50%"}
+- **Water potential (Ψ):** the free energy of water per unit volume,
+  relative to **pure water at atmospheric pressure**, which has **Ψ = 0**.
+- Unit: **megapascal** (MPa). 1 MPa = 10 bar ≈ 10 atm.
+- Water moves passively from **higher** to **lower** Ψ.
+- In plants Ψ is almost always **negative**, so "higher" means **less
+  negative**.
+:::
+::: {.column width="50%"}
+Highest to lowest:
 
-Ψs = −0.9 MPa; Ψp = +0.4 MPa.
+| Ψ (MPa) | |
+| ---: | --- |
+| 0 | pure water |
+| −0.2 | wet soil |
+| −0.8 | leaf cell |
+| −1.5 | dry soil |
 
-Total = −0.5 MPa. Water initially enters from surroundings at −0.2 MPa.
+Water flows **down** this list.
+:::
+::::
 
-## Routes and barriers
+**What makes Ψ negative, and what can make it rise?**
 
-Apoplast, symplast and transmembrane movement.
+::: notes
+Exercises 1.1 and 1.2. The sign convention trips students up: −0.2 is higher than −0.8. Use the analogy of water flowing downhill, where "downhill" means towards more negative Ψ. The table is a preview of the soil-to-leaf gradient that we build up across the lecture.
+:::
 
-The endodermal barrier restricts an unrestricted wall-space route into the stele.
+## The components of Ψ
 
-## Transport energy
+$$\Psi = \Psi_s + \Psi_p \quad (+\,\Psi_g)$$
 
-ATP-driven proton pumps establish gradients.
+| Component | Name | Sign | Cause |
+| --- | --- | --- | --- |
+| $\Psi_s$ | **solute (osmotic) potential** | always ≤ 0 | dissolved solutes lower the free energy of water |
+| $\Psi_p$ | **pressure potential** | + in turgid cells; − in transpiring xylem | hydrostatic pressure: turgor (P1), or tension |
+| $\Psi_g$ | gravitational potential | + with height | +0.01 MPa per metre |
 
-Coupled carriers can use them. Aquaporins alter permeability, not passive direction.
+- For a single cell, gravity is negligible: use $\Psi = \Psi_s + \Psi_p$.
+- Gravity matters in a tree: lifting water 100 m costs 1 MPa.
+- In dry soil, binding of water to surfaces (matric potential) also lowers Ψ.
 
-## Cohesion and tension
+**How negative is Ψs for a real solution?**
 
-Evaporation links leaf water to negative pressure in xylem.
+::: notes
+Two components do almost all the work in cells: solutes pull Ψ down, pressure pushes it up. Turgor from P1 is now a number: Ψp. Point out that Ψp can be negative too, in the xylem of a transpiring plant, which is the key to cohesion–tension later. Gravity is introduced so students know when it can be dropped. Matric potential is mentioned only so students recognise the term.
+:::
 
-Conduit structure matters; embolism can disrupt transport.
+## Solute potential: Ψs = −cRT
 
-## Stomatal regulation
+$$\Psi_s = -cRT \qquad R = 0.008314\ \text{L MPa mol}^{-1}\,\text{K}^{-1}$$
 
-Guard-cell transport → water movement/turgor → pore change.
+$c$ is the **osmolar** concentration: count every dissolved particle.
 
-CO2 access and vapour loss share a pathway.
+| Solution (25 °C, 298 K) | $c$ (osmol L⁻¹) | $\Psi_s$ |
+| --- | ---: | ---: |
+| 0.1 M sucrose | 0.1 | −0.1 × 0.008314 × 298 = **−0.25 MPa** |
+| 0.1 M NaCl (→ Na⁺ + Cl⁻) | 0.2 | **−0.50 MPa** |
+| Sea water | ~1.1 | ~**−2.7 MPa** |
 
-## ABA is a signal
+- At 25 °C, $RT \approx 2.48$ L MPa mol⁻¹: each 0.1 osmol L⁻¹ lowers Ψs by
+  ~0.25 MPa.
+- A salt that splits into two ions has **twice** the effect of a sugar at the
+  same molarity.
 
-Drought responses include channel regulation and later changes.
+**Now we can predict what happens to a cell placed in a solution.**
 
-A hormone is not a physical pore plug.
+::: notes
+Exercise 1.4 is the first two rows. Carry the units through on the board: mol L⁻¹ × L MPa mol⁻¹ K⁻¹ × K = MPa. The rule of thumb (0.1 osmol per litre ≈ −0.25 MPa) helps students check answers. Sea water shows why most crop plants cannot use it: their cells would need a Ψ below −2.7 MPa just to take up water.
+:::
 
-## Essential minerals
+## Two cells in the same solution
 
-Required amounts differ from importance.
+Both cells are placed in a solution with **Ψ = −0.4 MPa**.
 
-Symptoms depend on mobility, age, roots, pH and other stresses.
+| Cell | Ψs (MPa) | Ψp (MPa) | Ψ = Ψs + Ψp | Initial net water movement |
+| --- | ---: | ---: | ---: | --- |
+| A | −0.8 | +0.2 | **−0.6** | **into** the cell (−0.4 > −0.6) |
+| B | −0.7 | +0.5 | **−0.2** | **out of** the cell (−0.2 > −0.4) |
 
-## Measure the right loss
+- Cell B's Ψs (−0.7) is far below the solution's Ψ (−0.4), yet it **loses**
+  water: its high turgor raises its total Ψ.
+- **Total Ψ decides the direction**, not solute concentration alone.
+- As water moves, Ψp and Ψs change until Ψ inside equals Ψ outside:
+  equilibrium, no net flow.
 
-Pot mass loss = soil evaporation + plant water loss + other changes.
+**What happens to turgor as a cell gains or loses water?**
 
-Controls and units determine interpretation.
+::: notes
+Exercise 1.3. The trap is to compare only solute potentials. Cell B is the instructive case: plenty of solute, but the wall is already pushing hard, so water leaves. Emphasise that the numbers are initial values; they change as water moves. This sets up the next slide, where we follow one cell to equilibrium.
+:::
 
-## Check the experimental unit
+## One cell, three solutions
 
-Multiple leaves do not create multiple independently treated trays.
+A flaccid cell: **Ψs = −0.6 MPa, Ψp = 0**, so **Ψ = −0.6 MPa** (assume Ψs
+stays constant).
 
-Continue with [exercise](exercise.qmd) and [self-check](quiz.qmd).
+| Placed in | Water moves | At equilibrium | State |
+| --- | --- | --- | --- |
+| Pure water, Ψ = 0 | **in** | Ψ = 0, so Ψp = 0 − (−0.6) = **+0.6 MPa** | turgid |
+| Solution, Ψ = −0.6 MPa | no net flow | Ψp = 0 | flaccid |
+| Solution, Ψ = −0.8 MPa | **out** | Ψp stays 0; protoplast shrinks from the wall | **plasmolysed** |
+
+- Turgor (P1) is the pressure that builds up until the cell's Ψ matches its
+  surroundings.
+- Ψp cannot fall far below zero in a living cell: the wall cannot pull, so
+  the protoplast pulls away instead.
+
+**A root cell is exactly such a cell, sitting in the soil solution.**
+
+::: notes
+Exercise 1.5. In pure water the cell takes up water until turgor exactly cancels the solute potential. In a more concentrated solution the cell loses water, turgor falls to zero and the membrane separates from the wall: plasmolysis, visible in onion epidermis in the practical. Transition: apply the same reasoning to the opening question about salty soil.
+:::
+
+## Wet but salty soil: the opening problem
+
+A root cell has **Ψ = −0.4 MPa**.
+
+| Soil solution | Ψ (MPa) | Initial net water movement |
+| --- | ---: | --- |
+| Moist, non-saline | −0.1 | soil → **root** (−0.1 > −0.4) |
+| Moist, saline | −0.6 | root → **soil** (−0.4 > −0.6) |
+
+- Salt lowers the **solute potential** of the soil water. The soil is wet but
+  its Ψ is below that of the root.
+- To take up water again, the plant must lower its own Ψ by **accumulating
+  solutes** (osmotic adjustment). This costs energy, and Na⁺ and Cl⁻ become
+  toxic inside cells.
+
+**Water is available in the soil. How does it cross the root to reach the xylem?**
+
+::: notes
+Exercise 1.6, and the answer to the second question in the introduction: wet soil can behave like dry soil for the plant. About 20 % of irrigated land is affected by salinity, so this is a major crop problem; P5 returns to salt stress. Transition: follow water inward across the root tissues we met in P1.
+:::
+
+## Into the root: three routes and one barrier
+
+:::: {.columns}
+::: {.column width="50%"}
+- **Apoplastic:** through cell walls and spaces; crosses **no membrane**.
+- **Symplastic:** cytoplasm to cytoplasm through **plasmodesmata**.
+- **Transmembrane:** across the plasma membrane (and tonoplast) of each
+  successive cell.
+
+At the **endodermis**, the **Casparian strip** (suberin, with lignin) in the
+radial and transverse walls **blocks the apoplast**.
+:::
+::: {.column width="50%"}
+```{mermaid}
+%%| fig-width: 5
+flowchart TB
+  S["Soil water"] --> E["Epidermis and root hairs"]
+  E --> C["Cortex: all three routes"]
+  C --> N["Endodermis:<br/>membrane crossing"]
+  N --> X["Stele: xylem"]
+```
+:::
+::::
+
+**Every water molecule and ion entering the xylem has passed a membrane at
+least once. That membrane decides what gets in.**
+
+::: notes
+Exercises 2.1 and 2.2. These are the apoplast, symplast and endodermis from P1, now carrying water. The Casparian strip is the root's checkpoint: without it, soil solution including toxic ions could flow through the walls straight into the xylem. Water crosses membranes passively; ions need transport proteins, and some need energy, which is the next slide.
+:::
+
+## Crossing the membrane: water is passive, ions cost energy
+
+:::: {.columns}
+::: {.column width="50%"}
+**Water**
+
+- Moves through **aquaporins**: channels that raise membrane permeability.
+- Always **passive**, down the Ψ gradient. No ATP pumps water.
+
+**Ions**
+
+- **Plasma-membrane H⁺-ATPase** uses ATP to pump H⁺ out: apoplast pH ~5.5,
+  cytosol ~7.3, membrane potential −120 to −200 mV.
+- **Channels** let ions move down this gradient (K⁺ in).
+- **H⁺-coupled carriers** use H⁺ flowing back in to move ions **against**
+  their own gradient (NO₃⁻, H₂PO₄⁻): **secondary active transport**.
+:::
+::: {.column width="50%"}
+**Waterlogged roots: wet but starving**
+
+1. Water fills the soil pores.
+2. Little O₂ reaches the roots.
+3. Aerobic respiration falls: less ATP.
+4. H⁺-ATPase slows; the H⁺ gradient declines.
+5. Less H⁺-coupled uptake of mineral ions.
+:::
+::::
+
+**Now the water is in the xylem. What lifts it 100 m?**
+
+::: notes
+Exercises 2.3 and 2.4. Keep water and ions separate: aquaporins change how fast water moves, never the direction. The H⁺-ATPase is the plant's primary pump, playing the role that the Na⁺/K⁺-ATPase plays in animal cells (A4). The waterlogging chain shows that mineral uptake depends on root respiration, which links forward to P3 (respiration and fermentation in flooded roots).
+:::
+
+## Soil to air: a gradient of Ψ
+
+```{mermaid}
+%%| fig-width: 12
+flowchart LR
+  S["Soil<br/>−0.1 MPa"] --> R["Across cortex<br/>and endodermis"]
+  R --> X["Root xylem<br/>−0.4 MPa"]
+  X --> L["Leaf cells<br/>−0.8 MPa"]
+  L --> V["Evaporation from<br/>mesophyll walls"]
+  V --> A["Air via stomata<br/>−95 MPa (50 % RH)"]
+```
+
+- Each step is **downhill in Ψ**: water moves passively the whole way.
+- The biggest drop is from leaf to air: air at 50 % relative humidity has
+  Ψ ≈ −95 MPa.
+- The energy comes from **evaporation at the leaf**, ultimately from the sun.
+  The plant spends no ATP moving water.
+
+**How does evaporation in a leaf pull on water in the roots?**
+
+::: notes
+Exercises 3.1 (order of steps) and 3.3 (order of Ψ values). This is the running example of the lecture in one picture. The air value comes from Ψ = (RT/V̄w) ln(RH): at 50 % humidity it is about −95 MPa, a hundred times more negative than the leaf, which is why evaporation is so powerful. The plant's job is to control the last step (stomata), not to drive the flow.
+:::
+
+## Cohesion–tension
+
+:::: {.columns}
+::: {.column width="50%"}
+| Term | Meaning |
+| --- | --- |
+| **Cohesion** | water molecules attract each other (hydrogen bonds) |
+| **Adhesion** | water molecules attract the conduit walls |
+| **Tension** | negative pressure in the xylem water |
+| **Cavitation** | the column breaks, a gas bubble forms |
+| **Embolism** | the conduit is then gas-filled and blocked |
+:::
+::: {.column width="50%"}
+1. Water evaporates from mesophyll walls; the curved water surfaces in the
+   wall pores pull on the water behind them.
+2. This **tension** (−1 to −2 MPa in a tall tree) is transmitted down the
+   continuous water column by **cohesion**.
+3. **Lignified walls** stop the conduits collapsing (P1); pits between
+   conduits limit the spread of embolism.
+:::
+::::
+
+- **Root pressure** (≤ ~0.2 MPa, causes guttation at night) is far too small
+  to lift water to the top of a tree.
+
+**If evaporation drives the flow, what sets how fast a plant loses water?**
+
+::: notes
+Exercise 3.2 matches these terms. The mechanism needs no pump at any height: the leaf pulls, cohesion transmits, the rigid walls resist. Recall from P1 why xylem conduits are dead, empty and lignified: they are pipes under tension. Cavitation is the cost: drought increases tension and risks embolism. Root pressure exists but cannot explain transport in tall trees.
+:::
+
+## Measuring transpiration: rate and units
+
+:::: {.columns}
+::: {.column width="45%"}
+Weigh potted plants over 4 h. Unplanted soil loses **4 g** (soil evaporation).
+
+$$E = \frac{\text{mass loss} - 4\ \text{g}}{4\ \text{h} \times \text{leaf area}}$$
+
+| Pot | Loss (g) | Area (m²) | E (g m⁻² h⁻¹) |
+| ---: | ---: | ---: | ---: |
+| 1 | 24 | 0.10 | 50.0 |
+| 2 | 27 | 0.12 | 47.9 |
+| 3 | 22 | 0.10 | 45.0 |
+| 4 | 25 | 0.11 | 47.7 |
+
+Mean: **47.7 g m⁻² h⁻¹**.
+:::
+::: {.column width="55%"}
+Convert pot 1 to the standard unit, mmol H₂O m⁻² s⁻¹:
+
+$$\frac{50\ \text{g m}^{-2}\,\text{h}^{-1}}{18\ \text{g mol}^{-1}} = 2.78\ \text{mol m}^{-2}\,\text{h}^{-1}$$
+
+$$\frac{2.78}{3600\ \text{s h}^{-1}} = 7.7\times10^{-4}\ \text{mol m}^{-2}\,\text{s}^{-1} = 0.77\ \text{mmol m}^{-2}\,\text{s}^{-1}$$
+
+- **Subtract** the soil control: otherwise soil evaporation is counted as
+  transpiration.
+- **Divide by leaf area** so plants of different size can be compared.
+:::
+::::
+
+::: notes
+Exercise 3.4. Work the conversion step by step: grams to moles, hours to seconds. Gas-exchange instruments report transpiration in mmol m⁻² s⁻¹ and photosynthesis in µmol m⁻² s⁻¹, which students meet again in P3. The two bullets are the experimental logic: a control for the non-plant water loss, and normalisation by the evaporating surface.
+:::
+
+## What sets the transpiration rate
+
+Transpiration ≈ conductance × (vapour pressure in leaf − vapour pressure in
+air)
+
+| Change (stomatal conductance unchanged) | Effect on transpiration | Why |
+| --- | --- | --- |
+| Lower air humidity | **increases** | larger vapour pressure difference |
+| Higher leaf temperature | **increases** | higher vapour pressure inside the leaf |
+| Stronger wind | **increases** | thinner boundary layer, lower resistance |
+| Smaller leaf area | **decreases** | less evaporating surface |
+
+- Inside the leaf the air is saturated with water vapour (~100 % humidity).
+- The plant cannot control the weather. It controls the **stomatal
+  conductance**.
+
+**So how do guard cells open and close the pore?**
+
+::: notes
+Exercise 3.5. The formula is Fick's law from A1 in another form: flux = conductance × concentration difference. Humidity and temperature change the driving difference, wind and stomata change the conductance. The plant's one fast control is the stomatal pore, which leads into the next slide.
+:::
+
+## Stomatal opening: ion transport makes turgor
+
+1. **Blue light** activates the guard-cell plasma-membrane **H⁺-ATPase**.
+2. H⁺ is pumped out and the membrane **hyperpolarises**.
+3. **K⁺** enters through inward-rectifying channels; **Cl⁻** is taken up and
+   **malate** is made, balancing the charge.
+4. Solutes accumulate: guard-cell **Ψs and Ψ fall**.
+5. **Water enters** the guard cells by osmosis.
+6. **Turgor rises**; radially arranged microfibrils make the guard cells
+   bow apart and the **pore opens**.
+
+The guard cell K⁺ concentration can rise from ~100 to ~400–800 mM during
+opening.
+
+**Opening is the default in light. What makes stomata close?**
+
+::: notes
+Exercise 4.1 asks for this order. Each step uses an earlier idea: the H⁺-ATPase from the root slide, Ψs = −cRT (a few hundred millimolar of KCl lowers Ψs by about 1–2 MPa), turgor from P1, and microfibril orientation from the P1 wall slide controlling the direction of swelling. Stomata are hydraulic valves run by ion transport.
+:::
+
+## Signals that open and close stomata
+
+:::: {.columns}
+::: {.column width="45%"}
+| Signal | Response |
+| --- | --- |
+| Blue light at dawn | **open** |
+| Low intercellular CO₂ | **open** |
+| High intercellular CO₂ | **close** |
+| Increased ABA | **close** |
+| Low leaf Ψ (drought) | **close** |
+:::
+::: {.column width="55%"}
+**Abscisic acid (ABA)**, the drought hormone, made in roots and leaves:
+
+1. ABA binds receptors in the guard cells.
+2. **Anion channels** open; Cl⁻ and malate leave.
+3. The membrane **depolarises**.
+4. **K⁺ leaves** through outward-rectifying channels.
+5. Guard-cell Ψs and Ψ **rise**; water leaves.
+6. Turgor falls and the **pore closes**.
+:::
+::::
+
+**ABA is a signal: it changes ion channels, it does not plug the pore.**
+Closing saves water but stops CO₂ uptake.
+
+::: notes
+Exercises 4.2 and 4.3. The closing sequence is the opening sequence run in reverse, triggered by a hormone instead of light. The CO₂ responses make sense: if CO₂ inside the leaf is high, the pore need not be open. The last line is the trade-off of the whole plant: closing protects water status but halts photosynthesis, which P3 picks up (photorespiration and CAM). Transition: water carries minerals with it.
+:::
+
+## Essential elements
+
+An element is **essential** if the plant cannot complete its life cycle
+without it, or it is part of an essential molecule, and no other element can
+replace it.
+
+| Macronutrients | Typical % of dry mass | Micronutrients | Typical mg kg⁻¹ dry mass |
+| --- | ---: | --- | ---: |
+| N | 1.5 | Fe | 100 |
+| K | 1.0 | Mn | 50 |
+| Ca | 0.5 | Zn | 20 |
+| Mg | 0.2 | B | 20 |
+| P | 0.2 | Cu | 6 |
+| S | 0.1 | Mo | 0.1 |
+
+- "Macro" and "micro" refer to the **amount needed**, not to importance:
+  without 0.1 mg kg⁻¹ of Mo the plant dies just as surely.
+- C, H and O come from CO₂ and water.
+
+**What does each element do, and how do you recognise a deficiency?**
+
+::: notes
+Exercises 5.1 and 5.2. The concentrations are the standard values from Epstein, as quoted in Taiz & Zeiger: nitrogen is needed at about 10⁵ times the concentration of molybdenum. Students should be able to sort the twelve elements into the two groups. Essentiality is tested by growing plants in hydroponic solutions lacking one element.
+:::
+
+## Roles of elements and where symptoms appear {.smaller}
+
+| Element | Main role | Mobile in phloem? | First symptoms |
+| --- | --- | --- | --- |
+| **N** | amino acids, proteins, nucleotides, chlorophyll | yes | yellowing of **old** leaves |
+| **P** | ATP, nucleic acids, phospholipids | yes | old leaves, dark or purple |
+| **K** | main osmotic cation, e.g. in guard cells; enzyme activation | yes | old leaf margins |
+| **Mg** | central atom of chlorophyll | yes | yellowing between veins, **old** leaves |
+| **Fe** | cytochromes and Fe–S proteins in electron transport | **no** | yellowing of **young** leaves |
+| **Ca** | cell walls (pectin), signalling | **no** | young leaves, tips |
+
+- A **mobile** element is withdrawn from old leaves to supply new growth, so
+  **old** leaves show symptoms first.
+- An **immobile** element stays where it was deposited, so **young** leaves,
+  which depend on current uptake, show symptoms first.
+
+**Roots do not take up all of this alone.**
+
+::: notes
+Exercises 5.3 (roles) and 5.4 (old versus young leaves). The mobility rule turns a symptom pattern into a diagnosis: where the yellowing appears tells you which group the missing element belongs to. Mobility is phloem mobility, so this links forward to P3, where the phloem moves sugar from sources to sinks.
+:::
+
+## Partners in the soil
+
+:::: {.columns}
+::: {.column width="50%"}
+**Arbuscular mycorrhizas**
+
+- Fungal hyphae enter the root cortex and form **arbuscules** inside cells.
+- Formed by **~70–80 %** of land plant species.
+- Hyphae (~2–10 µm) reach far beyond the depletion zone around a root.
+- **Plant gains:** mineral nutrients, especially **phosphate**, and water.
+- **Fungus gains:** **carbon** (sugars and lipids), up to ~20 % of the
+  plant's photosynthate.
+:::
+::: {.column width="50%"}
+**Nitrogen-fixing bacteria**
+
+- **Rhizobia** in root nodules of legumes (pea, bean, clover).
+- Convert N₂ to NH₃ with nitrogenase, at a cost of ~16 ATP per N₂.
+- The plant supplies sugars; the bacteria supply ammonium.
+
+Both symbioses trade **carbon** from the leaves for **nutrients** from the
+soil.
+:::
+::::
+
+**Carbon pays for water and mineral uptake. Where does that carbon come from?**
+
+::: notes
+Exercise 5.5. Phosphate diffuses very slowly in soil, so a zone around each root is quickly depleted; fine hyphae extend the absorbing surface far beyond it, the A1 surface-area solution again. Both partnerships cost the plant carbon, as does all active ion uptake (respiration in roots). This sets up P3: how light becomes the carbon that pays for everything.
+:::
+
+## Summary {.smaller}
+
+| Concept | Key fact |
+| --- | --- |
+| Water potential | Ψ = Ψs + Ψp; pure water = 0 MPa; water moves to lower (more negative) Ψ |
+| Solute potential | Ψs = −cRT, c in osmol L⁻¹; 0.1 M NaCl → −0.50 MPa at 25 °C |
+| Turgor and plasmolysis | water enters until Ψ inside = Ψ outside; Ψp ≥ 0 in living cells |
+| Saline soil | low soil Ψ can draw water out of roots in wet soil |
+| Root routes | apoplastic, symplastic, transmembrane; Casparian strip blocks the apoplast |
+| Ion uptake | H⁺-ATPase builds the gradient; channels and H⁺-coupled carriers use it |
+| Cohesion–tension | evaporation creates tension; cohesion transmits it; no pump |
+| Transpiration | units mmol H₂O m⁻² s⁻¹; rises with low humidity, heat, wind |
+| Stomata | light → H⁺-ATPase → K⁺ in → water in → open; ABA → ions out → close |
+| Minerals | macro/micro by amount; mobile elements show symptoms in old leaves |
+
+**Next (P3 — Light, carbon and the whole-plant budget):** the open stomata let CO₂ in. How does
+the leaf use light to turn CO₂ into sugar, how do some plants fix carbon while
+losing less water, and how does sugar reach the root?
+
+[Tutorial](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+
+::: notes
+Read the table in the order of the water path: the rule for direction, the calculation, uptake at the root, the xylem, loss from the leaf and its control, and the minerals carried with the water. P3 picks up the other gas passing through the stomata: every water molecule lost buys a share of CO₂, and P3 follows that CO₂ into sugar and out to the roots.
+:::

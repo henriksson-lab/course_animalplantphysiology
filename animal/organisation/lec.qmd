@@ -1,5 +1,6 @@
 ---
-title: A1 — Organisation, diversity and regulation
+title: "A1 — Organisation, diversity and regulation"
+subtitle: "Week 1 — How an animal body is built and kept stable"
 format:
   revealjs:
     theme:
@@ -20,19 +21,60 @@ format:
 author: Animal and Plant Physiology
 ---
 
-## One need, several solutions
+## About this lecture
 
-- Every living cell needs suitable supplies and conditions.
-- Compare an aquatic invertebrate, an insect and a mammal.
-- Explain a transport path rather than listing organs.
+An amoeba takes oxygen straight from the pond water around it. A mitochondrion
+deep in a mouse's thigh muscle is millimetres from the nearest air. **How does
+an animal body get oxygen and food to every cell, and keep conditions around
+those cells stable?** That question runs through the whole animal half of the
+course, and today we set up the tools to answer it.
 
-## Levels are connected
+- **Organisation:** cells → tissues → organs → organ systems, and the
+  *internal environment* that cells actually live in.
+- **The physical problem:** surface area, volume and diffusion distance.
+  These explain why large animals need special exchange surfaces and transport.
+- **The building materials:** the four primary tissue types, and how to
+  recognise them in a section.
+- **Keeping it stable:** homeostasis and feedback control.
+- **Many solutions:** response, acclimation and adaptation, with an insect and
+  a mammal compared.
+
+::: notes
+The single picture for today: one cell, deep inside a body, that needs oxygen and nutrients and needs stable surroundings. Everything in the lecture is a step towards explaining how a body achieves that. Organisation tells us where the cell sits; geometry tells us why that is a problem; tissues are the materials for the solution; feedback keeps the solution working; and comparison shows that animals have solved it in more than one way. The following units (A2–A5) each take one part of this problem: energy, gas exchange and circulation, water and ions, and control.
+:::
+
+## The problem: one cell versus a whole animal
+
+| | Amoeba | Mouse |
+| --- | --- | --- |
+| Size | ~0.5 mm | ~80 mm |
+| Distance from O₂ source to mitochondria | a few µm | up to several mm |
+| How O₂ arrives | diffusion across the cell membrane | ventilation → lungs → blood → tissue |
+| Surroundings of each cell | pond water | interstitial fluid |
+
+- Every cell has the same needs: **O₂ and fuel in, CO₂ and wastes out,
+  suitable temperature and ion concentrations**.
+- The amoeba meets them directly from its environment.
+- A mouse cannot. **Most of its cells never touch the outside world.**
+
+**So what does a mouse body consist of, and where do its cells actually live?**
+
+::: notes
+Start with the contrast rather than with definitions. The amoeba is a single cell in direct contact with its environment; diffusion over a few micrometres is fast enough. The mouse is a hundred times longer, and its muscle cells are far from air. This raises two questions that the rest of the lecture answers: how is the body organised (next slides), and why does size create a problem (geometry slides).
+:::
+
+## Levels of organisation
 
 :::: {.columns}
 ::: {.column width="40%"}
-- Cell → tissue → organ → interacting systems → organism.
-- An intestine contains epithelium, connective tissue, muscle and nerves.
-- A tissue category does not identify an entire organ.
+- **Cell:** the smallest living unit.
+- **Tissue:** similar cells plus extracellular material, with one function.
+- **Organ:** several tissues working together, e.g. the intestine.
+- **Organ system:** organs with a shared task, e.g. the digestive system.
+- **Organism.**
+
+Each level has properties that the level below lacks: a single muscle cell
+cannot pump blood, but cardiac muscle in a heart can.
 :::
 ::: {.column width="60%"}
 
@@ -41,14 +83,21 @@ author: Animal and Plant Physiology
 :::
 ::::
 
-## Where is the internal environment?
+::: notes
+Walk through the figure from the cell outwards using the intestine as the example, because we return to it later in the lecture when we look at tissues. Emphasise that the organ-system boundaries are a convenience: digestion depends on circulation and nerves too. The point for the story: the mouse solves its problem by building specialised tissues and organs. Next question: where are the cells, relative to the outside?
+:::
+
+## The internal environment
 
 :::: {.columns}
 ::: {.column width="40%"}
-- Gut lumen is continuous with the exterior.
-- Absorption crosses a selective epithelial barrier.
-- Most cells exchange with interstitial fluid.
-- Circulation connects distant exchange regions and tissues.
+- Body cells are bathed in **interstitial fluid**, not in the outside world.
+- **Blood plasma** exchanges with interstitial fluid across capillary walls.
+- The **gut lumen** is continuous with the exterior: food in the gut is still
+  *outside* the body.
+- To enter the body, a substance must cross an **epithelium**.
+
+Claude Bernard (1865): the *milieu intérieur*.
 :::
 ::: {.column width="60%"}
 
@@ -57,46 +106,115 @@ author: Animal and Plant Physiology
 :::
 ::::
 
-## Size changes the geometry
+**The internal environment must be supplied from outside, across exchange surfaces.**
+
+::: notes
+This is the key reframing: cells live in interstitial fluid, and that fluid is what the body has to keep supplied and stable. A glucose molecule in the gut lumen has not yet been absorbed; it must cross the intestinal epithelium, enter the blood, leave the capillary and cross the muscle cell membrane. Students practise this route in exercise 1.4. The next question is: why can't the outer surface of the body simply do all the exchange, as in the amoeba?
+:::
+
+## Why size is a problem: surface area and volume
 
 :::: {.columns}
-::: {.column width="40%"}
-For a cube: area $=6L^2$; volume $=L^3$; ratio $=6/L$.
+::: {.column width="45%"}
+For a cube with side $L$:
 
-- Double length: area ×4, volume ×8.
-- Ratios need units: mm⁻¹, for example.
-- Larger bodies can fold surfaces and move fluids.
+$$A = 6L^2, \qquad V = L^3, \qquad \frac{A}{V} = \frac{6}{L}$$
+
+| $L$ | $A$ | $V$ | $A/V$ |
+| ---: | ---: | ---: | ---: |
+| 1 mm | 6 mm² | 1 mm³ | 6 mm⁻¹ |
+| 2 mm | 24 mm² | 8 mm³ | 3 mm⁻¹ |
+| 4 mm | 96 mm² | 64 mm³ | 1.5 mm⁻¹ |
+
+- **Demand** (metabolism) scales roughly with volume.
+- **Supply** across the body surface scales with area.
+- Double the size: 4× the area must serve 8× the volume.
 :::
-::: {.column width="60%"}
+::: {.column width="55%"}
 
 ![](figures/geometry.svg){width="100%" height="360" fig-alt="Doubling cube length multiplies area by four and volume by eight, halving the area-to-volume ratio."}
 
 :::
 ::::
 
-## Distance is costly
+::: notes
+Work the table on the board. The cube is a toy, but it makes the scaling argument exact: area goes as length squared, volume as length cubed, so the ratio falls as 1/L. Metabolic demand comes from the volume of living tissue; supply through the surface comes from area. A larger animal therefore has less surface per unit of tissue to supply. That is half the problem. The other half is distance.
+:::
+
+## Why size is a problem: diffusion distance
 
 :::: {.columns}
-::: {.column width="40%"}
-- Simple diffusion time scale grows with distance squared.
-- Tenfold distance → roughly hundredfold time scale.
-- Bulk flow covers long distances; diffusion crosses final barriers.
+::: {.column width="45%"}
+Time to diffuse a distance $x$: $\quad t \approx \dfrac{x^2}{2D}$
+
+For O₂ in water, $D \approx 2 \times 10^{-9}$ m² s⁻¹:
+
+| Distance | Time |
+| ---: | ---: |
+| 10 µm (one cell) | ~0.03 s |
+| 1 mm | ~4 min |
+| 1 cm | ~7 h |
+
+- **10× the distance → 100× the time.**
+- Diffusion is fast enough within a cell, and far too slow across a body.
 :::
-::: {.column width="60%"}
+::: {.column width="55%"}
 
 ![](figures/diffusion.svg){width="100%" height="360" fig-alt="A tenfold diffusion distance has a hundredfold characteristic time at the same diffusion coefficient."}
 
 :::
 ::::
 
-## Epithelium: a boundary with two sides
+**So how does a large animal get O₂ to a cell that is centimetres from the air?**
+
+::: notes
+This is the decisive number. Diffusion over a cell width takes a few hundredths of a second; over a centimetre it takes hours. The squared dependence is what matters: students can check 10 µm versus 1 mm (100× the distance, 10 000× the time). This is why no animal more than about a millimetre thick relies on diffusion through its body surface alone. Pose the question at the bottom and let them suggest answers before the next slide.
+:::
+
+## Three solutions
+
+1. **Enlarge the exchange surface.** Fold, branch or subdivide it:
+   alveoli (~100 m² in a human lung), gill lamellae, intestinal villi.
+2. **Make the barrier thin.** The air–blood barrier in a mammalian lung is
+   less than 1 µm thick.
+3. **Use bulk flow** over long distances. Ventilation moves air or water to the
+   surface; circulation moves blood around the body. Bulk flow is fast over
+   any distance.
+
+Diffusion is still needed for the **last few micrometres**: from capillary to cell.
+
+**Building these solutions needs specialised materials: the tissues.**
+
+::: notes
+Every exchange organ students will meet in A2–A4 and P2 is a combination of these three solutions. Make the link explicit: the lung is (1) and (2), the circulation is (3), and the capillary bed brings bulk flow to within diffusion range of every cell. Transition: to build a thin, folded surface, a pump and a set of tubes, the body uses four kinds of tissue.
+:::
+
+## The four primary tissue types
+
+| Tissue | Defining feature | Main functions | Example |
+| --- | --- | --- | --- |
+| **Epithelial** | Sheets of tightly joined cells; little matrix | Boundaries, exchange, secretion, protection | Lining of gut, alveoli, skin |
+| **Connective** | Cells scattered in abundant extracellular matrix | Support, binding, transport | Tendon, bone, cartilage, blood |
+| **Muscle** | Elongated cells with contractile proteins | Force and movement | Skeletal muscle, heart, gut wall |
+| **Nervous** | Neurons with long processes, plus glia | Signalling and integration | Brain, nerves |
+
+Every organ is built from these four. We now take them one at a time.
+
+::: notes
+This overview slide is the map for the next four slides. Students should be able to reproduce the "defining feature" column, because that is what they use to recognise tissue in a section: is it a sheet of cells, cells in matrix, elongated contractile cells, or cells with long processes?
+:::
+
+## Epithelium: the exchange surface and the barrier
 
 :::: {.columns}
 ::: {.column width="40%"}
-- Closely associated cells form sheets.
-- Apical and basal domains can differ.
-- Thin exchange barriers and layered protective barriers solve different tasks.
-- Identify lumen, layers and shape before guessing an organ.
+- **Simple squamous** (one thin layer): short diffusion distance, so suited
+  for **exchange** (alveoli, capillaries).
+- **Stratified squamous** (many layers): suited for **protection** (skin, oesophagus).
+- **Simple columnar** (tall cells): suited for **absorption and secretion** (intestine).
+- Each cell has an **apical** side (facing the lumen) and a **basal** side
+  (on the basement membrane). Different transport proteins on each side make
+  directional transport possible.
 :::
 ::: {.column width="60%"}
 
@@ -105,39 +223,67 @@ For a cube: area $=6L^2$; volume $=L^3$; ratio $=6/L$.
 :::
 ::::
 
-## Connective tissue: examine the matrix
+::: notes
+Connect back to "three solutions": the thin barrier of solution 2 is a simple squamous epithelium. Apical/basal polarity is the basis of every absorbing and secreting epithelium in the course: the gut in A2, the gill and kidney in A4, and plant epidermis by analogy in P1. Shape plus number of layers is the naming system.
+:::
 
-- Cells occur within extracellular material.
-- Matrix can be fibrous, flexible, mineralised or fluid.
-- Tendon and blood belong to this broad category.
-- Pale regions in a section are not automatically empty.
+## Connective tissue: defined by its matrix
+
+- Cells are **scattered** in an **extracellular matrix** of fibres and ground
+  substance.
+- The matrix determines the properties:
+
+| Tissue | Matrix | Property |
+| --- | --- | --- |
+| Tendon | Parallel collagen fibres | Tensile strength |
+| Cartilage | Collagen in a firm gel | Resilience |
+| Bone | Collagen mineralised with calcium phosphate | Rigidity |
+| Blood | Fluid plasma | Transport |
+
+- Connective tissue also carries the **blood vessels** that supply epithelia.
+
+::: notes
+Blood surprises students as a connective tissue; use it to make the point that the category is defined by cells-in-matrix, not by being solid. Blood is also the transport medium of solution 3, so the tissue types are already mapping onto the exchange problem. Epithelia themselves have no blood vessels and depend on the connective tissue beneath them.
+:::
 
 ## Muscle and nervous tissue
 
 :::: {.columns}
-::: {.column width="40%"}
-- Muscle produces force; its arrangement affects function.
-- Skeletal, cardiac and smooth muscle differ.
-- Neurons receive, integrate and transmit signals.
-- Glial cells support neural function.
+::: {.column width="45%"}
+| | Skeletal | Cardiac | Smooth |
+| --- | --- | --- | --- |
+| Striated | yes | yes | no |
+| Cells | long fibres | branched | spindle |
+| Nuclei | many | one | one |
+| Control | voluntary | involuntary | involuntary |
+
+- Muscle provides the **pumps** of bulk flow: the heart, the breathing muscles,
+  the gut wall.
+- **Neurons** receive, integrate and transmit signals; **glia** support them.
 :::
-::: {.column width="60%"}
+::: {.column width="55%"}
 
 ![](figures/muscle-neuron.svg){width="100%" height="360" fig-alt="Parallel contractile fibres contrast with the branching processes of a neuron."}
 
 :::
 ::::
 
-## A histology claim needs evidence
+::: notes
+The muscle table is exam material and appears in the exercises (3.2). Link function to the story: bulk flow needs a pump, and all animal pumps are muscle. Nervous tissue appears briefly here and returns in A5; for today its role is to sense and control, which is exactly what the feedback slides need.
+:::
+
+## Reading a tissue section
 
 :::: {.columns}
 ::: {.column width="40%"}
-Record scale, section orientation, cell features, layers, matrix and lumens.
+A section is a thin 2-D slice through a 3-D structure.
 
-Then propose identity and alternatives.
+- A tube cut **across** gives a **ring**.
+- A tube cut **lengthwise** gives two parallel walls.
+- A tube cut **obliquely** gives an oval.
 
-A ring can be a cut tube. Text descriptions prepare for, but do not replace,
-the actual slide collection.
+So identify a structure from its **tissue layers, cell shapes and scale**, not
+from the outline alone.
 :::
 ::: {.column width="60%"}
 
@@ -146,20 +292,55 @@ the actual slide collection.
 :::
 ::::
 
-## Stability can require continual work
+::: notes
+This prepares students for the histology practical. The classic error is to see a ring and call it a blood vessel; a duct, gland or gut can look the same. The procedure: check the scale, look at the lining (which epithelium?), the layers outside it (connective tissue, muscle) and then name the organ.
+:::
 
-- Homeostasis maintains suitable internal conditions.
-- Constant values do not imply zero flux or inactivity.
-- Different variables can vary on different time scales.
+## Putting the tissues together: the intestinal wall
 
-## Explain negative feedback
+| Layer (lumen outwards) | Tissue | Role in the exchange problem |
+| --- | --- | --- |
+| Mucosa | Simple columnar **epithelium** on villi | Large, thin absorbing surface (solutions 1 and 2) |
+| Submucosa | **Connective tissue** with blood vessels | Carries absorbed nutrients away (solution 3) |
+| Muscularis | **Smooth muscle**, two layers | Mixes and moves the contents (bulk flow in the lumen) |
+| Throughout | **Nervous tissue** (enteric nervous system) | Coordinates secretion and movement |
+
+**One organ, four tissues, all three exchange solutions.** But an organ like
+this only works if its surroundings stay within narrow limits.
+
+::: notes
+This slide closes the first half of the lecture by returning to the intestine from the levels slide. Each tissue maps onto one of the three solutions. Transition: building the machinery is not enough; temperature, pH, ion concentrations and glucose around the cells have to be held within limits while the animal eats, runs and the environment changes. That is homeostasis.
+:::
+
+## Homeostasis: stability by continual work
+
+- **Homeostasis:** maintaining internal conditions within a range compatible
+  with life, despite disturbances.
+- Regulated variables include body temperature, blood glucose, blood pH,
+  plasma osmolarity, and blood O₂ and CO₂.
+- Stable does **not** mean static. Blood glucose stays near 5 mM while glucose
+  is continuously absorbed and consumed. **Input = output** is a dynamic balance.
+- Maintaining it costs energy: ion pumps alone use a large share of resting
+  metabolism.
+
+**How does the body detect and correct a deviation?**
+
+::: notes
+Emphasise the dynamic nature: a constant concentration is a balance of fluxes, like a bath with the tap running and the plug out. This idea returns in A2 (energy budget), A4 (water and salt balance) and P2 (plant water balance). The bridge to the next slide is the mechanism: negative feedback.
+:::
+
+## Negative feedback
 
 :::: {.columns}
 ::: {.column width="40%"}
-Disturbance → sensed deviation → control → effector → opposing consequence.
+1. **Regulated variable:** body temperature.
+2. **Disturbance:** exercise raises it.
+3. **Sensor:** thermoreceptors.
+4. **Control centre:** hypothalamus, which compares with the set point.
+5. **Effectors:** sweat glands and skin blood vessels.
+6. **Response:** more heat loss, so temperature falls back.
 
-For rising body temperature: identify how heat loss/production changes and
-how that reduces the deviation.
+The response **opposes** the deviation. This is **negative feedback**.
 :::
 ::: {.column width="60%"}
 
@@ -168,27 +349,56 @@ how that reduces the deviation.
 :::
 ::::
 
-## Avoid two feedback errors
+::: notes
+Go round the loop component by component; the exercises (4.2) ask students to assign these roles. Point out that the effector (skin blood flow) is not the regulated variable: blood flow changes widely in order to keep temperature constant. Other examples to mention briefly: blood glucose and insulin (A2), blood pressure and the baroreceptor reflex (A3), plasma osmolarity and ADH (A4).
+:::
 
-- “Negative” describes loop direction, not a harmful effect.
-- An effector response is not necessarily the regulated variable.
-- Positive feedback amplifies a change and needs termination.
+## Positive feedback and two common errors
 
-## Responses and evolutionary change
+**Positive feedback** amplifies the change. It needs an end point.
 
-- Acute response: minutes or less in the example.
-- Acclimation: adjustment within an individual's lifetime.
-- Evolutionary adaptation: heritable population change across generations.
-- A useful function alone does not establish evolutionary origin.
+- Oxytocin and uterine contractions during birth (ends at delivery).
+- Blood clotting cascade (ends when the wound is sealed).
+- Na⁺ channel opening during an action potential (ends with channel inactivation, A5).
 
-## Compare without a ladder
+**Common errors:**
+
+- "Negative" and "positive" describe the **direction** of the loop, not
+  whether it is good or bad.
+- The **effector** (e.g. sweating) is not the **regulated variable** (temperature).
+
+::: notes
+Positive feedback is not a failure of regulation: it is used for fast, all-or-none events that must run to completion. Each example has a clear terminating step. The two errors are the ones students make most often in exams, so state them explicitly. Transition: feedback acts within minutes; animals also change over weeks and over generations.
+:::
+
+## Three time scales of change
+
+| Time scale | Name | Example | Heritable? |
+| --- | --- | --- | --- |
+| Seconds–minutes | **Acute response** | Ventilation rises when running starts | No |
+| Days–weeks | **Acclimation** (lab) / **acclimatisation** (field) | Fish adjusts its enzymes after weeks in warmer water | No |
+| Generations | **Evolutionary adaptation** | A population in hypoxic water evolves larger gills | Yes |
+
+- Acute responses and acclimation are changes **within an individual**.
+- Adaptation is a change in a **population**, by natural selection.
+- That a trait is useful does not by itself show how it evolved.
+
+::: notes
+Students confuse acclimation and adaptation constantly. The test is heritability and the unit: an individual acclimates, a population adapts. Exercise 5.1 practises the classification. The last bullet guards against "just-so stories". Transition: evolution has produced several different answers to the oxygen problem we started with.
+:::
+
+## Back to the opening problem: insect versus mammal
 
 :::: {.columns}
 ::: {.column width="40%"}
-- Insect: branching tracheal transport brings gases near tissues.
-- Mammal: lung exchange plus blood oxygen transport.
-- Both need gradients and short final diffusion paths.
-- Ask about trade-offs and environment, not which animal is “more advanced”.
+Both breathe air, and both need O₂ within diffusion range of every mitochondrion.
+
+- **Insect:** air-filled **tracheae** branch directly to the tissues. The
+  blood plays little part in O₂ transport.
+- **Mammal:** lungs exchange O₂ into the **blood**; the heart pumps it to
+  capillaries near every cell.
+
+Different solutions to the same physics. Neither is more advanced than the other.
 :::
 ::: {.column width="60%"}
 
@@ -197,6 +407,31 @@ how that reduces the deviation.
 :::
 ::::
 
-## Next
+::: notes
+Close the loop to the first slide. The insect uses bulk flow and diffusion of air all the way to the cells; diffusion in air is about 10 000 times faster than in water, which is what makes this work. The mammal uses a thin, enlarged surface plus a blood pump. Each has trade-offs: tracheal diffusion limits insect body size; the mammalian system needs a heart and haemoglobin. A3 compares gas exchange across animals in detail.
+:::
 
-[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+## Summary {.smaller}
+
+| Concept | Key fact |
+| --- | --- |
+| Levels of organisation | cell → tissue → organ → organ system → organism |
+| Internal environment | cells live in interstitial fluid; the gut lumen is outside the body |
+| Surface area : volume | $A/V = 6/L$ for a cube; falls as size increases |
+| Diffusion time | $t \approx x^2/2D$; 10× distance → 100× time |
+| Three solutions | enlarged surface, thin barrier, bulk flow |
+| Four tissues | epithelial, connective, muscle, nervous |
+| Homeostasis | dynamic maintenance of internal conditions |
+| Negative feedback | response opposes the deviation (sensor → control → effector) |
+| Positive feedback | response amplifies the change; needs an end point |
+| Time scales | acute response, acclimation (individual), adaptation (population) |
+
+**Next (A2 — Nutrition, energy and temperature):** the cells now receive O₂
+and food. What do they do with them, how much energy does an animal use, and
+how does temperature change that?
+
+[Tutorial](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+
+::: notes
+Read the table as the story in order: where cells live, why size makes supply hard, how bodies solve it with tissues, how feedback keeps it stable, and how animals differ. The preview of A2 follows the oxygen and food into the cell: metabolism, energy budgets and temperature.
+:::

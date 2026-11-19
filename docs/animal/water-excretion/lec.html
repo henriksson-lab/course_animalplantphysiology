@@ -30,6 +30,22 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bf56578b9c06c165c166475cd19dbcd1.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -121,6 +137,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -128,6 +147,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">A4 — Water, ions and excretion</h1>
+  <p class="subtitle">Week 4 — Keeping the body’s water and salt stable</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -138,140 +158,1073 @@ Animal and Plant Physiology
 </div>
 
 </section>
-<section id="water-everywhere-balance-still-matters" class="slide level2">
-<h2>Water everywhere, balance still matters</h2>
+<section id="about-this-lecture" class="slide level2">
+<h2>About this lecture</h2>
+<p>In A3, blood carried O₂ from the gills or lungs to every cell. But the same blood must also keep its <strong>water and ion content</strong> stable, and the thin, enlarged surfaces that exchange gases also let water and ions through. A goldfish lives in almost pure water, a cod in water three times saltier than its blood, and a kangaroo rat in a desert where it never drinks. <strong>All three keep their plasma near 300 mOsm L⁻¹. How?</strong></p>
 <ul>
-<li>Freshwater teleosts tend to gain water and lose salts.</li>
-<li>Marine teleosts tend to lose water and gain salts.</li>
-<li>Terrestrial animals must acquire/conserve water while removing waste.</li>
+<li><strong>The physics:</strong> osmolarity, osmotic water movement and tonicity.</li>
+<li><strong>Life in water:</strong> conformers and regulators; freshwater and marine fish; sharks.</li>
+<li><strong>The tool:</strong> the transporting epithelial cell.</li>
+<li><strong>The mammalian kidney:</strong> filtration, reabsorption and secretion; what each nephron segment does; clearance.</li>
+<li><strong>Saving water:</strong> the medullary gradient and ADH.</li>
+<li><strong>Getting rid of nitrogen:</strong> ammonia, urea and uric acid; the insect solution.</li>
 </ul>
+<aside class="notes">
+<p>The single picture for today: plasma held near 300 mOsm in three very different environments. The goldfish is flooded with water and loses salt; the cod loses water and gains salt; the kangaroo rat loses water by evaporation and must excrete nitrogen without wasting water. The lecture first gives the physical rules that decide which way water moves, then the cellular tool (the polarised epithelium) that every solution is built from, then the mammalian kidney in detail, and finally the problem of nitrogen waste, which ties water balance to metabolism. The link back to A3: gills and lungs are designed to be permeable, so they are also the main route of unwanted water and ion movement.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="always-name-the-boundary" class="slide level2">
-<h2>Always name the boundary</h2>
-<ul>
-<li>Body surface, gill, gut, capillary and cell membrane differ.</li>
-<li>State permeability and the fluids on either side.</li>
-<li>Water flux into an animal differs from water flux into one cell.</li>
-</ul>
-</section>
-<section id="osmolarity-counts-particles" class="slide level2">
-<h2>Osmolarity counts particles</h2>
-<ul>
-<li>Ideal 0.10 mol L⁻¹ glucose: about 0.10 Osm L⁻¹.</li>
-<li>Ideal fully dissociated 0.10 mol L⁻¹ NaCl: about 0.20 Osm L⁻¹.</li>
-<li>Real solutions need not be ideal.</li>
-</ul>
-</section>
-<section id="tonicity-adds-membrane-behaviour" class="slide level2">
-<h2>Tonicity adds membrane behaviour</h2>
-<ul>
-<li>Sustained cell-volume effects depend on effectively retained solutes.</li>
-<li>Permeant solutes can equilibrate differently.</li>
-<li>Equal total osmolarity need not mean equal tonicity.</li>
-<li>Pressure can oppose an osmotic tendency.</li>
-</ul>
-</section>
-<section id="two-teleost-strategies" class="slide level2">
-<h2>Two teleost strategies</h2>
+<section id="the-problem-three-animals-one-target" class="slide level2">
+<h2>The problem: three animals, one target</h2>
 <table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Freshwater</th>
-<th>Seawater</th>
+<th></th>
+<th>Goldfish</th>
+<th>Cod</th>
+<th>Kangaroo rat</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Water entry tendency</td>
-<td>Water loss tendency</td>
+<td>Habitat</td>
+<td>Fresh water</td>
+<td>Seawater</td>
+<td>Desert</td>
 </tr>
 <tr class="even">
-<td>Replace lost ions</td>
-<td>Remove excess salts</td>
+<td>Osmolarity of surroundings</td>
+<td>~5 mOsm L⁻¹</td>
+<td>~1,000 mOsm L⁻¹</td>
+<td>(air, food)</td>
 </tr>
 <tr class="odd">
-<td>Relatively abundant dilute urine</td>
-<td>Lower urine volume; ion handling</td>
+<td>Plasma osmolarity</td>
+<td>~300 mOsm L⁻¹</td>
+<td>~350 mOsm L⁻¹</td>
+<td>~300 mOsm L⁻¹</td>
+</tr>
+<tr class="even">
+<td>Main water threat</td>
+<td>Water floods in across the gills</td>
+<td>Water leaks out across the gills</td>
+<td>Evaporation from lungs and skin</td>
+</tr>
+<tr class="odd">
+<td>Main salt threat</td>
+<td>Salts leak out</td>
+<td>Salts leak in</td>
+<td>Salt and urea from food</td>
 </tr>
 </tbody>
 </table>
-<p>Add drinking, food and gill transport to the explanation.</p>
-</section>
-<section id="these-examples-are-not-every-aquatic-animal" class="slide level2">
-<h2>These examples are not every aquatic animal</h2>
 <ul>
-<li>Sharks retain organic osmolytes and use a different strategy.</li>
-<li>Osmoconformers can regulate selected ions.</li>
-<li>Osmoregulators are not perfectly invariant in all conditions.</li>
-<li>Identify species, medium and life stage.</li>
+<li>The gills of A3 have a large area and a barrier only a few µm thick: ideal for O₂, and equally good for water and ions.</li>
+<li>Each animal must balance <strong>input = output</strong> for water and for each ion.</li>
 </ul>
+<p><strong>To predict which way water moves, we first have to count dissolved particles.</strong></p>
+<aside class="notes">
+<p>Set up the running examples. Point out that the problem is created by the solution to the gas-exchange problem: a surface built for diffusion of O₂ cannot be made impermeable to water. The plasma values are typical; the exact number is not the point, the direction of the difference from the surroundings is. Remind students of the A1 idea of dynamic balance: a constant plasma osmolarity is a balance of continuous fluxes in and out.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="epithelial-polarity-creates-a-route" class="slide level2">
-<h2>Epithelial polarity creates a route</h2>
+<section id="osmolarity-counts-particles" class="slide level2">
+<h2>Osmolarity counts particles</h2>
+<p><strong>Osmolarity</strong> = molar concentration × number of particles each formula unit releases in solution (unit: Osm L⁻¹ or mOsm L⁻¹).</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Solution (ideal, fully dissociated)</th>
+<th style="text-align: right;">Particles</th>
+<th style="text-align: right;">Osmolarity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.10 mol L⁻¹ glucose</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">100 mOsm L⁻¹</td>
+</tr>
+<tr class="even">
+<td>0.10 mol L⁻¹ NaCl (Na⁺ + Cl⁻)</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">200 mOsm L⁻¹</td>
+</tr>
+<tr class="odd">
+<td>0.10 mol L⁻¹ Na₂SO₄ (2 Na⁺ + SO₄²⁻)</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">300 mOsm L⁻¹</td>
+</tr>
+<tr class="even">
+<td>0.10 mol L⁻¹ glucose + 0.10 mol L⁻¹ NaCl</td>
+<td style="text-align: right;">1 + 2</td>
+<td style="text-align: right;">300 mOsm L⁻¹</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Apical and basal membranes differ.</li>
-<li>ATP-driven transport establishes gradients.</li>
-<li>Coupled transport and channels use those gradients.</li>
-<li>Water follows suitable gradients through permeable pathways.</li>
+<li>Osmolarity depends on the <strong>number</strong> of particles, not their mass or size: one albumin molecule (66 kDa) counts the same as one urea molecule (60 Da).</li>
+<li>Reference values: fresh water 1–10, plasma ~290–300, seawater ~1,000 mOsm L⁻¹.</li>
 </ul>
+<p><strong>So which way does water move between two solutions?</strong></p>
+<aside class="notes">
+<p>Work through the table: the only skill is to count how many particles each formula unit releases. Mixtures simply add. Make the mass point explicitly, because students instinctively weigh solutes. The reference values are worth memorising; they are used throughout the lecture. Real solutions are not perfectly ideal (NaCl behaves as about 1.8 particles), but the ideal count is what we use for all calculations in this course.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="filtration-is-not-excretion" class="slide level2">
-<h2>Filtration is not excretion</h2>
-<p>Glomerular filtration moves fluid from blood into nephron lumen.</p>
-<p>Reabsorption returns material towards blood.</p>
-<p>Secretion adds material to tubular fluid.</p>
-<p>Excretion is the amount finally leaving in urine.</p>
-</section>
-<section id="account-for-the-amount" class="slide level2">
-<h2>Account for the amount</h2>
-<p>Excretion = filtered load − reabsorption + secretion.</p>
-<p>100 − 98 + 1 = <strong>3 amount units min⁻¹</strong>.</p>
-<p>Use one substance and one consistent time interval.</p>
-</section>
-<section id="concentration-is-not-a-rate" class="slide level2">
-<h2>Concentration is not a rate</h2>
-<p>Urine concentration × urine flow = excretion rate.</p>
-<p>2 mmol L⁻¹ × 0.001 L min⁻¹ = <strong>0.002 mmol min⁻¹</strong>.</p>
-<p>Less water can increase concentration without increasing solute loss per minute.</p>
-</section>
-<section id="concentration-needs-gradient-and-permeability" class="slide level2">
-<h2>Concentration needs gradient and permeability</h2>
+<section id="water-moves-towards-the-higher-osmolarity" class="slide level2">
+<h2>Water moves towards the higher osmolarity</h2>
 <ul>
-<li>Nephron segments differ in water/solute transport.</li>
-<li>Medullary processes establish an osmotic gradient.</li>
-<li>Collecting-duct water permeability determines access to that gradient.</li>
-<li>One pump alone is not the full concentrating mechanism.</li>
-</ul>
-</section>
-<section id="adh-connects-water-recovery-to-feedback" class="slide level2">
-<h2>ADH connects water recovery to feedback</h2>
+<li>Across a membrane permeable to water but not solute, <strong>water moves from the lower to the higher osmolarity</strong>.</li>
+<li>Compared with body fluids of 300 mOsm L⁻¹, a medium is
 <ul>
-<li>Rising osmotic concentration can promote ADH and drinking.</li>
-<li>ADH can increase collecting-duct water permeability.</li>
-<li>Water recovery rises when a suitable gradient exists.</li>
-<li>ADH does not create water; other signals also influence release.</li>
+<li><strong>hyposmotic</strong> if lower (fresh water): water tends to <strong>enter</strong> the animal;</li>
+<li><strong>isosmotic</strong> if equal: no net osmotic water movement;</li>
+<li><strong>hyperosmotic</strong> if higher (seawater): water tends to <strong>leave</strong> the animal.</li>
+</ul></li>
+<li>The driving force is the <strong>osmotic pressure</strong> <span class="math inline">\pi = cRT</span>. A difference of 300 mOsm L⁻¹ at 37 °C gives <span class="math inline">\pi \approx 7.6</span> atm.</li>
+<li>An opposing <strong>hydrostatic pressure</strong> can stop net water flow before the concentrations become equal (as in a plant cell pressing on its wall, P2).</li>
 </ul>
+<p><strong>But does osmolarity alone predict whether a cell swells or shrinks?</strong></p>
+<aside class="notes">
+<p>The three terms are always relative: say “hyperosmotic to what”. The numerical osmotic pressure shows that osmosis is a strong force: 7.6 atmospheres is more than the pressure at 70 m depth in water. Hydrostatic pressure is the counter-force: water flow stops when the pressure difference equals the osmotic pressure difference. Students meet this again in capillaries and in plant turgor. The transition question sets up tonicity: osmolarity counts all particles, but some particles cross membranes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="nitrogen-disposal-has-trade-offs" class="slide level2">
-<h2>Nitrogen disposal has trade-offs</h2>
+<section id="tonicity-only-trapped-solutes-count" class="slide level2">
+<h2>Tonicity: only trapped solutes count</h2>
+<p><strong>Tonicity</strong> describes the effect of a solution on cell volume. Only solutes that <strong>cannot cross</strong> the membrane exert a lasting osmotic effect.</p>
+<p>Red blood cells (inside 300 mOsm L⁻¹; membrane permeable to urea, not to NaCl):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Bathing solution</th>
+<th style="text-align: right;">Osmolarity</th>
+<th>Tonicity</th>
+<th>Cells</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NaCl, 300 mOsm L⁻¹</td>
+<td style="text-align: right;">300</td>
+<td>isotonic</td>
+<td>keep their volume</td>
+</tr>
+<tr class="even">
+<td>NaCl, 200 mOsm L⁻¹</td>
+<td style="text-align: right;">200</td>
+<td>hypotonic</td>
+<td>swell</td>
+</tr>
+<tr class="odd">
+<td>NaCl, 400 mOsm L⁻¹</td>
+<td style="text-align: right;">400</td>
+<td>hypertonic</td>
+<td>shrink</td>
+</tr>
+<tr class="even">
+<td>NaCl 150 + urea 150 mOsm L⁻¹</td>
+<td style="text-align: right;">300</td>
+<td><strong>hypotonic</strong></td>
+<td><strong>swell</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Ammonia: little conversion but toxicity/removal constraints.</li>
-<li>Urea: synthesis costs; useful retention/excretion properties.</li>
-<li>Uric acid: low-water elimination with production costs.</li>
-<li>Habitat and life history change the balance.</li>
+<li>In the last row urea diffuses in until it is equal on both sides. Only the 150 mOsm L⁻¹ of NaCl remains effective, so water enters.</li>
+<li><strong>Isosmotic does not mean isotonic.</strong></li>
 </ul>
+<p><strong>A whole animal faces the same question at its body surface.</strong></p>
+<aside class="notes">
+<p>The last row is the important one: total osmolarity matches the cell, yet the cells swell, because urea is a penetrating solute. Its concentration equalises across the membrane, so it adds nothing to the difference. The rule: tonicity depends only on non-penetrating solutes. A solution of pure urea at 300 mOsm is isosmotic and strongly hypotonic, and the cells burst. This idea returns with sharks, which use urea as a body-fluid osmolyte.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="other-animals-solve-the-same-tasks-differently" class="slide level2">
-<h2>Other animals solve the same tasks differently</h2>
+<section id="conformers-and-regulators" class="slide level2">
+<h2>Conformers and regulators</h2>
 <ul>
-<li>Insect Malpighian tubules/hindgut differ from mammalian nephrons.</li>
-<li>Compare waste removal, ion balance and water recovery first.</li>
-<li>Egestion is not metabolic nitrogen excretion.</li>
+<li><strong>Osmoconformers</strong> let their body-fluid osmolarity follow the medium. Most marine invertebrates (mussels, sea stars, many crabs) are about 1,000 mOsm L⁻¹ in seawater.</li>
+<li>A conformer matches the <strong>total</strong> osmolarity but may still <strong>regulate individual ions</strong>: many crabs keep Mg²⁺ below the seawater level.</li>
+<li><strong>Osmoregulators</strong> hold body-fluid osmolarity roughly constant whatever the medium: bony fishes, freshwater invertebrates, all terrestrial animals.</li>
+<li><strong>Stenohaline</strong> animals tolerate a narrow salinity range (goldfish); <strong>euryhaline</strong> animals a wide one (salmon and eels migrate between fresh water and seawater).</li>
 </ul>
+<p><strong>Bony fishes are regulators. So what must a freshwater and a marine teleost do?</strong></p>
+<aside class="notes">
+<p>Conforming is cheap because there is no osmotic gradient to fight, but the cells must tolerate whatever the medium does. Regulating costs energy but gives cells a stable environment. The ion point corrects a common error: “conformer” refers to total osmolarity, not to every solute. Euryhaline fish such as salmon switch their gill transport direction when they migrate, which leads straight into the comparison on the next slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="next" class="slide level2">
-<h2>Next</h2>
-<p><a href="../../animal/water-excretion/index.html">Tutorial and source links</a> · <a href="../../animal/water-excretion/exercise.html">Exercises</a> · <a href="../../animal/water-excretion/quiz.html">Quiz</a></p>
+<section id="freshwater-and-marine-teleosts-opposite-problems" class="slide level2">
+<h2>Freshwater and marine teleosts: opposite problems</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Freshwater teleost (goldfish)</th>
+<th>Marine teleost (cod)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body fluids compared with the medium</td>
+<td>Hyperosmotic</td>
+<td>Hyposmotic</td>
+</tr>
+<tr class="even">
+<td>Passive water movement</td>
+<td>Inward (gain)</td>
+<td>Outward (loss)</td>
+</tr>
+<tr class="odd">
+<td>Passive salt movement</td>
+<td>Outward (loss)</td>
+<td>Inward (gain)</td>
+</tr>
+<tr class="even">
+<td>Drinking</td>
+<td>Little or none</td>
+<td>Drinks seawater; gut absorbs NaCl, water follows</td>
+</tr>
+<tr class="odd">
+<td>Urine</td>
+<td>Large volume, dilute</td>
+<td>Small volume, about isosmotic to plasma</td>
+</tr>
+<tr class="even">
+<td>Active NaCl transport at gills</td>
+<td><strong>Uptake</strong> from water into blood</td>
+<td><strong>Secretion</strong> from blood into water</td>
+</tr>
+<tr class="odd">
+<td>Other routes</td>
+<td>Ions from food</td>
+<td>Kidney excretes Mg²⁺ and SO₄²⁻</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The same organs (gills, gut, kidney) are used in both, with the <strong>direction of transport reversed</strong>.</li>
+<li>The gill cells that move ions are <strong>ionocytes</strong> (chloride cells).</li>
+</ul>
+<p><strong>Marine sharks live in the same sea as the cod, but solve it differently.</strong></p>
+<aside class="notes">
+<p>Go through each row as a consequence of the first row: once you know whether the fish is hyper- or hyposmotic to its medium, everything else follows. The marine teleost drinks to replace water lost osmotically, but drinking seawater adds salt; the gill ionocytes then secrete the NaCl and the kidney removes the divalent ions the gills cannot handle. The freshwater fish faces the reverse: it gets rid of the excess water as copious dilute urine and recovers ions actively at the gills and from food. Exercise 2.1 asks for this table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sharks-becoming-slightly-saltier-than-the-sea" class="slide level2">
+<h2>Sharks: becoming slightly saltier than the sea</h2>
+<ul>
+<li>Marine sharks and rays keep plasma NaCl low, like teleosts, but retain <strong>urea</strong> (~350 mmol L⁻¹) and <strong>trimethylamine oxide (TMAO)</strong>.</li>
+<li>Total plasma osmolarity is <strong>slightly above seawater</strong> (~1,050 vs ~1,000 mOsm L⁻¹).</li>
+<li>Consequences:
+<ul>
+<li>water moves <strong>slightly inward</strong> across the gills, so sharks <strong>do not need to drink</strong>;</li>
+<li>the gills are almost impermeable to urea, so it is retained;</li>
+<li>TMAO <strong>counteracts</strong> the destabilising effect of urea on proteins.</li>
+</ul></li>
+<li>NaCl still leaks in. It is secreted by the <strong>rectal gland</strong>, which produces a fluid of about twice the plasma NaCl concentration.</li>
+</ul>
+<p><strong>Both fishes depend on cells that move ions in one direction. How does one cell do that?</strong></p>
+<aside class="notes">
+<p>The shark is a partial conformer: it matches the sea in total osmolarity using an organic solute rather than salt. Urea is normally a waste product and denatures proteins at these concentrations; TMAO is the counteracting osmolyte. This links forward to the nitrogen-waste section: the shark is ureotelic and turns its waste product into an osmolyte. The rectal gland is the shark’s equivalent of the teleost gill ionocyte. The transition: gills, rectal gland, gut and kidney all depend on the same basic cell design.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-transporting-epithelial-cell" class="slide level2 smaller">
+<h2>The transporting epithelial cell</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Membrane</th>
+<th>Faces</th>
+<th>Example proteins</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Apical</strong></td>
+<td>Lumen (urine, gut contents, water)</td>
+<td>Na⁺ channels, Na⁺–glucose cotransporter, aquaporins</td>
+</tr>
+<tr class="even">
+<td><strong>Basolateral</strong></td>
+<td>Interstitial fluid and blood</td>
+<td><strong>Na⁺/K⁺-ATPase</strong>, K⁺ channels, glucose carriers</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The <strong>Na⁺/K⁺-ATPase</strong> sits on the <strong>basolateral</strong> membrane and moves <strong>3 Na⁺ out and 2 K⁺ in per ATP</strong>.</li>
+<li>This keeps cell Na⁺ low (~15 mmol L⁻¹) and the inside negative, so Na⁺ enters <strong>passively</strong> across the apical membrane.</li>
+<li><strong>Water is never pumped.</strong> It follows the osmotic gradient created by solute transport, through aquaporins and between cells.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-reveal="true" data-fig-width="5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  L["Lumen&lt;br/&gt;Na⁺ 140"] --&gt;|"channel or&lt;br/&gt;cotransporter&lt;br/&gt;(passive)"| C["Cell&lt;br/&gt;Na⁺ 15"]
+  C --&gt;|"Na⁺/K⁺-ATPase&lt;br/&gt;(ATP)"| B["Blood&lt;br/&gt;Na⁺ 140"]
+  L -.-&gt;|"water follows&lt;br/&gt;(osmosis)"| B
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+<p><strong>The mammalian kidney is a long tube built from cells like this.</strong></p>
+<aside class="notes">
+<p>This is the cell that does all the work in the gill, the gut and every nephron segment. The key logic: only one step uses ATP directly, the basolateral pump. Everything else runs downhill on the gradient it creates. Without knowing which membrane each protein sits in, you cannot predict the direction of net transport; that is why polarity matters (exercise 3.2c). Correct the common error “the kidney actively pumps water”: no water pump exists; water follows solute.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-nephron-one-tube-four-processes" class="slide level2">
+<h2>The nephron: one tube, four processes</h2>
+<ul>
+<li><strong>Filtration:</strong> plasma water and small solutes pass from glomerular capillaries into <strong>Bowman’s capsule</strong>.</li>
+<li><strong>Reabsorption:</strong> tubular fluid → blood.</li>
+<li><strong>Secretion:</strong> blood (via interstitial fluid) → tubular fluid.</li>
+<li><strong>Excretion:</strong> what finally leaves in the urine.</li>
+</ul>
+<p>A filtered molecule has left the blood, <strong>not the body</strong>. A human kidney has about one million nephrons.</p>
+<div class="cell" data-reveal="true" data-fig-width="11" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["Bowman's capsule"] --&gt; B["Proximal tubule"] --&gt; C["Loop of Henle"] --&gt; E["Distal tubule"] --&gt; F["Collecting duct"] --&gt; G["Renal pelvis → ureter"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Step one is filtration. What does the filter let through, and how much?</strong></p>
+<aside class="notes">
+<p>Give the route first (exercise 4.1 asks for it) and then the four processes with their directions. Students most often confuse secretion with excretion: secretion is a transport step into the tubule; excretion is the final output. Several nephrons drain into each collecting duct. The diagram shows order, not anatomy: the loop dips into the medulla and returns to the cortex next to its own glomerulus.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="filtration-a-large-coarse-filter" class="slide level2">
+<h2>Filtration: a large, coarse filter</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>The filtration barrier</strong> (blood → capsule):</p>
+<ol type="1">
+<li>Fenestrated capillary <strong>endothelium</strong></li>
+<li>Glomerular <strong>basement membrane</strong></li>
+<li><strong>Filtration slits</strong> between the foot processes of <strong>podocytes</strong></li>
+</ol>
+<p>Water, ions, glucose, amino acids and urea pass freely. <strong>Blood cells and large proteins</strong> such as albumin are almost absent from the filtrate.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>The driving pressures:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Pressure</th>
+<th style="text-align: right;">mmHg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Glomerular capillary blood pressure</td>
+<td style="text-align: right;">+55</td>
+</tr>
+<tr class="even">
+<td>Bowman’s capsule fluid pressure</td>
+<td style="text-align: right;">−15</td>
+</tr>
+<tr class="odd">
+<td>Plasma protein (oncotic) pressure</td>
+<td style="text-align: right;">−30</td>
+</tr>
+<tr class="even">
+<td><strong>Net filtration pressure</strong></td>
+<td style="text-align: right;"><strong>+10</strong></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<ul>
+<li><strong>GFR</strong> (glomerular filtration rate) ≈ <strong>125 mL min⁻¹ = 180 L day⁻¹</strong>.</li>
+<li>Urine output ≈ 1.5 L day⁻¹, so <strong>more than 99 %</strong> of filtered water is reabsorbed.</li>
+</ul>
+<p><strong>With so much filtered and returned, how do we calculate what is excreted?</strong></p>
+<aside class="notes">
+<p>The filter is non-selective for small solutes: it does not choose between glucose and urea. Selection happens afterwards, in the tubule. Filtration is bulk flow driven by blood pressure, the same Starling balance as in A3 capillaries, but with an unusually high capillary pressure. The numbers are striking: the whole plasma volume (about 3 L) is filtered about 60 times a day. Filtering everything and taking back what is needed lets the kidney get rid of any unwanted small molecule, even one it has never met before.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-renal-balance-amounts-per-minute" class="slide level2">
+<h2>The renal balance: amounts per minute</h2>
+<p><span class="math display">\text{filtered load} = \text{GFR} \times P</span></p>
+<p><span class="math display">\text{excretion} = \text{filtered load} - \text{reabsorption} + \text{secretion}</span></p>
+<p><span class="math display">\text{urine concentration} = \text{excretion} \div \text{urine flow}</span></p>
+<p>Worked example: GFR = 0.12 L min⁻¹, plasma concentration <span class="math inline">P</span> = 4 mmol L⁻¹, reabsorption 0.40 mmol min⁻¹, secretion 0.04 mmol min⁻¹, urine flow 0.001 L min⁻¹.</p>
+<ul>
+<li>Filtered load = 0.12 × 4 = <strong>0.48 mmol min⁻¹</strong></li>
+<li>Excretion = 0.48 − 0.40 + 0.04 = <strong>0.12 mmol min⁻¹</strong></li>
+<li>Urine concentration = 0.12 ÷ 0.001 = <strong>120 mmol L⁻¹</strong></li>
+</ul>
+<p>Halving urine flow doubles the concentration but <strong>not</strong> the amount excreted.</p>
+<p><strong>Which parts of the tubule do the reabsorbing?</strong></p>
+<aside class="notes">
+<p>Insist on units: every term in the balance is an amount per time, never a concentration. The third line converts back to a concentration. The last line is a common exam trap: concentrated urine can come from less water, not more solute. Students practise the same calculation with different numbers in exercise 5.1.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-each-nephron-segment-does" class="slide level2 smaller">
+<h2>What each nephron segment does</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Segment</th>
+<th>Main transport</th>
+<th>Water permeability</th>
+<th style="text-align: right;">Fluid leaving (mOsm L⁻¹)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Proximal convoluted tubule</strong></td>
+<td>~2/3 of filtered Na⁺ and water; nearly all glucose and amino acids; secretes organic acids (PAH)</td>
+<td>High</td>
+<td style="text-align: right;">~300</td>
+</tr>
+<tr class="even">
+<td><strong>Descending limb</strong></td>
+<td>Little NaCl transport</td>
+<td><strong>High</strong>: water leaves into the hyperosmotic medulla</td>
+<td style="text-align: right;">up to ~1,200</td>
+</tr>
+<tr class="odd">
+<td><strong>Thick ascending limb</strong></td>
+<td>NaCl reabsorbed by the <strong>Na⁺–K⁺–2Cl⁻ cotransporter</strong></td>
+<td><strong>None</strong>: fluid becomes dilute</td>
+<td style="text-align: right;">~100</td>
+</tr>
+<tr class="even">
+<td><strong>Distal convoluted tubule</strong></td>
+<td>Fine-tunes NaCl and <strong>Ca²⁺</strong> reabsorption</td>
+<td>Low</td>
+<td style="text-align: right;">~100</td>
+</tr>
+<tr class="odd">
+<td><strong>Collecting duct</strong></td>
+<td>Na⁺ reabsorption regulated by <strong>aldosterone</strong>; water regulated by <strong>ADH</strong></td>
+<td>Low, or high with ADH</td>
+<td style="text-align: right;">50–1,200</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>About 25 % of filtered Na⁺ is taken up in the loop, ~5 % in the distal tubule and ~2–5 % in the collecting duct.</li>
+<li>The <strong>bulk</strong> is recovered early and unregulated; the <strong>final adjustment</strong> is late and hormonally controlled.</li>
+</ul>
+<p><strong>How can we measure from outside what the tubule does to a substance?</strong></p>
+<aside class="notes">
+<p>This table is the core of the nephron for the exam (exercise 4.2). Read it top to bottom as the story of one litre of filtrate: the proximal tubule takes back two thirds isosmotically; the loop separates salt from water, so fluid leaving the thick ascending limb is hyposmotic (about 100 mOsm), whatever the body’s water state; the distal tubule and collecting duct make the regulated final adjustments. The last column foreshadows the concentrating mechanism: the descending limb reaches 1,200 mOsm at the bottom of the loop.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clearance-what-the-tubule-does-measured-from-outside" class="slide level2">
+<h2>Clearance: what the tubule does, measured from outside</h2>
+<p><strong>Clearance</strong> = the volume of plasma completely cleared of a substance per minute:</p>
+<p><span class="math display">C = \frac{U \times V}{P}</span></p>
+<p>(<span class="math inline">U</span> = urine concentration, <span class="math inline">V</span> = urine flow, <span class="math inline">P</span> = plasma concentration)</p>
+<ul>
+<li><strong>Inulin</strong> is freely filtered and neither reabsorbed, secreted nor metabolised. So <strong><span class="math inline">C_\text{inulin}</span> = GFR</strong>. Example: <span class="math inline">U</span> = 30 mg mL⁻¹, <span class="math inline">V</span> = 2 mL min⁻¹, <span class="math inline">P</span> = 0.5 mg mL⁻¹ gives <span class="math inline">C</span> = 120 mL min⁻¹.</li>
+<li>Compare any freely filtered substance with GFR (125 mL min⁻¹):</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Clearance</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">C</span> &lt; GFR</td>
+<td>net <strong>reabsorption</strong></td>
+<td>glucose (0), urea (~60 mL min⁻¹)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">C</span> = GFR</td>
+<td>neither</td>
+<td>inulin, (approximately) creatinine</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">C</span> &gt; GFR</td>
+<td>net <strong>secretion</strong></td>
+<td>PAH (~600 mL min⁻¹)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why is the glucose clearance zero, and when does it stop being zero?</strong></p>
+<aside class="notes">
+<p>Clearance is a virtual volume, so its unit is mL min⁻¹. Inulin defines GFR because everything filtered ends up in the urine and nothing else does. The comparison rule then lets us infer tubular handling from a urine sample and a blood sample. PAH is secreted so efficiently that almost all of it is removed in one pass, so its clearance approximates renal plasma flow. Creatinine is the clinical substitute for inulin because the body makes it continuously. Exercises 5.2 and 5.3 use exactly this logic.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-transport-maximum-glucose-in-diabetes" class="slide level2">
+<h2>The transport maximum: glucose in diabetes</h2>
+<ul>
+<li>Glucose is reabsorbed in the proximal tubule by <strong>Na⁺–glucose cotransporters</strong>. The carriers can saturate: maximum rate <span class="math inline">T_m</span> ≈ 2.0 mmol min⁻¹.</li>
+<li>With GFR = 0.125 L min⁻¹ and <span class="math inline">T_m</span> = 2.0 mmol min⁻¹:</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Plasma glucose</th>
+<th style="text-align: right;">Filtered load</th>
+<th style="text-align: right;">Reabsorbed</th>
+<th style="text-align: right;">Excreted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">8 mmol L⁻¹</td>
+<td style="text-align: right;">1.0 mmol min⁻¹</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;"><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16 mmol L⁻¹</td>
+<td style="text-align: right;">2.0 mmol min⁻¹</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;"><strong>0</strong> (threshold)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">24 mmol L⁻¹</td>
+<td style="text-align: right;">3.0 mmol min⁻¹</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;"><strong>1.0 mmol min⁻¹</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Above <span class="math inline">T_m</span>, glucose appears in urine (<strong>glycosuria</strong>) and takes water with it osmotically: the large urine volume and thirst of untreated diabetes mellitus.</li>
+</ul>
+<p><strong>The kidney recovers solutes. How does it recover water and make urine more concentrated than plasma?</strong></p>
+<aside class="notes">
+<p>Fasting plasma glucose is about 5 mmol L⁻¹, well below the threshold, so normally no glucose is excreted. Because nephrons differ in their individual Tm, glucose begins to appear in human urine from about 10 mmol L⁻¹, somewhat before the calculated threshold. Link back to A2: insulin failure raises plasma glucose; here we see the renal consequence. The osmotic diuresis bridges to water handling: urine volume depends on how much water follows the solutes, which is the subject of the next slides.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="building-the-medullary-gradient" class="slide level2">
+<h2>Building the medullary gradient</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The <strong>thick ascending limb</strong> pumps NaCl into the medulla but lets <strong>no water</strong> follow. The interstitium becomes hyperosmotic.</li>
+<li>The <strong>descending limb</strong> is water-permeable: water leaves, and the fluid inside concentrates to match.</li>
+<li>Flow in opposite directions in the two limbs (<strong>countercurrent multiplication</strong>) multiplies a small difference at each level into a large gradient.</li>
+<li><strong>Urea</strong> recycled from the collecting duct adds to the inner medulla.</li>
+<li>Gradient: <strong>300 mOsm L⁻¹ in the cortex → ~1,200 mOsm L⁻¹</strong> at the tip of the human medulla.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Animal</th>
+<th>Relative loop length</th>
+<th style="text-align: right;">Max urine (mOsm L⁻¹)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Beaver</td>
+<td>short</td>
+<td style="text-align: right;">~500</td>
+</tr>
+<tr class="even">
+<td>Human</td>
+<td>medium</td>
+<td style="text-align: right;">~1,200</td>
+</tr>
+<tr class="odd">
+<td>Kangaroo rat</td>
+<td>long</td>
+<td style="text-align: right;">~5,000</td>
+</tr>
+</tbody>
+</table>
+<p>Longer loops and a thicker medulla build a <strong>larger gradient</strong>.</p>
+</div></div>
+<p><strong>The gradient is there. What decides whether the collecting duct uses it?</strong></p>
+<aside class="notes">
+<p>The essential trick is differential permeability: one limb moves salt without water, the other moves water without salt. Each step only needs a modest difference (about 200 mOsm between ascending limb and interstitium); the countercurrent arrangement stacks these steps along the length of the loop. The vasa recta blood vessels follow the same hairpin shape, so they supply the medulla without washing the gradient away. The comparative table returns to the running example: the kangaroo rat’s long loops let it make urine about four times as concentrated as ours.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="adh-a-feedback-loop-that-opens-the-water-valve" class="slide level2 smaller">
+<h2>ADH: a feedback loop that opens the water valve</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li><strong>Sensor:</strong> osmoreceptors in the <strong>hypothalamus</strong> detect a 1–2 % rise in plasma osmolarity.</li>
+<li><strong>Messenger:</strong> <strong>ADH</strong> (antidiuretic hormone, vasopressin), made in the hypothalamus, released from the <strong>posterior pituitary</strong>.</li>
+<li><strong>Effector:</strong> ADH binds <strong>V2 receptors</strong> on collecting-duct cells; cAMP causes <strong>aquaporin-2</strong> to be inserted in the apical membrane.</li>
+<li>Water leaves the duct into the hyperosmotic medulla.</li>
+<li>Thirst is triggered in parallel.</li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-reveal="true" data-fig-width="5.5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  A["Dehydration:&lt;br/&gt;plasma osmolarity rises"] --&gt; B["Hypothalamic&lt;br/&gt;osmoreceptors"]
+  B --&gt; C["ADH released from&lt;br/&gt;posterior pituitary"]
+  C --&gt; D["Aquaporin-2 inserted&lt;br/&gt;in collecting duct"]
+  D --&gt; E["Water reabsorbed;&lt;br/&gt;small volume of concentrated urine"]
+  E --&gt;|"plasma osmolarity falls:&lt;br/&gt;less ADH (negative feedback)"| A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+<p><strong>How much difference does ADH make to urine volume?</strong></p>
+<aside class="notes">
+<p>This is the A1 negative-feedback loop with real parts: compare it with the temperature loop component by component. ADH does not change GFR and does not create water; it changes the water permeability of the last segment, so that the gradient built by the loop can be used. Without ADH the collecting duct is nearly impermeable and the dilute fluid from the distal tubule (about 100 mOsm) passes through as dilute urine. A fall in blood volume or pressure also increases ADH release. Exercise 6.1 asks for this sequence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-adh-is-worth-the-minimum-urine-volume" class="slide level2">
+<h2>What ADH is worth: the minimum urine volume</h2>
+<p><strong>Urine volume = solute to excrete ÷ urine osmolarity</strong></p>
+<p>Example: a person must excrete <strong>900 mOsm</strong> of solute (mostly urea and salts) per day.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th style="text-align: right;">Urine osmolarity</th>
+<th style="text-align: right;">Urine volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maximum ADH (human maximum)</td>
+<td style="text-align: right;">1,200 mOsm L⁻¹</td>
+<td style="text-align: right;"><strong>0.75 L day⁻¹</strong></td>
+</tr>
+<tr class="even">
+<td>No ADH (diabetes insipidus)</td>
+<td style="text-align: right;">100 mOsm L⁻¹</td>
+<td style="text-align: right;"><strong>9 L day⁻¹</strong></td>
+</tr>
+<tr class="odd">
+<td>Same load at the kangaroo rat’s maximum</td>
+<td style="text-align: right;">~5,000 mOsm L⁻¹</td>
+<td style="text-align: right;">0.18 L day⁻¹</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The <strong>solute load</strong> sets a minimum urine volume. Concentrating ability decides how small it can be.</li>
+<li>Diabetes insipidus: ADH is missing (central) or the kidney does not respond (nephrogenic). The result is a large volume of dilute urine and great thirst.</li>
+</ul>
+<p><strong>Much of that solute load is nitrogen from protein. In which form should it leave?</strong></p>
+<aside class="notes">
+<p>This turns the concentrating mechanism into a number. The same solute load needs twelve times more water without ADH. The kangaroo rat row shows why the long loop matters for a desert animal that gets most of its water from metabolism of dry seeds. Exercise 6.2 has the same calculation with a different solute load. Transition: urea is the largest single component of that solute, so the choice of nitrogenous waste is part of the water budget.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="nitrogenous-waste-a-waterenergy-trade-off" class="slide level2">
+<h2>Nitrogenous waste: a water–energy trade-off</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ammonia (NH₃)</th>
+<th>Urea</th>
+<th>Uric acid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Toxicity</td>
+<td>High</td>
+<td>Low</td>
+<td>Very low</td>
+</tr>
+<tr class="even">
+<td>Solubility in water</td>
+<td>High</td>
+<td>High</td>
+<td>Very low</td>
+</tr>
+<tr class="odd">
+<td>Water needed per g N</td>
+<td>~300–500 mL</td>
+<td>~50 mL</td>
+<td>~10 mL (excreted as a paste)</td>
+</tr>
+<tr class="even">
+<td>Energy cost of synthesis</td>
+<td>None</td>
+<td>Moderate (urea cycle, liver)</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Animals</td>
+<td><strong>Ammonotelic:</strong> teleosts, tadpoles, most aquatic invertebrates</td>
+<td><strong>Ureotelic:</strong> mammals, adult amphibians, sharks</td>
+<td><strong>Uricotelic:</strong> birds, most reptiles, insects</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Ammonia is cheap but toxic; it can only be used where water flushes it away, usually by diffusion across the gills.</li>
+<li>A frog switches from ammonia to urea at <strong>metamorphosis</strong>, when it leaves the water.</li>
+<li>Uric acid saves the most water but costs the most energy.</li>
+</ul>
+<p><strong>Why do all animals that develop in a shelled egg make uric acid?</strong></p>
+<aside class="notes">
+<p>Amino-acid breakdown produces ammonia; the question is whether to excrete it as is or convert it first. Read the table as a trade-off between water and energy. The tadpole-to-frog switch is the clearest example that the choice follows the water supply, not the taxonomic group. Exercise 7.2 asks students to classify animals; the rule is habitat plus lineage, with the three examples in the table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="uric-acid-the-egg-and-the-insect" class="slide level2 smaller">
+<h2>Uric acid: the egg and the insect</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>The shelled (cleidoic) egg</strong></p>
+<ul>
+<li>The egg is <strong>closed</strong>: wastes cannot leave until hatching.</li>
+<li>Urea would stay dissolved and reach toxic concentrations.</li>
+<li>Uric acid <strong>precipitates</strong>: stored as a solid, it is neither toxic nor osmotically active.</li>
+</ul>
+<p><strong>The insect: Malpighian tubules</strong></p>
+<ul>
+<li>No filtration: the tubules <strong>secrete K⁺</strong> actively, and water and solutes (including uric acid) follow, forming a fluid isosmotic to haemolymph.</li>
+<li>The <strong>rectum</strong> reabsorbs water, ions and useful solutes; uric acid precipitates and leaves with the faeces.</li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-reveal="true" data-fig-width="5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  A["K⁺ actively secreted&lt;br/&gt;into Malpighian tubule"] --&gt; B["Water and solutes&lt;br/&gt;(incl. uric acid) follow"]
+  B --&gt; C["Tubule fluid empties&lt;br/&gt;into hindgut"]
+  C --&gt; D["Rectum reabsorbs water,&lt;br/&gt;ions and useful solutes"]
+  D --&gt; E["Dry waste with&lt;br/&gt;precipitated uric acid"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+<p><strong>Same tasks as the nephron (remove waste, set ions, recover water), built from secretion instead of filtration.</strong></p>
+<aside class="notes">
+<p>Two cases where uric acid is the obvious answer. The cleidoic egg is the classic argument: a closed system cannot dilute or remove a soluble waste. The insect excretory system is a useful contrast with the nephron: the primary urine is made by active secretion of K⁺ rather than by pressure filtration, but the later steps are the same logic, a large flow of fluid followed by selective recovery. A desert locust’s rectum can extract nearly all the water, leaving dry pellets. Exercise 7.4 asks for this sequence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Osmolarity</td>
+<td>concentration × particles per formula unit; 0.10 M NaCl = 200 mOsm L⁻¹</td>
+</tr>
+<tr class="even">
+<td>Tonicity</td>
+<td>only non-penetrating solutes count; isosmotic ≠ isotonic</td>
+</tr>
+<tr class="odd">
+<td>Conformer / regulator</td>
+<td>follows the medium’s total osmolarity / holds its own constant</td>
+</tr>
+<tr class="even">
+<td>Freshwater teleost</td>
+<td>gains water, loses salt: dilute urine, active ion uptake at gills</td>
+</tr>
+<tr class="odd">
+<td>Marine teleost</td>
+<td>loses water, gains salt: drinks, gills secrete NaCl</td>
+</tr>
+<tr class="even">
+<td>Shark</td>
+<td>retains urea + TMAO, slightly hyperosmotic; rectal gland secretes NaCl</td>
+</tr>
+<tr class="odd">
+<td>Epithelial cell</td>
+<td>basolateral Na⁺/K⁺-ATPase (3 Na⁺ out, 2 K⁺ in); water follows solute</td>
+</tr>
+<tr class="even">
+<td>Renal balance</td>
+<td>excretion = GFR × P − reabsorption + secretion; GFR ≈ 125 mL min⁻¹</td>
+</tr>
+<tr class="odd">
+<td>Clearance</td>
+<td><span class="math inline">C = UV/P</span>; <span class="math inline">C_\text{inulin}</span> = GFR; below GFR = reabsorption, above = secretion</td>
+</tr>
+<tr class="even">
+<td>Concentrating urine</td>
+<td>loop builds 300 → 1,200 mOsm gradient; ADH inserts aquaporin-2</td>
+</tr>
+<tr class="odd">
+<td>Nitrogen waste</td>
+<td>ammonia (water), urea (moderate), uric acid (dry, costly)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next (A5 — Integration, movement and reproduction):</strong> ADH was released because the hypothalamus <em>sensed</em> a change. Who are the sensors, controllers and messengers of the body, and how do nerves, muscles and hormones carry out a response?</p>
+<p><a href="../../animal/water-excretion/index.html">Tutorial</a> · <a href="../../animal/water-excretion/exercise.html">Exercises</a> · <a href="../../animal/water-excretion/quiz.html">Quiz</a></p>
+<aside class="notes">
+<p>Read the table as the story: physical rules, aquatic solutions, the transporting cell, the kidney’s accounting, the concentrating mechanism and the nitrogen trade-off. Return once more to the three opening animals: the goldfish uses dilute urine and gill uptake, the cod drinks and secretes salt, the kangaroo rat uses long loops and ADH. The preview of A5 picks up the ADH loop: it needed a sensor, a controller and a messenger, and A5 is about exactly those.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

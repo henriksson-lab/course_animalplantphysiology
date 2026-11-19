@@ -137,6 +137,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -144,6 +147,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">A3 — Gas exchange and circulation</h1>
+  <p class="subtitle">Week 3 — Getting oxygen from the air to the mitochondrion</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -154,122 +158,1153 @@ Animal and Plant Physiology
 </div>
 
 </section>
-<section id="oxygen-must-reach-the-working-cell" class="slide level2">
-<h2>Oxygen must reach the working cell</h2>
-<p>Environmental medium → respiratory surface → internal transport → tissue → mitochondrion.</p>
-<p>Which steps are bulk flow, diffusion and binding?</p>
-</section>
-<section id="an-exchange-surface-has-physical-constraints" class="slide level2">
-<h2>An exchange surface has physical constraints</h2>
-<p><span class="math display">\dot M\propto A\Delta P/L.</span></p>
+<section id="about-this-lecture" class="slide level2">
+<h2>About this lecture</h2>
+<p>In A2 we measured metabolic rate as O₂ consumption, and saw that sustained work needs aerobic ATP. A person at rest uses about 250 mL of O₂ per minute. Start running, and within a minute that rises more than tenfold, to about 3 L min⁻¹. <strong>How does the body move ten times more oxygen from the air into working muscle mitochondria?</strong> We follow one O₂ molecule along the whole route.</p>
 <ul>
-<li>More area and gradient favour transfer.</li>
-<li>Greater thickness reduces it.</li>
-<li>Thin, moist surfaces need support and protection.</li>
+<li><strong>Physics of exchange:</strong> partial pressure, Fick’s law, ventilation and perfusion.</li>
+<li><strong>Exchange organs:</strong> fish gills, mammalian lungs, bird lungs, insect tracheae.</li>
+<li><strong>Oxygen in blood:</strong> haemoglobin, the dissociation curve and its shifts; CO₂ transport.</li>
+<li><strong>The pump and the pipes:</strong> the double circulation, vessels, pressure, resistance and flow.</li>
+<li><strong>Back to the runner:</strong> cardiac output and the Fick principle.</li>
 </ul>
+<aside class="notes">
+<p>The running example is a person starting to run; we return to them on the last content slide with real numbers. Link to A1: the three solutions (large surface, thin barrier, bulk flow) are exactly what we now examine organ by organ. Link to A2: the respirometer measured O₂ disappearing; now we ask how it got to the mitochondria. Mention that A4 will show the cost of this design: a thin, wet, permeable surface exchanges water and ions as well as gases.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="pressure-is-not-content" class="slide level2">
-<h2>Pressure is not content</h2>
+<section id="the-path-of-oxygen-bulk-flow-and-diffusion-alternate" class="slide level2">
+<h2>The path of oxygen: bulk flow and diffusion alternate</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Air] --&gt;|bulk flow:&lt;br/&gt;ventilation| B[Alveoli]
+  B --&gt;|diffusion| C[Lung&lt;br/&gt;capillary]
+  C --&gt;|bulk flow:&lt;br/&gt;circulation| D[Muscle&lt;br/&gt;capillary]
+  D --&gt;|diffusion| E[Mitochondrion]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <ul>
-<li>Partial pressure concerns the gas’s pressure contribution.</li>
-<li>Oxygen-binding pigments raise total oxygen content.</li>
-<li>Equal partial pressures need not mean equal oxygen amounts per litre.</li>
+<li><strong>Bulk flow</strong> moves the whole fluid, driven by a <strong>pressure</strong> difference. Fast over any distance, but needs a pump.</li>
+<li><strong>Diffusion</strong> moves molecules down a <strong>partial-pressure</strong> difference. Fast only over micrometres (A1: <span class="math inline">t \approx x^2/2D</span>).</li>
+<li>So every animal places its diffusion steps across <strong>thin</strong> barriers and uses bulk flow for the long distances.</li>
 </ul>
+<p><strong>What exactly drives the diffusion steps?</strong></p>
+<aside class="notes">
+<p>Exercise 1.1 asks students to classify these four steps. This is A1’s “three solutions” turned into a route. Ventilation and circulation are the two pumps; the alveolar wall and the muscle capillary wall are the two diffusion steps, each less than a few micrometres. Emphasise the different drivers: total pressure for bulk flow, partial pressure for diffusion. The next slide defines partial pressure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="renew-both-sides" class="slide level2">
-<h2>Renew both sides</h2>
+<section id="partial-pressure-drives-diffusion" class="slide level2">
+<h2>Partial pressure drives diffusion</h2>
+<p><strong>Partial pressure</strong> = the share of the total pressure due to one gas (Dalton’s law): <span class="math inline">P_{\rm O_2} = F_{\rm O_2} \times P_{\rm total}</span></p>
+<p>Dry air at sea level: <span class="math inline">0.209 \times 101.3\ \text{kPa} = 21.2\ \text{kPa}</span> (159 mmHg).</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Location</th>
+<th style="text-align: right;"><span class="math inline">P_{\rm O_2}</span> (kPa)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dry air</td>
+<td style="text-align: right;">21.2</td>
+</tr>
+<tr class="even">
+<td>Alveolar air</td>
+<td style="text-align: right;">13.3</td>
+</tr>
+<tr class="odd">
+<td>Arterial blood</td>
+<td style="text-align: right;">~13</td>
+</tr>
+<tr class="even">
+<td>Mixed venous blood</td>
+<td style="text-align: right;">5.3</td>
+</tr>
+<tr class="odd">
+<td>Mitochondria</td>
+<td style="text-align: right;">&lt; 1</td>
+</tr>
+</tbody>
+</table>
+<p>O₂ moves <strong>down this cascade</strong> at every diffusion step. In a liquid, <span class="math inline">P_{\rm O_2}</span> refers to the <strong>dissolved</strong> O₂ only. 1 kPa = 7.5 mmHg.</p>
+<p><strong>How fast does it cross each barrier?</strong></p>
+<aside class="notes">
+<p>Exercise 1.2 is the Dalton calculation. Alveolar P_O2 is lower than in air because inspired air is humidified and mixes with air already in the lungs, and O₂ is constantly removed. The mitochondria act as the sink that keeps the whole cascade going. Point out that diffusion follows partial pressure, not concentration: this matters later when blood with haemoglobin holds far more O₂ than water at the same P_O2.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ficks-law-of-diffusion" class="slide level2">
+<h2>Fick’s law of diffusion</h2>
+<p><span class="math display">\dot M \propto \frac{A\,\Delta P}{L}</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Change</th>
+<th>Effect on transfer rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Double the area <span class="math inline">A</span></td>
+<td>×2</td>
+</tr>
+<tr class="even">
+<td>Double the partial-pressure difference <span class="math inline">\Delta P</span></td>
+<td>×2</td>
+</tr>
+<tr class="odd">
+<td>Double the barrier thickness <span class="math inline">L</span></td>
+<td>×½</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Ventilation moves environmental medium.</li>
-<li>Perfusion supplies internal fluid.</li>
-<li>Both influence available gradients.</li>
-<li>More ventilation cannot resolve every perfusion limitation.</li>
+<li>Human lung: about <strong>100 m²</strong> of alveolar surface, an air–blood barrier about <strong>0.5 µm</strong> thick.</li>
+<li>Lung disease shows the law at work: <strong>emphysema</strong> destroys alveolar walls (smaller <span class="math inline">A</span>); <strong>pulmonary oedema</strong> thickens the barrier (larger <span class="math inline">L</span>).</li>
+<li>The cost: a large, thin, moist surface is fragile and <strong>loses water</strong>.</li>
 </ul>
+<p><strong>Diffusion uses up the gradient. What keeps <span class="math inline">\Delta P</span> high?</strong></p>
+<aside class="notes">
+<p>Exercise 1.3 combines several changes: multiply the factors (for example, twice the area, twice the thickness and half the ΔP give 2 × ½ / 2 = ½). The diffusion coefficient and solubility of the gas are held constant in the proportionality. The last bullet links forward to A4: a surface built to let O₂ through also lets water and ions through. Transition: as O₂ diffuses into the blood, the gas side would lose O₂ and the blood side would fill up, and the gradient would vanish without bulk flow on both sides.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="fish-gills-compare-locally" class="slide level2">
-<h2>Fish gills: compare locally</h2>
+<section id="ventilation-and-perfusion-keep-the-gradient" class="slide level2">
+<h2>Ventilation and perfusion keep the gradient</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Ventilation</th>
+<th>Perfusion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>What moves</td>
+<td>Air or water over the surface</td>
+<td>Blood through the surface</td>
+</tr>
+<tr class="even">
+<td>Effect</td>
+<td>Replaces O₂-depleted medium</td>
+<td>Removes O₂-loaded blood, brings O₂-poor blood</td>
+</tr>
+<tr class="odd">
+<td>Keeps…</td>
+<td><strong>External</strong> <span class="math inline">P_{\rm O_2}</span> high</td>
+<td><strong>Internal</strong> <span class="math inline">P_{\rm O_2}</span> low</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Water and blood commonly flow in opposite directions.</li>
-<li>Countercurrent organisation sustains local gradients.</li>
-<li>Oxygen still diffuses down each local gradient.</li>
-<li>Do not compare one stream’s inlet with the other’s outlet as a local pair.</li>
+<li>Both are <strong>bulk flow</strong>, both need a <strong>pump</strong> (breathing muscles, heart).</li>
+<li>Exchange is limited by whichever is lower: ventilating an unperfused alveolus achieves nothing.</li>
 </ul>
+<p><strong>Air and water are very different media to ventilate. How different?</strong></p>
+<aside class="notes">
+<p>Exercise 1.4. A respiratory surface has two sides and each needs renewing. Without ventilation, alveolar P_O2 would fall towards venous P_O2 within seconds; without perfusion, the blood in the capillary would equilibrate with alveolar air and no further uptake would occur. The matching of ventilation and perfusion is regulated locally in the lung. Transition to the comparison of media, which explains why fish and mammals have such different organs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="mammalian-and-bird-lungs" class="slide level2">
-<h2>Mammalian and bird lungs</h2>
+<section id="breathing-water-versus-breathing-air" class="slide level2">
+<h2>Breathing water versus breathing air</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Property</th>
+<th style="text-align: right;">Air</th>
+<th style="text-align: right;">Water (15 °C)</th>
+<th>Consequence for a water breather</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O₂ content</td>
+<td style="text-align: right;">~209 mL L⁻¹</td>
+<td style="text-align: right;">~7 mL L⁻¹</td>
+<td>~30× more medium to move per mL O₂</td>
+</tr>
+<tr class="even">
+<td>O₂ diffusion coefficient</td>
+<td style="text-align: right;">×1</td>
+<td style="text-align: right;">~10 000× lower</td>
+<td>Diffusion distances must be very short</td>
+</tr>
+<tr class="odd">
+<td>Density</td>
+<td style="text-align: right;">×1</td>
+<td style="text-align: right;">~800× higher</td>
+<td>Moving it is costly</td>
+</tr>
+<tr class="even">
+<td>Viscosity</td>
+<td style="text-align: right;">×1</td>
+<td style="text-align: right;">~50× higher</td>
+<td>Moving it is costly</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Mammals: tidal flow through shared conducting routes; alveolar exchange.</li>
-<li>Birds: exchange lungs and ventilating air sacs have different roles.</li>
-<li>Air sacs are not the principal exchange surface.</li>
-<li>Anatomical names do not guarantee identical flow arrangements.</li>
+<li>A fish must pump a dense, viscous medium that holds little O₂.</li>
+<li>So it moves water <strong>in one direction</strong> over the gills, rather than in and out, and extracts as much O₂ as possible from each litre.</li>
+<li>Air breathers can afford <strong>tidal</strong> ventilation: the medium is light and rich in O₂.</li>
 </ul>
+<p><strong>How does a gill extract so much from so little?</strong></p>
+<aside class="notes">
+<p>This slide explains the design differences on the next four slides from first principles. Water at the same P_O2 as air carries about thirty times less O₂ because O₂ is poorly soluble. Ventilating water costs a fish a substantial share of its resting metabolism; for a resting mammal, breathing costs only a few per cent. Unidirectional flow avoids having to stop and reverse a heavy column of water. A1’s diffusion numbers also return: diffusion in water is slow, so gill lamellae are extremely thin.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="an-insect-is-a-useful-counterexample" class="slide level2">
-<h2>An insect is a useful counterexample</h2>
+<section id="fish-gills-countercurrent-exchange" class="slide level2">
+<h2>Fish gills: countercurrent exchange</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
 <ul>
-<li>Tracheae and finer tracheoles bring gases close to tissues.</li>
-<li>Diffusion and ventilation contribute.</li>
-<li>Haemolymph generally carries less of the oxygen-delivery task than vertebrate blood.</li>
+<li>Gill arches → filaments → <strong>secondary lamellae</strong>, the exchange surface.</li>
+<li>Water flows <strong>one way</strong>: mouth → gills → operculum.</li>
+<li>Blood in the lamellae flows <strong>opposite</strong> to the water.</li>
 </ul>
-</section>
-<section id="haemoglobin-loading-and-unloading" class="slide level2">
-<h2>Haemoglobin loading and unloading</h2>
+<p>Water flows 1 → 4; blood flows 4 → 1:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Position</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Water <span class="math inline">P_{\rm O_2}</span> (kPa)</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td>Blood <span class="math inline">P_{\rm O_2}</span> (kPa)</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td>Difference</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
 <ul>
-<li>Saturation: fraction of sites occupied.</li>
-<li>Content: oxygen amount per blood volume.</li>
-<li>Affinity depends on conditions including pH, temperature and CO₂.</li>
-<li>Lower affinity at a given pressure can favour tissue unloading.</li>
+<li>Blood <strong>enters</strong> at 2 kPa (position 4) and <strong>leaves</strong> at 17 kPa (position 1).</li>
+<li>Water enters at 20 kPa and leaves at 5 kPa.</li>
+<li>At every position O₂ diffuses <strong>from water to blood</strong>, down a local gradient. Nothing moves uphill.</li>
+<li>A gradient exists <strong>along the whole lamella</strong>, so the blood leaves with a higher <span class="math inline">P_{\rm O_2}</span> than the water leaving.</li>
+<li>Fish extract up to <strong>80 %</strong> of the O₂ in the water; a mammal removes about 25 % of the O₂ in each breath.</li>
 </ul>
+</div></div>
+<p><strong>Would flowing the same direction work as well?</strong></p>
+<aside class="notes">
+<p>Exercise 2.2 has a table of this form; students must read the inlet and outlet of each stream correctly. Water enters at position 1, blood enters at position 4. The key observation is the constant local difference: wherever we look, water is slightly richer than the blood beside it. Exercise 2.1a: the exchange structure is the secondary lamella. The next slide shows the co-current alternative with the same inlets.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="carbon-dioxide-links-gas-and-acidbase-balance" class="slide level2">
-<h2>Carbon dioxide links gas and acid–base balance</h2>
+<section id="countercurrent-versus-co-current" class="slide level2">
+<h2>Countercurrent versus co-current</h2>
+<p>Same inlets (water 20 kPa, blood 2 kPa), both flowing 1 → 4:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Position</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Water <span class="math inline">P_{\rm O_2}</span> (kPa)</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td>Blood <span class="math inline">P_{\rm O_2}</span> (kPa)</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td>Difference</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Co-current</th>
+<th>Countercurrent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gradient along the surface</td>
+<td>large at the start, <strong>zero</strong> at the end</td>
+<td><strong>constant</strong></td>
+</tr>
+<tr class="even">
+<td>Best possible blood outlet</td>
+<td>equal to the water <strong>outlet</strong> (here 11 kPa)</td>
+<td>close to the water <strong>inlet</strong> (here 17 kPa)</td>
+</tr>
+</tbody>
+</table>
+<p>The same principle conserves heat in a bird’s or mammal’s leg (A2) and concentrates urine in the kidney (A4).</p>
+<p><strong>Air breathers do not need this. How does a mammalian lung work?</strong></p>
+<aside class="notes">
+<p>In co-current flow, the two streams approach a common P_O2 and exchange stops; the blood can at most reach the P_O2 of the water leaving (exercise 2.2d). Countercurrent flow keeps the two streams out of equilibrium along the entire length. Connect to A2’s countercurrent heat exchange in limbs, and preview A4’s loop of Henle, which uses a related arrangement. Transition to the lung.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mammalian-lungs-tidal-ventilation" class="slide level2">
+<h2>Mammalian lungs: tidal ventilation</h2>
 <ul>
-<li>CO₂ returns dissolved, bound and as bicarbonate.</li>
-<li>Ventilation changes CO₂ loss.</li>
-<li>Tissue production, transport and lung exchange are connected.</li>
-<li>“More breathing is always better” is not a physiological explanation.</li>
+<li>Trachea → bronchi → bronchioles → <strong>alveoli</strong>: about 300–500 million of them, ~100 m² in total.</li>
+<li><strong>Tidal:</strong> air flows in and out through the <strong>same</strong> airways.</li>
+<li>The conducting airways do not exchange gas: they are <strong>anatomical dead space</strong>, about 150 mL.</li>
+<li>Resting breath (tidal volume) ~500 mL, 12 breaths per minute:</li>
 </ul>
+<p><span class="math display">\text{alveolar ventilation} = (500-150)\ \text{mL} \times 12\ \text{min}^{-1} = 4.2\ \text{L min}^{-1}</span></p>
+<ul>
+<li>Fresh air mixes with stale air left in the lungs, so alveolar <span class="math inline">P_{\rm O_2}</span> (13.3 kPa) stays well below that of air (21.2 kPa).</li>
+</ul>
+<p><strong>Is tidal flow the only way to ventilate a lung?</strong></p>
+<aside class="notes">
+<p>Exercise 2.3a and 2.3d. Each breath, the last 150 mL inhaled stays in the airways and is breathed out unchanged. That is why slow deep breathing ventilates the alveoli more effectively than fast shallow breathing at the same total ventilation: 250 mL breaths at 24 per minute give only (250 − 150) × 24 = 2.4 L min⁻¹. Exercise 2.1b: exchange occurs in the alveoli. Tidal ventilation is the weakness the bird lung avoids.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="trace-the-mammalian-circuit" class="slide level2">
-<h2>Trace the mammalian circuit</h2>
-<p>Systemic veins → right heart → pulmonary arteries → lungs → pulmonary veins → left heart → systemic arteries → tissues.</p>
-<p>Artery = away from heart. Vein = towards heart.</p>
+<section id="birds-and-insects-two-other-solutions" class="slide level2">
+<h2>Birds and insects: two other solutions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Bird lung</strong></p>
+<ul>
+<li>Small, rigid lungs with <strong>parabronchi</strong>; exchange in <strong>air capillaries</strong> (3–10 µm) branching from them.</li>
+<li><strong>Air sacs</strong> are bellows: they ventilate the lung but do <strong>not</strong> exchange gas.</li>
+<li>Air passes through the parabronchi in <strong>one direction</strong>, during both inspiration and expiration (two breath cycles per parcel of air).</li>
+<li>No dead space in the exchange region; blood flows across the air stream (<strong>cross-current</strong>).</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Insect tracheal system</strong></p>
+<ul>
+<li><strong>Spiracles</strong> → <strong>tracheae</strong> → <strong>tracheoles</strong> (&lt; 1 µm), ending within a few µm of mitochondria.</li>
+<li>O₂ travels in the <strong>gas phase</strong> almost to the cell: diffusion in air is ~10 000× faster than in water.</li>
+<li>Active insects ventilate by pumping the abdomen.</li>
+<li><strong>Haemolymph carries little O₂</strong>; the circulation transports nutrients and wastes.</li>
+<li>Spiracles close to limit water loss.</li>
+</ul>
+</div></div>
+<p><strong>In vertebrates, blood carries the O₂. But O₂ dissolves poorly in water. How does blood hold enough?</strong></p>
+<aside class="notes">
+<p>Exercise 2.1c, 2.1d, 2.3b and 2.3c. The bird lung gets around the dead-space problem of tidal breathing: the lung itself always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle. The insect is A1’s other solution: skip the blood and bring air to the tissue. The limit is the diffusion distance along the tracheae, which is one reason insects stay small. Transition back to vertebrates and the problem of carrying O₂ in a watery fluid.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="haemoglobin-pressure-saturation-and-content" class="slide level2">
+<h2>Haemoglobin: pressure, saturation and content</h2>
+<p>Plasma dissolves only ~3 mL O₂ L⁻¹ at arterial <span class="math inline">P_{\rm O_2}</span>. Haemoglobin raises this about 65-fold.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th>Meaning</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">P_{\rm O_2}</span></td>
+<td>Pressure of the <strong>dissolved</strong>, unbound O₂</td>
+<td>kPa or mmHg</td>
+</tr>
+<tr class="even">
+<td><strong>Saturation</strong></td>
+<td>% of haemoglobin O₂-binding sites occupied</td>
+<td>%</td>
+</tr>
+<tr class="odd">
+<td><strong>O₂ content</strong></td>
+<td>Total O₂ (bound + dissolved) per volume of blood</td>
+<td>mL O₂ L⁻¹</td>
+</tr>
+</tbody>
+</table>
+<p>Content = [Hb] × 1.34 mL O₂ g⁻¹ × saturation:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Blood</th>
+<th style="text-align: right;">[Hb] (g L⁻¹)</th>
+<th style="text-align: right;">Saturation</th>
+<th style="text-align: right;">Content (mL O₂ L⁻¹)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Normal, fully saturated</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">100 %</td>
+<td style="text-align: right;">201</td>
+</tr>
+<tr class="even">
+<td>Normal, mixed venous</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">75 %</td>
+<td style="text-align: right;">151</td>
+</tr>
+<tr class="odd">
+<td>Anaemia, arterial</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">98 %</td>
+<td style="text-align: right;">131</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anaemia:</strong> same <span class="math inline">P_{\rm O_2}</span>, same saturation, <strong>less content</strong>.</p>
+<aside class="notes">
+<p>Exercises 3.1 and 3.2. The three quantities are the most common source of confusion in this unit. P_O2 is set by the gas the blood equilibrated with; saturation is set by P_O2 through the dissociation curve; content then depends on how much haemoglobin there is. The anaemic patient has normal arterial P_O2 and saturation, because their lungs work, but each litre of blood carries a third less O₂. The 1.34 mL per gram is the maximum binding capacity. Transition: how does saturation depend on P_O2?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-dissociation-curve-is-sigmoid" class="slide level2">
+<h2>The dissociation curve is sigmoid</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">P_{\rm O_2}</span> (kPa)</th>
+<th style="text-align: right;">Saturation</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">13.3</td>
+<td style="text-align: right;">~98 %</td>
+<td>Arterial blood leaving the lung</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">~90 %</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.3</td>
+<td style="text-align: right;">~75 %</td>
+<td>Mixed venous blood at rest</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">50 %</td>
+<td><span class="math inline">P_{50}</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2.7</td>
+<td style="text-align: right;">~35 %</td>
+<td>Venous blood from exercising muscle</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Why S-shaped?</strong> Haemoglobin has <strong>four subunits</strong> that bind O₂ <strong>cooperatively</strong>: each bound O₂ raises the affinity of the others.</li>
+<li><strong>Flat top:</strong> saturation stays high even if lung <span class="math inline">P_{\rm O_2}</span> falls a little (e.g.&nbsp;at moderate altitude).</li>
+<li><strong>Steep middle:</strong> a small fall in tissue <span class="math inline">P_{\rm O_2}</span> releases much O₂.</li>
+<li>At rest only ~25 % of the O₂ is unloaded: a large <strong>reserve</strong> for exercise.</li>
+</ul>
+<p><strong>Can the curve itself move to help the working muscle?</strong></p>
+<aside class="notes">
+<p>Sketch the curve with these points on the board. Exercise 3.3 asks why it is sigmoid: cooperative binding among four subunits. Myoglobin, with one subunit, gives a hyperbolic curve that lies to the left, so it takes O₂ from haemoglobin in muscle. The reserve is important for the runner: from 75 % saturation at rest, venous blood from hard-working muscle falls to about 35 %, so each litre of blood delivers more than twice as much O₂.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="shifting-the-curve" class="slide level2">
+<h2>Shifting the curve</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Change</th>
+<th>Shift</th>
+<th>Affinity</th>
+<th>O₂ unloading in tissues</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>↑ <span class="math inline">P_{\rm CO_2}</span></td>
+<td>Right</td>
+<td>Lower</td>
+<td>Favoured</td>
+</tr>
+<tr class="even">
+<td>↓ pH (<strong>Bohr effect</strong>)</td>
+<td>Right</td>
+<td>Lower</td>
+<td>Favoured</td>
+</tr>
+<tr class="odd">
+<td>↑ Temperature</td>
+<td>Right</td>
+<td>Lower</td>
+<td>Favoured</td>
+</tr>
+<tr class="even">
+<td>↑ 2,3-BPG in red cells</td>
+<td>Right</td>
+<td>Lower</td>
+<td>Favoured</td>
+</tr>
+<tr class="odd">
+<td>The opposite of each</td>
+<td>Left</td>
+<td>Higher</td>
+<td>Reduced</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A <strong>right shift</strong> means less O₂ bound at a given <span class="math inline">P_{\rm O_2}</span>, so more is released. The O₂ goes to the tissue; it is not lost.</li>
+<li>Working muscle is warm, acidic and high in CO₂: <strong>three of the four push right</strong> exactly where O₂ is needed.</li>
+<li>Left-shifted pigments load O₂ at low <span class="math inline">P_{\rm O_2}</span>: fetal haemoglobin, myoglobin.</li>
+</ul>
+<p><strong>Working muscle makes CO₂. How does the blood carry it away?</strong></p>
+<aside class="notes">
+<p>Exercise 3.4. Teach the rule as “the conditions in an active tissue shift the curve to the right”, which removes the need to memorise four separate facts. P50 rises with a right shift. Fetal haemoglobin binds 2,3-BPG poorly, so it sits to the left of maternal haemoglobin and O₂ moves from mother to fetus across the placenta. 2,3-BPG in red cells rises over days at high altitude, an example of A1’s acclimatisation. Transition: the CO₂ that shifts the curve has to be removed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="carbon-dioxide-transport" class="slide level2">
+<h2>Carbon dioxide transport</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Form</th>
+<th style="text-align: right;">Share of CO₂ in blood</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Bicarbonate</strong> (HCO₃⁻)</td>
+<td style="text-align: right;">~70 %</td>
+</tr>
+<tr class="even">
+<td>Bound to haemoglobin (<strong>carbamino</strong> compounds)</td>
+<td style="text-align: right;">~20 %</td>
+</tr>
+<tr class="odd">
+<td><strong>Dissolved</strong> CO₂</td>
+<td style="text-align: right;">~10 %</td>
+</tr>
+</tbody>
+</table>
+<p>In red blood cells, <strong>carbonic anhydrase</strong> catalyses the first step:</p>
+<p><span class="math display">\mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons H^+ + HCO_3^-}</span></p>
+<ul>
+<li>HCO₃⁻ leaves the red cell in exchange for Cl⁻ (<strong>chloride shift</strong>).</li>
+<li>The H⁺ binds to haemoglobin, helping it release O₂ (Bohr effect).</li>
+<li>In the lung, the reactions run in reverse and CO₂ is breathed out.</li>
+<li>So <strong>ventilation sets blood pH</strong>: breathing faster lowers <span class="math inline">P_{\rm CO_2}</span> and raises pH.</li>
+</ul>
+<p><strong>Gases are loaded and unloaded. Now: what moves the blood?</strong></p>
+<aside class="notes">
+<p>Exercise 3.5. Carbonic anhydrase is one of the fastest enzymes known; without it the hydration of CO₂ would be far too slow for the short time blood spends in a capillary. The reaction links gas transport to acid–base balance: CO₂ is an acid that the lungs can remove within minutes, while the kidney adjusts bicarbonate over hours to days (A4). Transition from the gases to the pump and the circuit.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-mammalian-double-circulation" class="slide level2">
+<h2>The mammalian double circulation</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  RH[Right atrium →&lt;br/&gt;right ventricle] --&gt;|pulmonary arteries| L[Lung capillaries]
+  L --&gt;|pulmonary veins| LH[Left atrium →&lt;br/&gt;left ventricle]
+  LH --&gt;|systemic arteries| T[Tissue capillaries]
+  T --&gt;|systemic veins| RH
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Arteries</strong> carry blood <strong>away</strong> from the heart; <strong>veins</strong> carry it <strong>towards</strong> the heart. Oxygenation does not define them: the <strong>pulmonary arteries carry deoxygenated blood</strong>.</li>
+<li><strong>Valves</strong> prevent backflow: atrioventricular valves (tricuspid, mitral) and semilunar valves (pulmonary, aortic).</li>
+<li>Arterial pressure ~120/80 mmHg in the systemic circuit, ~25/8 mmHg in the pulmonary circuit: the left ventricle generates about five times the pressure of the right.</li>
+</ul>
+<p><strong>Is this the only way to build a circulation?</strong></p>
+<aside class="notes">
+<p>Exercise 4.1 is the order of this loop, and 4.2a and 4.2b are the artery definition and valves. Each side of the heart pumps the same volume per minute, but the left side generates about five times the pressure, because the systemic circuit is long and has high resistance while the lung circuit is short and must keep pressure low to avoid fluid leaking into the alveoli. Transition: compare with fish and with invertebrates.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="comparing-circulations" class="slide level2">
+<h2>Comparing circulations</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Animal</th>
+<th>Circuit</th>
+<th>Heart</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fish</td>
+<td><strong>Single:</strong> heart → gills → body → heart</td>
+<td>1 atrium, 1 ventricle</td>
+</tr>
+<tr class="even">
+<td>Amphibian</td>
+<td>Double, partly mixed</td>
+<td>2 atria, 1 ventricle</td>
+</tr>
+<tr class="odd">
+<td>Mammal, bird</td>
+<td><strong>Double</strong>, fully separated</td>
+<td>2 atria, 2 ventricles</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Open</strong> circulation</th>
+<th><strong>Closed</strong> circulation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Haemolymph leaves vessels and flows through body spaces (<strong>sinuses</strong>)</td>
+<td>Blood stays in vessels; exchange across capillaries</td>
+</tr>
+<tr class="even">
+<td>Arthropods (grasshopper), most molluscs (mussel)</td>
+<td>Annelids (earthworm), cephalopods (octopus), vertebrates (frog)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>“Open” does <strong>not</strong> mean motionless: the heart pumps haemolymph, which returns through openings (ostia).</li>
+</ul>
+<p><strong>In a closed circulation, how do the vessels differ along the circuit?</strong></p>
+<aside class="notes">
+<p>Exercises 4.2c, 4.2d and 4.3. In a fish, blood passes through the heart once per circuit, and much of the pressure is lost in the gill capillaries, so blood reaches the body at low pressure. The double circulation solves the fish’s problem: blood returns to the heart after the lungs and is re-pressurised before going to the body. Cephalopods are the instructive exception among molluscs: active predators with a closed system and extra hearts for the gills. The open system works for insects partly because their O₂ does not depend on the blood (previous slides). Transition to vessel structure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="arteries-capillaries-and-veins" class="slide level2">
+<h2>Arteries, capillaries and veins</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Artery</th>
+<th>Capillary</th>
+<th>Vein</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Direction</td>
+<td>Away from the heart</td>
+<td>Between arterioles and venules</td>
+<td>Towards the heart</td>
+</tr>
+<tr class="even">
+<td>Wall</td>
+<td>Thick: elastic tissue and smooth muscle</td>
+<td><strong>Endothelium only</strong>, one cell thick, 5–10 µm wide</td>
+<td>Thin, little muscle; <strong>valves</strong> in limb veins</td>
+</tr>
+<tr class="odd">
+<td>Pressure</td>
+<td>High, pulsatile (aorta ~95 mmHg mean)</td>
+<td>~35 → 15 mmHg</td>
+<td>Lowest (&lt; 10 mmHg)</td>
+</tr>
+<tr class="even">
+<td>Function</td>
+<td>Carry blood under pressure</td>
+<td><strong>Exchange</strong> with tissues</td>
+<td>Return blood; hold ~65 % of blood volume</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Elastic arteries stretch in systole and recoil in diastole, smoothing flow.</li>
+<li>Venous return is helped by valves and by the <strong>skeletal muscle pump</strong>.</li>
+<li>In a section, a collapsed vein can look like a slit: identify vessels by <strong>wall layers</strong>, not outline (A1).</li>
+</ul>
+<p><strong>Pressure drops along the circuit. What sets how much flows where?</strong></p>
+<aside class="notes">
+<p>Exercise 4.4 is this table. Relate each wall to its job and its tissue types from A1: elastic connective tissue and smooth muscle in the artery, a single squamous endothelium in the capillary (A1’s thin barrier), thin walls and large lumens in veins, which act as a reservoir. The capillary is where the diffusion step of the O₂ route happens. Transition to the flow equation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="pressure-resistance-and-flow" class="slide level2">
 <h2>Pressure, resistance and flow</h2>
-<p><span class="math display">Q=\Delta P/R.</span></p>
+<p><span class="math display">Q = \frac{\Delta P}{R} \qquad\qquad R \propto \frac{1}{r^4}</span></p>
 <ul>
-<li>A pressure difference drives bulk flow.</li>
-<li>Vessel calibre affects resistance and distribution.</li>
-<li>Many vessels in parallel differ from one narrow tube.</li>
+<li>Flow <span class="math inline">Q</span> is driven by a pressure difference <span class="math inline">\Delta P</span> and opposed by resistance <span class="math inline">R</span>, like current in Ohm’s law.</li>
+<li>Resistance depends steeply on radius (Poiseuille):</li>
 </ul>
-</section>
-<section id="read-vessel-walls-as-functional-evidence" class="slide level2">
-<h2>Read vessel walls as functional evidence</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Radius</th>
+<th style="text-align: right;">Resistance</th>
+<th style="text-align: right;">Flow at constant <span class="math inline">\Delta P</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">r</span></td>
+<td style="text-align: right;"><span class="math inline">R</span></td>
+<td style="text-align: right;"><span class="math inline">Q</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">r/2</span></td>
+<td style="text-align: right;"><span class="math inline">16R</span></td>
+<td style="text-align: right;"><span class="math inline">Q/16</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">1.19\,r</span></td>
+<td style="text-align: right;"><span class="math inline">R/2</span></td>
+<td style="text-align: right;"><span class="math inline">2Q</span></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Muscular arterial walls withstand/control pressure-driven flow.</li>
-<li>Thin capillary barriers favour exchange.</li>
-<li>Veins hold substantial volume at lower pressure.</li>
-<li>Section orientation and collapse affect appearance.</li>
+<li><strong>Arterioles</strong> have smooth muscle and control resistance, so they decide <strong>which tissues get the blood</strong>.</li>
+<li>In exercise, muscle arterioles dilate and gut arterioles constrict.</li>
 </ul>
+<p><strong>So how much blood does the heart deliver, and how much O₂ does it bring?</strong></p>
+<aside class="notes">
+<p>Exercise 4.5. Doubling resistance at constant pressure halves flow. Because resistance goes as 1/r⁴, a small change in arteriole radius has a large effect: a 19 % dilation doubles flow. This is why arterioles, not the heart, distribute blood among organs. Capillaries are individually narrow, but there are billions in parallel, so their combined resistance is lower than that of the arterioles. Transition to cardiac output.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="calculate-delivery-and-use" class="slide level2">
-<h2>Calculate delivery and use</h2>
-<p>Output = heart rate × stroke volume.</p>
-<p>Oxygen use = blood flow × (arterial − venous oxygen content).</p>
-<p>5 L min⁻¹ × 50 mL O₂ L⁻¹ = <strong>250 mL O₂ min⁻¹</strong>.</p>
+<section id="cardiac-output-and-the-fick-principle" class="slide level2">
+<h2>Cardiac output and the Fick principle</h2>
+<p><strong>Cardiac output</strong> = heart rate × stroke volume</p>
+<p><strong>O₂ consumption</strong> = cardiac output × (arterial − venous O₂ content)</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Rest</th>
+<th style="text-align: right;">Running</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Heart rate (beats min⁻¹)</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">170</td>
+</tr>
+<tr class="even">
+<td>Stroke volume (L)</td>
+<td style="text-align: right;">0.070</td>
+<td style="text-align: right;">0.110</td>
+</tr>
+<tr class="odd">
+<td><strong>Cardiac output</strong> (L min⁻¹)</td>
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">18.7</td>
+</tr>
+<tr class="even">
+<td>Arterial − venous O₂ (mL L⁻¹)</td>
+<td style="text-align: right;">200 − 150 = 50</td>
+<td style="text-align: right;">200 − 50 = 150</td>
+</tr>
+<tr class="odd">
+<td><strong>O₂ consumption</strong> (mL min⁻¹)</td>
+<td style="text-align: right;">245</td>
+<td style="text-align: right;">2 805</td>
+</tr>
+</tbody>
+</table>
+<p>The Fick principle uses <strong>content</strong>, not <span class="math inline">P_{\rm O_2}</span>.</p>
+<p><strong>How does the body produce that elevenfold increase?</strong></p>
+<aside class="notes">
+<p>Exercise 4.6 is the same calculation with other numbers. The product is a mass balance: every litre of blood passing through the tissues gives up the difference between arterial and venous content, so total uptake is flow times that difference. At rest this matches the 250 mL min⁻¹ from the opening slide. Ask students which factors increased: cardiac output nearly fourfold and extraction threefold. The next slide puts all the mechanisms from today together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="compare-whole-circuits" class="slide level2">
-<h2>Compare whole circuits</h2>
-<ul>
-<li>Fish: heart → gills → systemic tissues → heart.</li>
-<li>Mammal: pulmonary and systemic circuits are separated.</li>
-<li>Open circulations still have directed fluid movement.</li>
-<li>Count transport constraints, not just chambers.</li>
-</ul>
+<section id="back-to-the-runner" class="slide level2">
+<h2>Back to the runner</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step on the O₂ route</th>
+<th>Change during running</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventilation</td>
+<td>Deeper and faster breathing: ~6 → ~100 L min⁻¹</td>
+</tr>
+<tr class="even">
+<td>Lung diffusion</td>
+<td>More lung capillaries perfused: larger exchange area</td>
+</tr>
+<tr class="odd">
+<td>Arterial blood</td>
+<td>Stays ~98 % saturated (flat top of the curve)</td>
+</tr>
+<tr class="even">
+<td>Heart</td>
+<td>Heart rate 70 → 170, stroke volume up: cardiac output ~4×</td>
+</tr>
+<tr class="odd">
+<td>Distribution</td>
+<td>Muscle arterioles dilate, gut arterioles constrict</td>
+</tr>
+<tr class="even">
+<td>Unloading</td>
+<td>Warm, acidic, CO₂-rich muscle shifts the curve right; venous saturation falls to ~35 %</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> O₂ consumption rises ~11× from the same 150 g L⁻¹ of haemoglobin.</p>
+<p><strong>The thin, wet surfaces that let O₂ in also let water and ions in and out. That is A4.</strong></p>
+<aside class="notes">
+<p>Close the loop to the opening question. Each row is one of today’s slides, so this is also a revision map. The two biggest contributions are cardiac output and extraction; ventilation rises much more than needed for O₂ and is driven largely by CO₂ and pH. Bridge to A4: the gill and lung surfaces we built today are large, thin and permeable, so a fish in fresh water gains water and loses ions across them, and a mammal loses water with every breath.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="practice" class="slide level2">
-<h2>Practice</h2>
-<p><a href="../../animal/gas-circulation/index.html">Tutorial and source links</a> · <a href="../../animal/gas-circulation/exercise.html">Exercises</a> · <a href="../../animal/gas-circulation/quiz.html">Quiz</a></p>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O₂ route</td>
+<td>bulk flow (ventilation) → diffusion → bulk flow (circulation) → diffusion</td>
+</tr>
+<tr class="even">
+<td>Partial pressure</td>
+<td><span class="math inline">P_{\rm O_2}=F_{\rm O_2}\times P_{\rm total}</span>; air 21.2 kPa, alveoli 13.3 kPa</td>
+</tr>
+<tr class="odd">
+<td>Fick’s law</td>
+<td><span class="math inline">\dot M\propto A\,\Delta P/L</span></td>
+</tr>
+<tr class="even">
+<td>Ventilation, perfusion</td>
+<td>keep external <span class="math inline">P_{\rm O_2}</span> high and internal <span class="math inline">P_{\rm O_2}</span> low</td>
+</tr>
+<tr class="odd">
+<td>Exchange organs</td>
+<td>fish: lamellae (countercurrent); mammal: alveoli (tidal); bird: parabronchi (one-way); insect: tracheoles</td>
+</tr>
+<tr class="even">
+<td>Blood O₂</td>
+<td>content = [Hb] × 1.34 × saturation; differs from <span class="math inline">P_{\rm O_2}</span></td>
+</tr>
+<tr class="odd">
+<td>Dissociation curve</td>
+<td>sigmoid (cooperative binding); right shift with ↑CO₂, ↓pH, ↑T, ↑2,3-BPG</td>
+</tr>
+<tr class="even">
+<td>CO₂ transport</td>
+<td>~70 % HCO₃⁻, ~20 % carbamino, ~10 % dissolved; carbonic anhydrase</td>
+</tr>
+<tr class="odd">
+<td>Circulation</td>
+<td>artery = away from heart; double (mammal) vs single (fish); open vs closed</td>
+</tr>
+<tr class="even">
+<td>Flow</td>
+<td><span class="math inline">Q=\Delta P/R</span>, <span class="math inline">R\propto 1/r^4</span>; arterioles distribute flow</td>
+</tr>
+<tr class="odd">
+<td>Fick principle</td>
+<td>O₂ use = HR × SV × (arterial − venous O₂ content)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next (A4 — Water, ions and excretion):</strong> why a fish surrounded by water must still regulate its water, how kidneys filter and reabsorb, and how animals get rid of nitrogen.</p>
+<p><a href="../../animal/gas-circulation/index.html">Tutorial</a> · <a href="../../animal/gas-circulation/exercise.html">Exercises</a> · <a href="../../animal/gas-circulation/quiz.html">Quiz</a></p>
+<aside class="notes">
+<p>Read the table in the order of the O₂ route: physics of exchange, the organs, the blood, the pump and pipes, and the whole-body balance. The preview of A4 picks up the cost of permeable exchange surfaces: osmotic water movement, ion transport in gills and kidneys, and nitrogen excretion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

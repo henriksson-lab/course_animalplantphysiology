@@ -144,6 +144,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">A2 — Nutrition, energy and temperature</h1>
+  <p class="subtitle">Week 2 — What an animal does with its food</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -154,163 +155,915 @@ Animal and Plant Physiology
 </div>
 
 </section>
-<section id="equal-food-mass-unequal-outcome" class="slide level2">
-<h2>Equal food mass, unequal outcome?</h2>
-<div class="columns">
-<div class="column" style="width:42%;">
+<section id="about-this-lecture" class="slide level2">
+<h2>About this lecture</h2>
+<p>In A1 we saw how a body brings O₂ and food within reach of every cell. Today we ask <strong>what the cells do with them</strong>. A 25 g mouse eats about 4 g of food (roughly 55 kJ) every day. A lizard of the same mass, at the same body temperature, lives on about a tenth of that. <strong>Where does the mouse’s food energy go, and why does it need so much more?</strong></p>
 <ul>
-<li>Intake differs from absorption.</li>
-<li>Essential nutrients and energy are separate constraints.</li>
-<li>Equal mass need not produce an equal outcome.</li>
+<li><strong>From food to fuel:</strong> ingestion, digestion and absorption, and the enzymes and surfaces that do the work.</li>
+<li><strong>Plant food:</strong> why herbivores need microbes, and where they keep them.</li>
+<li><strong>Energy accounting:</strong> the energy budget, and energy versus power.</li>
+<li><strong>Turning fuel into ATP:</strong> aerobic and anaerobic supply, and how we measure metabolic rate from O₂ consumption.</li>
+<li><strong>Temperature:</strong> <span class="math inline">Q_{10}</span>, ectotherms and endotherms, heat exchange and the cost of keeping warm.</li>
 </ul>
-</div><div class="column" style="width:58%;">
-<p><img data-src="figures/food-and-absorption.svg" style="width:100.0%" alt="Equal food mass can supply different absorbable fractions." height="360"></p>
-</div></div>
+<aside class="notes">
+<p>Open with the mouse and the lizard, and come back to them on the last content slide. The lecture follows the food: into the gut, across the epithelium, into the energy budget, into ATP, and finally out as heat. The temperature part explains the tenfold difference in the opening question: the mouse is an endotherm and pays for its heat with food. Link to A1 explicitly: there we built the supply lines (exchange surfaces, bulk flow); here we look at what is delivered and what it is used for. A3 then takes the oxygen side in detail.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="trace-the-processes" class="slide level2">
-<h2>Trace the processes</h2>
+<section id="from-food-to-fuel-five-processes" class="slide level2">
+<h2>From food to fuel: five processes</h2>
 <div class="columns">
-<div class="column" style="width:42%;">
+<div class="column" style="width:40%;">
 <ul>
-<li>Digestion breaks down food.</li>
-<li>Absorption crosses a selective barrier.</li>
-<li>Unabsorbed material remains in the lumen; metabolic wastes follow other routes.</li>
+<li><strong>Ingestion:</strong> taking food into the gut.</li>
+<li><strong>Digestion:</strong> breaking it into absorbable molecules, mechanically and chemically.</li>
+<li><strong>Absorption:</strong> uptake across the gut epithelium into blood or lymph.</li>
+<li><strong>Egestion:</strong> eliminating unabsorbed material as <strong>faeces</strong>.</li>
+<li><strong>Excretion:</strong> eliminating <strong>metabolic wastes</strong> made inside the body, such as urea in urine.</li>
 </ul>
-</div><div class="column" style="width:58%;">
-<p><img data-src="figures/digestion-path.svg" style="width:100.0%" alt="Food follows a gut lumen; absorption crosses the epithelial boundary into blood or lymph." height="360"></p>
+<p>Food in the gut lumen is still <strong>outside</strong> the body (A1).</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/digestion-path.svg" style="width:100.0%" alt="Food follows a gut lumen; absorption crosses the epithelial boundary into blood or lymph, while unabsorbed material leaves as faeces." height="360"></p>
 </div></div>
+<aside class="notes">
+<p>These five words are used precisely for the rest of the course, and exercise 1.1 asks for them. The two that students confuse are egestion and excretion: faeces are mostly material that was never absorbed, so they were never inside the body; urea was made by the body’s own metabolism and leaves via the kidney (A4). This distinction matters again in the energy budget, where faecal loss and excretory loss are separate terms. The link to A1 is the gut lumen: a starch grain in the intestine has not yet entered the internal environment.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="absorption-depends-on-structure" class="slide level2">
-<h2>Absorption depends on structure</h2>
-<div class="columns">
-<div class="column" style="width:42%;">
+<section id="chemical-digestion-is-hydrolysis" class="slide level2">
+<h2>Chemical digestion is hydrolysis</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Enzyme</th>
+<th>Source</th>
+<th>Substrate</th>
+<th>Products</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Salivary and pancreatic <strong>amylase</strong></td>
+<td>Salivary glands, pancreas</td>
+<td>Starch</td>
+<td>Maltose and short oligosaccharides</td>
+</tr>
+<tr class="even">
+<td><strong>Pepsin</strong></td>
+<td>Stomach (chief cells), works at pH ~2</td>
+<td>Proteins</td>
+<td>Peptides</td>
+</tr>
+<tr class="odd">
+<td><strong>Trypsin</strong></td>
+<td>Pancreas</td>
+<td>Proteins and peptides</td>
+<td>Smaller peptides</td>
+</tr>
+<tr class="even">
+<td>Pancreatic <strong>lipase</strong></td>
+<td>Pancreas</td>
+<td>Triglycerides</td>
+<td>Fatty acids and monoglycerides</td>
+</tr>
+<tr class="odd">
+<td>Brush-border enzymes (e.g.&nbsp;<strong>maltase</strong>, peptidases)</td>
+<td>Small-intestine epithelium</td>
+<td>Disaccharides, small peptides</td>
+<td>Glucose, amino acids</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>More area supports exchange.</li>
-<li>Transport still requires a selective membrane pathway.</li>
-<li>Removal maintains a transport route.</li>
+<li>Each reaction splits a bond by adding water: <strong>hydrolysis</strong>.</li>
+<li><strong>Bile</strong> (from the liver) contains <strong>no enzymes</strong>. Bile salts <strong>emulsify</strong> fat into small droplets, increasing the surface area for lipase.</li>
 </ul>
-<p>Schematic, not a tissue image.</p>
-</div><div class="column" style="width:58%;">
-<p><img data-src="figures/villus-routes.svg" style="width:100.0%" alt="A villus schematic shows epithelial surface, blood capillaries and a lymphatic route." height="360"></p>
+<p><strong>So what route does one meal take through these enzymes?</strong></p>
+<aside class="notes">
+<p>This is the table students complete in exercise 1.3. Group it by food class: carbohydrate (amylase, then brush-border disaccharidases), protein (pepsin in the acid stomach, then trypsin, then peptidases at the brush border) and fat (bile plus lipase). Stress that most digestion happens in the small intestine, because the pancreas delivers most of the enzymes there. The bile point is a classic misconception: bile does not digest anything, it is a detergent that does for fat what chewing does for bread, namely increases surface area. Next slide follows one food, starch, all the way to the liver.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="following-a-starch-meal" class="slide level2">
+<h2>Following a starch meal</h2>
+<ol type="1">
+<li><strong>Mouth:</strong> salivary amylase begins to hydrolyse starch.</li>
+<li><strong>Small intestine:</strong> pancreatic amylase continues, giving maltose.</li>
+<li><strong>Brush border:</strong> maltase hydrolyses maltose to glucose.</li>
+<li><strong>Apical membrane:</strong> glucose enters the enterocyte, co-transported with Na⁺ (SGLT1).</li>
+<li><strong>Basolateral membrane:</strong> glucose leaves the cell into the blood (GLUT2).</li>
+<li><strong>Hepatic portal vein:</strong> blood from the gut goes first to the <strong>liver</strong>.</li>
+</ol>
+<p>Steps 4 and 5 use <strong>different transporters on the two sides</strong> of the cell: the apical–basal polarity from A1.</p>
+<p><strong>Absorption needs a large surface. How large is it?</strong></p>
+<aside class="notes">
+<p>Exercise 1.4 asks for this order. Walk it in space: lumen, brush border, apical membrane, cell, basolateral membrane, capillary, portal vein. The two transporters show why epithelial polarity (A1) matters: the Na⁺-glucose co-transporter on the apical side uses the Na⁺ gradient made by the Na⁺/K⁺-ATPase on the basolateral side, so absorption itself costs ATP. The hepatic portal vein means the liver sees absorbed nutrients first and can store glucose as glycogen before it reaches the rest of the body.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-absorptive-surface" class="slide level2">
+<h2>The absorptive surface</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>The small intestine multiplies its area at three scales:</p>
+<ol type="1">
+<li><strong>Circular folds</strong> of the wall (×3).</li>
+<li><strong>Villi</strong>, finger-like projections of the mucosa (×10).</li>
+<li><strong>Microvilli</strong> on each epithelial cell, the brush border (×20).</li>
+</ol>
+<p>Two exit routes from a villus:</p>
+<ul>
+<li><strong>Blood capillaries:</strong> glucose, amino acids.</li>
+<li><strong>Lacteal (lymph):</strong> fats, repackaged as <strong>chylomicrons</strong>, too large for capillaries.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/villus-routes.svg" style="width:100.0%" alt="A villus is lined by an epithelial barrier with surface projections; internal capillaries and a lymphatic vessel remove absorbed materials." height="360"></p>
 </div></div>
+<aside class="notes">
+<p>This is A1’s solution 1, enlarging the surface, applied three times over: roughly 3 × 10 × 20, about 600-fold relative to a smooth tube. Exercise 1.5 asks for the three features from largest to smallest. The exit routes (exercise 1.6): water-soluble products enter the capillaries and go via the portal vein to the liver; fatty acids and monoglycerides are reassembled into triglycerides inside the enterocyte, packed with protein into chylomicrons, and leave into the lacteal. They reach the blood later where the thoracic duct joins a vein. Transition: all of this assumes the animal has the enzymes for its food. A herbivore does not.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="microbes-change-the-food-problem" class="slide level2">
-<h2>Microbes change the food problem</h2>
-<div class="columns">
-<div class="column" style="width:42%;">
+<section id="plant-food-the-cellulose-problem" class="slide level2">
+<h2>Plant food: the cellulose problem</h2>
 <ul>
-<li>Microbes make some food resources accessible.</li>
-<li>Location changes recovery of microbial products and biomass.</li>
-<li>Retention and passage create trade-offs.</li>
+<li>Plant cell walls are mostly <strong>cellulose</strong>. <strong>Vertebrates make no cellulase</strong>, so they cannot hydrolyse it themselves.</li>
+<li><strong>Symbiotic microbes</strong> (bacteria, protists, fungi) ferment cellulose in a chamber of the gut.</li>
+<li>The host absorbs the microbial end products: <strong>short-chain (volatile) fatty acids</strong>, mainly acetate, propionate and butyrate.</li>
+<li>In a cow these supply about <strong>70 %</strong> of the animal’s energy.</li>
+<li>The microbes themselves are a <strong>protein source</strong> if the host can digest them.</li>
+<li>Fermentation is slow: the food must be <strong>retained</strong> for hours to days.</li>
 </ul>
-</div><div class="column" style="width:58%;">
+<p><strong>So where along the gut should the fermentation chamber be?</strong></p>
+<aside class="notes">
+<p>Exercise 2.1. The key idea is that the herbivore does not digest grass; its microbes do, and the herbivore lives largely on their waste products (short-chain fatty acids) and on the microbes themselves. Fermentation also produces methane and heat, which are losses for the host. The final bullet sets up the trade-off on the next slide: a fermentation chamber needs retention time, and its position relative to the small intestine decides whether microbial protein can be digested.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="foregut-and-hindgut-fermenters" class="slide level2">
+<h2>Foregut and hindgut fermenters</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Foregut</strong> (before the small intestine): cow, sheep, deer (ruminants), kangaroo.</p>
+<ul>
+<li>Ruminant stomach: rumen, reticulum, omasum, abomasum (the true stomach).</li>
+<li>Microbes washed out are <strong>digested in the small intestine</strong>.</li>
+</ul>
+<p><strong>Hindgut</strong> (after the small intestine): horse, rabbit, many rodents.</p>
+<ul>
+<li>Fermentation in the <strong>caecum</strong> and colon.</li>
+<li>Microbial protein is mostly <strong>lost in faeces</strong>.</li>
+<li>Rabbits recover it by <strong>caecotrophy</strong>: eating soft faeces from the caecum.</li>
+</ul>
+</div><div class="column" style="width:60%;">
 <p><img data-src="figures/fermentation-location.svg" style="width:100.0%" alt="Foregut fermentation precedes the small intestine; hindgut fermentation follows it." height="360"></p>
 </div></div>
+<aside class="notes">
+<p>Exercises 2.2 and 2.3. The figure makes the logic visible: order matters. In a ruminant, food and microbes flow from the rumen into the abomasum and small intestine, so the host digests microbial protein like any other protein. In a horse or rabbit, the microbes grow downstream of the small intestine, so their protein passes out in the faeces unless the animal eats the caecotrophs. The trade-off: a ruminant extracts more from each mouthful but must hold food for a long time; a horse passes food faster and compensates by eating more. Transition: whatever the gut, we can now ask how much of the eaten energy the animal actually keeps.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="define-an-energy-budget" class="slide level2">
-<h2>Define an energy budget</h2>
+<section id="the-energy-budget" class="slide level2">
+<h2>The energy budget</h2>
 <div class="columns">
-<div class="column" style="width:42%;">
-<p>In this teaching convention:</p>
-<p>intake = faeces + excreted + metabolic + retained.</p>
-<p>Use one interval and avoid double counting.</p>
-</div><div class="column" style="width:58%;">
+<div class="column" style="width:40%;">
+<p>Over one stated interval:</p>
+<p><span class="math display">E_{\rm ingested}=E_{\rm faeces}+E_{\rm excreted}+E_{\rm metabolic}+E_{\rm retained}</span></p>
+<ul>
+<li><strong>Faeces:</strong> energy never absorbed (egestion).</li>
+<li><strong>Excreted:</strong> chemical energy in urine, mainly urea.</li>
+<li><strong>Metabolic:</strong> energy used and released as heat.</li>
+<li><strong>Retained:</strong> new tissue, fat stores, offspring.</li>
+<li><strong>Absorbed</strong> <span class="math inline">=E_{\rm ingested}-E_{\rm faeces}</span>.</li>
+</ul>
+</div><div class="column" style="width:60%;">
 <p><img data-src="figures/energy-budget.svg" style="width:100.0%" alt="Proportional energy-flow bands partition 150 kilojoules into faecal, excreted, metabolic and retained terms." height="360"></p>
 </div></div>
+<aside class="notes">
+<p>This is energy conservation applied to an animal. Every term must be for the same interval (here one day). The egestion/excretion distinction from the first slide appears here as two separate terms. Metabolic expenditure includes all work done inside the body; that work ends up as heat, so heat is not added as an extra term. In the figure, 150 kJ in, 40 kJ in faeces, so 110 kJ absorbed, which is 73 % of intake. Next slide: what retained energy means, and what happens when it is negative.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="calculate-the-retained-balance" class="slide level2">
-<h2>Calculate the retained balance</h2>
+<section id="retained-energy-can-be-negative" class="slide level2">
+<h2>Retained energy can be negative</h2>
 <div class="columns">
-<div class="column" style="width:42%;">
-<p>150 − 40 − 10 = <strong>100 kJ available</strong>.</p>
+<div class="column" style="width:40%;">
+<p>Intake 150 kJ, faeces 40 kJ, excreted 10 kJ: <strong>100 kJ available</strong> for metabolism and retention.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Metabolic</th>
+<th style="text-align: right;">Retained</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">85 kJ</td>
+<td style="text-align: right;"><strong>+15 kJ</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">110 kJ</td>
+<td style="text-align: right;"><strong>−10 kJ</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Spend 85 → retain <strong>15 kJ</strong>.</li>
-<li>Spend 110 → retain <strong>−10 kJ</strong>.</li>
+<li>Positive: the animal grows or stores fat.</li>
+<li>Negative: it <strong>draws on stores</strong> (fat, glycogen) and loses body energy.</li>
 </ul>
-<p>A deficit draws on reserves; it does not create negative food.</p>
-</div><div class="column" style="width:58%;">
-<p><img data-src="figures/retained-balance.svg" style="width:100.0%" alt="A zero-centered balance compares 15 kilojoules retained with a 10-kilojoule deficit." height="360"></p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/retained-balance.svg" style="width:100.0%" alt="After fixed losses, 100 kilojoules remain; spending 85 leaves +15 retained, spending 110 leaves −10." height="360"></p>
 </div></div>
+<p><strong>Budgets are in joules per day; metabolic rates are usually in watts. How do they compare?</strong></p>
+<aside class="notes">
+<p>Work both lines on the board. A negative retained term is normal for short periods: overnight, during migration, in a lactating mother, in a hibernating mammal. It does not mean negative food; it means stored energy is converted to heat and work. Point out that this budget counts only energy: an animal can have a positive energy balance and still fail to grow if, for example, it lacks an essential amino acid. Transition to units.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="energy-is-not-power" class="slide level2">
 <h2>Energy is not power</h2>
 <div class="columns">
-<div class="column" style="width:42%;">
+<div class="column" style="width:40%;">
 <ul>
-<li>Energy is an amount: J.</li>
-<li>Power is a rate: J s⁻¹ = W.</li>
-<li>Convert time units before comparing.</li>
+<li><strong>Energy</strong> is an amount: joules (J).</li>
+<li><strong>Power</strong> is a rate: J s⁻¹ = <strong>watts (W)</strong>.</li>
+<li>To compare, convert to the same time unit. 1 day = 86 400 s.</li>
 </ul>
-<p>The bars represent elapsed time.</p>
-</div><div class="column" style="width:58%;">
+<p><strong>Example:</strong> a human uses about 8 400 kJ day⁻¹.</p>
+<p><span class="math display">\frac{8\,400\,000\ \text{J}}{86\,400\ \text{s}} \approx 97\ \text{W}</span></p>
+<p>A person is a ~100 W heater, all day.</p>
+</div><div class="column" style="width:60%;">
 <p><img data-src="figures/energy-and-power.svg" style="width:100.0%" alt="The same 60 joules transferred in 10 seconds gives 6 watts, versus 1 watt over 60 seconds." height="360"></p>
 </div></div>
+<aside class="notes">
+<p>Exercises 3.2 and 3.3 test this. The figure shows the same 60 J delivered over different times: same energy, different power. The human example makes the watt tangible: a room of 30 students adds about 3 kW of heat. Emphasise that “2 000 kJ eaten” is an energy and “80 W resting” is a power; they cannot be added or subtracted until one is converted. Transition: the metabolic term is spent inside cells, as ATP. How do cells make it?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="aerobic-and-anaerobic-supply" class="slide level2">
-<h2>Aerobic and anaerobic supply</h2>
+<section id="turning-fuel-into-atp" class="slide level2 smaller">
+<h2>Turning fuel into ATP</h2>
 <div class="columns">
-<div class="column" style="width:42%;">
+<div class="column" style="width:45%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Anaerobic glycolysis</th>
+<th>Aerobic metabolism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Where</td>
+<td>Cytosol</td>
+<td>Cytosol, then mitochondria (citric acid cycle, electron transport chain)</td>
+</tr>
+<tr class="even">
+<td>Needs O₂?</td>
+<td>No</td>
+<td>Yes: final electron acceptor</td>
+</tr>
+<tr class="odd">
+<td>End products</td>
+<td>Lactate</td>
+<td>CO₂ + H₂O</td>
+</tr>
+<tr class="even">
+<td>ATP per glucose</td>
+<td><strong>2</strong></td>
+<td><strong>~30</strong></td>
+</tr>
+<tr class="odd">
+<td>Rate</td>
+<td>Fast, short-lived</td>
+<td>Slower, sustainable</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Aerobic supply depends on oxygen delivery and fuel.</li>
-<li>Some ATP-producing steps do not directly use oxygen.</li>
-<li>One bout can use both.</li>
+<li>Aerobic metabolism gets ~15× more ATP from each glucose.</li>
+<li>Anaerobic glycolysis makes ATP fast, but lactate accumulates.</li>
 </ul>
-<p>Oxygen uptake is not every ATP flux at every instant.</p>
-</div><div class="column" style="width:58%;">
+</div><div class="column" style="width:55%;">
 <p><img data-src="figures/atp-pathways.svg" style="width:100.0%" alt="Cytosolic glycolysis and oxygen-dependent mitochondrial pathways both contribute ATP." height="360"></p>
 </div></div>
+<p><strong>So which does a running animal use?</strong></p>
+<aside class="notes">
+<p>This is the table of exercise 4.1. Glycolysis happens in the cytosol either way; the difference is what happens to pyruvate. With O₂, pyruvate enters the mitochondrion and is oxidised fully to CO₂, and the electron transport chain uses O₂ as the final electron acceptor, giving about 30 ATP per glucose in total. Without enough O₂, pyruvate is reduced to lactate to regenerate NAD⁺, and the cell gets only the 2 ATP of glycolysis. Fats and proteins also feed the aerobic pathway, which is why fat can be burned only aerobically.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="a-rate-needs-a-measurement-model" class="slide level2">
-<h2>A rate needs a measurement model</h2>
-<p>0.10 L water × 0.40 mg L⁻¹ decline / 10 min = 0.0040 mg min⁻¹.</p>
-<p>Subtract an appropriate blank rate of 0.0010 mg min⁻¹: <strong>0.0030 mg min⁻¹</strong> apparent animal oxygen use.</p>
-<p>Supplied arithmetic example, not an animal-handling protocol.</p>
-</section>
-<section id="comparisons-need-context" class="slide level2">
-<h2>Comparisons need context</h2>
+<section id="a-sprint-uses-three-atp-sources" class="slide level2">
+<h2>A sprint uses three ATP sources</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>O₂ used?</th>
+<th>Time it can sustain hard work</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Phosphocreatine</strong> (PCr + ADP → creatine + ATP)</td>
+<td>No</td>
+<td>~10 s</td>
+</tr>
+<tr class="even">
+<td><strong>Anaerobic glycolysis</strong> to lactate</td>
+<td>No</td>
+<td>~1–2 min</td>
+</tr>
+<tr class="odd">
+<td><strong>Aerobic metabolism</strong></td>
+<td>Yes</td>
+<td>Hours (fuel permitting)</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Temperature, activity, feeding and acclimation can matter.</li>
-<li>Repeated sensor readings are not new animals.</li>
-<li>Dividing by mass does not remove every size effect.</li>
-<li>Identify the independent organism/chamber arrangement.</li>
+<li>In a sprint, much of the ATP comes from the first two.</li>
+<li>O₂ consumption measures <strong>only aerobic</strong> ATP production, so during a sprint it <strong>underestimates</strong> total ATP use.</li>
+<li>After the sprint, O₂ consumption stays raised while PCr is rebuilt and lactate is cleared (<strong>excess post-exercise O₂ consumption</strong>).</li>
 </ul>
+<p><strong>Even so, O₂ consumption is the standard measure of metabolic rate. How is it measured?</strong></p>
+<aside class="notes">
+<p>Exercise 4.2. The three systems overlap rather than switch on in sequence, but their capacities differ greatly. A 100 m sprinter runs mostly on phosphocreatine and glycolysis; a marathon runner almost entirely aerobically. Because the anaerobic sources are later repaid aerobically, O₂ consumption averaged over a longer period still tracks total energy use. At rest and during steady activity, nearly all ATP is aerobic, which is why O₂ consumption is used as the measure of metabolic rate: each litre of O₂ consumed corresponds to about 20 kJ of energy released.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="heat-source-and-temperature-variation" class="slide level2">
-<h2>Heat source and temperature variation</h2>
+<section id="measuring-metabolic-rate-respirometry" class="slide level2">
+<h2>Measuring metabolic rate: respirometry</h2>
+<p>An animal sits in a closed chamber of water; a sensor records the fall in O₂ concentration.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Calculation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O₂ lost from 0.10 L</td>
+<td>0.10 L × 0.40 mg L⁻¹</td>
+<td>0.040 mg in 10 min</td>
+</tr>
+<tr class="even">
+<td>Apparent rate</td>
+<td>0.040 mg / 10 min</td>
+<td>0.0040 mg min⁻¹</td>
+</tr>
+<tr class="odd">
+<td>Subtract blank (empty chamber: microbes, sensor drift)</td>
+<td>0.0040 − 0.0010</td>
+<td><strong>0.0030 mg min⁻¹</strong></td>
+</tr>
+<tr class="even">
+<td>Mass-specific rate (animal 1.5 g)</td>
+<td>0.0030 / 1.5</td>
+<td><strong>0.0020 mg min⁻¹ g⁻¹</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Ectothermy/endothermy concern major heat sources.</li>
-<li>Poikilothermy/homeothermy concern temperature variability.</li>
-<li>Ectotherms can regulate behaviourally.</li>
-<li>Endotherms need not have perfectly constant temperature.</li>
+<li><strong>Concentration × volume = amount.</strong> A concentration change alone is not a rate.</li>
+<li>The <strong>blank</strong> removes O₂ use that is not the animal’s.</li>
+<li>Dividing by mass lets animals of different size be compared.</li>
 </ul>
+<aside class="notes">
+<p>Go through the units at every row; students’ usual error is to forget the volume and report mg L⁻¹ as if it were an amount. The blank corrects for microbial respiration and sensor drift; if the blank is given per interval as a concentration change, subtract it before multiplying by volume. Mass-specific rate is a fair comparison between similar-sized animals; across large size ranges metabolic rate does not scale in direct proportion to mass, so mass-specific rate falls with size. Transition: one animal gives one number. To compare two temperatures, we need several animals.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="describe-a-temperature-effect" class="slide level2">
-<h2>Describe a temperature effect</h2>
-<p><span class="math display">Q_{10}=(R_2/R_1)^{10/(T_2-T_1)}.</span></p>
-<p>A rate rising from 2 to 4 between 10 and 20 °C gives <span class="math inline">Q_{10}=2</span>.</p>
-<p>This describes the measured interval; it is not a universal extrapolation rule.</p>
-</section>
-<section id="cold-can-increase-an-endotherms-costs" class="slide level2">
-<h2>Cold can increase an endotherm’s costs</h2>
+<section id="comparing-temperatures-what-is-a-replicate" class="slide level2">
+<h2>Comparing temperatures: what is a replicate?</h2>
+<p>Six animals of 1.5 g, each in <strong>its own chamber</strong>, 5 sensor readings each:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Temperature</th>
+<th>Rate of each animal (mg min⁻¹ g⁻¹)</th>
+<th style="text-align: right;">Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>15 °C</td>
+<td>A: 0.0018 · B: 0.0020 · C: 0.0022</td>
+<td style="text-align: right;"><strong>0.0020</strong></td>
+</tr>
+<tr class="even">
+<td>25 °C</td>
+<td>D: 0.0046 · E: 0.0050 · F: 0.0054</td>
+<td style="text-align: right;"><strong>0.0050</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Heat loss may require greater metabolic heat production.</li>
-<li>Insulation, posture and blood flow alter exchange.</li>
-<li>Cooling in heat can cost water.</li>
-<li>State ambient and body temperature separately.</li>
+<li>The <strong>independent replicate is the animal</strong>: n = 3 per temperature, not 15. Repeated readings from one animal are not new animals.</li>
+<li>Keep other conditions equal: activity, feeding state, time of day, acclimation.</li>
 </ul>
+<p><strong>The rate rose 2.5-fold over 10 °C. How do we describe that?</strong></p>
+<aside class="notes">
+<p>Exercise 4.4 asks the same question for its own data. Pseudoreplication (treating the 15 readings as 15 samples) inflates confidence. Other variables that change metabolic rate must be held constant: a recently fed animal has a higher rate (the cost of digesting), an active one far higher. Acclimation (A1) also matters: animals kept at 25 °C for weeks may differ from animals moved there an hour ago. Transition to Q10.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="warming-can-increase-an-ectotherms-rate" class="slide level2">
-<h2>Warming can increase an ectotherm’s rate</h2>
+<section id="temperature-and-rate-q_10" class="slide level2">
+<h2>Temperature and rate: <span class="math inline">Q_{10}</span></h2>
+<p><span class="math display">Q_{10}=\left(\frac{R_2}{R_1}\right)^{10/(T_2-T_1)}</span></p>
+<p><span class="math inline">Q_{10}</span> is the factor by which a rate changes over <strong>10 °C</strong>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Calculation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Previous slide, 15 → 25 °C</td>
+<td><span class="math inline">(0.0050/0.0020)^{10/10}</span></td>
+<td><span class="math inline">Q_{10}=2.5</span></td>
+</tr>
+<tr class="even">
+<td>Rate 1.5 → 6.0, 5 → 25 °C</td>
+<td><span class="math inline">(6.0/1.5)^{10/20}=4^{0.5}</span></td>
+<td><span class="math inline">Q_{10}=2.0</span></td>
+</tr>
+<tr class="odd">
+<td>Predict: rate 3.0 at 15 °C, <span class="math inline">Q_{10}=2.5</span></td>
+<td><span class="math inline">3.0\times2.5</span></td>
+<td>7.5 at 25 °C</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Body temperature often follows environmental change.</li>
-<li>Rates may rise over a moderate range.</li>
-<li>Performance eventually faces limits.</li>
-<li>A similar oxygen-rate trend need not imply the same mechanism.</li>
+<li>Most biological rates have <span class="math inline">Q_{10}</span> of <strong>2–3</strong>.</li>
+<li><span class="math inline">Q_{10}</span> describes <strong>only the measured range</strong>. At higher temperatures rates level off and then fall as proteins and membranes are damaged.</li>
 </ul>
+<p><strong>So does every animal’s metabolic rate simply follow the temperature around it?</strong></p>
+<aside class="notes">
+<p>Exercise 5.1 uses both forms of the calculation. The exponent 10/(T₂ − T₁) converts any interval to a 10 °C interval: over 20 °C the ratio is Q10 squared, so the square root gives Q10. Q10 of 2–3 reflects the temperature dependence of enzyme-catalysed reactions. The limitation in the last bullet is exercise 5.3d: never extrapolate a Q10 beyond the measured range. The transition question: this is true of our resting ectotherm, but not of a mouse.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="practice" class="slide level2">
-<h2>Practice</h2>
-<p><a href="../../animal/energy-temperature/index.html">Tutorial and source links</a> · <a href="../../animal/energy-temperature/exercise.html">Exercises</a> · <a href="../../animal/energy-temperature/quiz.html">Quiz</a></p>
+<section id="heat-source-and-temperature-stability" class="slide level2">
+<h2>Heat source and temperature stability</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Body temperature <strong>varies</strong> (poikilotherm)</th>
+<th>Body temperature <strong>stable</strong> (homeotherm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Heat mainly <strong>external</strong> (ectotherm)</td>
+<td>Frog, most insects</td>
+<td>Deep-sea fish (stable surroundings)</td>
+</tr>
+<tr class="even">
+<td>Heat mainly <strong>metabolic</strong> (endotherm)</td>
+<td>Hibernating ground squirrel</td>
+<td>Mouse, human, most birds</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Ectotherm / endotherm:</strong> the <strong>source</strong> of body heat.</li>
+<li><strong>Poikilotherm / homeotherm:</strong> how much body temperature <strong>varies</strong>.</li>
+<li>Ectotherms can <strong>regulate</strong> behaviourally: a lizard basks, shelters and changes posture to hold 35 °C during the day.</li>
+<li>An endotherm’s resting metabolic rate is about <strong>5–10×</strong> that of an ectotherm of the same mass and body temperature.</li>
+</ul>
+<p><strong>How does heat enter and leave an animal?</strong></p>
+<aside class="notes">
+<p>Exercise 5.2. The two pairs of terms answer different questions, so the 2×2 table has an example in every cell. The off-diagonal cells are the ones that break the old “cold-blooded / warm-blooded” labels: a deep-sea fish has a very constant temperature without making heat; a hibernating squirrel is an endotherm that lets its body cool to a few degrees. The 5–10× figure is the answer to the opening question: endothermy is expensive. Exercise 5.3a: ectotherms are not unable to regulate; they regulate by behaviour.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="four-routes-of-heat-exchange" class="slide level2">
+<h2>Four routes of heat exchange</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>Mechanism</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Radiation</strong></td>
+<td>Electromagnetic (infrared, sunlight); no contact needed</td>
+<td>A lizard basks in the sun</td>
+</tr>
+<tr class="even">
+<td><strong>Conduction</strong></td>
+<td>Direct contact with a solid or still fluid</td>
+<td>A snake lies on a warm rock</td>
+</tr>
+<tr class="odd">
+<td><strong>Convection</strong></td>
+<td>Heat carried by moving air or water</td>
+<td>Wind cools a bird’s body surface</td>
+</tr>
+<tr class="even">
+<td><strong>Evaporation</strong></td>
+<td>Water changes to vapour, about 2.4 kJ per g</td>
+<td>A dog pants; a human sweats</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The first three can <strong>add or remove</strong> heat; evaporation only <strong>removes</strong> it.</li>
+<li>Body temperature is stable when heat gained (metabolism + environment) equals heat lost.</li>
+</ul>
+<p><strong>For an endotherm, how much heat must metabolism supply?</strong></p>
+<aside class="notes">
+<p>Exercise 5.5. Radiation and conduction are the ones students mix up: radiation needs no contact, conduction does. Convection is conduction plus a moving fluid, which is why wind chills. Evaporation is the only route that works when the surroundings are hotter than the body, and it costs water (a link to A4). The heat balance sentence is A1’s “input equals output” again, now for heat. Transition: the endotherm must make up whatever it loses, so its metabolic rate depends on the ambient temperature.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-thermoneutral-zone" class="slide level2">
+<h2>The thermoneutral zone</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ambient temperature</th>
+<th>Region</th>
+<th>Resting metabolic rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Below the <strong>lower critical temperature</strong></td>
+<td>Cold</td>
+<td><strong>Rises</strong> as ambient falls: more heat must be produced</td>
+</tr>
+<tr class="even">
+<td>Between lower and upper critical temperatures</td>
+<td><strong>Thermoneutral zone</strong></td>
+<td><strong>Minimal and constant</strong>: insulation and blood flow adjust</td>
+</tr>
+<tr class="odd">
+<td>Above the <strong>upper critical temperature</strong></td>
+<td>Heat</td>
+<td><strong>Rises</strong>: active cooling (panting, sweating) costs energy and water</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Unclothed human: thermoneutral zone about 28–32 °C.</li>
+<li>Arctic fox: lower critical temperature about <strong>−40 °C</strong>, thanks to its fur.</li>
+<li>Below the lower critical temperature, heat loss rises in proportion to (body − ambient temperature), and metabolism must match it.</li>
+</ul>
+<p><strong>So what can a mammal do to save heat or make more of it?</strong></p>
+<aside class="notes">
+<p>Exercise 5.4. Sketch the U-shaped curve on the board: flat in the middle, rising on both sides. Within the zone, the animal controls heat loss cheaply by adjusting skin blood flow, posture and fur; below it, those adjustments are exhausted and only extra heat production remains. The Arctic fox comparison (Scholander’s classic data) shows that insulation moves the lower critical temperature: a well-insulated animal pays nothing extra until it is very cold. Exercise 5.3c: metabolic rate is lowest in the thermoneutral zone.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="staying-warm-in-the-cold" class="slide level2">
+<h2>Staying warm in the cold</h2>
+<p><strong>Reduce heat loss</strong></p>
+<ul>
+<li><strong>Insulation:</strong> thicker fur, feathers or fat; <strong>piloerection</strong> traps more air.</li>
+<li><strong>Vasoconstriction</strong> of skin vessels: less warm blood near the surface.</li>
+<li><strong>Countercurrent heat exchange</strong> in limbs: arterial blood warms the venous blood returning beside it, so feet run cold and little heat is lost.</li>
+<li><strong>Posture and huddling:</strong> curling up reduces exposed surface (A1’s <span class="math inline">A/V</span>).</li>
+</ul>
+<p><strong>Increase heat production</strong></p>
+<ul>
+<li><strong>Shivering:</strong> muscle contraction with no movement; the ATP use becomes heat.</li>
+<li><strong>Non-shivering thermogenesis</strong> in <strong>brown adipose tissue</strong>: the protein UCP1 lets protons leak back into the mitochondria, so fuel is oxidised without making ATP and the energy is released as heat.</li>
+</ul>
+<aside class="notes">
+<p>Exercise 5.6 asks for four of these. Each one can be mapped to the previous slides: insulation and posture reduce conduction and convection; countercurrent exchange is the same principle we will see for O₂ in fish gills in A3; brown fat reuses the ATP slide, because it short-circuits the electron transport chain. Brown fat is prominent in newborn mammals, small mammals and hibernators arousing from torpor. Huddling also uses surface-to-volume: a group of mice behaves like one larger animal.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="back-to-the-opening-problem-mouse-versus-lizard" class="slide level2">
+<h2>Back to the opening problem: mouse versus lizard</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Mouse (endotherm)</strong></p>
+<ul>
+<li>Body temperature ~37 °C in any weather.</li>
+<li>Active at night and in winter.</li>
+<li>Pays with a high metabolic rate: food intake ~55 kJ per day.</li>
+<li>Small size, large <span class="math inline">A/V</span>: loses heat fast, so its costs per gram are high.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Lizard (ectotherm)</strong></p>
+<ul>
+<li>Body temperature set by basking and shelter.</li>
+<li>Active only when it can warm up.</li>
+<li>Metabolic rate rises with temperature (<span class="math inline">Q_{10}</span> ≈ 2–3) and falls when cool.</li>
+<li>Needs about a tenth of the food.</li>
+</ul>
+</div></div>
+<p>Both rising curves look alike, but for different reasons: the <strong>mouse in the cold</strong> defends its body temperature; the <strong>warming lizard</strong> speeds up its reactions.</p>
+<p><strong>Both still need O₂ delivered to their mitochondria. That is A3.</strong></p>
+<aside class="notes">
+<p>Close the loop to the first slide. Neither strategy is better: the mouse buys independence from the weather at a high food cost; the lizard saves food but loses activity time. The final contrast is exercise 5.3b and the last paragraph of the tutorial: an increase in O₂ consumption when temperature changes can mean defence of body temperature (endotherm below its lower critical temperature) or faster reactions in a warming body (ectotherm). Bridge to A3: the respirometer measured O₂ consumption; next we follow that O₂ from the air to the mitochondrion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Five processes</td>
+<td>ingestion, digestion, absorption, egestion (faeces), excretion (metabolic waste)</td>
+</tr>
+<tr class="even">
+<td>Digestion</td>
+<td>enzymatic hydrolysis; amylase, pepsin, trypsin, lipase; bile emulsifies</td>
+</tr>
+<tr class="odd">
+<td>Absorptive surface</td>
+<td>folds, villi, microvilli; sugars and amino acids → blood, fats → lacteals</td>
+</tr>
+<tr class="even">
+<td>Fermentation</td>
+<td>microbes digest cellulose → short-chain fatty acids; foregut (cow) vs hindgut (horse)</td>
+</tr>
+<tr class="odd">
+<td>Energy budget</td>
+<td>ingested = faeces + excreted + metabolic + retained, over one interval</td>
+</tr>
+<tr class="even">
+<td>Energy vs power</td>
+<td>J vs W = J s⁻¹; 1 day = 86 400 s</td>
+</tr>
+<tr class="odd">
+<td>ATP supply</td>
+<td>anaerobic: 2 ATP/glucose, lactate; aerobic: ~30 ATP/glucose, needs O₂</td>
+</tr>
+<tr class="even">
+<td>Respirometry</td>
+<td>O₂ use = Δconcentration × volume / time − blank; replicate = animal</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">Q_{10}</span></td>
+<td><span class="math inline">(R_2/R_1)^{10/(T_2-T_1)}</span>; typically 2–3; valid only in the measured range</td>
+</tr>
+<tr class="even">
+<td>Thermal terms</td>
+<td>ecto/endotherm = heat source; poikilo/homeotherm = temperature variation</td>
+</tr>
+<tr class="odd">
+<td>Thermoneutral zone</td>
+<td>minimal metabolism; below lower critical temperature, metabolism rises</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next (A3 — Gas exchange and circulation):</strong> follow the O₂ that the respirometer measured, from the air or water to the mitochondrion: exchange surfaces, haemoglobin and the heart.</p>
+<p><a href="../../animal/energy-temperature/index.html">Tutorial</a> · <a href="../../animal/energy-temperature/exercise.html">Exercises</a> · <a href="../../animal/energy-temperature/quiz.html">Quiz</a></p>
+<aside class="notes">
+<p>Read the table in story order: food enters, is digested and absorbed, possibly with microbial help; its energy is partitioned in the budget; the metabolic part is turned into ATP, measured as O₂ consumption; and temperature changes that rate, very differently in ectotherms and endotherms. The A3 preview follows the oxygen side of metabolism.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

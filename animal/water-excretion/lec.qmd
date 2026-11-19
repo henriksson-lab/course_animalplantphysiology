@@ -1,5 +1,6 @@
 ---
-title: A4 — Water, ions and excretion
+title: "A4 — Water, ions and excretion"
+subtitle: "Week 4 — Keeping the body's water and salt stable"
 format:
   revealjs:
     theme:
@@ -20,108 +21,528 @@ format:
 author: Animal and Plant Physiology
 ---
 
-## Water everywhere, balance still matters
+## About this lecture
 
-- Freshwater teleosts tend to gain water and lose salts.
-- Marine teleosts tend to lose water and gain salts.
-- Terrestrial animals must acquire/conserve water while removing waste.
+In A3, blood carried O₂ from the gills or lungs to every cell. But the same
+blood must also keep its **water and ion content** stable, and the thin,
+enlarged surfaces that exchange gases also let water and ions through. A
+goldfish lives in almost pure water, a cod in water three times saltier than
+its blood, and a kangaroo rat in a desert where it never drinks. **All three
+keep their plasma near 300 mOsm L⁻¹. How?**
 
-## Always name the boundary
+- **The physics:** osmolarity, osmotic water movement and tonicity.
+- **Life in water:** conformers and regulators; freshwater and marine fish; sharks.
+- **The tool:** the transporting epithelial cell.
+- **The mammalian kidney:** filtration, reabsorption and secretion; what each
+  nephron segment does; clearance.
+- **Saving water:** the medullary gradient and ADH.
+- **Getting rid of nitrogen:** ammonia, urea and uric acid; the insect solution.
 
-- Body surface, gill, gut, capillary and cell membrane differ.
-- State permeability and the fluids on either side.
-- Water flux into an animal differs from water flux into one cell.
+::: notes
+The single picture for today: plasma held near 300 mOsm in three very different environments. The goldfish is flooded with water and loses salt; the cod loses water and gains salt; the kangaroo rat loses water by evaporation and must excrete nitrogen without wasting water. The lecture first gives the physical rules that decide which way water moves, then the cellular tool (the polarised epithelium) that every solution is built from, then the mammalian kidney in detail, and finally the problem of nitrogen waste, which ties water balance to metabolism. The link back to A3: gills and lungs are designed to be permeable, so they are also the main route of unwanted water and ion movement.
+:::
+
+## The problem: three animals, one target
+
+| | Goldfish | Cod | Kangaroo rat |
+| --- | --- | --- | --- |
+| Habitat | Fresh water | Seawater | Desert |
+| Osmolarity of surroundings | ~5 mOsm L⁻¹ | ~1,000 mOsm L⁻¹ | (air, food) |
+| Plasma osmolarity | ~300 mOsm L⁻¹ | ~350 mOsm L⁻¹ | ~300 mOsm L⁻¹ |
+| Main water threat | Water floods in across the gills | Water leaks out across the gills | Evaporation from lungs and skin |
+| Main salt threat | Salts leak out | Salts leak in | Salt and urea from food |
+
+- The gills of A3 have a large area and a barrier only a few µm thick: ideal
+  for O₂, and equally good for water and ions.
+- Each animal must balance **input = output** for water and for each ion.
+
+**To predict which way water moves, we first have to count dissolved particles.**
+
+::: notes
+Set up the running examples. Point out that the problem is created by the solution to the gas-exchange problem: a surface built for diffusion of O₂ cannot be made impermeable to water. The plasma values are typical; the exact number is not the point, the direction of the difference from the surroundings is. Remind students of the A1 idea of dynamic balance: a constant plasma osmolarity is a balance of continuous fluxes in and out.
+:::
 
 ## Osmolarity counts particles
 
-- Ideal 0.10 mol L⁻¹ glucose: about 0.10 Osm L⁻¹.
-- Ideal fully dissociated 0.10 mol L⁻¹ NaCl: about 0.20 Osm L⁻¹.
-- Real solutions need not be ideal.
+**Osmolarity** = molar concentration × number of particles each formula unit
+releases in solution (unit: Osm L⁻¹ or mOsm L⁻¹).
 
-## Tonicity adds membrane behaviour
+| Solution (ideal, fully dissociated) | Particles | Osmolarity |
+| --- | ---: | ---: |
+| 0.10 mol L⁻¹ glucose | 1 | 100 mOsm L⁻¹ |
+| 0.10 mol L⁻¹ NaCl (Na⁺ + Cl⁻) | 2 | 200 mOsm L⁻¹ |
+| 0.10 mol L⁻¹ Na₂SO₄ (2 Na⁺ + SO₄²⁻) | 3 | 300 mOsm L⁻¹ |
+| 0.10 mol L⁻¹ glucose + 0.10 mol L⁻¹ NaCl | 1 + 2 | 300 mOsm L⁻¹ |
 
-- Sustained cell-volume effects depend on effectively retained solutes.
-- Permeant solutes can equilibrate differently.
-- Equal total osmolarity need not mean equal tonicity.
-- Pressure can oppose an osmotic tendency.
+- Osmolarity depends on the **number** of particles, not their mass or size:
+  one albumin molecule (66 kDa) counts the same as one urea molecule (60 Da).
+- Reference values: fresh water 1–10, plasma ~290–300, seawater ~1,000 mOsm L⁻¹.
 
-## Two teleost strategies
+**So which way does water move between two solutions?**
 
-| Freshwater | Seawater |
+::: notes
+Work through the table: the only skill is to count how many particles each formula unit releases. Mixtures simply add. Make the mass point explicitly, because students instinctively weigh solutes. The reference values are worth memorising; they are used throughout the lecture. Real solutions are not perfectly ideal (NaCl behaves as about 1.8 particles), but the ideal count is what we use for all calculations in this course.
+:::
+
+## Water moves towards the higher osmolarity
+
+- Across a membrane permeable to water but not solute, **water moves from the
+  lower to the higher osmolarity**.
+- Compared with body fluids of 300 mOsm L⁻¹, a medium is
+  - **hyposmotic** if lower (fresh water): water tends to **enter** the animal;
+  - **isosmotic** if equal: no net osmotic water movement;
+  - **hyperosmotic** if higher (seawater): water tends to **leave** the animal.
+- The driving force is the **osmotic pressure** $\pi = cRT$. A difference of
+  300 mOsm L⁻¹ at 37 °C gives $\pi \approx 7.6$ atm.
+- An opposing **hydrostatic pressure** can stop net water flow before the
+  concentrations become equal (as in a plant cell pressing on its wall, P2).
+
+**But does osmolarity alone predict whether a cell swells or shrinks?**
+
+::: notes
+The three terms are always relative: say "hyperosmotic to what". The numerical osmotic pressure shows that osmosis is a strong force: 7.6 atmospheres is more than the pressure at 70 m depth in water. Hydrostatic pressure is the counter-force: water flow stops when the pressure difference equals the osmotic pressure difference. Students meet this again in capillaries and in plant turgor. The transition question sets up tonicity: osmolarity counts all particles, but some particles cross membranes.
+:::
+
+## Tonicity: only trapped solutes count
+
+**Tonicity** describes the effect of a solution on cell volume. Only solutes
+that **cannot cross** the membrane exert a lasting osmotic effect.
+
+Red blood cells (inside 300 mOsm L⁻¹; membrane permeable to urea, not to NaCl):
+
+| Bathing solution | Osmolarity | Tonicity | Cells |
+| --- | ---: | --- | --- |
+| NaCl, 300 mOsm L⁻¹ | 300 | isotonic | keep their volume |
+| NaCl, 200 mOsm L⁻¹ | 200 | hypotonic | swell |
+| NaCl, 400 mOsm L⁻¹ | 400 | hypertonic | shrink |
+| NaCl 150 + urea 150 mOsm L⁻¹ | 300 | **hypotonic** | **swell** |
+
+- In the last row urea diffuses in until it is equal on both sides. Only the
+  150 mOsm L⁻¹ of NaCl remains effective, so water enters.
+- **Isosmotic does not mean isotonic.**
+
+**A whole animal faces the same question at its body surface.**
+
+::: notes
+The last row is the important one: total osmolarity matches the cell, yet the cells swell, because urea is a penetrating solute. Its concentration equalises across the membrane, so it adds nothing to the difference. The rule: tonicity depends only on non-penetrating solutes. A solution of pure urea at 300 mOsm is isosmotic and strongly hypotonic, and the cells burst. This idea returns with sharks, which use urea as a body-fluid osmolyte.
+:::
+
+## Conformers and regulators
+
+- **Osmoconformers** let their body-fluid osmolarity follow the medium.
+  Most marine invertebrates (mussels, sea stars, many crabs) are about
+  1,000 mOsm L⁻¹ in seawater.
+- A conformer matches the **total** osmolarity but may still **regulate
+  individual ions**: many crabs keep Mg²⁺ below the seawater level.
+- **Osmoregulators** hold body-fluid osmolarity roughly constant whatever the
+  medium: bony fishes, freshwater invertebrates, all terrestrial animals.
+- **Stenohaline** animals tolerate a narrow salinity range (goldfish);
+  **euryhaline** animals a wide one (salmon and eels migrate between fresh
+  water and seawater).
+
+**Bony fishes are regulators. So what must a freshwater and a marine teleost do?**
+
+::: notes
+Conforming is cheap because there is no osmotic gradient to fight, but the cells must tolerate whatever the medium does. Regulating costs energy but gives cells a stable environment. The ion point corrects a common error: "conformer" refers to total osmolarity, not to every solute. Euryhaline fish such as salmon switch their gill transport direction when they migrate, which leads straight into the comparison on the next slide.
+:::
+
+## Freshwater and marine teleosts: opposite problems
+
+| | Freshwater teleost (goldfish) | Marine teleost (cod) |
+| --- | --- | --- |
+| Body fluids compared with the medium | Hyperosmotic | Hyposmotic |
+| Passive water movement | Inward (gain) | Outward (loss) |
+| Passive salt movement | Outward (loss) | Inward (gain) |
+| Drinking | Little or none | Drinks seawater; gut absorbs NaCl, water follows |
+| Urine | Large volume, dilute | Small volume, about isosmotic to plasma |
+| Active NaCl transport at gills | **Uptake** from water into blood | **Secretion** from blood into water |
+| Other routes | Ions from food | Kidney excretes Mg²⁺ and SO₄²⁻ |
+
+- The same organs (gills, gut, kidney) are used in both, with the **direction
+  of transport reversed**.
+- The gill cells that move ions are **ionocytes** (chloride cells).
+
+**Marine sharks live in the same sea as the cod, but solve it differently.**
+
+::: notes
+Go through each row as a consequence of the first row: once you know whether the fish is hyper- or hyposmotic to its medium, everything else follows. The marine teleost drinks to replace water lost osmotically, but drinking seawater adds salt; the gill ionocytes then secrete the NaCl and the kidney removes the divalent ions the gills cannot handle. The freshwater fish faces the reverse: it gets rid of the excess water as copious dilute urine and recovers ions actively at the gills and from food. Exercise 2.1 asks for this table.
+:::
+
+## Sharks: becoming slightly saltier than the sea
+
+- Marine sharks and rays keep plasma NaCl low, like teleosts, but retain
+  **urea** (~350 mmol L⁻¹) and **trimethylamine oxide (TMAO)**.
+- Total plasma osmolarity is **slightly above seawater** (~1,050 vs
+  ~1,000 mOsm L⁻¹).
+- Consequences:
+  - water moves **slightly inward** across the gills, so sharks **do not need
+    to drink**;
+  - the gills are almost impermeable to urea, so it is retained;
+  - TMAO **counteracts** the destabilising effect of urea on proteins.
+- NaCl still leaks in. It is secreted by the **rectal gland**, which produces
+  a fluid of about twice the plasma NaCl concentration.
+
+**Both fishes depend on cells that move ions in one direction. How does one cell do that?**
+
+::: notes
+The shark is a partial conformer: it matches the sea in total osmolarity using an organic solute rather than salt. Urea is normally a waste product and denatures proteins at these concentrations; TMAO is the counteracting osmolyte. This links forward to the nitrogen-waste section: the shark is ureotelic and turns its waste product into an osmolyte. The rectal gland is the shark's equivalent of the teleost gill ionocyte. The transition: gills, rectal gland, gut and kidney all depend on the same basic cell design.
+:::
+
+## The transporting epithelial cell {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+| Membrane | Faces | Example proteins |
+| --- | --- | --- |
+| **Apical** | Lumen (urine, gut contents, water) | Na⁺ channels, Na⁺–glucose cotransporter, aquaporins |
+| **Basolateral** | Interstitial fluid and blood | **Na⁺/K⁺-ATPase**, K⁺ channels, glucose carriers |
+
+- The **Na⁺/K⁺-ATPase** sits on the **basolateral** membrane and moves
+  **3 Na⁺ out and 2 K⁺ in per ATP**.
+- This keeps cell Na⁺ low (~15 mmol L⁻¹) and the inside negative, so Na⁺
+  enters **passively** across the apical membrane.
+- **Water is never pumped.** It follows the osmotic gradient created by solute
+  transport, through aquaporins and between cells.
+:::
+::: {.column width="50%"}
+
+```{mermaid}
+%%| fig-width: 5
+flowchart LR
+  L["Lumen<br/>Na⁺ 140"] -->|"channel or<br/>cotransporter<br/>(passive)"| C["Cell<br/>Na⁺ 15"]
+  C -->|"Na⁺/K⁺-ATPase<br/>(ATP)"| B["Blood<br/>Na⁺ 140"]
+  L -.->|"water follows<br/>(osmosis)"| B
+```
+
+:::
+::::
+
+**The mammalian kidney is a long tube built from cells like this.**
+
+::: notes
+This is the cell that does all the work in the gill, the gut and every nephron segment. The key logic: only one step uses ATP directly, the basolateral pump. Everything else runs downhill on the gradient it creates. Without knowing which membrane each protein sits in, you cannot predict the direction of net transport; that is why polarity matters (exercise 3.2c). Correct the common error "the kidney actively pumps water": no water pump exists; water follows solute.
+:::
+
+## The nephron: one tube, four processes
+
+- **Filtration:** plasma water and small solutes pass from glomerular
+  capillaries into **Bowman's capsule**.
+- **Reabsorption:** tubular fluid → blood.
+- **Secretion:** blood (via interstitial fluid) → tubular fluid.
+- **Excretion:** what finally leaves in the urine.
+
+A filtered molecule has left the blood, **not the body**. A human kidney has
+about one million nephrons.
+
+```{mermaid}
+%%| fig-width: 11
+flowchart LR
+  A["Bowman's capsule"] --> B["Proximal tubule"] --> C["Loop of Henle"] --> E["Distal tubule"] --> F["Collecting duct"] --> G["Renal pelvis → ureter"]
+```
+
+**Step one is filtration. What does the filter let through, and how much?**
+
+::: notes
+Give the route first (exercise 4.1 asks for it) and then the four processes with their directions. Students most often confuse secretion with excretion: secretion is a transport step into the tubule; excretion is the final output. Several nephrons drain into each collecting duct. The diagram shows order, not anatomy: the loop dips into the medulla and returns to the cortex next to its own glomerulus.
+:::
+
+## Filtration: a large, coarse filter
+
+:::: {.columns}
+::: {.column width="50%"}
+**The filtration barrier** (blood → capsule):
+
+1. Fenestrated capillary **endothelium**
+2. Glomerular **basement membrane**
+3. **Filtration slits** between the foot processes of **podocytes**
+
+Water, ions, glucose, amino acids and urea pass freely.
+**Blood cells and large proteins** such as albumin are almost absent from the
+filtrate.
+:::
+::: {.column width="50%"}
+**The driving pressures:**
+
+| Pressure | mmHg |
+| --- | ---: |
+| Glomerular capillary blood pressure | +55 |
+| Bowman's capsule fluid pressure | −15 |
+| Plasma protein (oncotic) pressure | −30 |
+| **Net filtration pressure** | **+10** |
+:::
+::::
+
+- **GFR** (glomerular filtration rate) ≈ **125 mL min⁻¹ = 180 L day⁻¹**.
+- Urine output ≈ 1.5 L day⁻¹, so **more than 99 %** of filtered water is reabsorbed.
+
+**With so much filtered and returned, how do we calculate what is excreted?**
+
+::: notes
+The filter is non-selective for small solutes: it does not choose between glucose and urea. Selection happens afterwards, in the tubule. Filtration is bulk flow driven by blood pressure, the same Starling balance as in A3 capillaries, but with an unusually high capillary pressure. The numbers are striking: the whole plasma volume (about 3 L) is filtered about 60 times a day. Filtering everything and taking back what is needed lets the kidney get rid of any unwanted small molecule, even one it has never met before.
+:::
+
+## The renal balance: amounts per minute
+
+$$\text{filtered load} = \text{GFR} \times P$$
+
+$$\text{excretion} = \text{filtered load} - \text{reabsorption} + \text{secretion}$$
+
+$$\text{urine concentration} = \text{excretion} \div \text{urine flow}$$
+
+Worked example: GFR = 0.12 L min⁻¹, plasma concentration $P$ = 4 mmol L⁻¹,
+reabsorption 0.40 mmol min⁻¹, secretion 0.04 mmol min⁻¹, urine flow 0.001 L min⁻¹.
+
+- Filtered load = 0.12 × 4 = **0.48 mmol min⁻¹**
+- Excretion = 0.48 − 0.40 + 0.04 = **0.12 mmol min⁻¹**
+- Urine concentration = 0.12 ÷ 0.001 = **120 mmol L⁻¹**
+
+Halving urine flow doubles the concentration but **not** the amount excreted.
+
+**Which parts of the tubule do the reabsorbing?**
+
+::: notes
+Insist on units: every term in the balance is an amount per time, never a concentration. The third line converts back to a concentration. The last line is a common exam trap: concentrated urine can come from less water, not more solute. Students practise the same calculation with different numbers in exercise 5.1.
+:::
+
+## What each nephron segment does {.smaller}
+
+| Segment | Main transport | Water permeability | Fluid leaving (mOsm L⁻¹) |
+| --- | --- | --- | ---: |
+| **Proximal convoluted tubule** | ~2/3 of filtered Na⁺ and water; nearly all glucose and amino acids; secretes organic acids (PAH) | High | ~300 |
+| **Descending limb** | Little NaCl transport | **High**: water leaves into the hyperosmotic medulla | up to ~1,200 |
+| **Thick ascending limb** | NaCl reabsorbed by the **Na⁺–K⁺–2Cl⁻ cotransporter** | **None**: fluid becomes dilute | ~100 |
+| **Distal convoluted tubule** | Fine-tunes NaCl and **Ca²⁺** reabsorption | Low | ~100 |
+| **Collecting duct** | Na⁺ reabsorption regulated by **aldosterone**; water regulated by **ADH** | Low, or high with ADH | 50–1,200 |
+
+- About 25 % of filtered Na⁺ is taken up in the loop, ~5 % in the distal tubule
+  and ~2–5 % in the collecting duct.
+- The **bulk** is recovered early and unregulated; the **final adjustment**
+  is late and hormonally controlled.
+
+**How can we measure from outside what the tubule does to a substance?**
+
+::: notes
+This table is the core of the nephron for the exam (exercise 4.2). Read it top to bottom as the story of one litre of filtrate: the proximal tubule takes back two thirds isosmotically; the loop separates salt from water, so fluid leaving the thick ascending limb is hyposmotic (about 100 mOsm), whatever the body's water state; the distal tubule and collecting duct make the regulated final adjustments. The last column foreshadows the concentrating mechanism: the descending limb reaches 1,200 mOsm at the bottom of the loop.
+:::
+
+## Clearance: what the tubule does, measured from outside
+
+**Clearance** = the volume of plasma completely cleared of a substance per minute:
+
+$$C = \frac{U \times V}{P}$$
+
+($U$ = urine concentration, $V$ = urine flow, $P$ = plasma concentration)
+
+- **Inulin** is freely filtered and neither reabsorbed, secreted nor
+  metabolised. So **$C_\text{inulin}$ = GFR**. Example: $U$ = 30 mg mL⁻¹,
+  $V$ = 2 mL min⁻¹, $P$ = 0.5 mg mL⁻¹ gives $C$ = 120 mL min⁻¹.
+- Compare any freely filtered substance with GFR (125 mL min⁻¹):
+
+| Clearance | Meaning | Example |
+| --- | --- | --- |
+| $C$ < GFR | net **reabsorption** | glucose (0), urea (~60 mL min⁻¹) |
+| $C$ = GFR | neither | inulin, (approximately) creatinine |
+| $C$ > GFR | net **secretion** | PAH (~600 mL min⁻¹) |
+
+**Why is the glucose clearance zero, and when does it stop being zero?**
+
+::: notes
+Clearance is a virtual volume, so its unit is mL min⁻¹. Inulin defines GFR because everything filtered ends up in the urine and nothing else does. The comparison rule then lets us infer tubular handling from a urine sample and a blood sample. PAH is secreted so efficiently that almost all of it is removed in one pass, so its clearance approximates renal plasma flow. Creatinine is the clinical substitute for inulin because the body makes it continuously. Exercises 5.2 and 5.3 use exactly this logic.
+:::
+
+## The transport maximum: glucose in diabetes
+
+- Glucose is reabsorbed in the proximal tubule by **Na⁺–glucose cotransporters**.
+  The carriers can saturate: maximum rate $T_m$ ≈ 2.0 mmol min⁻¹.
+- With GFR = 0.125 L min⁻¹ and $T_m$ = 2.0 mmol min⁻¹:
+
+| Plasma glucose | Filtered load | Reabsorbed | Excreted |
+| ---: | ---: | ---: | ---: |
+| 8 mmol L⁻¹ | 1.0 mmol min⁻¹ | 1.0 | **0** |
+| 16 mmol L⁻¹ | 2.0 mmol min⁻¹ | 2.0 | **0** (threshold) |
+| 24 mmol L⁻¹ | 3.0 mmol min⁻¹ | 2.0 | **1.0 mmol min⁻¹** |
+
+- Above $T_m$, glucose appears in urine (**glycosuria**) and takes water with it
+  osmotically: the large urine volume and thirst of untreated diabetes mellitus.
+
+**The kidney recovers solutes. How does it recover water and make urine more
+concentrated than plasma?**
+
+::: notes
+Fasting plasma glucose is about 5 mmol L⁻¹, well below the threshold, so normally no glucose is excreted. Because nephrons differ in their individual Tm, glucose begins to appear in human urine from about 10 mmol L⁻¹, somewhat before the calculated threshold. Link back to A2: insulin failure raises plasma glucose; here we see the renal consequence. The osmotic diuresis bridges to water handling: urine volume depends on how much water follows the solutes, which is the subject of the next slides.
+:::
+
+## Building the medullary gradient
+
+:::: {.columns}
+::: {.column width="50%"}
+- The **thick ascending limb** pumps NaCl into the medulla but lets **no water**
+  follow. The interstitium becomes hyperosmotic.
+- The **descending limb** is water-permeable: water leaves, and the fluid
+  inside concentrates to match.
+- Flow in opposite directions in the two limbs (**countercurrent multiplication**)
+  multiplies a small difference at each level into a large gradient.
+- **Urea** recycled from the collecting duct adds to the inner medulla.
+- Gradient: **300 mOsm L⁻¹ in the cortex → ~1,200 mOsm L⁻¹** at the tip of
+  the human medulla.
+:::
+::: {.column width="50%"}
+| Animal | Relative loop length | Max urine (mOsm L⁻¹) |
+| --- | --- | ---: |
+| Beaver | short | ~500 |
+| Human | medium | ~1,200 |
+| Kangaroo rat | long | ~5,000 |
+
+Longer loops and a thicker medulla build a **larger gradient**.
+:::
+::::
+
+**The gradient is there. What decides whether the collecting duct uses it?**
+
+::: notes
+The essential trick is differential permeability: one limb moves salt without water, the other moves water without salt. Each step only needs a modest difference (about 200 mOsm between ascending limb and interstitium); the countercurrent arrangement stacks these steps along the length of the loop. The vasa recta blood vessels follow the same hairpin shape, so they supply the medulla without washing the gradient away. The comparative table returns to the running example: the kangaroo rat's long loops let it make urine about four times as concentrated as ours.
+:::
+
+## ADH: a feedback loop that opens the water valve {.smaller}
+
+:::: {.columns}
+::: {.column width="45%"}
+- **Sensor:** osmoreceptors in the **hypothalamus** detect a 1–2 % rise in
+  plasma osmolarity.
+- **Messenger:** **ADH** (antidiuretic hormone, vasopressin), made in the
+  hypothalamus, released from the **posterior pituitary**.
+- **Effector:** ADH binds **V2 receptors** on collecting-duct cells; cAMP
+  causes **aquaporin-2** to be inserted in the apical membrane.
+- Water leaves the duct into the hyperosmotic medulla.
+- Thirst is triggered in parallel.
+:::
+::: {.column width="55%"}
+
+```{mermaid}
+%%| fig-width: 5.5
+flowchart TB
+  A["Dehydration:<br/>plasma osmolarity rises"] --> B["Hypothalamic<br/>osmoreceptors"]
+  B --> C["ADH released from<br/>posterior pituitary"]
+  C --> D["Aquaporin-2 inserted<br/>in collecting duct"]
+  D --> E["Water reabsorbed;<br/>small volume of concentrated urine"]
+  E -->|"plasma osmolarity falls:<br/>less ADH (negative feedback)"| A
+```
+
+:::
+::::
+
+**How much difference does ADH make to urine volume?**
+
+::: notes
+This is the A1 negative-feedback loop with real parts: compare it with the temperature loop component by component. ADH does not change GFR and does not create water; it changes the water permeability of the last segment, so that the gradient built by the loop can be used. Without ADH the collecting duct is nearly impermeable and the dilute fluid from the distal tubule (about 100 mOsm) passes through as dilute urine. A fall in blood volume or pressure also increases ADH release. Exercise 6.1 asks for this sequence.
+:::
+
+## What ADH is worth: the minimum urine volume
+
+**Urine volume = solute to excrete ÷ urine osmolarity**
+
+Example: a person must excrete **900 mOsm** of solute (mostly urea and salts) per day.
+
+| Situation | Urine osmolarity | Urine volume |
+| --- | ---: | ---: |
+| Maximum ADH (human maximum) | 1,200 mOsm L⁻¹ | **0.75 L day⁻¹** |
+| No ADH (diabetes insipidus) | 100 mOsm L⁻¹ | **9 L day⁻¹** |
+| Same load at the kangaroo rat's maximum | ~5,000 mOsm L⁻¹ | 0.18 L day⁻¹ |
+
+- The **solute load** sets a minimum urine volume. Concentrating ability decides
+  how small it can be.
+- Diabetes insipidus: ADH is missing (central) or the kidney does not respond
+  (nephrogenic). The result is a large volume of dilute urine and great thirst.
+
+**Much of that solute load is nitrogen from protein. In which form should it leave?**
+
+::: notes
+This turns the concentrating mechanism into a number. The same solute load needs twelve times more water without ADH. The kangaroo rat row shows why the long loop matters for a desert animal that gets most of its water from metabolism of dry seeds. Exercise 6.2 has the same calculation with a different solute load. Transition: urea is the largest single component of that solute, so the choice of nitrogenous waste is part of the water budget.
+:::
+
+## Nitrogenous waste: a water–energy trade-off
+
+| | Ammonia (NH₃) | Urea | Uric acid |
+| --- | --- | --- | --- |
+| Toxicity | High | Low | Very low |
+| Solubility in water | High | High | Very low |
+| Water needed per g N | ~300–500 mL | ~50 mL | ~10 mL (excreted as a paste) |
+| Energy cost of synthesis | None | Moderate (urea cycle, liver) | High |
+| Animals | **Ammonotelic:** teleosts, tadpoles, most aquatic invertebrates | **Ureotelic:** mammals, adult amphibians, sharks | **Uricotelic:** birds, most reptiles, insects |
+
+- Ammonia is cheap but toxic; it can only be used where water flushes it away,
+  usually by diffusion across the gills.
+- A frog switches from ammonia to urea at **metamorphosis**, when it leaves the water.
+- Uric acid saves the most water but costs the most energy.
+
+**Why do all animals that develop in a shelled egg make uric acid?**
+
+::: notes
+Amino-acid breakdown produces ammonia; the question is whether to excrete it as is or convert it first. Read the table as a trade-off between water and energy. The tadpole-to-frog switch is the clearest example that the choice follows the water supply, not the taxonomic group. Exercise 7.2 asks students to classify animals; the rule is habitat plus lineage, with the three examples in the table.
+:::
+
+## Uric acid: the egg and the insect {.smaller}
+
+:::: {.columns}
+::: {.column width="45%"}
+**The shelled (cleidoic) egg**
+
+- The egg is **closed**: wastes cannot leave until hatching.
+- Urea would stay dissolved and reach toxic concentrations.
+- Uric acid **precipitates**: stored as a solid, it is neither toxic nor
+  osmotically active.
+
+**The insect: Malpighian tubules**
+
+- No filtration: the tubules **secrete K⁺** actively, and water and solutes
+  (including uric acid) follow, forming a fluid isosmotic to haemolymph.
+- The **rectum** reabsorbs water, ions and useful solutes; uric acid
+  precipitates and leaves with the faeces.
+:::
+::: {.column width="55%"}
+
+```{mermaid}
+%%| fig-width: 5
+flowchart TB
+  A["K⁺ actively secreted<br/>into Malpighian tubule"] --> B["Water and solutes<br/>(incl. uric acid) follow"]
+  B --> C["Tubule fluid empties<br/>into hindgut"]
+  C --> D["Rectum reabsorbs water,<br/>ions and useful solutes"]
+  D --> E["Dry waste with<br/>precipitated uric acid"]
+```
+
+:::
+::::
+
+**Same tasks as the nephron (remove waste, set ions, recover water), built
+from secretion instead of filtration.**
+
+::: notes
+Two cases where uric acid is the obvious answer. The cleidoic egg is the classic argument: a closed system cannot dilute or remove a soluble waste. The insect excretory system is a useful contrast with the nephron: the primary urine is made by active secretion of K⁺ rather than by pressure filtration, but the later steps are the same logic, a large flow of fluid followed by selective recovery. A desert locust's rectum can extract nearly all the water, leaving dry pellets. Exercise 7.4 asks for this sequence.
+:::
+
+## Summary {.smaller}
+
+| Concept | Key fact |
 | --- | --- |
-| Water entry tendency | Water loss tendency |
-| Replace lost ions | Remove excess salts |
-| Relatively abundant dilute urine | Lower urine volume; ion handling |
+| Osmolarity | concentration × particles per formula unit; 0.10 M NaCl = 200 mOsm L⁻¹ |
+| Tonicity | only non-penetrating solutes count; isosmotic ≠ isotonic |
+| Conformer / regulator | follows the medium's total osmolarity / holds its own constant |
+| Freshwater teleost | gains water, loses salt: dilute urine, active ion uptake at gills |
+| Marine teleost | loses water, gains salt: drinks, gills secrete NaCl |
+| Shark | retains urea + TMAO, slightly hyperosmotic; rectal gland secretes NaCl |
+| Epithelial cell | basolateral Na⁺/K⁺-ATPase (3 Na⁺ out, 2 K⁺ in); water follows solute |
+| Renal balance | excretion = GFR × P − reabsorption + secretion; GFR ≈ 125 mL min⁻¹ |
+| Clearance | $C = UV/P$; $C_\text{inulin}$ = GFR; below GFR = reabsorption, above = secretion |
+| Concentrating urine | loop builds 300 → 1,200 mOsm gradient; ADH inserts aquaporin-2 |
+| Nitrogen waste | ammonia (water), urea (moderate), uric acid (dry, costly) |
 
-Add drinking, food and gill transport to the explanation.
+**Next (A5 — Integration, movement and reproduction):** ADH was released
+because the hypothalamus *sensed* a change. Who are the sensors, controllers
+and messengers of the body, and how do nerves, muscles and hormones carry out
+a response?
 
-## These examples are not every aquatic animal
+[Tutorial](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
 
-- Sharks retain organic osmolytes and use a different strategy.
-- Osmoconformers can regulate selected ions.
-- Osmoregulators are not perfectly invariant in all conditions.
-- Identify species, medium and life stage.
-
-## Epithelial polarity creates a route
-
-- Apical and basal membranes differ.
-- ATP-driven transport establishes gradients.
-- Coupled transport and channels use those gradients.
-- Water follows suitable gradients through permeable pathways.
-
-## Filtration is not excretion
-
-Glomerular filtration moves fluid from blood into nephron lumen.
-
-Reabsorption returns material towards blood.
-
-Secretion adds material to tubular fluid.
-
-Excretion is the amount finally leaving in urine.
-
-## Account for the amount
-
-Excretion = filtered load − reabsorption + secretion.
-
-100 − 98 + 1 = **3 amount units min⁻¹**.
-
-Use one substance and one consistent time interval.
-
-## Concentration is not a rate
-
-Urine concentration × urine flow = excretion rate.
-
-2 mmol L⁻¹ × 0.001 L min⁻¹ = **0.002 mmol min⁻¹**.
-
-Less water can increase concentration without increasing solute loss per minute.
-
-## Concentration needs gradient and permeability
-
-- Nephron segments differ in water/solute transport.
-- Medullary processes establish an osmotic gradient.
-- Collecting-duct water permeability determines access to that gradient.
-- One pump alone is not the full concentrating mechanism.
-
-## ADH connects water recovery to feedback
-
-- Rising osmotic concentration can promote ADH and drinking.
-- ADH can increase collecting-duct water permeability.
-- Water recovery rises when a suitable gradient exists.
-- ADH does not create water; other signals also influence release.
-
-## Nitrogen disposal has trade-offs
-
-- Ammonia: little conversion but toxicity/removal constraints.
-- Urea: synthesis costs; useful retention/excretion properties.
-- Uric acid: low-water elimination with production costs.
-- Habitat and life history change the balance.
-
-## Other animals solve the same tasks differently
-
-- Insect Malpighian tubules/hindgut differ from mammalian nephrons.
-- Compare waste removal, ion balance and water recovery first.
-- Egestion is not metabolic nitrogen excretion.
-
-## Next
-
-[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+::: notes
+Read the table as the story: physical rules, aquatic solutions, the transporting cell, the kidney's accounting, the concentrating mechanism and the nitrogen trade-off. Return once more to the three opening animals: the goldfish uses dilute urine and gill uptake, the cod drinks and secretes salt, the kangaroo rat uses long loops and ADH. The preview of A5 picks up the ADH loop: it needed a sensor, a controller and a messenger, and A5 is about exactly those.
+:::

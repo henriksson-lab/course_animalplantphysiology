@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.30">
 
   <meta name="author" content="Animal and Plant Physiology">
-  <title>Animal and Plant Physiology – P1 — Building a plant</title>
+  <title>Animal and Plant Physiology – P1 — Building a functioning plant</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -121,13 +121,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">P1 — Building a plant</h1>
+  <h1 class="title">P1 — Building a functioning plant</h1>
+  <p class="subtitle">Week 6 — How a plant builds a functioning body</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -138,71 +142,975 @@ Animal and Plant Physiology
 </div>
 
 </section>
-<section id="how-does-a-seedling-function" class="slide level2">
-<h2>How does a seedling function?</h2>
-<p>Obtain resources, transport material, support growth.</p>
-<p>Explain the connection from cell feature to whole-plant function.</p>
-</section>
-<section id="a-cell-has-several-boundaries" class="slide level2">
-<h2>A cell has several boundaries</h2>
+<section id="about-this-lecture" class="slide level2">
+<h2>About this lecture</h2>
+<p>A thirsty mouse walks to water, a hungry one finds food, and a frightened one runs. A maize seedling can do none of this. It stays where its seed landed, yet in three months it grows from a 0.3 g seed into a 2 m plant. <strong>How does an organism that cannot move get carbon, water and minerals to every cell, and hold itself up?</strong> In A1 we asked the same question of an animal; today we start the plant half and see the plant’s answers.</p>
 <ul>
-<li>Plasma membrane: selective exchange</li>
-<li>Wall: extracellular mechanics and connections</li>
-<li>Tonoplast: vacuolar boundary</li>
+<li><strong>The contrast:</strong> what changes when an organism cannot move, makes its own food and has walls around its cells.</li>
+<li><strong>The plant cell:</strong> wall, vacuole and turgor, plastids and mitochondria.</li>
+<li><strong>Growth:</strong> how a walled cell enlarges, and how cells stay connected.</li>
+<li><strong>Tissues and organs:</strong> three tissue systems, xylem and phloem, the leaf and the root.</li>
+<li><strong>Meristems:</strong> where new cells are made, and more cells versus longer cells.</li>
+<li><strong>Three genomes:</strong> nucleus, plastid and mitochondrion working together.</li>
 </ul>
+<aside class="notes">
+<p>Open with the contrast to the animal half, which students have just finished. The plant faces the same physics as the mouse in A1 (surface area, diffusion distance, the need for bulk flow), but under three constraints: it cannot move, it builds its own organic carbon from CO₂ and light, and every cell is enclosed in a wall. Each section of the lecture follows from one of these constraints. P2 and P3 then take the two big supply problems in turn: water and minerals, and carbon.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="vacuole-and-turgor" class="slide level2">
-<h2>Vacuole and turgor</h2>
-<p>Solutes and water contribute to pressure against a resisting wall.</p>
-<p>Wilting can change mechanics before cells die.</p>
+<section id="the-problem-a-mouse-versus-a-maize-plant" class="slide level2">
+<h2>The problem: a mouse versus a maize plant</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Mouse</th>
+<th>Maize plant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon and energy</td>
+<td>eats organic food</td>
+<td>makes sugar from CO₂, water and light</td>
+</tr>
+<tr class="even">
+<td>Water and minerals</td>
+<td>drinks and eats them</td>
+<td>takes them up from the soil through roots</td>
+</tr>
+<tr class="odd">
+<td>Escaping danger, finding resources</td>
+<td>moves</td>
+<td>cannot move; grows towards resources</td>
+</tr>
+<tr class="even">
+<td>Body plan</td>
+<td>fixed in the embryo; adult form complete</td>
+<td>keeps adding leaves, roots and branches all its life</td>
+</tr>
+<tr class="odd">
+<td>Support</td>
+<td>skeleton and muscle</td>
+<td>turgor and thickened cell walls</td>
+</tr>
+<tr class="even">
+<td>Cell boundary</td>
+<td>plasma membrane</td>
+<td>plasma membrane <strong>plus a cell wall</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A plant must collect light and CO₂ <strong>above ground</strong> and water and minerals <strong>below ground</strong>, at the same time and in the same place.</li>
+<li>It responds to its surroundings by <strong>growing</strong>, not by moving.</li>
+</ul>
+<p><strong>So how do the A1 rules about surfaces and distances apply to a plant?</strong></p>
+<aside class="notes">
+<p>Each row of the table is a constraint that shapes plant structure. The two that matter most today are the body plan (growth from meristems, later in the lecture) and the wall (which affects support, growth and transport). The point of the bullet about above and below ground: the plant is spread between two environments, so it needs long-distance transport between them, which we meet as xylem and phloem.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-a1-physics-solved-by-a-plant" class="slide level2">
+<h2>The A1 physics, solved by a plant</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>A1 solution</th>
+<th>In an animal</th>
+<th>In a plant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Enlarge the exchange surface</strong></td>
+<td>alveoli, ~100 m² in a human lung</td>
+<td>leaves for light and CO₂; roots and root hairs for water</td>
+</tr>
+<tr class="even">
+<td><strong>Make the barrier thin</strong></td>
+<td>air–blood barrier &lt; 1 µm</td>
+<td>leaf ~0.2 mm thick; every mesophyll cell faces an air space</td>
+</tr>
+<tr class="odd">
+<td><strong>Use bulk flow</strong></td>
+<td>blood pumped by the heart</td>
+<td>xylem (water, roots → shoot) and phloem (sugar, sources → sinks), with no heart</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>One rye plant grown for four months had <strong>~600 km of roots</strong> and <strong>~10 000 km of root hairs</strong>, a root surface of ~640 m².</li>
+<li>Diffusion is still used over short distances: CO₂ inside the leaf, ions in the soil next to a root hair.</li>
+</ul>
+<p><strong>These surfaces and tubes are built from cells. What does a plant cell have that an animal cell lacks?</strong></p>
+<aside class="notes">
+<p>This slide reuses the three solutions from A1 so students see the plant as a new answer to a known problem. The rye figures (Dittmer 1937) make the point that the root system is an enormous exchange surface, far larger than the shoot. Stress that the plant has bulk flow without a pump: P2 shows that evaporation drives xylem flow and P3 that osmotic pressure drives phloem flow. Transition into the cell.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-plant-cell-compartments-and-boundaries" class="slide level2">
+<h2>The plant cell: compartments and boundaries</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Structure</th>
+<th>Main function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Plasma membrane</strong></td>
+<td>selective control of exchange between cytoplasm and the outside</td>
+</tr>
+<tr class="even">
+<td><strong>Primary cell wall</strong></td>
+<td>resists deformation and sets the direction of expansion</td>
+</tr>
+<tr class="odd">
+<td><strong>Tonoplast</strong></td>
+<td>membrane around the central vacuole</td>
+</tr>
+<tr class="even">
+<td><strong>Central vacuole</strong></td>
+<td>stores solutes; generates turgor; up to ~90 % of cell volume</td>
+</tr>
+<tr class="odd">
+<td><strong>Chloroplast</strong></td>
+<td>photosynthesis</td>
+</tr>
+<tr class="even">
+<td><strong>Mitochondrion</strong></td>
+<td>aerobic respiration</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The wall is <strong>porous</strong>: water and small solutes pass through it freely. <strong>Selection happens at the plasma membrane</strong>, as in an animal cell.</li>
+<li>So a plant cell has two boundaries outside the cytoplasm and a third around the vacuole: wall, plasma membrane and tonoplast.</li>
+</ul>
+<p><strong>Why does a plant cell need a huge vacuole and a strong wall?</strong></p>
+<aside class="notes">
+<p>Exercise 1.1 asks students to match these structures and functions. The common error, tested in 1.4c, is to think the wall is selectively permeable. It is not: the wall resists pressure, the membrane selects. Keep the three boundaries distinct, because P2 asks which boundary water or an ion crosses at each step of uptake. The vacuole and wall work together, which is the next slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vacuole-and-turgor-a-hydraulic-skeleton" class="slide level2">
+<h2>Vacuole and turgor: a hydraulic skeleton</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The vacuole accumulates <strong>solutes</strong> (K⁺, sugars, organic acids).</li>
+<li>Water follows by osmosis, and the protoplast presses on the wall.</li>
+<li>The wall pushes back. The resulting pressure is <strong>turgor pressure</strong>, typically <strong>0.3–1 MPa</strong> (a car tyre is ~0.2 MPa).</li>
+<li>Turgid cells pressing on each other make a stem or leaf <strong>rigid</strong>.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Functions of the central vacuole</strong></p>
+<ul>
+<li>storage of ions, sugars, acids, pigments and defence compounds</li>
+<li>generation of turgor</li>
+<li>regulation of cytoplasmic pH</li>
+<li>degradation of cell material</li>
+<li>a large cell for little cytoplasm: cheap growth</li>
+</ul>
+</div></div>
+<p><strong>When turgor falls, a non-woody shoot wilts. Its cells are still alive and recover when water returns.</strong></p>
+<aside class="notes">
+<p>Turgor is the plant’s hydraulic skeleton: it replaces the muscle-and-bone support of an animal in non-woody tissues. The numbers make it concrete: several times the pressure in a car tyre, held by a wall a fraction of a micrometre thick. Exercise 1.2 asks for the definition and the effect of falling turgor; 1.3 asks for three vacuole functions. In P2 we quantify turgor as the pressure potential Ψp. The last vacuole function links to growth: a cell can become large mostly by filling its vacuole with water.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="plastids-and-mitochondria" class="slide level2">
 <h2>Plastids and mitochondria</h2>
-<p>Chloroplasts support photosynthesis; other plastids have other roles.</p>
-<p>Green cells also respire.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Plastid</th>
+<th>Function</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Proplastid</strong></td>
+<td>precursor</td>
+<td>meristems</td>
+</tr>
+<tr class="even">
+<td><strong>Chloroplast</strong></td>
+<td>photosynthesis</td>
+<td>green tissue</td>
+</tr>
+<tr class="odd">
+<td><strong>Amyloplast</strong></td>
+<td>starch storage</td>
+<td>tubers, seeds, root cap</td>
+</tr>
+<tr class="even">
+<td><strong>Chromoplast</strong></td>
+<td>pigments</td>
+<td>petals, fruits</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>All plastids develop from proplastids. A chloroplast is <strong>one type</strong> of plastid.</li>
+<li>Most root cells have <strong>no</strong> functioning chloroplasts.</li>
+<li><strong>Every living plant cell respires.</strong> Leaf mitochondria work in the light and in the dark.</li>
+<li>A leaf both fixes CO₂ (chloroplast) and releases CO₂ (mitochondrion).</li>
+</ul>
+</div></div>
+<p><strong>So the cell has the parts. How does a cell enclosed in a wall manage to grow?</strong></p>
+<aside class="notes">
+<p>Exercise 1.4 tests three misconceptions: all plastids are chloroplasts; leaves respire only at night; roots photosynthesise. The point that a green leaf both fixes and releases CO₂ returns in P3, where the light-response curve has a negative value in darkness and the compensation point is where the two balance. Transition to the wall and growth.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="expansion-needs-coordination" class="slide level2">
-<h2>Expansion needs coordination</h2>
-<p>Turgor supplies force.</p>
-<p>Wall yielding, synthesis and membrane addition permit lasting expansion.</p>
+<section id="the-cell-wall" class="slide level2">
+<h2>The cell wall</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Primary wall</strong> (all growing cells, ~0.1–1 µm thick)</p>
+<ul>
+<li><strong>Cellulose microfibrils:</strong> the load-bearing component, a few nm wide.</li>
+<li>Embedded in a matrix of <strong>hemicelluloses, pectins</strong> and proteins.</li>
+<li>Microfibrils wound <strong>transversely</strong>, like hoops around a barrel, let the cell lengthen but not widen.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Secondary wall</strong> (some cells, after growth stops)</p>
+<ul>
+<li>Laid down <strong>inside</strong> the primary wall.</li>
+<li>Thicker, often reinforced with <strong>lignin</strong>.</li>
+<li>Gives rigid support and stops xylem conduits from collapsing under tension.</li>
+<li>Wood is mostly secondary wall.</li>
+</ul>
+</div></div>
+<p><strong>But a wall strong enough to hold 0.5 MPa of turgor should also stop the cell from growing. How does it grow?</strong></p>
+<aside class="notes">
+<p>Exercise 2.1 asks for cellulose as the load-bearing component and lignin as the reinforcing polymer of xylem secondary walls. The hoop analogy explains why cells in a root or stem elongate in one direction: the orientation of microfibrils sets the direction in which the wall can yield. The secondary wall is for cells that have stopped growing, such as fibres and xylem conduits; P2 explains why xylem walls must resist collapse (the water inside is under tension).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="two-routes" class="slide level2">
-<h2>Two routes</h2>
-<p><strong>Apoplast:</strong> walls and extracellular spaces.</p>
-<p><strong>Symplast:</strong> connected cytoplasm. Membrane crossing changes the route.</p>
+<section id="how-a-walled-cell-grows" class="slide level2">
+<h2>How a walled cell grows</h2>
+<ol type="1">
+<li><strong>Turgor</strong> supplies the force: water uptake pushes on the wall.</li>
+<li>The wall is <strong>loosened</strong>: bonds between microfibrils and matrix are cut or slip (expansins, activated at low wall pH), so the wall <strong>yields</strong> and extends irreversibly.</li>
+<li><strong>New material</strong> is added: wall polymers (cellulose made at the plasma membrane, matrix from the Golgi) and <strong>new plasma membrane</strong>.</li>
+</ol>
+<ul>
+<li>Turgor without wall loosening gives a turgid cell that <strong>does not grow</strong>.</li>
+<li>Most of the volume gained is <strong>vacuole</strong>: a root cell can lengthen more than 10-fold with little increase in cytoplasm.</li>
+</ul>
+<p><strong>Cells are now walled boxes. How do neighbouring cells exchange material?</strong></p>
+<aside class="notes">
+<p>This is the answer to the previous slide and to exercise 2.2: the wall property that must change is extensibility (loosening), and the materials to supply are new wall and new membrane. Mention acid growth briefly, because auxin acts this way in P4. Stress that growth is mostly water uptake into the vacuole, which is why cell expansion is fast and cheap compared with making new cytoplasm.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="apoplast-and-symplast-two-routes-between-cells" class="slide level2">
+<h2>Apoplast and symplast: two routes between cells</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><strong>Apoplast:</strong> the continuous system of cell walls, intercellular spaces and dead xylem conduits, <strong>outside</strong> the plasma membranes.</li>
+<li><strong>Symplast:</strong> the cytoplasm of all cells connected by plasmodesmata.</li>
+<li><strong>Plasmodesma:</strong> a membrane-lined channel through the wall, ~50 nm wide, joining the cytoplasm of neighbouring cells. Thousands per cell.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-reveal="true" data-fig-width="5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  A["Apoplast: walls and spaces"] --&gt;|"cross plasma membrane"| S["Symplast: connected cytoplasm"]
+  S --&gt;|"plasmodesmata"| S2["Neighbouring cell's cytoplasm"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+<p><strong>To move from the apoplast into the symplast, a substance must cross a plasma membrane.</strong> This is where the plant selects what it takes up (P2).</p>
+<aside class="notes">
+<p>Exercise 2.3 asks for the three definitions and 2.4 for the boundary crossed. Plasmodesmata are the plant’s equivalent of gap junctions, but larger and lined by the plasma membrane, so the symplast is one continuous cytoplasm across many cells. These are routes, not tissues. In P2 the root endodermis blocks the apoplastic route and forces water and ions through a membrane. Transition: from cells to tissues.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="three-tissue-systems" class="slide level2">
 <h2>Three tissue systems</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tissue system</th>
+<th>Main functions</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Dermal</strong></td>
+<td>protection; control of exchange with the environment</td>
+<td>epidermis with cuticle, guard cells, root hairs</td>
+</tr>
+<tr class="even">
+<td><strong>Ground</strong></td>
+<td>photosynthesis, storage, support</td>
+<td>mesophyll, cortex, pith (parenchyma, collenchyma, sclerenchyma)</td>
+</tr>
+<tr class="odd">
+<td><strong>Vascular</strong></td>
+<td>long-distance transport; support</td>
+<td>xylem, phloem</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Dermal: protection and exchange</li>
-<li>Ground: photosynthesis, storage, support</li>
-<li>Vascular: transport and support</li>
+<li>Every organ (root, stem, leaf, flower) contains all three systems.</li>
+<li>They are continuous through the whole plant: one epidermis, one vascular system from root tip to leaf.</li>
+<li>Compare A1: epithelium ↔︎ dermal; connective ↔︎ ground; and the vascular system plays the role of blood vessels.</li>
 </ul>
+<p><strong>The ground tissue is built from three cell types with very different walls.</strong></p>
+<aside class="notes">
+<p>This is the plant counterpart of the four animal tissue types in A1, and it is the map for the next slides. The analogy to animal tissues is useful but loose: the vascular tissue transports and also supports. Exercise 3.1 asks for this table with one example per system.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="xylem-and-phloem-differ" class="slide level2">
-<h2>Xylem and phloem differ</h2>
-<p>Conducting xylem elements are dead at maturity.</p>
-<p>Sieve tubes remain living; companion cells support them. Whole xylem also contains living cells.</p>
+<section id="ground-tissue-three-cell-types" class="slide level2">
+<h2>Ground tissue: three cell types</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Parenchyma</th>
+<th>Collenchyma</th>
+<th>Sclerenchyma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Living at maturity?</td>
+<td><strong>yes</strong></td>
+<td><strong>yes</strong></td>
+<td>usually <strong>no</strong></td>
+</tr>
+<tr class="even">
+<td>Wall</td>
+<td>thin primary wall</td>
+<td>unevenly thickened primary wall, thick at the corners</td>
+<td>thick, <strong>lignified secondary wall</strong></td>
+</tr>
+<tr class="odd">
+<td>Main function</td>
+<td>metabolism, photosynthesis, storage</td>
+<td><strong>flexible</strong> support of growing organs</td>
+<td><strong>rigid</strong> support</td>
+</tr>
+<tr class="even">
+<td>Example</td>
+<td>leaf mesophyll, potato tuber</td>
+<td>celery “strings”</td>
+<td>fibres (flax, hemp), sclereids (grit in pears)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The wall predicts the function: thin wall → metabolism; thick but stretchable wall → support while growing; lignified wall → support after growth stops.</li>
+</ul>
+<p><strong>The vascular tissue also contains dead cells with lignified walls: the xylem conduits.</strong></p>
+<aside class="notes">
+<p>Exercise 3.2 is this table. Teach recognition from the wall: students should be able to identify a cell type in a section from wall thickness, the presence of contents, and position. Collenchyma is living and can still stretch, so it supports young stems and petioles; sclerenchyma is dead and rigid. The bridge: xylem conduits are like sclerenchyma (dead, lignified), while phloem conducting cells must stay alive.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="where-does-growth-occur" class="slide level2">
-<h2>Where does growth occur?</h2>
-<p>Apical meristems contribute length.</p>
-<p>Lateral meristems contribute thickening where present.</p>
+<section id="xylem-and-phloem" class="slide level2">
+<h2>Xylem and phloem</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Xylem</th>
+<th>Phloem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Transports</td>
+<td>water and mineral ions</td>
+<td>sugars (mainly sucrose), amino acids, signals</td>
+</tr>
+<tr class="even">
+<td>Conducting cells</td>
+<td><strong>tracheids</strong> and <strong>vessel elements</strong></td>
+<td><strong>sieve-tube elements</strong></td>
+</tr>
+<tr class="odd">
+<td>Living at maturity?</td>
+<td><strong>no</strong>: hollow tubes of lignified wall</td>
+<td><strong>yes</strong>, but without a nucleus</td>
+</tr>
+<tr class="even">
+<td>Helper cells</td>
+<td>xylem parenchyma (living)</td>
+<td><strong>companion cells</strong> (nucleated, linked by plasmodesmata)</td>
+</tr>
+<tr class="odd">
+<td>End walls</td>
+<td>vessel elements have <strong>perforation plates</strong></td>
+<td>sieve elements are joined by <strong>sieve plates</strong></td>
+</tr>
+<tr class="even">
+<td>Direction</td>
+<td>roots → shoot</td>
+<td>sources → sinks, up or down</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Xylem as a tissue contains living parenchyma: only its <strong>conducting cells</strong> are dead.</li>
+<li>A dead, empty conduit offers little resistance to flow; a living sieve element can load and unload sugar.</li>
+</ul>
+<p><strong>Where does the leaf use these supplies?</strong></p>
+<aside class="notes">
+<p>Exercises 3.3 and 3.4 use this table. Students should be able to name cells A–C in 3.3 from the descriptions: vessel element, sieve-tube element, companion cell. The functional logic: water moving under tension needs a rigid, empty pipe; sugar transport needs living membranes to load and unload, so the sieve element stays alive and depends on its companion cell, which carries the nucleus. Direction in phloem depends on where sugar is made and used, which is the topic of P3.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="more-cells-or-longer-cells" class="slide level2">
-<h2>More cells or longer cells?</h2>
-<p>100 × 40 µm = 4 mm.</p>
-<p>100 × 70 µm = 7 mm; 175 × 40 µm also = 7 mm.</p>
-<p>Length alone does not identify the mechanism.</p>
+<section id="the-leaf-gas-exchange-and-its-cost" class="slide level2">
+<h2>The leaf: gas exchange and its cost</h2>
+<ul>
+<li>A <strong>cuticle</strong> of wax makes the epidermis nearly impermeable to water and gases.</li>
+<li>Gas exchange goes through <strong>stomata</strong>: pores bordered by two <strong>guard cells</strong>, ~100–300 per mm², ~1–2 % of the leaf area when open.</li>
+<li>Mesophyll cells face a large internal air space: their surface is 10–40× the leaf area.</li>
+</ul>
+<p>Route of CO₂ to the site of fixation:</p>
+<div class="cell" data-reveal="true" data-fig-width="12" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A["Stomatal pore"] --&gt; B["Intercellular air space"]
+  B --&gt; C["Water film of cell wall"]
+  C --&gt; D["Plasma membrane"]
+  D --&gt; E["Cytosol"]
+  E --&gt; F["Chloroplast stroma"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>CO₂ diffuses in and water vapour diffuses out through the same pore. Opening a stoma raises both.</strong></p>
+<aside class="notes">
+<p>Exercise 3.5 asks for this route and 3.6 for the reason opening increases both fluxes. The leaf is the plant’s lung: a large internal surface behind a small, regulated opening. Because the cuticle blocks both gases, the plant cannot take up CO₂ without losing water; this trade-off runs through P2 (stomatal regulation, transpiration) and P3 (C4 and CAM). The water film step matters: CO₂ dissolves before crossing the membrane.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="three-genomes-cooperate" class="slide level2">
-<h2>Three genomes cooperate</h2>
-<p>Nuclear, plastid and mitochondrial expression support one cell.</p>
-<p>A protein destination does not identify its gene location.</p>
+<section id="the-root-surface-and-a-selective-barrier" class="slide level2">
+<h2>The root: surface and a selective barrier</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>From the outside in:</p>
+<ol type="1">
+<li><strong>Epidermis</strong> with <strong>root hairs</strong>: tubular extensions of single epidermal cells, not small roots.</li>
+<li><strong>Cortex</strong>: parenchyma with air spaces; often colonised by mycorrhizal fungi.</li>
+<li><strong>Endodermis</strong>: one cell layer with the <strong>Casparian strip</strong>, a band of suberin in its walls.</li>
+<li><strong>Stele</strong> (vascular cylinder): xylem and phloem.</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Root hairs multiply the absorbing surface many times.</li>
+<li>The Casparian strip <strong>blocks the apoplast</strong>. Water and ions must cross a plasma membrane to enter the stele.</li>
+<li>The endodermis is to the root what the plasma membrane is to a cell: the point of selection.</li>
+</ul>
+</div></div>
+<p><strong>Leaves and roots have to keep extending into new space. Where do the new cells come from?</strong></p>
+<aside class="notes">
+<p>Exercise 3.3 asks students to name root hairs and the endodermis from descriptions. This slide sets up P2, where we follow water from the soil across these layers into the xylem. The key idea is that the apoplast is open up to the endodermis and closed there, so the plant controls entry at one cell layer. Transition to growth: a plant that cannot move finds new soil and light by growing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="continue" class="slide level2">
-<h2>Continue</h2>
-<p>Use the <a href="../../plant/organisation/index.html">tutorial</a>, <a href="../../plant/organisation/exercise.html">exercise</a> and <a href="../../plant/organisation/quiz.html">self-check</a>.</p>
+<section id="meristems-growth-throughout-life" class="slide level2">
+<h2>Meristems: growth throughout life</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Meristem</th>
+<th>Location</th>
+<th>Produces</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Shoot apical</strong></td>
+<td>shoot tip</td>
+<td>stem, leaves, flowers (primary growth in length)</td>
+</tr>
+<tr class="even">
+<td><strong>Root apical</strong></td>
+<td>root tip, under the root cap</td>
+<td>root length (primary growth)</td>
+</tr>
+<tr class="odd">
+<td><strong>Vascular cambium</strong></td>
+<td>cylinder in stem and root</td>
+<td><strong>secondary xylem</strong> inward, <strong>secondary phloem</strong> outward</td>
+</tr>
+<tr class="even">
+<td><strong>Cork cambium</strong></td>
+<td>outer stem and root</td>
+<td>periderm (cork, bark)</td>
+</tr>
+<tr class="odd">
+<td><strong>Intercalary</strong></td>
+<td>base of grass leaves and internodes</td>
+<td>regrowth after the tip is cut or grazed</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Primary growth</strong> (length) comes from apical meristems; <strong>secondary growth</strong> (girth) from the lateral meristems: vascular and cork cambium.</li>
+<li>An animal’s body plan is complete early; a plant keeps making new organs.</li>
+</ul>
+<aside class="notes">
+<p>Exercise 4.1 asks for the meristem in each case. This is the plant answer to “it cannot move”: it keeps building new roots into new soil and new leaves into new light. Intercalary meristems explain why a lawn survives mowing and grasses survive grazing: the growing region is at the base, below the cut. Transition: how a root tip actually gets longer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-root-tip-more-cells-or-longer-cells" class="slide level2">
+<h2>The root tip: more cells or longer cells?</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Behind the root cap, three overlapping zones:</p>
+<ol type="1">
+<li><strong>Division zone:</strong> small cells dividing (within ~1 mm of the tip).</li>
+<li><strong>Elongation zone:</strong> cells stop dividing and lengthen many-fold.</li>
+<li><strong>Maturation zone:</strong> cells differentiate; root hairs appear.</li>
+</ol>
+<p>A root gets longer by <strong>division</strong>, <strong>expansion</strong>, or both.</p>
+</div><div class="column" style="width:55%;">
+<p>A file of 100 cells, end to end:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Cells</th>
+<th style="text-align: right;">Mean cell length</th>
+<th style="text-align: right;">Segment length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">40 µm</td>
+<td style="text-align: right;">4 mm</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">70 µm</td>
+<td style="text-align: right;"><strong>7 mm</strong> (expansion only)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">40 µm</td>
+<td style="text-align: right;"><strong>7 mm</strong> (division only)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Same final length, two different mechanisms.</li>
+<li><strong>Length alone does not identify the process.</strong> Count cells and measure their length.</li>
+</ul>
+</div></div>
+<p><strong>Cells leaving the meristem become epidermis, xylem or cortex, yet all carry the same DNA. How?</strong></p>
+<aside class="notes">
+<p>Exercise 4.2 is this calculation. Work it on the board: 100 × 40 µm = 4000 µm = 4 mm; 100 × 70 µm = 7 mm; 7000 / 40 = 175 cells. The general point is experimental: a mutant or treatment with a shorter root might divide less, expand less, or both, and only measuring cell number and cell length distinguishes them. The zones are a gradient, not sharp compartments.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="differentiation-same-genome-different-genes" class="slide level2">
+<h2>Differentiation: same genome, different genes</h2>
+<ul>
+<li>A leaf mesophyll cell and a root cortex cell have the <strong>same nuclear genome</strong>. They differ because they <strong>express different sets of genes</strong>.</li>
+<li>Differentiation changes gene expression and cell structure, <strong>not the DNA sequence</strong>.</li>
+<li>Some mature cells can resume division: wound healing, cuttings that root, regeneration of whole plants from tissue culture.</li>
+<li>Regeneration is <strong>not</strong> guaranteed: it depends on genotype, cell type, developmental state and the hormones in the culture medium.</li>
+</ul>
+<p><strong>A plant cell has not one genome but three.</strong></p>
+<aside class="notes">
+<p>Exercises 4.3 and 5.3 test these statements. Contrast with animals: many plant cells keep the ability to dedifferentiate and divide, which is the basis of propagation by cuttings and of plant biotechnology (P5). But “every cell can make a plant” is false as a general rule. Hormonal control of regeneration returns in P4.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="three-genomes-in-one-cell" class="slide level2">
+<h2>Three genomes in one cell</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Genome</th>
+<th>Size (Arabidopsis)</th>
+<th>Genes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nuclear</strong></td>
+<td>~135 Mb</td>
+<td>~27 000 protein-coding genes</td>
+</tr>
+<tr class="even">
+<td><strong>Plastid</strong></td>
+<td>~154 kb</td>
+<td>~130 genes (photosynthesis, plastid ribosomes)</td>
+</tr>
+<tr class="odd">
+<td><strong>Mitochondrial</strong></td>
+<td>~370 kb</td>
+<td>~60 genes (respiration, mitochondrial ribosomes)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Most proteins that work in chloroplasts are <strong>encoded in the nucleus</strong>, made in the cytosol and <strong>imported</strong>. A chloroplast contains ~3000 different proteins; its own genome encodes about 100.</li>
+<li>Example: <strong>Rubisco</strong>, the CO₂-fixing enzyme. Its large subunit is encoded in the plastid, its small subunit in the nucleus.</li>
+<li>So a <strong>nuclear</strong> mutation can block photosynthesis while chloroplast DNA is unchanged.</li>
+</ul>
+<aside class="notes">
+<p>Exercises 5.1 and 5.2 use these facts. Rubisco is the ideal example because it is assembled from products of two genomes, and it is the enzyme at the centre of P3. Point out that the location of a protein does not tell you where its gene is. Plastid and mitochondrial genomes are inherited mostly from the mother in many species, but not all.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="back-to-the-seedling" class="slide level2">
+<h2>Back to the seedling</h2>
+<p>The maize seedling solved the A1 problem without moving:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Need</th>
+<th>Plant solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Large surface for light and CO₂</td>
+<td>thin leaves, internal air spaces, stomata</td>
+</tr>
+<tr class="even">
+<td>Large surface for water and minerals</td>
+<td>roots and root hairs</td>
+</tr>
+<tr class="odd">
+<td>Long-distance transport</td>
+<td>xylem (dead pipes) and phloem (living tubes)</td>
+</tr>
+<tr class="even">
+<td>Support</td>
+<td>turgor in walled cells; lignified secondary walls</td>
+</tr>
+<tr class="odd">
+<td>Reaching new resources</td>
+<td>growth from apical and lateral meristems</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two open questions: how does water get from the soil to the top of the plant (P2), and how is light turned into sugar for the whole plant (P3)?</strong></p>
+<aside class="notes">
+<p>Close the loop to the opening slide. Each row is a structure from today matched to the need it serves. The two transport questions are the next two lectures: P2 follows water and minerals from soil to air, P3 follows carbon from the air into sugar and out to the roots.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Plant versus animal</td>
+<td>cannot move, makes its own food, cells have walls, grows all its life</td>
+</tr>
+<tr class="even">
+<td>Boundaries</td>
+<td>wall (mechanical, porous), plasma membrane (selective), tonoplast (vacuole)</td>
+</tr>
+<tr class="odd">
+<td>Turgor</td>
+<td>pressure of protoplast against wall, ~0.3–1 MPa; loss → wilting</td>
+</tr>
+<tr class="even">
+<td>Plastids</td>
+<td>chloroplast, amyloplast, chromoplast, all from proplastids</td>
+</tr>
+<tr class="odd">
+<td>Cell growth</td>
+<td>turgor + wall loosening + new wall and membrane</td>
+</tr>
+<tr class="even">
+<td>Apoplast / symplast</td>
+<td>walls and spaces / cytoplasm linked by plasmodesmata</td>
+</tr>
+<tr class="odd">
+<td>Tissue systems</td>
+<td>dermal, ground (parenchyma, collenchyma, sclerenchyma), vascular</td>
+</tr>
+<tr class="even">
+<td>Xylem / phloem</td>
+<td>dead tracheids and vessels / living sieve tubes with companion cells</td>
+</tr>
+<tr class="odd">
+<td>Meristems</td>
+<td>apical (length), vascular and cork cambium (girth), intercalary</td>
+</tr>
+<tr class="even">
+<td>Three genomes</td>
+<td>nuclear, plastid, mitochondrial; most organelle proteins are nuclear-encoded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next (P2 — Water, minerals and transport):</strong> water moves from soil to air through a plant with no pump. What drives it, why can salty wet soil still dry a plant out, and how do stomata and roots control the flow?</p>
+<p><a href="../../plant/organisation/index.html">Tutorial</a> · <a href="../../plant/organisation/exercise.html">Exercises</a> · <a href="../../plant/organisation/quiz.html">Quiz</a></p>
+<aside class="notes">
+<p>Read the table as the story: the plant’s constraints, the cell that meets them, how cells grow and connect, the tissues they form, where growth happens, and the genomes behind it. P2 takes the water half of the supply problem, using turgor (as pressure potential), the apoplast and symplast, the endodermis, xylem and stomata from today.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.30">
 
   <meta name="author" content="Animal and Plant Physiology">
-  <title>Animal and Plant Physiology – P4 — Developmental signals</title>
+  <title>Animal and Plant Physiology – P4 — Signals, growth and reproduction</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -121,13 +121,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">P4 — Developmental signals</h1>
+  <h1 class="title">P4 — Signals, growth and reproduction</h1>
+  <p class="subtitle">Week 9 — How a plant decides what to build, and when</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -138,65 +142,1038 @@ Animal and Plant Physiology
 </div>
 
 </section>
-<section id="how-does-a-cue-change-an-organ" class="slide level2">
-<h2>How does a cue change an organ?</h2>
-<p>Cue → receptor → cellular changes → development.</p>
-<p>Locate the evidence along the chain.</p>
+<section id="about-this-lecture" class="slide level2">
+<h2>About this lecture</h2>
+<p>By the end of P3 our plant has water, minerals and sugar. But a plant cannot move. It must decide <strong>when</strong> to germinate, <strong>which way</strong> to grow, <strong>whether</strong> to branch, <strong>when</strong> to flower and <strong>when</strong> to let a leaf die, using only what it can sense where it stands. <strong>How does a plant turn light, gravity and season into these decisions?</strong> Today we follow one plant from seed to senescence and ask, at each stage, which signal is in charge.</p>
+<ul>
+<li><strong>Signals:</strong> the chain from cue to response, and the main plant hormones.</li>
+<li><strong>Seed:</strong> dormancy, germination and the ABA : gibberellin balance.</li>
+<li><strong>Light as information:</strong> photoreceptors, and phytochrome as a red/far-red switch.</li>
+<li><strong>Growing the right way:</strong> phototropism, gravitropism and apical dominance.</li>
+<li><strong>Flowering:</strong> day length, night breaks, florigen and vernalisation.</li>
+<li><strong>The end of the cycle:</strong> double fertilisation and senescence.</li>
+</ul>
+<aside class="notes">
+<p>Frame the lecture as a life cycle: seed, seedling, shoot, flower, seed again, and finally an ageing leaf. At each stage the plant makes a decision, and the question is always the same: what does it sense, what carries the signal, and what does the signal change? Link back to P3: carbon and nutrients are the raw material; today is about the control of how that material is used. P5 then uses the same signalling machinery for stress and defence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="different-timescales" class="slide level2">
-<h2>Different timescales</h2>
-<p>Existing protein activity can change rapidly.</p>
-<p>Gene expression and tissue development can add slower responses.</p>
+<section id="from-cue-to-response" class="slide level2">
+<h2>From cue to response</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  cue[Cue: light, gravity,&lt;br/&gt;temperature, hormone] --&gt; rec[Receptor]
+  rec --&gt; trans[Signal transduction]
+  trans --&gt; fast[Fast: ion fluxes,&lt;br/&gt;protein activity]
+  trans --&gt; slow[Slow: gene&lt;br/&gt;expression]
+  fast --&gt; resp[Cell growth,&lt;br/&gt;division, death]
+  slow --&gt; resp
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Every response needs a <strong>receptor</strong>. A cue the plant cannot perceive has no effect.</li>
+<li><strong>Fast</strong> responses (seconds to minutes) modify existing proteins: stomata closing, a pulvinus folding.</li>
+<li><strong>Slow</strong> responses (hours to weeks) change gene expression: a flower forming.</li>
+<li>The same signal can give different responses in different tissues.</li>
+</ul>
+<p><strong>Many of the signals inside the plant are hormones. Which ones?</strong></p>
+<aside class="notes">
+<p>This is the framework for every example in the lecture: whenever we meet a response, ask what the cue is, what the receptor is, and whether the change is in existing proteins or in gene expression. Point out the last bullet: auxin promotes elongation in shoots but inhibits it in roots at the same concentration, so the response depends on the responding cell, not only on the signal. The next slide lists the hormones.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="hormones-interact" class="slide level2">
-<h2>Hormones interact</h2>
-<p>One signal can affect several processes.</p>
-<p>Outcome depends on tissue, dose, transport, sensitivity and state.</p>
+<section id="the-plant-hormones" class="slide level2">
+<h2>The plant hormones</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hormone</th>
+<th>Made in / moves by</th>
+<th>Main effects</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Auxin</strong> (IAA)</td>
+<td>Shoot apex, young leaves; <strong>polar transport</strong> downwards</td>
+<td>Cell elongation, tropisms, apical dominance, root initiation</td>
+<td>Rooting powder for cuttings</td>
+</tr>
+<tr class="even">
+<td><strong>Cytokinin</strong></td>
+<td>Mainly roots; xylem</td>
+<td>Cell division, bud outgrowth, <strong>delays senescence</strong></td>
+<td>Leaf discs stay green</td>
+</tr>
+<tr class="odd">
+<td><strong>Gibberellin</strong> (GA)</td>
+<td>Young tissues, embryo</td>
+<td>Stem elongation, bolting, <strong>breaks seed dormancy</strong></td>
+<td>Tall vs dwarf pea (Mendel)</td>
+</tr>
+<tr class="even">
+<td><strong>Abscisic acid</strong> (ABA)</td>
+<td>Leaves and roots under water deficit</td>
+<td><strong>Stomatal closure</strong>, seed <strong>dormancy</strong></td>
+<td>Seeds stay dormant in the fruit</td>
+</tr>
+<tr class="odd">
+<td><strong>Ethylene</strong></td>
+<td>Most tissues; a <strong>gas</strong></td>
+<td><strong>Climacteric fruit ripening</strong>, abscission, triple response</td>
+<td>One ripe banana ripens the rest</td>
+</tr>
+<tr class="even">
+<td><strong>Brassinosteroids</strong></td>
+<td>Most tissues</td>
+<td>Cell expansion</td>
+<td>Mutants are dark-green dwarfs</td>
+</tr>
+<tr class="odd">
+<td><strong>Strigolactones</strong></td>
+<td>Roots</td>
+<td>Inhibit bud outgrowth</td>
+<td>Mutants are bushy</td>
+</tr>
+</tbody>
+</table>
+<p>Jasmonic acid and salicylic acid control defence; we meet them in P5.</p>
+<aside class="notes">
+<p>Students must be able to match hormone and effect (exercise 1.1). Go through the example column, because concrete cases are easier to recall than lists: rooting powder is synthetic auxin; ethylene from one ripe fruit triggers ripening in its neighbours in climacteric fruits such as banana, tomato and apple, but not in non-climacteric fruits such as citrus or grape. Strigolactones are included because they appear on the apical dominance slide. Transition: how do we find out what a hormone does? Mostly from mutants.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="light-is-information" class="slide level2">
-<h2>Light is information</h2>
-<p>Phytochromes: red/far-red.</p>
-<p>Cryptochromes/phototropins: blue-light responses. Energy supply is a separate question.</p>
+<section id="reading-a-hormone-mutant" class="slide level2">
+<h2>Reading a hormone mutant</h2>
+<p><strong>Spray gibberellin on two dwarf pea mutants:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mutant</th>
+<th>Response to GA</th>
+<th>Defect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Grows to normal height</td>
+<td><strong>Biosynthesis</strong>: cannot make GA (Mendel’s <em>le</em> dwarf)</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Stays dwarf</td>
+<td><strong>Perception or signalling</strong>: cannot respond to GA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ethylene and dark-grown seedlings: the triple response</strong></p>
+<ul>
+<li>Wild type + ethylene: <strong>short, thick hypocotyl</strong> and an <strong>exaggerated apical hook</strong>.</li>
+<li><em>etr1</em> (ethylene receptor mutant) + ethylene: <strong>long, thin hypocotyl</strong>, normal hook. The hormone is present, but the receptor cannot pass on the signal.</li>
+</ul>
+<p><strong>Rule:</strong> if adding the hormone rescues the mutant, the defect is in making it.</p>
+<aside class="notes">
+<p>This is the logic of hormone genetics and appears in exercises 1.4 and 1.5. A biosynthesis mutant is rescued by the hormone; a receptor or signalling mutant is not. The Green Revolution semi-dwarf wheats (Rht genes) are GA-insensitive, which is the second class. The triple response screen found the ethylene receptor ETR1: mutants that ignore ethylene look like untreated seedlings. Transition: we start the life cycle, with the seed, where two of these hormones are in direct opposition.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="directional-growth" class="slide level2">
-<h2>Directional growth</h2>
-<p>Perception → asymmetric response → curvature.</p>
-<p>Control gravity, handling and general vigour before inferring a mechanism.</p>
+<section id="the-seed-dormant-or-just-waiting" class="slide level2">
+<h2>The seed: dormant or just waiting?</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Quiescent</strong></th>
+<th><strong>Dormant</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Definition</td>
+<td>Will germinate as soon as conditions allow</td>
+<td>Will not germinate even in water, O₂ and warmth</td>
+</tr>
+<tr class="even">
+<td>Example</td>
+<td>Dry seeds in a packet; seeds in dry soil</td>
+<td>Fresh seeds that need months of dry storage</td>
+</tr>
+<tr class="odd">
+<td>Released by</td>
+<td>Water</td>
+<td><strong>After-ripening</strong> (dry storage), <strong>stratification</strong> (moist cold), light</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>ABA maintains dormancy; gibberellin promotes germination.</strong> The balance decides.</li>
+<li>ABA-deficient maize mutants show <strong>vivipary</strong>: seeds germinate on the cob.</li>
+<li>GA-deficient mutants do not germinate unless GA is supplied.</li>
+<li>Germination (radicle emergence) is scored at a stated time: 12 of 20 seeds by day 5 = <strong>60%</strong>.</li>
+</ul>
+<aside class="notes">
+<p>Dormancy is an internal block; quiescence is only a lack of water or warmth. Stratification is why many temperate seeds germinate in spring after a winter in moist soil, not in autumn. The two mutant phenotypes show the ABA : GA balance from both sides (exercise 4.2). The germination percentage needs a denominator and a time point (exercise 4.3); non-germinated seeds may be dormant, slow or dead. Transition: once germination starts, what does gibberellin actually do in the seed?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="dormancy-or-quiescence" class="slide level2">
-<h2>Dormancy or quiescence?</h2>
-<p>Dormancy: viable seed held from germination despite otherwise suitable conditions.</p>
-<p>Quiescence: external conditions unsuitable.</p>
+<section id="germination-gibberellin-mobilises-the-reserves" class="slide level2">
+<h2>Germination: gibberellin mobilises the reserves</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  E[Embryo releases GA] --&gt; A[Aleurone layer:&lt;br/&gt;α-amylase gene on]
+  A --&gt; S[α-amylase secreted&lt;br/&gt;into endosperm]
+  S --&gt; H[Starch → sugars]
+  H --&gt; U[Scutellum absorbs&lt;br/&gt;sugars → embryo]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>In a barley grain the starchy <strong>endosperm is dead tissue</strong>. The living <strong>aleurone layer</strong> around it makes the enzymes.</li>
+<li>The embryo signals with <strong>GA</strong>; the aleurone responds by <strong>transcribing</strong> α-amylase.</li>
+<li><strong>ABA blocks</strong> this response, so a dormant grain keeps its reserves.</li>
+<li>The malting industry uses exactly this: barley is germinated, with added GA, to produce sugar for brewing.</li>
+</ul>
+<p><strong>But many small seeds also check something outside: is there light?</strong></p>
+<aside class="notes">
+<p>This is the best-understood hormone response in a seed and is the order asked in exercise 1.3: GA from embryo, induction in the aleurone, secretion, hydrolysis, uptake via the scutellum. It is also a clear example of a slow, gene-expression response from the first slide. ABA antagonism ties back to the ABA : GA balance. Transition: small seeds such as lettuce have few reserves and should only germinate near the surface, which they detect with light.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="count-at-a-defined-time" class="slide level2">
-<h2>Count at a defined time</h2>
-<p>18 of 24 seeds = 75% by the observation time.</p>
-<p>Non-germinated does not necessarily mean dead.</p>
+<section id="light-is-information-as-well-as-energy" class="slide level2">
+<h2>Light is information as well as energy</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Photoreceptor</th>
+<th>Light absorbed</th>
+<th>Example responses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Phytochrome</strong></td>
+<td>Red / far-red</td>
+<td>Seed germination, shade avoidance, photoperiod</td>
+</tr>
+<tr class="even">
+<td><strong>Cryptochrome</strong></td>
+<td>Blue / UV-A</td>
+<td>Inhibits hypocotyl elongation; entrains the circadian clock</td>
+</tr>
+<tr class="odd">
+<td><strong>Phototropin</strong></td>
+<td>Blue / UV-A</td>
+<td><strong>Phototropism</strong>, chloroplast movement, stomatal opening</td>
+</tr>
+<tr class="even">
+<td><strong>UVR8</strong></td>
+<td>UV-B</td>
+<td>UV-protective responses (e.g.&nbsp;flavonoid sunscreens)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A seedling responds to a light flash far too dim to support photosynthesis. These receptors read the <strong>colour, direction and timing</strong> of light.</li>
+<li>A dark-grown seedling is <strong>etiolated</strong>: long, pale, hooked. Light triggers <strong>de-etiolation</strong>: the hook opens, leaves expand, chlorophyll forms.</li>
+</ul>
+<p><strong>The red/far-red receptor is the key to germination and to flowering. How does it work?</strong></p>
+<aside class="notes">
+<p>Distinguish light as energy (P3) from light as a signal. The match between photoreceptor, wavelength and response is exercise 3.4. Etiolation is a strategy: a buried seedling puts all its reserves into elongation until it reaches light. Phytochrome gets the next three slides because it underlies germination, shade avoidance and the night-break experiments in flowering.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="vegetative-regulation" class="slide level2">
-<h2>Vegetative regulation</h2>
-<p>Meristem activity, expansion, branching and allocation interact.</p>
-<p>Apex removal changes more than one variable.</p>
+<section id="phytochrome-a-redfar-red-switch" class="slide level2">
+<h2>Phytochrome: a red/far-red switch</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Pr</strong></th>
+<th><strong>Pfr</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Absorbs</td>
+<td>Red, ~660 nm</td>
+<td>Far-red, ~730 nm</td>
+</tr>
+<tr class="even">
+<td>Converted by light to</td>
+<td>Pfr</td>
+<td>Pr</td>
+</tr>
+<tr class="odd">
+<td>Biologically active?</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Synthesised as?</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Red light → mostly <strong>Pfr</strong> (active). Far-red light → mostly <strong>Pr</strong> (inactive).</li>
+<li>The conversion is <strong>photoreversible</strong>: the last light treatment decides the state.</li>
+<li>Active Pfr moves into the <strong>nucleus</strong> and changes gene expression.</li>
+<li>In darkness, Pfr slowly reverts or is degraded, so the Pfr level falls overnight.</li>
+</ul>
+<aside class="notes">
+<p>Students should be able to fill this table from memory (exercise 3.1). The key idea is a switch with two stable states, each converted to the other by the light it absorbs. Phytochrome is made as inactive Pr, which is why a seed in darkness has no active phytochrome. The last bullet matters for photoperiod: the plant can use the decline in Pfr during the night. The next slide shows the classic experiment that proved photoreversibility.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="flowering-integrates-cues" class="slide level2">
-<h2>Flowering integrates cues</h2>
-<p>Age, carbon status, temperature and light timing contribute.</p>
-<p>Vernalisation is not a universal instant flowering trigger.</p>
+<section id="the-lettuce-seed-experiment" class="slide level2">
+<h2>The lettuce seed experiment</h2>
+<p>Imbibed lettuce seeds, brief light flashes, then darkness:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Flash sequence</th>
+<th>Last flash</th>
+<th>Phytochrome</th>
+<th>Germinate?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dark only</td>
+<td>none</td>
+<td>Pr</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>R</td>
+<td>R</td>
+<td>Pfr</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>R → FR</td>
+<td>FR</td>
+<td>Pr</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>R → FR → R</td>
+<td>R</td>
+<td>Pfr</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>R → FR → R → FR</td>
+<td>FR</td>
+<td>Pr</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>The last flash decides.</strong> This photoreversibility identified phytochrome (Borthwick and Hendricks, 1950s).</li>
+<li>Why it matters: a buried seed sees no light and stays dormant until the soil is disturbed.</li>
+</ul>
+<p><strong>Light under a canopy has a different colour. What does phytochrome tell the plant there?</strong></p>
+<aside class="notes">
+<p>Work the sequence column by column; exercise 3.2 extends it to five flashes. The ecological meaning: small-seeded weeds germinate after ploughing because the soil is turned and seeds get a flash of light. Transition to shade: phytochrome does not just detect light versus dark, it detects the ratio of red to far-red.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="a-mobile-signal-example" class="slide level2">
-<h2>A mobile signal example</h2>
-<p>Arabidopsis FT protein links leaf and shoot-apex activity.</p>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/17446353/">Primary study</a>: distinguish expression, movement and response.</p>
+<section id="shade-avoidance" class="slide level2">
+<h2>Shade avoidance</h2>
+<ul>
+<li>Chlorophyll <strong>absorbs red</strong> light but <strong>transmits and reflects far-red</strong>.</li>
+<li>Under a canopy, the <strong>red : far-red ratio falls</strong> (sunlight ~1.2; deep shade ~0.2).</li>
+<li>Less red → <strong>less Pfr</strong>. The plant reads this as “neighbours above me”.</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shade-avoidance response</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Faster stem and petiole elongation</td>
+<td>Leaves reach light before the competitor’s</td>
+</tr>
+<tr class="even">
+<td>Leaves angled upwards</td>
+<td>Less self-shading</td>
+</tr>
+<tr class="odd">
+<td>Less branching</td>
+<td>Resources go into height</td>
+</tr>
+<tr class="even">
+<td>Earlier flowering</td>
+<td>Seeds are set before resources run out</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The cost: thin, weak stems and less root growth. Dense crops lose yield to this.</li>
+</ul>
+<aside class="notes">
+<p>Exercise 3.3. Emphasise that the plant responds to reflected far-red from neighbours even before it is actually shaded, which is an early warning. The cost row connects to agriculture: crop breeders have selected plants with weaker shade avoidance to allow dense planting. Transition: phytochrome reads colour; the direction of light is read by a different receptor and causes the shoot to bend.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="reproduction-has-stages" class="slide level2">
-<h2>Reproduction has stages</h2>
-<p>Flower formation → pollination → fertilisation → seed development.</p>
-<p>Equal flower counts need not mean equal viable seed output.</p>
+<section id="phototropism-bending-towards-light" class="slide level2">
+<h2>Phototropism: bending towards light</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Coleoptile treatment, lit from one side</th>
+<th>Bends?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Untreated</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Tip removed, or covered with an opaque cap</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Tip in a transparent cap</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Opaque collar below the tip, tip exposed</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Tip cut off and replaced on a gelatin block</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Light is perceived at the tip</strong>, by <strong>phototropin</strong> (blue light).</li>
+<li>A diffusible signal, <strong>auxin</strong>, moves down to the growing zone.</li>
+<li><strong>Cholodny–Went model:</strong> auxin is moved to the <strong>shaded side</strong>; cells there elongate faster, so the shoot bends <strong>towards</strong> the light.</li>
+</ul>
+<aside class="notes">
+<p>The table summarises Darwin (1880, caps and collars) and Boysen-Jensen (1913, gelatin block); Went (1928) then collected the signal in agar blocks and named it auxin. Each row asks: where is light perceived, and can the signal pass through gelatin? This is exercises 2.1 and 2.2. Transition: the same auxin redistribution explains a response to gravity, but in roots auxin has the opposite effect.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="ageing-requires-context" class="slide level2">
-<h2>Ageing requires context</h2>
-<p>Senescence can remobilise resources. Yellowing alone cannot distinguish it from stress.</p>
-<p><a href="../../plant/development/exercise.html">Exercise</a> and <a href="../../plant/development/quiz.html">self-check</a>.</p>
+<section id="gravitropism-the-root-grows-down" class="slide level2">
+<h2>Gravitropism: the root grows down</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Root turned horizontal:</strong></p>
+<ol type="1">
+<li><strong>Columella cells</strong> of the root cap perceive gravity.</li>
+<li>Starch-filled <strong>amyloplasts</strong> (statoliths) sediment to the lower side.</li>
+<li>Auxin is redirected to the <strong>lower side</strong> of the root.</li>
+<li>In roots, high auxin <strong>inhibits</strong> elongation.</li>
+<li>The upper side grows faster: the root bends <strong>down</strong>.</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<p><strong>Shoot turned horizontal:</strong></p>
+<ul>
+<li>Auxin also accumulates on the <strong>lower side</strong>.</li>
+<li>In shoots, auxin <strong>promotes</strong> elongation.</li>
+<li>The lower side grows faster: the shoot bends <strong>up</strong>.</li>
+</ul>
+<p>Same signal, same redistribution, opposite outcome: the response depends on the <strong>tissue’s sensitivity</strong> to auxin.</p>
+</div></div>
+<aside class="notes">
+<p>Exercise 2.3. The root cap is the sensor: remove it and the root still grows but no longer bends. The contrast between root and shoot is the clearest demonstration of the first slide’s point that the response depends on the responding tissue. Transition: auxin flowing down the shoot also decides whether side branches grow.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="apical-dominance-should-the-plant-branch" class="slide level2">
+<h2>Apical dominance: should the plant branch?</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Pea shoot treatment</th>
+<th>Lateral buds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intact</td>
+<td>Inhibited</td>
+</tr>
+<tr class="even">
+<td>Apex removed</td>
+<td><strong>Grow out</strong></td>
+</tr>
+<tr class="odd">
+<td>Apex removed + auxin paste on stump</td>
+<td>Inhibited</td>
+</tr>
+<tr class="even">
+<td>Apex removed + plain lanolin on stump</td>
+<td><strong>Grow out</strong></td>
+</tr>
+<tr class="odd">
+<td>Intact + cytokinin on a bud</td>
+<td><strong>Grows out</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Auxin from the apex <strong>replaces the apex</strong> (Thimann and Skoog, 1934).</li>
+<li>Auxin does <strong>not enter the bud</strong>. It acts indirectly: it lowers <strong>cytokinin</strong> supply to the bud and raises <strong>strigolactone</strong> synthesis.</li>
+<li>Gardeners use this: pinching out the tip makes a bushier plant.</li>
+</ul>
+<p><strong>The shoot is now built. When does it stop making leaves and make flowers?</strong></p>
+<aside class="notes">
+<p>Exercise 1.2. The lanolin-only control is essential: it shows that the paste itself does nothing, so the effect is due to auxin. The indirect mechanism is the modern view; the old idea that auxin enters the bud and inhibits it directly does not fit the transport data. Transition to flowering: the biggest developmental decision of an annual plant.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="flowering-measuring-the-night" class="slide level2">
+<h2>Flowering: measuring the night</h2>
+<ul>
+<li><strong>Short-day plants (SDP)</strong> flower when the night is <strong>longer</strong> than a critical night length (chrysanthemum, soybean, poinsettia).</li>
+<li><strong>Long-day plants (LDP)</strong> flower when the night is <strong>shorter</strong> than it (Arabidopsis, spinach, wheat).</li>
+<li>What the plant measures is the <strong>uninterrupted dark period</strong>.</li>
+</ul>
+<p>Critical night length 11 h:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>24 h cycle</th>
+<th>Longest dark period</th>
+<th>SDP</th>
+<th>LDP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>16 h light / 8 h dark</td>
+<td>8 h</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>8 h light / 16 h dark</td>
+<td>16 h</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>8 h light (with 1 h dark in the middle) / 16 h dark</td>
+<td>16 h</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What happens if we interrupt the night instead of the day?</strong></p>
+<aside class="notes">
+<p>The names are historical: they refer to day length, but experiments showed that night length is what is measured. The third row shows that darkness during the day does nothing, because the night is unchanged. Exercise 5.1 uses exactly this setup. Transition: a brief light flash in the middle of the night has a large effect, and the colour of that flash tells us which receptor reads the night.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="night-breaks-reveal-phytochrome" class="slide level2">
+<h2>Night breaks reveal phytochrome</h2>
+<p>8 h light / 16 h dark, with a brief flash in the middle of the night:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Night break</th>
+<th>Phytochrome after flash</th>
+<th>Longest dark period (as perceived)</th>
+<th>SDP</th>
+<th>LDP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td>—</td>
+<td>16 h</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Red</td>
+<td>Pfr</td>
+<td>8 h</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Red → far-red</td>
+<td>Pr</td>
+<td>16 h</td>
+<td><strong>Yes</strong></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A few minutes of red light <strong>splits a long night into two short ones</strong>.</li>
+<li>Far-red immediately after <strong>reverses</strong> the red effect, so phytochrome is the receptor.</li>
+<li>Commercial use: growers light chrysanthemums at night to delay flowering until the market wants them.</li>
+</ul>
+<aside class="notes">
+<p>Exercise 5.1 c and d.&nbsp;Connect to the lettuce seed slide: the same last-flash rule, applied to a night instead of a seed. Students often think the red flash adds “day”; stress that it only matters because it breaks the dark period. Transition: day length is measured in the leaves, but flowers form at the shoot apex. How does the message get there?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="florigen-a-protein-from-leaf-to-apex" class="slide level2">
+<h2>Florigen: a protein from leaf to apex</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  L[Leaf senses long days:&lt;br/&gt;CONSTANS → FT gene on] --&gt; P[FT protein moves&lt;br/&gt;in the phloem]
+  P --&gt; M[Shoot apical meristem:&lt;br/&gt;FT + FD]
+  M --&gt; F[Floral meristem identity&lt;br/&gt;genes on → flower]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Grafting experiments in the 1930s showed that an induced leaf sends a signal, named <strong>florigen</strong>.</li>
+<li>In Arabidopsis, florigen is the protein <strong>FLOWERING LOCUS T (FT)</strong>. FT tagged with GFP is made in leaves and found at the apex (Corbesier et al., 2007).</li>
+<li>The <strong>leaf perceives</strong>, the <strong>phloem transports</strong>, the <strong>apex responds</strong>.</li>
+</ul>
+<aside class="notes">
+<p>Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells only when long days give light at the end of the day, which is how day length is converted into a molecular signal. FT is small enough to move through plasmodesmata into sieve tubes and travels with the assimilate flow from P3. At the apex it pairs with the transcription factor FD to switch on floral identity genes such as APETALA1. Transition: some plants need a second condition before they can respond to day length, namely a winter.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vernalisation-remembering-winter" class="slide level2">
+<h2>Vernalisation: remembering winter</h2>
+<ul>
+<li><strong>Vernalisation:</strong> prolonged cold (weeks at ~0–10 °C) gives the <strong>competence</strong> to flower. Examples: winter wheat, winter-annual Arabidopsis.</li>
+<li>The plant does <strong>not</strong> flower in the cold. It flowers later, in warm, long days.</li>
+<li>The cold is perceived by the <strong>shoot apex</strong>.</li>
+<li>In Arabidopsis, cold <strong>represses <em>FLC</em></strong>, a repressor of flowering. <em>FLC</em> stays off through later cell divisions: an epigenetic memory of winter.</li>
+<li>The memory is <strong>reset</strong> in each generation: seeds need cold again.</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Plant</th>
+<th>Cold received</th>
+<th>Outcome in spring long days</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Winter wheat sown in autumn</td>
+<td>Yes</td>
+<td>Flowers, sets grain</td>
+</tr>
+<tr class="even">
+<td>Winter wheat sown in spring</td>
+<td>No</td>
+<td>Stays vegetative</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Exercise 5.3 is a true/false set on these bullets; the common misconceptions are that cold triggers flowering directly and that the vernalised state is inherited. The point of vernalisation is to prevent flowering in autumn, when days are short in the run-up to winter; flowering waits for the spring after a winter has passed. Transition: once the flower opens and is pollinated, the next generation begins.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="double-fertilisation-building-the-seed" class="slide level2">
+<h2>Double fertilisation: building the seed</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Structure</th>
+<th>Formed from</th>
+<th>Ploidy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Zygote</strong> → embryo</td>
+<td>Sperm cell 1 + egg cell</td>
+<td>2n</td>
+</tr>
+<tr class="even">
+<td><strong>Endosperm</strong></td>
+<td>Sperm cell 2 + central cell (two polar nuclei)</td>
+<td>3n</td>
+</tr>
+<tr class="odd">
+<td><strong>Seed coat</strong></td>
+<td>Integuments of the ovule (maternal)</td>
+<td>2n</td>
+</tr>
+<tr class="even">
+<td><strong>Fruit wall</strong> (pericarp)</td>
+<td>Ovary wall (maternal)</td>
+<td>2n</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The pollen tube delivers <strong>two sperm cells</strong>; both fertilise: <strong>double fertilisation</strong>.</li>
+<li>The endosperm is the food store we met in the barley grain.</li>
+<li>The seed coat and fruit are <strong>maternal tissue</strong>, not the next generation.</li>
+<li>Developing seeds are strong <strong>sinks</strong> (P3): they draw sugar and nutrients from the leaves.</li>
+</ul>
+<p><strong>Where do those nutrients come from at the end of the season?</strong></p>
+<aside class="notes">
+<p>Exercise 5.4. Close the loop to the start of the lecture: the endosperm made here is the starch store mobilised by gibberellin in the next generation. The ploidy column is the usual exam check. The sink bullet links back to phloem transport in P3 and leads into senescence: the old leaves become the nutrient source for the seeds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="senescence-recycling-the-leaf" class="slide level2">
+<h2>Senescence: recycling the leaf</h2>
+<ul>
+<li><p><strong>Senescence</strong> is a regulated, programmed process, not passive decay.</p></li>
+<li><p>Chlorophyll and proteins (including Rubisco) are broken down first, so the leaf yellows.</p></li>
+<li><p>Nutrients are <strong>remobilised</strong> through the <strong>phloem</strong> to seeds and young leaves.</p></li>
+<li><p><strong>N, P and K</strong> are phloem-mobile and are exported. <strong>Ca</strong> is phloem-immobile and stays in the leaf.</p></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Hormone</th>
+<th>Effect on senescence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cytokinin</strong></td>
+<td><strong>Delays</strong> it</td>
+</tr>
+<tr class="even">
+<td>Ethylene, ABA, jasmonic acid</td>
+<td><strong>Promote</strong> it</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Tobacco expressing a cytokinin-synthesis gene from a senescence promoter keeps its leaves green much longer (Gan and Amasino, 1995).</li>
+</ul>
+<aside class="notes">
+<p>Exercise 6.1. The phloem-mobility rule comes from P2: calcium moves in the xylem only, so it cannot be exported from an old leaf, and calcium deficiency appears in young tissue. A yellow leaf alone does not show senescence; deficiency or stress also yields yellowing, so tissue age and growth conditions must be known. The Gan and Amasino experiment is a neat feedback loop: senescence switches on cytokinin production, which delays senescence. It also introduces the idea of a stage-specific promoter, which returns in P5.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Signal chain</td>
+<td>cue → receptor → transduction → fast (protein) or slow (gene expression) response</td>
+</tr>
+<tr class="even">
+<td>Hormones</td>
+<td>auxin, cytokinin, GA, ABA, ethylene, brassinosteroids, strigolactones</td>
+</tr>
+<tr class="odd">
+<td>Hormone mutants</td>
+<td>rescued by the hormone → biosynthesis defect; not rescued → perception/signalling</td>
+</tr>
+<tr class="even">
+<td>Dormancy</td>
+<td>ABA maintains it; GA breaks it; quiescence is only lack of water or warmth</td>
+</tr>
+<tr class="odd">
+<td>Barley aleurone</td>
+<td>GA → α-amylase → starch to sugar; ABA blocks</td>
+</tr>
+<tr class="even">
+<td>Phytochrome</td>
+<td>Pr (660 nm) ⇄ Pfr (730 nm); Pfr active; last flash decides</td>
+</tr>
+<tr class="odd">
+<td>Shade avoidance</td>
+<td>low R:FR → less Pfr → elongation, earlier flowering</td>
+</tr>
+<tr class="even">
+<td>Tropisms</td>
+<td>auxin to the shaded / lower side; promotes shoot, inhibits root elongation</td>
+</tr>
+<tr class="odd">
+<td>Apical dominance</td>
+<td>apical auxin lowers cytokinin, raises strigolactone at buds</td>
+</tr>
+<tr class="even">
+<td>Photoperiod</td>
+<td>plants measure the uninterrupted night; a red night break splits it</td>
+</tr>
+<tr class="odd">
+<td>Florigen</td>
+<td>FT protein: leaf → phloem → apex</td>
+</tr>
+<tr class="even">
+<td>Vernalisation</td>
+<td>cold represses <em>FLC</em>; competence, not flowering; reset each generation</td>
+</tr>
+<tr class="odd">
+<td>Senescence</td>
+<td>cytokinin delays; N, P, K remobilised via phloem; Ca stays</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next (P5 — Stress, defence and biotechnology):</strong> the same signals, ABA, jasmonic acid and salicylic acid among them, let a plant survive drought, salt and attack. And knowing the genes lets us change them.</p>
+<p><a href="../../plant/development/index.html">Tutorial</a> · <a href="../../plant/development/exercise.html">Exercises</a> · <a href="../../plant/development/quiz.html">Quiz</a></p>
+<aside class="notes">
+<p>Read the table as the life cycle: signal framework and hormones, then seed, seedling, growth direction, branching, flowering, the next seed and the ageing leaf. P5 reuses three ideas from today: ABA as a water-stress signal, hormone pathways as switches that can be turned on by an attacker, and promoters that express a gene in one tissue or condition.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

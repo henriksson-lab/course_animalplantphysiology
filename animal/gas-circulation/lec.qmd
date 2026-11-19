@@ -1,5 +1,6 @@
 ---
-title: A3 — Gas exchange and circulation
+title: "A3 — Gas exchange and circulation"
+subtitle: "Week 3 — Getting oxygen from the air to the mitochondrion"
 format:
   revealjs:
     theme:
@@ -20,105 +21,496 @@ format:
 author: Animal and Plant Physiology
 ---
 
-## Oxygen must reach the working cell
+## About this lecture
 
-Environmental medium → respiratory surface → internal transport → tissue →
-mitochondrion.
+In A2 we measured metabolic rate as O₂ consumption, and saw that sustained work
+needs aerobic ATP. A person at rest uses about 250 mL of O₂ per minute. Start
+running, and within a minute that rises more than tenfold, to about 3 L min⁻¹.
+**How does the body move ten times more oxygen from the air into working
+muscle mitochondria?** We follow one O₂ molecule along the whole route.
 
-Which steps are bulk flow, diffusion and binding?
+- **Physics of exchange:** partial pressure, Fick's law, ventilation and
+  perfusion.
+- **Exchange organs:** fish gills, mammalian lungs, bird lungs, insect
+  tracheae.
+- **Oxygen in blood:** haemoglobin, the dissociation curve and its shifts;
+  CO₂ transport.
+- **The pump and the pipes:** the double circulation, vessels, pressure,
+  resistance and flow.
+- **Back to the runner:** cardiac output and the Fick principle.
 
-## An exchange surface has physical constraints
+::: notes
+The running example is a person starting to run; we return to them on the last content slide with real numbers. Link to A1: the three solutions (large surface, thin barrier, bulk flow) are exactly what we now examine organ by organ. Link to A2: the respirometer measured O₂ disappearing; now we ask how it got to the mitochondria. Mention that A4 will show the cost of this design: a thin, wet, permeable surface exchanges water and ions as well as gases.
+:::
 
-$$\dot M\propto A\Delta P/L.$$
+## The path of oxygen: bulk flow and diffusion alternate
 
-- More area and gradient favour transfer.
-- Greater thickness reduces it.
-- Thin, moist surfaces need support and protection.
+```{mermaid}
+flowchart LR
+  A[Air] -->|bulk flow:<br/>ventilation| B[Alveoli]
+  B -->|diffusion| C[Lung<br/>capillary]
+  C -->|bulk flow:<br/>circulation| D[Muscle<br/>capillary]
+  D -->|diffusion| E[Mitochondrion]
+```
 
-## Pressure is not content
+- **Bulk flow** moves the whole fluid, driven by a **pressure** difference.
+  Fast over any distance, but needs a pump.
+- **Diffusion** moves molecules down a **partial-pressure** difference.
+  Fast only over micrometres (A1: $t \approx x^2/2D$).
+- So every animal places its diffusion steps across **thin** barriers and uses
+  bulk flow for the long distances.
 
-- Partial pressure concerns the gas's pressure contribution.
-- Oxygen-binding pigments raise total oxygen content.
-- Equal partial pressures need not mean equal oxygen amounts per litre.
+**What exactly drives the diffusion steps?**
 
-## Renew both sides
+::: notes
+Exercise 1.1 asks students to classify these four steps. This is A1's "three solutions" turned into a route. Ventilation and circulation are the two pumps; the alveolar wall and the muscle capillary wall are the two diffusion steps, each less than a few micrometres. Emphasise the different drivers: total pressure for bulk flow, partial pressure for diffusion. The next slide defines partial pressure.
+:::
 
-- Ventilation moves environmental medium.
-- Perfusion supplies internal fluid.
-- Both influence available gradients.
-- More ventilation cannot resolve every perfusion limitation.
+## Partial pressure drives diffusion
 
-## Fish gills: compare locally
+**Partial pressure** = the share of the total pressure due to one gas
+(Dalton's law): $P_{\rm O_2} = F_{\rm O_2} \times P_{\rm total}$
 
-- Water and blood commonly flow in opposite directions.
-- Countercurrent organisation sustains local gradients.
-- Oxygen still diffuses down each local gradient.
-- Do not compare one stream's inlet with the other's outlet as a local pair.
+Dry air at sea level: $0.209 \times 101.3\ \text{kPa} = 21.2\ \text{kPa}$ (159 mmHg).
 
-## Mammalian and bird lungs
+| Location | $P_{\rm O_2}$ (kPa) |
+| --- | ---: |
+| Dry air | 21.2 |
+| Alveolar air | 13.3 |
+| Arterial blood | ~13 |
+| Mixed venous blood | 5.3 |
+| Mitochondria | < 1 |
 
-- Mammals: tidal flow through shared conducting routes; alveolar exchange.
-- Birds: exchange lungs and ventilating air sacs have different roles.
-- Air sacs are not the principal exchange surface.
-- Anatomical names do not guarantee identical flow arrangements.
+O₂ moves **down this cascade** at every diffusion step. In a liquid, $P_{\rm O_2}$
+refers to the **dissolved** O₂ only. 1 kPa = 7.5 mmHg.
 
-## An insect is a useful counterexample
+**How fast does it cross each barrier?**
 
-- Tracheae and finer tracheoles bring gases close to tissues.
-- Diffusion and ventilation contribute.
-- Haemolymph generally carries less of the oxygen-delivery task than vertebrate blood.
+::: notes
+Exercise 1.2 is the Dalton calculation. Alveolar P_O2 is lower than in air because inspired air is humidified and mixes with air already in the lungs, and O₂ is constantly removed. The mitochondria act as the sink that keeps the whole cascade going. Point out that diffusion follows partial pressure, not concentration: this matters later when blood with haemoglobin holds far more O₂ than water at the same P_O2.
+:::
 
-## Haemoglobin loading and unloading
+## Fick's law of diffusion
 
-- Saturation: fraction of sites occupied.
-- Content: oxygen amount per blood volume.
-- Affinity depends on conditions including pH, temperature and CO₂.
-- Lower affinity at a given pressure can favour tissue unloading.
+$$\dot M \propto \frac{A\,\Delta P}{L}$$
 
-## Carbon dioxide links gas and acid–base balance
+| Change | Effect on transfer rate |
+| --- | --- |
+| Double the area $A$ | ×2 |
+| Double the partial-pressure difference $\Delta P$ | ×2 |
+| Double the barrier thickness $L$ | ×½ |
 
-- CO₂ returns dissolved, bound and as bicarbonate.
-- Ventilation changes CO₂ loss.
-- Tissue production, transport and lung exchange are connected.
-- “More breathing is always better” is not a physiological explanation.
+- Human lung: about **100 m²** of alveolar surface, an air–blood barrier about
+  **0.5 µm** thick.
+- Lung disease shows the law at work: **emphysema** destroys alveolar walls
+  (smaller $A$); **pulmonary oedema** thickens the barrier (larger $L$).
+- The cost: a large, thin, moist surface is fragile and **loses water**.
 
-## Trace the mammalian circuit
+**Diffusion uses up the gradient. What keeps $\Delta P$ high?**
 
-Systemic veins → right heart → pulmonary arteries → lungs → pulmonary veins
-→ left heart → systemic arteries → tissues.
+::: notes
+Exercise 1.3 combines several changes: multiply the factors (for example, twice the area, twice the thickness and half the ΔP give 2 × ½ / 2 = ½). The diffusion coefficient and solubility of the gas are held constant in the proportionality. The last bullet links forward to A4: a surface built to let O₂ through also lets water and ions through. Transition: as O₂ diffuses into the blood, the gas side would lose O₂ and the blood side would fill up, and the gradient would vanish without bulk flow on both sides.
+:::
 
-Artery = away from heart. Vein = towards heart.
+## Ventilation and perfusion keep the gradient
+
+| | Ventilation | Perfusion |
+| --- | --- | --- |
+| What moves | Air or water over the surface | Blood through the surface |
+| Effect | Replaces O₂-depleted medium | Removes O₂-loaded blood, brings O₂-poor blood |
+| Keeps... | **External** $P_{\rm O_2}$ high | **Internal** $P_{\rm O_2}$ low |
+
+- Both are **bulk flow**, both need a **pump** (breathing muscles, heart).
+- Exchange is limited by whichever is lower: ventilating an unperfused alveolus
+  achieves nothing.
+
+**Air and water are very different media to ventilate. How different?**
+
+::: notes
+Exercise 1.4. A respiratory surface has two sides and each needs renewing. Without ventilation, alveolar P_O2 would fall towards venous P_O2 within seconds; without perfusion, the blood in the capillary would equilibrate with alveolar air and no further uptake would occur. The matching of ventilation and perfusion is regulated locally in the lung. Transition to the comparison of media, which explains why fish and mammals have such different organs.
+:::
+
+## Breathing water versus breathing air
+
+| Property | Air | Water (15 °C) | Consequence for a water breather |
+| --- | ---: | ---: | --- |
+| O₂ content | ~209 mL L⁻¹ | ~7 mL L⁻¹ | ~30× more medium to move per mL O₂ |
+| O₂ diffusion coefficient | ×1 | ~10 000× lower | Diffusion distances must be very short |
+| Density | ×1 | ~800× higher | Moving it is costly |
+| Viscosity | ×1 | ~50× higher | Moving it is costly |
+
+- A fish must pump a dense, viscous medium that holds little O₂.
+- So it moves water **in one direction** over the gills, rather than in and
+  out, and extracts as much O₂ as possible from each litre.
+- Air breathers can afford **tidal** ventilation: the medium is light and rich
+  in O₂.
+
+**How does a gill extract so much from so little?**
+
+::: notes
+This slide explains the design differences on the next four slides from first principles. Water at the same P_O2 as air carries about thirty times less O₂ because O₂ is poorly soluble. Ventilating water costs a fish a substantial share of its resting metabolism; for a resting mammal, breathing costs only a few per cent. Unidirectional flow avoids having to stop and reverse a heavy column of water. A1's diffusion numbers also return: diffusion in water is slow, so gill lamellae are extremely thin.
+:::
+
+## Fish gills: countercurrent exchange
+
+:::: {.columns}
+::: {.column width="45%"}
+- Gill arches → filaments → **secondary lamellae**, the exchange surface.
+- Water flows **one way**: mouth → gills → operculum.
+- Blood in the lamellae flows **opposite** to the water.
+
+Water flows 1 → 4; blood flows 4 → 1:
+
+| Position | 1 | 2 | 3 | 4 |
+| --- | ---: | ---: | ---: | ---: |
+| Water $P_{\rm O_2}$ (kPa) | 20 | 15 | 10 | 5 |
+| Blood $P_{\rm O_2}$ (kPa) | 17 | 12 | 7 | 2 |
+| Difference | 3 | 3 | 3 | 3 |
+:::
+::: {.column width="55%"}
+- Blood **enters** at 2 kPa (position 4) and **leaves** at 17 kPa (position 1).
+- Water enters at 20 kPa and leaves at 5 kPa.
+- At every position O₂ diffuses **from water to blood**, down a local
+  gradient. Nothing moves uphill.
+- A gradient exists **along the whole lamella**, so the blood leaves with a
+  higher $P_{\rm O_2}$ than the water leaving.
+- Fish extract up to **80 %** of the O₂ in the water; a mammal removes about
+  25 % of the O₂ in each breath.
+:::
+::::
+
+**Would flowing the same direction work as well?**
+
+::: notes
+Exercise 2.2 has a table of this form; students must read the inlet and outlet of each stream correctly. Water enters at position 1, blood enters at position 4. The key observation is the constant local difference: wherever we look, water is slightly richer than the blood beside it. Exercise 2.1a: the exchange structure is the secondary lamella. The next slide shows the co-current alternative with the same inlets.
+:::
+
+## Countercurrent versus co-current
+
+Same inlets (water 20 kPa, blood 2 kPa), both flowing 1 → 4:
+
+| Position | 1 | 2 | 3 | 4 |
+| --- | ---: | ---: | ---: | ---: |
+| Water $P_{\rm O_2}$ (kPa) | 20 | 14 | 12 | 11 |
+| Blood $P_{\rm O_2}$ (kPa) | 2 | 8 | 10 | 11 |
+| Difference | 18 | 6 | 2 | 0 |
+
+| | Co-current | Countercurrent |
+| --- | --- | --- |
+| Gradient along the surface | large at the start, **zero** at the end | **constant** |
+| Best possible blood outlet | equal to the water **outlet** (here 11 kPa) | close to the water **inlet** (here 17 kPa) |
+
+The same principle conserves heat in a bird's or mammal's leg (A2) and
+concentrates urine in the kidney (A4).
+
+**Air breathers do not need this. How does a mammalian lung work?**
+
+::: notes
+In co-current flow, the two streams approach a common P_O2 and exchange stops; the blood can at most reach the P_O2 of the water leaving (exercise 2.2d). Countercurrent flow keeps the two streams out of equilibrium along the entire length. Connect to A2's countercurrent heat exchange in limbs, and preview A4's loop of Henle, which uses a related arrangement. Transition to the lung.
+:::
+
+## Mammalian lungs: tidal ventilation
+
+- Trachea → bronchi → bronchioles → **alveoli**: about 300–500 million of them,
+  ~100 m² in total.
+- **Tidal:** air flows in and out through the **same** airways.
+- The conducting airways do not exchange gas: they are **anatomical dead
+  space**, about 150 mL.
+- Resting breath (tidal volume) ~500 mL, 12 breaths per minute:
+
+$$\text{alveolar ventilation} = (500-150)\ \text{mL} \times 12\ \text{min}^{-1} = 4.2\ \text{L min}^{-1}$$
+
+- Fresh air mixes with stale air left in the lungs, so alveolar $P_{\rm O_2}$
+  (13.3 kPa) stays well below that of air (21.2 kPa).
+
+**Is tidal flow the only way to ventilate a lung?**
+
+::: notes
+Exercise 2.3a and 2.3d. Each breath, the last 150 mL inhaled stays in the airways and is breathed out unchanged. That is why slow deep breathing ventilates the alveoli more effectively than fast shallow breathing at the same total ventilation: 250 mL breaths at 24 per minute give only (250 − 150) × 24 = 2.4 L min⁻¹. Exercise 2.1b: exchange occurs in the alveoli. Tidal ventilation is the weakness the bird lung avoids.
+:::
+
+## Birds and insects: two other solutions
+
+:::: {.columns}
+::: {.column width="50%"}
+**Bird lung**
+
+- Small, rigid lungs with **parabronchi**; exchange in **air capillaries**
+  (3–10 µm) branching from them.
+- **Air sacs** are bellows: they ventilate the lung but do **not** exchange gas.
+- Air passes through the parabronchi in **one direction**, during both
+  inspiration and expiration (two breath cycles per parcel of air).
+- No dead space in the exchange region; blood flows across the air stream
+  (**cross-current**).
+:::
+::: {.column width="50%"}
+**Insect tracheal system**
+
+- **Spiracles** → **tracheae** → **tracheoles** (< 1 µm), ending within a few
+  µm of mitochondria.
+- O₂ travels in the **gas phase** almost to the cell: diffusion in air is
+  ~10 000× faster than in water.
+- Active insects ventilate by pumping the abdomen.
+- **Haemolymph carries little O₂**; the circulation transports nutrients and
+  wastes.
+- Spiracles close to limit water loss.
+:::
+::::
+
+**In vertebrates, blood carries the O₂. But O₂ dissolves poorly in water. How
+does blood hold enough?**
+
+::: notes
+Exercise 2.1c, 2.1d, 2.3b and 2.3c. The bird lung gets around the dead-space problem of tidal breathing: the lung itself always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle. The insect is A1's other solution: skip the blood and bring air to the tissue. The limit is the diffusion distance along the tracheae, which is one reason insects stay small. Transition back to vertebrates and the problem of carrying O₂ in a watery fluid.
+:::
+
+## Haemoglobin: pressure, saturation and content
+
+Plasma dissolves only ~3 mL O₂ L⁻¹ at arterial $P_{\rm O_2}$. Haemoglobin
+raises this about 65-fold.
+
+| Quantity | Meaning | Unit |
+| --- | --- | --- |
+| $P_{\rm O_2}$ | Pressure of the **dissolved**, unbound O₂ | kPa or mmHg |
+| **Saturation** | % of haemoglobin O₂-binding sites occupied | % |
+| **O₂ content** | Total O₂ (bound + dissolved) per volume of blood | mL O₂ L⁻¹ |
+
+Content = [Hb] × 1.34 mL O₂ g⁻¹ × saturation:
+
+| Blood | [Hb] (g L⁻¹) | Saturation | Content (mL O₂ L⁻¹) |
+| --- | ---: | ---: | ---: |
+| Normal, fully saturated | 150 | 100 % | 201 |
+| Normal, mixed venous | 150 | 75 % | 151 |
+| Anaemia, arterial | 100 | 98 % | 131 |
+
+**Anaemia:** same $P_{\rm O_2}$, same saturation, **less content**.
+
+::: notes
+Exercises 3.1 and 3.2. The three quantities are the most common source of confusion in this unit. P_O2 is set by the gas the blood equilibrated with; saturation is set by P_O2 through the dissociation curve; content then depends on how much haemoglobin there is. The anaemic patient has normal arterial P_O2 and saturation, because their lungs work, but each litre of blood carries a third less O₂. The 1.34 mL per gram is the maximum binding capacity. Transition: how does saturation depend on P_O2?
+:::
+
+## The dissociation curve is sigmoid
+
+| $P_{\rm O_2}$ (kPa) | Saturation | Where |
+| ---: | ---: | --- |
+| 13.3 | ~98 % | Arterial blood leaving the lung |
+| 8 | ~90 % | |
+| 5.3 | ~75 % | Mixed venous blood at rest |
+| 3.5 | 50 % | $P_{50}$ |
+| 2.7 | ~35 % | Venous blood from exercising muscle |
+
+- **Why S-shaped?** Haemoglobin has **four subunits** that bind O₂
+  **cooperatively**: each bound O₂ raises the affinity of the others.
+- **Flat top:** saturation stays high even if lung $P_{\rm O_2}$ falls a little
+  (e.g. at moderate altitude).
+- **Steep middle:** a small fall in tissue $P_{\rm O_2}$ releases much O₂.
+- At rest only ~25 % of the O₂ is unloaded: a large **reserve** for exercise.
+
+**Can the curve itself move to help the working muscle?**
+
+::: notes
+Sketch the curve with these points on the board. Exercise 3.3 asks why it is sigmoid: cooperative binding among four subunits. Myoglobin, with one subunit, gives a hyperbolic curve that lies to the left, so it takes O₂ from haemoglobin in muscle. The reserve is important for the runner: from 75 % saturation at rest, venous blood from hard-working muscle falls to about 35 %, so each litre of blood delivers more than twice as much O₂.
+:::
+
+## Shifting the curve
+
+| Change | Shift | Affinity | O₂ unloading in tissues |
+| --- | --- | --- | --- |
+| ↑ $P_{\rm CO_2}$ | Right | Lower | Favoured |
+| ↓ pH (**Bohr effect**) | Right | Lower | Favoured |
+| ↑ Temperature | Right | Lower | Favoured |
+| ↑ 2,3-BPG in red cells | Right | Lower | Favoured |
+| The opposite of each | Left | Higher | Reduced |
+
+- A **right shift** means less O₂ bound at a given $P_{\rm O_2}$, so more is
+  released. The O₂ goes to the tissue; it is not lost.
+- Working muscle is warm, acidic and high in CO₂: **three of the four push
+  right** exactly where O₂ is needed.
+- Left-shifted pigments load O₂ at low $P_{\rm O_2}$: fetal haemoglobin,
+  myoglobin.
+
+**Working muscle makes CO₂. How does the blood carry it away?**
+
+::: notes
+Exercise 3.4. Teach the rule as "the conditions in an active tissue shift the curve to the right", which removes the need to memorise four separate facts. P50 rises with a right shift. Fetal haemoglobin binds 2,3-BPG poorly, so it sits to the left of maternal haemoglobin and O₂ moves from mother to fetus across the placenta. 2,3-BPG in red cells rises over days at high altitude, an example of A1's acclimatisation. Transition: the CO₂ that shifts the curve has to be removed.
+:::
+
+## Carbon dioxide transport
+
+| Form | Share of CO₂ in blood |
+| --- | ---: |
+| **Bicarbonate** (HCO₃⁻) | ~70 % |
+| Bound to haemoglobin (**carbamino** compounds) | ~20 % |
+| **Dissolved** CO₂ | ~10 % |
+
+In red blood cells, **carbonic anhydrase** catalyses the first step:
+
+$$\mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons H^+ + HCO_3^-}$$
+
+- HCO₃⁻ leaves the red cell in exchange for Cl⁻ (**chloride shift**).
+- The H⁺ binds to haemoglobin, helping it release O₂ (Bohr effect).
+- In the lung, the reactions run in reverse and CO₂ is breathed out.
+- So **ventilation sets blood pH**: breathing faster lowers $P_{\rm CO_2}$ and
+  raises pH.
+
+**Gases are loaded and unloaded. Now: what moves the blood?**
+
+::: notes
+Exercise 3.5. Carbonic anhydrase is one of the fastest enzymes known; without it the hydration of CO₂ would be far too slow for the short time blood spends in a capillary. The reaction links gas transport to acid–base balance: CO₂ is an acid that the lungs can remove within minutes, while the kidney adjusts bicarbonate over hours to days (A4). Transition from the gases to the pump and the circuit.
+:::
+
+## The mammalian double circulation
+
+```{mermaid}
+flowchart LR
+  RH[Right atrium →<br/>right ventricle] -->|pulmonary arteries| L[Lung capillaries]
+  L -->|pulmonary veins| LH[Left atrium →<br/>left ventricle]
+  LH -->|systemic arteries| T[Tissue capillaries]
+  T -->|systemic veins| RH
+```
+
+- **Arteries** carry blood **away** from the heart; **veins** carry it **towards**
+  the heart. Oxygenation does not define them: the **pulmonary arteries carry
+  deoxygenated blood**.
+- **Valves** prevent backflow: atrioventricular valves (tricuspid, mitral) and
+  semilunar valves (pulmonary, aortic).
+- Arterial pressure ~120/80 mmHg in the systemic circuit, ~25/8 mmHg in the pulmonary circuit: the left ventricle generates about five times the pressure of the right.
+
+**Is this the only way to build a circulation?**
+
+::: notes
+Exercise 4.1 is the order of this loop, and 4.2a and 4.2b are the artery definition and valves. Each side of the heart pumps the same volume per minute, but the left side generates about five times the pressure, because the systemic circuit is long and has high resistance while the lung circuit is short and must keep pressure low to avoid fluid leaking into the alveoli. Transition: compare with fish and with invertebrates.
+:::
+
+## Comparing circulations
+
+| Animal | Circuit | Heart |
+| --- | --- | --- |
+| Fish | **Single:** heart → gills → body → heart | 1 atrium, 1 ventricle |
+| Amphibian | Double, partly mixed | 2 atria, 1 ventricle |
+| Mammal, bird | **Double**, fully separated | 2 atria, 2 ventricles |
+
+| **Open** circulation | **Closed** circulation |
+| --- | --- |
+| Haemolymph leaves vessels and flows through body spaces (**sinuses**) | Blood stays in vessels; exchange across capillaries |
+| Arthropods (grasshopper), most molluscs (mussel) | Annelids (earthworm), cephalopods (octopus), vertebrates (frog) |
+
+- "Open" does **not** mean motionless: the heart pumps haemolymph, which
+  returns through openings (ostia).
+
+**In a closed circulation, how do the vessels differ along the circuit?**
+
+::: notes
+Exercises 4.2c, 4.2d and 4.3. In a fish, blood passes through the heart once per circuit, and much of the pressure is lost in the gill capillaries, so blood reaches the body at low pressure. The double circulation solves the fish's problem: blood returns to the heart after the lungs and is re-pressurised before going to the body. Cephalopods are the instructive exception among molluscs: active predators with a closed system and extra hearts for the gills. The open system works for insects partly because their O₂ does not depend on the blood (previous slides). Transition to vessel structure.
+:::
+
+## Arteries, capillaries and veins
+
+| | Artery | Capillary | Vein |
+| --- | --- | --- | --- |
+| Direction | Away from the heart | Between arterioles and venules | Towards the heart |
+| Wall | Thick: elastic tissue and smooth muscle | **Endothelium only**, one cell thick, 5–10 µm wide | Thin, little muscle; **valves** in limb veins |
+| Pressure | High, pulsatile (aorta ~95 mmHg mean) | ~35 → 15 mmHg | Lowest (< 10 mmHg) |
+| Function | Carry blood under pressure | **Exchange** with tissues | Return blood; hold ~65 % of blood volume |
+
+- Elastic arteries stretch in systole and recoil in diastole, smoothing flow.
+- Venous return is helped by valves and by the **skeletal muscle pump**.
+- In a section, a collapsed vein can look like a slit: identify vessels by
+  **wall layers**, not outline (A1).
+
+**Pressure drops along the circuit. What sets how much flows where?**
+
+::: notes
+Exercise 4.4 is this table. Relate each wall to its job and its tissue types from A1: elastic connective tissue and smooth muscle in the artery, a single squamous endothelium in the capillary (A1's thin barrier), thin walls and large lumens in veins, which act as a reservoir. The capillary is where the diffusion step of the O₂ route happens. Transition to the flow equation.
+:::
 
 ## Pressure, resistance and flow
 
-$$Q=\Delta P/R.$$
+$$Q = \frac{\Delta P}{R} \qquad\qquad R \propto \frac{1}{r^4}$$
 
-- A pressure difference drives bulk flow.
-- Vessel calibre affects resistance and distribution.
-- Many vessels in parallel differ from one narrow tube.
+- Flow $Q$ is driven by a pressure difference $\Delta P$ and opposed by
+  resistance $R$, like current in Ohm's law.
+- Resistance depends steeply on radius (Poiseuille):
 
-## Read vessel walls as functional evidence
+| Radius | Resistance | Flow at constant $\Delta P$ |
+| ---: | ---: | ---: |
+| $r$ | $R$ | $Q$ |
+| $r/2$ | $16R$ | $Q/16$ |
+| $1.19\,r$ | $R/2$ | $2Q$ |
 
-- Muscular arterial walls withstand/control pressure-driven flow.
-- Thin capillary barriers favour exchange.
-- Veins hold substantial volume at lower pressure.
-- Section orientation and collapse affect appearance.
+- **Arterioles** have smooth muscle and control resistance, so they decide
+  **which tissues get the blood**.
+- In exercise, muscle arterioles dilate and gut arterioles constrict.
 
-## Calculate delivery and use
+**So how much blood does the heart deliver, and how much O₂ does it bring?**
 
-Output = heart rate × stroke volume.
+::: notes
+Exercise 4.5. Doubling resistance at constant pressure halves flow. Because resistance goes as 1/r⁴, a small change in arteriole radius has a large effect: a 19 % dilation doubles flow. This is why arterioles, not the heart, distribute blood among organs. Capillaries are individually narrow, but there are billions in parallel, so their combined resistance is lower than that of the arterioles. Transition to cardiac output.
+:::
 
-Oxygen use = blood flow × (arterial − venous oxygen content).
+## Cardiac output and the Fick principle
 
-5 L min⁻¹ × 50 mL O₂ L⁻¹ = **250 mL O₂ min⁻¹**.
+**Cardiac output** = heart rate × stroke volume
 
-## Compare whole circuits
+**O₂ consumption** = cardiac output × (arterial − venous O₂ content)
 
-- Fish: heart → gills → systemic tissues → heart.
-- Mammal: pulmonary and systemic circuits are separated.
-- Open circulations still have directed fluid movement.
-- Count transport constraints, not just chambers.
+| | Rest | Running |
+| --- | ---: | ---: |
+| Heart rate (beats min⁻¹) | 70 | 170 |
+| Stroke volume (L) | 0.070 | 0.110 |
+| **Cardiac output** (L min⁻¹) | 4.9 | 18.7 |
+| Arterial − venous O₂ (mL L⁻¹) | 200 − 150 = 50 | 200 − 50 = 150 |
+| **O₂ consumption** (mL min⁻¹) | 245 | 2 805 |
 
-## Practice
+The Fick principle uses **content**, not $P_{\rm O_2}$.
 
-[Tutorial and source links](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+**How does the body produce that elevenfold increase?**
+
+::: notes
+Exercise 4.6 is the same calculation with other numbers. The product is a mass balance: every litre of blood passing through the tissues gives up the difference between arterial and venous content, so total uptake is flow times that difference. At rest this matches the 250 mL min⁻¹ from the opening slide. Ask students which factors increased: cardiac output nearly fourfold and extraction threefold. The next slide puts all the mechanisms from today together.
+:::
+
+## Back to the runner
+
+| Step on the O₂ route | Change during running |
+| --- | --- |
+| Ventilation | Deeper and faster breathing: ~6 → ~100 L min⁻¹ |
+| Lung diffusion | More lung capillaries perfused: larger exchange area |
+| Arterial blood | Stays ~98 % saturated (flat top of the curve) |
+| Heart | Heart rate 70 → 170, stroke volume up: cardiac output ~4× |
+| Distribution | Muscle arterioles dilate, gut arterioles constrict |
+| Unloading | Warm, acidic, CO₂-rich muscle shifts the curve right; venous saturation falls to ~35 % |
+
+**Result:** O₂ consumption rises ~11× from the same 150 g L⁻¹ of haemoglobin.
+
+**The thin, wet surfaces that let O₂ in also let water and ions in and out. That is A4.**
+
+::: notes
+Close the loop to the opening question. Each row is one of today's slides, so this is also a revision map. The two biggest contributions are cardiac output and extraction; ventilation rises much more than needed for O₂ and is driven largely by CO₂ and pH. Bridge to A4: the gill and lung surfaces we built today are large, thin and permeable, so a fish in fresh water gains water and loses ions across them, and a mammal loses water with every breath.
+:::
+
+## Summary {.smaller}
+
+| Concept | Key fact |
+| --- | --- |
+| O₂ route | bulk flow (ventilation) → diffusion → bulk flow (circulation) → diffusion |
+| Partial pressure | $P_{\rm O_2}=F_{\rm O_2}\times P_{\rm total}$; air 21.2 kPa, alveoli 13.3 kPa |
+| Fick's law | $\dot M\propto A\,\Delta P/L$ |
+| Ventilation, perfusion | keep external $P_{\rm O_2}$ high and internal $P_{\rm O_2}$ low |
+| Exchange organs | fish: lamellae (countercurrent); mammal: alveoli (tidal); bird: parabronchi (one-way); insect: tracheoles |
+| Blood O₂ | content = [Hb] × 1.34 × saturation; differs from $P_{\rm O_2}$ |
+| Dissociation curve | sigmoid (cooperative binding); right shift with ↑CO₂, ↓pH, ↑T, ↑2,3-BPG |
+| CO₂ transport | ~70 % HCO₃⁻, ~20 % carbamino, ~10 % dissolved; carbonic anhydrase |
+| Circulation | artery = away from heart; double (mammal) vs single (fish); open vs closed |
+| Flow | $Q=\Delta P/R$, $R\propto 1/r^4$; arterioles distribute flow |
+| Fick principle | O₂ use = HR × SV × (arterial − venous O₂ content) |
+
+**Next (A4 — Water, ions and excretion):** why a fish surrounded by water must
+still regulate its water, how kidneys filter and reabsorb, and how animals get
+rid of nitrogen.
+
+[Tutorial](index.qmd) · [Exercises](exercise.qmd) · [Quiz](quiz.qmd)
+
+::: notes
+Read the table in the order of the O₂ route: physics of exchange, the organs, the blood, the pump and pipes, and the whole-body balance. The preview of A4 picks up the cost of permeable exchange surfaces: osmotic water movement, ion transport in gills and kidneys, and nitrogen excretion.
+:::

@@ -137,6 +137,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -144,6 +147,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">A5 — Integration, movement and reproduction</h1>
+  <p class="subtitle">Week 5 — Nerves, muscles and hormones: how the body controls itself</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -154,116 +158,1173 @@ Animal and Plant Physiology
 </div>
 
 </section>
-<section id="connect-information-to-action" class="slide level2">
-<h2>Connect information to action</h2>
-<p>Stimulus → sensory signal → integration → motor/endocrine output → response.</p>
-<p>Fuel, circulation and water balance support every step.</p>
-</section>
-<section id="membrane-potential-is-a-voltage-difference" class="slide level2">
-<h2>Membrane potential is a voltage difference</h2>
+<section id="about-this-lecture" class="slide level2">
+<h2>About this lecture</h2>
+<p>A doctor taps the tendon below your knee and your leg kicks about 30 ms later, before you have decided anything. In A1 every feedback loop had a <strong>sensor</strong>, a <strong>control centre</strong> and an <strong>effector</strong>, and in A4 the messenger of the water loop was a hormone, ADH. <strong>Who are the sensors, controllers and messengers, and how does a signal turn into movement?</strong> Nerves carry fast, targeted messages; hormones carry slower messages through the blood.</p>
 <ul>
-<li>Ion concentrations and selective permeability differ across a membrane.</li>
-<li>A small charge separation produces voltage.</li>
-<li>Electrochemical driving force determines ion movement through channels.</li>
-<li>ATP-dependent transport maintains gradients.</li>
+<li><strong>The electrical signal:</strong> ion gradients, the resting potential and the action potential.</li>
+<li><strong>Passing it on:</strong> conduction, synapses and the knee-jerk reflex.</li>
+<li><strong>The effector:</strong> how a nerve impulse makes a muscle contract, and how force is graded.</li>
+<li><strong>The other messenger:</strong> nervous systems across animals, hormones and the endocrine glands.</li>
+<li><strong>Reproduction:</strong> the hypothalamic–pituitary–gonadal axis, where feedback changes sign.</li>
 </ul>
+<aside class="notes">
+<p>The running example for the first two thirds of the lecture is the knee-jerk reflex: a stretch receptor, a sensory neuron, one synapse in the spinal cord, a motor neuron and a muscle. Every slide up to the muscle section explains one link of that chain. Then we turn to the slower messenger system, hormones, using examples students already know (insulin from A2, ADH from A4), and finish with reproduction, which shows both negative and positive feedback in one system. This is the last animal unit, so the summary also pulls A1 to A5 together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="a-representative-axonal-action-potential" class="slide level2">
-<h2>A representative axonal action potential</h2>
+<section id="ion-gradients-and-equilibrium-potentials" class="slide level2">
+<h2>Ion gradients and equilibrium potentials</h2>
+<p>The <strong>Na⁺/K⁺-ATPase</strong> (3 Na⁺ out, 2 K⁺ in per ATP) keeps the gradients:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Ion</th>
+<th style="text-align: right;">Outside (mmol L⁻¹)</th>
+<th style="text-align: right;">Inside (mmol L⁻¹)</th>
+<th style="text-align: right;">Equilibrium potential</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>K⁺</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;"><strong>−89 mV</strong></td>
+</tr>
+<tr class="even">
+<td>Na⁺</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;"><strong>+61 mV</strong></td>
+</tr>
+<tr class="odd">
+<td>Cl⁻</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;"><strong>−64 mV</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nernst equation</strong> (37 °C): the voltage at which an ion’s electrical force exactly balances its concentration gradient.</p>
+<p><span class="math display">E_\text{ion} = \frac{61.5\ \text{mV}}{z}\,\log_{10}\frac{[\text{ion}]_\text{out}}{[\text{ion}]_\text{in}}</span></p>
+<p>Worked example: <span class="math inline">E_\text{K} = 61.5 \times \log_{10}(5/140) = 61.5 \times (-1.45) \approx -89</span> mV. For Cl⁻, <span class="math inline">z = -1</span>, so the sign flips.</p>
+<p><strong>The membrane potential at rest is −70 mV. Why that value?</strong></p>
+<aside class="notes">
+<p>Start with the gradients, because every electrical signal in the body uses them. The pump builds them; channels let ions run down them. The Nernst equation tells us, for one ion, the voltage at which there is no net movement. K⁺ is high inside, so the inside must be negative to hold it in: E_K is negative. Na⁺ is high outside, so E_Na is positive. Work the K⁺ case on the board and let students check Na⁺; exercise 1.1 asks for all three. Remind them that log10 of a ratio below 1 is negative.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-resting-potential-and-driving-forces" class="slide level2">
+<h2>The resting potential and driving forces</h2>
 <ul>
-<li>Voltage-dependent channel changes regenerate a signal.</li>
-<li>Rapid Na⁺ entry contributes to depolarisation.</li>
-<li>Channel changes including K⁺ conductance restore voltage.</li>
-<li>Refractory properties affect re-excitation and propagation.</li>
-</ul>
-</section>
-<section id="stronger-stimulus-does-not-mean-a-taller-spike" class="slide level2">
-<h2>Stronger stimulus does not mean a taller spike</h2>
+<li>At rest the membrane is about <strong>25 times more permeable to K⁺ than to Na⁺</strong> (K⁺ leak channels), so <span class="math inline">V_m</span> = −70 mV lies <strong>close to <span class="math inline">E_\text{K}</span></strong>.</li>
+<li><strong>Driving force</strong> on an ion = <span class="math inline">V_m - E_\text{ion}</span>:
 <ul>
-<li>Firing frequency, timing and recruitment can change.</li>
-<li>Individual spikes are approximately stereotyped under comparable conditions.</li>
-<li>Receptor and circuit properties shape information encoding.</li>
+<li>Na⁺: −70 − (+61) = <strong>−131 mV</strong>: large, <strong>inward</strong>.</li>
+<li>K⁺: −70 − (−89) = <strong>+19 mV</strong>: small, <strong>outward</strong>.</li>
+</ul></li>
+<li>The small Na⁺ leak in and K⁺ leak out are balanced by the pump.</li>
+<li>The cytoplasm as a whole is <strong>electrically neutral</strong>: only a thin layer of excess negative charge lines the membrane.</li>
+<li>Raise outside K⁺ to 20 mmol L⁻¹: <span class="math inline">E_\text{K}</span> = 61.5 log(20/140) ≈ −52 mV, and the cell <strong>depolarises</strong>. This is why high plasma K⁺ disturbs the heart.</li>
 </ul>
+<p><strong>So what happens when Na⁺ channels suddenly open?</strong></p>
+<aside class="notes">
+<p>The resting potential is a weighted compromise between the equilibrium potentials, weighted by permeability; because K⁺ permeability dominates, the result is near E_K. The driving-force convention: a negative value for a cation means inward movement. Na⁺ is the ion “waiting to get in”, with both concentration and voltage pushing it inward; that stored driving force is what the action potential uses. The high-K⁺ example shows that the resting potential depends on extracellular K⁺; exercise 1.3 uses the same idea with a smaller change.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="chemical-synapses" class="slide level2">
-<h2>Chemical synapses</h2>
-<p>Electrical arrival → presynaptic Ca²⁺ entry → transmitter release → receptor activation → postsynaptic effect.</p>
-<p>The receptor and target state matter; transmitter name alone is insufficient.</p>
-</section>
-<section id="reflexes-are-functional-pathways" class="slide level2">
-<h2>Reflexes are functional pathways</h2>
+<section id="the-action-potential" class="slide level2">
+<h2>The action potential</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th>What happens</th>
+<th style="text-align: right;"><span class="math inline">V_m</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Depolarisation to <strong>threshold</strong></td>
+<td>Stimulus or synaptic input</td>
+<td style="text-align: right;">−70 → −55 mV</td>
+</tr>
+<tr class="even">
+<td><strong>Rising phase</strong></td>
+<td>Voltage-gated <strong>Na⁺ channels open</strong>; Na⁺ enters; more depolarisation opens more channels</td>
+<td style="text-align: right;">→ +30 mV (overshoot)</td>
+</tr>
+<tr class="odd">
+<td>Peak</td>
+<td>Na⁺ channels <strong>inactivate</strong></td>
+<td style="text-align: right;">+30 mV</td>
+</tr>
+<tr class="even">
+<td><strong>Repolarisation</strong></td>
+<td>Voltage-gated <strong>K⁺ channels open</strong>; K⁺ leaves</td>
+<td style="text-align: right;">→ −70 mV</td>
+</tr>
+<tr class="odd">
+<td><strong>Undershoot</strong></td>
+<td>K⁺ channels still open</td>
+<td style="text-align: right;">~ −80 mV</td>
+</tr>
+<tr class="even">
+<td>Recovery</td>
+<td>K⁺ channels close; Na⁺ channels recover</td>
+<td style="text-align: right;">−70 mV</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Sensory afferent → integrating circuit → motor output.</li>
-<li>A local response need not wait for conscious decision.</li>
-<li>Information may also reach other regions.</li>
-<li>Real neural networks are not all one linear chain.</li>
+<li>The whole event lasts <strong>1–2 ms</strong>. The rising phase is <strong>positive feedback</strong> (A1), ended by Na⁺-channel inactivation.</li>
+<li>Very few ions move: in a squid giant axon one action potential raises internal Na⁺ by less than 0.001 %. The pump is not needed for any single spike.</li>
 </ul>
+<p><strong>If every spike looks the same, how does a neuron signal “stronger”?</strong></p>
+<aside class="notes">
+<p>Go through the table as a sequence of channel events; exercise 2.1 asks for this order. The positive-feedback loop (depolarisation opens Na⁺ channels, which depolarises further) is the example promised in A1; inactivation is its built-in end point. The peak does not reach E_Na because Na⁺ channels inactivate and K⁺ channels open. Correct two common errors: the pump does not produce the rising phase (channels do), and concentrations hardly change during one spike.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="excitation-reaches-muscle-machinery" class="slide level2">
-<h2>Excitation reaches muscle machinery</h2>
-<p>Motor signal → neuromuscular transmission → muscle electrical response → internal Ca²⁺ release → activation of contractile interactions.</p>
-<p>Explain every arrow.</p>
-</section>
-<section id="calcium-and-atp-have-different-roles" class="slide level2">
-<h2>Calcium and ATP have different roles</h2>
+<section id="all-or-none-refractory-periods-and-coding" class="slide level2">
+<h2>All-or-none: refractory periods and coding</h2>
 <ul>
-<li>Ca²⁺ regulates access to skeletal-muscle actin sites through regulatory proteins.</li>
-<li>ATP binding allows myosin detachment; hydrolysis supports cycling.</li>
-<li>Calcium recovery contributes to relaxation.</li>
-<li>No shortening does not mean no ATP use (e.g.&nbsp;isometric contraction).</li>
-</ul>
-</section>
-<section id="force-work-and-power" class="slide level2">
-<h2>Force, work and power</h2>
-<p><span class="math inline">W=Fd</span> for constant aligned force and displacement.</p>
-<p>20 N × 0.10 m = <strong>2 J</strong>; in 0.50 s gives <strong>4 W</strong> external power.</p>
-<p>Holding stationary: zero external work in this calculation, but ATP can still be used.</p>
-</section>
-<section id="muscle-types-and-recruitment" class="slide level2">
-<h2>Muscle types and recruitment</h2>
+<li><strong>Absolute refractory period</strong> (~1 ms): no stimulus, however strong, can fire a second spike. Na⁺ channels are <strong>inactivated</strong>.</li>
+<li><strong>Relative refractory period</strong> (a few ms): a <strong>stronger</strong> stimulus is needed. Some Na⁺ channels are still inactivated and K⁺ channels still open (membrane hyperpolarised).</li>
+<li>Consequences:
 <ul>
-<li>Motor unit: a motor neuron plus its innervated fibres.</li>
-<li>Recruitment changes whole-muscle force.</li>
-<li>Skeletal, cardiac and smooth muscle differ in arrangement/control.</li>
-<li>Textual recognition clues are preparation for real histology.</li>
-</ul>
-</section>
-<section id="compare-neural-organisation" class="slide level2">
-<h2>Compare neural organisation</h2>
+<li>the spike travels <strong>one way</strong> along the axon (the membrane behind it is refractory);</li>
+<li>firing rate has a ceiling of a few hundred spikes per second.</li>
+</ul></li>
+<li>Action potentials are <strong>all-or-none</strong>: amplitude carries no information. A stronger stimulus increases
 <ul>
-<li>Nerve nets, ganglia/cords and vertebrate central/peripheral systems differ.</li>
-<li>Receptors transduce particular kinds of stimuli.</li>
-<li>Biological clocks add internal timing and can be entrained.</li>
-<li>Do not rank body plans on a single scale of complexity.</li>
+<li>the <strong>frequency</strong> of spikes in each neuron, and</li>
+<li>the <strong>number of neurons</strong> recruited.</li>
+</ul></li>
 </ul>
+<p><strong>How fast does the spike travel to the end of the axon?</strong></p>
+<aside class="notes">
+<p>The refractory period follows directly from the channel table on the previous slide; exercise 2.2 asks for both definitions and their causes. Coding: a light touch might give 10 spikes per second in one sensory fibre, a firm press 100 per second in that fibre plus activity in its neighbours. The sensory receptor itself produces a graded receptor potential; it is converted to spike frequency at the first point where voltage-gated Na⁺ channels are found.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="a-circulating-signal-needs-a-responsive-target" class="slide level2">
-<h2>A circulating signal needs a responsive target</h2>
+<section id="conduction-velocity-diameter-and-myelin" class="slide level2">
+<h2>Conduction velocity: diameter and myelin</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Hormones act through appropriate receptors and downstream pathways.</li>
-<li>Concentration, breakdown and sensitivity affect response.</li>
-<li>Surface and intracellular receptors support different routes.</li>
-<li>Endocrine does not always mean slow; neural does not always mean brief.</li>
+<li><strong>Larger diameter</strong> → lower internal resistance → current spreads further ahead → faster.</li>
+<li><strong>Myelin</strong> (Schwann cells in peripheral nerves, oligodendrocytes in the CNS) insulates the axon. Spikes are regenerated only at the <strong>nodes of Ranvier</strong>, ~1 mm apart, and jump from node to node: <strong>saltatory conduction</strong>.</li>
+<li>Myelin gives vertebrates high speed with thin axons. Squid use a giant unmyelinated axon instead.</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Axon</th>
+<th style="text-align: right;">Diameter</th>
+<th style="text-align: right;">Velocity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unmyelinated pain fibre (human)</td>
+<td style="text-align: right;">~1 µm</td>
+<td style="text-align: right;">~1 m s⁻¹</td>
+</tr>
+<tr class="even">
+<td>Squid giant axon (unmyelinated)</td>
+<td style="text-align: right;">~500 µm</td>
+<td style="text-align: right;">~25 m s⁻¹</td>
+</tr>
+<tr class="odd">
+<td>Myelinated motor axon (human)</td>
+<td style="text-align: right;">~15 µm</td>
+<td style="text-align: right;">~60–120 m s⁻¹</td>
+</tr>
+</tbody>
+</table>
+<p>Velocity = distance ÷ time. A spike crossing 1.0 m in 15 ms travels at 1.0 ÷ 0.015 ≈ <strong>67 m s⁻¹</strong>.</p>
+</div></div>
+<p><strong>At the end of the axon the electrical signal reaches a gap. How does it cross?</strong></p>
+<aside class="notes">
+<p>Two ways to go fast: get bigger or get insulated. The table makes the comparison concrete: a human myelinated axon 15 µm wide outruns a squid axon 30 times wider. In multiple sclerosis, loss of CNS myelin slows or blocks conduction. Exercise 2.4 asks for the two properties and a velocity calculation. Transition: the knee-jerk signal now reaches the spinal cord, where it must pass a synapse.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="reproductive-regulation-a-mammalian-example" class="slide level2">
-<h2>Reproductive regulation: a mammalian example</h2>
-<p>Hypothalamic GnRH → pituitary LH/FSH → gonadal activity.</p>
-<p>Gonadal signals feed back upstream.</p>
-<p>Connect gamete production, steroid secretion and target response.</p>
-</section>
-<section id="feedback-changes-with-physiological-context" class="slide level2">
-<h2>Feedback changes with physiological context</h2>
+<section id="the-chemical-synapse" class="slide level2">
+<h2>The chemical synapse</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ol type="1">
+<li>An action potential arrives at the presynaptic terminal.</li>
+<li>Voltage-gated <strong>Ca²⁺ channels</strong> open.</li>
+<li><strong>Ca²⁺ enters</strong> the terminal (outside ~2 mmol L⁻¹, inside ~0.0001).</li>
+<li>Synaptic vesicles fuse with the membrane and release transmitter by <strong>exocytosis</strong>.</li>
+<li>Transmitter diffuses across the 20–40 nm cleft and binds <strong>receptors</strong>.</li>
+<li>Ion channels open and the postsynaptic potential changes.</li>
+<li>Transmitter is removed: <strong>acetylcholinesterase</strong> breaks down ACh; serotonin and noradrenaline are taken back up (<strong>reuptake</strong>).</li>
+</ol>
+</div><div class="column" style="width:45%;">
 <ul>
-<li>Negative feedback contributes to stability.</li>
-<li>Appropriate sustained oestrogen signalling can promote pre-ovulatory positive feedback.</li>
-<li>An LH surge is not an endlessly amplifying loop.</li>
-<li>This example is not every animal’s reproductive strategy.</li>
+<li><strong>Ca²⁺ is the trigger</strong> that links the electrical signal to release.</li>
+<li>The synaptic delay is ~0.5 ms.</li>
+<li>The synapse is <strong>one-way</strong>: vesicles are only presynaptic, receptors only postsynaptic.</li>
+<li>Removal (step 7) ends the signal, so each spike gives one brief response.</li>
 </ul>
+</div></div>
+<p><strong>Does the transmitter excite or inhibit the next cell?</strong></p>
+<aside class="notes">
+<p>Walk through the seven steps; exercise 3.1 asks for this order. The essential idea is conversion: electrical signal → chemical signal → electrical signal. Ca²⁺ has an enormous inward gradient (about 20,000-fold), so opening a few channels raises local Ca²⁺ sharply. Drugs and toxins act at nearly every step: botulinum toxin blocks vesicle release; nerve agents block acetylcholinesterase; antidepressants such as SSRIs block serotonin reuptake.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="next" class="slide level2">
-<h2>Next</h2>
-<p><a href="../../animal/integration/index.html">Tutorial and source links</a> · <a href="../../animal/integration/exercise.html">Exercises</a> · <a href="../../animal/integration/quiz.html">Quiz</a></p>
+<section id="excitatory-or-inhibitory-the-receptor-decides" class="slide level2">
+<h2>Excitatory or inhibitory: the receptor decides</h2>
+<ul>
+<li><strong>EPSP</strong> (excitatory postsynaptic potential): moves <span class="math inline">V_m</span> <strong>towards</strong> threshold.</li>
+<li><strong>IPSP</strong> (inhibitory postsynaptic potential): moves <span class="math inline">V_m</span> <strong>away from</strong> threshold, or holds it below.</li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Transmitter</th>
+<th>Receptor and channel</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Acetylcholine</td>
+<td>Nicotinic: cation channel (Na⁺ in) on skeletal muscle</td>
+<td><strong>Excitatory</strong></td>
+</tr>
+<tr class="even">
+<td>Acetylcholine</td>
+<td>Muscarinic: opens K⁺ channels in cardiac pacemaker cells</td>
+<td><strong>Inhibitory</strong> (slows the heart)</td>
+</tr>
+<tr class="odd">
+<td>Glutamate</td>
+<td>Channels permeable to Na⁺ and K⁺</td>
+<td><strong>Excitatory</strong></td>
+</tr>
+<tr class="even">
+<td>GABA</td>
+<td>Cl⁻ channels; <span class="math inline">V_m</span> moves towards <span class="math inline">E_\text{Cl}</span> (≈ −70 mV), below threshold (−55 mV)</td>
+<td><strong>Inhibitory</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The <strong>same transmitter</strong> can excite or inhibit: the <strong>receptor</strong> decides.</li>
+<li>A neuron receives thousands of synapses. EPSPs and IPSPs <strong>summate</strong> in space and time, and the neuron fires only if the <strong>axon hillock</strong> reaches threshold.</li>
+</ul>
+<p><strong>Now we can trace a complete pathway: the knee-jerk reflex.</strong></p>
+<aside class="notes">
+<p>Exercise 3.2 asks for these four cases. The GABA case needs the driving-force idea: the effect of opening a channel depends on where the membrane potential will move, which is towards that ion’s equilibrium potential. If E_Cl is below threshold, opening Cl⁻ channels holds the cell below threshold. Summation at the axon hillock is the neuron’s “control centre” in miniature: it weighs excitatory against inhibitory input.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-knee-jerk-reflex-a-complete-loop" class="slide level2">
+<h2>The knee-jerk reflex: a complete loop</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Structure in the knee-jerk reflex</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Receptor</strong></td>
+<td>Muscle spindle (stretch receptor) in the quadriceps</td>
+</tr>
+<tr class="even">
+<td><strong>Afferent pathway</strong></td>
+<td>Sensory neuron, into the dorsal side of the spinal cord</td>
+</tr>
+<tr class="odd">
+<td><strong>Integrating centre</strong></td>
+<td>Spinal cord: <strong>one synapse</strong> (monosynaptic reflex)</td>
+</tr>
+<tr class="even">
+<td><strong>Efferent pathway</strong></td>
+<td>Motor neuron</td>
+</tr>
+<tr class="odd">
+<td><strong>Effector</strong></td>
+<td>Quadriceps muscle contracts and the leg kicks</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The tap stretches the quadriceps; the contraction <strong>opposes</strong> the stretch. This is a negative-feedback loop for muscle length (A1).</li>
+<li>In parallel, an <strong>inhibitory interneuron</strong> relaxes the opposing hamstrings (reciprocal inhibition).</li>
+<li>The brain is not needed, so the response (~30 ms) is faster than any voluntary movement. Signals also travel up the cord, so you feel the tap.</li>
+</ul>
+<p><strong>The motor neuron has fired. How does its spike make the muscle contract?</strong></p>
+<aside class="notes">
+<p>This brings the first half of the lecture together in one real loop: receptor potential, action potential, conduction along a fast myelinated axon, a single excitatory synapse, and an effector. Map the components onto the A1 feedback vocabulary. Exercise 3.3 asks for the table. The reciprocal inhibition shows an IPSP doing useful work. Transition: the remaining link, from motor neuron to force, is the subject of the next four slides.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="excitationcontraction-coupling" class="slide level2">
+<h2>Excitation–contraction coupling</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ol type="1">
+<li>An action potential arrives at the motor-neuron terminal.</li>
+<li><strong>Acetylcholine</strong> is released at the neuromuscular junction.</li>
+<li>ACh opens nicotinic channels: an <strong>end-plate potential</strong> depolarises the fibre to threshold (every time).</li>
+<li>A muscle action potential spreads along the sarcolemma and down the <strong>T tubules</strong>.</li>
+<li><strong>Voltage-sensing (dihydropyridine) receptors</strong> in the T-tubule membrane open the <strong>ryanodine receptors</strong> of the sarcoplasmic reticulum (SR).</li>
+<li><strong>Ca²⁺ is released</strong> from the SR.</li>
+<li>Ca²⁺ binds <strong>troponin</strong>.</li>
+<li><strong>Tropomyosin moves</strong> and exposes the myosin-binding sites on actin.</li>
+<li>Myosin heads bind actin and perform <strong>power strokes</strong>.</li>
+</ol>
+</div><div class="column" style="width:45%;">
+<p><strong>Relaxation</strong></p>
+<ul>
+<li>Acetylcholinesterase breaks down ACh.</li>
+<li>An ATP-driven <strong>Ca²⁺ pump</strong> (SERCA) returns Ca²⁺ to the SR.</li>
+<li>Troponin releases Ca²⁺; tropomyosin covers the binding sites again.</li>
+</ul>
+<p><strong>Ca²⁺ is the switch</strong> that couples the electrical event (excitation) to the mechanical event (contraction).</p>
+</div></div>
+<p><strong>What exactly do the myosin heads pull on, and where does ATP come in?</strong></p>
+<aside class="notes">
+<p>This is the longest sequence in the unit, and exercise 4.1 asks for it in order. Split it into three stages: at the junction (steps 1–3), in the membrane system (4–6) and in the filaments (7–9). The neuromuscular junction is a chemical synapse with a large safety margin: each motor-neuron spike always fires the muscle fibre. The T tubules carry the signal deep into a fibre up to 100 µm wide, so Ca²⁺ is released close to every myofibril at once.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-sarcomere-and-sliding-filaments" class="slide level2">
+<h2>The sarcomere and sliding filaments</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>A myofibril is a chain of <strong>sarcomeres</strong>, Z disc to Z disc (~2.5 µm at rest).</li>
+<li><strong>Thick filaments:</strong> myosin (~1.6 µm long).</li>
+<li><strong>Thin filaments:</strong> actin with troponin and tropomyosin, anchored at the Z discs.</li>
+<li><strong>Sliding-filament model:</strong> myosin pulls the thin filaments towards the centre of the sarcomere. <strong>No filament changes length.</strong></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Band</th>
+<th>Contains</th>
+<th>When the sarcomere shortens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A band</strong></td>
+<td>Full length of thick filaments</td>
+<td>Unchanged</td>
+</tr>
+<tr class="even">
+<td><strong>I band</strong></td>
+<td>Thin filaments only</td>
+<td>Shorter</td>
+</tr>
+<tr class="odd">
+<td><strong>H zone</strong></td>
+<td>Thick filaments only</td>
+<td>Shorter</td>
+</tr>
+<tr class="even">
+<td><strong>Z disc to Z disc</strong></td>
+<td>One sarcomere</td>
+<td>Shorter</td>
+</tr>
+<tr class="odd">
+<td>Thick and thin filaments</td>
+<td></td>
+<td>Unchanged</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<p><strong>What makes the myosin heads pull, and let go?</strong></p>
+<aside class="notes">
+<p>The test of understanding is the right-hand column (exercise 4.3): a band shortens only if it is defined by the gap or overlap between filaments. The A band equals the length of the myosin filament, so it cannot change; the I band and H zone are the non-overlapping regions, so they shrink as overlap increases. Striations visible in skeletal and cardiac muscle are these bands.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-cross-bridge-cycle-what-atp-does" class="slide level2">
+<h2>The cross-bridge cycle: what ATP does</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Event</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>ATP binds</strong> to myosin</td>
+<td>Myosin head <strong>detaches</strong> from actin</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>ATP is hydrolysed</strong> (ADP + Pᵢ stay bound)</td>
+<td>Head is <strong>re-cocked</strong> into its high-energy position</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Head binds actin (only where Ca²⁺ has exposed the site)</td>
+<td>Cross-bridge forms</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>Pᵢ is released</strong></td>
+<td><strong>Power stroke</strong>: the thin filament moves ~10 nm towards the sarcomere centre</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>ADP is released</td>
+<td>Head stays bound until the next ATP arrives (back to step 1)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ATP is needed for <strong>detachment</strong> (step 1), for <strong>re-cocking</strong> (step 2), and for <strong>relaxation</strong> (the SR Ca²⁺ pump).</li>
+<li><strong>Rigor mortis:</strong> after death ATP runs out, myosin cannot detach, and muscles lock rigid.</li>
+</ul>
+<p><strong>One cycle moves a filament 10 nm. How does a whole muscle produce a weak or a strong pull?</strong></p>
+<aside class="notes">
+<p>The surprising point for students is that ATP binding causes release, not contraction; the power stroke is triggered by phosphate release. Rigor mortis is the proof: without ATP, heads stay attached. Exercise 4.2 asks for the role of each ATP step. Repeated cycles by many asynchronous heads give smooth sliding, like a team pulling a rope hand over hand.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="grading-force-motor-units-and-summation" class="slide level2">
+<h2>Grading force: motor units and summation</h2>
+<ul>
+<li>A <strong>motor unit</strong> = one motor neuron + all the muscle fibres it innervates.
+<ul>
+<li>Eye muscles: ~10 fibres per unit (fine control).</li>
+<li>Calf muscle (gastrocnemius): ~2,000 fibres per unit (large force).</li>
+</ul></li>
+<li><strong>Recruitment:</strong> activate more motor units, small ones first.</li>
+<li><strong>Summation:</strong> a twitch lasts ~100 ms but a spike only ~2 ms. Spikes at high frequency add twitches together, up to a smooth <strong>tetanus</strong> of 3–4× the twitch force.</li>
+<li>Force is <strong>never</strong> graded by making action potentials larger: they are all-or-none.</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>To increase force</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>More motor units</td>
+<td>Recruitment</td>
+</tr>
+<tr class="even">
+<td>Higher firing frequency</td>
+<td>Summation → tetanus</td>
+</tr>
+</tbody>
+</table>
+<p><strong>More force costs more ATP. Does it always produce more work?</strong></p>
+<aside class="notes">
+<p>The same two rules as in sensory coding (number of neurons, frequency of spikes) apply on the output side. Recruiting small units first gives fine control at low force and large increments at high force (the size principle). Summation works because Ca²⁺ is released again before the previous release has been pumped away. Exercise 4.5 tests exactly these four statements.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="work-power-and-the-cost-of-holding-still" class="slide level2">
+<h2>Work, power and the cost of holding still</h2>
+<ul>
+<li><strong>Work</strong> <span class="math inline">W = F \times d</span> (force in the direction of movement × displacement).</li>
+<li><strong>Power</strong> <span class="math inline">P = W / t</span>.</li>
+</ul>
+<p>Example: a muscle lifts a load with 30 N through 0.20 m in 0.50 s.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Calculation</th>
+<th style="text-align: right;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Work while lifting</td>
+<td>30 N × 0.20 m</td>
+<td style="text-align: right;"><strong>6.0 J</strong></td>
+</tr>
+<tr class="even">
+<td>Mean power while lifting</td>
+<td>6.0 J ÷ 0.50 s</td>
+<td style="text-align: right;"><strong>12 W</strong></td>
+</tr>
+<tr class="odd">
+<td>Work while holding the load still</td>
+<td>30 N × 0 m</td>
+<td style="text-align: right;"><strong>0 J</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Holding still is an <strong>isometric</strong> contraction: force without shortening. Cross-bridges keep cycling and Ca²⁺ is continuously pumped, so <strong>ATP is used</strong> and turned into heat.</li>
+<li>Muscle converts at most ~25 % of the chemical energy into work. Lifting 6 J costs about 24 J of metabolic energy.</li>
+</ul>
+<p><strong>Skeletal muscle is switched by troponin. Do the heart and the gut wall use the same switch?</strong></p>
+<aside class="notes">
+<p>The calculation is simple; the conceptual trap is the holding phase. External mechanical work is zero, but metabolic cost is not: this is why holding a heavy bag is tiring. The efficiency figure connects back to A2: most of the energy of muscle work appears as heat, which is why exercise warms the body. Exercise 4.4 has the same calculation with different numbers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="three-muscle-types-three-ca²-switches" class="slide level2 smaller">
+<h2>Three muscle types, three Ca²⁺ switches</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Skeletal</th>
+<th>Cardiac</th>
+<th>Smooth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Activated by</td>
+<td>Motor neuron (ACh)</td>
+<td>Own pacemaker cells; spreads via gap junctions</td>
+<td>Autonomic nerves, hormones, stretch</td>
+</tr>
+<tr class="even">
+<td>Source of Ca²⁺</td>
+<td>SR, opened by T-tubule voltage sensors</td>
+<td>Ca²⁺ entry triggers SR release (Ca²⁺-induced Ca²⁺ release)</td>
+<td>Extracellular fluid and SR</td>
+</tr>
+<tr class="odd">
+<td>Ca²⁺ sensor</td>
+<td><strong>Troponin</strong> on the thin filament</td>
+<td><strong>Troponin</strong></td>
+<td><strong>Calmodulin</strong></td>
+</tr>
+<tr class="even">
+<td>How myosin is switched on</td>
+<td>Tropomyosin moves off actin</td>
+<td>Tropomyosin moves off actin</td>
+<td>Ca²⁺–calmodulin activates <strong>myosin light-chain kinase (MLCK)</strong>, which phosphorylates myosin</td>
+</tr>
+<tr class="odd">
+<td>Tetanus possible</td>
+<td>Yes</td>
+<td>No (long refractory period, ~250 ms)</td>
+<td>Slow, sustained tone</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>All three use actin and myosin and the cross-bridge cycle.</li>
+<li>Smooth muscle relaxes when <strong>myosin light-chain phosphatase</strong> removes the phosphate.</li>
+</ul>
+<p><strong>All of these are controlled by nervous systems. How are nervous systems organised across animals?</strong></p>
+<aside class="notes">
+<p>In A1 we compared the three types by appearance; here we compare them by control. The key difference for exercise 4.6 is that smooth muscle regulates the thick filament (myosin phosphorylation), whereas striated muscle regulates the thin filament (troponin–tropomyosin). The cardiac long refractory period prevents tetanus, which would stop the heart from refilling between beats.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="nervous-systems-across-animals" class="slide level2">
+<h2>Nervous systems across animals</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Animal</th>
+<th>Organisation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Hydra</em> (cnidarian)</td>
+<td><strong>Diffuse nerve net</strong>, no brain; radial body</td>
+</tr>
+<tr class="even">
+<td>Earthworm (annelid)</td>
+<td><strong>Cerebral ganglia</strong> plus a <strong>ventral nerve cord</strong> with a ganglion in each segment</td>
+</tr>
+<tr class="odd">
+<td>Insect</td>
+<td>Same plan as the earthworm, with ganglia fused into larger centres</td>
+</tr>
+<tr class="even">
+<td>Mammal</td>
+<td><strong>Brain + dorsal, hollow spinal cord</strong> (central nervous system), plus a peripheral nervous system (somatic and autonomic)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Cephalisation:</strong> bilateral animals that move forwards concentrate sense organs and neurons at the front end.</li>
+<li>Each design fits a body plan: a nerve net suits a radially symmetric animal that meets its world from all sides.</li>
+<li>In every case the building blocks are the same: neurons, action potentials and synapses.</li>
+</ul>
+<p><strong>Nerves are fast and point-to-point. What about messages that must reach the whole body for hours?</strong></p>
+<aside class="notes">
+<p>Exercise 5.1 asks students to match these three types. The ventral versus dorsal nerve cord is a classic difference between annelids and arthropods on one side and vertebrates on the other. Emphasise that there is no single ladder of complexity: each organisation fits the animal’s symmetry and way of moving. Transition to hormones: the second messenger system of the body.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hormones-two-chemical-classes" class="slide level2">
+<h2>Hormones: two chemical classes</h2>
+<p>A <strong>hormone</strong> is secreted into the blood and reaches every cell (A3), but only cells with the matching <strong>receptor</strong> respond.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Peptide hormones</th>
+<th>Steroid hormones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Made from</td>
+<td>Amino acids</td>
+<td>Cholesterol</td>
+</tr>
+<tr class="even">
+<td>Solubility</td>
+<td>Water-soluble</td>
+<td>Lipid-soluble</td>
+</tr>
+<tr class="odd">
+<td>Transport in blood</td>
+<td>Dissolved in plasma</td>
+<td>Mostly bound to carrier proteins</td>
+</tr>
+<tr class="even">
+<td>Receptor</td>
+<td><strong>Cell surface</strong> (plasma membrane)</td>
+<td><strong>Inside the cell</strong> (cytoplasm or nucleus)</td>
+</tr>
+<tr class="odd">
+<td>Mechanism</td>
+<td><strong>Second messengers</strong> (e.g.&nbsp;cAMP) change the activity of existing proteins</td>
+<td>Hormone–receptor complex <strong>binds DNA</strong> and changes gene transcription</td>
+</tr>
+<tr class="even">
+<td>Typical speed</td>
+<td>Seconds to minutes</td>
+<td>Hours</td>
+</tr>
+<tr class="odd">
+<td>Examples</td>
+<td>Insulin, ADH, LH, FSH, oxytocin</td>
+<td>Cortisol, aldosterone, testosterone, oestradiol, progesterone</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ADH in A4 is the peptide route: V2 receptor → cAMP → aquaporin-2 inserted within minutes.</li>
+</ul>
+<p><strong>Which glands make these hormones, and who controls the glands?</strong></p>
+<aside class="notes">
+<p>Exercise 5.2 asks for this table. The chemistry explains everything else: a water-soluble peptide cannot cross the membrane, so it needs a surface receptor and a second messenger; a lipid-soluble steroid crosses the membrane and acts on genes, which takes longer. Compared with nerves: nerves give milliseconds and one target; hormones give seconds to days and every cell carrying the receptor. The same hormone concentration can therefore affect one tissue and not another.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-endocrine-glands" class="slide level2 smaller">
+<h2>The endocrine glands</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gland or cells</th>
+<th>Hormone</th>
+<th>Main effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Hypothalamus</strong></td>
+<td>GnRH (and other releasing hormones)</td>
+<td>Controls the anterior pituitary</td>
+</tr>
+<tr class="even">
+<td><strong>Posterior pituitary</strong> (made by hypothalamic neurons)</td>
+<td>ADH, oxytocin</td>
+<td>Water reabsorption (A4); uterine contraction, milk ejection</td>
+</tr>
+<tr class="odd">
+<td><strong>Anterior pituitary</strong></td>
+<td>LH, FSH (also TSH, ACTH, growth hormone, prolactin)</td>
+<td>Control other glands</td>
+</tr>
+<tr class="even">
+<td>Pancreatic islets, <strong>β cells</strong></td>
+<td>Insulin</td>
+<td>Lowers blood glucose (A2)</td>
+</tr>
+<tr class="odd">
+<td><strong>Adrenal medulla</strong></td>
+<td>Adrenaline</td>
+<td>Fight or flight: heart rate, glucose release</td>
+</tr>
+<tr class="even">
+<td><strong>Adrenal cortex</strong></td>
+<td>Cortisol; aldosterone</td>
+<td>Stress and glucose; Na⁺ reabsorption (A4)</td>
+</tr>
+<tr class="odd">
+<td><strong>Testis</strong>, Leydig cells</td>
+<td>Testosterone</td>
+<td>Male development, spermatogenesis</td>
+</tr>
+<tr class="even">
+<td><strong>Ovary</strong>: follicle; corpus luteum</td>
+<td>Oestradiol; progesterone</td>
+<td>Female cycle; prepares the uterus</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The <strong>hypothalamus–pituitary</strong> link is where the nervous and endocrine systems meet: neurons that secrete hormones (<strong>neuroendocrine cells</strong>).</li>
+</ul>
+<p><strong>Reproduction shows how this hierarchy is controlled by feedback.</strong></p>
+<aside class="notes">
+<p>Exercise 5.3 asks for the source of eight hormones; all are in this table. Point out the hierarchy: hypothalamus → anterior pituitary → peripheral gland. The posterior pituitary is a special case: it is an extension of the brain, and ADH and oxytocin are made in hypothalamic neurons and released from their terminals into the blood. The cross-references to A2 and A4 show that earlier units already used this system.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-hypothalamicpituitarygonadal-axis" class="slide level2 smaller">
+<h2>The hypothalamic–pituitary–gonadal axis</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" data-reveal="true" data-fig-width="4.5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  H["Hypothalamus"] --&gt;|GnRH| P["Anterior pituitary"]
+  P --&gt;|LH| L["Leydig cells"]
+  P --&gt;|FSH| S["Sertoli cells"]
+  L --&gt;|testosterone| T["Spermatogenesis,&lt;br/&gt;male traits"]
+  S --&gt; T
+  L -.-&gt;|"testosterone (−)"| H
+  S -.-&gt;|"inhibin (−)"| P
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hormone</th>
+<th>Target cells</th>
+<th>Main effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GnRH</td>
+<td>Anterior pituitary</td>
+<td>Stimulates LH and FSH secretion</td>
+</tr>
+<tr class="even">
+<td>LH (male)</td>
+<td>Leydig cells</td>
+<td>Testosterone secretion</td>
+</tr>
+<tr class="odd">
+<td>FSH (male)</td>
+<td>Sertoli cells</td>
+<td>Supports spermatogenesis</td>
+</tr>
+<tr class="even">
+<td>FSH (female)</td>
+<td>Granulosa cells of follicle</td>
+<td>Follicle growth, oestradiol</td>
+</tr>
+<tr class="odd">
+<td>LH surge (female)</td>
+<td>Mature (Graafian) follicle</td>
+<td>Ovulation, corpus luteum</td>
+</tr>
+<tr class="even">
+<td>Inhibin</td>
+<td>Anterior pituitary</td>
+<td>Inhibits FSH secretion</td>
+</tr>
+</tbody>
+</table>
+<p>In the male the axis runs on <strong>negative feedback</strong>: testosterone inhibits GnRH and LH; inhibin inhibits FSH.</p>
+</div></div>
+<p><strong>In the female the same axis produces a monthly cycle. How?</strong></p>
+<aside class="notes">
+<p>Use the male axis as the clean negative-feedback example: three levels, two feedback signals, a stable output. Exercise 6.1 asks for the target-cell table and exercise 6.2 for the sign of each feedback. GnRH reaches the pituitary through a short portal blood system, so very little is needed. The same three-level structure with feedback controls the thyroid and the adrenal cortex.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-ovarian-cycle-feedback-changes-sign" class="slide level2 smaller">
+<h2>The ovarian cycle: feedback changes sign</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Days (28-day cycle)</th>
+<th>Ovary</th>
+<th>Hormones</th>
+<th>Feedback</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1–5</td>
+<td>Menstruation begins; FSH rises</td>
+<td>Progesterone low</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>1–12</td>
+<td>FSH stimulates several <strong>follicles</strong> to grow; one becomes dominant</td>
+<td><strong>Oestradiol</strong> rises</td>
+<td><strong>Negative</strong> on FSH and LH</td>
+</tr>
+<tr class="odd">
+<td>12–13</td>
+<td>Oestradiol stays <strong>high for ~2 days</strong></td>
+<td><strong>LH surge</strong></td>
+<td><strong>Positive</strong>: oestradiol now stimulates GnRH and LH</td>
+</tr>
+<tr class="even">
+<td>~14</td>
+<td><strong>Ovulation</strong></td>
+<td></td>
+<td>Surge ends</td>
+</tr>
+<tr class="odd">
+<td>15–26</td>
+<td><strong>Corpus luteum</strong> forms</td>
+<td>Progesterone and oestradiol</td>
+<td><strong>Negative</strong>: GnRH, LH, FSH low</td>
+</tr>
+<tr class="even">
+<td>27–28</td>
+<td>Without pregnancy the corpus luteum regresses</td>
+<td>Progesterone falls</td>
+<td>Inhibition lifts; FSH rises; next cycle</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The positive feedback has a clear <strong>end point</strong>: ovulation (as in A1).</li>
+<li>In pregnancy, <strong>hCG</strong> from the embryo keeps the corpus luteum alive.</li>
+</ul>
+<p><strong>The cycle combines everything in this lecture: sensing, hormonal messengers, target receptors and feedback.</strong></p>
+<aside class="notes">
+<p>Exercise 6.3 asks for this order. The key idea is that the sign of the feedback depends on the level and duration of the oestradiol signal: low or moderate oestradiol inhibits, sustained high oestradiol stimulates. It is not a failure of regulation but a timer that ends in one event. Link back to A1, where positive feedback was introduced with oxytocin and birth; here is a second example with a clear stopping point.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Equilibrium potential</td>
+<td>Nernst: <span class="math inline">E = (61.5/z)\log_{10}(\text{out}/\text{in})</span>; <span class="math inline">E_\text{K}</span> ≈ −89, <span class="math inline">E_\text{Na}</span> ≈ +61 mV</td>
+</tr>
+<tr class="even">
+<td>Resting potential</td>
+<td>−70 mV, close to <span class="math inline">E_\text{K}</span> because K⁺ permeability dominates</td>
+</tr>
+<tr class="odd">
+<td>Action potential</td>
+<td>Na⁺ channels open (positive feedback), inactivate; K⁺ channels repolarise</td>
+</tr>
+<tr class="even">
+<td>Coding and conduction</td>
+<td>all-or-none; intensity by frequency and recruitment; faster with diameter and myelin</td>
+</tr>
+<tr class="odd">
+<td>Synapse</td>
+<td>Ca²⁺ entry → transmitter release; the receptor decides excitation or inhibition</td>
+</tr>
+<tr class="even">
+<td>Muscle</td>
+<td>ACh → muscle AP → T tubule → SR Ca²⁺ → troponin; ATP detaches myosin</td>
+</tr>
+<tr class="odd">
+<td>Force</td>
+<td>graded by recruitment and summation; isometric holding does no work but uses ATP</td>
+</tr>
+<tr class="even">
+<td>Hormones</td>
+<td>peptides: surface receptors, second messengers; steroids: intracellular receptors, genes</td>
+</tr>
+<tr class="odd">
+<td>Reproduction</td>
+<td>HPG axis: negative feedback, switching to positive before ovulation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The animal half:</strong> a body too large for diffusion (A1) fuels its cells (A2), supplies O₂ by bulk flow (A3), keeps their fluid stable (A4) and coordinates it all by feedback through nerves, muscles and hormones (A5).</p>
+<p><strong>Next (P1 — Building a functioning plant):</strong> a plant faces the same problems of exchange, transport and control, but cannot run, pump blood or send nerve impulses.</p>
+<p><a href="../../animal/integration/index.html">Tutorial</a> · <a href="../../animal/integration/exercise.html">Exercises</a> · <a href="../../animal/integration/quiz.html">Quiz</a></p>
+<aside class="notes">
+<p>Read the table as the path of one signal: from ion gradients to a spike, along an axon, across a synapse, into a muscle, then the slower hormonal route and the reproductive axis. Then step back to the whole animal half: each unit answered one part of the A1 question of how to keep every cell supplied and its surroundings stable. The plant half asks the same questions about an organism with no muscles, no nerves and no heart, which makes the comparison sharper.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>
