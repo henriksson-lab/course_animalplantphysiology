@@ -22,61 +22,118 @@ author: Animal and Plant Physiology
 
 ## Equal food mass, unequal outcome?
 
+:::: {.columns}
+::: {.column width="42%"}
 - Intake differs from absorption.
-- Energy supply differs from essential nutrient supply.
-- Expenditure, storage and reproduction share resources.
+- Essential nutrients and energy are separate constraints.
+- Equal mass need not produce an equal outcome.
+:::
+::: {.column width="58%"}
+![](figures/food-and-absorption.svg){fig-alt="Equal food mass can supply different absorbable fractions." width="100%" height="360"}
+:::
+::::
 
 ## Trace the processes
 
-Ingestion → mechanical/chemical digestion → absorption → transport → metabolism.
-
-The gut lumen is not the internal environment.
-
-Undigested material lost in faeces differs from metabolic waste excretion.
+:::: {.columns}
+::: {.column width="42%"}
+- Digestion breaks down food.
+- Absorption crosses a selective barrier.
+- Unabsorbed material remains in the lumen; metabolic wastes follow other routes.
+:::
+::: {.column width="58%"}
+![](figures/digestion-path.svg){fig-alt="Food follows a gut lumen; absorption crosses the epithelial boundary into blood or lymph." width="100%" height="360"}
+:::
+::::
 
 ## Absorption depends on structure
 
-- Folds, villi and cell-surface projections increase area.
-- Epithelial transport crosses a selective barrier.
-- Blood and lymph remove absorbed materials.
-- A villus label alone does not explain the transport path.
+:::: {.columns}
+::: {.column width="42%"}
+- More area supports exchange.
+- Transport still requires a selective membrane pathway.
+- Removal maintains a transport route.
+
+Schematic, not a tissue image.
+:::
+::: {.column width="58%"}
+![](figures/villus-routes.svg){fig-alt="A villus schematic shows epithelial surface, blood capillaries and a lymphatic route." width="100%" height="360"}
+:::
+::::
 
 ## Microbes change the food problem
 
-- Plant structural material can be difficult for host enzymes.
-- Microbial fermentation supplies usable products.
-- Foregut and hindgut locations change nutrient recovery.
-- Retention, passage rate and intake create trade-offs.
+:::: {.columns}
+::: {.column width="42%"}
+- Microbes make some food resources accessible.
+- Location changes recovery of microbial products and biomass.
+- Retention and passage create trade-offs.
+:::
+::: {.column width="58%"}
+![](figures/fermentation-location.svg){fig-alt="Foregut fermentation precedes the small intestine; hindgut fermentation follows it." width="100%" height="360"}
+:::
+::::
 
 ## Define an energy budget
 
-In this course example:
+:::: {.columns}
+::: {.column width="42%"}
+In this teaching convention:
 
-$$E_{\rm intake}=E_{\rm faeces}+E_{\rm excreted}+E_{\rm metabolic}+E_{\rm retained}.$$
+intake = faeces + excreted + metabolic + retained.
 
-All terms refer to the same interval. State conventions and avoid double counting.
+Use one interval and avoid double counting.
+:::
+::: {.column width="58%"}
+![](figures/energy-budget.svg){fig-alt="Proportional energy-flow bands partition 150 kilojoules into faecal, excreted, metabolic and retained terms." width="100%" height="360"}
+:::
+::::
 
 ## Calculate the retained balance
 
-150 kJ intake − 40 faeces − 10 excreted − 85 expenditure = **15 kJ retained**.
+:::: {.columns}
+::: {.column width="42%"}
+150 − 40 − 10 = **100 kJ available**.
 
-If expenditure becomes 110 kJ, retention is **−10 kJ**.
+- Spend 85 → retain **15 kJ**.
+- Spend 110 → retain **−10 kJ**.
 
-Energy accounting does not identify every nutrient limitation.
+A deficit draws on reserves; it does not create negative food.
+:::
+::: {.column width="58%"}
+![](figures/retained-balance.svg){fig-alt="A zero-centered balance compares 15 kilojoules retained with a 10-kilojoule deficit." width="100%" height="360"}
+:::
+::::
 
 ## Energy is not power
 
-- Energy: J or kJ.
-- Power: J s⁻¹ = W.
-- Convert intervals before comparing rates.
-- ATP links fuel use to cellular processes.
+:::: {.columns}
+::: {.column width="42%"}
+- Energy is an amount: J.
+- Power is a rate: J s⁻¹ = W.
+- Convert time units before comparing.
+
+The bars represent elapsed time.
+:::
+::: {.column width="58%"}
+![](figures/energy-and-power.svg){fig-alt="The same 60 joules transferred in 10 seconds gives 6 watts, versus 1 watt over 60 seconds." width="100%" height="360"}
+:::
+::::
 
 ## Aerobic and anaerobic supply
 
-- Aerobic ATP production depends on oxygen delivery and fuel.
-- Anaerobic pathways contribute without immediate oxygen use.
-- One activity bout can use both.
-- Oxygen uptake is useful, but not every ATP flux at every instant.
+:::: {.columns}
+::: {.column width="42%"}
+- Aerobic supply depends on oxygen delivery and fuel.
+- Some ATP-producing steps do not directly use oxygen.
+- One bout can use both.
+
+Oxygen uptake is not every ATP flux at every instant.
+:::
+::: {.column width="58%"}
+![](figures/atp-pathways.svg){fig-alt="Cytosolic glycolysis and oxygen-dependent mitochondrial pathways both contribute ATP." width="100%" height="360"}
+:::
+::::
 
 ## A rate needs a measurement model
 

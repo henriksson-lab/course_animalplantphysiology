@@ -19,6 +19,12 @@ a glossary, a ten-week route and integration/revision tasks. The optional R
 script and R Markdown report repeat the animal-measurement calculation. Every
 core activity can be completed without R.
 
+The opening A1/A2 slide decks now include 17 original explanatory SVGs:
+A1 illustrates 9/16 slides (56.25%) and A2 8/16 (50%), counting title slides.
+Their `figures/make_diagrams.py` scripts reproduce the assets. The diagrams
+explain structure and processes; tissue sketches are not microscopy images.
+Later decks have not yet received this visual pass.
+
 The documented baseline is 5MO101 (15 ECTS), with its equal animal/plant split
 and four modules. Programme research identifies 5MO00S as the 2027 successor,
 but its course-specific syllabus and reading list are unverified. The proposal

@@ -2049,7 +2049,7 @@
     "href": "animal/organisation/lec.html#levels-are-connected",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Levels are connected",
-    "text": "Levels are connected\n\nCell → tissue → organ → interacting systems → organism.\nAn intestine contains epithelium, connective tissue, muscle and nerves.\nA tissue category does not identify an entire organ.",
+    "text": "Levels are connected\n\n\n\nCell → tissue → organ → interacting systems → organism.\nAn intestine contains epithelium, connective tissue, muscle and nerves.\nA tissue category does not identify an entire organ.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2062,7 +2062,7 @@
     "href": "animal/organisation/lec.html#where-is-the-internal-environment",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Where is the internal environment?",
-    "text": "Where is the internal environment?\n\nGut lumen is continuous with the exterior.\nAbsorption crosses a selective epithelial barrier.\nMost cells exchange with interstitial fluid.\nCirculation connects distant exchange regions and tissues.",
+    "text": "Where is the internal environment?\n\n\n\nGut lumen is continuous with the exterior.\nAbsorption crosses a selective epithelial barrier.\nMost cells exchange with interstitial fluid.\nCirculation connects distant exchange regions and tissues.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2075,7 +2075,7 @@
     "href": "animal/organisation/lec.html#size-changes-the-geometry",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Size changes the geometry",
-    "text": "Size changes the geometry\nFor a cube: area =6L^2; volume =L^3; ratio =6/L.\n\nDouble length: area ×4, volume ×8.\nRatios need units: mm⁻¹, for example.\nLarger bodies can fold surfaces and move fluids.",
+    "text": "Size changes the geometry\n\n\nFor a cube: area =6L^2; volume =L^3; ratio =6/L.\n\nDouble length: area ×4, volume ×8.\nRatios need units: mm⁻¹, for example.\nLarger bodies can fold surfaces and move fluids.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2088,7 +2088,7 @@
     "href": "animal/organisation/lec.html#distance-is-costly",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Distance is costly",
-    "text": "Distance is costly\n\nSimple diffusion time scale grows with distance squared.\nTenfold distance → roughly hundredfold time scale.\nBulk flow covers long distances; diffusion crosses final barriers.",
+    "text": "Distance is costly\n\n\n\nSimple diffusion time scale grows with distance squared.\nTenfold distance → roughly hundredfold time scale.\nBulk flow covers long distances; diffusion crosses final barriers.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2101,7 +2101,7 @@
     "href": "animal/organisation/lec.html#epithelium-a-boundary-with-two-sides",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Epithelium: a boundary with two sides",
-    "text": "Epithelium: a boundary with two sides\n\nClosely associated cells form sheets.\nApical and basal domains can differ.\nThin exchange barriers and layered protective barriers solve different tasks.\nIdentify lumen, layers and shape before guessing an organ.",
+    "text": "Epithelium: a boundary with two sides\n\n\n\nClosely associated cells form sheets.\nApical and basal domains can differ.\nThin exchange barriers and layered protective barriers solve different tasks.\nIdentify lumen, layers and shape before guessing an organ.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2127,7 +2127,7 @@
     "href": "animal/organisation/lec.html#muscle-and-nervous-tissue",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Muscle and nervous tissue",
-    "text": "Muscle and nervous tissue\n\nMuscle produces force; its arrangement affects function.\nSkeletal, cardiac and smooth muscle differ.\nNeurons receive, integrate and transmit signals.\nGlial cells support neural function.",
+    "text": "Muscle and nervous tissue\n\n\n\nMuscle produces force; its arrangement affects function.\nSkeletal, cardiac and smooth muscle differ.\nNeurons receive, integrate and transmit signals.\nGlial cells support neural function.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2140,7 +2140,7 @@
     "href": "animal/organisation/lec.html#a-histology-claim-needs-evidence",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "A histology claim needs evidence",
-    "text": "A histology claim needs evidence\nRecord scale, section orientation, cell features, layers, matrix and lumens.\nThen propose identity and alternatives.\nA ring can be a cut tube. Text descriptions prepare for, but do not replace, the actual slide collection.",
+    "text": "A histology claim needs evidence\n\n\nRecord scale, section orientation, cell features, layers, matrix and lumens.\nThen propose identity and alternatives.\nA ring can be a cut tube. Text descriptions prepare for, but do not replace, the actual slide collection.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2166,7 +2166,7 @@
     "href": "animal/organisation/lec.html#explain-negative-feedback",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Explain negative feedback",
-    "text": "Explain negative feedback\nDisturbance → sensed deviation → control → effector → opposing consequence.\nFor rising body temperature: identify how heat loss/production changes and how that reduces the deviation.",
+    "text": "Explain negative feedback\n\n\nDisturbance → sensed deviation → control → effector → opposing consequence.\nFor rising body temperature: identify how heat loss/production changes and how that reduces the deviation.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -2205,7 +2205,7 @@
     "href": "animal/organisation/lec.html#compare-without-a-ladder",
     "title": "A1 — Organisation, diversity and regulation",
     "section": "Compare without a ladder",
-    "text": "Compare without a ladder\n\nInsect: branching tracheal transport brings gases near tissues.\nMammal: lung exchange plus blood oxygen transport.\nBoth need gradients and short final diffusion paths.\nAsk about trade-offs and environment, not which animal is “more advanced”.",
+    "text": "Compare without a ladder\n\n\n\nInsect: branching tracheal transport brings gases near tissues.\nMammal: lung exchange plus blood oxygen transport.\nBoth need gradients and short final diffusion paths.\nAsk about trade-offs and environment, not which animal is “more advanced”.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3076,7 +3076,7 @@
     "href": "animal/energy-temperature/lec.html#equal-food-mass-unequal-outcome",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Equal food mass, unequal outcome?",
-    "text": "Equal food mass, unequal outcome?\n\nIntake differs from absorption.\nEnergy supply differs from essential nutrient supply.\nExpenditure, storage and reproduction share resources.",
+    "text": "Equal food mass, unequal outcome?\n\n\n\nIntake differs from absorption.\nEssential nutrients and energy are separate constraints.\nEqual mass need not produce an equal outcome.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3089,7 +3089,7 @@
     "href": "animal/energy-temperature/lec.html#trace-the-processes",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Trace the processes",
-    "text": "Trace the processes\nIngestion → mechanical/chemical digestion → absorption → transport → metabolism.\nThe gut lumen is not the internal environment.\nUndigested material lost in faeces differs from metabolic waste excretion.",
+    "text": "Trace the processes\n\n\n\nDigestion breaks down food.\nAbsorption crosses a selective barrier.\nUnabsorbed material remains in the lumen; metabolic wastes follow other routes.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3102,7 +3102,7 @@
     "href": "animal/energy-temperature/lec.html#absorption-depends-on-structure",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Absorption depends on structure",
-    "text": "Absorption depends on structure\n\nFolds, villi and cell-surface projections increase area.\nEpithelial transport crosses a selective barrier.\nBlood and lymph remove absorbed materials.\nA villus label alone does not explain the transport path.",
+    "text": "Absorption depends on structure\n\n\n\nMore area supports exchange.\nTransport still requires a selective membrane pathway.\nRemoval maintains a transport route.\n\nSchematic, not a tissue image.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3115,7 +3115,7 @@
     "href": "animal/energy-temperature/lec.html#microbes-change-the-food-problem",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Microbes change the food problem",
-    "text": "Microbes change the food problem\n\nPlant structural material can be difficult for host enzymes.\nMicrobial fermentation supplies usable products.\nForegut and hindgut locations change nutrient recovery.\nRetention, passage rate and intake create trade-offs.",
+    "text": "Microbes change the food problem\n\n\n\nMicrobes make some food resources accessible.\nLocation changes recovery of microbial products and biomass.\nRetention and passage create trade-offs.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3128,7 +3128,7 @@
     "href": "animal/energy-temperature/lec.html#define-an-energy-budget",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Define an energy budget",
-    "text": "Define an energy budget\nIn this course example:\nE_{\\rm intake}=E_{\\rm faeces}+E_{\\rm excreted}+E_{\\rm metabolic}+E_{\\rm retained}.\nAll terms refer to the same interval. State conventions and avoid double counting.",
+    "text": "Define an energy budget\n\n\nIn this teaching convention:\nintake = faeces + excreted + metabolic + retained.\nUse one interval and avoid double counting.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3141,7 +3141,7 @@
     "href": "animal/energy-temperature/lec.html#calculate-the-retained-balance",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Calculate the retained balance",
-    "text": "Calculate the retained balance\n150 kJ intake − 40 faeces − 10 excreted − 85 expenditure = 15 kJ retained.\nIf expenditure becomes 110 kJ, retention is −10 kJ.\nEnergy accounting does not identify every nutrient limitation.",
+    "text": "Calculate the retained balance\n\n\n150 − 40 − 10 = 100 kJ available.\n\nSpend 85 → retain 15 kJ.\nSpend 110 → retain −10 kJ.\n\nA deficit draws on reserves; it does not create negative food.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3154,7 +3154,7 @@
     "href": "animal/energy-temperature/lec.html#energy-is-not-power",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Energy is not power",
-    "text": "Energy is not power\n\nEnergy: J or kJ.\nPower: J s⁻¹ = W.\nConvert intervals before comparing rates.\nATP links fuel use to cellular processes.",
+    "text": "Energy is not power\n\n\n\nEnergy is an amount: J.\nPower is a rate: J s⁻¹ = W.\nConvert time units before comparing.\n\nThe bars represent elapsed time.",
     "crumbs": [
       "Home",
       "Animal physiology",
@@ -3167,7 +3167,7 @@
     "href": "animal/energy-temperature/lec.html#aerobic-and-anaerobic-supply",
     "title": "A2 — Nutrition, energy and temperature",
     "section": "Aerobic and anaerobic supply",
-    "text": "Aerobic and anaerobic supply\n\nAerobic ATP production depends on oxygen delivery and fuel.\nAnaerobic pathways contribute without immediate oxygen use.\nOne activity bout can use both.\nOxygen uptake is useful, but not every ATP flux at every instant.",
+    "text": "Aerobic and anaerobic supply\n\n\n\nAerobic supply depends on oxygen delivery and fuel.\nSome ATP-producing steps do not directly use oxygen.\nOne bout can use both.\n\nOxygen uptake is not every ATP flux at every instant.",
     "crumbs": [
       "Home",
       "Animal physiology",
