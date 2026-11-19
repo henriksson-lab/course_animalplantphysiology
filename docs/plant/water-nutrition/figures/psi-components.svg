@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="440" viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Components of water potential</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Components of water potential</dc:title>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 440 
+L 800 440 
+L 800 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 104 352 
+L 776 352 
+L 776 35.2 
+L 104 35.2 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 134.545455 167.2 
+L 191.680837 167.2 
+L 191.680837 308 
+L 134.545455 308 
+z
+" clip-path="url(#p79c492035f)" style="fill: #b37a22"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 191.680837 167.2 
+L 248.81622 167.2 
+L 248.81622 79.2 
+L 191.680837 79.2 
+z
+" clip-path="url(#p79c492035f)" style="fill: #397646"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 248.81622 167.2 
+L 305.951602 167.2 
+L 305.951602 220 
+L 248.81622 220 
+z
+" clip-path="url(#p79c492035f)" style="fill: #267a91"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 354.296926 167.2 
+L 411.432309 167.2 
+L 411.432309 308 
+L 354.296926 308 
+z
+" clip-path="url(#p79c492035f)" style="fill: #b37a22"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 411.432309 167.2 
+L 468.567691 167.2 
+L 468.567691 167.2 
+L 411.432309 167.2 
+z
+" clip-path="url(#p79c492035f)" style="fill: #397646"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 468.567691 167.2 
+L 525.703074 167.2 
+L 525.703074 308 
+L 468.567691 308 
+z
+" clip-path="url(#p79c492035f)" style="fill: #267a91"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 574.048398 167.2 
+L 631.18378 167.2 
+L 631.18378 176 
+L 574.048398 176 
+z
+" clip-path="url(#p79c492035f)" style="fill: #b37a22"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 631.18378 167.2 
+L 688.319163 167.2 
+L 688.319163 308 
+L 631.18378 308 
+z
+" clip-path="url(#p79c492035f)" style="fill: #397646"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 688.319163 167.2 
+L 745.454545 167.2 
+L 745.454545 316.8 
+L 688.319163 316.8 
+z
+" clip-path="url(#p79c492035f)" style="fill: #267a91"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #243645" x="220.248528" y="372.216563" transform="rotate(-0 220.248528 372.216563)">Turgid cell</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #243645" x="440" y="372.216563" transform="rotate(-0 440 372.216563)">Flaccid cell</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; fill: #243645" transform="translate(602.216315 372.216563)">Xylem sap</text>
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; fill: #243645" transform="translate(591.31944 396.85175)">(transpiring)</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <defs>
+       <path id="m515012a802" d="M 0 0 
+L -3.5 0 
+" style="stroke: #243645; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m515012a802" x="104" y="343.2" style="fill: #243645; stroke: #243645; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #243645" x="97" y="351.558281" transform="rotate(-0 97 351.558281)">−1.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m515012a802" x="104" y="255.2" style="fill: #243645; stroke: #243645; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #243645" x="97" y="263.558281" transform="rotate(-0 97 263.558281)">−0.5</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m515012a802" x="104" y="167.2" style="fill: #243645; stroke: #243645; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #243645" x="97" y="175.558281" transform="rotate(-0 97 175.558281)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m515012a802" x="104" y="79.2" style="fill: #243645; stroke: #243645; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #243645" x="97" y="87.558281" transform="rotate(-0 97 87.558281)">0.5</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #243645" x="35.0025" y="193.6" transform="rotate(-90 35.0025 193.6)">Ψ (MPa)</text>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <path d="M 104 167.2 
+L 776 167.2 
+" clip-path="url(#p79c492035f)" style="fill: none; stroke: #243645; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 104 352 
+L 104 35.2 
+" style="fill: none; stroke: #243645; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 104 352 
+L 776 352 
+" style="fill: none; stroke: #243645; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #267a91" x="277.383911" y="243.996875" transform="rotate(-0 277.383911 243.996875)">−0.30</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #267a91" x="497.135383" y="331.996875" transform="rotate(-0 497.135383 331.996875)">−0.80</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #267a91" x="716.886854" y="340.796875" transform="rotate(-0 716.886854 340.796875)">−0.85</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_14">
+     <path d="M 565.23125 68.396875 
+L 605.23125 68.396875 
+L 605.23125 54.396875 
+L 565.23125 54.396875 
+z
+" style="fill: #b37a22"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #243645" x="621.23125" y="68.396875" transform="rotate(-0 621.23125 68.396875)">Ψs (solutes)</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 565.23125 97.753125 
+L 605.23125 97.753125 
+L 605.23125 83.753125 
+L 565.23125 83.753125 
+z
+" style="fill: #397646"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #243645" x="621.23125" y="97.753125" transform="rotate(-0 621.23125 97.753125)">Ψp (pressure)</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 565.23125 127.109375 
+L 605.23125 127.109375 
+L 605.23125 113.109375 
+L 565.23125 113.109375 
+z
+" style="fill: #267a91"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #243645" x="621.23125" y="127.109375" transform="rotate(-0 621.23125 127.109375)">Ψ = Ψs + Ψp</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p79c492035f">
+   <rect x="104" y="35.2" width="672" height="316.8"/>
+  </clipPath>
+ </defs>
+</svg>

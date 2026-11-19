@@ -11,6 +11,7 @@ project:
   - practicals/*.qmd
   - optional-computing/index.qmd
   resources:
+  - demos/dist/
   - data/*.csv
   - data/README.md
   - downloads/*.zip

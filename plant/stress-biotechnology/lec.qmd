@@ -45,18 +45,27 @@ The running example is a maize field, and the lecture follows it in three steps:
 
 ## What stress does to a plant
 
+:::: {.columns}
+::: {.column width="55%"}
 **Stress:** a condition that pushes a plant's function outside its normal range.
-What stresses one species may be normal for another.
 
-| Stress | Main physiological problem |
+| Stress | Main problem |
 | --- | --- |
-| **Drought** | Low soil water potential: less water uptake, loss of turgor |
-| **Salinity** | Osmotic effect (as in drought) **plus** ion toxicity from Na⁺ and Cl⁻ |
-| **Heat** | Protein denaturation; membranes become too fluid |
-| **Freezing** | Ice forms between cells and draws water out of them; crystals damage membranes |
+| **Drought** | Low soil ψ: less uptake, loss of turgor |
+| **Salinity** | Osmotic effect **plus** Na⁺ and Cl⁻ toxicity |
+| **Heat** | Proteins denature; membranes too fluid |
+| **Freezing** | Ice between cells draws water out |
 
-- Stress can reduce **survival**, **growth** or **seed yield**. These are different outcomes.
-- A plant that survives a drought may still set few seeds.
+Stress can reduce **survival**, **growth** or **seed yield**: different outcomes.
+:::
+::: {.column width="45%"}
+
+![](figures/maize-drought-stressed.jpg){width="100%" height="360" fig-alt="Drought-stressed maize field with rolled, greyish leaves."}
+
+[Photo: CraneStation, CC BY 2.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Drought-stressed_corn,_western_Tennessee-Kentucky_border.jpg){.credit}
+
+:::
+::::
 
 **The commonest stress in our field is drought. What does the plant do first?**
 
@@ -66,40 +75,60 @@ Exercise 1.1. Note that drought and salinity share the osmotic problem from P2: 
 
 ## Drought: ABA closes the stomata
 
-```{mermaid}
-flowchart LR
-  D[Soil dries] --> A[ABA made in<br/>roots and leaves]
-  A --> R[ABA receptors<br/>in guard cells]
-  R --> I[K⁺ and anions<br/>leave guard cells]
-  I --> T[Water follows,<br/>turgor falls]
-  T --> C[Stomata close]
-```
+:::: {.columns}
+::: {.column width="40%"}
+1. Soil dries; **ABA** is made in roots and leaves.
+2. ABA binds receptors in the **guard cells**.
+3. Ion channels open: K⁺ and anions leave.
+4. Water follows, turgor falls, the **stoma closes**.
 
-- Within minutes, transpiration falls and the plant conserves water.
-- **The cost:** closed stomata also block **CO₂ uptake**, so photosynthesis falls.
-- Less transpiration means **less evaporative cooling**: leaf temperature rises.
+- Within minutes, transpiration falls.
+- **Cost:** less **CO₂ uptake**, and less evaporative cooling, so the leaf warms.
+:::
+::: {.column width="60%"}
 
-**Closing stomata saves water but does not help the roots take more up. How can they?**
+![](figures/aba-stomata.svg){width="100%" height="360" fig-alt="ABA makes guard cells lose K+, anions and water, so the stoma closes; CO2 uptake and cooling fall too."}
+
+:::
+::::
+
+**How large is that cost? Try it.**
 
 ::: notes
 Exercises 1.2 and 1.3. This is the fast branch of the signal chain from P4: no new genes are needed for the guard cells to close, just ion channels. The trade-off links P2 (transpiration) and P3 (CO₂ uptake): a plant under drought must choose between water and carbon. The heat cost matters on a hot afternoon in our maize field. Transition: the slower, longer-term response is to change the water potential inside the cells.
 :::
 
+## Try it: water saved versus carbon lost
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p5-stomata" data-aba="0" data-vpd="2"></div>
+<script src="../../demos/dist/p5-stomata.js"></script>
+```
+
+::: notes
+Start at "well watered" and read out water loss, CO₂ uptake and leaf temperature. Then click "mild drought": water loss roughly halves but CO₂ uptake falls by only about a fifth, so CO₂ gained per water lost rises. Ask why: CO₂ uptake is limited by both the stomata and the chloroplast, so partial closure costs less carbon than water. Then click "severe drought": CO₂ uptake collapses and the leaf ends up about 8 °C warmer than the air. Finally raise the air-dryness slider at fixed ABA to show that dry air raises water loss without changing the stomata. This connects P2 (transpiration), P3 (CO₂ uptake) and the heat stress on the previous slide.
+:::
+
 ## Osmotic adjustment and salt
 
-**Compatible solutes** lower the cell's solute potential without inhibiting enzymes:
+:::: {.columns}
+::: {.column width="40%"}
+**Compatible solutes** (proline, glycine betaine, sucrose, mannitol) lower ψ<sub>s</sub>
+without inhibiting enzymes, so water still flows **into** the root.
 
-| Compatible solute | Type |
-| --- | --- |
-| Proline | Amino acid |
-| Glycine betaine | Quaternary ammonium compound |
-| Sucrose, mannitol | Sugar, sugar alcohol |
+**Salinity** also needs Na⁺ kept out of the cytoplasm:
 
-- Lower ψ<sub>s</sub> inside → water still flows **into** the root from a dry or salty soil.
-- **Salinity** needs more: Na⁺ must be kept out of the cytoplasm.
-  - Pump Na⁺ back **out** of root cells (SOS1 antiporter).
-  - Store Na⁺ in the **vacuole** (NHX antiporter), where it helps adjust ψ<sub>s</sub>.
-  - Keep a high **K⁺ : Na⁺** ratio in the cytoplasm.
+- **SOS1** pumps Na⁺ back out of root cells.
+- **NHX** stores Na⁺ in the **vacuole**, where it helps lower ψ<sub>s</sub>.
+- The cytoplasm keeps a high **K⁺ : Na⁺** ratio.
+:::
+::: {.column width="60%"}
+
+![](figures/salt-transport.svg){width="100%" height="360" fig-alt="Na+ is pumped out of the cell by SOS1 and into the vacuole by NHX, keeping the cytoplasm low in Na+."}
+
+:::
+::::
 
 ::: notes
 Exercise 1.4. Recall from P2 that water potential = solute potential + pressure potential: accumulating solutes makes the cell's water potential more negative than the soil's, so uptake continues. "Compatible" means the solute can reach high concentrations without disrupting protein function, unlike Na⁺. Salt tolerance therefore has two parts: the osmotic part, shared with drought, and the ion part, solved by exclusion and vacuolar storage. Transition: whatever the stress, proteins and membranes need protection.
@@ -128,17 +157,25 @@ Exercises 1.5 to 1.7. LEA stands for late embryogenesis abundant: the same prote
 
 ## Defence: always on, or switched on?
 
-| | **Constitutive** (always present) | **Induced** (after attack) |
+:::: {.columns}
+::: {.column width="58%"}
+| | **Constitutive** | **Induced** |
 | --- | --- | --- |
-| Physical | Cuticle, cell walls, thorns, trichomes | **Callose** deposited to plug plasmodesmata and wall gaps |
-| Chemical | Stored specialised metabolites | **Phytoalexins**, **proteinase inhibitors** |
+| Physical | Cuticle, walls, thorns, trichomes | **Callose** plugs |
+| Chemical | Stored metabolites | **Phytoalexins**, **proteinase inhibitors** |
 | Cellular | — | **Hypersensitive response** |
 
-**Three kinds of attacker need different defences:**
+**Three kinds of attacker:** **biotrophs** feed on living cells (rusts, mildews);
+**necrotrophs** kill cells first (*Botrytis*); **herbivores** remove tissue.
+:::
+::: {.column width="42%"}
 
-- **Biotrophs** feed on **living** cells (e.g. powdery mildews, rust fungi).
-- **Necrotrophs** **kill** cells first, then feed (e.g. *Botrytis*, grey mould).
-- **Herbivores** remove tissue (e.g. chewing caterpillars).
+![](figures/glandular-trichomes-capsicum.jpg){width="100%" height="360" fig-alt="Leaf surface covered in hairs (trichomes), some with glandular heads."}
+
+[Photo: Richard Blood, CC BY 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Capsicum_eshbaughii_glandular_trichomes.jpg){.credit}
+
+:::
+::::
 
 **To induce a defence, the plant must first detect the attacker. How?**
 
@@ -146,41 +183,74 @@ Exercises 1.5 to 1.7. LEA stands for late embryogenesis abundant: the same prote
 Exercise 2.1. Constitutive defences cost resources even when there is no attack; induced defences save that cost but take time to switch on. The attacker classes matter because a defence that works against one can help another: killing infected cells starves a biotroph but feeds a necrotroph. Proteinase inhibitors, induced by wounding in tomato, block the caterpillar's digestive enzymes. Transition: recognition and the hypersensitive response.
 :::
 
-## Detecting the pathogen: HR and SAR
+## Detecting the pathogen: the hypersensitive response
 
-```{mermaid}
-flowchart LR
-  P[Pathogen molecule<br/>or effector] --> R[Plant receptor<br/>or R protein]
-  R --> B[ROS burst,<br/>SA rises]
-  B --> HR[Hypersensitive response:<br/>local cell death]
-  B --> S[Signal to the<br/>rest of the plant]
-  S --> SAR[Systemic acquired<br/>resistance]
-```
-
+:::: {.columns}
+::: {.column width="40%"}
 - Receptors recognise conserved microbial molecules (e.g. bacterial flagellin);
   **R proteins** recognise specific pathogen effectors.
-- **Hypersensitive response (HR):** rapid death of the cells at the infection site.
-  A **biotroph** needs living cells, so it is starved and cannot spread.
-- **Systemic acquired resistance (SAR):** long-lasting, broad-spectrum resistance
-  in **uninfected** leaves. It **requires salicylic acid** and induces
-  pathogenesis-related (PR) proteins.
+- Recognition triggers a **ROS burst** and a rise in **salicylic acid**.
+- **Hypersensitive response (HR):** rapid death of the cells at the infection
+  site. A **biotroph** needs living cells, so it is starved and cannot spread.
+:::
+::: {.column width="60%"}
+
+![](figures/hypersensitive-response-lesions.jpg){width="100%" height="360" fig-alt="Leaf with small dead brown spots where infected cells have died."}
+
+[Photo: DanieliusKa, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plant_hypersensitive_response_lesions.jpg){.credit}
+
+:::
+::::
+
+**Does the rest of the plant benefit?**
 
 ::: notes
-Exercises 2.3 and 2.4. The HR is a striking case of cells sacrificed to protect the whole, comparable to programmed cell death in development (P4 senescence). SAR is the plant's closest analogue to immunological memory, but it is not specific to one pathogen. Transgenic plants that cannot accumulate SA (expressing the bacterial enzyme NahG, which degrades it) do not develop SAR. Transition: SA is one of two main defence hormones; the other is jasmonic acid.
+Exercise 2.3. The HR is a striking case of cells sacrificed to protect the whole, comparable to programmed cell death in development (P4 senescence). The brown spots in the photo are the dead cells; the pathogen is trapped inside them. Transition: the infection also sends a signal to the rest of the plant.
+:::
+
+## Systemic acquired resistance
+
+:::: {.columns}
+::: {.column width="40%"}
+- **SAR:** long-lasting, broad-spectrum resistance in **uninfected** leaves
+  after a local infection.
+- A signal moves through the phloem from the infected leaf.
+- SAR **requires salicylic acid** and induces pathogenesis-related (**PR**) proteins.
+- Plants that cannot accumulate SA (expressing the bacterial enzyme NahG)
+  develop no SAR.
+:::
+::: {.column width="60%"}
+
+![](figures/hr-sar.svg){width="100%" height="360" fig-alt="An infected leaf with HR lesions sends a signal through the phloem; uninfected leaves develop SAR."}
+
+:::
+::::
+
+::: notes
+Exercise 2.4. SAR is the plant's closest analogue to immunological memory, but it is not specific to one pathogen. The NahG experiment is the classic test that SA is required. Transition: SA is one of two main defence hormones; the other is jasmonic acid.
 :::
 
 ## SA versus JA: matching the defence to the attacker
 
-| Attacker | Main pathway | Typical outputs |
-| --- | --- | --- |
-| **Biotrophic** pathogen | **Salicylic acid (SA)** | HR, SAR, PR proteins |
-| **Necrotrophic** pathogen | **Jasmonic acid (JA)** + ethylene | Antifungal proteins, phytoalexins |
-| **Chewing** insect | **Jasmonic acid (JA)** | Proteinase inhibitors, toxic metabolites |
+:::: {.columns}
+::: {.column width="48%"}
+| Attacker | Pathway |
+| --- | --- |
+| **Biotrophic** pathogen | **SA**: HR, SAR, PR proteins |
+| **Necrotrophic** pathogen | **JA** + ethylene |
+| **Chewing** insect | **JA**: proteinase inhibitors |
 
-- SA and JA often act **antagonistically**: switching on one suppresses the other.
-- In tomato, wounding releases the peptide **systemin**, which triggers JA synthesis
-  and proteinase inhibitors in unwounded leaves.
-- JA signalling is held off by **JAZ repressor** proteins; JA causes their degradation.
+- SA and JA often act **antagonistically**.
+- Tomato: wounding releases the peptide **systemin** → JA → proteinase
+  inhibitors in unwounded leaves.
+- **JAZ** repressors hold JA signalling off; JA causes their degradation.
+:::
+::: {.column width="52%"}
+
+![](figures/sa-ja.svg){width="100%" height="360" fig-alt="SA and JA pathways suppress each other; SA acts against biotrophs, JA against necrotrophs and chewing insects."}
+
+:::
+::::
 
 **What are the chemical weapons these pathways produce?**
 
@@ -190,18 +260,27 @@ Exercise 2.2. The logic is the HR again: cell death is useful against biotrophs 
 
 ## Chemical defence: specialised metabolites
 
-| Class | Examples | Effect |
-| --- | --- | --- |
-| **Terpenoids** | Pyrethrins, menthol, carotenoids | Insecticidal, repellent |
-| **Phenolics** | Flavonoids, tannins, lignin | UV screening, reduce digestibility, wall strengthening |
-| **N-containing compounds** | Alkaloids (nicotine, caffeine, morphine), cyanogenic glycosides | Neurotoxic, respiratory poison |
+:::: {.columns}
+::: {.column width="58%"}
+| Class | Examples |
+| --- | --- |
+| **Terpenoids** | Pyrethrins, menthol |
+| **Phenolics** | Flavonoids, tannins, lignin |
+| **N-containing** | Alkaloids (**nicotine**, caffeine), cyanogenic glycosides |
 
-- Many are stored as **inactive precursors**, separate from the activating enzyme.
-  - **Glucosinolates** + myrosinase (cabbage, mustard): the "mustard oil bomb".
-  - **Cyanogenic glycosides** (cassava, almonds) release HCN.
-- Tissue damage by a herbivore mixes them, so the toxin forms **only at the site
-  of attack** and does not poison the plant itself.
-- "Natural" does not mean harmless: nicotine, ricin and cyanide are all plant-derived.
+- Often stored as **inactive precursors**, apart from the activating enzyme:
+  glucosinolates + myrosinase; cyanogenic glycosides → HCN.
+- Damage mixes them, so the toxin forms **only at the site of attack**.
+- "Natural" does not mean harmless: nicotine, ricin, cyanide.
+:::
+::: {.column width="42%"}
+
+![](figures/tobacco-plant.jpg){width="100%" height="360" fig-alt="Flowering tobacco plant, Nicotiana tabacum, the source of nicotine."}
+
+[Photo: Jebulon, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plant_nicotiana_tabacum.jpg){.credit}
+
+:::
+::::
 
 ::: notes
 Exercises 2.5 to 2.7c. The three classes are defined by biosynthetic origin, and students should give one example of each. Compartmentation is the key idea: the plant keeps its own toxin safe by storing the parts separately, often in different cells or in the vacuole versus the cytoplasm. Pyrethrins from chrysanthemum flowers are the basis of common insecticides. Transition: if defence is so useful, why not keep it switched on all the time?
@@ -209,19 +288,21 @@ Exercises 2.5 to 2.7c. The three classes are defined by biosynthetic origin, and
 
 ## The growth–defence trade-off
 
-- Defence compounds and proteins use **carbon, nitrogen and energy** that could
-  otherwise go into growth.
-- An Arabidopsis mutant lacking ten JAZ repressors has **constitutively active
-  JA signalling**: strong insect resistance, but **much smaller plants** and
+:::: {.columns}
+::: {.column width="40%"}
+- Defence uses **carbon, nitrogen and energy** that could go into growth.
+- An Arabidopsis mutant lacking ten JAZ repressors has **constitutive JA
+  signalling**: strong insect resistance, but **much smaller plants** and
   fewer seeds (Guo et al., 2018).
-- Constitutive SA signalling likewise gives dwarfed plants.
+- A plant with defence always on loses without attack and wins under heavy attack.
+- So **induced** defence is common: pay only when attacked.
+:::
+::: {.column width="60%"}
 
-| Condition | Plant with defence on all the time |
-| --- | --- |
-| No attack | Smaller than wild type: pays the cost for nothing |
-| Heavy attack | Can outperform wild type: the cost is repaid |
+![](figures/growth-defence.svg){width="100%" height="360" fig-alt="Schematic of seed yield against herbivore pressure: induced defence does well across the range."}
 
-- This is why **induced** defence is common: pay only when attacked.
+:::
+::::
 
 **To test ideas like these we need genes, mutants and a model plant.**
 
@@ -231,18 +312,26 @@ Exercise 2.7 a and b. The JAZ decuple mutant is a direct test of the trade-off: 
 
 ## *Arabidopsis thaliana*: the model plant
 
+:::: {.columns}
+::: {.column width="58%"}
 | Property | Why it helps |
 | --- | --- |
 | Life cycle 6–8 weeks | Many generations per year |
-| Small size | Thousands of plants in a growth room |
-| Small genome (~135 Mb), fully sequenced (2000) | Every gene has an identifier, e.g. *FT* = AT1G65730 |
-| Self-pollinating, many seeds | Mutants breed true; large populations |
-| Easy *Agrobacterium* transformation (floral dip) | Transgenic lines without tissue culture |
+| Small genome (~135 Mb), sequenced 2000 | Every gene has an ID, e.g. *FT* = AT1G65730 |
+| Self-pollinating, many seeds | Mutants breed true |
+| Floral-dip transformation | No tissue culture needed |
 | Large mutant collections | A knockout for almost every gene |
 
-- Gene records, mutants and literature are collected in **TAIR** (arabidopsis.org).
-- A mechanism found in Arabidopsis must be **tested again** in a crop: the gene
-  may be present but act in a different tissue or environment.
+Gene records are collected in **TAIR**. A mechanism found here must be **tested again** in a crop.
+:::
+::: {.column width="42%"}
+
+![](figures/arabidopsis-rosette.jpg){width="100%" height="360" fig-alt="Small flowering Arabidopsis thaliana plant with a leaf rosette."}
+
+[Photo: Quentin Groom, public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Arabidopsisthaliana.JPG){.credit}
+
+:::
+::::
 
 **How do we put a new gene into a plant?**
 
@@ -252,165 +341,326 @@ Exercise 3.1. The stable identifier (AGI code) matters because gene names and al
 
 ## *Agrobacterium*: nature's genetic engineer
 
-- *Agrobacterium tumefaciens* causes **crown gall** tumours by transferring part
-  of its **Ti plasmid**, the **T-DNA**, into the plant genome.
-- The T-DNA is defined by its **left and right border** sequences. The
-  bacterium's **vir genes** cut it out and transfer it.
-- Wild T-DNA carries auxin and cytokinin synthesis genes, hence the tumour.
-- In the lab, a **binary vector** carries a T-DNA in which the tumour genes are
-  replaced by **our gene** plus a **selectable marker**.
+:::: {.columns}
+::: {.column width="40%"}
+- *Agrobacterium tumefaciens* causes **crown gall** tumours.
+- It transfers part of its **Ti plasmid**, the **T-DNA**, into the plant genome.
+- The T-DNA lies between **left and right borders**; the bacterium's **vir
+  genes** cut it out and transfer it.
+- Wild T-DNA carries **auxin and cytokinin** synthesis genes: the infected
+  cells overproduce both hormones and grow into a tumour.
+:::
+::: {.column width="60%"}
 
-| Outcome | DNA integrated? | Inherited? | Use |
-| --- | --- | --- | --- |
-| **Stable transformation** | Yes | Yes | Transgenic lines and crops |
-| **Transient expression** | No | No, lost in days | Fast tests in leaves |
+![](figures/crown-gall.jpg){width="100%" height="360" fig-alt="Crown gall: a rough tumour on a plant stem caused by Agrobacterium."}
 
-- Alternative delivery without *Agrobacterium*: **particle bombardment**
-  (biolistics), or PEG / electroporation of **protoplasts**.
+[Photo: Scot Nelson, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crown_gall_(26473724818).jpg){.credit}
+
+:::
+::::
+
+**Anything between the borders is transferred. Can we swap in our own gene?**
 
 ::: notes
-Exercises 4.3 and 4.4. The natural system is a neat link to P4: the bacterium makes the plant cells overproduce auxin and cytokinin, the same hormones we use in tissue culture two slides from now. Anything between the borders is transferred, which is why it can be replaced by any gene. Particle bombardment was important for cereals, which were initially hard to transform with Agrobacterium. Transition: the full workflow.
+The natural system links to P4: the bacterium makes the plant cells overproduce auxin and cytokinin, the same hormones we use in tissue culture later in this lecture. Transition: the binary vector.
+:::
+
+## The binary vector
+
+:::: {.columns}
+::: {.column width="40%"}
+- A **binary vector** carries a T-DNA in which the tumour genes are replaced by
+  **our gene** plus a **selectable marker**. A disarmed Ti plasmid supplies the vir genes.
+- **Stable transformation:** T-DNA integrated and **inherited**.
+- **Transient expression:** not integrated, lost within days; used for fast tests in leaves.
+- Without *Agrobacterium*: **particle bombardment**, or PEG / electroporation of **protoplasts**.
+:::
+::: {.column width="60%"}
+
+![](figures/binary-vector.svg){width="100%" height="360" fig-alt="Agrobacterium carries a binary vector whose T-DNA, between left and right borders, holds a marker and our gene."}
+
+:::
+::::
+
+::: notes
+Exercises 4.3 and 4.4. Splitting the system into two plasmids makes the small binary vector easy to handle in E. coli. Particle bombardment was important for cereals, which were initially hard to transform with Agrobacterium. Transition: the full workflow.
 :::
 
 ## From construct to transgenic plant
 
-```{mermaid}
-flowchart LR
-  A[Gene of interest into<br/>T-DNA of binary vector] --> B[Co-cultivate explants<br/>with Agrobacterium]
-  B --> C[Select on antibiotic<br/>or herbicide]
-  C --> D[Regenerate<br/>whole plants]
-  D --> E[Confirm insertion<br/>and expression]
-```
+:::: {.columns}
+::: {.column width="40%"}
+Only a few cells are transformed. A **selectable marker** in the same T-DNA lets only those survive:
 
-- Only a few cells are transformed. A **selectable marker** gene lets only those survive:
-
-| Marker gene | Confers resistance to |
+| Marker gene | Resistance to |
 | --- | --- |
-| *nptII* | Kanamycin (antibiotic) |
-| *hpt* | Hygromycin (antibiotic) |
+| *nptII* | Kanamycin |
+| *hpt* | Hygromycin |
 | *bar* | Glufosinate (herbicide) |
 
-**Selection leaves single transformed cells. How do they become plants?**
+Confirm the insert by PCR and its expression by RT-PCR or a protein assay.
+:::
+::: {.column width="60%"}
+
+![](figures/transformation-workflow.svg){width="100%" height="360" fig-alt="Construct, infect explants, select on kanamycin, regenerate shoots, confirm by PCR."}
+
+:::
+::::
 
 ::: notes
 Exercises 4.1 and 4.2. The order is the one students must reproduce: construct, co-cultivation, selection, regeneration, confirmation (by PCR for the insert and RT-PCR or a protein assay for expression). The marker and the gene of interest sit in the same T-DNA, so surviving cells usually carry both. Transition: regeneration relies on a property of plant cells that animal cells mostly lack.
 :::
 
-## Tissue culture: totipotency and hormone ratios
+## Tissue culture: totipotency
 
+:::: {.columns}
+::: {.column width="40%"}
 - **Totipotency:** many differentiated plant cells can dedifferentiate and
-  regenerate a whole plant.
-- The **auxin : cytokinin ratio** in the medium decides what forms
-  (Skoog and Miller, 1957, tobacco):
+  regenerate a **whole plant**.
+- A single transformed cell can therefore become a transgenic plant.
+- Typical sequence: explant → callus → shoots → roots → plantlet in soil.
+:::
+::: {.column width="60%"}
+
+![](figures/shoot-regeneration-passiflora.jpg){width="100%" height="360" fig-alt="Shoots regenerating from explants on culture medium in a dish."}
+
+[Photo: Annalisa Giovannini, CC BY 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Passiflora_in_vitro_plant_regeneration_Annalisa_Giovannini_DSCN0544.jpg){.credit}
+
+:::
+::::
+
+**What decides whether the culture makes roots, shoots or callus?**
+
+::: notes
+Exercise 4.5. Most animal cells lose this capacity during differentiation; plant cells keep it, which is what makes transformation followed by regeneration possible. Transition: hormone ratios.
+:::
+
+## Tissue culture: the auxin : cytokinin ratio
+
+:::: {.columns}
+::: {.column width="40%"}
+Skoog and Miller (1957), tobacco:
 
 | Auxin : cytokinin | Explant forms |
 | --- | --- |
 | **High** | Roots |
-| Intermediate | Undifferentiated **callus** |
+| Intermediate | **Callus** |
 | **Low** (high cytokinin) | Shoots |
 
-- Typical sequence: callus → shoots on high-cytokinin medium → roots on
-  high-auxin medium → plantlet in soil.
-- Exact concentrations depend on species, genotype and tissue.
+Exact concentrations depend on species, genotype and tissue.
+:::
+::: {.column width="60%"}
+
+![](figures/skoog-miller.svg){width="100%" height="360" fig-alt="Grid of auxin and cytokinin levels: high auxin gives roots, high cytokinin gives shoots, balanced gives callus."}
+
+:::
+::::
 
 ::: notes
-Exercises 4.5 and 4.6. Connect to the hormones from P4: auxin promotes root initiation (rooting powder), cytokinin promotes shoot meristems. Also connect to Agrobacterium: the crown gall is a callus caused by the bacterium's own auxin and cytokinin genes. Many crop varieties are hard to regenerate, which is a practical bottleneck for transformation. Transition: we have a plant, but is its phenotype caused by our gene?
+Exercise 4.6. Connect to the hormones from P4: auxin promotes root initiation (rooting powder), cytokinin promotes shoot meristems. The crown gall is a callus caused by the bacterium's own auxin and cytokinin genes. Transition: try it.
+:::
+
+## Try it: grow an explant
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p5-tissueculture" data-auxin="0.3" data-cytokinin="0.3"></div>
+<script src="../../demos/dist/p5-tissueculture.js"></script>
+```
+
+::: notes
+Start at the balanced medium: the explant forms callus. Drag the point towards high cytokinin and shoots appear; towards high auxin and roots appear. Ask the room to predict before each move. Then tick "wild Agrobacterium" with no hormones in the medium: the explant still forms a tumour, because the T-DNA makes the cells produce their own auxin and cytokinin. This joins the crown-gall slide to the Skoog–Miller map. The model is a rule of thumb, not fitted to data.
 :::
 
 ## Is the phenotype caused by the transgene?
 
-- The T-DNA inserts at a **random position**. It can **disrupt** or **activate**
+:::: {.columns}
+::: {.column width="40%"}
+- The T-DNA inserts at a **random position**: it can **disrupt** or **activate**
   a native gene.
 - Tissue culture itself causes mutations: **somaclonal variation**.
-- So one transgenic line proves little. Compare:
-
-| Line | Inserted where? | Tissue culture? | Expected if the transgene is the cause |
-| --- | --- | --- | --- |
-| Wild type | — | No | Normal phenotype |
-| Line 1, 2, 3 (independent events) | Different sites | Yes | **Same** new phenotype in all |
-| Line with empty vector | Random | Yes | Normal phenotype |
-
-- A phenotype seen in **several independent lines**, and absent from controls,
+- So compare **several independent lines** and an **empty-vector** control.
+- A phenotype seen in all independent lines, and absent from the controls,
   is attributed to the transgene.
+:::
+::: {.column width="60%"}
 
-**And we can choose where and when our gene is expressed.**
+![](figures/independent-lines.svg){width="100%" height="360" fig-alt="Three independent lines with insertions at different sites share a new phenotype; wild type and empty vector are normal."}
+
+:::
+::::
 
 ::: notes
 Exercise 4.7. Each independent line has the T-DNA in a different place and has been through its own culture, so position effects and somaclonal mutations differ between lines; only the transgene is common to all. The empty-vector control shows the effect of the transformation procedure itself. Expression level also varies between lines because of insertion position, which is another reason to analyse several. Transition: promoters.
 :::
 
-## Promoters and reporters
+## Promoters: where and when
 
-| Promoter type | Expression | Example |
-| --- | --- | --- |
-| **Constitutive** | Nearly all tissues, all the time | CaMV **35S** |
-| **Tissue-specific** | Particular cell types | A guard-cell promoter |
-| **Inducible** | Only after a signal | A drought- or wound-induced promoter |
+:::: {.columns}
+::: {.column width="55%"}
+| Promoter type | Expression |
+| --- | --- |
+| **Constitutive** (CaMV **35S**) | Nearly all tissues, all the time |
+| **Tissue-specific** | Particular cell types, e.g. guard cells |
+| **Inducible** | Only after a signal, e.g. drought or wounding |
 
+- A **guard-cell promoter** driving a gene that closes stomata saves water.
+  CO₂ uptake, leaf temperature and **yield** must be measured too.
+:::
+::: {.column width="45%"}
+
+![](figures/gfp-guard-cells.jpg){width="100%" height="360" fig-alt="Green fluorescence confined to the two guard cells of a stoma."}
+
+[Image: Alex Costa, CC BY 2.5, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plant_stoma_guard_cells.png){.credit}
+
+:::
+::::
+
+**How do we see where a promoter is active?**
+
+::: notes
+Exercise 5.1. The image shows GFP expressed only in guard cells, exactly what a guard-cell promoter is for. The guard-cell example returns to the ABA slide and the stomata demo: closing stomata has a carbon and temperature cost. Transition: reporter genes.
+:::
+
+## Reporters: making expression visible
+
+:::: {.columns}
+::: {.column width="55%"}
 | Reporter | Detected by |
 | --- | --- |
 | **GUS** (β-glucuronidase) | Blue product after staining with X-Gluc |
 | **GFP** | Green fluorescence under blue light |
 | **Luciferase** | Light emission when luciferin is supplied |
 
-- Example: a **guard-cell promoter** driving a gene that closes stomata saves
-  water. CO₂ uptake, leaf temperature and **yield** must be measured too.
-- Reporter + stress-induced promoter = a plant that **glows when stressed**.
+- Fuse a promoter to a reporter to see where and when it is active.
+- A stress-induced promoter + reporter gives a plant that **signals when stressed**,
+  but it must be tested for specificity.
+:::
+::: {.column width="45%"}
+
+![](figures/gus-arabidopsis-rosette.jpg){width="100%" height="360" fig-alt="Arabidopsis rosette stained blue by GUS reporter activity."}
+
+[Photo: D. S. Rathore, CC BY 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The_Blue_Plant;_GUS_gene_expression_in_Arabidopsis_thaliana_transformed_via_Ensifer_adhaerens_OV14.jpg){.credit}
+
+:::
+::::
 
 ::: notes
-Exercises 5.1 and 5.2. The guard-cell example returns to the ABA slide: closing stomata has a carbon and temperature cost, so water saved is not the same as yield gained. Reporters fused to a promoter show where and when that promoter is active; this was how the senescence promoter in P4 was characterised. A reporter plant as a sensor must still be tested for specificity, because many stress promoters respond to several stresses. Transition: back to the maize field, with crops that are actually grown.
+Exercise 5.2. Reporters fused to a promoter show where and when that promoter is active; this was how the senescence promoter in P4 was characterised. Many stress promoters respond to several stresses, so a reporter plant used as a sensor needs controls. Transition: back to the maize field, with crops that are actually grown.
 :::
 
 ## GM crops in the field
 
-| Trait | Gene or mechanism | Crop |
-| --- | --- | --- |
-| **Insect resistance** | ***cry*** toxin gene from *Bacillus thuringiensis* (Bt) | Maize, cotton |
-| **Herbicide tolerance** | Bacterial EPSP synthase insensitive to glyphosate | Soybean, maize |
-| **Golden Rice** | Carotenoid synthesis genes expressed in the endosperm → β-carotene | Rice |
+:::: {.columns}
+::: {.column width="55%"}
+| Trait | Gene or mechanism |
+| --- | --- |
+| **Insect resistance** (maize, cotton) | ***cry*** toxin gene from *Bacillus thuringiensis* (Bt) |
+| **Herbicide tolerance** (soybean, maize) | Bacterial EPSP synthase insensitive to glyphosate |
+| **Golden Rice** | Carotenoid synthesis genes in the endosperm → **β-carotene** |
 
-**How Bt toxin works:**
+Golden Rice targets vitamin A deficiency: β-carotene is provitamin A, and
+normal rice endosperm makes none.
+:::
+::: {.column width="45%"}
 
+![](figures/golden-rice-vs-white-rice.jpg){width="100%" height="360" fig-alt="Golden Rice grains, yellow from beta-carotene, next to white rice."}
+
+[Photo: International Rice Research Institute, CC BY 2.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Golden_Rice.jpg){.credit}
+
+:::
+::::
+
+**How does the Bt protein kill a caterpillar but not us?**
+
+::: notes
+Exercise 6.1. Glyphosate inhibits EPSP synthase in the shikimate pathway, which makes aromatic amino acids; the bacterial enzyme still works in its presence. Transition: the Bt mechanism.
+:::
+
+## How Bt toxin works
+
+:::: {.columns}
+::: {.column width="40%"}
 1. The caterpillar eats the Cry **protoxin**.
 2. In the **alkaline** larval gut, proteases activate it.
 3. It binds **specific receptors** on gut epithelial cells and forms **pores**.
 4. Gut cells lyse; the larva stops feeding and dies.
 
-- Safe for mammals: an **acidic** stomach and **no receptors** for the toxin.
+Safe for mammals: an **acidic** stomach and **no receptors** for the toxin.
+:::
+::: {.column width="60%"}
+
+![](figures/bt-mechanism.svg){width="100%" height="360" fig-alt="Protoxin eaten, activated in the alkaline gut, binds gut receptors and forms pores so cells lyse."}
+
+:::
+::::
 
 **If every plant in the field kills the pest, what does natural selection do?**
 
 ::: notes
-Exercises 6.1 and 6.2. Golden Rice targets vitamin A deficiency: β-carotene is provitamin A, and normal rice endosperm makes none. Glyphosate inhibits EPSP synthase in the shikimate pathway, which makes aromatic amino acids; the bacterial enzyme still works in its presence. The Bt mechanism explains its specificity: each Cry protein matches receptors in a particular insect group. Bt sprays have been used in organic farming for decades. Transition: resistance evolution.
+Exercise 6.2. The mechanism explains the specificity: each Cry protein matches receptors in a particular insect group. Bt sprays have been used in organic farming for decades. Transition: resistance evolution.
 :::
 
-## Refuges and CRISPR
+## The refuge strategy
+
+:::: {.columns}
+::: {.column width="40%"}
+- Bt maize selects for **resistance alleles** in the pest, the European corn borer.
+- A **refuge** of non-Bt plants is grown next to the Bt crop.
+- Susceptible insects from the refuge mate with the rare resistant survivors.
+- Resistance is usually **recessive**, so the heterozygous offspring still die
+  on Bt maize, and resistance evolves **much more slowly**.
+:::
+::: {.column width="60%"}
+
+![](figures/european-corn-borer-larva.jpg){width="100%" height="360" fig-alt="European corn borer caterpillar inside a damaged maize stalk."}
+
+[Photo: Keith Weller, USDA ARS, public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Corn_borer.jpg){.credit}
+
+:::
+::::
+
+**How much refuge is enough? Try it.**
+
+::: notes
+Exercise 6.3. The refuge is applied evolution: the same natural selection from A1, now in a pest population. Because resistant insects are rare, they almost always mate with susceptible insects from the refuge. Transition: the demo.
+:::
+
+## Try it: Bt resistance and the refuge
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p5-refuge" data-refuge="0" data-h="0" data-p0="0.001"></div>
+<script src="../../demos/dist/p5-refuge.js"></script>
+```
+
+::: notes
+Start with no refuge: the resistance allele reaches 50% in about 15 generations. Set a 20% refuge with a recessive allele (h = 0): more than 150 generations. Then make the allele dominant (h = 1) with the same refuge: the refuge helps far less, because heterozygotes now survive on Bt maize. This is why refuges are combined with a high-dose Bt crop that kills heterozygotes. Tick the drift option to show that chance matters when the allele is very rare. Ask: what would farmers gain by planting no refuge, and who pays when resistance appears?
+:::
+
+## Genome editing versus transgenesis
 
 :::: {.columns}
 ::: {.column width="50%"}
-**The refuge strategy**
-
-- Bt maize selects for **resistance alleles** in the pest.
-- A **refuge** of non-Bt plants is grown next to the Bt crop.
-- Susceptible insects from the refuge mate with the rare resistant survivors.
-- Resistance alleles stay **rare** (resistance is usually recessive), so
-  resistance evolves **more slowly**.
-:::
-::: {.column width="50%"}
-**Genome editing vs transgenesis**
-
 | | Transgenesis | CRISPR–Cas9 |
 | --- | --- | --- |
-| What changes | Foreign DNA **inserted** | A **targeted cut** in an existing gene |
-| Position | Random | Chosen (guide RNA) |
-| Final plant | Carries the transgene | Small mutation; Cas9 construct can be **crossed out** |
+| Change | Foreign DNA **inserted** | **Targeted cut** in a gene |
+| Position | Random | Chosen by guide RNA |
+| Final plant | Carries the transgene | Small mutation; Cas9 **crossed out** |
+
+The final edited plant may carry only a small deletion that could also arise by mutation.
+:::
+::: {.column width="50%"}
+
+![](figures/crispr-vs-transgene.svg){width="100%" height="360" fig-alt="Transgenesis inserts T-DNA at a random site; CRISPR-Cas9 cuts a chosen gene and leaves a small indel."}
+
 :::
 ::::
 
 **The science says what a crop does. Should it be grown? That is a different kind of question.**
 
 ::: notes
-Exercises 6.3 and 6.4. The refuge is applied evolution: the same natural selection from A1, now in a pest population. Because resistant insects are rare, they almost always mate with susceptible insects from the refuge, and heterozygous offspring are killed by a high-dose Bt crop. For CRISPR, emphasise that the final plant may carry only a small deletion that could also have arisen by mutation; whether it is regulated as GM differs between countries. Transition: empirical versus value questions.
+Exercise 6.4. Whether edited plants are regulated as GM differs between countries. Transition: empirical versus value questions.
 :::
 
 ## Evidence and values

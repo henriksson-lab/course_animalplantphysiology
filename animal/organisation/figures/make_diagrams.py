@@ -25,7 +25,7 @@ for x in range(205,335,31): p += [rect(x,117,30,66),circle(x+15,150,5,BLUE),line
 p += [text(270,235,'Epithelium'),arrow(140,150,190,150)]
 p += [circle(470,150,70,'#f3e8df',GOLD),circle(470,150,48,'#d6e9df',GREEN),circle(470,150,31,'white',BLUE),text(470,235,'Intestinal wall'),arrow(345,150,385,150)]
 p += [path('M650 105 C625 130 625 175 650 200 L710 200 C735 175 735 130 710 105 Z',INK,'#f4f5f6'),path('M660 130 C700 110 720 150 665 155 C635 175 720 190 700 165',RED),text(680,235,'Organism'),arrow(550,150,615,150)]
-p += [text(400,305,'Epithelium + connective tissue + muscle + nerves',24),text(400,355,'Functions depend on their arrangement and interaction.',24),text(400,410,'Original schematic; not a specimen image',22)]
+p += [text(400,305,'Epithelium + connective tissue + muscle + nerves',24),text(400,355,'Functions depend on their arrangement and interaction.',24)]
 write('levels.svg','Cells, tissues and organs','A cell joins a sheet of epithelium. The sheet is one layer in an intestinal wall, part of an organism.',p)
 
 # Internal compartments and a continuous gut lumen.
@@ -46,15 +46,15 @@ write('geometry.svg','Surface area and volume scale differently','Two cubes have
 p=[text(400,38,'Same diffusion coefficient: time scale ∝ distance²')]
 p += [rect(60,95,95,95),circle(105,140,14,BLUE),arrow(165,142,225,142),circle(250,142,17,'#f5dadd',RED),text(160,225,'Distance L',24),rect(60,260,6,35,BLUE),text(60,335,'Time scale 1',24,anchor='start')]
 p += [rect(420,95,95,95),circle(465,140,14,BLUE),arrow(525,142,735,142),circle(760,142,17,'#f5dadd',RED),text(600,225,'Distance 10L',24),rect(180,260,600,35,BLUE),text(480,335,'Time scale 100',24)]
-p += [text(400,395,'Bulk flow bridges long distances; diffusion handles short final steps.',23),text(400,430,'Distance arrows are schematic; time bars show the 1:100 ratio.',22)]
-write('diffusion.svg','Long diffusion distances are slow','For unchanged diffusion properties, a tenfold distance has an approximately hundredfold characteristic time. The time bars represent that ratio.',p)
+p += [text(400,395,'Bulk flow bridges long distances; diffusion handles short final steps.',23),text(400,430,'Time bars are drawn to scale: 1 : 100.',22)]
+write('diffusion.svg','Long diffusion distances are slow','For unchanged diffusion properties, a tenfold distance has an approximately hundredfold characteristic time.',p)
 
 # Polarity and epithelial layer number.
 p=[text(210,40,'Thin exchange lining'),text(600,40,'Layered protective lining'),text(400,90,'Lumen / exposed surface',24)]
 for x in range(60,355,60):p += [rect(x,160,58,35,'#d8eaf0'),circle(x+29,177,7,BLUE)]
 for row in range(3):
     for x in range(450,745,60):p += [rect(x,115+row*42,58,40,'#f3dfe3',RED),circle(x+29,135+row*42,7,RED)]
-p += [line(60,205,355,205,INK),line(450,250,745,250,INK),arrow(200,120,200,245),text(210,300,'One short diffusion path',23),text(600,300,'Multiple cell layers',23),text(400,355,'Apical side faces the lumen; basal side faces support tissue.',23),text(400,412,'Original tissue schematic — not a micrograph',22)]
+p += [line(60,205,355,205,INK),line(450,250,745,250,INK),arrow(200,120,200,245),text(210,300,'One short diffusion path',23),text(600,300,'Multiple cell layers',23),text(400,355,'Apical side faces the lumen; basal side faces support tissue.',23)]
 write('epithelium.svg','Epithelial polarity and layers','A one-cell-thick flattened lining presents a short exchange barrier. A stratified lining has several layers. Apical and basal sides are labelled.',p)
 
 # Muscle fibre and a neuron: shapes carry the mechanism.
@@ -65,7 +65,7 @@ for y in [100,155,210]:
 p += [arrow(160,280,70,280,RED),arrow(245,280,335,280,RED),text(200,330,'Contractile elements\narranged within fibres',24)]
 p += [circle(570,170,43,'#e1ebdc',GREEN),circle(570,170,14,GREEN)]
 for endpoint in [(460,90),(455,150),(470,250),(550,70)]:p += [path(f'M550 160 L{endpoint[0]} {endpoint[1]}',GREEN)]
-p += [path('M610 170 L730 170 L775 125 M730 170 L775 210',GREEN),arrow(635,200,720,200,GREEN),text(600,330,'Processes link cells;\nsignals change targets.',24),text(400,420,'Conceptual tissue sketches; not diagnostic histology images',22)]
+p += [path('M610 170 L730 170 L775 125 M730 170 L775 210',GREEN),arrow(635,200,720,200,GREEN),text(600,330,'Processes link cells;\nsignals change targets.',24)]
 write('muscle-neuron.svg','Structure supports force or signalling','Parallel striated muscle fibres indicate organised contractile machinery. A branched neuron has processes carrying signals toward connected targets.',p)
 
 # Section angle: single tube, two section planes.

@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bf56578b9c06c165c166475cd19dbcd1.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-07645afa0a6c315d6eef0efcfd2eeacf.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -137,9 +137,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -184,12 +181,18 @@ Animal and Plant Physiology
 </section>
 <section id="the-problem-water-in-water-out" class="slide level2">
 <h2>The problem: water in, water out</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>A plant loses <strong>~500 water molecules for every CO₂ molecule it fixes</strong>. Of the water a plant takes up, <strong>~97 %</strong> evaporates from its leaves.</li>
+<li>A plant loses <strong>~500 water molecules for every CO₂ molecule it fixes</strong>. Of the water taken up, <strong>~97 %</strong> evaporates from the leaves.</li>
 <li>A maize plant transpires ~200 L over a growing season.</li>
-<li>The water has to travel from soil to leaf: up to <strong>100 m</strong> in a tall tree, far beyond the reach of diffusion (A1: ~7 h for 1 cm).</li>
+<li>Water travels up to <strong>100 m</strong> from soil to leaf, far beyond the reach of diffusion (A1: ~7 h for 1 cm).</li>
 <li>So, as in an animal, long distances need <strong>bulk flow</strong>. But the plant has no pump.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/redwood.jpg" style="width:100.0%" alt="Coast redwood trunks rising out of view in a forest." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Sequoia_sempervirens_kz05.jpg" class="credit">Photo: Krzysztof Ziarnek, Kenraiz, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>Before asking how water moves, we need a rule for which way it moves.</strong></p>
 <aside class="notes">
 <p>Start with the numbers so students see that water transport in a plant is a huge flux, not a trickle. The water loss is the price of opening stomata to let CO₂ in (P1, leaf slide). Link back to the A1 diffusion table: bulk flow is required. The puzzle is the energy source. The next slides give the rule for direction: water potential.</p>
@@ -263,50 +266,20 @@ Animal and Plant Physiology
 <section id="the-components-of-ψ" class="slide level2">
 <h2>The components of Ψ</h2>
 <p><span class="math display">\Psi = \Psi_s + \Psi_p \quad (+\,\Psi_g)</span></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Component</th>
-<th>Name</th>
-<th>Sign</th>
-<th>Cause</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\Psi_s</span></td>
-<td><strong>solute (osmotic) potential</strong></td>
-<td>always ≤ 0</td>
-<td>dissolved solutes lower the free energy of water</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\Psi_p</span></td>
-<td><strong>pressure potential</strong></td>
-<td>+ in turgid cells; − in transpiring xylem</td>
-<td>hydrostatic pressure: turgor (P1), or tension</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\Psi_g</span></td>
-<td>gravitational potential</td>
-<td>+ with height</td>
-<td>+0.01 MPa per metre</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>For a single cell, gravity is negligible: use <span class="math inline">\Psi = \Psi_s + \Psi_p</span>.</li>
-<li>Gravity matters in a tree: lifting water 100 m costs 1 MPa.</li>
-<li>In dry soil, binding of water to surfaces (matric potential) also lowers Ψ.</li>
+<li><span class="math inline">\Psi_s</span>, <strong>solute (osmotic) potential</strong>: always ≤ 0; solutes lower the free energy of water.</li>
+<li><span class="math inline">\Psi_p</span>, <strong>pressure potential</strong>: <strong>+</strong> in turgid cells (turgor, P1), <strong>−</strong> in transpiring xylem (tension).</li>
+<li><span class="math inline">\Psi_g</span>, <strong>gravitational</strong>: +0.01 MPa per metre. Negligible in a cell; lifting water 100 m costs 1 MPa.</li>
+<li>In dry soil, binding to surfaces (matric potential) also lowers Ψ.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/psi-components.svg" style="width:100.0%" alt="Bar chart: a turgid cell has Ψs −0.8 and Ψp +0.5 MPa, so Ψ −0.3; a flaccid cell has Ψp 0 and Ψ −0.8; transpiring xylem sap has Ψs near 0 and Ψp −0.8, so Ψ −0.85 MPa." height="360"></p>
+</div></div>
 <p><strong>How negative is Ψs for a real solution?</strong></p>
 <aside class="notes">
-<p>Two components do almost all the work in cells: solutes pull Ψ down, pressure pushes it up. Turgor from P1 is now a number: Ψp. Point out that Ψp can be negative too, in the xylem of a transpiring plant, which is the key to cohesion–tension later. Gravity is introduced so students know when it can be dropped. Matric potential is mentioned only so students recognise the term.</p>
+<p>Two components do almost all the work in cells: solutes pull Ψ down, pressure pushes it up. Read the bars group by group: in a turgid cell a positive Ψp cancels part of Ψs; in a flaccid cell Ψp is zero and Ψ = Ψs; in the xylem of a transpiring plant the sap is almost pure water (Ψs near zero) but under tension, so Ψp itself is strongly negative. Turgor from P1 is now a number: Ψp. Point out that Ψp can be negative too, in the xylem of a transpiring plant, which is the key to cohesion–tension later. Gravity is introduced so students know when it can be dropped. Matric potential is mentioned only so students recognise the term.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -468,9 +441,56 @@ Animal and Plant Physiology
 <li>Turgor (P1) is the pressure that builds up until the cell’s Ψ matches its surroundings.</li>
 <li>Ψp cannot fall far below zero in a living cell: the wall cannot pull, so the protoplast pulls away instead.</li>
 </ul>
+<p><strong>What does this look like if Ψs is allowed to change as the cell swells or shrinks?</strong></p>
+<aside class="notes">
+<p>Exercise 1.5. In pure water the cell takes up water until turgor exactly cancels the solute potential. In a more concentrated solution the cell loses water, turgor falls to zero and the membrane separates from the wall: plasmolysis, visible in onion epidermis in the practical. Transition: the table assumed Ψs is fixed; the next slide drops that simplification.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="turgor-and-volume-the-höfler-diagram" class="slide level2">
+<h2>Turgor and volume: the Höfler diagram</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>The same cell (Ψs = −0.6 MPa when flaccid), plotted against its protoplast volume:</p>
+<ul>
+<li>Below the flaccid volume, Ψp = 0 and <strong>Ψ = Ψs</strong>: the protoplast shrinks away from the wall.</li>
+<li>Above it, the stretched wall pushes back: Ψp rises steeply, and Ψs rises a little as the sap is diluted.</li>
+<li>In pure water the cell stops at <strong>Ψ = 0</strong>, only a few % larger than when flaccid.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/hofler.svg" style="width:100.0%" alt="Höfler diagram: Ψs, Ψp and Ψ against relative protoplast volume, with points for a plasmolysed cell in −0.8 MPa, a flaccid cell in −0.6 MPa and a fully turgid cell in pure water." height="360"></p>
+</div></div>
 <p><strong>A root cell is exactly such a cell, sitting in the soil solution.</strong></p>
 <aside class="notes">
-<p>Exercise 1.5. In pure water the cell takes up water until turgor exactly cancels the solute potential. In a more concentrated solution the cell loses water, turgor falls to zero and the membrane separates from the wall: plasmolysis, visible in onion epidermis in the practical. Transition: apply the same reasoning to the opening question about salty soil.</p>
+<p>The Höfler diagram is the standard way to show how the components change together. The x-axis is protoplast volume relative to the volume at incipient plasmolysis. To the left, the protoplast has pulled away from the wall, Ψp is zero and Ψ equals Ψs, which becomes more negative as the cell loses water (Ψs = −0.6 / V). To the right, the wall is stretched elastically (here with a modulus of 6 MPa), so Ψp rises quickly. Full turgor in pure water is reached at Ψ = 0, where Ψp ≈ +0.55 MPa rather than the +0.6 of the previous slide: the cell swelled by about 9 % and diluted its sap a little. With a stiffer wall the difference shrinks, which is why the fixed-Ψs approximation works well. The three dots are the three rows of the previous table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="try-it-a-cell-in-a-solution" class="slide level2">
+<h2>Try it: a cell in a solution</h2>
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p2-waterpotential"></div>
+<script src="../../demos/dist/p2-waterpotential.js"></script>
+<aside class="notes">
+<p>The cell from the last two slides, placed in a beaker. The cell always starts flaccid (Ψp = 0); its sap Ψs is set at that volume. The bars show the cell’s Ψs, Ψp and Ψ, and the red dashed line the solution’s Ψ; the arrows show the direction of water flow. Click “Pure water”: arrows point inwards, the cell swells, Ψp rises until the blue Ψ bar reaches the dashed line at zero, and the state reads turgid. Ask the room to predict before each click. “−0.6 MPa”: no flow, the cell stays flaccid. “−0.8 MPa”: water leaves, the protoplast shrinks away from the wall and Ψs falls to −0.8 (plasmolysis). “Saline soil” is the next slide: a root cell with Ψs −0.4 in a −0.6 MPa soil solution loses water. Then drag the wall-stiffness slider: a stiff wall (40 MPa) reaches full turgor with almost no swelling and Ψp ≈ +0.6 (the fixed-Ψs table), a soft wall (2 MPa) swells more and dilutes its sap. Finally drag the solution slider slowly and ask when plasmolysis starts: exactly when the solution Ψ drops below the cell sap Ψs. “Place a flaccid cell in the solution” replays the current case from the start.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -485,35 +505,41 @@ Animal and Plant Physiology
 </section>
 <section id="wet-but-salty-soil-the-opening-problem" class="slide level2">
 <h2>Wet but salty soil: the opening problem</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <p>A root cell has <strong>Ψ = −0.4 MPa</strong>.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>Soil solution</th>
-<th style="text-align: right;">Ψ (MPa)</th>
-<th>Initial net water movement</th>
+<th style="text-align: right;">Ψ</th>
+<th>Water moves</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Moist, non-saline</td>
+<td>Moist</td>
 <td style="text-align: right;">−0.1</td>
-<td>soil → <strong>root</strong> (−0.1 &gt; −0.4)</td>
+<td>soil → <strong>root</strong></td>
 </tr>
 <tr class="even">
 <td>Moist, saline</td>
 <td style="text-align: right;">−0.6</td>
-<td>root → <strong>soil</strong> (−0.4 &gt; −0.6)</td>
+<td>root → <strong>soil</strong></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Salt lowers the <strong>solute potential</strong> of the soil water. The soil is wet but its Ψ is below that of the root.</li>
-<li>To take up water again, the plant must lower its own Ψ by <strong>accumulating solutes</strong> (osmotic adjustment). This costs energy, and Na⁺ and Cl⁻ become toxic inside cells.</li>
+<li>Salt lowers the <strong>Ψs</strong> of soil water: the soil is wet, but its Ψ is below the root’s.</li>
+<li>To take up water again the plant must <strong>accumulate solutes</strong> (osmotic adjustment). This costs energy, and Na⁺ and Cl⁻ are toxic inside cells.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/plasmolysis.jpg" style="width:100.0%" alt="Rhoeo epidermal cells in a concentrated solution: in each cell the pink vacuole and protoplast have shrunk into a rounded mass, pulled away from the angular cell wall." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Rhoeo_Discolor_-_Plasmolysis.jpg" class="credit">Photo: Mnolf, CC BY-SA 3.0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>Water is available in the soil. How does it cross the root to reach the xylem?</strong></p>
 <aside class="notes">
-<p>Exercise 1.6, and the answer to the second question in the introduction: wet soil can behave like dry soil for the plant. About 20 % of irrigated land is affected by salinity, so this is a major crop problem; P5 returns to salt stress. Transition: follow water inward across the root tissues we met in P1.</p>
+<p>Exercise 1.6, and the answer to the second question in the introduction: wet soil can behave like dry soil for the plant. Work the comparisons: −0.1 &gt; −0.4, so water enters; −0.4 &gt; −0.6, so water leaves. The photo shows the extreme case, the −0.8 MPa row two slides back: in a strong solution the coloured protoplasts have shrunk away from the walls. You will see the same in onion epidermis in the practical. About 20 % of irrigated land is affected by salinity, so this is a major crop problem; P5 returns to salt stress. Transition: follow water inward across the root tissues we met in P1.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -529,30 +555,15 @@ Animal and Plant Physiology
 <section id="into-the-root-three-routes-and-one-barrier" class="slide level2">
 <h2>Into the root: three routes and one barrier</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <ul>
 <li><strong>Apoplastic:</strong> through cell walls and spaces; crosses <strong>no membrane</strong>.</li>
 <li><strong>Symplastic:</strong> cytoplasm to cytoplasm through <strong>plasmodesmata</strong>.</li>
 <li><strong>Transmembrane:</strong> across the plasma membrane (and tonoplast) of each successive cell.</li>
 </ul>
 <p>At the <strong>endodermis</strong>, the <strong>Casparian strip</strong> (suberin, with lignin) in the radial and transverse walls <strong>blocks the apoplast</strong>.</p>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-reveal="true" data-fig-width="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  S["Soil water"] --&gt; E["Epidermis and root hairs"]
-  E --&gt; C["Cortex: all three routes"]
-  C --&gt; N["Endodermis:&lt;br/&gt;membrane crossing"]
-  N --&gt; X["Stele: xylem"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/root-routes.svg" style="width:100.0%" alt="A row of root cells from soil to xylem. The apoplastic route runs in the walls until the Casparian strip of the endodermis forces it into the cell; the symplastic route runs through plasmodesmata; the transmembrane route crosses every membrane." height="360"></p>
 </div></div>
 <p><strong>Every water molecule and ion entering the xylem has passed a membrane at least once. That membrane decides what gets in.</strong></p>
 <aside class="notes">
@@ -611,28 +622,17 @@ Animal and Plant Physiology
 </section>
 <section id="soil-to-air-a-gradient-of-ψ" class="slide level2">
 <h2>Soil to air: a gradient of Ψ</h2>
-<div class="cell" data-reveal="true" data-fig-width="12" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  S["Soil&lt;br/&gt;−0.1 MPa"] --&gt; R["Across cortex&lt;br/&gt;and endodermis"]
-  R --&gt; X["Root xylem&lt;br/&gt;−0.4 MPa"]
-  X --&gt; L["Leaf cells&lt;br/&gt;−0.8 MPa"]
-  L --&gt; V["Evaporation from&lt;br/&gt;mesophyll walls"]
-  V --&gt; A["Air via stomata&lt;br/&gt;−95 MPa (50 % RH)"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
+<li>Soil → root → xylem → leaf cells → evaporation from mesophyll walls → air through the stomata.</li>
 <li>Each step is <strong>downhill in Ψ</strong>: water moves passively the whole way.</li>
 <li>The biggest drop is from leaf to air: air at 50 % relative humidity has Ψ ≈ −95 MPa.</li>
 <li>The energy comes from <strong>evaporation at the leaf</strong>, ultimately from the sun. The plant spends no ATP moving water.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/soil-air-gradient.svg" style="width:100.0%" alt="Water potential falls from −0.1 MPa in the soil to −0.4 in the root xylem and −0.8 in leaf cells; air at 50 % humidity, on its own scale, is −95 MPa." height="360"></p>
+</div></div>
 <p><strong>How does evaporation in a leaf pull on water in the roots?</strong></p>
 <aside class="notes">
 <p>Exercises 3.1 (order of steps) and 3.3 (order of Ψ values). This is the running example of the lecture in one picture. The air value comes from Ψ = (RT/V̄w) ln(RH): at 50 % humidity it is about −95 MPa, a hundred times more negative than the leaf, which is why evaporation is so powerful. The plant’s job is to control the last step (stomata), not to drive the flow.</p>
@@ -651,7 +651,35 @@ Animal and Plant Physiology
 <section id="cohesiontension" class="slide level2">
 <h2>Cohesion–tension</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
+<ol type="1">
+<li>Water evaporates from mesophyll walls; the curved water surfaces in the wall pores pull on the water behind them.</li>
+<li>This <strong>tension</strong> (−1 to −2 MPa in a tall tree) is transmitted down the continuous water column by <strong>cohesion</strong> (hydrogen bonds between water molecules) and <strong>adhesion</strong> to the conduit walls.</li>
+<li><strong>Lignified wall thickenings</strong> stop the conduits collapsing under tension (P1).</li>
+</ol>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/xylem-vessels.jpg" style="width:100.0%" alt="Longitudinal section of a pumpkin stem showing xylem vessels with ring and spiral wall thickenings." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Herbaceous_Dicot_Stem_Xylem_Vessels_Cucurbita_%2835463815631%29.jpg" class="credit">Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons</a></p>
+</div></div>
+<p><strong>The leaf pulls, cohesion transmits the pull, rigid walls resist it.</strong></p>
+<aside class="notes">
+<p>The mechanism needs no pump at any height: the leaf pulls, cohesion transmits, the rigid walls resist. The section shows the xylem vessels as P1 described them: dead, empty tubes whose walls are reinforced by rings and spirals of lignified secondary wall. These thickenings work like the wire in a vacuum-cleaner hose: they stop the tube collapsing when the water inside is under tension. Recall that a tension of −1 MPa is a negative pressure ten times larger in magnitude than atmospheric pressure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-the-column-breaks-when-the-root-pushes" class="slide level2">
+<h2>When the column breaks; when the root pushes</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -662,11 +690,11 @@ Animal and Plant Physiology
 <tbody>
 <tr class="odd">
 <td><strong>Cohesion</strong></td>
-<td>water molecules attract each other (hydrogen bonds)</td>
+<td>water molecules attract each other</td>
 </tr>
 <tr class="even">
 <td><strong>Adhesion</strong></td>
-<td>water molecules attract the conduit walls</td>
+<td>water attracts the conduit walls</td>
 </tr>
 <tr class="odd">
 <td><strong>Tension</strong></td>
@@ -674,27 +702,25 @@ Animal and Plant Physiology
 </tr>
 <tr class="even">
 <td><strong>Cavitation</strong></td>
-<td>the column breaks, a gas bubble forms</td>
+<td>the column breaks; a gas bubble forms</td>
 </tr>
 <tr class="odd">
 <td><strong>Embolism</strong></td>
-<td>the conduit is then gas-filled and blocked</td>
+<td>the conduit is gas-filled and blocked</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
-<ol type="1">
-<li>Water evaporates from mesophyll walls; the curved water surfaces in the wall pores pull on the water behind them.</li>
-<li>This <strong>tension</strong> (−1 to −2 MPa in a tall tree) is transmitted down the continuous water column by <strong>cohesion</strong>.</li>
-<li><strong>Lignified walls</strong> stop the conduits collapsing (P1); pits between conduits limit the spread of embolism.</li>
-</ol>
-</div></div>
 <ul>
-<li><strong>Root pressure</strong> (≤ ~0.2 MPa, causes guttation at night) is far too small to lift water to the top of a tree.</li>
+<li>Pits between conduits limit the spread of embolism.</li>
+<li><strong>Root pressure</strong> (≤ ~0.2 MPa) pushes sap up at night and causes <strong>guttation</strong>, but cannot lift water to the top of a tree.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/guttation.jpg" style="width:100.0%" alt="Drops of water at the tips of the marginal teeth of a strawberry leaf, pushed out by root pressure." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Guttation_on_a_strawberry_leaf.jpg" class="credit">Photo: Schnobby, CC BY-SA 3.0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>If evaporation drives the flow, what sets how fast a plant loses water?</strong></p>
 <aside class="notes">
-<p>Exercise 3.2 matches these terms. The mechanism needs no pump at any height: the leaf pulls, cohesion transmits, the rigid walls resist. Recall from P1 why xylem conduits are dead, empty and lignified: they are pipes under tension. Cavitation is the cost: drought increases tension and risks embolism. Root pressure exists but cannot explain transport in tall trees.</p>
+<p>Exercise 3.2 matches these terms. Cavitation is the cost of working under tension: drought increases tension and risks embolism, and an embolised vessel no longer conducts. The photo shows the other force: on humid nights, when transpiration stops, roots keep loading ions into the xylem, water follows osmotically and the positive pressure pushes drops out of hydathodes at the leaf margin. The drops are xylem sap, not dew. Root pressure is real but at most about 0.2 MPa, enough for about 20 m in theory and far less in practice, and it is absent in many trees, so it cannot explain transport in tall trees.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -776,46 +802,20 @@ Animal and Plant Physiology
 <section id="what-sets-the-transpiration-rate" class="slide level2">
 <h2>What sets the transpiration rate</h2>
 <p>Transpiration ≈ conductance × (vapour pressure in leaf − vapour pressure in air)</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Change (stomatal conductance unchanged)</th>
-<th>Effect on transpiration</th>
-<th>Why</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Lower air humidity</td>
-<td><strong>increases</strong></td>
-<td>larger vapour pressure difference</td>
-</tr>
-<tr class="even">
-<td>Higher leaf temperature</td>
-<td><strong>increases</strong></td>
-<td>higher vapour pressure inside the leaf</td>
-</tr>
-<tr class="odd">
-<td>Stronger wind</td>
-<td><strong>increases</strong></td>
-<td>thinner boundary layer, lower resistance</td>
-</tr>
-<tr class="even">
-<td>Smaller leaf area</td>
-<td><strong>decreases</strong></td>
-<td>less evaporating surface</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>With stomatal conductance unchanged:</p>
 <ul>
-<li>Inside the leaf the air is saturated with water vapour (~100 % humidity).</li>
-<li>The plant cannot control the weather. It controls the <strong>stomatal conductance</strong>.</li>
+<li><strong>Lower air humidity → more</strong>: larger vapour pressure difference.</li>
+<li><strong>Warmer leaf → more</strong>: higher vapour pressure inside the leaf.</li>
+<li><strong>Stronger wind → more</strong>: thinner boundary layer.</li>
+<li><strong>Smaller leaf area → less</strong>: less evaporating surface.</li>
 </ul>
+<p>Inside the leaf the air is saturated (~100 % humidity). The plant cannot control the weather; it controls the <strong>stomata</strong>.</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/stomata-sem.jpg" style="width:100.0%" alt="Scanning electron micrograph of a leaf surface: a stoma, a slit-shaped pore between two guard cells, with part of a second stoma at the edge; scale bar 50 µm." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Stoma.tif" class="credit">Photo: Arlo James Barnes, CC0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>So how do guard cells open and close the pore?</strong></p>
 <aside class="notes">
 <p>Exercise 3.5. The formula is Fick’s law from A1 in another form: flux = conductance × concentration difference. Humidity and temperature change the driving difference, wind and stomata change the conductance. The plant’s one fast control is the stomatal pore, which leads into the next slide.</p>
@@ -833,15 +833,20 @@ Animal and Plant Physiology
 </section>
 <section id="stomatal-opening-ion-transport-makes-turgor" class="slide level2">
 <h2>Stomatal opening: ion transport makes turgor</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ol type="1">
-<li><strong>Blue light</strong> activates the guard-cell plasma-membrane <strong>H⁺-ATPase</strong>.</li>
-<li>H⁺ is pumped out and the membrane <strong>hyperpolarises</strong>.</li>
-<li><strong>K⁺</strong> enters through inward-rectifying channels; <strong>Cl⁻</strong> is taken up and <strong>malate</strong> is made, balancing the charge.</li>
-<li>Solutes accumulate: guard-cell <strong>Ψs and Ψ fall</strong>.</li>
-<li><strong>Water enters</strong> the guard cells by osmosis.</li>
-<li><strong>Turgor rises</strong>; radially arranged microfibrils make the guard cells bow apart and the <strong>pore opens</strong>.</li>
+<li><strong>Blue light</strong> activates the guard-cell <strong>H⁺-ATPase</strong>.</li>
+<li>H⁺ is pumped out; the membrane <strong>hyperpolarises</strong>.</li>
+<li><strong>K⁺</strong> enters through inward-rectifying channels; <strong>Cl⁻</strong> is taken up and <strong>malate</strong> made, balancing the charge.</li>
+<li>Guard-cell <strong>Ψs and Ψ fall</strong>.</li>
+<li><strong>Water enters</strong> by osmosis.</li>
+<li><strong>Turgor rises</strong>; radial microfibrils make the guard cells bow apart and the <strong>pore opens</strong>.</li>
 </ol>
-<p>The guard cell K⁺ concentration can rise from ~100 to ~400–800 mM during opening.</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/stomata-opening.svg" style="width:100.0%" alt="Two guard cells: slack and pressed together when closed; after H+ is pumped out and K+ and Cl− and water enter, they swell and bow apart, opening the pore." height="360"></p>
+</div></div>
+<p>Guard-cell K⁺ can rise from ~100 to ~400–800 mM during opening.</p>
 <p><strong>Opening is the default in light. What makes stomata close?</strong></p>
 <aside class="notes">
 <p>Exercise 4.1 asks for this order. Each step uses an earlier idea: the H⁺-ATPase from the root slide, Ψs = −cRT (a few hundred millimolar of KCl lowers Ψs by about 1–2 MPa), turgor from P1, and microfibril orientation from the P1 wall slide controlling the direction of swelling. Stomata are hydraulic valves run by ion transport.</p>
@@ -904,7 +909,26 @@ Animal and Plant Physiology
 </div></div>
 <p><strong>ABA is a signal: it changes ion channels, it does not plug the pore.</strong> Closing saves water but stops CO₂ uptake.</p>
 <aside class="notes">
-<p>Exercises 4.2 and 4.3. The closing sequence is the opening sequence run in reverse, triggered by a hormone instead of light. The CO₂ responses make sense: if CO₂ inside the leaf is high, the pore need not be open. The last line is the trade-off of the whole plant: closing protects water status but halts photosynthesis, which P3 picks up (photorespiration and CAM). Transition: water carries minerals with it.</p>
+<p>Exercises 4.2 and 4.3. The closing sequence is the opening sequence run in reverse, triggered by a hormone instead of light. The CO₂ responses make sense: if CO₂ inside the leaf is high, the pore need not be open. The last line is the trade-off of the whole plant: closing protects water status but halts photosynthesis, which P3 picks up (photorespiration and CAM). Before minerals, the next slide puts the whole water path together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="try-it-soil-to-air" class="slide level2">
+<h2>Try it: soil to air</h2>
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p2-soilplantair"></div>
+<script src="../../demos/dist/p2-soilplantair.js"></script>
+<aside class="notes">
+<p>The whole water path in one steady-state model. Transpiration is set in the vapour phase, conductance × vapour pressure deficit (leaf and air at 25 °C), and the same flux has to flow through soil, root, stem and leaf, losing Ψ in each in proportion to its resistance. The curve on the right is the soil-to-air gradient slide, now live; the blue dashes in the stem move at a speed proportional to the flux. Start with “Lecture” (50 % humidity, wet soil): about 6 mmol m⁻² s⁻¹, root xylem −0.4 and leaf −0.8 MPa as on that slide. “Humid”: the flux falls and the profile flattens towards the soil value; at 100 % nothing moves. Drag humidity down: the flux rises and the leaf Ψ falls, but the air (top right) is always tens of MPa below the leaf. “Dry soil” (−0.8 MPa) with stomata that do not respond: drying soil conducts poorly, so the leaf is dragged below −4 MPa and the xylem would cavitate. “Dry soil + ABA”: stomata partly close, transpiration drops to about a fifth and the leaf stays near −1.8 MPa; the plant trades CO₂ uptake for water. “Redwood”: 100 m of height costs about 1 MPa by gravity alone, before any flow. Ask which slider the plant itself controls: only stomatal opening. The resistances are illustrative, chosen to reproduce the lecture values.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1049,13 +1073,9 @@ Animal and Plant Physiology
 </tr>
 </tbody>
 </table>
-<ul>
-<li>A <strong>mobile</strong> element is withdrawn from old leaves to supply new growth, so <strong>old</strong> leaves show symptoms first.</li>
-<li>An <strong>immobile</strong> element stays where it was deposited, so <strong>young</strong> leaves, which depend on current uptake, show symptoms first.</li>
-</ul>
-<p><strong>Roots do not take up all of this alone.</strong></p>
+<p><strong>Where the symptoms appear tells you which group the missing element is in.</strong></p>
 <aside class="notes">
-<p>Exercises 5.3 (roles) and 5.4 (old versus young leaves). The mobility rule turns a symptom pattern into a diagnosis: where the yellowing appears tells you which group the missing element belongs to. Mobility is phloem mobility, so this links forward to P3, where the phloem moves sugar from sources to sinks.</p>
+<p>Exercises 5.3 (roles) and 5.4 (old versus young leaves). Read the table by columns: the role explains the symptom (N and Mg are in chlorophyll, so their lack yellows leaves), and the mobility column explains where it shows first, which is the next slide. Mobility is phloem mobility, so this links forward to P3, where the phloem moves sugar from sources to sinks.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1068,30 +1088,80 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
-<section id="partners-in-the-soil" class="slide level2">
-<h2>Partners in the soil</h2>
+<section id="reading-a-deficiency-old-or-young-leaves" class="slide level2">
+<h2>Reading a deficiency: old or young leaves?</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Arbuscular mycorrhizas</strong></p>
+<div class="column" style="width:40%;">
 <ul>
-<li>Fungal hyphae enter the root cortex and form <strong>arbuscules</strong> inside cells.</li>
+<li>A <strong>mobile</strong> element (N, P, K, Mg) is withdrawn from old leaves to supply new growth, so <strong>old</strong> leaves show symptoms first.</li>
+<li>An <strong>immobile</strong> element (Fe, Ca) stays where it was deposited, so <strong>young</strong> leaves, which depend on current uptake, show symptoms first.</li>
+<li>The photo: <strong>Mg</strong> deficiency in maize. Yellow stripes <strong>between the veins</strong> of older leaves; the veins stay green longest.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/mg-deficiency-maize.jpg" style="width:100.0%" alt="Maize leaves with pale yellow stripes between green veins, a symptom of magnesium deficiency." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Mg_deficiency_Vulindlela_1995-3-30_2018_01_23_2235.jpg" class="credit">Photo: Alandmanson, CC BY 4.0, Wikimedia Commons</a></p>
+</div></div>
+<p><strong>Roots do not take up all of this alone.</strong></p>
+<aside class="notes">
+<p>The mobility rule turns a symptom pattern into a diagnosis: where the yellowing appears tells you which group the missing element belongs to. Magnesium is the central atom of chlorophyll, so its lack shows as chlorosis; it is phloem-mobile, so the plant strips it from old leaves to supply young ones, and the old leaves go yellow first, between the veins. Iron deficiency also gives interveinal yellowing, but on the youngest leaves, because Fe is not remobilised. Ask: a tomato plant has yellowing confined to its top leaves; which group of elements do you suspect?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mycorrhizas-fungi-extend-the-root" class="slide level2">
+<h2>Mycorrhizas: fungi extend the root</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Fungal hyphae enter the root cortex and form <strong>arbuscules</strong> inside cells: tree-like branches that give a huge exchange surface.</li>
 <li>Formed by <strong>~70–80 %</strong> of land plant species.</li>
 <li>Hyphae (~2–10 µm) reach far beyond the depletion zone around a root.</li>
 <li><strong>Plant gains:</strong> mineral nutrients, especially <strong>phosphate</strong>, and water.</li>
 <li><strong>Fungus gains:</strong> <strong>carbon</strong> (sugars and lipids), up to ~20 % of the plant’s photosynthate.</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Nitrogen-fixing bacteria</strong></p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/mycorrhiza-arbuscules.jpg" style="width:100.0%" alt="Stained flax root cortex under the microscope: dark, finely branched fungal arbuscules fill several cortical cells." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Arbuscular_mycorrhiza_microscope.jpg" class="credit">Photo: Msturmel, public domain, Wikimedia Commons</a></p>
+</div></div>
+<aside class="notes">
+<p>Exercise 5.5. Phosphate diffuses very slowly in soil, so a zone around each root is quickly depleted; fine hyphae extend the absorbing surface far beyond it, the A1 surface-area solution again. In the photo the fungus is stained; each dark tuft is an arbuscule inside a living cortical cell, where the plant and fungus exchange phosphate for carbon across the plant plasma membrane, which folds around the arbuscule. The fungus never crosses that membrane.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="root-nodules-bacteria-fix-nitrogen" class="slide level2">
+<h2>Root nodules: bacteria fix nitrogen</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li><strong>Rhizobia</strong> in root nodules of legumes (pea, bean, clover).</li>
-<li>Convert N₂ to NH₃ with nitrogenase, at a cost of ~16 ATP per N₂.</li>
+<li><strong>Rhizobia</strong> live in root nodules of legumes (pea, bean, clover).</li>
+<li>They convert N₂ to NH₃ with nitrogenase, at a cost of ~16 ATP per N₂.</li>
 <li>The plant supplies sugars; the bacteria supply ammonium.</li>
 </ul>
 <p>Both symbioses trade <strong>carbon</strong> from the leaves for <strong>nutrients</strong> from the soil.</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/clover-root-nodules.jpg" style="width:100.0%" alt="Clover roots with many small round nodules containing nitrogen-fixing bacteria." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Clover_root_nodules.jpg" class="credit">Photo: Bwiltz, CC BY-SA 4.0, Wikimedia Commons</a></p>
 </div></div>
 <p><strong>Carbon pays for water and mineral uptake. Where does that carbon come from?</strong></p>
 <aside class="notes">
-<p>Exercise 5.5. Phosphate diffuses very slowly in soil, so a zone around each root is quickly depleted; fine hyphae extend the absorbing surface far beyond it, the A1 surface-area solution again. Both partnerships cost the plant carbon, as does all active ion uptake (respiration in roots). This sets up P3: how light becomes the carbon that pays for everything.</p>
+<p>Exercise 5.5. Nodules that are actively fixing are pink inside, from leghaemoglobin, which keeps O₂ low around the oxygen-sensitive nitrogenase while still supplying respiration. Both partnerships cost the plant carbon, as does all active ion uptake (respiration in roots). This sets up P3: how light becomes the carbon that pays for everything.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

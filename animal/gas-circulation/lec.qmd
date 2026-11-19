@@ -45,20 +45,21 @@ The running example is a person starting to run; we return to them on the last c
 
 ## The path of oxygen: bulk flow and diffusion alternate
 
-```{mermaid}
-flowchart LR
-  A[Air] -->|bulk flow:<br/>ventilation| B[Alveoli]
-  B -->|diffusion| C[Lung<br/>capillary]
-  C -->|bulk flow:<br/>circulation| D[Muscle<br/>capillary]
-  D -->|diffusion| E[Mitochondrion]
-```
-
+:::: {.columns}
+::: {.column width="40%"}
 - **Bulk flow** moves the whole fluid, driven by a **pressure** difference.
   Fast over any distance, but needs a pump.
 - **Diffusion** moves molecules down a **partial-pressure** difference.
-  Fast only over micrometres (A1: $t \approx x^2/2D$).
-- So every animal places its diffusion steps across **thin** barriers and uses
-  bulk flow for the long distances.
+  Fast only over µm (A1: $t \approx x^2/2D$).
+- So diffusion steps cross **thin** barriers; bulk flow covers the long
+  distances.
+:::
+::: {.column width="60%"}
+
+![](figures/o2-route.svg){width="100%" height="360" fig-alt="Oxygen moves from air to alveolus by ventilation, diffuses into the lung capillary, is carried by the circulation to a muscle capillary and diffuses into the mitochondrion."}
+
+:::
+::::
 
 **What exactly drives the diffusion steps?**
 
@@ -71,18 +72,21 @@ Exercise 1.1 asks students to classify these four steps. This is A1's "three sol
 **Partial pressure** = the share of the total pressure due to one gas
 (Dalton's law): $P_{\rm O_2} = F_{\rm O_2} \times P_{\rm total}$
 
-Dry air at sea level: $0.209 \times 101.3\ \text{kPa} = 21.2\ \text{kPa}$ (159 mmHg).
+:::: {.columns}
+::: {.column width="40%"}
+Dry air at sea level:
+$0.209 \times 101.3 = 21.2$ kPa (159 mmHg).
 
-| Location | $P_{\rm O_2}$ (kPa) |
-| --- | ---: |
-| Dry air | 21.2 |
-| Alveolar air | 13.3 |
-| Arterial blood | ~13 |
-| Mixed venous blood | 5.3 |
-| Mitochondria | < 1 |
+- O₂ moves **down this cascade** at every diffusion step.
+- In a liquid, $P_{\rm O_2}$ refers to the **dissolved** O₂ only.
+- 1 kPa = 7.5 mmHg.
+:::
+::: {.column width="60%"}
 
-O₂ moves **down this cascade** at every diffusion step. In a liquid, $P_{\rm O_2}$
-refers to the **dissolved** O₂ only. 1 kPa = 7.5 mmHg.
+![](figures/po2-cascade.svg){width="100%" height="360" fig-alt="Bar chart of PO2: dry air 21.2 kPa, alveolar air 13.3, arterial blood 13, mixed venous blood 5.3, mitochondria below 1."}
+
+:::
+::::
 
 **How fast does it cross each barrier?**
 
@@ -151,38 +155,56 @@ Exercise 1.4. A respiratory surface has two sides and each needs renewing. Witho
 This slide explains the design differences on the next four slides from first principles. Water at the same P_O2 as air carries about thirty times less O₂ because O₂ is poorly soluble. Ventilating water costs a fish a substantial share of its resting metabolism; for a resting mammal, breathing costs only a few per cent. Unidirectional flow avoids having to stop and reverse a heavy column of water. A1's diffusion numbers also return: diffusion in water is slow, so gill lamellae are extremely thin.
 :::
 
-## Fish gills: countercurrent exchange
+## Fish gills: a one-way flow over thin lamellae
 
 :::: {.columns}
-::: {.column width="45%"}
+::: {.column width="40%"}
 - Gill arches → filaments → **secondary lamellae**, the exchange surface.
 - Water flows **one way**: mouth → gills → operculum.
 - Blood in the lamellae flows **opposite** to the water.
+- Fish extract up to **80 %** of the O₂ in the water; a mammal removes ~25 %
+  of the O₂ in each breath.
+:::
+::: {.column width="60%"}
 
+![](figures/fish-gills.jpg){width="100%" height="360" fig-alt="Two gill arches dissected from a fish, each carrying rows of dark red, comb-like gill filaments."}
+
+[Photo: Krishna satya 333, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fish_gills.jpg){.credit}
+
+:::
+::::
+
+::: notes
+Exercise 2.1a: the exchange structure is the secondary lamella. In the photo the red, feathery structures are the filaments on each gill arch; their colour comes from the blood running just below a very thin surface. Each filament carries hundreds of tiny plate-like secondary lamellae, too small to see here, and it is in those that blood flows against the water. Ask why fish gills collapse and stop working in air: without water to hold them apart the filaments stick together and the surface area is lost.
+:::
+
+## Countercurrent exchange
+
+:::: {.columns}
+::: {.column width="40%"}
 Water flows 1 → 4; blood flows 4 → 1:
 
 | Position | 1 | 2 | 3 | 4 |
 | --- | ---: | ---: | ---: | ---: |
-| Water $P_{\rm O_2}$ (kPa) | 20 | 15 | 10 | 5 |
-| Blood $P_{\rm O_2}$ (kPa) | 17 | 12 | 7 | 2 |
+| Water (kPa) | 20 | 15 | 10 | 5 |
+| Blood (kPa) | 17 | 12 | 7 | 2 |
 | Difference | 3 | 3 | 3 | 3 |
+
+- At every position O₂ diffuses **from water to blood**: nothing moves uphill.
+- The gradient lasts **along the whole lamella**, so blood leaves (17 kPa)
+  richer than the water leaving (5 kPa).
 :::
-::: {.column width="55%"}
-- Blood **enters** at 2 kPa (position 4) and **leaves** at 17 kPa (position 1).
-- Water enters at 20 kPa and leaves at 5 kPa.
-- At every position O₂ diffuses **from water to blood**, down a local
-  gradient. Nothing moves uphill.
-- A gradient exists **along the whole lamella**, so the blood leaves with a
-  higher $P_{\rm O_2}$ than the water leaving.
-- Fish extract up to **80 %** of the O₂ in the water; a mammal removes about
-  25 % of the O₂ in each breath.
+::: {.column width="60%"}
+
+![](figures/countercurrent.svg){width="100%" height="360" fig-alt="Two panels of PO2 along the lamella. Countercurrent: water falls from 20 to 5 kPa and blood, flowing the other way, rises from 2 to 17 kPa with a constant 3 kPa gap. Co-current: both approach 11 kPa and the gap vanishes."}
+
 :::
 ::::
 
 **Would flowing the same direction work as well?**
 
 ::: notes
-Exercise 2.2 has a table of this form; students must read the inlet and outlet of each stream correctly. Water enters at position 1, blood enters at position 4. The key observation is the constant local difference: wherever we look, water is slightly richer than the blood beside it. Exercise 2.1a: the exchange structure is the secondary lamella. The next slide shows the co-current alternative with the same inlets.
+Exercise 2.2 has a table of this form; students must read the inlet and outlet of each stream correctly. Water enters at position 1, blood enters at position 4. The key observation is the constant local difference: wherever we look, water is slightly richer than the blood beside it. The figure plots the same numbers as continuous profiles (left) and, for comparison, the co-current arrangement with the same exchanger (right); the next slide puts numbers on that alternative.
 :::
 
 ## Countercurrent versus co-current
@@ -209,51 +231,88 @@ concentrates urine in the kidney (A4).
 In co-current flow, the two streams approach a common P_O2 and exchange stops; the blood can at most reach the P_O2 of the water leaving (exercise 2.2d). Countercurrent flow keeps the two streams out of equilibrium along the entire length. Connect to A2's countercurrent heat exchange in limbs, and preview A4's loop of Henle, which uses a related arrangement. Transition to the lung.
 :::
 
+## Try it: countercurrent versus co-current
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a3-countercurrent"></div>
+<script src="../../demos/dist/a3-countercurrent.js"></script>
+```
+
+::: notes
+A model gill lamella. The two bands at the top are the water and blood streams coloured by PO₂ (red = rich, slate = poor); the plot shows the same along the lamella, with the other arrangement dashed. Start with countercurrent at the defaults: blood leaves at 17 kPa, the table from two slides back. Click Co-current: blood can now only reach 11 kPa, the same as the water leaving, and the gold gap closes early on, so the second half of the lamella is wasted. Then drag "Exchanger size" up in both modes: co-current never gets past the mixed value, countercurrent keeps improving towards 20 kPa. Finally move "Blood ÷ water flow": in countercurrent, when blood flow is low the blood comes close to the inlet water; when it is high the water is stripped of O₂ instead. Fish adjust both ventilation and perfusion of the lamellae. Teaching simplification: blood O₂ content is treated as proportional to PO₂ (no haemoglobin curve).
+:::
+
 ## Mammalian lungs: tidal ventilation
 
-- Trachea → bronchi → bronchioles → **alveoli**: about 300–500 million of them,
-  ~100 m² in total.
+:::: {.columns}
+::: {.column width="45%"}
+- Trachea → bronchi → bronchioles → **alveoli**: 300–500 million, ~100 m².
 - **Tidal:** air flows in and out through the **same** airways.
-- The conducting airways do not exchange gas: they are **anatomical dead
-  space**, about 150 mL.
-- Resting breath (tidal volume) ~500 mL, 12 breaths per minute:
+- Conducting airways are **dead space**, ~150 mL.
+- Breaths of 500 mL, 12 min⁻¹:
+  $(500-150) \times 12 = 4.2$ L min⁻¹ reaches the alveoli.
+- Fresh air mixes with stale air, so alveolar $P_{\rm O_2}$ (13.3 kPa) stays
+  below air (21.2 kPa).
+:::
+::: {.column width="55%"}
 
-$$\text{alveolar ventilation} = (500-150)\ \text{mL} \times 12\ \text{min}^{-1} = 4.2\ \text{L min}^{-1}$$
+![](figures/lung-alveoli.jpg){width="100%" height="360" fig-alt="Micrograph of normal lung: a bronchiole with surrounding alveoli, thin-walled air spaces separated by delicate septa."}
 
-- Fresh air mixes with stale air left in the lungs, so alveolar $P_{\rm O_2}$
-  (13.3 kPa) stays well below that of air (21.2 kPa).
+[Photo: Yale Rosen from USA, CC BY-SA 2.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Normal_lung_(5414785258).jpg){.credit}
+
+:::
+::::
 
 **Is tidal flow the only way to ventilate a lung?**
 
 ::: notes
-Exercise 2.3a and 2.3d. Each breath, the last 150 mL inhaled stays in the airways and is breathed out unchanged. That is why slow deep breathing ventilates the alveoli more effectively than fast shallow breathing at the same total ventilation: 250 mL breaths at 24 per minute give only (250 − 150) × 24 = 2.4 L min⁻¹. Exercise 2.1b: exchange occurs in the alveoli. Tidal ventilation is the weakness the bird lung avoids.
+Exercise 2.3a and 2.3d. In the micrograph, the bronchiole is a conducting airway (dead space); the lace-like air spaces around it are alveoli, whose walls are so thin that they are barely visible at this magnification: that is Fick's large A and small L made visible. Each breath, the last 150 mL inhaled stays in the airways and is breathed out unchanged. That is why slow deep breathing ventilates the alveoli more effectively than fast shallow breathing at the same total ventilation: 250 mL breaths at 24 per minute give only (250 − 150) × 24 = 2.4 L min⁻¹. Exercise 2.1b: exchange occurs in the alveoli. Tidal ventilation is the weakness the bird lung avoids.
 :::
 
-## Birds and insects: two other solutions
+## Bird lungs: one-way flow
 
 :::: {.columns}
-::: {.column width="50%"}
-**Bird lung**
-
+::: {.column width="40%"}
 - Small, rigid lungs with **parabronchi**; exchange in **air capillaries**
-  (3–10 µm) branching from them.
-- **Air sacs** are bellows: they ventilate the lung but do **not** exchange gas.
-- Air passes through the parabronchi in **one direction**, during both
-  inspiration and expiration (two breath cycles per parcel of air).
-- No dead space in the exchange region; blood flows across the air stream
+  (3–10 µm).
+- **Air sacs** are bellows: they ventilate but do **not** exchange gas.
+- Air passes the parabronchi in **one direction** during both inspiration and
+  expiration.
+- No dead space in the exchange region; blood crosses the air stream
   (**cross-current**).
 :::
-::: {.column width="50%"}
-**Insect tracheal system**
+::: {.column width="60%"}
 
-- **Spiracles** → **tracheae** → **tracheoles** (< 1 µm), ending within a few
-  µm of mitochondria.
-- O₂ travels in the **gas phase** almost to the cell: diffusion in air is
-  ~10 000× faster than in water.
-- Active insects ventilate by pumping the abdomen.
-- **Haemolymph carries little O₂**; the circulation transports nutrients and
-  wastes.
+![](figures/bird-air-sacs.jpg){width="100%" height="360" fig-alt="Illustration of a bird skeleton in flight showing the small lung with anterior air sacs in front of it and posterior air sacs behind it."}
+
+[Photo: Zina Deretsky, National Science Foundation, Public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dino_bird_h.jpg){.credit}
+
+:::
+::::
+
+::: notes
+Exercise 2.1c and 2.3b. The illustration (cropped from an NSF comparison with a theropod dinosaur, whose bones show the same air-sac connections) shows how much of a bird's body is taken up by air sacs; the lung itself is small and does not change volume. Air takes two breath cycles to pass through: inspiration 1 fills the posterior sacs, expiration 1 pushes that air through the lung, inspiration 2 moves it into the anterior sacs and expiration 2 sends it out. The result is that the lung always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle.
+:::
+
+## Insects: air piped to the cells
+
+:::: {.columns}
+::: {.column width="40%"}
+- **Spiracles** → **tracheae** → **tracheoles** (< 1 µm), within a few µm of
+  mitochondria.
+- O₂ travels in **air** almost to the cell: ~10 000× faster diffusion than in
+  water.
+- Active insects pump the abdomen.
+- **Haemolymph carries little O₂.**
 - Spiracles close to limit water loss.
+:::
+::: {.column width="60%"}
+
+![](figures/insect-trachea.jpg){width="100%" height="360" fig-alt="Light micrograph of an insect trachea teased out on a slide: a branching tube stiffened by fine spiral rings."}
+
+[Photo: Tgru001, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Insect_trachea_100x.jpg){.credit}
+
 :::
 ::::
 
@@ -261,19 +320,18 @@ Exercise 2.3a and 2.3d. Each breath, the last 150 mL inhaled stays in the airway
 does blood hold enough?**
 
 ::: notes
-Exercise 2.1c, 2.1d, 2.3b and 2.3c. The bird lung gets around the dead-space problem of tidal breathing: the lung itself always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle. The insect is A1's other solution: skip the blood and bring air to the tissue. The limit is the diffusion distance along the tracheae, which is one reason insects stay small. Transition back to vertebrates and the problem of carrying O₂ in a watery fluid.
+Exercise 2.1d and 2.3c. The micrograph shows a trachea teased out of an insect: the fine spiral rings (taenidia) of cuticle keep the tube open, like the cartilage rings of our own trachea. The insect is A1's other solution: skip the blood and bring air to the tissue. The limit is the diffusion distance along the tracheae, which is one reason insects stay small. Transition back to vertebrates and the problem of carrying O₂ in a watery fluid.
 :::
 
-## Haemoglobin: pressure, saturation and content
+## Haemoglobin: pressure, saturation and content {.smaller}
 
-Plasma dissolves only ~3 mL O₂ L⁻¹ at arterial $P_{\rm O_2}$. Haemoglobin
-raises this about 65-fold.
+:::: {.columns}
+::: {.column width="62%"}
+Plasma dissolves only ~3 mL O₂ L⁻¹; haemoglobin raises this ~65-fold.
 
-| Quantity | Meaning | Unit |
-| --- | --- | --- |
-| $P_{\rm O_2}$ | Pressure of the **dissolved**, unbound O₂ | kPa or mmHg |
-| **Saturation** | % of haemoglobin O₂-binding sites occupied | % |
-| **O₂ content** | Total O₂ (bound + dissolved) per volume of blood | mL O₂ L⁻¹ |
+- $P_{\rm O_2}$: pressure of the **dissolved**, unbound O₂ (kPa).
+- **Saturation:** % of Hb binding sites occupied.
+- **O₂ content:** total O₂ per litre of blood (mL O₂ L⁻¹).
 
 Content = [Hb] × 1.34 mL O₂ g⁻¹ × saturation:
 
@@ -283,98 +341,125 @@ Content = [Hb] × 1.34 mL O₂ g⁻¹ × saturation:
 | Normal, mixed venous | 150 | 75 % | 151 |
 | Anaemia, arterial | 100 | 98 % | 131 |
 
-**Anaemia:** same $P_{\rm O_2}$, same saturation, **less content**.
+**Anaemia:** same $P_{\rm O_2}$ and saturation, **less content**.
+:::
+::: {.column width="38%"}
+
+![](figures/red-blood-cells-sem.jpg){width="100%" height="400" fig-alt="Scanning electron micrograph of human blood: many biconcave disc-shaped red blood cells, with a few white blood cells and platelets."}
+
+[Photo: Bruce Wetzel (photographer). Harry Schaefer (photographer), Public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SEM_blood_cells.jpg){.credit}
+
+:::
+::::
 
 ::: notes
-Exercises 3.1 and 3.2. The three quantities are the most common source of confusion in this unit. P_O2 is set by the gas the blood equilibrated with; saturation is set by P_O2 through the dissociation curve; content then depends on how much haemoglobin there is. The anaemic patient has normal arterial P_O2 and saturation, because their lungs work, but each litre of blood carries a third less O₂. The 1.34 mL per gram is the maximum binding capacity. Transition: how does saturation depend on P_O2?
+Exercises 3.1 and 3.2. The three quantities are the most common source of confusion in this unit. P_O2 is set by the gas the blood equilibrated with; saturation is set by P_O2 through the dissociation curve; content then depends on how much haemoglobin there is. The anaemic patient has normal arterial P_O2 and saturation, because their lungs work, but each litre of blood carries a third less O₂. The 1.34 mL per gram is the maximum binding capacity. The micrograph shows where the haemoglobin is: packed inside biconcave red cells, about 7 µm across, whose shape gives a large surface and a short diffusion distance to every haemoglobin molecule. Transition: how does saturation depend on P_O2?
 :::
 
 ## The dissociation curve is sigmoid
 
-| $P_{\rm O_2}$ (kPa) | Saturation | Where |
-| ---: | ---: | --- |
-| 13.3 | ~98 % | Arterial blood leaving the lung |
-| 8 | ~90 % | |
-| 5.3 | ~75 % | Mixed venous blood at rest |
-| 3.5 | 50 % | $P_{50}$ |
-| 2.7 | ~35 % | Venous blood from exercising muscle |
-
-- **Why S-shaped?** Haemoglobin has **four subunits** that bind O₂
-  **cooperatively**: each bound O₂ raises the affinity of the others.
-- **Flat top:** saturation stays high even if lung $P_{\rm O_2}$ falls a little
-  (e.g. at moderate altitude).
+:::: {.columns}
+::: {.column width="40%"}
+- **Why S-shaped?** Four subunits bind O₂ **cooperatively**: each bound O₂
+  raises the affinity of the others.
+- **Flat top:** still ~90 % saturated at 8 kPa, e.g. at moderate altitude.
 - **Steep middle:** a small fall in tissue $P_{\rm O_2}$ releases much O₂.
-- At rest only ~25 % of the O₂ is unloaded: a large **reserve** for exercise.
+- At rest only ~25 % is unloaded: a **reserve** for exercise.
+:::
+::: {.column width="60%"}
+
+![](figures/dissociation-curve.svg){width="100%" height="360" fig-alt="Sigmoid O2-haemoglobin dissociation curve. Arterial blood at 13.3 kPa is about 97 percent saturated, venous blood at rest at 5.3 kPa about 75 percent, P50 is 3.5 kPa and venous blood from exercising muscle at 2.7 kPa about 33 percent."}
+
+:::
+::::
 
 **Can the curve itself move to help the working muscle?**
 
 ::: notes
-Sketch the curve with these points on the board. Exercise 3.3 asks why it is sigmoid: cooperative binding among four subunits. Myoglobin, with one subunit, gives a hyperbolic curve that lies to the left, so it takes O₂ from haemoglobin in muscle. The reserve is important for the runner: from 75 % saturation at rest, venous blood from hard-working muscle falls to about 35 %, so each litre of blood delivers more than twice as much O₂.
+The curve is the Hill equation with n = 2.7 and P50 = 3.5 kPa, drawn through the standard reference points: 98 % at 13.3 kPa (arterial), 75 % at 5.3 kPa (mixed venous at rest), 50 % at 3.5 kPa and about 35 % at 2.7 kPa (exercising muscle). Exercise 3.3 asks why it is sigmoid: cooperative binding among four subunits. Myoglobin, with one subunit, gives a hyperbolic curve that lies to the left, so it takes O₂ from haemoglobin in muscle. The reserve is important for the runner: from 75 % saturation at rest, venous blood from hard-working muscle falls to about 35 %, so each litre of blood delivers more than twice as much O₂.
 :::
 
 ## Shifting the curve
 
-| Change | Shift | Affinity | O₂ unloading in tissues |
-| --- | --- | --- | --- |
-| ↑ $P_{\rm CO_2}$ | Right | Lower | Favoured |
-| ↓ pH (**Bohr effect**) | Right | Lower | Favoured |
-| ↑ Temperature | Right | Lower | Favoured |
-| ↑ 2,3-BPG in red cells | Right | Lower | Favoured |
-| The opposite of each | Left | Higher | Reduced |
+:::: {.columns}
+::: {.column width="40%"}
+**Right shift** (lower affinity, more unloading): ↑ $P_{\rm CO_2}$,
+↓ pH (**Bohr effect**), ↑ temperature, ↑ 2,3-BPG. The opposite shifts left.
 
-- A **right shift** means less O₂ bound at a given $P_{\rm O_2}$, so more is
-  released. The O₂ goes to the tissue; it is not lost.
 - Working muscle is warm, acidic and high in CO₂: **three of the four push
   right** exactly where O₂ is needed.
-- Left-shifted pigments load O₂ at low $P_{\rm O_2}$: fetal haemoglobin,
-  myoglobin.
+- Loading in the lung, on the flat top, hardly changes.
+- Left-shifted: fetal Hb, myoglobin.
+:::
+::: {.column width="60%"}
+
+![](figures/bohr-shift.svg){width="100%" height="360" fig-alt="Two dissociation curves: normal, and right-shifted for working muscle at pH 7.2 and 39 degrees with P50 4.9 kPa. At a muscle PO2 of 2.7 kPa saturation is 33 percent on the normal curve and 20 percent on the shifted curve."}
+
+:::
+::::
 
 **Working muscle makes CO₂. How does the blood carry it away?**
 
 ::: notes
-Exercise 3.4. Teach the rule as "the conditions in an active tissue shift the curve to the right", which removes the need to memorise four separate facts. P50 rises with a right shift. Fetal haemoglobin binds 2,3-BPG poorly, so it sits to the left of maternal haemoglobin and O₂ moves from mother to fetus across the placenta. 2,3-BPG in red cells rises over days at high altitude, an example of A1's acclimatisation. Transition: the CO₂ that shifts the curve has to be removed.
+Exercise 3.4. In the figure, the working-muscle curve uses pH 7.2 and 39 °C (P50 rises from 3.5 to about 4.9 kPa). At the same muscle PO2 of 2.7 kPa, an extra 16 % of the haemoglobin gives up its O2, yet at the lung's 13.3 kPa both curves are near the top: the O2 goes to the tissue, it is not lost. Teach the rule as "the conditions in an active tissue shift the curve to the right", which removes the need to memorise four separate facts. P50 rises with a right shift. Fetal haemoglobin binds 2,3-BPG poorly, so it sits to the left of maternal haemoglobin and O₂ moves from mother to fetus across the placenta. 2,3-BPG in red cells rises over days at high altitude, an example of A1's acclimatisation. Transition: the CO₂ that shifts the curve has to be removed.
+:::
+
+## Try it: loading in the lung, unloading in the muscle
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a3-dissociation"></div>
+<script src="../../demos/dist/a3-dissociation.js"></script>
+```
+
+::: notes
+Blue is the curve under lung conditions, where the blood loads at the arterial PO₂ (blue point). Red is the curve under the tissue's own pH and temperature, where it unloads at the tissue PO₂ (red point, draggable). The gold bar is the share of haemoglobin that gives up its O₂, and the bottom line converts it to mL O₂ per litre of blood. Start at Rest: about 25 % unloaded, about 50 mL per litre, matching the a–v difference on the Fick slide. Press "Exercise, no shift": muscle PO₂ falls to 2.7 kPa on the normal curve. Then "Exercise": now the muscle is at pH 7.2 and 39 °C, the red curve moves right and each litre of blood delivers about 30 mL more. Ask the room which of the three changes did the most. "Altitude" lowers arterial PO₂ to 6.5 kPa: loading falls off the flat top. "Anaemia": the percentages are unchanged but the mL delivered fall by a third, the content point from the haemoglobin slide. Model: Hill equation, n = 2.7, P50 = 3.5 kPa at pH 7.4 and 37 °C; log P50 changes by −0.48 per pH unit and +0.024 per °C.
 :::
 
 ## Carbon dioxide transport
 
-| Form | Share of CO₂ in blood |
+:::: {.columns}
+::: {.column width="40%"}
+| Form | Share |
 | --- | ---: |
 | **Bicarbonate** (HCO₃⁻) | ~70 % |
-| Bound to haemoglobin (**carbamino** compounds) | ~20 % |
+| **Carbamino**-Hb | ~20 % |
 | **Dissolved** CO₂ | ~10 % |
 
-In red blood cells, **carbonic anhydrase** catalyses the first step:
+- **Carbonic anhydrase** in red cells:
+  CO₂ + H₂O ⇌ H⁺ + HCO₃⁻.
+- HCO₃⁻ out, Cl⁻ in (**chloride shift**); H⁺ on Hb helps release O₂.
+- Reversed in the lung, so **ventilation sets blood pH**.
+:::
+::: {.column width="60%"}
 
-$$\mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons H^+ + HCO_3^-}$$
+![](figures/co2-red-cell.svg){width="100%" height="360" fig-alt="CO2 from a tissue cell enters a red blood cell, where carbonic anhydrase converts it with water to H+ and bicarbonate; bicarbonate leaves in exchange for chloride, and H+ binding to haemoglobin releases O2 to the tissue."}
 
-- HCO₃⁻ leaves the red cell in exchange for Cl⁻ (**chloride shift**).
-- The H⁺ binds to haemoglobin, helping it release O₂ (Bohr effect).
-- In the lung, the reactions run in reverse and CO₂ is breathed out.
-- So **ventilation sets blood pH**: breathing faster lowers $P_{\rm CO_2}$ and
-  raises pH.
+:::
+::::
 
 **Gases are loaded and unloaded. Now: what moves the blood?**
 
 ::: notes
-Exercise 3.5. Carbonic anhydrase is one of the fastest enzymes known; without it the hydration of CO₂ would be far too slow for the short time blood spends in a capillary. The reaction links gas transport to acid–base balance: CO₂ is an acid that the lungs can remove within minutes, while the kidney adjusts bicarbonate over hours to days (A4). Transition from the gases to the pump and the circuit.
+Exercise 3.5. The full reaction is CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻; carbonic anhydrase speeds the first step. Breathing faster lowers P_CO2 and raises pH. Carbonic anhydrase is one of the fastest enzymes known; without it the hydration of CO₂ would be far too slow for the short time blood spends in a capillary. The reaction links gas transport to acid–base balance: CO₂ is an acid that the lungs can remove within minutes, while the kidney adjusts bicarbonate over hours to days (A4). Transition from the gases to the pump and the circuit.
 :::
 
 ## The mammalian double circulation
 
-```{mermaid}
-flowchart LR
-  RH[Right atrium →<br/>right ventricle] -->|pulmonary arteries| L[Lung capillaries]
-  L -->|pulmonary veins| LH[Left atrium →<br/>left ventricle]
-  LH -->|systemic arteries| T[Tissue capillaries]
-  T -->|systemic veins| RH
-```
+:::: {.columns}
+::: {.column width="40%"}
+- **Arteries** carry blood **away** from the heart, **veins** towards it. The
+  **pulmonary arteries carry O₂-poor blood**.
+- **Valves** prevent backflow: tricuspid, mitral; pulmonary, aortic.
+- Systemic ~120/80 mmHg, pulmonary ~25/8 mmHg: the left ventricle makes ~5×
+  the pressure of the right.
+:::
+::: {.column width="60%"}
 
-- **Arteries** carry blood **away** from the heart; **veins** carry it **towards**
-  the heart. Oxygenation does not define them: the **pulmonary arteries carry
-  deoxygenated blood**.
-- **Valves** prevent backflow: atrioventricular valves (tricuspid, mitral) and
-  semilunar valves (pulmonary, aortic).
-- Arterial pressure ~120/80 mmHg in the systemic circuit, ~25/8 mmHg in the pulmonary circuit: the left ventricle generates about five times the pressure of the right.
+![](figures/double-circulation.svg){width="100%" height="360" fig-alt="The right heart pumps O2-poor blood through the pulmonary arteries to the lung capillaries; pulmonary veins return O2-rich blood to the left heart, which pumps it through the aorta to the body capillaries, and veins return it to the right heart."}
+
+:::
+::::
 
 **Is this the only way to build a circulation?**
 
@@ -415,32 +500,51 @@ Exercises 4.2c, 4.2d and 4.3. In a fish, blood passes through the heart once per
 
 - Elastic arteries stretch in systole and recoil in diastole, smoothing flow.
 - Venous return is helped by valves and by the **skeletal muscle pump**.
-- In a section, a collapsed vein can look like a slit: identify vessels by
-  **wall layers**, not outline (A1).
-
-**Pressure drops along the circuit. What sets how much flows where?**
 
 ::: notes
 Exercise 4.4 is this table. Relate each wall to its job and its tissue types from A1: elastic connective tissue and smooth muscle in the artery, a single squamous endothelium in the capillary (A1's thin barrier), thin walls and large lumens in veins, which act as a reservoir. The capillary is where the diffusion step of the O₂ route happens. Transition to the flow equation.
+:::
+
+## An artery and a vein in section
+
+:::: {.columns}
+::: {.column width="40%"}
+- **Artery:** thick muscular wall, round, small lumen.
+- **Vein:** thin wall, wide or collapsed lumen; it can look like a slit.
+- Identify vessels by **wall layers**, not outline (A1).
+
+**Pressure drops along the circuit. What sets how much flows where?**
+:::
+::: {.column width="60%"}
+
+![](figures/artery-vein.svg){width="100%" height="360" fig-alt="An artery and a vein drawn side by side in cross-section, with a small capillary: the artery has a thick, round wall of elastic tissue and smooth muscle; the vein has a thin wall and a wider, flattened lumen; the capillary wall is a single endothelial cell."}
+
+:::
+::::
+
+::: notes
+This is the comparison students make in the histology practical, where artery and vein usually lie side by side in the same bundle. The artery has the thick wall of smooth muscle and elastic tissue and a round lumen. The vein beside it carries the same flow back at a much lower pressure, so it needs only a thin wall; its lumen is wider and often collapsed or irregular in a fixed section. The capillary, shown as a small inset, is a single endothelial cell around a lumen barely wide enough for one red cell. Transition: in this circuit, pressure falls from the aorta to the veins; what decides how much blood each organ receives?
 :::
 
 ## Pressure, resistance and flow
 
 $$Q = \frac{\Delta P}{R} \qquad\qquad R \propto \frac{1}{r^4}$$
 
-- Flow $Q$ is driven by a pressure difference $\Delta P$ and opposed by
-  resistance $R$, like current in Ohm's law.
-- Resistance depends steeply on radius (Poiseuille):
+:::: {.columns}
+::: {.column width="40%"}
+- Flow $Q$ is driven by $\Delta P$ and opposed by resistance $R$, like
+  current in Ohm's law.
+- Poiseuille: halve $r$ → $16R$, $Q/16$; widen by 19 % → $R/2$, $2Q$.
+- **Arterioles** have smooth muscle, so they decide **which tissues get the
+  blood**.
+- Exercise: muscle arterioles dilate, gut arterioles constrict.
+:::
+::: {.column width="60%"}
 
-| Radius | Resistance | Flow at constant $\Delta P$ |
-| ---: | ---: | ---: |
-| $r$ | $R$ | $Q$ |
-| $r/2$ | $16R$ | $Q/16$ |
-| $1.19\,r$ | $R/2$ | $2Q$ |
+![](figures/radius-flow.svg){width="100%" height="320" fig-alt="Flow at constant pressure rises with the fourth power of arteriole radius: half the radius gives one sixteenth of the flow, and 19 percent wider gives twice the flow."}
 
-- **Arterioles** have smooth muscle and control resistance, so they decide
-  **which tissues get the blood**.
-- In exercise, muscle arterioles dilate and gut arterioles constrict.
+:::
+::::
 
 **So how much blood does the heart deliver, and how much O₂ does it bring?**
 
@@ -452,15 +556,15 @@ Exercise 4.5. Doubling resistance at constant pressure halves flow. Because resi
 
 **Cardiac output** = heart rate × stroke volume
 
-**O₂ consumption** = cardiac output × (arterial − venous O₂ content)
+**O₂ use** = cardiac output × (arterial − venous O₂ content)
 
 | | Rest | Running |
 | --- | ---: | ---: |
-| Heart rate (beats min⁻¹) | 70 | 170 |
+| Heart rate (min⁻¹) | 70 | 170 |
 | Stroke volume (L) | 0.070 | 0.110 |
 | **Cardiac output** (L min⁻¹) | 4.9 | 18.7 |
-| Arterial − venous O₂ (mL L⁻¹) | 200 − 150 = 50 | 200 − 50 = 150 |
-| **O₂ consumption** (mL min⁻¹) | 245 | 2 805 |
+| a − v O₂ (mL L⁻¹) | 200 − 150 = 50 | 200 − 50 = 150 |
+| **O₂ use** (mL min⁻¹) | 245 | 2 805 |
 
 The Fick principle uses **content**, not $P_{\rm O_2}$.
 
@@ -472,16 +576,27 @@ Exercise 4.6 is the same calculation with other numbers. The product is a mass b
 
 ## Back to the runner
 
-| Step on the O₂ route | Change during running |
+:::: {.columns}
+::: {.column width="62%"}
+| Step | Change during running |
 | --- | --- |
-| Ventilation | Deeper and faster breathing: ~6 → ~100 L min⁻¹ |
-| Lung diffusion | More lung capillaries perfused: larger exchange area |
-| Arterial blood | Stays ~98 % saturated (flat top of the curve) |
-| Heart | Heart rate 70 → 170, stroke volume up: cardiac output ~4× |
-| Distribution | Muscle arterioles dilate, gut arterioles constrict |
-| Unloading | Warm, acidic, CO₂-rich muscle shifts the curve right; venous saturation falls to ~35 % |
+| Ventilation | ~6 → ~100 L min⁻¹ |
+| Lung diffusion | more capillaries perfused: larger area |
+| Arterial blood | stays ~98 % saturated (flat top) |
+| Heart | 70 → 170 beats min⁻¹: output ~4× |
+| Distribution | muscle arterioles dilate, gut constrict |
+| Unloading | right shift; venous saturation ~35 % |
 
-**Result:** O₂ consumption rises ~11× from the same 150 g L⁻¹ of haemoglobin.
+**Result:** O₂ use rises ~11× with the same haemoglobin.
+:::
+::: {.column width="38%"}
+
+![](figures/runner.jpg){width="100%" height="360" fig-alt="Legs of a marathon runner in mid-stride on a road."}
+
+[Photo: Petar Milošević, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Human_running_gait_-_terminal_swing_to_heel_strike_(runner_with_Asics_Metaspeed_Edge_Paris_-_2024_Ljubljana_Marathon).jpg){.credit}
+
+:::
+::::
 
 **The thin, wet surfaces that let O₂ in also let water and ions in and out. That is A4.**
 

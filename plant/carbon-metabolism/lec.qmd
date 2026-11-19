@@ -46,127 +46,128 @@ The running example is one CO₂ molecule entering a leaf through an open stoma 
 
 $$6\,\text{CO}_2 + 12\,\text{H}_2\text{O} \xrightarrow{\text{light}} \text{C}_6\text{H}_{12}\text{O}_6 + 6\,\text{O}_2 + 6\,\text{H}_2\text{O}$$
 
+:::: {.columns}
+::: {.column width="55%"}
 | | Light reactions | Calvin–Benson cycle |
 | --- | --- | --- |
-| Location in the chloroplast | **thylakoid membranes** | **stroma** |
+| Where | **thylakoid membranes** | **stroma** |
 | Inputs | light, H₂O, ADP + Pᵢ, NADP⁺ | CO₂, ATP, NADPH |
-| Outputs | O₂, ATP, NADPH | triose phosphate (sugar), ADP + Pᵢ, NADP⁺ |
-| Job | convert light energy to chemical energy | use that energy to reduce CO₂ |
+| Outputs | O₂, ATP, NADPH | triose phosphate, ADP + Pᵢ, NADP⁺ |
 
-- The two stages are linked by **ATP and NADPH**: the light reactions make
-  them, the cycle spends them and returns ADP and NADP⁺.
+- Linked by **ATP and NADPH**: one stage makes them, the other spends them.
+:::
+::: {.column width="45%"}
+
+![](figures/chloroplast-tem.jpg){width="100%" height="330" fig-alt="Electron micrograph of a chloroplast: stacks of thylakoid membranes (grana) lie in the paler stroma, inside a double envelope."}
+
+[Photo: and3k and caper437, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chloroplast_in_leaf_of_Anemone_sp_TEM_12000x.png){.credit}
+:::
+::::
 
 **Start with the light reactions: where does the O₂ come from?**
 
 ::: notes
-Exercise 1.1 is this table. The overall equation hides two separate machines, one in the membrane and one in the soluble stroma, joined by an energy currency. The extra water on both sides of the equation is deliberate: it shows that all 12 O atoms of the released O₂ come from water, which is the next slide.
+Exercise 1.1 is this table. The overall equation hides two separate machines, one in the membrane and one in the soluble stroma, joined by an energy currency. Point to the micrograph: the dark stacked lines are the thylakoid membranes (grana), where the light reactions run; the paler background is the stroma, where the Calvin–Benson cycle runs. The jobs: the light reactions convert light energy to chemical energy, the cycle uses that energy to reduce CO₂. The extra water on both sides of the equation is deliberate: it shows that all 12 O atoms of the released O₂ come from water, which is the next slide.
 :::
 
 ## Capturing light and splitting water
 
 :::: {.columns}
-::: {.column width="50%"}
-- **Chlorophyll** absorbs blue (~430 nm) and red (~660 nm) light and reflects
-  green.
-- Hundreds of pigment molecules form an **antenna** that funnels energy to a
-  **reaction centre**: P680 in photosystem II, P700 in photosystem I.
-- Full sunlight: ~2000 µmol photons m⁻² s⁻¹.
-:::
-::: {.column width="50%"}
-At **photosystem II**, water is oxidised:
+::: {.column width="45%"}
+- **Chlorophyll** absorbs blue (~430 nm) and red (~660 nm) and reflects green.
+- An **antenna** of hundreds of pigments funnels energy to a **reaction centre**:
+  P680 (photosystem II), P700 (photosystem I).
+- At **photosystem II**, water is split:
 
 $$2\,\text{H}_2\text{O} \rightarrow \text{O}_2 + 4\,\text{H}^+ + 4\,e^-$$
 
-- The electrons replace those lost by P680.
-- The H⁺ is released into the thylakoid **lumen**.
-- **The O₂ comes from water**, not from CO₂: shown with ¹⁸O-labelled water
-  (Ruben and Kamen, 1941).
+- **The O₂ comes from water**, not CO₂ (¹⁸O-labelled water, Ruben and Kamen, 1941).
+:::
+::: {.column width="55%"}
+
+![](figures/moss-leaf-chloroplasts.jpg){width="100%" height="340" fig-alt="Light micrograph of moss leaf cells, each packed with many green disc-shaped chloroplasts."}
+
+[Photo: Kristian Peters -- Fabelfroh, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Plagiomnium_affine_laminazellen.jpeg){.credit}
 :::
 ::::
 
 **Where do the electrons from water go?**
 
 ::: notes
-Exercise 1.2. The classic error is that O₂ comes from CO₂. The isotope experiment settles it: label the water and the O₂ is labelled; label the CO₂ and it is not. CO₂ supplies the carbon of the sugar. The light unit (µmol photons m⁻² s⁻¹) is the x-axis of the light-response curve later in the lecture.
+Exercise 1.2. The photo shows living leaf cells of a moss, one cell layer thick, so the chloroplasts are visible without sectioning: each green disc is one chloroplast, and each holds the thylakoid membranes of the previous slide. The classic error is that O₂ comes from CO₂. The isotope experiment settles it: label the water and the O₂ is labelled; label the CO₂ and it is not. CO₂ supplies the carbon of the sugar. The electrons replace those lost by P680, and the H⁺ is released into the thylakoid lumen. Full sunlight is about 2000 µmol photons m⁻² s⁻¹, the x-axis unit of the light-response curve later in the lecture.
 :::
 
 ## Linear electron flow
 
-```{mermaid}
-%%| fig-width: 12
-flowchart LR
-  W["H₂O"] --> P2["Photosystem II"]
-  P2 --> PQ["Plastoquinone"]
-  PQ --> B6F["Cytochrome b₆f"]
-  B6F --> PC["Plastocyanin"]
-  PC --> P1["Photosystem I"]
-  P1 --> FD["Ferredoxin"]
-  FD --> N["NADP⁺ → NADPH"]
-```
+:::: {.columns}
+::: {.column width="40%"}
+- Light lifts electrons **twice**: at photosystem II and at photosystem I (the
+  "Z-scheme").
+- Between them, electrons flow downhill: plastoquinone (PQ) → cytochrome
+  *b*₆*f* → plastocyanin (PC).
+- *b*₆*f* **pumps H⁺ into the lumen**.
+- Ferredoxin (Fd) and FNR reduce NADP⁺ to **NADPH**.
+:::
+::: {.column width="60%"}
 
-- Light drives electrons **uphill** twice: at photosystem II and again at
-  photosystem I (the "Z-scheme").
-- Ferredoxin–NADP⁺ reductase hands the electrons to NADP⁺, forming **NADPH**.
-- The cytochrome *b*₆*f* complex pumps **H⁺ into the lumen** as plastoquinol
-  is oxidised.
-- Result: **O₂, NADPH and a proton gradient** across the thylakoid membrane.
+![](figures/zscheme.svg){width="100%" height="360" fig-alt="Z-scheme: light raises electrons from P680 to a high energy, they fall through PQ, cytochrome b6f and PC to P700, light raises them again, and they pass through ferredoxin and FNR to NADPH."}
 
-**How does a proton gradient become ATP?**
+:::
+::::
+
+**Result: O₂, NADPH and a proton gradient. How does the gradient make ATP?**
 
 ::: notes
-Exercise 1.3 asks for this order. Students do not need redox potentials, but should know the sequence and that two photosystems act in series. Point out the two sources of lumen protons: water splitting at PSII and the cytochrome b₆f complex. The chain is structurally similar to the mitochondrial electron transport chain students know from A2.
+Exercise 1.3 asks for this order: H₂O → PSII → PQ → cyt b₆f → PC → PSI → Fd → NADP⁺. Students do not need redox potentials, but should know the sequence and that two photosystems act in series; the vertical axis of the figure is electron energy, not a measured scale. Point out the two sources of lumen protons: water splitting at PSII and the cytochrome b₆f complex. The chain is structurally similar to the mitochondrial electron transport chain students know from A2.
 :::
 
 ## ATP synthase and cyclic electron flow
 
 :::: {.columns}
-::: {.column width="50%"}
-- In the light, lumen pH ~5, stroma pH ~8: a **1000-fold** H⁺ gradient.
-- **ATP synthase** lets H⁺ flow **from the lumen to the stroma** and uses the
-  energy to make ATP from ADP + Pᵢ.
-- ATP is made **in the stroma**, where the Calvin–Benson cycle uses it.
+::: {.column width="42%"}
+- Lumen pH ~5, stroma pH ~8: a **1000-fold** H⁺ gradient.
+- **ATP synthase**: H⁺ flows lumen → stroma; ATP is made **in the stroma**.
 - Linear flow gives ~1.3 ATP per NADPH; the cycle needs **1.5**.
-:::
-::: {.column width="50%"}
-**Cyclic flow** (PSI → ferredoxin → back to the cytochrome *b*₆*f* complex)
-makes up the ATP shortfall.
 
-| | Linear flow | Cyclic flow |
+| | Linear | Cyclic |
 | --- | --- | --- |
-| Photosystem II involved | yes | no |
-| O₂ released | yes | no |
-| NADPH formed | yes | no |
-| ATP formed | yes | yes |
+| PSII, O₂ | yes | no |
+| NADPH | yes | no |
+| ATP | yes | yes |
+:::
+::: {.column width="58%"}
+
+![](figures/thylakoid.svg){width="100%" height="360" fig-alt="Thylakoid membrane between the stroma at pH 8 and the lumen at pH 5. PSII, cytochrome b6f and PSI fill the lumen with protons; protons flow back through ATP synthase to make ATP in the stroma; cyclic flow returns electrons from PSI to b6f."}
+
 :::
 ::::
 
-**The stroma now holds ATP and NADPH. What does the Calvin–Benson cycle do
-with them?**
+**The stroma now holds ATP and NADPH. What does the Calvin–Benson cycle do with them?**
 
 ::: notes
-Exercises 1.4 and 1.5. The mechanism is the same chemiosmotic principle as in mitochondria (A2), with the membrane orientation reversed: protons are pumped into the lumen and flow out into the stroma. The ATP:NADPH mismatch explains why cyclic flow exists: it adds ATP without making NADPH or O₂. The 1.5 ratio is derived on the next-but-one slide.
+Exercises 1.4 and 1.5. The mechanism is the same chemiosmotic principle as in mitochondria (A2), with the membrane orientation reversed: protons are pumped into the lumen and flow out into the stroma. Cyclic flow (PSI → ferredoxin → back to the cytochrome b₆f complex, dashed arrow) pumps protons without passing electrons to NADP⁺, so it adds ATP without making NADPH or O₂. That fixes the ATP:NADPH mismatch; the 1.5 ratio is derived on the next-but-one slide.
 :::
 
 ## The Calvin–Benson cycle: three phases
 
-```{mermaid}
-%%| fig-width: 11
-flowchart LR
-  R["3 RuBP (5C)"] -->|"Carboxylation: + 3 CO₂, Rubisco"| G["6 3-PGA (3C)"]
-  G -->|"Reduction: 6 ATP, 6 NADPH"| T["6 triose phosphate (3C)"]
-  T -->|"1 exported"| S["Sucrose, starch"]
-  T -->|"Regeneration: 5 recycled, 3 ATP"| R
-```
-
+:::: {.columns}
+::: {.column width="40%"}
 1. **Carboxylation:** **Rubisco** adds CO₂ to ribulose 1,5-bisphosphate
    (RuBP), giving two 3-phosphoglycerate (3-PGA).
 2. **Reduction:** ATP and NADPH reduce 3-PGA to **triose phosphate**.
 3. **Regeneration:** five of every six triose phosphates rebuild three RuBP.
+:::
+::: {.column width="60%"}
+
+![](figures/calvin-cycle.svg){width="100%" height="360" fig-alt="Calvin-Benson cycle: 3 RuBP plus 3 CO2 give 6 3-PGA (carboxylation by Rubisco); 6 ATP and 6 NADPH reduce them to 6 triose phosphates; 5 regenerate 3 RuBP using 3 ATP, and 1 is exported for sucrose and starch."}
+
+:::
+::::
 
 **Count the cost: how much ATP and NADPH does one sugar take?**
 
 ::: notes
-Exercise 2.1 asks for the phases in order and the enzyme. Walk around the cycle with three CO₂ so the carbon balances: 3 × 5 C + 3 C = 18 C in six triose phosphates; 15 C regenerate RuBP and 3 C leave as one net triose phosphate. Rubisco is the enzyme from P1 encoded by two genomes, and the most abundant protein on Earth.
+Exercise 2.1 asks for the phases in order and the enzyme. Walk around the figure with three CO₂ so the carbon balances: 3 × 5 C + 3 C = 18 C in six triose phosphates; 15 C regenerate RuBP and 3 C leave as one net triose phosphate. Rubisco is the enzyme from P1 encoded by two genomes, and the most abundant protein on Earth.
 :::
 
 ## The cost of one sugar, and why it needs light
@@ -200,31 +201,26 @@ Exercise 2.2 (18 ATP and 12 NADPH, ratio 3:2) and 2.3a. The name "dark reactions
 ## Rubisco's flaw: photorespiration
 
 :::: {.columns}
-::: {.column width="50%"}
-- Rubisco is **slow** (~3 reactions per second) and can use **O₂ instead of
-  CO₂**.
-- Oxygenation of RuBP gives one 3-PGA and one **2-phosphoglycolate**, which
-  the Calvin–Benson cycle cannot use.
-- The **photorespiratory pathway** recycles it through three organelles:
-  **chloroplast → peroxisome → mitochondrion** and back.
-- In the mitochondrion, glycine → serine **releases CO₂** that was already
-  fixed, and NH₃ that must be refixed.
+::: {.column width="40%"}
+- Rubisco is **slow** (~3 reactions s⁻¹) and can use **O₂ instead of CO₂**,
+  giving **2-phosphoglycolate**, which the cycle cannot use.
+- Salvage runs through **chloroplast → peroxisome → mitochondrion**, and
+  **releases CO₂** already fixed.
+- 25 °C, air: ~**1 oxygenation per 3 carboxylations**; ~**25 %** less C3
+  photosynthesis.
+- **Photorespiration ≠ respiration.**
 :::
-::: {.column width="50%"}
-- At 25 °C in air, Rubisco makes about **1 oxygenation per 3 carboxylations**.
-- Photorespiration lowers C3 photosynthesis by **~25 %**.
-- Leaves contain so much Rubisco (up to half of their soluble protein)
-  because it is slow.
+::: {.column width="60%"}
 
-**Photorespiration ≠ mitochondrial respiration.** Photorespiration starts with
-Rubisco and recycles 2-phosphoglycolate; respiration oxidises sugar to make ATP.
+![](figures/photorespiration.svg){width="100%" height="360" fig-alt="Photorespiration: in the chloroplast Rubisco oxygenates RuBP to 2-phosphoglycolate; glycolate becomes glycine in the peroxisome; in the mitochondrion two glycines give serine, CO2 and NH3; serine returns as glycerate and re-enters the cycle as 3-PGA."}
+
 :::
 ::::
 
 **When does Rubisco make this mistake more often?**
 
 ::: notes
-Exercises 2.3b–d and 2.4. Rubisco evolved when the atmosphere had almost no O₂, so discrimination against O₂ was not needed. Photorespiration is a salvage pathway: it recovers three of every four carbons in 2-phosphoglycolate but loses one as CO₂ and costs ATP and NADPH. Stress the distinction from mitochondrial respiration, which is a common exam error.
+Exercises 2.3b–d and 2.4. Rubisco evolved when the atmosphere had almost no O₂, so discrimination against O₂ was not needed. Photorespiration is a salvage pathway: it recovers three of every four carbons in 2-phosphoglycolate but loses one as CO₂, releases NH₃ that must be refixed, and costs ATP and NADPH. Leaves contain so much Rubisco (up to half of their soluble protein) because it is slow. Stress the distinction from mitochondrial respiration, which is a common exam error: photorespiration starts with Rubisco and recycles 2-phosphoglycolate; respiration oxidises sugar to make ATP.
 :::
 
 ## What increases photorespiration?
@@ -247,63 +243,75 @@ Exercise 2.5. Connect directly to P2: ABA closes stomata in drought, the CO₂ i
 ## C4: separating fixation in space
 
 :::: {.columns}
-::: {.column width="50%"}
-1. In **mesophyll** cells, **PEP carboxylase** fixes HCO₃⁻ to
-   phosphoenolpyruvate, forming **oxaloacetate (4C)**. PEP carboxylase does
-   not react with O₂.
-2. Oxaloacetate → **malate**, which moves to the **bundle-sheath** cells.
-3. Malate is decarboxylated: CO₂ is released next to **Rubisco**, up to
-   ~10× the air concentration.
-4. Pyruvate returns to the mesophyll and is converted back to PEP, costing
-   **2 ATP per CO₂**.
+::: {.column width="42%"}
+1. **Mesophyll:** **PEP carboxylase** fixes HCO₃⁻ into oxaloacetate (4C),
+   then malate. It ignores O₂.
+2. Malate moves to the **bundle sheath** and releases CO₂ next to **Rubisco**
+   at ~10× the air concentration.
+3. Regenerating PEP costs **2 ATP per CO₂**: 5 instead of 3.
+
+- **Kranz anatomy**; maize, sugarcane, sorghum.
 :::
-::: {.column width="50%"}
-- **Kranz anatomy:** a ring of bundle-sheath cells around each vein,
-  surrounded by mesophyll.
-- **Advantage:** almost no photorespiration; higher photosynthesis and
-  water-use efficiency in **warm, bright** conditions.
-- **Cost:** 5 ATP per CO₂ instead of 3, so C4 is no better in cool or
-  shaded conditions.
-- Examples: **maize, sugarcane**, sorghum.
+::: {.column width="58%"}
+
+![](figures/maize-leaf-kranz.jpg){width="100%" height="200" fig-alt="Light micrograph of a maize leaf cross-section, rotated to lie flat: each vein is ringed by a dark green wreath of bundle-sheath cells, with paler mesophyll between the veins; one large vein shows two wide xylem vessels."}
+
+[Photo: Kelvinsong, CC BY 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Zea_mays_leaf_Kranz_anatomy_1_200%C3%97.png){.credit}
 :::
 ::::
 
 **Desert succulents use the same enzymes but separate the steps in time.**
 
 ::: notes
-Exercises 3.4 (advantage and cost) and part of 3.1. C4 is a pump that concentrates CO₂ at Rubisco, paid for in ATP. C4 plants are only about 3 % of species but carry out about a quarter of land photosynthesis, mostly tropical grasses. The Calvin–Benson cycle and Rubisco are still there; C4 only changes how CO₂ is delivered.
+Exercises 3.4 (advantage and cost) and part of 3.1. Kranz is German for wreath: in the section, find a vein and the ring of large bundle-sheath cells around it, with mesophyll cells outside. C4 is a pump that concentrates CO₂ at Rubisco, paid for in ATP. Advantage: almost no photorespiration, so higher photosynthesis and water-use efficiency in warm, bright conditions. Cost: 5 ATP per CO₂ instead of 3, so C4 is no better in cool or shaded conditions. C4 plants are only about 3 % of species but carry out about a quarter of land photosynthesis, mostly tropical grasses. The Calvin–Benson cycle and Rubisco are still there; C4 only changes how CO₂ is delivered.
 :::
 
 ## CAM: separating fixation in time
 
 :::: {.columns}
-::: {.column width="50%"}
-**Night:** stomata **open**
+::: {.column width="45%"}
+**Night, stomata open:** PEP carboxylase fixes CO₂ → **malate**, stored as
+malic acid in the **vacuole**. Acidity **rises**.
 
-- PEP carboxylase fixes CO₂ into oxaloacetate → **malate**.
-- Malic acid is stored in the **vacuole**: tissue acidity **rises** overnight.
+**Day, stomata closed:** malate is decarboxylated and **Rubisco** fixes the
+CO₂ using light energy. Acidity **falls**.
 
-**Day:** stomata **closed**
-
-- Malate leaves the vacuole and is decarboxylated: acidity **falls**.
-- The CO₂ is fixed by **Rubisco** in the Calvin–Benson cycle, using light
-  energy.
+- Cool night air: **very little water lost** per CO₂.
+- Slow growth: the vacuole limits storage.
+- Fingerprint: **acid at dawn, not at dusk**.
 :::
-::: {.column width="50%"}
-- Stomata open in the cool night air, when the vapour pressure difference
-  is small: **very little water lost** per CO₂.
-- Growth is slow: the vacuole limits how much CO₂ can be stored.
-- Examples: **pineapple**, **prickly pear (*Opuntia*)**, *Agave*, many
-  orchids.
+::: {.column width="55%"}
 
-The diagnostic observation: **leaf acidity high at dawn, low at dusk.**
+![](figures/pineapple-cam-plant.jpg){width="100%" height="340" fig-alt="A pineapple plant: a rosette of stiff, thick leaves with a fruit in the centre."}
+
+[Photo: Markus Leupold-Löwenthal, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AnanasComosusOnPlant.jpg){.credit}
 :::
 ::::
 
-**C3, C4 and CAM side by side.**
+**Side by side: C4 separates the two steps in space, CAM in time.**
 
 ::: notes
-Exercise 3.3: the acidity rhythm is the CAM fingerprint; Kranz anatomy is the C4 fingerprint. CAM solves the water problem from P2 by opening stomata only when evaporation is low. The cost is capacity: the night's CO₂ store sets the day's photosynthesis. Again, Rubisco is still present and does the final fixation.
+Exercise 3.3: the acidity rhythm is the CAM fingerprint; Kranz anatomy is the C4 fingerprint. CAM solves the water problem from P2 by opening stomata only when evaporation is low. The cost is capacity: the night's CO₂ store sets the day's photosynthesis. Pineapple is the main CAM crop; others are prickly pear (Opuntia), Agave and many orchids. Again, Rubisco is still present and does the final fixation.
+:::
+
+## C4 and CAM: space versus time
+
+:::: {.columns}
+::: {.column width="38%"}
+- Both use **PEP carboxylase** first, to make malate, and **Rubisco** last.
+- **C4:** two cell types, both steps by day.
+- **CAM:** one cell, steps at night and by day.
+- Both raise CO₂ at Rubisco, so **photorespiration stays low**.
+:::
+::: {.column width="62%"}
+
+![](figures/c4-cam.svg){width="100%" height="360" fig-alt="Left: in C4, mesophyll cells fix CO2 with PEP carboxylase into malate, which moves to bundle-sheath cells where CO2 is released to Rubisco. Right: in CAM, malate is made and stored in the vacuole at night with stomata open, and releases CO2 to Rubisco by day with stomata closed."}
+
+:::
+::::
+
+::: notes
+This figure is the one-sentence summary of the last two slides: the same two enzymes, separated either between cells (C4) or between night and day (CAM). Ask students where the stomata are open in each case and why that matters for water loss; the next slide puts numbers on it.
 :::
 
 ## C3, C4 and CAM compared
@@ -329,34 +337,41 @@ Exercises 3.1 and 3.2. The water row links the three pathways back to P2's trans
 ## The light-response curve
 
 :::: {.columns}
-::: {.column width="50%"}
-Net CO₂ exchange of one leaf (positive = net uptake):
-
-| Light (µmol photons m⁻² s⁻¹) | Net CO₂ (µmol m⁻² s⁻¹) |
+::: {.column width="40%"}
+| Light | Net CO₂ |
 | ---: | ---: |
 | 0 | −2 |
 | 50 | 0 |
 | 200 | 6 |
 | 800 | 9 |
+
+- **Dark respiration:** 2 µmol m⁻² s⁻¹.
+- **Compensation point:** 50 µmol photons m⁻² s⁻¹.
+- **Gross** at 200 = 6 + 2 = **8**.
 :::
-::: {.column width="50%"}
-- **Dark respiration:** 2 µmol CO₂ m⁻² s⁻¹ (the value at zero light).
-- **Light compensation point:** **50** µmol photons m⁻² s⁻¹, where uptake
-  equals release.
-- **Slope** 50 → 200: 6/150 = **0.04** CO₂ per photon. 200 → 800: 3/600 =
-  **0.005**. The curve **saturates**.
-- **Gross photosynthesis** at 200 = net + respiration = 6 + 2 = **8**
-  µmol m⁻² s⁻¹.
+::: {.column width="60%"}
+
+![](figures/light-response.svg){width="100%" height="360" fig-alt="Light-response curve through the four measured points: net CO2 uptake is minus 2 in darkness, crosses zero at the compensation point of 50, rises steeply to 6 at 200 and saturates near 9 at high light."}
+
 :::
 ::::
 
-- Net = gross photosynthesis − respiration. Below compensation the leaf loses
-  carbon, which is what we saw at midnight.
-
-**These rates are per square metre per second. How much carbon is that?**
+**Net = gross − respiration. Below compensation the leaf loses carbon: midnight.**
 
 ::: notes
-Exercise 4.1. The curve answers the opening observation: in darkness only respiration remains, so net exchange is negative. At low light, rate is limited by light; at high light, by CO₂ supply and Rubisco capacity, so extra photons add little. Shade leaves have lower compensation points and lower respiration than sun leaves. Assume respiration is unchanged in light to get gross photosynthesis.
+Exercise 4.1. Units: light in µmol photons m⁻² s⁻¹, net CO₂ in µmol m⁻² s⁻¹ (positive = net uptake). Slopes: 50 → 200 is 6/150 = 0.04 CO₂ per photon; 200 → 800 is 3/600 = 0.005, so the curve saturates. The curve answers the opening observation: in darkness only respiration remains, so net exchange is negative. At low light, rate is limited by light; at high light, by CO₂ supply and Rubisco capacity, so extra photons add little. Shade leaves have lower compensation points and lower respiration than sun leaves. Assume respiration is unchanged in light to get gross photosynthesis. The plotted curve is a smooth fit through the four table points.
+:::
+
+## Try it: a leaf under changing light, CO₂ and heat
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p3-lightcurve" data-pathway="C3" data-co2="420" data-temp="25" data-light="600"></div>
+<script src="../../demos/dist/p3-lightcurve.js"></script>
+```
+
+::: notes
+Live version of the light-response curve, for a sun leaf (a standard leaf photosynthesis model, so the numbers are larger than the shade-leaf table on the previous slide). Drag the round handle along the curve or use the Light slider; the readout gives net and gross photosynthesis, dark respiration, the CO₂ released by photorespiration and what limits the rate. Suggested sequence, about 5 minutes. (1) Tick "Zoom in on low light": find the compensation point and the respiration line, then untick. (2) Press "Keep this curve", then "Hot, dry": the curve drops, photorespiration rises (more O₂ per CO₂) and respiration doubles; this is P2's closed stomata meeting Rubisco's flaw. (3) Press "1000 ppm" (greenhouse): photorespiration falls and the plateau rises. (4) Switch to "C4 leaf (maize)" and repeat "Hot, dry": C4 keeps most of its rate because PEP carboxylase concentrates CO₂. (5) Press "Cool, 12 °C" for both C3 and C4: now C3 wins, because C4 pays 2 extra ATP per CO₂ and its enzymes are cold-sensitive. Ask the room to predict each change before you press. Reset restores the start. The figure on the previous slide is the static fallback for PDF.
 :::
 
 ## From a rate to an amount
@@ -379,53 +394,77 @@ Exercise 4.2. This is the same unit logic as the transpiration calculation in P2
 ## Sources and sinks
 
 :::: {.columns}
-::: {.column width="50%"}
-- **Source:** exports sugar. **Sink:** imports it for growth or storage.
-- The phloem carries mainly **sucrose**; chloroplasts store **starch**
-  during the day and break it down at night to keep export going.
-- An organ's role can **change**: a young leaf is a sink until it is roughly
-  half expanded, then becomes a source.
-:::
-::: {.column width="50%"}
+::: {.column width="45%"}
+- **Source:** exports sugar. **Sink:** imports it.
+- The phloem carries mainly **sucrose**.
+- Roles **change** with development.
+
 | Organ | Role |
 | --- | --- |
 | Mature, illuminated leaf | **source** |
-| Developing fruit | sink |
-| Root tip | sink |
+| Developing fruit, root tip | sink |
 | Young, expanding leaf | sink |
-| Potato tuber sprouting in spring | **source** |
+| Tuber sprouting in spring | **source** |
+:::
+::: {.column width="55%"}
+
+![](figures/potato-tuber-sprouting.jpg){width="100%" height="340" fig-alt="A potato tuber with green leafy shoots growing from its eyes."}
+
+[Photo: Bmerva, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lateral_View_of_sprouting_potato.JPG){.credit}
 :::
 ::::
 
 **What pushes sap from a source to a sink?**
 
 ::: notes
-Exercises 5.1 and 5.3. The sprouting tuber is the important case: a storage organ that was a sink last summer becomes a source when its starch is mobilised for the new shoot. Source and sink describe current carbon flow, not organ type. Starch in chloroplasts buffers export over the day–night cycle.
+Exercises 5.1 and 5.3. The sprouting tuber in the photo is the important case: a storage organ that was a sink last summer becomes a source when its starch is mobilised for the new shoots. Source and sink describe current carbon flow, not organ type. A young leaf is a sink until it is roughly half expanded, then becomes a source. Chloroplasts store starch during the day and break it down at night to keep sucrose export going.
 :::
 
 ## Pressure flow in the phloem
 
-```{mermaid}
-%%| fig-width: 12
-flowchart LR
-  A["Source: sucrose loaded<br/>into sieve tubes"] --> B["Water enters<br/>from xylem"]
-  B --> C["High pressure<br/>at source"]
-  C --> D["Bulk flow<br/>along sieve tube"]
-  D --> E["Sink: sucrose unloaded,<br/>water leaves"]
-```
-
-1. Sucrose is **loaded** into the sieve-element–companion-cell complex
-   (often H⁺-coupled, using the P2 proton gradient).
-2. Ψs falls, **water enters** from the xylem by osmosis.
+:::: {.columns}
+::: {.column width="40%"}
+1. Sucrose is **loaded** into sieve tubes (often H⁺-coupled).
+2. Ψs falls; **water enters** from the xylem.
 3. **Pressure rises** at the source (~1 MPa).
-4. Sap moves by **bulk flow** towards the sink, ~1 m per hour.
-5. Sucrose is **unloaded** at the sink; water leaves, pressure stays low.
+4. Sap moves by **bulk flow**, ~1 m h⁻¹.
+5. Sucrose is **unloaded** at the sink; water leaves.
+:::
+::: {.column width="60%"}
 
-**Bulk flow driven by osmosis: water potential (P2) running a second
-transport system.**
+![](figures/pressure-flow.svg){width="100%" height="360" fig-alt="Pressure-flow model: at the source sucrose is loaded into the sieve tube and water follows from the xylem, giving high pressure; sap flows in bulk to the sink, where sucrose is unloaded and water returns to the xylem."}
+
+:::
+::::
+
+**Water potential (P2) running a second transport system.**
 
 ::: notes
-Exercise 5.2 asks for this order. This is the Münch pressure-flow model. It reuses every idea from P2: Ψs = −cRT drives water entry, Ψp builds up, and flow goes from high to low pressure. Direction is set by where sources and sinks are, so phloem can move sap up or down, unlike xylem. Transition: what the sink does with the sugar.
+Exercise 5.2 asks for this order. This is the Münch pressure-flow model. It reuses every idea from P2: Ψs = −cRT drives water entry, Ψp builds up, and flow goes from high to low pressure. Loading uses the proton gradient from P2. Direction is set by where sources and sinks are, so phloem can move sap up or down, unlike xylem. Next: how do we know the sap is under pressure?
+:::
+
+## Evidence: aphids tap the sieve tubes
+
+:::: {.columns}
+::: {.column width="42%"}
+- An aphid's mouthparts (**stylet**) enter **one sieve element**.
+- Cut the stylet: sap **keeps flowing out for hours**, pushed by the
+  pressure inside.
+- The sap is mostly **sucrose**, often 0.3–1 M.
+- Aphids excrete surplus sugar as **honeydew** drops.
+:::
+::: {.column width="58%"}
+
+![](figures/aphids-on-stem.jpg){width="100%" height="340" fig-alt="A dense colony of dark aphids feeding on a nasturtium stem."}
+
+[Photo: Lamiot, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Aphids_on_nasturtium_stem_1730b.JPG){.credit}
+:::
+::::
+
+**Then what does the sink do with the sugar?**
+
+::: notes
+The aphid stylet technique is the classic evidence for the pressure-flow model: the aphid does not pump, the sap is forced into its gut by the sieve-tube pressure, and a severed stylet bleeds pure phloem sap that can be collected and analysed. The sap is a concentrated sucrose solution with amino acids and ions, so aphids take in far more sugar than they need and excrete the rest as honeydew, which ants collect. The photo shows a colony on a nasturtium stem: every aphid has its stylet in a sieve element. Transition: the sink uses the sugar, either in respiration or as carbon skeletons.
 :::
 
 ## Using the sugar: respiration

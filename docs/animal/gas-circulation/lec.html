@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bf56578b9c06c165c166475cd19dbcd1.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-07645afa0a6c315d6eef0efcfd2eeacf.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -137,9 +137,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -184,27 +181,16 @@ Animal and Plant Physiology
 </section>
 <section id="the-path-of-oxygen-bulk-flow-and-diffusion-alternate" class="slide level2">
 <h2>The path of oxygen: bulk flow and diffusion alternate</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Air] --&gt;|bulk flow:&lt;br/&gt;ventilation| B[Alveoli]
-  B --&gt;|diffusion| C[Lung&lt;br/&gt;capillary]
-  C --&gt;|bulk flow:&lt;br/&gt;circulation| D[Muscle&lt;br/&gt;capillary]
-  D --&gt;|diffusion| E[Mitochondrion]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
 <li><strong>Bulk flow</strong> moves the whole fluid, driven by a <strong>pressure</strong> difference. Fast over any distance, but needs a pump.</li>
-<li><strong>Diffusion</strong> moves molecules down a <strong>partial-pressure</strong> difference. Fast only over micrometres (A1: <span class="math inline">t \approx x^2/2D</span>).</li>
-<li>So every animal places its diffusion steps across <strong>thin</strong> barriers and uses bulk flow for the long distances.</li>
+<li><strong>Diffusion</strong> moves molecules down a <strong>partial-pressure</strong> difference. Fast only over µm (A1: <span class="math inline">t \approx x^2/2D</span>).</li>
+<li>So diffusion steps cross <strong>thin</strong> barriers; bulk flow covers the long distances.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/o2-route.svg" style="width:100.0%" alt="Oxygen moves from air to alveolus by ventilation, diffuses into the lung capillary, is carried by the circulation to a muscle capillary and diffuses into the mitochondrion." height="360"></p>
+</div></div>
 <p><strong>What exactly drives the diffusion steps?</strong></p>
 <aside class="notes">
 <p>Exercise 1.1 asks students to classify these four steps. This is A1’s “three solutions” turned into a route. Ventilation and circulation are the two pumps; the alveolar wall and the muscle capillary wall are the two diffusion steps, each less than a few micrometres. Emphasise the different drivers: total pressure for bulk flow, partial pressure for diffusion. The next slide defines partial pressure.</p>
@@ -223,38 +209,17 @@ Animal and Plant Physiology
 <section id="partial-pressure-drives-diffusion" class="slide level2">
 <h2>Partial pressure drives diffusion</h2>
 <p><strong>Partial pressure</strong> = the share of the total pressure due to one gas (Dalton’s law): <span class="math inline">P_{\rm O_2} = F_{\rm O_2} \times P_{\rm total}</span></p>
-<p>Dry air at sea level: <span class="math inline">0.209 \times 101.3\ \text{kPa} = 21.2\ \text{kPa}</span> (159 mmHg).</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Location</th>
-<th style="text-align: right;"><span class="math inline">P_{\rm O_2}</span> (kPa)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Dry air</td>
-<td style="text-align: right;">21.2</td>
-</tr>
-<tr class="even">
-<td>Alveolar air</td>
-<td style="text-align: right;">13.3</td>
-</tr>
-<tr class="odd">
-<td>Arterial blood</td>
-<td style="text-align: right;">~13</td>
-</tr>
-<tr class="even">
-<td>Mixed venous blood</td>
-<td style="text-align: right;">5.3</td>
-</tr>
-<tr class="odd">
-<td>Mitochondria</td>
-<td style="text-align: right;">&lt; 1</td>
-</tr>
-</tbody>
-</table>
-<p>O₂ moves <strong>down this cascade</strong> at every diffusion step. In a liquid, <span class="math inline">P_{\rm O_2}</span> refers to the <strong>dissolved</strong> O₂ only. 1 kPa = 7.5 mmHg.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Dry air at sea level: <span class="math inline">0.209 \times 101.3 = 21.2</span> kPa (159 mmHg).</p>
+<ul>
+<li>O₂ moves <strong>down this cascade</strong> at every diffusion step.</li>
+<li>In a liquid, <span class="math inline">P_{\rm O_2}</span> refers to the <strong>dissolved</strong> O₂ only.</li>
+<li>1 kPa = 7.5 mmHg.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/po2-cascade.svg" style="width:100.0%" alt="Bar chart of PO2: dry air 21.2 kPa, alveolar air 13.3, arterial blood 13, mixed venous blood 5.3, mitochondria below 1." height="360"></p>
+</div></div>
 <p><strong>How fast does it cross each barrier?</strong></p>
 <aside class="notes">
 <p>Exercise 1.2 is the Dalton calculation. Alveolar P_O2 is lower than in air because inspired air is humidified and mixes with air already in the lungs, and O₂ is constantly removed. The mitochondria act as the sink that keeps the whole cascade going. Point out that diffusion follows partial pressure, not concentration: this matters later when blood with haemoglobin holds far more O₂ than water at the same P_O2.</p>
@@ -431,15 +396,38 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
-<section id="fish-gills-countercurrent-exchange" class="slide level2">
-<h2>Fish gills: countercurrent exchange</h2>
+<section id="fish-gills-a-one-way-flow-over-thin-lamellae" class="slide level2">
+<h2>Fish gills: a one-way flow over thin lamellae</h2>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:40%;">
 <ul>
 <li>Gill arches → filaments → <strong>secondary lamellae</strong>, the exchange surface.</li>
 <li>Water flows <strong>one way</strong>: mouth → gills → operculum.</li>
 <li>Blood in the lamellae flows <strong>opposite</strong> to the water.</li>
+<li>Fish extract up to <strong>80 %</strong> of the O₂ in the water; a mammal removes ~25 % of the O₂ in each breath.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/fish-gills.jpg" style="width:100.0%" alt="Two gill arches dissected from a fish, each carrying rows of dark red, comb-like gill filaments." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Fish_gills.jpg" class="credit">Photo: Krishna satya 333, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div></div>
+<aside class="notes">
+<p>Exercise 2.1a: the exchange structure is the secondary lamella. In the photo the red, feathery structures are the filaments on each gill arch; their colour comes from the blood running just below a very thin surface. Each filament carries hundreds of tiny plate-like secondary lamellae, too small to see here, and it is in those that blood flows against the water. Ask why fish gills collapse and stop working in air: without water to hold them apart the filaments stick together and the surface area is lost.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="countercurrent-exchange" class="slide level2">
+<h2>Countercurrent exchange</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <p>Water flows 1 → 4; blood flows 4 → 1:</p>
 <table class="caption-top">
 <thead>
@@ -453,14 +441,14 @@ Animal and Plant Physiology
 </thead>
 <tbody>
 <tr class="odd">
-<td>Water <span class="math inline">P_{\rm O_2}</span> (kPa)</td>
+<td>Water (kPa)</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">15</td>
 <td style="text-align: right;">10</td>
 <td style="text-align: right;">5</td>
 </tr>
 <tr class="even">
-<td>Blood <span class="math inline">P_{\rm O_2}</span> (kPa)</td>
+<td>Blood (kPa)</td>
 <td style="text-align: right;">17</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">7</td>
@@ -475,18 +463,16 @@ Animal and Plant Physiology
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:55%;">
 <ul>
-<li>Blood <strong>enters</strong> at 2 kPa (position 4) and <strong>leaves</strong> at 17 kPa (position 1).</li>
-<li>Water enters at 20 kPa and leaves at 5 kPa.</li>
-<li>At every position O₂ diffuses <strong>from water to blood</strong>, down a local gradient. Nothing moves uphill.</li>
-<li>A gradient exists <strong>along the whole lamella</strong>, so the blood leaves with a higher <span class="math inline">P_{\rm O_2}</span> than the water leaving.</li>
-<li>Fish extract up to <strong>80 %</strong> of the O₂ in the water; a mammal removes about 25 % of the O₂ in each breath.</li>
+<li>At every position O₂ diffuses <strong>from water to blood</strong>: nothing moves uphill.</li>
+<li>The gradient lasts <strong>along the whole lamella</strong>, so blood leaves (17 kPa) richer than the water leaving (5 kPa).</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/countercurrent.svg" style="width:100.0%" alt="Two panels of PO2 along the lamella. Countercurrent: water falls from 20 to 5 kPa and blood, flowing the other way, rises from 2 to 17 kPa with a constant 3 kPa gap. Co-current: both approach 11 kPa and the gap vanishes." height="360"></p>
 </div></div>
 <p><strong>Would flowing the same direction work as well?</strong></p>
 <aside class="notes">
-<p>Exercise 2.2 has a table of this form; students must read the inlet and outlet of each stream correctly. Water enters at position 1, blood enters at position 4. The key observation is the constant local difference: wherever we look, water is slightly richer than the blood beside it. Exercise 2.1a: the exchange structure is the secondary lamella. The next slide shows the co-current alternative with the same inlets.</p>
+<p>Exercise 2.2 has a table of this form; students must read the inlet and outlet of each stream correctly. Water enters at position 1, blood enters at position 4. The key observation is the constant local difference: wherever we look, water is slightly richer than the blood beside it. The figure plots the same numbers as continuous profiles (left) and, for comparison, the co-current arrangement with the same exchanger (right); the next slide puts numbers on that alternative.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -578,21 +564,13 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
-<section id="mammalian-lungs-tidal-ventilation" class="slide level2">
-<h2>Mammalian lungs: tidal ventilation</h2>
-<ul>
-<li>Trachea → bronchi → bronchioles → <strong>alveoli</strong>: about 300–500 million of them, ~100 m² in total.</li>
-<li><strong>Tidal:</strong> air flows in and out through the <strong>same</strong> airways.</li>
-<li>The conducting airways do not exchange gas: they are <strong>anatomical dead space</strong>, about 150 mL.</li>
-<li>Resting breath (tidal volume) ~500 mL, 12 breaths per minute:</li>
-</ul>
-<p><span class="math display">\text{alveolar ventilation} = (500-150)\ \text{mL} \times 12\ \text{min}^{-1} = 4.2\ \text{L min}^{-1}</span></p>
-<ul>
-<li>Fresh air mixes with stale air left in the lungs, so alveolar <span class="math inline">P_{\rm O_2}</span> (13.3 kPa) stays well below that of air (21.2 kPa).</li>
-</ul>
-<p><strong>Is tidal flow the only way to ventilate a lung?</strong></p>
+<section id="try-it-countercurrent-versus-co-current" class="slide level2">
+<h2>Try it: countercurrent versus co-current</h2>
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a3-countercurrent"></div>
+<script src="../../demos/dist/a3-countercurrent.js"></script>
 <aside class="notes">
-<p>Exercise 2.3a and 2.3d. Each breath, the last 150 mL inhaled stays in the airways and is breathed out unchanged. That is why slow deep breathing ventilates the alveoli more effectively than fast shallow breathing at the same total ventilation: 250 mL breaths at 24 per minute give only (250 − 150) × 24 = 2.4 L min⁻¹. Exercise 2.1b: exchange occurs in the alveoli. Tidal ventilation is the weakness the bird lung avoids.</p>
+<p>A model gill lamella. The two bands at the top are the water and blood streams coloured by PO₂ (red = rich, slate = poor); the plot shows the same along the lamella, with the other arrangement dashed. Start with countercurrent at the defaults: blood leaves at 17 kPa, the table from two slides back. Click Co-current: blood can now only reach 11 kPa, the same as the water leaving, and the gold gap closes early on, so the second half of the lamella is wasted. Then drag “Exchanger size” up in both modes: co-current never gets past the mixed value, countercurrent keeps improving towards 20 kPa. Finally move “Blood ÷ water flow”: in countercurrent, when blood flow is low the blood comes close to the inlet water; when it is high the water is stripped of O₂ instead. Fish adjust both ventilation and perfusion of the lamellae. Teaching simplification: blood O₂ content is treated as proportional to PO₂ (no haemoglobin curve).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -605,30 +583,82 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
-<section id="birds-and-insects-two-other-solutions" class="slide level2">
-<h2>Birds and insects: two other solutions</h2>
+<section id="mammalian-lungs-tidal-ventilation" class="slide level2">
+<h2>Mammalian lungs: tidal ventilation</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Bird lung</strong></p>
+<div class="column" style="width:45%;">
 <ul>
-<li>Small, rigid lungs with <strong>parabronchi</strong>; exchange in <strong>air capillaries</strong> (3–10 µm) branching from them.</li>
-<li><strong>Air sacs</strong> are bellows: they ventilate the lung but do <strong>not</strong> exchange gas.</li>
-<li>Air passes through the parabronchi in <strong>one direction</strong>, during both inspiration and expiration (two breath cycles per parcel of air).</li>
-<li>No dead space in the exchange region; blood flows across the air stream (<strong>cross-current</strong>).</li>
+<li>Trachea → bronchi → bronchioles → <strong>alveoli</strong>: 300–500 million, ~100 m².</li>
+<li><strong>Tidal:</strong> air flows in and out through the <strong>same</strong> airways.</li>
+<li>Conducting airways are <strong>dead space</strong>, ~150 mL.</li>
+<li>Breaths of 500 mL, 12 min⁻¹: <span class="math inline">(500-150) \times 12 = 4.2</span> L min⁻¹ reaches the alveoli.</li>
+<li>Fresh air mixes with stale air, so alveolar <span class="math inline">P_{\rm O_2}</span> (13.3 kPa) stays below air (21.2 kPa).</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Insect tracheal system</strong></p>
+</div><div class="column" style="width:55%;">
+<p><img data-src="figures/lung-alveoli.jpg" style="width:100.0%" alt="Micrograph of normal lung: a bronchiole with surrounding alveoli, thin-walled air spaces separated by delicate septa." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Normal_lung_(5414785258).jpg" class="credit">Photo: Yale Rosen from USA, CC BY-SA 2.0, Wikimedia Commons</a></p>
+</div></div>
+<p><strong>Is tidal flow the only way to ventilate a lung?</strong></p>
+<aside class="notes">
+<p>Exercise 2.3a and 2.3d. In the micrograph, the bronchiole is a conducting airway (dead space); the lace-like air spaces around it are alveoli, whose walls are so thin that they are barely visible at this magnification: that is Fick’s large A and small L made visible. Each breath, the last 150 mL inhaled stays in the airways and is breathed out unchanged. That is why slow deep breathing ventilates the alveoli more effectively than fast shallow breathing at the same total ventilation: 250 mL breaths at 24 per minute give only (250 − 150) × 24 = 2.4 L min⁻¹. Exercise 2.1b: exchange occurs in the alveoli. Tidal ventilation is the weakness the bird lung avoids.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bird-lungs-one-way-flow" class="slide level2">
+<h2>Bird lungs: one-way flow</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li><strong>Spiracles</strong> → <strong>tracheae</strong> → <strong>tracheoles</strong> (&lt; 1 µm), ending within a few µm of mitochondria.</li>
-<li>O₂ travels in the <strong>gas phase</strong> almost to the cell: diffusion in air is ~10 000× faster than in water.</li>
-<li>Active insects ventilate by pumping the abdomen.</li>
-<li><strong>Haemolymph carries little O₂</strong>; the circulation transports nutrients and wastes.</li>
+<li>Small, rigid lungs with <strong>parabronchi</strong>; exchange in <strong>air capillaries</strong> (3–10 µm).</li>
+<li><strong>Air sacs</strong> are bellows: they ventilate but do <strong>not</strong> exchange gas.</li>
+<li>Air passes the parabronchi in <strong>one direction</strong> during both inspiration and expiration.</li>
+<li>No dead space in the exchange region; blood crosses the air stream (<strong>cross-current</strong>).</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/bird-air-sacs.jpg" style="width:100.0%" alt="Illustration of a bird skeleton in flight showing the small lung with anterior air sacs in front of it and posterior air sacs behind it." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Dino_bird_h.jpg" class="credit">Photo: Zina Deretsky, National Science Foundation, Public domain, Wikimedia Commons</a></p>
+</div></div>
+<aside class="notes">
+<p>Exercise 2.1c and 2.3b. The illustration (cropped from an NSF comparison with a theropod dinosaur, whose bones show the same air-sac connections) shows how much of a bird’s body is taken up by air sacs; the lung itself is small and does not change volume. Air takes two breath cycles to pass through: inspiration 1 fills the posterior sacs, expiration 1 pushes that air through the lung, inspiration 2 moves it into the anterior sacs and expiration 2 sends it out. The result is that the lung always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="insects-air-piped-to-the-cells" class="slide level2">
+<h2>Insects: air piped to the cells</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><strong>Spiracles</strong> → <strong>tracheae</strong> → <strong>tracheoles</strong> (&lt; 1 µm), within a few µm of mitochondria.</li>
+<li>O₂ travels in <strong>air</strong> almost to the cell: ~10 000× faster diffusion than in water.</li>
+<li>Active insects pump the abdomen.</li>
+<li><strong>Haemolymph carries little O₂.</strong></li>
 <li>Spiracles close to limit water loss.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/insect-trachea.jpg" style="width:100.0%" alt="Light micrograph of an insect trachea teased out on a slide: a branching tube stiffened by fine spiral rings." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Insect_trachea_100x.jpg" class="credit">Photo: Tgru001, CC0, Wikimedia Commons</a></p>
 </div></div>
 <p><strong>In vertebrates, blood carries the O₂. But O₂ dissolves poorly in water. How does blood hold enough?</strong></p>
 <aside class="notes">
-<p>Exercise 2.1c, 2.1d, 2.3b and 2.3c. The bird lung gets around the dead-space problem of tidal breathing: the lung itself always receives fresh air flowing one way, which is part of why birds can fly at altitudes where mammals struggle. The insect is A1’s other solution: skip the blood and bring air to the tissue. The limit is the diffusion distance along the tracheae, which is one reason insects stay small. Transition back to vertebrates and the problem of carrying O₂ in a watery fluid.</p>
+<p>Exercise 2.1d and 2.3c. The micrograph shows a trachea teased out of an insect: the fine spiral rings (taenidia) of cuticle keep the tube open, like the cartilage rings of our own trachea. The insect is A1’s other solution: skip the blood and bring air to the tissue. The limit is the diffusion distance along the tracheae, which is one reason insects stay small. Transition back to vertebrates and the problem of carrying O₂ in a watery fluid.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -641,40 +671,16 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
-<section id="haemoglobin-pressure-saturation-and-content" class="slide level2">
+<section id="haemoglobin-pressure-saturation-and-content" class="slide level2 smaller">
 <h2>Haemoglobin: pressure, saturation and content</h2>
-<p>Plasma dissolves only ~3 mL O₂ L⁻¹ at arterial <span class="math inline">P_{\rm O_2}</span>. Haemoglobin raises this about 65-fold.</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Quantity</th>
-<th>Meaning</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">P_{\rm O_2}</span></td>
-<td>Pressure of the <strong>dissolved</strong>, unbound O₂</td>
-<td>kPa or mmHg</td>
-</tr>
-<tr class="even">
-<td><strong>Saturation</strong></td>
-<td>% of haemoglobin O₂-binding sites occupied</td>
-<td>%</td>
-</tr>
-<tr class="odd">
-<td><strong>O₂ content</strong></td>
-<td>Total O₂ (bound + dissolved) per volume of blood</td>
-<td>mL O₂ L⁻¹</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:62%;">
+<p>Plasma dissolves only ~3 mL O₂ L⁻¹; haemoglobin raises this ~65-fold.</p>
+<ul>
+<li><span class="math inline">P_{\rm O_2}</span>: pressure of the <strong>dissolved</strong>, unbound O₂ (kPa).</li>
+<li><strong>Saturation:</strong> % of Hb binding sites occupied.</li>
+<li><strong>O₂ content:</strong> total O₂ per litre of blood (mL O₂ L⁻¹).</li>
+</ul>
 <p>Content = [Hb] × 1.34 mL O₂ g⁻¹ × saturation:</p>
 <table class="caption-top">
 <thead>
@@ -706,9 +712,13 @@ Animal and Plant Physiology
 </tr>
 </tbody>
 </table>
-<p><strong>Anaemia:</strong> same <span class="math inline">P_{\rm O_2}</span>, same saturation, <strong>less content</strong>.</p>
+<p><strong>Anaemia:</strong> same <span class="math inline">P_{\rm O_2}</span> and saturation, <strong>less content</strong>.</p>
+</div><div class="column" style="width:38%;">
+<p><img data-src="figures/red-blood-cells-sem.jpg" style="width:100.0%" alt="Scanning electron micrograph of human blood: many biconcave disc-shaped red blood cells, with a few white blood cells and platelets." height="400"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:SEM_blood_cells.jpg" class="credit">Photo: Bruce Wetzel (photographer). Harry Schaefer (photographer), Public domain, Wikimedia Commons</a></p>
+</div></div>
 <aside class="notes">
-<p>Exercises 3.1 and 3.2. The three quantities are the most common source of confusion in this unit. P_O2 is set by the gas the blood equilibrated with; saturation is set by P_O2 through the dissociation curve; content then depends on how much haemoglobin there is. The anaemic patient has normal arterial P_O2 and saturation, because their lungs work, but each litre of blood carries a third less O₂. The 1.34 mL per gram is the maximum binding capacity. Transition: how does saturation depend on P_O2?</p>
+<p>Exercises 3.1 and 3.2. The three quantities are the most common source of confusion in this unit. P_O2 is set by the gas the blood equilibrated with; saturation is set by P_O2 through the dissociation curve; content then depends on how much haemoglobin there is. The anaemic patient has normal arterial P_O2 and saturation, because their lungs work, but each litre of blood carries a third less O₂. The 1.34 mL per gram is the maximum binding capacity. The micrograph shows where the haemoglobin is: packed inside biconcave red cells, about 7 µm across, whose shape gives a large surface and a short diffusion distance to every haemoglobin molecule. Transition: how does saturation depend on P_O2?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -723,51 +733,20 @@ Animal and Plant Physiology
 </section>
 <section id="the-dissociation-curve-is-sigmoid" class="slide level2">
 <h2>The dissociation curve is sigmoid</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">P_{\rm O_2}</span> (kPa)</th>
-<th style="text-align: right;">Saturation</th>
-<th>Where</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">13.3</td>
-<td style="text-align: right;">~98 %</td>
-<td>Arterial blood leaving the lung</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">~90 %</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5.3</td>
-<td style="text-align: right;">~75 %</td>
-<td>Mixed venous blood at rest</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">3.5</td>
-<td style="text-align: right;">50 %</td>
-<td><span class="math inline">P_{50}</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2.7</td>
-<td style="text-align: right;">~35 %</td>
-<td>Venous blood from exercising muscle</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li><strong>Why S-shaped?</strong> Haemoglobin has <strong>four subunits</strong> that bind O₂ <strong>cooperatively</strong>: each bound O₂ raises the affinity of the others.</li>
-<li><strong>Flat top:</strong> saturation stays high even if lung <span class="math inline">P_{\rm O_2}</span> falls a little (e.g.&nbsp;at moderate altitude).</li>
+<li><strong>Why S-shaped?</strong> Four subunits bind O₂ <strong>cooperatively</strong>: each bound O₂ raises the affinity of the others.</li>
+<li><strong>Flat top:</strong> still ~90 % saturated at 8 kPa, e.g.&nbsp;at moderate altitude.</li>
 <li><strong>Steep middle:</strong> a small fall in tissue <span class="math inline">P_{\rm O_2}</span> releases much O₂.</li>
-<li>At rest only ~25 % of the O₂ is unloaded: a large <strong>reserve</strong> for exercise.</li>
+<li>At rest only ~25 % is unloaded: a <strong>reserve</strong> for exercise.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/dissociation-curve.svg" style="width:100.0%" alt="Sigmoid O2-haemoglobin dissociation curve. Arterial blood at 13.3 kPa is about 97 percent saturated, venous blood at rest at 5.3 kPa about 75 percent, P50 is 3.5 kPa and venous blood from exercising muscle at 2.7 kPa about 33 percent." height="360"></p>
+</div></div>
 <p><strong>Can the curve itself move to help the working muscle?</strong></p>
 <aside class="notes">
-<p>Sketch the curve with these points on the board. Exercise 3.3 asks why it is sigmoid: cooperative binding among four subunits. Myoglobin, with one subunit, gives a hyperbolic curve that lies to the left, so it takes O₂ from haemoglobin in muscle. The reserve is important for the runner: from 75 % saturation at rest, venous blood from hard-working muscle falls to about 35 %, so each litre of blood delivers more than twice as much O₂.</p>
+<p>The curve is the Hill equation with n = 2.7 and P50 = 3.5 kPa, drawn through the standard reference points: 98 % at 13.3 kPa (arterial), 75 % at 5.3 kPa (mixed venous at rest), 50 % at 3.5 kPa and about 35 % at 2.7 kPa (exercising muscle). Exercise 3.3 asks why it is sigmoid: cooperative binding among four subunits. Myoglobin, with one subunit, gives a hyperbolic curve that lies to the left, so it takes O₂ from haemoglobin in muscle. The reserve is important for the runner: from 75 % saturation at rest, venous blood from hard-working muscle falls to about 35 %, so each litre of blood delivers more than twice as much O₂.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -782,56 +761,39 @@ Animal and Plant Physiology
 </section>
 <section id="shifting-the-curve" class="slide level2">
 <h2>Shifting the curve</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Change</th>
-<th>Shift</th>
-<th>Affinity</th>
-<th>O₂ unloading in tissues</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>↑ <span class="math inline">P_{\rm CO_2}</span></td>
-<td>Right</td>
-<td>Lower</td>
-<td>Favoured</td>
-</tr>
-<tr class="even">
-<td>↓ pH (<strong>Bohr effect</strong>)</td>
-<td>Right</td>
-<td>Lower</td>
-<td>Favoured</td>
-</tr>
-<tr class="odd">
-<td>↑ Temperature</td>
-<td>Right</td>
-<td>Lower</td>
-<td>Favoured</td>
-</tr>
-<tr class="even">
-<td>↑ 2,3-BPG in red cells</td>
-<td>Right</td>
-<td>Lower</td>
-<td>Favoured</td>
-</tr>
-<tr class="odd">
-<td>The opposite of each</td>
-<td>Left</td>
-<td>Higher</td>
-<td>Reduced</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Right shift</strong> (lower affinity, more unloading): ↑ <span class="math inline">P_{\rm CO_2}</span>, ↓ pH (<strong>Bohr effect</strong>), ↑ temperature, ↑ 2,3-BPG. The opposite shifts left.</p>
 <ul>
-<li>A <strong>right shift</strong> means less O₂ bound at a given <span class="math inline">P_{\rm O_2}</span>, so more is released. The O₂ goes to the tissue; it is not lost.</li>
 <li>Working muscle is warm, acidic and high in CO₂: <strong>three of the four push right</strong> exactly where O₂ is needed.</li>
-<li>Left-shifted pigments load O₂ at low <span class="math inline">P_{\rm O_2}</span>: fetal haemoglobin, myoglobin.</li>
+<li>Loading in the lung, on the flat top, hardly changes.</li>
+<li>Left-shifted: fetal Hb, myoglobin.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/bohr-shift.svg" style="width:100.0%" alt="Two dissociation curves: normal, and right-shifted for working muscle at pH 7.2 and 39 degrees with P50 4.9 kPa. At a muscle PO2 of 2.7 kPa saturation is 33 percent on the normal curve and 20 percent on the shifted curve." height="360"></p>
+</div></div>
 <p><strong>Working muscle makes CO₂. How does the blood carry it away?</strong></p>
 <aside class="notes">
-<p>Exercise 3.4. Teach the rule as “the conditions in an active tissue shift the curve to the right”, which removes the need to memorise four separate facts. P50 rises with a right shift. Fetal haemoglobin binds 2,3-BPG poorly, so it sits to the left of maternal haemoglobin and O₂ moves from mother to fetus across the placenta. 2,3-BPG in red cells rises over days at high altitude, an example of A1’s acclimatisation. Transition: the CO₂ that shifts the curve has to be removed.</p>
+<p>Exercise 3.4. In the figure, the working-muscle curve uses pH 7.2 and 39 °C (P50 rises from 3.5 to about 4.9 kPa). At the same muscle PO2 of 2.7 kPa, an extra 16 % of the haemoglobin gives up its O2, yet at the lung’s 13.3 kPa both curves are near the top: the O2 goes to the tissue, it is not lost. Teach the rule as “the conditions in an active tissue shift the curve to the right”, which removes the need to memorise four separate facts. P50 rises with a right shift. Fetal haemoglobin binds 2,3-BPG poorly, so it sits to the left of maternal haemoglobin and O₂ moves from mother to fetus across the placenta. 2,3-BPG in red cells rises over days at high altitude, an example of A1’s acclimatisation. Transition: the CO₂ that shifts the curve has to be removed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="try-it-loading-in-the-lung-unloading-in-the-muscle" class="slide level2">
+<h2>Try it: loading in the lung, unloading in the muscle</h2>
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a3-dissociation"></div>
+<script src="../../demos/dist/a3-dissociation.js"></script>
+<aside class="notes">
+<p>Blue is the curve under lung conditions, where the blood loads at the arterial PO₂ (blue point). Red is the curve under the tissue’s own pH and temperature, where it unloads at the tissue PO₂ (red point, draggable). The gold bar is the share of haemoglobin that gives up its O₂, and the bottom line converts it to mL O₂ per litre of blood. Start at Rest: about 25 % unloaded, about 50 mL per litre, matching the a–v difference on the Fick slide. Press “Exercise, no shift”: muscle PO₂ falls to 2.7 kPa on the normal curve. Then “Exercise”: now the muscle is at pH 7.2 and 39 °C, the red curve moves right and each litre of blood delivers about 30 mL more. Ask the room which of the three changes did the most. “Altitude” lowers arterial PO₂ to 6.5 kPa: loading falls off the flat top. “Anaemia”: the percentages are unchanged but the mL delivered fall by a third, the content point from the haemoglobin slide. Model: Hill equation, n = 2.7, P50 = 3.5 kPa at pH 7.4 and 37 °C; log P50 changes by −0.48 per pH unit and +0.024 per °C.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -846,11 +808,13 @@ Animal and Plant Physiology
 </section>
 <section id="carbon-dioxide-transport" class="slide level2">
 <h2>Carbon dioxide transport</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>Form</th>
-<th style="text-align: right;">Share of CO₂ in blood</th>
+<th style="text-align: right;">Share</th>
 </tr>
 </thead>
 <tbody>
@@ -859,7 +823,7 @@ Animal and Plant Physiology
 <td style="text-align: right;">~70 %</td>
 </tr>
 <tr class="even">
-<td>Bound to haemoglobin (<strong>carbamino</strong> compounds)</td>
+<td><strong>Carbamino</strong>-Hb</td>
 <td style="text-align: right;">~20 %</td>
 </tr>
 <tr class="odd">
@@ -868,17 +832,17 @@ Animal and Plant Physiology
 </tr>
 </tbody>
 </table>
-<p>In red blood cells, <strong>carbonic anhydrase</strong> catalyses the first step:</p>
-<p><span class="math display">\mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons H^+ + HCO_3^-}</span></p>
 <ul>
-<li>HCO₃⁻ leaves the red cell in exchange for Cl⁻ (<strong>chloride shift</strong>).</li>
-<li>The H⁺ binds to haemoglobin, helping it release O₂ (Bohr effect).</li>
-<li>In the lung, the reactions run in reverse and CO₂ is breathed out.</li>
-<li>So <strong>ventilation sets blood pH</strong>: breathing faster lowers <span class="math inline">P_{\rm CO_2}</span> and raises pH.</li>
+<li><strong>Carbonic anhydrase</strong> in red cells: CO₂ + H₂O ⇌ H⁺ + HCO₃⁻.</li>
+<li>HCO₃⁻ out, Cl⁻ in (<strong>chloride shift</strong>); H⁺ on Hb helps release O₂.</li>
+<li>Reversed in the lung, so <strong>ventilation sets blood pH</strong>.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/co2-red-cell.svg" style="width:100.0%" alt="CO2 from a tissue cell enters a red blood cell, where carbonic anhydrase converts it with water to H+ and bicarbonate; bicarbonate leaves in exchange for chloride, and H+ binding to haemoglobin releases O2 to the tissue." height="360"></p>
+</div></div>
 <p><strong>Gases are loaded and unloaded. Now: what moves the blood?</strong></p>
 <aside class="notes">
-<p>Exercise 3.5. Carbonic anhydrase is one of the fastest enzymes known; without it the hydration of CO₂ would be far too slow for the short time blood spends in a capillary. The reaction links gas transport to acid–base balance: CO₂ is an acid that the lungs can remove within minutes, while the kidney adjusts bicarbonate over hours to days (A4). Transition from the gases to the pump and the circuit.</p>
+<p>Exercise 3.5. The full reaction is CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻; carbonic anhydrase speeds the first step. Breathing faster lowers P_CO2 and raises pH. Carbonic anhydrase is one of the fastest enzymes known; without it the hydration of CO₂ would be far too slow for the short time blood spends in a capillary. The reaction links gas transport to acid–base balance: CO₂ is an acid that the lungs can remove within minutes, while the kidney adjusts bicarbonate over hours to days (A4). Transition from the gases to the pump and the circuit.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -893,27 +857,16 @@ Animal and Plant Physiology
 </section>
 <section id="the-mammalian-double-circulation" class="slide level2">
 <h2>The mammalian double circulation</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  RH[Right atrium →&lt;br/&gt;right ventricle] --&gt;|pulmonary arteries| L[Lung capillaries]
-  L --&gt;|pulmonary veins| LH[Left atrium →&lt;br/&gt;left ventricle]
-  LH --&gt;|systemic arteries| T[Tissue capillaries]
-  T --&gt;|systemic veins| RH
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li><strong>Arteries</strong> carry blood <strong>away</strong> from the heart; <strong>veins</strong> carry it <strong>towards</strong> the heart. Oxygenation does not define them: the <strong>pulmonary arteries carry deoxygenated blood</strong>.</li>
-<li><strong>Valves</strong> prevent backflow: atrioventricular valves (tricuspid, mitral) and semilunar valves (pulmonary, aortic).</li>
-<li>Arterial pressure ~120/80 mmHg in the systemic circuit, ~25/8 mmHg in the pulmonary circuit: the left ventricle generates about five times the pressure of the right.</li>
+<li><strong>Arteries</strong> carry blood <strong>away</strong> from the heart, <strong>veins</strong> towards it. The <strong>pulmonary arteries carry O₂-poor blood</strong>.</li>
+<li><strong>Valves</strong> prevent backflow: tricuspid, mitral; pulmonary, aortic.</li>
+<li>Systemic ~120/80 mmHg, pulmonary ~25/8 mmHg: the left ventricle makes ~5× the pressure of the right.</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/double-circulation.svg" style="width:100.0%" alt="The right heart pumps O2-poor blood through the pulmonary arteries to the lung capillaries; pulmonary veins return O2-rich blood to the left heart, which pumps it through the aorta to the body capillaries, and veins return it to the right heart." height="360"></p>
+</div></div>
 <p><strong>Is this the only way to build a circulation?</strong></p>
 <aside class="notes">
 <p>Exercise 4.1 is the order of this loop, and 4.2a and 4.2b are the artery definition and valves. Each side of the heart pumps the same volume per minute, but the left side generates about five times the pressure, because the systemic circuit is long and has high resistance while the lung circuit is short and must keep pressure low to avoid fluid leaking into the alveoli. Transition: compare with fish and with invertebrates.</p>
@@ -1049,11 +1002,36 @@ Animal and Plant Physiology
 <ul>
 <li>Elastic arteries stretch in systole and recoil in diastole, smoothing flow.</li>
 <li>Venous return is helped by valves and by the <strong>skeletal muscle pump</strong>.</li>
-<li>In a section, a collapsed vein can look like a slit: identify vessels by <strong>wall layers</strong>, not outline (A1).</li>
 </ul>
-<p><strong>Pressure drops along the circuit. What sets how much flows where?</strong></p>
 <aside class="notes">
 <p>Exercise 4.4 is this table. Relate each wall to its job and its tissue types from A1: elastic connective tissue and smooth muscle in the artery, a single squamous endothelium in the capillary (A1’s thin barrier), thin walls and large lumens in veins, which act as a reservoir. The capillary is where the diffusion step of the O₂ route happens. Transition to the flow equation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="an-artery-and-a-vein-in-section" class="slide level2">
+<h2>An artery and a vein in section</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><strong>Artery:</strong> thick muscular wall, round, small lumen.</li>
+<li><strong>Vein:</strong> thin wall, wide or collapsed lumen; it can look like a slit.</li>
+<li>Identify vessels by <strong>wall layers</strong>, not outline (A1).</li>
+</ul>
+<p><strong>Pressure drops along the circuit. What sets how much flows where?</strong></p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/artery-vein.svg" style="width:100.0%" alt="An artery and a vein drawn side by side in cross-section, with a small capillary: the artery has a thick, round wall of elastic tissue and smooth muscle; the vein has a thin wall and a wider, flattened lumen; the capillary wall is a single endothelial cell." height="360"></p>
+</div></div>
+<aside class="notes">
+<p>This is the comparison students make in the histology practical, where artery and vein usually lie side by side in the same bundle. The artery has the thick wall of smooth muscle and elastic tissue and a round lumen. The vein beside it carries the same flow back at a much lower pressure, so it needs only a thin wall; its lumen is wider and often collapsed or irregular in a fixed section. The capillary, shown as a small inset, is a single endothelial cell around a lumen barely wide enough for one red cell. Transition: in this circuit, pressure falls from the aorta to the veins; what decides how much blood each organ receives?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1069,40 +1047,17 @@ Animal and Plant Physiology
 <section id="pressure-resistance-and-flow" class="slide level2">
 <h2>Pressure, resistance and flow</h2>
 <p><span class="math display">Q = \frac{\Delta P}{R} \qquad\qquad R \propto \frac{1}{r^4}</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>Flow <span class="math inline">Q</span> is driven by a pressure difference <span class="math inline">\Delta P</span> and opposed by resistance <span class="math inline">R</span>, like current in Ohm’s law.</li>
-<li>Resistance depends steeply on radius (Poiseuille):</li>
+<li>Flow <span class="math inline">Q</span> is driven by <span class="math inline">\Delta P</span> and opposed by resistance <span class="math inline">R</span>, like current in Ohm’s law.</li>
+<li>Poiseuille: halve <span class="math inline">r</span> → <span class="math inline">16R</span>, <span class="math inline">Q/16</span>; widen by 19 % → <span class="math inline">R/2</span>, <span class="math inline">2Q</span>.</li>
+<li><strong>Arterioles</strong> have smooth muscle, so they decide <strong>which tissues get the blood</strong>.</li>
+<li>Exercise: muscle arterioles dilate, gut arterioles constrict.</li>
 </ul>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Radius</th>
-<th style="text-align: right;">Resistance</th>
-<th style="text-align: right;">Flow at constant <span class="math inline">\Delta P</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;"><span class="math inline">r</span></td>
-<td style="text-align: right;"><span class="math inline">R</span></td>
-<td style="text-align: right;"><span class="math inline">Q</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><span class="math inline">r/2</span></td>
-<td style="text-align: right;"><span class="math inline">16R</span></td>
-<td style="text-align: right;"><span class="math inline">Q/16</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><span class="math inline">1.19\,r</span></td>
-<td style="text-align: right;"><span class="math inline">R/2</span></td>
-<td style="text-align: right;"><span class="math inline">2Q</span></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Arterioles</strong> have smooth muscle and control resistance, so they decide <strong>which tissues get the blood</strong>.</li>
-<li>In exercise, muscle arterioles dilate and gut arterioles constrict.</li>
-</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/radius-flow.svg" style="width:100.0%" alt="Flow at constant pressure rises with the fourth power of arteriole radius: half the radius gives one sixteenth of the flow, and 19 percent wider gives twice the flow." height="320"></p>
+</div></div>
 <p><strong>So how much blood does the heart deliver, and how much O₂ does it bring?</strong></p>
 <aside class="notes">
 <p>Exercise 4.5. Doubling resistance at constant pressure halves flow. Because resistance goes as 1/r⁴, a small change in arteriole radius has a large effect: a 19 % dilation doubles flow. This is why arterioles, not the heart, distribute blood among organs. Capillaries are individually narrow, but there are billions in parallel, so their combined resistance is lower than that of the arterioles. Transition to cardiac output.</p>
@@ -1121,7 +1076,7 @@ Animal and Plant Physiology
 <section id="cardiac-output-and-the-fick-principle" class="slide level2">
 <h2>Cardiac output and the Fick principle</h2>
 <p><strong>Cardiac output</strong> = heart rate × stroke volume</p>
-<p><strong>O₂ consumption</strong> = cardiac output × (arterial − venous O₂ content)</p>
+<p><strong>O₂ use</strong> = cardiac output × (arterial − venous O₂ content)</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1132,7 +1087,7 @@ Animal and Plant Physiology
 </thead>
 <tbody>
 <tr class="odd">
-<td>Heart rate (beats min⁻¹)</td>
+<td>Heart rate (min⁻¹)</td>
 <td style="text-align: right;">70</td>
 <td style="text-align: right;">170</td>
 </tr>
@@ -1147,12 +1102,12 @@ Animal and Plant Physiology
 <td style="text-align: right;">18.7</td>
 </tr>
 <tr class="even">
-<td>Arterial − venous O₂ (mL L⁻¹)</td>
+<td>a − v O₂ (mL L⁻¹)</td>
 <td style="text-align: right;">200 − 150 = 50</td>
 <td style="text-align: right;">200 − 50 = 150</td>
 </tr>
 <tr class="odd">
-<td><strong>O₂ consumption</strong> (mL min⁻¹)</td>
+<td><strong>O₂ use</strong> (mL min⁻¹)</td>
 <td style="text-align: right;">245</td>
 <td style="text-align: right;">2 805</td>
 </tr>
@@ -1176,45 +1131,47 @@ Animal and Plant Physiology
 </section>
 <section id="back-to-the-runner" class="slide level2">
 <h2>Back to the runner</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
 <table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Step on the O₂ route</th>
+<th>Step</th>
 <th>Change during running</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Ventilation</td>
-<td>Deeper and faster breathing: ~6 → ~100 L min⁻¹</td>
+<td>~6 → ~100 L min⁻¹</td>
 </tr>
 <tr class="even">
 <td>Lung diffusion</td>
-<td>More lung capillaries perfused: larger exchange area</td>
+<td>more capillaries perfused: larger area</td>
 </tr>
 <tr class="odd">
 <td>Arterial blood</td>
-<td>Stays ~98 % saturated (flat top of the curve)</td>
+<td>stays ~98 % saturated (flat top)</td>
 </tr>
 <tr class="even">
 <td>Heart</td>
-<td>Heart rate 70 → 170, stroke volume up: cardiac output ~4×</td>
+<td>70 → 170 beats min⁻¹: output ~4×</td>
 </tr>
 <tr class="odd">
 <td>Distribution</td>
-<td>Muscle arterioles dilate, gut arterioles constrict</td>
+<td>muscle arterioles dilate, gut constrict</td>
 </tr>
 <tr class="even">
 <td>Unloading</td>
-<td>Warm, acidic, CO₂-rich muscle shifts the curve right; venous saturation falls to ~35 %</td>
+<td>right shift; venous saturation ~35 %</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Result:</strong> O₂ consumption rises ~11× from the same 150 g L⁻¹ of haemoglobin.</p>
+<p><strong>Result:</strong> O₂ use rises ~11× with the same haemoglobin.</p>
+</div><div class="column" style="width:38%;">
+<p><img data-src="figures/runner.jpg" style="width:100.0%" alt="Legs of a marathon runner in mid-stride on a road." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Human_running_gait_-_terminal_swing_to_heel_strike_(runner_with_Asics_Metaspeed_Edge_Paris_-_2024_Ljubljana_Marathon).jpg" class="credit">Photo: Petar Milošević, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>The thin, wet surfaces that let O₂ in also let water and ions in and out. That is A4.</strong></p>
 <aside class="notes">
 <p>Close the loop to the opening question. Each row is one of today’s slides, so this is also a revision map. The two biggest contributions are cardiac output and extraction; ventilation rises much more than needed for O₂ and is driven largely by CO₂ and pH. Bridge to A4: the gill and lung surfaces we built today are large, thin and permeable, so a fish in fresh water gains water and loses ions across them, and a mammal loses water with every breath.</p>

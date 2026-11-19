@@ -86,44 +86,53 @@ This slide reuses the three solutions from A1 so students see the plant as a new
 
 ## The plant cell: compartments and boundaries
 
+:::: {.columns}
+::: {.column width="40%"}
 | Structure | Main function |
 | --- | --- |
-| **Plasma membrane** | selective control of exchange between cytoplasm and the outside |
-| **Primary cell wall** | resists deformation and sets the direction of expansion |
-| **Tonoplast** | membrane around the central vacuole |
-| **Central vacuole** | stores solutes; generates turgor; up to ~90 % of cell volume |
+| **Plasma membrane** | selects what enters and leaves |
+| **Primary wall** | resists pressure; sets the direction of growth |
+| **Tonoplast** | membrane around the vacuole |
+| **Central vacuole** | solutes and turgor; up to ~90 % of cell volume |
 | **Chloroplast** | photosynthesis |
 | **Mitochondrion** | aerobic respiration |
+:::
+::: {.column width="60%"}
 
-- The wall is **porous**: water and small solutes pass through it freely.
-  **Selection happens at the plasma membrane**, as in an animal cell.
-- So a plant cell has two boundaries outside the cytoplasm and a third around
-  the vacuole: wall, plasma membrane and tonoplast.
+![](figures/elodea-cells.jpg){width="100%" height="360" fig-alt="Elodea leaf cells under the light microscope: box-shaped cells outlined by their walls, with green chloroplasts pressed to the edges around a large clear central vacuole."}
+
+[Photo: Cimice50, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cloroplasti_Elodea.jpg){.credit}
+
+:::
+::::
+
+- The wall is **porous**: water and small solutes pass freely. **Selection
+  happens at the plasma membrane**, as in an animal cell. Three boundaries:
+  wall, plasma membrane, tonoplast.
 
 **Why does a plant cell need a huge vacuole and a strong wall?**
 
 ::: notes
-Exercise 1.1 asks students to match these structures and functions. The common error, tested in 1.4c, is to think the wall is selectively permeable. It is not: the wall resists pressure, the membrane selects. Keep the three boundaries distinct, because P2 asks which boundary water or an ion crosses at each step of uptake. The vacuole and wall work together, which is the next slide.
+In the Elodea leaf the walls outline each cell; the chloroplasts sit in a thin layer of cytoplasm pressed against the wall, because the clear central vacuole fills most of the cell (in live cells you can watch them stream around it). Exercise 1.1 asks students to match these structures and functions. The common error, tested in 1.4c, is to think the wall is selectively permeable. It is not: the wall resists pressure, the membrane selects. Keep the three boundaries distinct, because P2 asks which boundary water or an ion crosses at each step of uptake. The vacuole and wall work together, which is the next slide.
 :::
 
 ## Vacuole and turgor: a hydraulic skeleton
 
 :::: {.columns}
-::: {.column width="50%"}
-- The vacuole accumulates **solutes** (K⁺, sugars, organic acids).
-- Water follows by osmosis, and the protoplast presses on the wall.
-- The wall pushes back. The resulting pressure is **turgor pressure**,
-  typically **0.3–1 MPa** (a car tyre is ~0.2 MPa).
+::: {.column width="40%"}
+- The vacuole accumulates **solutes** (K⁺, sugars, organic acids); water
+  follows by osmosis.
+- The protoplast presses on the wall and the wall pushes back: **turgor
+  pressure**, typically **0.3–1 MPa** (a car tyre is ~0.2 MPa).
 - Turgid cells pressing on each other make a stem or leaf **rigid**.
+- The vacuole also stores pigments and defence compounds, buffers
+  cytoplasmic pH, breaks down cell material, and makes a large cell from
+  little cytoplasm.
 :::
-::: {.column width="50%"}
-**Functions of the central vacuole**
+::: {.column width="60%"}
 
-- storage of ions, sugars, acids, pigments and defence compounds
-- generation of turgor
-- regulation of cytoplasmic pH
-- degradation of cell material
-- a large cell for little cytoplasm: cheap growth
+![](figures/turgor.svg){width="100%" height="360" fig-alt="A flaccid cell takes up water into its solute-rich vacuole and becomes turgid: the protoplast pushes out on the wall and the wall resists."}
+
 :::
 ::::
 
@@ -137,49 +146,56 @@ Turgor is the plant's hydraulic skeleton: it replaces the muscle-and-bone suppor
 ## Plastids and mitochondria
 
 :::: {.columns}
-::: {.column width="50%"}
-| Plastid | Function | Where |
-| --- | --- | --- |
-| **Proplastid** | precursor | meristems |
-| **Chloroplast** | photosynthesis | green tissue |
-| **Amyloplast** | starch storage | tubers, seeds, root cap |
-| **Chromoplast** | pigments | petals, fruits |
+::: {.column width="40%"}
+| Plastid | Role; where |
+| --- | --- |
+| **Proplastid** | precursor; meristems |
+| **Chloroplast** | photosynthesis; green tissue |
+| **Amyloplast** | starch; tubers, seeds, root cap |
+| **Chromoplast** | pigments; petals, fruits |
+
+All develop from proplastids: a chloroplast is **one type** of plastid.
 :::
-::: {.column width="50%"}
-- All plastids develop from proplastids. A chloroplast is **one type** of
-  plastid.
-- Most root cells have **no** functioning chloroplasts.
-- **Every living plant cell respires.** Leaf mitochondria work in the light
-  and in the dark.
-- A leaf both fixes CO₂ (chloroplast) and releases CO₂ (mitochondrion).
+::: {.column width="60%"}
+
+![](figures/potato-amyloplasts.jpg){width="100%" height="360" fig-alt="Potato tuber cells stained with iodine: many dark blue-black starch-filled amyloplasts inside each cell."}
+
+[Photo: Aleromjar1403, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Potato_amyloplasts_stained_with_Lugol%E2%80%99s_solution.jpg){.credit}
+
 :::
 ::::
+
+- Most root cells have **no** functioning chloroplasts.
+- **Every living plant cell respires**, in light and dark: a leaf both fixes
+  CO₂ (chloroplast) and releases it (mitochondrion).
 
 **So the cell has the parts. How does a cell enclosed in a wall manage to grow?**
 
 ::: notes
-Exercise 1.4 tests three misconceptions: all plastids are chloroplasts; leaves respire only at night; roots photosynthesise. The point that a green leaf both fixes and releases CO₂ returns in P3, where the light-response curve has a negative value in darkness and the compensation point is where the two balance. Transition to the wall and growth.
+The photo is a potato tuber, an organ with no chloroplasts at all: iodine stains the starch in its amyloplasts blue-black. Exercise 1.4 tests three misconceptions: all plastids are chloroplasts; leaves respire only at night; roots photosynthesise. The point that a green leaf both fixes and releases CO₂ returns in P3, where the light-response curve has a negative value in darkness and the compensation point is where the two balance. Transition to the wall and growth.
 :::
 
 ## The cell wall
 
 :::: {.columns}
-::: {.column width="50%"}
-**Primary wall** (all growing cells, ~0.1–1 µm thick)
+::: {.column width="40%"}
+**Primary wall** (growing cells, ~0.1–1 µm)
 
-- **Cellulose microfibrils:** the load-bearing component, a few nm wide.
-- Embedded in a matrix of **hemicelluloses, pectins** and proteins.
+- **Cellulose microfibrils**, a few nm wide, carry the load, in a matrix of
+  **hemicelluloses, pectins** and proteins.
 - Microfibrils wound **transversely**, like hoops around a barrel, let the
   cell lengthen but not widen.
-:::
-::: {.column width="50%"}
-**Secondary wall** (some cells, after growth stops)
 
-- Laid down **inside** the primary wall.
-- Thicker, often reinforced with **lignin**.
-- Gives rigid support and stops xylem conduits from collapsing under
-  tension.
-- Wood is mostly secondary wall.
+**Secondary wall** (after growth stops)
+
+- Laid down **inside** the primary wall; thicker, often with **lignin**.
+- Rigid support; stops xylem conduits collapsing under tension. Wood is
+  mostly secondary wall.
+:::
+::: {.column width="60%"}
+
+![](figures/wall-microfibrils.svg){width="100%" height="360" fig-alt="Under turgor, a cell with transverse cellulose hoops lengthens but hardly widens, while a cell with randomly oriented microfibrils expands in all directions."}
+
 :::
 ::::
 
@@ -192,40 +208,57 @@ Exercise 2.1 asks for cellulose as the load-bearing component and lignin as the 
 
 ## How a walled cell grows
 
+:::: {.columns}
+::: {.column width="40%"}
 1. **Turgor** supplies the force: water uptake pushes on the wall.
-2. The wall is **loosened**: bonds between microfibrils and matrix are cut or
-   slip (expansins, activated at low wall pH), so the wall **yields** and
-   extends irreversibly.
-3. **New material** is added: wall polymers (cellulose made at the plasma
-   membrane, matrix from the Golgi) and **new plasma membrane**.
+2. The wall is **loosened**: H⁺ pumped into the wall lowers its pH and
+   activates **expansins**; tethers slip and the wall **yields**
+   irreversibly.
+3. **New material** is added: cellulose made at the plasma membrane, matrix
+   from the Golgi, and **new plasma membrane**.
 
-- Turgor without wall loosening gives a turgid cell that **does not grow**.
-- Most of the volume gained is **vacuole**: a root cell can lengthen more
-  than 10-fold with little increase in cytoplasm.
+Turgor without loosening gives a turgid cell that **does not grow**. Most
+of the volume gained is **vacuole**.
+:::
+::: {.column width="60%"}
+
+![](figures/acid-growth.svg){width="100%" height="360" fig-alt="In a neutral wall, matrix tethers hold the cellulose microfibrils together. Pumping H+ into the wall activates expansins, the tethers slip, and turgor pulls the microfibrils apart."}
+
+:::
+::::
 
 **Cells are now walled boxes. How do neighbouring cells exchange material?**
 
 ::: notes
-This is the answer to the previous slide and to exercise 2.2: the wall property that must change is extensibility (loosening), and the materials to supply are new wall and new membrane. Mention acid growth briefly, because auxin acts this way in P4. Stress that growth is mostly water uptake into the vacuole, which is why cell expansion is fast and cheap compared with making new cytoplasm.
+This is the answer to the previous slide and to exercise 2.2: the wall property that must change is extensibility (loosening), and the materials to supply are new wall and new membrane. The figure is acid growth: a plasma-membrane H⁺-ATPase acidifies the wall, expansins become active at the lower pH and let the load-bearing microfibrils slide apart, and turgor then does the stretching. Auxin works this way in P4. Stress that growth is mostly water uptake into the vacuole: a root cell can lengthen more than 10-fold with little increase in cytoplasm, which is why expansion is fast and cheap compared with making new cytoplasm. The next slide lets students play with the two ingredients.
+:::
+
+## Try it: turgor and wall loosening
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p1-cellgrowth"></div>
+<script src="../../demos/dist/p1-cellgrowth.js"></script>
+```
+
+::: notes
+A single elongating cell, using the Lockhart growth equation: the relative growth rate is r = φ(P − Y), where P is turgor, Y the yield threshold of the wall and φ its extensibility. Below the threshold the wall behaves elastically and the cell does not grow at all. Press "Grow for 8 h" on the default: P = 0.6, Y = 0.3, φ = 1, so the cell grows at 0.3 per hour and doubles every 2.3 h, from 20 µm to about 220 µm. Then "Stiff wall: P < Y": the same turgor, but no growth, which is the turgid-but-not-growing cell from the slide. "Low turgor": P only just above Y, so growth crawls, which is what happens in a mildly water-stressed root. "Acid growth (auxin)" lowers Y and raises φ: the same turgor now gives twice the rate. Best trick: start a run on "Growing" and halfway through drag φ up; the curve bends upwards at that moment, as when auxin is added to a coleoptile segment and growth speeds up within minutes. Ask: which two things must the cell control to grow? (Turgor via solutes and water uptake, and wall extensibility via H⁺ pumping and expansins.) The model holds turgor constant, i.e. it assumes water uptake keeps pace with expansion.
 :::
 
 ## Apoplast and symplast: two routes between cells
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 - **Apoplast:** the continuous system of cell walls, intercellular spaces
   and dead xylem conduits, **outside** the plasma membranes.
 - **Symplast:** the cytoplasm of all cells connected by plasmodesmata.
 - **Plasmodesma:** a membrane-lined channel through the wall, ~50 nm wide,
   joining the cytoplasm of neighbouring cells. Thousands per cell.
 :::
-::: {.column width="50%"}
-```{mermaid}
-%%| fig-width: 5
-flowchart TB
-  A["Apoplast: walls and spaces"] -->|"cross plasma membrane"| S["Symplast: connected cytoplasm"]
-  S -->|"plasmodesmata"| S2["Neighbouring cell's cytoplasm"]
-```
+::: {.column width="60%"}
+
+![](figures/apoplast-symplast.svg){width="100%" height="360" fig-alt="Three cells share walls. A dashed route runs through the walls (apoplast), a solid route runs through cytoplasm and plasmodesmata (symplast), and a red arrow shows that moving from wall to cytoplasm crosses a plasma membrane."}
+
 :::
 ::::
 
@@ -238,22 +271,29 @@ Exercise 2.3 asks for the three definitions and 2.4 for the boundary crossed. Pl
 
 ## Three tissue systems
 
-| Tissue system | Main functions | Examples |
-| --- | --- | --- |
-| **Dermal** | protection; control of exchange with the environment | epidermis with cuticle, guard cells, root hairs |
-| **Ground** | photosynthesis, storage, support | mesophyll, cortex, pith (parenchyma, collenchyma, sclerenchyma) |
-| **Vascular** | long-distance transport; support | xylem, phloem |
+:::: {.columns}
+::: {.column width="40%"}
+- **Dermal:** protection and exchange; epidermis with cuticle, guard
+  cells, root hairs.
+- **Ground:** photosynthesis, storage, support; mesophyll, cortex, pith.
+- **Vascular:** long-distance transport and support; xylem, phloem.
+- Every organ contains all three, continuous through the whole plant.
+- Compare A1: epithelium ↔ dermal; connective ↔ ground; vascular ↔ blood
+  vessels.
+:::
+::: {.column width="60%"}
 
-- Every organ (root, stem, leaf, flower) contains all three systems.
-- They are continuous through the whole plant: one epidermis, one vascular
-  system from root tip to leaf.
-- Compare A1: epithelium ↔ dermal; connective ↔ ground; and the vascular
-  system plays the role of blood vessels.
+![](figures/stem-cross-section.jpg){width="100%" height="360" fig-alt="Cross-section of a young sunflower stem: a thin epidermis outside, a narrow cortex, a ring of vascular bundles with red-stained fibre caps, and a large central pith."}
+
+[Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Herbaceous_Dicot_Stem_Young_Helianthus_%2834731656652%29.jpg){.credit}
+
+:::
+::::
 
 **The ground tissue is built from three cell types with very different walls.**
 
 ::: notes
-This is the plant counterpart of the four animal tissue types in A1, and it is the map for the next slides. The analogy to animal tissues is useful but loose: the vascular tissue transports and also supports. Exercise 3.1 asks for this table with one example per system.
+Find the three systems in the section: the epidermis is the outermost single layer, the vascular bundles form a ring (xylem towards the centre, phloem towards the outside), and everything else is ground tissue (cortex outside the ring, pith inside). This is the plant counterpart of the four animal tissue types in A1, and it is the map for the next slides. The analogy to animal tissues is useful but loose: the vascular tissue transports and also supports. Exercise 3.1 asks for this table with one example per system.
 :::
 
 ## Ground tissue: three cell types
@@ -300,24 +340,26 @@ Exercises 3.3 and 3.4 use this table. Students should be able to name cells A–
 
 ## The leaf: gas exchange and its cost
 
-- A **cuticle** of wax makes the epidermis nearly impermeable to water and
+:::: {.columns}
+::: {.column width="40%"}
+- A waxy **cuticle** makes the epidermis nearly impermeable to water and
   gases.
-- Gas exchange goes through **stomata**: pores bordered by two **guard
-  cells**, ~100–300 per mm², ~1–2 % of the leaf area when open.
+- Gas exchange goes through **stomata**: pores between two **guard cells**,
+  ~100–300 per mm², ~1–2 % of the leaf area when open.
 - Mesophyll cells face a large internal air space: their surface is 10–40×
   the leaf area.
 
-Route of CO₂ to the site of fixation:
+CO₂ route: pore → air space → water film of the wall → plasma membrane →
+cytosol → chloroplast stroma.
+:::
+::: {.column width="60%"}
 
-```{mermaid}
-%%| fig-width: 12
-flowchart LR
-  A["Stomatal pore"] --> B["Intercellular air space"]
-  B --> C["Water film of cell wall"]
-  C --> D["Plasma membrane"]
-  D --> E["Cytosol"]
-  E --> F["Chloroplast stroma"]
-```
+![](figures/leaf-cross-section.jpg){width="100%" height="360" fig-alt="Cross-section of a privet leaf: upper epidermis, a layer of column-shaped palisade cells, loosely packed spongy mesophyll with large air spaces, small veins, and the lower epidermis."}
+
+[Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Angiosperm_Morphology_Mesophyll_Arrangement_in_Ligustrum_%2836198182664%29.jpg){.credit}
+
+:::
+::::
 
 **CO₂ diffuses in and water vapour diffuses out through the same pore. Opening
 a stoma raises both.**
@@ -329,31 +371,34 @@ Exercise 3.5 asks for this route and 3.6 for the reason opening increases both f
 ## The root: surface and a selective barrier
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 From the outside in:
 
-1. **Epidermis** with **root hairs**: tubular extensions of single epidermal
-   cells, not small roots.
+1. **Epidermis** with **root hairs**: extensions of single epidermal cells
+   that multiply the absorbing surface.
 2. **Cortex**: parenchyma with air spaces; often colonised by mycorrhizal
    fungi.
 3. **Endodermis**: one cell layer with the **Casparian strip**, a band of
-   suberin in its walls.
-4. **Stele** (vascular cylinder): xylem and phloem.
+   suberin in its walls that **blocks the apoplast**.
+4. **Stele**: xylem and phloem.
 :::
-::: {.column width="50%"}
-- Root hairs multiply the absorbing surface many times.
-- The Casparian strip **blocks the apoplast**. Water and ions must cross a
-  plasma membrane to enter the stele.
-- The endodermis is to the root what the plasma membrane is to a cell: the
-  point of selection.
+::: {.column width="60%"}
+
+![](figures/root-cross-section.jpg){width="100%" height="360" fig-alt="Cross-section of a buttercup root: a wide cortex of round parenchyma cells around a small central stele with xylem."}
+
+[Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Herbaceous_Dicot_root_Ranunculus_%2834727536412%29.jpg){.credit}
+
 :::
 ::::
+
+The endodermis is to the root what the plasma membrane is to a cell: the
+point of selection.
 
 **Leaves and roots have to keep extending into new space. Where do the new
 cells come from?**
 
 ::: notes
-Exercise 3.3 asks students to name root hairs and the endodermis from descriptions. This slide sets up P2, where we follow water from the soil across these layers into the xylem. The key idea is that the apoplast is open up to the endodermis and closed there, so the plant controls entry at one cell layer. Transition to growth: a plant that cannot move finds new soil and light by growing.
+In the buttercup section most of the root is cortex, a storage tissue; the stele is the small cylinder in the centre, ringed by the endodermis. Exercise 3.3 asks students to name root hairs and the endodermis from descriptions. This slide sets up P2, where we follow water from the soil across these layers into the xylem. The key idea is that the apoplast is open up to the endodermis and closed there, so the plant controls entry at one cell layer. Transition to growth: a plant that cannot move finds new soil and light by growing.
 :::
 
 ## Meristems: growth throughout life
@@ -374,11 +419,11 @@ Exercise 3.3 asks students to name root hairs and the endodermis from descriptio
 Exercise 4.1 asks for the meristem in each case. This is the plant answer to "it cannot move": it keeps building new roots into new soil and new leaves into new light. Intercalary meristems explain why a lawn survives mowing and grasses survive grazing: the growing region is at the base, below the cut. Transition: how a root tip actually gets longer.
 :::
 
-## The root tip: more cells or longer cells?
+## The root tip: three zones
 
 :::: {.columns}
-::: {.column width="45%"}
-Behind the root cap, three overlapping zones:
+::: {.column width="40%"}
+Behind the protective **root cap**, three overlapping zones:
 
 1. **Division zone:** small cells dividing (within ~1 mm of the tip).
 2. **Elongation zone:** cells stop dividing and lengthen many-fold.
@@ -386,7 +431,23 @@ Behind the root cap, three overlapping zones:
 
 A root gets longer by **division**, **expansion**, or both.
 :::
-::: {.column width="55%"}
+::: {.column width="60%"}
+
+![](figures/onion-root-tip.jpg){width="100%" height="360" fig-alt="Longitudinal section of an onion root tip: the cone-shaped root cap at the tip and, behind it, files of small, densely packed dividing cells of the meristem."}
+
+[Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Apical_Meristem_in_Onion_Root_Tip_%2834886438470%29.jpg){.credit}
+
+:::
+::::
+
+**Which of the two processes made a root longer?**
+
+::: notes
+Point out the zones on the section: the cap at the very tip (pale blue-green, loosely arranged cells), and the meristem as files of small, densely stained cells just behind it. The elongation zone starts beyond the top edge of the photo, about 1 mm from the tip. The zones grade into each other. The root cap protects the meristem as the root pushes through soil and senses gravity (P4). Cells are displaced backwards from the meristem: a cell never moves relative to its neighbours, but its distance from the tip increases as cells in front of it divide and lengthen.
+:::
+
+## More cells or longer cells?
+
 A file of 100 cells, end to end:
 
 | Cells | Mean cell length | Segment length |
@@ -398,48 +459,79 @@ A file of 100 cells, end to end:
 - Same final length, two different mechanisms.
 - **Length alone does not identify the process.** Count cells and measure
   their length.
+- At steady state, root growth rate = **cell production rate × final cell
+  length**.
+
+::: notes
+Exercise 4.2 is this calculation. Work it on the board: 100 × 40 µm = 4000 µm = 4 mm; 100 × 70 µm = 7 mm; 7000 / 40 = 175 cells. The general point is experimental: a mutant or treatment with a shorter root might divide less, expand less, or both, and only measuring cell number and cell length distinguishes them. The last bullet is the kinematic rule used in root biology: each cell leaving the meristem eventually adds its final length to the root.
 :::
-::::
+
+## Try it: two root tips
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p1-roottip"></div>
+<script src="../../demos/dist/p1-roottip.js"></script>
+```
 
 **Cells leaving the meristem become epidermis, xylem or cortex, yet all carry
 the same DNA. How?**
 
 ::: notes
-Exercise 4.2 is this calculation. Work it on the board: 100 × 40 µm = 4000 µm = 4 mm; 100 × 70 µm = 7 mm; 7000 / 40 = 175 cells. The general point is experimental: a mutant or treatment with a shorter root might divide less, expand less, or both, and only measuring cell number and cell length distinguishes them. The zones are a gradient, not sharp compartments.
+Two root tips with the tip held still on the right, as if we were riding on it. The dark green block is the meristem; each new cell leaves it at 10 µm, elongates (light green) to its final length and then matures (pale, with root hairs); grey is older root. The red bracket shows how far the tip has moved through the soil. Press "Grow for 8 h" on the slide example: root A makes 2.2 cells per hour that end at 40 µm, root B only 1.25 cells per hour but they end at 70 µm. Both tips move 0.70 mm in 8 hours: A has 17 new cells, B 10. Ask: if you only had a ruler, could you tell these roots apart? No; you have to count cells and measure them. Then drag one slider: halve A's production, as a treatment that blocks division would, and A falls behind; or raise B's final length, as an auxin-insensitive or wall mutant might change it. "Identical roots" gives two equal roots to start from. The rule shown in the readout: growth rate = production rate × final cell length.
 :::
 
 ## Differentiation: same genome, different genes
 
+:::: {.columns}
+::: {.column width="40%"}
 - A leaf mesophyll cell and a root cortex cell have the **same nuclear
-  genome**. They differ because they **express different sets of genes**.
+  genome**; they **express different sets of genes**.
 - Differentiation changes gene expression and cell structure, **not the DNA
   sequence**.
-- Some mature cells can resume division: wound healing, cuttings that root,
-  regeneration of whole plants from tissue culture.
+- Some mature cells can resume division: wound healing, rooting cuttings,
+  regeneration from tissue culture.
 - Regeneration is **not** guaranteed: it depends on genotype, cell type,
-  developmental state and the hormones in the culture medium.
+  developmental state and hormones.
+:::
+::: {.column width="60%"}
+
+![](figures/callus-culture.jpg){width="100%" height="360" fig-alt="Pale clumps of callus, undifferentiated dividing plant cells, growing on a gel nutrient medium in a culture vessel."}
+
+[Photo: Iripseudocorus, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Callus_in_MS-Media.png){.credit}
+
+:::
+::::
 
 **A plant cell has not one genome but three.**
 
 ::: notes
-Exercises 4.3 and 5.3 test these statements. Contrast with animals: many plant cells keep the ability to dedifferentiate and divide, which is the basis of propagation by cuttings and of plant biotechnology (P5). But "every cell can make a plant" is false as a general rule. Hormonal control of regeneration returns in P4.
+The photo is callus: a mass of dividing, undifferentiated cells grown from pieces of a differentiated plant on a medium with auxin and cytokinin; changing the hormone balance can make it form shoots or roots. Exercises 4.3 and 5.3 test these statements. Contrast with animals: many plant cells keep the ability to dedifferentiate and divide, which is the basis of propagation by cuttings and of plant biotechnology (P5). But "every cell can make a plant" is false as a general rule. Hormonal control of regeneration returns in P4.
 :::
 
 ## Three genomes in one cell
 
-| Genome | Size (Arabidopsis) | Genes |
-| --- | --- | --- |
-| **Nuclear** | ~135 Mb | ~27 000 protein-coding genes |
-| **Plastid** | ~154 kb | ~130 genes (photosynthesis, plastid ribosomes) |
-| **Mitochondrial** | ~370 kb | ~60 genes (respiration, mitochondrial ribosomes) |
+:::: {.columns}
+::: {.column width="40%"}
+| Genome | Arabidopsis |
+| --- | --- |
+| **Nuclear** | ~135 Mb, ~27 000 genes |
+| **Plastid** | ~154 kb, ~130 genes |
+| **Mitochondrial** | ~370 kb, ~60 genes |
 
-- Most proteins that work in chloroplasts are **encoded in the nucleus**,
-  made in the cytosol and **imported**. A chloroplast contains ~3000 different
-  proteins; its own genome encodes about 100.
-- Example: **Rubisco**, the CO₂-fixing enzyme. Its large subunit is encoded in
-  the plastid, its small subunit in the nucleus.
-- So a **nuclear** mutation can block photosynthesis while chloroplast DNA is
-  unchanged.
+- A chloroplast contains ~3000 different proteins; its own genome encodes
+  about 100. The rest are **encoded in the nucleus**, made in the cytosol
+  and **imported**.
+:::
+::: {.column width="60%"}
+
+![](figures/two-genomes.svg){width="100%" height="360" fig-alt="The Rubisco small subunit gene is in the nucleus; the protein is made in the cytosol and imported into the chloroplast, where it assembles with large subunits made from the plastid rbcL gene."}
+
+:::
+::::
+
+**Rubisco**, the CO₂-fixing enzyme, needs both genomes: a **nuclear**
+mutation can block photosynthesis while chloroplast DNA is unchanged.
 
 ::: notes
 Exercises 5.1 and 5.2 use these facts. Rubisco is the ideal example because it is assembled from products of two genomes, and it is the enzyme at the centre of P3. Point out that the location of a protein does not tell you where its gene is. Plastid and mitochondrial genomes are inherited mostly from the mother in many species, but not all.
@@ -447,15 +539,26 @@ Exercises 5.1 and 5.2 use these facts. Rubisco is the ideal example because it i
 
 ## Back to the seedling
 
+:::: {.columns}
+::: {.column width="40%"}
 The maize seedling solved the A1 problem without moving:
 
 | Need | Plant solution |
 | --- | --- |
-| Large surface for light and CO₂ | thin leaves, internal air spaces, stomata |
-| Large surface for water and minerals | roots and root hairs |
-| Long-distance transport | xylem (dead pipes) and phloem (living tubes) |
-| Support | turgor in walled cells; lignified secondary walls |
-| Reaching new resources | growth from apical and lateral meristems |
+| Surface for light, CO₂ | thin leaves, air spaces, stomata |
+| Surface for water, minerals | roots, root hairs |
+| Long-distance transport | xylem and phloem |
+| Support | turgor; lignified walls |
+| New resources | growth from meristems |
+:::
+::: {.column width="60%"}
+
+![](figures/maize-seedlings.jpg){width="100%" height="360" fig-alt="Young maize seedlings with a few leaves each, growing in rows in a field of bare soil."}
+
+[Photo: Tangopaso, public domain, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Maize_seedlings_in_Arbigny_%28close-up%29.jpg){.credit}
+
+:::
+::::
 
 **Two open questions: how does water get from the soil to the top of the
 plant (P2), and how is light turned into sugar for the whole plant (P3)?**

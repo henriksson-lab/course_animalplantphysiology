@@ -22,9 +22,11 @@ core activity can be completed without R.
 Each lecture deck follows the QuantBio pattern: an "About this lecture" slide
 that poses the problem and links to the previous unit, slides that build one
 story with speaker notes, and a Summary slide with a preview of the next unit.
-A1 and A2 use original SVG diagrams (`figures/make_diagrams.py` reproduces
-them); the other decks use tables and Mermaid diagrams. Exercises are closed
-questions with collapsible answers.
+More than half of each deck's slides carry a picture: openly licensed
+Wikimedia Commons photos (credited on the slide and in `figures/CREDITS.md`)
+or concept SVGs that `figures/make_diagrams.py` reproduces. Every unit has
+interactive demos on "Try it" slides. Exercises are closed questions with
+collapsible answers.
 
 The documented baseline is 5MO101 (15 ECTS), with its equal animal/plant split
 and four modules. Programme research identifies 5MO00S as the 2027 successor,
@@ -41,10 +43,11 @@ lecture/quiz link colours, coloured sidebar block headers and copied
 Lecture decks use QuantBio's 1280 × 720 canvas, slide counters, menu,
 edge controls, KaTeX and disabled transitions.
 Navigation, page selection and Makefile are reduced for this course. Building
-does not stage files. QuantBio's advanced content, demos, dependencies, caches,
-Git metadata and course-specific assessment rules are not copied.
+does not stage files. QuantBio's advanced content, caches, Git metadata and course-specific assessment rules are not copied.
 
-Run `make render` to package student files and build `docs/`, `make check` to
+Demos are TypeScript in `demos/src/<unit>-<name>/`, bundled by esbuild into
+`demos/dist/` (`npm install` once, then `make demos`; `make typecheck` runs
+tsc). Run `make render` to package student files, build the demos and build `docs/`, `make check` to
 check local links/anchors and publication boundaries after rendering, or
 `make preview` for a local preview. Quarto and Python 3 are required. The build
 uses a project-local ignored Quarto cache and never stages files.

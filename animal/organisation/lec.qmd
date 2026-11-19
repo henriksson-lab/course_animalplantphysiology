@@ -45,17 +45,24 @@ The single picture for today: one cell, deep inside a body, that needs oxygen an
 
 ## The problem: one cell versus a whole animal
 
-| | Amoeba | Mouse |
-| --- | --- | --- |
-| Size | ~0.5 mm | ~80 mm |
-| Distance from O₂ source to mitochondria | a few µm | up to several mm |
-| How O₂ arrives | diffusion across the cell membrane | ventilation → lungs → blood → tissue |
-| Surroundings of each cell | pond water | interstitial fluid |
+:::: {.columns}
+::: {.column width="40%"}
+- **Amoeba** (~0.5 mm): O₂ diffuses a few µm from the pond water to its
+  mitochondria.
+- **Mouse** (~80 mm): O₂ travels ventilation → lungs → blood → tissue, up to
+  several mm; cells sit in interstitial fluid.
+- Every cell needs **O₂ and fuel in, CO₂ and wastes out**, and suitable
+  temperature and ions.
+- **Most mouse cells never touch the outside world.**
+:::
+::: {.column width="60%"}
 
-- Every cell has the same needs: **O₂ and fuel in, CO₂ and wastes out,
-  suitable temperature and ion concentrations**.
-- The amoeba meets them directly from its environment.
-- A mouse cannot. **Most of its cells never touch the outside world.**
+![](figures/amoeba-proteus.jpg){width="100%" height="360" fig-alt="Light micrograph of Amoeba proteus, a single elongated cell with granular cytoplasm and pseudopodia."}
+
+[Photo: SmallRex, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amoeba_proteus_locomotive_form.jpg){.credit}
+
+:::
+::::
 
 **So what does a mouse body consist of, and where do its cells actually live?**
 
@@ -171,17 +178,38 @@ For O₂ in water, $D \approx 2 \times 10^{-9}$ m² s⁻¹:
 This is the decisive number. Diffusion over a cell width takes a few hundredths of a second; over a centimetre it takes hours. The squared dependence is what matters: students can check 10 µm versus 1 mm (100× the distance, 10 000× the time). This is why no animal more than about a millimetre thick relies on diffusion through its body surface alone. Pose the question at the bottom and let them suggest answers before the next slide.
 :::
 
+## Try it: how big can diffusion alone go?
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a1-scaling"></div>
+<script src="../../demos/dist/a1-scaling.js"></script>
+```
+
+::: notes
+Live version of the last two slides. The animal is a ball of tissue in air-saturated water that gets O₂ only by diffusion from its surface; colour shows the O₂ level, dark means none. Start at Reset (0.5 mm radius): every cell gets O₂ and the centre still has about 80 %. Drag the radius up slowly and ask the room to call out when the centre runs out; at about 1.1 mm an anoxic core appears, and the "5 mm ball" preset is mostly anoxic. Point to the readouts: A/V falls as 3/r and the diffusion time to the centre grows as r², exactly as on the previous slides. Then press "Mouse tissue": the same 0.5 mm ball with a mammalian metabolic rate already has a dead core, because the largest size scales as 1/√(rate). "Flatworm" shows the way out by shape: a thin sheet stays supplied whatever its length and width. Use this to ask: what else could the animal do? That leads into the three solutions on the next slide. Numbers: D = 2 × 10⁻⁹ m² s⁻¹, surface O₂ 0.27 mM, uniform O₂ use; the largest radius is √(6DC/M).
+:::
+
 ## Three solutions
 
-1. **Enlarge the exchange surface.** Fold, branch or subdivide it:
-   alveoli (~100 m² in a human lung), gill lamellae, intestinal villi.
-2. **Make the barrier thin.** The air–blood barrier in a mammalian lung is
-   less than 1 µm thick.
+:::: {.columns}
+::: {.column width="40%"}
+1. **Enlarge the exchange surface:** alveoli (~100 m² in a human lung), gill
+   lamellae, intestinal villi.
+2. **Make the barrier thin:** the air–blood barrier in a lung is < 1 µm.
 3. **Use bulk flow** over long distances. Ventilation moves air or water to the
-   surface; circulation moves blood around the body. Bulk flow is fast over
-   any distance.
+   surface; circulation moves blood around the body.
 
-Diffusion is still needed for the **last few micrometres**: from capillary to cell.
+Diffusion still covers the **last few µm**, capillary to cell.
+:::
+::: {.column width="60%"}
+
+![](figures/lung-alveoli.jpg){width="100%" height="360" fig-alt="Light micrograph of lung tissue: a bronchiole surrounded by many thin-walled air spaces, the alveoli."}
+
+[Photo: Yale Rosen from USA, CC BY-SA 2.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Normal_lung_(5414785258).jpg){.credit}
+
+:::
+::::
 
 **Building these solutions needs specialised materials: the tissues.**
 
@@ -227,23 +255,56 @@ This overview slide is the map for the next four slides. Students should be able
 Connect back to "three solutions": the thin barrier of solution 2 is a simple squamous epithelium. Apical/basal polarity is the basis of every absorbing and secreting epithelium in the course: the gut in A2, the gill and kidney in A4, and plant epidermis by analogy in P1. Shape plus number of layers is the naming system.
 :::
 
-## Connective tissue: defined by its matrix
+## Epithelia in the microscope
 
-- Cells are **scattered** in an **extracellular matrix** of fibres and ground
-  substance.
-- The matrix determines the properties:
+:::: {.columns}
+::: {.column width="50%"}
+**Simple squamous**, seen from above: one layer of flat, polygonal cells.
 
-| Tissue | Matrix | Property |
-| --- | --- | --- |
-| Tendon | Parallel collagen fibres | Tensile strength |
-| Cartilage | Collagen in a firm gel | Resilience |
-| Bone | Collagen mineralised with calcium phosphate | Rigidity |
-| Blood | Fluid plasma | Transport |
+![](figures/simple-squamous-surface.jpg){width="100%" height="330" fig-alt="Surface view of simple squamous epithelium: a mosaic of flat polygonal cells, each with a central nucleus."}
 
-- Connective tissue also carries the **blood vessels** that supply epithelia.
+[Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Epithelial_Tissues_Simple_Squamous_Epithelium_(41722161301).jpg){.credit}
+:::
+::: {.column width="50%"}
+**Stratified squamous**, oesophagus in section: many layers, flattening upwards.
+
+![](figures/stratified-squamous-oesophagus.jpg){width="100%" height="330" fig-alt="Section of oesophagus lining: many layers of cells, rounded at the base and flattened towards the surface, above pale connective tissue."}
+
+[Photo: Nva1991, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Thuc_quan.jpg){.credit}
+:::
+::::
 
 ::: notes
-Blood surprises students as a connective tissue; use it to make the point that the category is defined by cells-in-matrix, not by being solid. Blood is also the transport medium of solution 3, so the tissue types are already mapping onto the exchange problem. Epithelia themselves have no blood vessels and depend on the connective tissue beneath them.
+These are the two extremes from the previous slide, as students will see them in the histology practical. The left image is a whole mount seen from above, so the single layer appears as a mosaic of flat cells with their nuclei; in a section it would be a thin line of cells with flattened nuclei, as in the alveolar wall. The right image is a section through the oesophagus: count the cell layers, notice that the basal cells are cuboidal and crowded and that cells flatten as they move up towards the lumen. The pale tissue underneath is connective tissue, which carries the blood vessels; the epithelium itself has none. Ask: which of these would you expect in an alveolus, and which on the inside of the mouth?
+:::
+
+## Connective tissue: defined by its matrix
+
+:::: {.columns}
+::: {.column width="45%"}
+- Cells are **scattered** in an **extracellular matrix**; the matrix sets the
+  properties.
+
+| Tissue | Matrix → property |
+| --- | --- |
+| Tendon | parallel collagen → tensile strength |
+| Cartilage | collagen in a firm gel → resilience |
+| Bone | mineralised collagen → rigidity |
+| Blood | fluid plasma → transport |
+
+- It also carries the **blood vessels** that supply epithelia.
+:::
+::: {.column width="55%"}
+
+![](figures/hyaline-cartilage.jpg){width="100%" height="360" fig-alt="Hyaline cartilage in section: scattered cells sitting in small cavities within a large amount of smooth, firm matrix."}
+
+[Photo: Doc. RNDr. Josef Reischig, CSc., CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hyaline_cartilage_(254_01)_Mammal;_section.jpg){.credit}
+
+:::
+::::
+
+::: notes
+In the cartilage image, point out how little of the area is cells: each chondrocyte sits in a small cavity (lacuna) surrounded by matrix, the opposite of an epithelium. Blood surprises students as a connective tissue; use it to make the point that the category is defined by cells-in-matrix, not by being solid. Blood is also the transport medium of solution 3, so the tissue types are already mapping onto the exchange problem. Epithelia themselves have no blood vessels and depend on the connective tissue beneath them.
 :::
 
 ## Muscle and nervous tissue
@@ -272,6 +333,36 @@ Blood surprises students as a connective tissue; use it to make the point that t
 The muscle table is exam material and appears in the exercises (3.2). Link function to the story: bulk flow needs a pump, and all animal pumps are muscle. Nervous tissue appears briefly here and returns in A5; for today its role is to sense and control, which is exactly what the feedback slides need.
 :::
 
+## Three muscle types in the microscope
+
+:::: {.columns}
+::: {.column width="33%"}
+**Skeletal:** long, parallel fibres with cross-striations
+
+![](figures/skeletal-muscle.jpg){width="100%" height="340" fig-alt="Skeletal muscle in longitudinal section: broad parallel fibres with fine regular cross-striations."}
+
+[Photo: Alexander G. Cheroske, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Skeletal_muscle_400x.jpg){.credit}
+:::
+::: {.column width="33%"}
+**Cardiac:** branched cells, one central nucleus each
+
+![](figures/cardiac-muscle.jpg){width="100%" height="340" fig-alt="Cardiac muscle: branching cells with single oval nuclei, joined end to end."}
+
+[Photo: Alexander G. Cheroske, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cardiac_muscle_histology_400x.jpg){.credit}
+:::
+::: {.column width="33%"}
+**Smooth:** spindle cells, no striations
+
+![](figures/smooth-muscle.jpg){width="100%" height="340" fig-alt="Smooth muscle: tightly packed spindle-shaped cells with elongated nuclei and no striations."}
+
+[Photo: Alexander G. Cheroske, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Smooth_muscle_400x.jpg){.credit}
+:::
+::::
+
+::: notes
+All three images are at the same magnification (400×), so the sizes are comparable. Ask students to use the table on the previous slide to name each one before revealing the labels: striations or not, branching or not, one nucleus or many. In the skeletal image the fibres are so long that no ends are visible and the striations are very regular; the cardiac cells branch and join, and the dark lines across them in good preparations are intercalated discs; smooth muscle cells taper at both ends and pack together like a bundle of spindles. These are the pumps for bulk flow: heart, breathing muscles and gut wall.
+:::
+
 ## Reading a tissue section
 
 :::: {.columns}
@@ -298,18 +389,28 @@ This prepares students for the histology practical. The classic error is to see 
 
 ## Putting the tissues together: the intestinal wall
 
-| Layer (lumen outwards) | Tissue | Role in the exchange problem |
-| --- | --- | --- |
-| Mucosa | Simple columnar **epithelium** on villi | Large, thin absorbing surface (solutions 1 and 2) |
-| Submucosa | **Connective tissue** with blood vessels | Carries absorbed nutrients away (solution 3) |
-| Muscularis | **Smooth muscle**, two layers | Mixes and moves the contents (bulk flow in the lumen) |
-| Throughout | **Nervous tissue** (enteric nervous system) | Coordinates secretion and movement |
+:::: {.columns}
+::: {.column width="45%"}
+| Layer | Tissue → role |
+| --- | --- |
+| Mucosa | columnar **epithelium** → large, thin absorbing surface |
+| Submucosa | **connective tissue**, vessels → carries nutrients away |
+| Muscularis | **smooth muscle** → mixes and moves contents |
+| Throughout | **nervous tissue** → coordinates |
 
-**One organ, four tissues, all three exchange solutions.** But an organ like
-this only works if its surroundings stay within narrow limits.
+**One organ, four tissues, all three exchange solutions.**
+:::
+::: {.column width="55%"}
+
+![](figures/small-intestine-wall.jpg){width="100%" height="360" fig-alt="Section of small intestine wall: purple glandular mucosa on the left, pale loose submucosa in the middle, and a thick pink band of smooth muscle on the right."}
+
+[Photo: Juan Carlos Fonseca Mata, CC BY-SA 4.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tissue_layers_of_the_small_intestine_(mucosa,_submucosa_%26_muscularis).jpg){.credit}
+
+:::
+::::
 
 ::: notes
-This slide closes the first half of the lecture by returning to the intestine from the levels slide. Each tissue maps onto one of the three solutions. Transition: building the machinery is not enough; temperature, pH, ion concentrations and glucose around the cells have to be held within limits while the animal eats, runs and the environment changes. That is homeostasis.
+This slide closes the first half of the lecture by returning to the intestine from the levels slide. In the micrograph the lumen is off to the left: purple mucosa with its glands, then the pale, loose submucosa where the blood vessels run, then the thick pink band of smooth muscle. Each tissue maps onto one of the three solutions. But an organ like this only works if its surroundings stay within narrow limits. Transition: building the machinery is not enough; temperature, pH, ion concentrations and glucose around the cells have to be held within limits while the animal eats, runs and the environment changes. That is homeostasis.
 :::
 
 ## Homeostasis: stability by continual work
@@ -369,6 +470,18 @@ Go round the loop component by component; the exercises (4.2) ask students to as
 
 ::: notes
 Positive feedback is not a failure of regulation: it is used for fast, all-or-none events that must run to completion. Each example has a clear terminating step. The two errors are the ones students make most often in exams, so state them explicitly. Transition: feedback acts within minutes; animals also change over weeks and over generations.
+:::
+
+## Try it: a temperature control loop
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a1-feedback"></div>
+<script src="../../demos/dist/a1-feedback.js"></script>
+```
+
+::: notes
+The negative-feedback loop from two slides back, run as a simulation. Exercise adds heat from minute 10 to minute 40 (shaded); the blue trace below shows what the effector (sweating, skin blood flow) is doing. Start at Reset: temperature rises a little and levels off about 0.5 °C above the set point, then returns when exercise stops. Ask: why does it not come all the way back during exercise? Because the response is driven by the deviation itself, so some deviation must remain to keep the sweat glands working. Raise the gain: the remaining error shrinks ("Strong, fast"). Press "None": nothing opposes the heat load and temperature drifts several degrees. Press "Positive feedback": the response amplifies the change and runs away, which is why positive feedback needs an end point. Finally "Strong, slow": the same strong gain with a 1.5 min delay overshoots and oscillates, a reminder that sensing and responding take time. "Cold" shows the same loop working the other way: the effector switches to heat production.
 :::
 
 ## Three time scales of change

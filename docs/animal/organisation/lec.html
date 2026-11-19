@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bf56578b9c06c165c166475cd19dbcd1.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-07645afa0a6c315d6eef0efcfd2eeacf.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -181,47 +181,18 @@ Animal and Plant Physiology
 </section>
 <section id="the-problem-one-cell-versus-a-whole-animal" class="slide level2">
 <h2>The problem: one cell versus a whole animal</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Amoeba</th>
-<th>Mouse</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Size</td>
-<td>~0.5 mm</td>
-<td>~80 mm</td>
-</tr>
-<tr class="even">
-<td>Distance from O₂ source to mitochondria</td>
-<td>a few µm</td>
-<td>up to several mm</td>
-</tr>
-<tr class="odd">
-<td>How O₂ arrives</td>
-<td>diffusion across the cell membrane</td>
-<td>ventilation → lungs → blood → tissue</td>
-</tr>
-<tr class="even">
-<td>Surroundings of each cell</td>
-<td>pond water</td>
-<td>interstitial fluid</td>
-</tr>
-</tbody>
-</table>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>Every cell has the same needs: <strong>O₂ and fuel in, CO₂ and wastes out, suitable temperature and ion concentrations</strong>.</li>
-<li>The amoeba meets them directly from its environment.</li>
-<li>A mouse cannot. <strong>Most of its cells never touch the outside world.</strong></li>
+<li><strong>Amoeba</strong> (~0.5 mm): O₂ diffuses a few µm from the pond water to its mitochondria.</li>
+<li><strong>Mouse</strong> (~80 mm): O₂ travels ventilation → lungs → blood → tissue, up to several mm; cells sit in interstitial fluid.</li>
+<li>Every cell needs <strong>O₂ and fuel in, CO₂ and wastes out</strong>, and suitable temperature and ions.</li>
+<li><strong>Most mouse cells never touch the outside world.</strong></li>
 </ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/amoeba-proteus.jpg" style="width:100.0%" alt="Light micrograph of Amoeba proteus, a single elongated cell with granular cytoplasm and pseudopodia." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Amoeba_proteus_locomotive_form.jpg" class="credit">Photo: SmallRex, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>So what does a mouse body consist of, and where do its cells actually live?</strong></p>
 <aside class="notes">
 <p>Start with the contrast rather than with definitions. The amoeba is a single cell in direct contact with its environment; diffusion over a few micrometres is fast enough. The mouse is a hundred times longer, and its muscle cells are far from air. This raises two questions that the rest of the lecture answers: how is the body organised (next slides), and why does size create a problem (geometry slides).</p>
@@ -403,14 +374,39 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
+<section id="try-it-how-big-can-diffusion-alone-go" class="slide level2">
+<h2>Try it: how big can diffusion alone go?</h2>
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a1-scaling"></div>
+<script src="../../demos/dist/a1-scaling.js"></script>
+<aside class="notes">
+<p>Live version of the last two slides. The animal is a ball of tissue in air-saturated water that gets O₂ only by diffusion from its surface; colour shows the O₂ level, dark means none. Start at Reset (0.5 mm radius): every cell gets O₂ and the centre still has about 80 %. Drag the radius up slowly and ask the room to call out when the centre runs out; at about 1.1 mm an anoxic core appears, and the “5 mm ball” preset is mostly anoxic. Point to the readouts: A/V falls as 3/r and the diffusion time to the centre grows as r², exactly as on the previous slides. Then press “Mouse tissue”: the same 0.5 mm ball with a mammalian metabolic rate already has a dead core, because the largest size scales as 1/√(rate). “Flatworm” shows the way out by shape: a thin sheet stays supplied whatever its length and width. Use this to ask: what else could the animal do? That leads into the three solutions on the next slide. Numbers: D = 2 × 10⁻⁹ m² s⁻¹, surface O₂ 0.27 mM, uniform O₂ use; the largest radius is √(6DC/M).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="three-solutions" class="slide level2">
 <h2>Three solutions</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ol type="1">
-<li><strong>Enlarge the exchange surface.</strong> Fold, branch or subdivide it: alveoli (~100 m² in a human lung), gill lamellae, intestinal villi.</li>
-<li><strong>Make the barrier thin.</strong> The air–blood barrier in a mammalian lung is less than 1 µm thick.</li>
-<li><strong>Use bulk flow</strong> over long distances. Ventilation moves air or water to the surface; circulation moves blood around the body. Bulk flow is fast over any distance.</li>
+<li><strong>Enlarge the exchange surface:</strong> alveoli (~100 m² in a human lung), gill lamellae, intestinal villi.</li>
+<li><strong>Make the barrier thin:</strong> the air–blood barrier in a lung is &lt; 1 µm.</li>
+<li><strong>Use bulk flow</strong> over long distances. Ventilation moves air or water to the surface; circulation moves blood around the body.</li>
 </ol>
-<p>Diffusion is still needed for the <strong>last few micrometres</strong>: from capillary to cell.</p>
+<p>Diffusion still covers the <strong>last few µm</strong>, capillary to cell.</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="figures/lung-alveoli.jpg" style="width:100.0%" alt="Light micrograph of lung tissue: a bronchiole surrounded by many thin-walled air spaces, the alveoli." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Normal_lung_(5414785258).jpg" class="credit">Photo: Yale Rosen from USA, CC BY-SA 2.0, Wikimedia Commons</a></p>
+</div></div>
 <p><strong>Building these solutions needs specialised materials: the tissues.</strong></p>
 <aside class="notes">
 <p>Every exchange organ students will meet in A2–A4 and P2 is a combination of these three solutions. Make the link explicit: the lung is (1) and (2), the circulation is (3), and the capillary bed brings bulk flow to within diffusion range of every cell. Transition: to build a thin, folded surface, a pump and a set of tubes, the body uses four kinds of tissue.</p>
@@ -512,48 +508,74 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
+<section id="epithelia-in-the-microscope" class="slide level2">
+<h2>Epithelia in the microscope</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Simple squamous</strong>, seen from above: one layer of flat, polygonal cells.</p>
+<p><img data-src="figures/simple-squamous-surface.jpg" style="width:100.0%" alt="Surface view of simple squamous epithelium: a mosaic of flat polygonal cells, each with a central nucleus." height="330"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Epithelial_Tissues_Simple_Squamous_Epithelium_(41722161301).jpg" class="credit">Photo: Berkshire Community College Bioscience Image Library, CC0, Wikimedia Commons</a></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Stratified squamous</strong>, oesophagus in section: many layers, flattening upwards.</p>
+<p><img data-src="figures/stratified-squamous-oesophagus.jpg" style="width:100.0%" alt="Section of oesophagus lining: many layers of cells, rounded at the base and flattened towards the surface, above pale connective tissue." height="330"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Thuc_quan.jpg" class="credit">Photo: Nva1991, CC BY-SA 3.0, Wikimedia Commons</a></p>
+</div></div>
+<aside class="notes">
+<p>These are the two extremes from the previous slide, as students will see them in the histology practical. The left image is a whole mount seen from above, so the single layer appears as a mosaic of flat cells with their nuclei; in a section it would be a thin line of cells with flattened nuclei, as in the alveolar wall. The right image is a section through the oesophagus: count the cell layers, notice that the basal cells are cuboidal and crowded and that cells flatten as they move up towards the lumen. The pale tissue underneath is connective tissue, which carries the blood vessels; the epithelium itself has none. Ask: which of these would you expect in an alveolus, and which on the inside of the mouth?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="connective-tissue-defined-by-its-matrix" class="slide level2">
 <h2>Connective tissue: defined by its matrix</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
 <ul>
-<li>Cells are <strong>scattered</strong> in an <strong>extracellular matrix</strong> of fibres and ground substance.</li>
-<li>The matrix determines the properties:</li>
+<li>Cells are <strong>scattered</strong> in an <strong>extracellular matrix</strong>; the matrix sets the properties.</li>
 </ul>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>Tissue</th>
-<th>Matrix</th>
-<th>Property</th>
+<th>Matrix → property</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Tendon</td>
-<td>Parallel collagen fibres</td>
-<td>Tensile strength</td>
+<td>parallel collagen → tensile strength</td>
 </tr>
 <tr class="even">
 <td>Cartilage</td>
-<td>Collagen in a firm gel</td>
-<td>Resilience</td>
+<td>collagen in a firm gel → resilience</td>
 </tr>
 <tr class="odd">
 <td>Bone</td>
-<td>Collagen mineralised with calcium phosphate</td>
-<td>Rigidity</td>
+<td>mineralised collagen → rigidity</td>
 </tr>
 <tr class="even">
 <td>Blood</td>
-<td>Fluid plasma</td>
-<td>Transport</td>
+<td>fluid plasma → transport</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Connective tissue also carries the <strong>blood vessels</strong> that supply epithelia.</li>
+<li>It also carries the <strong>blood vessels</strong> that supply epithelia.</li>
 </ul>
+</div><div class="column" style="width:55%;">
+<p><img data-src="figures/hyaline-cartilage.jpg" style="width:100.0%" alt="Hyaline cartilage in section: scattered cells sitting in small cavities within a large amount of smooth, firm matrix." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Hyaline_cartilage_(254_01)_Mammal;_section.jpg" class="credit">Photo: Doc. RNDr. Josef Reischig, CSc., CC BY-SA 3.0, Wikimedia Commons</a></p>
+</div></div>
 <aside class="notes">
-<p>Blood surprises students as a connective tissue; use it to make the point that the category is defined by cells-in-matrix, not by being solid. Blood is also the transport medium of solution 3, so the tissue types are already mapping onto the exchange problem. Epithelia themselves have no blood vessels and depend on the connective tissue beneath them.</p>
+<p>In the cartilage image, point out how little of the area is cells: each chondrocyte sits in a small cavity (lacuna) surrounded by matrix, the opposite of an epithelium. Blood surprises students as a connective tissue; use it to make the point that the category is defined by cells-in-matrix, not by being solid. Blood is also the transport medium of solution 3, so the tissue types are already mapping onto the exchange problem. Epithelia themselves have no blood vessels and depend on the connective tissue beneath them.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -627,6 +649,36 @@ Animal and Plant Physiology
           display:block!important;
       }</style></aside>
 </section>
+<section id="three-muscle-types-in-the-microscope" class="slide level2">
+<h2>Three muscle types in the microscope</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Skeletal:</strong> long, parallel fibres with cross-striations</p>
+<p><img data-src="figures/skeletal-muscle.jpg" style="width:100.0%" alt="Skeletal muscle in longitudinal section: broad parallel fibres with fine regular cross-striations." height="340"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Skeletal_muscle_400x.jpg" class="credit">Photo: Alexander G. Cheroske, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div><div class="column" style="width:33%;">
+<p><strong>Cardiac:</strong> branched cells, one central nucleus each</p>
+<p><img data-src="figures/cardiac-muscle.jpg" style="width:100.0%" alt="Cardiac muscle: branching cells with single oval nuclei, joined end to end." height="340"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Cardiac_muscle_histology_400x.jpg" class="credit">Photo: Alexander G. Cheroske, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div><div class="column" style="width:33%;">
+<p><strong>Smooth:</strong> spindle cells, no striations</p>
+<p><img data-src="figures/smooth-muscle.jpg" style="width:100.0%" alt="Smooth muscle: tightly packed spindle-shaped cells with elongated nuclei and no striations." height="340"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Smooth_muscle_400x.jpg" class="credit">Photo: Alexander G. Cheroske, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div></div>
+<aside class="notes">
+<p>All three images are at the same magnification (400×), so the sizes are comparable. Ask students to use the table on the previous slide to name each one before revealing the labels: striations or not, branching or not, one nucleus or many. In the skeletal image the fibres are so long that no ends are visible and the striations are very regular; the cardiac cells branch and join, and the dark lines across them in good preparations are intercalated discs; smooth muscle cells taper at both ends and pack together like a bundle of spindles. These are the pumps for bulk flow: heart, breathing muscles and gut wall.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="reading-a-tissue-section" class="slide level2">
 <h2>Reading a tissue section</h2>
 <div class="columns">
@@ -657,45 +709,41 @@ Animal and Plant Physiology
 </section>
 <section id="putting-the-tissues-together-the-intestinal-wall" class="slide level2">
 <h2>Putting the tissues together: the intestinal wall</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Layer (lumen outwards)</th>
-<th>Tissue</th>
-<th>Role in the exchange problem</th>
+<th>Layer</th>
+<th>Tissue → role</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Mucosa</td>
-<td>Simple columnar <strong>epithelium</strong> on villi</td>
-<td>Large, thin absorbing surface (solutions 1 and 2)</td>
+<td>columnar <strong>epithelium</strong> → large, thin absorbing surface</td>
 </tr>
 <tr class="even">
 <td>Submucosa</td>
-<td><strong>Connective tissue</strong> with blood vessels</td>
-<td>Carries absorbed nutrients away (solution 3)</td>
+<td><strong>connective tissue</strong>, vessels → carries nutrients away</td>
 </tr>
 <tr class="odd">
 <td>Muscularis</td>
-<td><strong>Smooth muscle</strong>, two layers</td>
-<td>Mixes and moves the contents (bulk flow in the lumen)</td>
+<td><strong>smooth muscle</strong> → mixes and moves contents</td>
 </tr>
 <tr class="even">
 <td>Throughout</td>
-<td><strong>Nervous tissue</strong> (enteric nervous system)</td>
-<td>Coordinates secretion and movement</td>
+<td><strong>nervous tissue</strong> → coordinates</td>
 </tr>
 </tbody>
 </table>
-<p><strong>One organ, four tissues, all three exchange solutions.</strong> But an organ like this only works if its surroundings stay within narrow limits.</p>
+<p><strong>One organ, four tissues, all three exchange solutions.</strong></p>
+</div><div class="column" style="width:55%;">
+<p><img data-src="figures/small-intestine-wall.jpg" style="width:100.0%" alt="Section of small intestine wall: purple glandular mucosa on the left, pale loose submucosa in the middle, and a thick pink band of smooth muscle on the right." height="360"></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Tissue_layers_of_the_small_intestine_(mucosa,_submucosa_%26_muscularis).jpg" class="credit">Photo: Juan Carlos Fonseca Mata, CC BY-SA 4.0, Wikimedia Commons</a></p>
+</div></div>
 <aside class="notes">
-<p>This slide closes the first half of the lecture by returning to the intestine from the levels slide. Each tissue maps onto one of the three solutions. Transition: building the machinery is not enough; temperature, pH, ion concentrations and glucose around the cells have to be held within limits while the animal eats, runs and the environment changes. That is homeostasis.</p>
+<p>This slide closes the first half of the lecture by returning to the intestine from the levels slide. In the micrograph the lumen is off to the left: purple mucosa with its glands, then the pale, loose submucosa where the blood vessels run, then the thick pink band of smooth muscle. Each tissue maps onto one of the three solutions. But an organ like this only works if its surroundings stay within narrow limits. Transition: building the machinery is not enough; temperature, pH, ion concentrations and glucose around the cells have to be held within limits while the animal eats, runs and the environment changes. That is homeostasis.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -776,6 +824,25 @@ Animal and Plant Physiology
 </ul>
 <aside class="notes">
 <p>Positive feedback is not a failure of regulation: it is used for fast, all-or-none events that must run to completion. Each example has a clear terminating step. The two errors are the ones students make most often in exams, so state them explicitly. Transition: feedback acts within minutes; animals also change over weeks and over generations.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="try-it-a-temperature-control-loop" class="slide level2">
+<h2>Try it: a temperature control loop</h2>
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="a1-feedback"></div>
+<script src="../../demos/dist/a1-feedback.js"></script>
+<aside class="notes">
+<p>The negative-feedback loop from two slides back, run as a simulation. Exercise adds heat from minute 10 to minute 40 (shaded); the blue trace below shows what the effector (sweating, skin blood flow) is doing. Start at Reset: temperature rises a little and levels off about 0.5 °C above the set point, then returns when exercise stops. Ask: why does it not come all the way back during exercise? Because the response is driven by the deviation itself, so some deviation must remain to keep the sweat glands working. Raise the gain: the remaining error shrinks (“Strong, fast”). Press “None”: nothing opposes the heat load and temperature drifts several degrees. Press “Positive feedback”: the response amplifies the change and runs away, which is why positive feedback needs an end point. Finally “Strong, slow”: the same strong gain with a 1.5 min delay overshoots and oscillates, a reminder that sensing and responding take time. “Cold” shows the same loop working the other way: the effector switches to heat production.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

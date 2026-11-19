@@ -6,3 +6,6 @@
 .DS_Store
 
 # Rendered course HTML in docs/ follows the source scaffold's convention.
+
+# Demo build tooling (npm i)
+/node_modules/

@@ -15,3 +15,16 @@ $code-block-font-size: 0.75em;       // ≈ 18px
 
 // Slightly tighter vertical rhythm so the smaller text doesn't look adrift.
 $presentation-line-height: 1.25;
+
+/*-- scss:rules --*/
+
+// Image credit line under a photo: [Photo: Author, CC BY-SA 4.0](url){.credit}
+.reveal .credit, .reveal a.credit {
+  display: block;
+  font-size: 0.5em;
+  color: #777;
+  margin-top: 0.2em;
+}
+
+// Photos are given both width and height on slides; keep their aspect ratio.
+.reveal img { object-fit: contain; }

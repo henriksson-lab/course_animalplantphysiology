@@ -43,26 +43,28 @@ Frame the lecture as a life cycle: seed, seedling, shoot, flower, seed again, an
 
 ## From cue to response
 
-```{mermaid}
-flowchart LR
-  cue[Cue: light, gravity,<br/>temperature, hormone] --> rec[Receptor]
-  rec --> trans[Signal transduction]
-  trans --> fast[Fast: ion fluxes,<br/>protein activity]
-  trans --> slow[Slow: gene<br/>expression]
-  fast --> resp[Cell growth,<br/>division, death]
-  slow --> resp
-```
+:::: {.columns}
+::: {.column width="42%"}
+**Cue → receptor → signal transduction → response**
 
-- Every response needs a **receptor**. A cue the plant cannot perceive has no effect.
-- **Fast** responses (seconds to minutes) modify existing proteins: stomata
-  closing, a pulvinus folding.
-- **Slow** responses (hours to weeks) change gene expression: a flower forming.
+- Every response needs a **receptor**: a cue the plant cannot perceive has no effect.
+- **Fast** (seconds to minutes): existing proteins change. A touched *Mimosa*
+  leaf folds.
+- **Slow** (hours to weeks): gene expression changes. A flower forms.
 - The same signal can give different responses in different tissues.
+:::
+::: {.column width="58%"}
+
+![](figures/mimosa-open-closed.jpg){width="100%" height="330" fig-alt="Two photos of the same Mimosa pudica plant: left, leaflets spread open; right, seconds after touch, leaflets folded and leaves drooping."}
+
+[Photos: Bluemoose, CC BY-SA 3.0, Wikimedia Commons: open](https://commons.wikimedia.org/wiki/File:Mimosa_pudica_open.JPG){.credit} [and touched](https://commons.wikimedia.org/wiki/File:Mimosa_pudica_closed.JPG){.credit}
+:::
+::::
 
 **Many of the signals inside the plant are hormones. Which ones?**
 
 ::: notes
-This is the framework for every example in the lecture: whenever we meet a response, ask what the cue is, what the receptor is, and whether the change is in existing proteins or in gene expression. Point out the last bullet: auxin promotes elongation in shoots but inhibits it in roots at the same concentration, so the response depends on the responding cell, not only on the signal. The next slide lists the hormones.
+This is the framework for every example in the lecture: whenever we meet a response, ask what the cue is (light, gravity, temperature, a hormone), what the receptor is, and whether the change is in existing proteins (ion fluxes, protein activity) or in gene expression. The photo is the fast case: touch triggers ion fluxes and water loss from motor cells in the pulvinus at the leaflet base, and the leaflets fold within seconds; no genes are involved. Stomatal closing is the other fast example. Point out the last bullet: auxin promotes elongation in shoots but inhibits it in roots at the same concentration, so the response depends on the responding cell, not only on the signal. The next slide lists the hormones.
 :::
 
 ## The plant hormones
@@ -85,23 +87,31 @@ Students must be able to match hormone and effect (exercise 1.1). Go through the
 
 ## Reading a hormone mutant
 
+:::: {.columns}
+::: {.column width="52%"}
 **Spray gibberellin on two dwarf pea mutants:**
 
-| Mutant | Response to GA | Defect |
+| Mutant | + GA | Defect |
 | --- | --- | --- |
-| A | Grows to normal height | **Biosynthesis**: cannot make GA (Mendel's *le* dwarf) |
-| B | Stays dwarf | **Perception or signalling**: cannot respond to GA |
+| A | normal height | **biosynthesis** (Mendel's *le*) |
+| B | stays dwarf | **perception or signalling** |
 
-**Ethylene and dark-grown seedlings: the triple response**
+**Triple response:** dark-grown seedlings + ethylene give a short, thick
+hypocotyl and an exaggerated hook. *etr1* (receptor mutant) + ethylene stays
+long and thin.
 
-- Wild type + ethylene: **short, thick hypocotyl** and an **exaggerated apical hook**.
-- *etr1* (ethylene receptor mutant) + ethylene: **long, thin hypocotyl**, normal hook.
-  The hormone is present, but the receptor cannot pass on the signal.
+**Rule:** rescued by the hormone → defect in making it.
+:::
+::: {.column width="48%"}
 
-**Rule:** if adding the hormone rescues the mutant, the defect is in making it.
+![](figures/dwarf-vs-wild-type.jpg){width="100%" height="330" fig-alt="A short dwarf mutant grass plant next to a much taller wild-type plant of the same species."}
+
+[Photo: Dehaan, CC BY 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dwarf_and_Wild_Thinopyrum_intermedium.JPG){.credit}
+:::
+::::
 
 ::: notes
-This is the logic of hormone genetics and appears in exercises 1.4 and 1.5. A biosynthesis mutant is rescued by the hormone; a receptor or signalling mutant is not. The Green Revolution semi-dwarf wheats (Rht genes) are GA-insensitive, which is the second class. The triple response screen found the ethylene receptor ETR1: mutants that ignore ethylene look like untreated seedlings. Transition: we start the life cycle, with the seed, where two of these hormones are in direct opposition.
+This is the logic of hormone genetics and appears in exercises 1.4 and 1.5. The photo shows the kind of phenotype we start from: a dwarf mutant beside wild type (here intermediate wheatgrass; the photo alone does not tell us which hormone is involved, which is exactly why we do the spraying experiment). A biosynthesis mutant is rescued by the hormone; a receptor or signalling mutant is not. The Green Revolution semi-dwarf wheats (Rht genes) are GA-insensitive, which is the second class. The triple response screen found the ethylene receptor ETR1: mutants that ignore ethylene look like untreated seedlings; the hormone is present but the receptor cannot pass on the signal. Transition: we start the life cycle with the seed, where two of these hormones are in direct opposition.
 :::
 
 ## The seed: dormant or just waiting?
@@ -124,25 +134,25 @@ Dormancy is an internal block; quiescence is only a lack of water or warmth. Str
 
 ## Germination: gibberellin mobilises the reserves
 
-```{mermaid}
-flowchart LR
-  E[Embryo releases GA] --> A[Aleurone layer:<br/>α-amylase gene on]
-  A --> S[α-amylase secreted<br/>into endosperm]
-  S --> H[Starch → sugars]
-  H --> U[Scutellum absorbs<br/>sugars → embryo]
-```
+:::: {.columns}
+::: {.column width="40%"}
+- The starchy **endosperm is dead**. The living **aleurone layer** around it
+  makes the enzymes.
+- Embryo signals with **GA**; aleurone **transcribes** α-amylase.
+- **ABA blocks** this, so a dormant grain keeps its reserves.
+- Malting: barley germinated with added GA, for brewing sugar.
+:::
+::: {.column width="60%"}
 
-- In a barley grain the starchy **endosperm is dead tissue**. The living
-  **aleurone layer** around it makes the enzymes.
-- The embryo signals with **GA**; the aleurone responds by **transcribing** α-amylase.
-- **ABA blocks** this response, so a dormant grain keeps its reserves.
-- The malting industry uses exactly this: barley is germinated, with added GA,
-  to produce sugar for brewing.
+![](figures/aleurone.svg){width="100%" height="360" fig-alt="Barley grain: the embryo releases gibberellin, the aleurone layer switches on alpha-amylase and secretes it into the starchy endosperm, starch becomes sugar, and the sugar returns to the embryo through the scutellum."}
+
+:::
+::::
 
 **But many small seeds also check something outside: is there light?**
 
 ::: notes
-This is the best-understood hormone response in a seed and is the order asked in exercise 1.3: GA from embryo, induction in the aleurone, secretion, hydrolysis, uptake via the scutellum. It is also a clear example of a slow, gene-expression response from the first slide. ABA antagonism ties back to the ABA : GA balance. Transition: small seeds such as lettuce have few reserves and should only germinate near the surface, which they detect with light.
+This is the best-understood hormone response in a seed and is the order asked in exercise 1.3: GA from embryo, induction in the aleurone, secretion, hydrolysis, uptake via the scutellum. Follow the numbers in the figure. It is also a clear example of a slow, gene-expression response from the first slide. ABA antagonism ties back to the ABA : GA balance. Transition: small seeds such as lettuce have few reserves and should only germinate near the surface, which they detect with light.
 :::
 
 ## Light is information as well as energy
@@ -156,31 +166,60 @@ This is the best-understood hormone response in a seed and is the order asked in
 
 - A seedling responds to a light flash far too dim to support photosynthesis.
   These receptors read the **colour, direction and timing** of light.
-- A dark-grown seedling is **etiolated**: long, pale, hooked. Light triggers
-  **de-etiolation**: the hook opens, leaves expand, chlorophyll forms.
+
+**What does a seedling do when it has no light at all?**
+
+::: notes
+Distinguish light as energy (P3) from light as a signal. The match between photoreceptor, wavelength and response is exercise 3.4. Phytochrome gets three slides because it underlies germination, shade avoidance and the night-break experiments in flowering.
+:::
+
+## Etiolation: growing in the dark
+
+:::: {.columns}
+::: {.column width="40%"}
+- In darkness a seedling is **etiolated**: long, pale, hooked, small leaves.
+- All reserves go into **elongation** until the shoot reaches light.
+- Light triggers **de-etiolation**: the hook opens, leaves expand,
+  chlorophyll forms, elongation slows.
+:::
+::: {.column width="60%"}
+
+![](figures/etiolated-bluebells.jpg){width="100%" height="350" fig-alt="Bluebell leaves that grew under an opaque cover are long, thin and pale; uncovered plants beside them are green and flowering."}
+
+[Photo: Chiswick Chap, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Etiolated_Spanish_Bluebells_Hyacinthoides_hispanica.JPG){.credit}
+:::
+::::
 
 **The red/far-red receptor is the key to germination and to flowering. How does it work?**
 
 ::: notes
-Distinguish light as energy (P3) from light as a signal. The match between photoreceptor, wavelength and response is exercise 3.4. Etiolation is a strategy: a buried seedling puts all its reserves into elongation until it reaches light. Phytochrome gets the next three slides because it underlies germination, shade avoidance and the night-break experiments in flowering.
+Etiolation is a strategy: a buried seedling cannot photosynthesise, so it spends its reserves on getting to the light. The photo compares bluebell shoots that grew under an opaque cover (long, yellow) with uncovered ones (short, green): same plants, same soil, only light differs. Phytochromes and cryptochromes both drive de-etiolation; that is the red- and blue-light inhibition of hypocotyl elongation in the table on the previous slide.
 :::
 
 ## Phytochrome: a red/far-red switch
 
+:::: {.columns}
+::: {.column width="42%"}
 | | **Pr** | **Pfr** |
 | --- | --- | --- |
-| Absorbs | Red, ~660 nm | Far-red, ~730 nm |
-| Converted by light to | Pfr | Pr |
-| Biologically active? | No | **Yes** |
-| Synthesised as? | **Yes** | No |
+| Absorbs | red, ~660 nm | far-red, ~730 nm |
+| Light converts it to | Pfr | Pr |
+| Active? | no | **yes** |
+| Made as? | **yes** | no |
 
-- Red light → mostly **Pfr** (active). Far-red light → mostly **Pr** (inactive).
-- The conversion is **photoreversible**: the last light treatment decides the state.
-- Active Pfr moves into the **nucleus** and changes gene expression.
-- In darkness, Pfr slowly reverts or is degraded, so the Pfr level falls overnight.
+- The **last** light decides the state.
+- Pfr enters the **nucleus** and changes gene expression.
+- In darkness Pfr slowly reverts or is degraded.
+:::
+::: {.column width="58%"}
+
+![](figures/phytochrome-spectra.svg){width="100%" height="360" fig-alt="Absorption spectra: Pr absorbs most strongly in red light near 660 nm, Pfr in far-red light near 730 nm. Red light converts Pr to Pfr and far-red converts Pfr back to Pr."}
+
+:::
+::::
 
 ::: notes
-Students should be able to fill this table from memory (exercise 3.1). The key idea is a switch with two stable states, each converted to the other by the light it absorbs. Phytochrome is made as inactive Pr, which is why a seed in darkness has no active phytochrome. The last bullet matters for photoperiod: the plant can use the decline in Pfr during the night. The next slide shows the classic experiment that proved photoreversibility.
+Students should be able to fill this table from memory (exercise 3.1). The key idea is a switch with two stable states, each converted to the other by the light it absorbs. The spectra show why red light never gives 100 % Pfr: Pfr also absorbs a little at 660 nm, so continuous red reaches about 85 % Pfr, while far-red, which Pr hardly absorbs, leaves only a few per cent. Phytochrome is made as inactive Pr, which is why a seed in darkness has no active phytochrome. The last bullet matters for photoperiod: the plant can use the decline in Pfr during the night. The next slide shows the classic experiment that proved photoreversibility.
 :::
 
 ## The lettuce seed experiment
@@ -205,6 +244,18 @@ Imbibed lettuce seeds, brief light flashes, then darkness:
 Work the sequence column by column; exercise 3.2 extends it to five flashes. The ecological meaning: small-seeded weeds germinate after ploughing because the soil is turned and seeds get a flash of light. Transition to shade: phytochrome does not just detect light versus dark, it detects the ratio of red to far-red.
 :::
 
+## Try it: flash the lettuce seeds
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p4-phytochrome"></div>
+<script src="../../demos/dist/p4-phytochrome.js"></script>
+```
+
+::: notes
+Live version of the lettuce-seed table. The buttons give a brief, saturating red or far-red flash; the chart shows the fraction of phytochrome as active Pfr after each flash (about 85 % after red, about 3 % after far-red), and "Incubate 2 days in darkness" shows how many of 20 seeds germinate. Start with "dark" and incubate: almost none germinate, because phytochrome is made as Pr. Then let the room choose sequences, for example R FR R FR R FR R: ask them to predict before you incubate. Points to draw out: only the last flash matters; Pfr never reaches 100 % because Pfr also absorbs some red light; the result is all-or-nothing per seed but the dish gives a percentage, as in exercise 4.3. The buttons under "Lecture sequences" load the rows of the table. The seed pattern is fixed, so a rerun looks the same. Reset clears the flashes.
+:::
+
 ## Shade avoidance
 
 - Chlorophyll **absorbs red** light but **transmits and reflects far-red**.
@@ -226,49 +277,78 @@ Exercise 3.3. Emphasise that the plant responds to reflected far-red from neighb
 
 ## Phototropism: bending towards light
 
-| Coleoptile treatment, lit from one side | Bends? |
+:::: {.columns}
+::: {.column width="45%"}
+| Coleoptile, lit from one side | Bends? |
 | --- | --- |
-| Untreated | **Yes** |
-| Tip removed, or covered with an opaque cap | No |
-| Tip in a transparent cap | **Yes** |
-| Opaque collar below the tip, tip exposed | **Yes** |
-| Tip cut off and replaced on a gelatin block | **Yes** |
+| Untreated | **yes** |
+| Tip removed, or opaque cap | no |
+| Tip in a transparent cap | **yes** |
+| Opaque collar below the tip | **yes** |
+| Tip replaced on a gelatin block | **yes** |
 
-- **Light is perceived at the tip**, by **phototropin** (blue light).
-- A diffusible signal, **auxin**, moves down to the growing zone.
-- **Cholodny–Went model:** auxin is moved to the **shaded side**; cells there
-  elongate faster, so the shoot bends **towards** the light.
+- **Light is perceived at the tip**; a diffusible signal moves down.
+:::
+::: {.column width="55%"}
+
+![](figures/phototropism-seedlings.jpg){width="100%" height="340" fig-alt="Young onion shoots in a tray of soil, all leaning the same way, towards the light from a window."}
+
+[Photo: Dennis Brown, CC BY-SA 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Onions_reach_for_light.jpg){.credit}
+:::
+::::
+
+**What is the signal, and why does the shoot bend?**
 
 ::: notes
-The table summarises Darwin (1880, caps and collars) and Boysen-Jensen (1913, gelatin block); Went (1928) then collected the signal in agar blocks and named it auxin. Each row asks: where is light perceived, and can the signal pass through gelatin? This is exercises 2.1 and 2.2. Transition: the same auxin redistribution explains a response to gravity, but in roots auxin has the opposite effect.
+The table summarises Darwin (1880, caps and collars) and Boysen-Jensen (1913, gelatin block); Went (1928) then collected the signal in agar blocks and named it auxin. Each row asks: where is light perceived, and can the signal pass through gelatin? This is exercises 2.1 and 2.2. The photo shows the everyday version: onion seedlings grown indoors all lean towards the window.
+:::
+
+## The Cholodny–Went model
+
+:::: {.columns}
+::: {.column width="40%"}
+- **Phototropin** at the tip senses **blue light** from one side.
+- **Auxin** is moved to the **shaded side**, then down to the growing zone.
+- Shaded cells **elongate faster**: the shoot bends **towards** the light.
+:::
+::: {.column width="60%"}
+
+![](figures/auxin-phototropism.svg){width="100%" height="360" fig-alt="Left: blue light from one side reaches a coleoptile tip; auxin is moved to the shaded side and down. Right: the shaded side has more auxin, grows faster, and the coleoptile bends towards the light."}
+
+:::
+::::
+
+**The same auxin redistribution explains a response to gravity.**
+
+::: notes
+Exercise 2.2. The model has two parts: lateral redistribution at the tip, then basipetal (downward) polar transport to the elongation zone. The lit side does not lose auxin by destruction; auxin is moved across by PIN efflux carriers. Transition: in gravitropism auxin also moves to one side, but in roots it has the opposite effect.
 :::
 
 ## Gravitropism: the root grows down
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 **Root turned horizontal:**
 
-1. **Columella cells** of the root cap perceive gravity.
-2. Starch-filled **amyloplasts** (statoliths) sediment to the lower side.
-3. Auxin is redirected to the **lower side** of the root.
-4. In roots, high auxin **inhibits** elongation.
-5. The upper side grows faster: the root bends **down**.
+1. **Columella cells** of the root cap sense gravity: starch-filled
+   **amyloplasts** (statoliths) sediment to the lower side.
+2. Auxin is redirected to the **lower side**.
+3. In roots, high auxin **inhibits** elongation: the root bends **down**.
+
+**Shoot:** auxin also goes to the lower side but **promotes** elongation: the
+shoot bends **up**.
 :::
-::: {.column width="50%"}
-**Shoot turned horizontal:**
+::: {.column width="60%"}
 
-- Auxin also accumulates on the **lower side**.
-- In shoots, auxin **promotes** elongation.
-- The lower side grows faster: the shoot bends **up**.
+![](figures/gravitropism.svg){width="100%" height="360" fig-alt="Left: a root laid flat; amyloplasts in the root cap settle downwards, auxin collects on the lower side and inhibits elongation, so the root bends down. Right: a shoot laid flat; auxin on the lower side promotes elongation, so the shoot bends up."}
 
-Same signal, same redistribution, opposite outcome: the response depends on
-the **tissue's sensitivity** to auxin.
 :::
 ::::
 
+**Same signal, same redistribution, opposite outcome: the response depends on the tissue.**
+
 ::: notes
-Exercise 2.3. The root cap is the sensor: remove it and the root still grows but no longer bends. The contrast between root and shoot is the clearest demonstration of the first slide's point that the response depends on the responding tissue. Transition: auxin flowing down the shoot also decides whether side branches grow.
+Exercise 2.3. The root cap is the sensor: remove it and the root still grows but no longer bends. The contrast between root and shoot is the clearest demonstration of the first slide's point that the response depends on the responding tissue's sensitivity to auxin. Transition: auxin flowing down the shoot also decides whether side branches grow.
 :::
 
 ## Apical dominance: should the plant branch?
@@ -294,62 +374,85 @@ Exercise 1.2. The lanolin-only control is essential: it shows that the paste its
 
 ## Flowering: measuring the night
 
+:::: {.columns}
+::: {.column width="45%"}
 - **Short-day plants (SDP)** flower when the night is **longer** than a
   critical night length (chrysanthemum, soybean, poinsettia).
-- **Long-day plants (LDP)** flower when the night is **shorter** than it
-  (Arabidopsis, spinach, wheat).
-- What the plant measures is the **uninterrupted dark period**.
+- **Long-day plants (LDP)** flower when it is **shorter** (*Arabidopsis*,
+  spinach, wheat).
+- The plant measures the **uninterrupted dark period**: an hour of darkness
+  in the day changes nothing.
+:::
+::: {.column width="55%"}
 
-Critical night length 11 h:
+![](figures/arabidopsis-flowering.jpg){width="100%" height="340" fig-alt="Arabidopsis thaliana plants in a growth cabinet: leaf rosettes with tall stems carrying flower buds."}
 
-| 24 h cycle | Longest dark period | SDP | LDP |
-| --- | --- | --- | --- |
-| 16 h light / 8 h dark | 8 h | No | **Yes** |
-| 8 h light / 16 h dark | 16 h | **Yes** | No |
-| 8 h light (with 1 h dark in the middle) / 16 h dark | 16 h | **Yes** | No |
+[Photo: Carl Davies, CSIRO, CC BY 3.0, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3176_Arabidopsis_in_growth_cabinet_at_the_CSIRO_Discovery_Centre_labs_Black_Mountain_ACT.jpg){.credit}
+:::
+::::
 
 **What happens if we interrupt the night instead of the day?**
 
 ::: notes
-The names are historical: they refer to day length, but experiments showed that night length is what is measured. The third row shows that darkness during the day does nothing, because the night is unchanged. Exercise 5.1 uses exactly this setup. Transition: a brief light flash in the middle of the night has a large effect, and the colour of that flash tells us which receptor reads the night.
+The names are historical: they refer to day length, but experiments showed that night length is what is measured. With a critical night length of 11 h, 16 h light / 8 h dark makes LDP flower; 8 h light / 16 h dark makes SDP flower; and 8 h light with 1 h dark in the middle plus a 16 h night still makes SDP flower, because the night is unchanged (exercise 5.1). Arabidopsis in the photo is the model long-day plant: grown in long days in a growth cabinet it flowers within a few weeks. Transition: a brief light flash in the middle of the night has a large effect, and the colour of that flash tells us which receptor reads the night.
 :::
 
 ## Night breaks reveal phytochrome
 
-8 h light / 16 h dark, with a brief flash in the middle of the night:
+:::: {.columns}
+::: {.column width="40%"}
+8 h light / 16 h dark, brief flash mid-night:
 
-| Night break | Phytochrome after flash | Longest dark period (as perceived) | SDP | LDP |
-| --- | --- | --- | --- | --- |
-| None | — | 16 h | **Yes** | No |
-| Red | Pfr | 8 h | No | **Yes** |
-| Red → far-red | Pr | 16 h | **Yes** | No |
+- **Red** makes Pfr and **splits** the long night into two short ones: SDP
+  stop, LDP flower.
+- **Far-red** right after **reverses** it: phytochrome is the receptor.
+- Growers light chrysanthemums at night to delay flowering.
+:::
+::: {.column width="60%"}
 
-- A few minutes of red light **splits a long night into two short ones**.
-- Far-red immediately after **reverses** the red effect, so phytochrome is the receptor.
-- Commercial use: growers light chrysanthemums at night to delay flowering
-  until the market wants them.
+![](figures/photoperiod.svg){width="100%" height="360" fig-alt="Bar diagrams of 24-hour cycles. Long day: LDP flower. Short day: SDP flower. Short day with a red flash in mid-night: LDP flower, SDP do not. Red then far-red: SDP flower, LDP do not."}
+
+:::
+::::
+
+**The flash is sensed in the leaves. How does the message reach the apex?**
 
 ::: notes
-Exercise 5.1 c and d. Connect to the lettuce seed slide: the same last-flash rule, applied to a night instead of a seed. Students often think the red flash adds "day"; stress that it only matters because it breaks the dark period. Transition: day length is measured in the leaves, but flowers form at the shoot apex. How does the message get there?
+Exercise 5.1 c and d. Connect to the lettuce seed slide: the same last-flash rule, applied to a night instead of a seed. Students often think the red flash adds "day"; stress that it only matters because it breaks the dark period. Read the figure row by row and ask for the longest uninterrupted dark period each time: 8, 16, 8 and 16 h.
+:::
+
+## Try it: the photoperiod clock
+
+```{=html}
+<link rel="stylesheet" href="../../demos/dist/demo.css">
+<div data-demo="p4-photoperiod" data-day="8" data-critical="11"></div>
+<script src="../../demos/dist/p4-photoperiod.js"></script>
+```
+
+::: notes
+Live version of the photoperiod table and figure. The clock shows one 24-hour cycle with noon at the top; the bar below shows the night as the plant measures it, with the critical night length (11 h, as in the lecture) as a dashed line. The two plants show whether a short-day and a long-day plant flower. Run through the "Lecture cases" buttons in order and ask the room to predict each one first: 16 L / 8 D, 8 L / 16 D, + red break, + red, far-red, + dark in day. Then slide the day length slowly from 8 to 16 h: both plants switch at 13 h of light (an 11 h night). Then add a red break and move "Flash at" towards dusk: once one fragment of the night is longer than 11 h again, the SDP flowers despite the break; this is why growers place the night break near the middle. Far-red alone has no effect, because phytochrome is already Pr at night. Reset restores the start.
 :::
 
 ## Florigen: a protein from leaf to apex
 
-```{mermaid}
-flowchart LR
-  L[Leaf senses long days:<br/>CONSTANS → FT gene on] --> P[FT protein moves<br/>in the phloem]
-  P --> M[Shoot apical meristem:<br/>FT + FD]
-  M --> F[Floral meristem identity<br/>genes on → flower]
-```
-
-- Grafting experiments in the 1930s showed that an induced leaf sends a
-  signal, named **florigen**.
-- In Arabidopsis, florigen is the protein **FLOWERING LOCUS T (FT)**.
-  FT tagged with GFP is made in leaves and found at the apex (Corbesier et al., 2007).
+:::: {.columns}
+::: {.column width="40%"}
+- Grafting (1930s): an induced leaf sends a signal, named **florigen**.
+- In *Arabidopsis* florigen is the protein **FLOWERING LOCUS T (FT)**:
+  FT–GFP made in leaves is found at the apex (Corbesier et al., 2007).
 - The **leaf perceives**, the **phloem transports**, the **apex responds**.
+:::
+::: {.column width="60%"}
+
+![](figures/florigen.svg){width="100%" height="360" fig-alt="A plant: in a leaf under long days CONSTANS switches on FT; FT protein travels in the phloem up the stem to the shoot apex, where FT and FD switch on flower genes."}
+
+:::
+::::
+
+**Some plants need a second condition before they can respond to day length.**
 
 ::: notes
-Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells only when long days give light at the end of the day, which is how day length is converted into a molecular signal. FT is small enough to move through plasmodesmata into sieve tubes and travels with the assimilate flow from P3. At the apex it pairs with the transcription factor FD to switch on floral identity genes such as APETALA1. Transition: some plants need a second condition before they can respond to day length, namely a winter.
+Exercise 5.2. CONSTANS protein accumulates in the leaf phloem companion cells only when long days give light at the end of the day, which is how day length is converted into a molecular signal. FT is small enough to move through plasmodesmata into sieve tubes and travels with the assimilate flow from P3. At the apex it pairs with the transcription factor FD to switch on floral identity genes such as APETALA1. Transition: some plants need a winter before they can respond to day length.
 :::
 
 ## Vernalisation: remembering winter
@@ -373,22 +476,29 @@ Exercise 5.3 is a true/false set on these bullets; the common misconceptions are
 
 ## Double fertilisation: building the seed
 
-| Structure | Formed from | Ploidy |
+:::: {.columns}
+::: {.column width="48%"}
+| Structure | From | Ploidy |
 | --- | --- | --- |
-| **Zygote** → embryo | Sperm cell 1 + egg cell | 2n |
-| **Endosperm** | Sperm cell 2 + central cell (two polar nuclei) | 3n |
-| **Seed coat** | Integuments of the ovule (maternal) | 2n |
-| **Fruit wall** (pericarp) | Ovary wall (maternal) | 2n |
+| **Embryo** | sperm 1 + egg | 2n |
+| **Endosperm** | sperm 2 + central cell | 3n |
+| **Seed coat** | integuments (maternal) | 2n |
+| **Fruit wall** | ovary wall (maternal) | 2n |
 
-- The pollen tube delivers **two sperm cells**; both fertilise: **double fertilisation**.
-- The endosperm is the food store we met in the barley grain.
-- The seed coat and fruit are **maternal tissue**, not the next generation.
-- Developing seeds are strong **sinks** (P3): they draw sugar and nutrients from the leaves.
+- The endosperm is the food store of the barley grain.
+- Developing seeds are strong **sinks** (P3).
+:::
+::: {.column width="52%"}
+
+![](figures/double-fertilisation.svg){width="100%" height="340" fig-alt="An ovule with its embryo sac. The pollen tube delivers two sperm cells: one fuses with the egg to give a diploid zygote, the other with the central cell and its two polar nuclei to give triploid endosperm."}
+
+:::
+::::
 
 **Where do those nutrients come from at the end of the season?**
 
 ::: notes
-Exercise 5.4. Close the loop to the start of the lecture: the endosperm made here is the starch store mobilised by gibberellin in the next generation. The ploidy column is the usual exam check. The sink bullet links back to phloem transport in P3 and leads into senescence: the old leaves become the nutrient source for the seeds.
+Exercise 5.4. The pollen tube delivers two sperm cells and both fertilise: double fertilisation. The central cell has two polar nuclei, which is why the endosperm is triploid. Close the loop to the start of the lecture: the endosperm made here is the starch store mobilised by gibberellin in the next generation. The seed coat and fruit are maternal tissue, not the next generation. The ploidy column is the usual exam check. The sink bullet links back to phloem transport in P3 and leads into senescence: the old leaves become the nutrient source for the seeds.
 :::
 
 ## Senescence: recycling the leaf
