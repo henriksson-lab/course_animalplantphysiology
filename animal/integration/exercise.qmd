@@ -733,225 +733,334 @@ the muscle summates many twitches; spikes are all-or-none and never got bigger.
 Muscle force is graded by firing rate and by recruitment (c, not changed here).
 :::
 
-## R and bioinformatics {#r-exercises}
+## Bioinformatics and R {#bioinformatics}
 
-Run the code in R or RStudio. Only base R is used (no packages), and all data
-are typed into the code.
+A channel, receptor or hormone is encoded by a gene, and the same gene exists in
+many species. When two species differ in a trait (a horse that collapses after
+a potassium-rich meal, a fish that is full of a nerve poison but is not
+paralysed), comparing the gene between them can show which single amino acid
+makes the difference. These exercises teach you to find a gene and its
+orthologues in **NCBI Gene** and **Ensembl**, and to use **R** to fetch the
+protein sequences, line up the relevant positions and analyse real
+physiological data. Reading a UniProt FASTA file into R was introduced in A1.
 
-### R1. Equilibrium potentials as vectors
+::: {.callout-tip}
+## How to search NCBI Gene and Ensembl
 
-R can do the Nernst calculation from 1.1 for all three ions at once. Complete
-the line that calculates `E` (replace `___` with the Nernst equation), run the
-code and report $E_\text{Na}$ exactly as R prints it.
+**NCBI Gene** (<https://www.ncbi.nlm.nih.gov/gene>) has one record per gene
+per species.
 
-```r
-ion     <- c("K", "Na", "Cl")
-outside <- c(5, 145, 110)   # mmol/L
-inside  <- c(140, 15, 10)   # mmol/L
-z       <- c(1, 1, -1)
-E <- ___
-names(E) <- ion
-round(E, 1)
-```
+- Use field tags to avoid hundreds of hits: `SCN4A[sym] AND human[orgn]`
+  means "official gene symbol SCN4A in human". Latin names go in quotes:
+  `"Takifugu rubripes"[orgn]`. A `*` is a wildcard: `scn4a*[sym]` also finds
+  `scn4aa` and `scn4ab`.
+- A plain word such as `HYPP AND human[orgn]` searches all fields, including
+  aliases and disease names. Several genes may then match; open the one whose
+  official symbol and description fit.
+- Key fields of a record: **Gene ID** (a stable number, e.g. 6329), **Official
+  Symbol**, **Also known as** (aliases, often the protein name such as Nav1.4,
+  and disease abbreviations), **Summary**, and **Genomic context** (chromosome,
+  position, exon count).
+- The **Orthologs** link on a gene page lists the corresponding gene in other
+  species, each with its own Gene ID. RefSeq accessions starting with NM_/NP_
+  are curated mRNAs/proteins; XM_/XP_ are computer predictions.
+
+**Ensembl** (<https://www.ensembl.org>) annotates whole genomes. Type a gene
+symbol in the search box, choose the species and open the gene. Human gene IDs
+look like `ENSG00000007314` (mouse `ENSMUSG…`, zebrafish `ENSDARG…`). The gene
+page shows location, strand and all transcripts; its orthologue view
+classifies each orthologue as **1-to-1** or **1-to-many**. Many teleost fish
+have two copies of a mammalian gene (named `…a` and `…b`), left over from a
+genome duplication in their ancestor.
+
+Recap from A3: **orthologues** are the same gene in different species (split
+by speciation); **paralogues** are different genes in the same genome (split
+by gene duplication).
+:::
+
+### B1. A horse that collapses after a potassium-rich meal
+
+Some Quarter Horses have attacks of muscle tremor and weakness when their
+plasma K⁺ rises. The disease is **hyperkalaemic periodic paralysis (HYPP)**,
+and the same disease occurs in humans. Find the gene responsible.
+
+a. Search NCBI Gene for `HYPP AND human[orgn]`. Several genes match. What is
+   the official symbol and the Gene ID of the one that encodes a voltage-gated
+   sodium channel?
+b. Open that record. On which human chromosome does the gene lie?
+c. Which name of the encoded channel, starting with "Nav", is listed under
+   "Also known as"?
+d. Search Ensembl for the same gene in human. What is its Ensembl gene ID, and
+   is it on the forward or the reverse strand?
+e. Go back to NCBI Gene and open the **Orthologs** list. What is the Gene ID of
+   the horse (*Equus caballus*) orthologue, and on which horse chromosome is it?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-$E_\text{Na}$ = 60.6 mV (the ≈ +61 mV of 1.1).
-
-```r
-E <- 61.5 / z * log10(outside / inside)
-names(E) <- ion
-round(E, 1)
-```
-
-```
-    K    Na    Cl 
--89.0  60.6 -64.0 
-```
-
-Each vector element is used in turn, so one line does three calculations.
+a. **SCN4A**, Gene ID **6329** ("sodium voltage-gated channel alpha subunit 4").
+   The other hits mention HYPP for other reasons; only SCN4A is a sodium channel.
+b. Chromosome **17** (17q23.3).
+c. **Nav1.4** (the skeletal-muscle sodium channel; SkM1 is an older name).
+   HYPP itself is also in the alias list, which is why the search found it.
+d. **ENSG00000007314**, on the **reverse** strand (strand −1). The strand only
+   tells which DNA strand is transcribed; it says nothing about function.
+e. Gene ID **100049793**, on horse chromosome **11**. Same gene, same
+   physiological job (the action potential of skeletal muscle fibres), but its
+   position in the genome differs between species.
 :::
 
-### R2. Conduction velocity
+### B2. Which amino acid is changed in HYPP horses?
 
-Two recording electrodes 5 cm apart pick up the same action potential in four
-different axons. The latencies below are invented teaching values. Complete the
-velocity line (convert ms to s), run the code and report (a) the fastest
-velocity in m/s and (b) how many times faster the fastest axon is than the
-slowest.
+UniProt entry [Q28371](https://www.uniprot.org/uniprotkb/Q28371) is the horse
+Nav1.4 protein. Open it and find the natural variant annotated "in HYPP" (in
+the Disease & Variants or Variants section).
 
-```r
-distance <- 0.05                      # metres between the two electrodes
-latency  <- c(0.8, 2.5, 10, 50)       # milliseconds, invented teaching values
-velocity <- distance / (___ / 1000)   # m/s
-velocity
-max(velocity) / min(velocity)
-```
+a. Which residue (position and amino acid) is changed, and into what?
 
-::: {.callout-note collapse="true"}
-## Answer
-
-(a) 62.5 m/s; (b) 62.5 times faster.
+Positions are numbered differently in different species, so to find the same
+site in human Nav1.4 ([P35499](https://www.uniprot.org/uniprotkb/P35499)) you
+search for the surrounding sequence instead of the number. Run the code.
 
 ```r
-velocity <- distance / (latency / 1000)   # m/s
-velocity
-max(velocity) / min(velocity)
-```
-
-```
-[1] 62.5 20.0  5.0  1.0
-[1] 62.5
-```
-
-The fastest value is in the range of a large myelinated vertebrate axon; the
-slowest is like a thin unmyelinated axon.
-:::
-
-### R3. Rate code in a data frame
-
-A sensory neuron is stimulated at six strengths. The firing rate and the height
-of its spikes are stored in a data frame (invented teaching values; at strength
-1 the neuron did not fire, so spike height is `NA`). Run the code and answer:
-
-a. What are the mean and the standard deviation of spike amplitude?
-b. How many stimulus strengths give a firing rate above 40 spikes/s?
-c. Which quantity carries the information about stimulus strength: spike
-   amplitude or firing rate?
-
-```r
-rec <- data.frame(
-  stimulus  = c(1, 2, 3, 4, 5, 6),            # arbitrary units
-  rate      = c(0, 12, 25, 41, 58, 70),       # spikes per second
-  amplitude = c(NA, 98, 100, 99, 101, 100)    # spike height, mV
-)
-mean(rec$amplitude, na.rm = TRUE)
-sd(rec$amplitude, na.rm = TRUE)
-strong <- rec[rec$rate > 40, ]
-nrow(strong)
-plot(rec$stimulus, rec$rate, type = "b",
-     xlab = "Stimulus strength", ylab = "Firing rate (spikes/s)")
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-[1] 99.6
-[1] 1.140175
-[1] 3
-```
-
-a. Mean 99.6 mV, standard deviation 1.14 mV.
-b. 3 (strengths 4, 5 and 6).
-c. Firing rate. It rises steadily with stimulus strength (the plot), while
-   spike amplitude stays almost constant: action potentials are all-or-none.
-
-`rec[rec$rate > 40, ]` keeps the rows where the condition is `TRUE` and all
-columns.
-:::
-
-### R4. Counting amino acids in a potassium channel
-
-KcsA is a bacterial potassium channel whose structure was the first atomic view
-of a K⁺ channel pore. Its sequence below is copied from UniProt entry
-[P0A334](https://rest.uniprot.org/uniprotkb/P0A334.fasta) (*Streptomyces
-lividans*). Run the code. How many amino acids long is KcsA, and which amino
-acid is most common?
-
-```r
-kcsa <- paste0(
-  "MPPMLSGLLARLVKLLLGRHGSALHWRAAGAATVLLVIVLLAGSYLAVLAERGAPGAQLI",
-  "TYPRALWWSVETATTVGYGDLYPVTLWGRLVAVVVMVAGITSFGLVTAALATWFVGREQE",
-  "RRGHFVRHSEKAAEEAYTRTTRALHERFDRLERMLDDNRR")
-nchar(kcsa)
-aa <- strsplit(kcsa, "")[[1]]
-counts <- sort(table(aa), decreasing = TRUE)
-head(counts, 3)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-160 amino acids; leucine (L, 24 times) is most common.
-
-```
-[1] 160
-aa
- L  A  R 
-24 22 17 
-```
-
-`strsplit()` cuts the string into single letters and `table()` counts each
-letter.
-:::
-
-### R5. Finding the selectivity filter
-
-The narrow part of a K⁺ channel pore that lets K⁺ through but not Na⁺ is the
-**selectivity filter**. In K⁺ channels it contains the signature motif TVGYG.
-Using `kcsa` from R4, complete the code to search for `"TVGYG"`. At which
-position does the motif start?
-
-```r
-gregexpr("___", kcsa)[[1]][1]
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-Position 75.
-
-```r
-gregexpr("TVGYG", kcsa)[[1]][1]
-```
-
-```
-[1] 75
-```
-
-This matches UniProt, which annotates residues 75–80 as the selectivity filter.
-:::
-
-### R6. A transmembrane segment is hydrophobic
-
-A helix that crosses the membrane is surrounded by lipid tails, so most of its
-amino acids are hydrophobic. UniProt annotates residues 28–50 of KcsA as its
-first transmembrane helix. Using `kcsa` from R4, run the code. What fraction of
-the residues is hydrophobic in (a) the transmembrane helix and (b) residues
-128–150, part of the C-terminal region that lies in the cytoplasm?
-
-```r
-hydrophobic <- c("A", "V", "I", "L", "M", "F", "W", "C")
-frac_hydrophobic <- function(s) {
-  aa <- strsplit(s, "")[[1]]
-  mean(aa %in% hydrophobic)
+read_uniprot <- function(acc) {
+  lines <- readLines(paste0("https://rest.uniprot.org/uniprotkb/", acc, ".fasta"))
+  paste(lines[-1], collapse = "")
 }
-tm1  <- substr(kcsa, 28, 50)
-tail <- substr(kcsa, 128, 150)
-tm1
-tail
-round(frac_hydrophobic(tm1), 2)
-round(frac_hydrophobic(tail), 2)
+horse <- read_uniprot("Q28371")
+human <- read_uniprot("P35499")
+substr(horse, 1416, 1416)               # the residue changed in HYPP horses
+window <- substr(horse, 1411, 1421)     # 5 residues on each side
+window
+start <- regexpr(window, human)         # where does the same stretch occur in human?
+as.integer(start) + 5                   # human position of the middle residue
 ```
+
+b. At which position in the human protein is the equivalent residue, and is the
+   11-residue stretch around it identical in horse and human?
+c. In the human entry P35499, look at the Topology/Features of that position.
+   Which membrane segment of which repeat contains it?
+d. Mutations like this make some Nav1.4 channels fail to inactivate properly.
+   Which consequence follows? (A) The fibre stays partly depolarised, normal
+   Na⁺ channels become stuck in the inactivated state, and the fibre cannot fire
+   → weakness; (B) the fibre becomes hyperpolarised and fires more easily;
+   (C) the muscle can no longer make ATP.
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-(a) 0.78; (b) 0.26.
+a. **Phenylalanine 1416 → leucine** (F1416L), found in a Quarter Horse lineage
+   segregating the disease.
+b. Position **1419**; yes, `regexpr()` found the whole stretch `VGWNIFDFVVV`,
+   so it is identical (a conserved region).
 
 ```
-[1] "AAGAATVLLVIVLLAGSYLAVLA"
-[1] "HSEKAAEEAYTRTTRALHERFDR"
-[1] 0.78
-[1] 0.26
+[1] "F"
+[1] "VGWNIFDFVVV"
+[1] 1419
 ```
 
-`aa %in% hydrophobic` gives `TRUE`/`FALSE` for each letter, and the mean of
-`TRUE`/`FALSE` values is the fraction `TRUE`. The cytoplasmic stretch is rich in
-charged residues (E, K, R, H, D) instead. Programs that predict transmembrane
-segments slide a window like this along the whole sequence.
+c. **S3 of repeat IV**, a transmembrane helix of the fourth voltage-sensing
+   domain (UniProt annotates 1415–1432 as "S3 of repeat IV").
+d. **A.** Extra K⁺ depolarises the fibre; mutant channels then let a
+   persistent Na⁺ current flow, the membrane stays depolarised, and the
+   wild-type channels stay inactivated, so no new action potentials can start.
+   One amino acid in a 1834-residue protein is enough to change a whole
+   animal's response to a meal.
+:::
+
+### B3. How can a pufferfish carry tetrodotoxin without paralysing itself?
+
+Tetrodotoxin (TTX) blocks the outer mouth of voltage-gated Na⁺ channels, so
+action potentials stop. Pufferfish store large amounts of TTX in their bodies.
+In human Nav1.4, UniProt annotates **tyrosine 407** in the domain I pore loop
+as "important for inhibition by tetrodotoxin": an aromatic ring there (Y, F or
+W) binds the toxin.
+
+a. Search NCBI Gene for `scn4a*[sym] AND "Takifugu rubripes"[orgn]`. How many
+   Nav1.4 genes does the Japanese pufferfish (fugu) have, what are their
+   symbols, and on which chromosomes are they?
+
+The code fetches reviewed Nav1.4 sequences from human, zebrafish (which does
+not contain TTX) and two pufferfishes, each fish with both gene copies. It cuts
+out the domain I pore loop (it starts with the conserved motif `RLMTQD`) and
+reads the residue right after the motif, which is the position of human Y407.
+
+```r
+read_uniprot <- function(acc) {
+  lines <- readLines(paste0("https://rest.uniprot.org/uniprotkb/", acc, ".fasta"))
+  paste(lines[-1], collapse = "")
+}
+acc <- c(human       = "P35499", zebrafish_a = "Q2XVR3", zebrafish_b = "Q20JQ7",
+         fugu_a      = "Q2XVR7", fugu_b      = "Q2XVR6",
+         tetraodon_a = "Q2XVR5", tetraodon_b = "Q2XVR4")
+seqs <- sapply(acc, read_uniprot)
+loop <- regmatches(seqs, regexpr("RLMTQD.....", seqs))   # domain I pore loop
+names(loop) <- names(seqs)
+loop
+site <- substr(loop, 7, 7)       # residue right after RLMTQD
+site
+aromatic <- site %in% c("F", "W", "Y")
+data.frame(channel = names(seqs), site, ttx_sensitive_prediction = aromatic)
+```
+
+b. Which residue do zebrafish Nav1.4a and Nav1.4b have at this site? Are they
+   predicted to be TTX-sensitive?
+c. Which two channels have a non-aromatic residue at the site, and which
+   residues are they?
+d. Fugu Nav1.4b has an aromatic residue here. Which statement fits?
+   (A) Nav1.4b must be fully TTX-sensitive, so fugu muscle is paralysed by its
+   own toxin; (B) this one site is not the only TTX-binding residue: other
+   substitutions in the outer vestibule can also give resistance.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. **Two** genes: **scn4aa** (chromosome **1**) and **scn4ab** (chromosome
+   **5**), the teleost duplicates of the single mammalian SCN4A.
+
+```
+                channel site ttx_sensitive_prediction
+human             human    Y                     TRUE
+zebrafish_a zebrafish_a    F                     TRUE
+zebrafish_b zebrafish_b    F                     TRUE
+fugu_a           fugu_a    N                    FALSE
+fugu_b           fugu_b    F                     TRUE
+tetraodon_a tetraodon_a    C                    FALSE
+tetraodon_b tetraodon_b    F                     TRUE
+```
+
+b. **F** (phenylalanine) in both: aromatic, so predicted TTX-sensitive, like
+   human Y.
+c. **Fugu Nav1.4a: N** (asparagine) and **Tetraodon Nav1.4a: C** (cysteine).
+   Venkatesh et al. (2005, *Curr. Biol.* 15:2069) showed by electrophysiology
+   that exactly this non-aromatic residue makes pufferfish Nav1.4a resistant to
+   TTX. The two pufferfishes reached resistance with different amino acids at
+   the same site.
+d. **B.** The same study found several other substitutions in the TTX-binding
+   outer vestibule of the pufferfish channels. A single-site check is a good
+   first clue, not the whole story.
+:::
+
+### B4. Why is the heart much less sensitive to TTX than skeletal muscle?
+
+Humans have several Na⁺-channel paralogues. Nav1.5 starts the action potential
+in heart muscle, Nav1.7 and Nav1.8 work in pain-sensing neurons.
+
+a. In NCBI Gene, look up human `SCN5A`, `SCN9A` and `SCN10A` (use
+   `[sym]` and `[orgn]`). Which Nav name is listed under "Also known as" for
+   each, and on which chromosome is each gene? Which two lie next to each other
+   in the same chromosome band?
+
+Run the code to read the residue at the TTX site of each human channel.
+
+```r
+read_uniprot <- function(acc) {
+  lines <- readLines(paste0("https://rest.uniprot.org/uniprotkb/", acc, ".fasta"))
+  paste(lines[-1], collapse = "")
+}
+acc <- c(Nav1.4_muscle = "P35499", Nav1.5_heart = "Q14524",
+         Nav1.7_pain   = "Q15858", Nav1.8_pain  = "Q9Y5Y9")
+seqs <- sapply(acc, read_uniprot)
+pos  <- as.integer(regexpr("RLMTQD", seqs)) + 6
+site <- substr(seqs, pos, pos)
+data.frame(channel = names(seqs), position = pos, residue = site)
+```
+
+b. Which residue does each channel have at the TTX site?
+c. Which two channels are predicted to be TTX-resistant? Check your prediction
+   against the Function text of their UniProt entries.
+d. Are Nav1.4 and Nav1.5 of the same person orthologues or paralogues?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. SCN5A = **Nav1.5**, chromosome **3** (3p22.2); SCN9A = **Nav1.7**,
+   chromosome **2** (2q24.3); SCN10A = **Nav1.8**, chromosome **3** (3p22.2).
+   **SCN5A and SCN10A** lie side by side in 3p22.2, a trace of a tandem
+   gene duplication.
+
+```
+                    channel position residue
+Nav1.4_muscle Nav1.4_muscle      407       Y
+Nav1.5_heart   Nav1.5_heart      373       C
+Nav1.7_pain     Nav1.7_pain      362       Y
+Nav1.8_pain     Nav1.8_pain      357       S
+```
+
+b. Nav1.4 **Y**, Nav1.5 **C**, Nav1.7 **Y**, Nav1.8 **S**.
+c. **Nav1.5 and Nav1.8.** UniProt (and the NCBI Gene summaries) call both
+   "tetrodotoxin-resistant". A dose of TTX that blocks Nav1.4 in the
+   respiratory muscles leaves most cardiac Nav1.5 channels working, so the main
+   danger in TTX poisoning is paralysis of breathing. The same residue that
+   pufferfish changed in their muscle channel differs between our own tissues.
+d. **Paralogues**: two different genes in one genome, produced by gene
+   duplication.
+:::
+
+### B5. How long does a chemical signal stay in the blood?
+
+A hormone or a drug acts only while its plasma concentration is high enough.
+Removal by the liver and kidneys usually follows **first-order kinetics**: a
+constant fraction is removed per hour, so the concentration falls
+exponentially and $\ln(C)$ falls along a straight line with slope $-k$. The
+half-life is $t_{1/2} = \ln 2 / k$. The real dataset `Theoph` (shipped with R)
+holds plasma concentrations of theophylline, an airway-relaxing drug related to
+caffeine, in 12 people after one oral dose.
+
+```r
+s1 <- Theoph[Theoph$Subject == 1, ]
+s1[, c("Time", "conc")]
+plot(s1$Time, s1$conc, log = "y", type = "b",
+     xlab = "Time after dose (h)", ylab = "Theophylline (mg/L, log scale)")
+late <- s1[s1$Time >= 5, ]                 # after absorption is over
+fit  <- lm(log(conc) ~ Time, data = late)  # straight line on a log scale
+k    <- -coef(fit)[["Time"]]               # elimination rate constant (1/h)
+round(k, 3)
+round(log(2) / k, 1)                       # half-life (h)
+
+half_life <- function(d) {
+  d <- d[d$Time >= 5, ]
+  log(2) / -coef(lm(log(conc) ~ Time, data = d))[["Time"]]
+}
+hl <- sapply(split(Theoph, Theoph$Subject), half_life)
+round(sort(hl), 1)
+round(median(hl), 1)
+round(100 * 0.5^(24 / median(hl)))         # % left after 24 h
+```
+
+a. At what time after the dose does subject 1 reach the peak concentration?
+b. What are subject 1's elimination rate constant and half-life?
+c. What is the median half-life of the 12 subjects, and which subject
+   eliminates the drug most slowly?
+d. For a person with the median half-life, what percentage of the
+   concentration is left 24 h after the absorption phase is over?
+e. Why are only points from 5 h onwards used in the fit? (A) Before that the
+   drug is still being absorbed from the gut, so the concentration is not yet
+   determined by elimination alone; (B) the early measurements are wrong.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+[1] 0.048
+[1] 14.4
+  12    2   11    3    4    7    6    5    9    8   10    1
+ 6.7  6.8  7.3  7.3  7.5  7.7  7.8  8.2  8.5  8.5  9.6 14.4
+[1] 7.8
+[1] 12
+```
+
+a. **1.12 h** (10.50 mg/L).
+b. $k$ = **0.048 h⁻¹**, half-life **14.4 h**.
+c. Median **7.8 h**; **subject 1** is the slowest, about twice the median.
+   People differ in liver enzyme activity, so the same dose gives different
+   exposure.
+d. About **12 %** (24 h ≈ 3 half-lives, and $0.5^3$ ≈ 0.125).
+e. **A.** The rising part is absorption; the straight falling part on the log
+   plot is elimination. The same reasoning applies to hormones: a signal with
+   a short half-life (minutes) can switch a response on and off quickly, a
+   long half-life gives a slow, sustained signal.
 :::
 
 Continue with the [self-check quiz](quiz.qmd).

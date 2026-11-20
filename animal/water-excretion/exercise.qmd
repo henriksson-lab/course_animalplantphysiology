@@ -672,208 +672,341 @@ of 180. No: glucose is only filtered and reabsorbed, never secreted, so the
 excreted amount can never exceed the filtered load and clearance stays below GFR.
 :::
 
-## R and bioinformatics {#r-exercises}
+## Bioinformatics and R {#bioinformatics}
 
-Run the code in R or RStudio. Only base R is used (no packages), and all data
-are typed into the code.
+Some people pass 5–10 litres of dilute urine a day although their blood
+contains plenty of ADH. This condition, **nephrogenic diabetes insipidus**
+(NDI), means that the kidney cannot respond to the hormone. The exercises below
+use it as a running example. The new skills in this unit are looking at
+**protein 3D structures** (experimental structures in the RCSB PDB and
+predicted models in the AlphaFold database, with their pLDDT confidence) and
+looking up **disease variants** (the UniProt *Disease & Variants* section and
+ClinVar). R is used to read real structure and variant files from the
+databases and to model the urine volume. Only base R is used; run the code in
+R or RStudio with an internet connection.
 
-### R1. Osmolarity of a mixed solution
+::: {.callout-tip}
+## How to search structure and variant databases
 
-A solution contains 0.10 mol L⁻¹ glucose, 0.10 mol L⁻¹ NaCl and
-0.05 mol L⁻¹ CaCl₂. Treat the salts as fully dissociated. Complete the
-`particles` vector (particles per formula unit), run the code and report the
-total osmolarity.
+**RCSB PDB** (<https://www.rcsb.org>) stores structures that were solved by
+experiment. Type a protein name (`aquaporin 2`) or a UniProt accession
+(`P41181`) in the search box. Use the filters on the left to keep only
+*Homo sapiens*. Each 4-character PDB ID (for example `4NEF`) is one deposited
+structure. Its entry page shows:
 
-```r
-conc      <- c(glucose = 0.10, NaCl = 0.10, CaCl2 = 0.05)  # mol L^-1
-particles <- c(glucose = 1,    NaCl = ___,  CaCl2 = ___)
-osm <- conc * particles
-osm
-sum(osm)
-```
+- **Experimental method**: X-ray diffraction, electron microscopy (cryo-EM) or
+  NMR.
+- **Resolution** in ångström (Å): the smaller the number, the finer the detail.
+  About 2 Å shows individual side chains clearly; 4 Å shows the shape of the
+  helices.
+- **Macromolecules**: which protein chains are in the model and how many copies
+  (chains A, B, C …). Several copies often mean that the protein works as an
+  oligomer.
+- **Sequence** tab: which residues were actually in the sample. Flexible ends
+  are often cut off so that the protein will crystallise.
+
+**AlphaFold database** (<https://alphafold.ebi.ac.uk>) holds a *predicted*
+model for almost every UniProt protein. Search for the UniProt accession. The
+model is coloured by **pLDDT**, the confidence of the prediction for each
+residue (0–100):
+
+| pLDDT | Meaning |
+|---|---|
+| above 90 | very high: backbone and most side chains are reliable |
+| 70–90 | confident: the backbone is probably right |
+| 50–70 | low: treat with caution |
+| below 50 | very low: often a flexible, disordered region |
+
+On the UniProt entry, the **Structure** section lists both the PDB entries and
+the AlphaFold model, and the **Disease & Variants** section lists the diseases
+linked to the gene and the known disease-causing amino-acid changes
+("Natural variant", written like `R187C`: arginine 187 replaced by cysteine).
+
+**ClinVar** (<https://www.ncbi.nlm.nih.gov/clinvar/>) collects how clinical
+laboratories classify each human variant (pathogenic, likely pathogenic,
+uncertain significance, likely benign, benign). Search for a gene with
+`AQP2[gene]`, or for one variant by its protein change, for example
+`AQP2 R187C`.
+:::
+
+### B1. Two genes, one disease
+
+The collecting duct needs two proteins to answer ADH: the ADH receptor in the
+basolateral membrane and the water channel that is inserted in the apical
+membrane. Search UniProtKB (recap from A1) for reviewed human entries that
+mention the disease:
+
+`"nephrogenic diabetes insipidus" AND organism_id:9606 AND reviewed:true`
+
+Open each hit and read its **Disease & Variants** section.
+
+a. Which two genes are returned?
+b. Which of the two genes causes the **X-linked** form of the disease (NDI1)?
+c. In the *Subcellular location* section of the receptor entry, the
+   **Features** table lists the membrane topology. How many "Transmembrane"
+   segments are listed? Which large receptor family does this number suggest?
+d. Search ClinVar for `AQP2 R187C` and open the variant
+   NM_000486.6(AQP2):c.559C>T (p.Arg187Cys). What is its germline
+   classification?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-```r
-particles <- c(glucose = 1,    NaCl = 2,    CaCl2 = 3)
-```
-
-```
-glucose    NaCl   CaCl2 
-   0.10    0.20    0.15 
-[1] 0.45
-```
-
-0.45 Osm L⁻¹ (450 mOsm L⁻¹). NaCl gives Na⁺ + Cl⁻; CaCl₂ gives Ca²⁺ + 2 Cl⁻.
+a. *AVPR2* (P30518, vasopressin V2 receptor) and *AQP2* (P41181, aquaporin-2).
+b. *AVPR2*. Most patients are boys, because males have only one X chromosome
+   and so one faulty copy is enough. *AQP2* causes the rarer autosomal form
+   (NDI2).
+c. Seven. Seven transmembrane helices are typical of a G-protein-coupled
+   receptor; the V2 receptor activates Gs, cAMP and protein kinase A, which
+   moves AQP2 to the apical membrane.
+d. Pathogenic (shown as "Pathogenic/Likely pathogenic" because several
+   laboratories have submitted it). In the *Disease & Variants* section of
+   P41181 the same change is described as misfolded and without water-channel
+   activity.
 :::
 
-### R2. Renal accounting in a data frame
+### B2. A crystal structure of the water channel
 
-The invented numbers below give the filtered load, reabsorption and secretion
-of three substances (amount units min⁻¹). Complete the `___` line using
-excretion = filtered − reabsorbed + secreted. Report the excretion of each
-substance, and which substance is excreted fastest.
+Search the RCSB PDB for `P41181` and open entry **4NEF**, "X-ray structure of
+human Aquaporin 2". Direct link: <https://www.rcsb.org/structure/4NEF>.
 
-```r
-k <- data.frame(
-  substance  = c("A", "B", "C"),
-  filtered   = c(100, 50, 20),   # amount units min^-1
-  reabsorbed = c(99, 25, 0),
-  secreted   = c(0, 0, 30)
-)
-k$excreted <- ___
-k
-k$substance[which.max(k$excreted)]
-```
+a. Which experimental method was used, and what is the resolution (to the
+   nearest 0.1 Å)?
+b. How many aquaporin-2 chains are in the deposited model? What does this tell
+   you about the working form of the channel?
+c. Open the *Sequence* tab, or read the entity sequence. The sample ends with
+   the residues `…KGLEP`, which is residue 242 of the 271-residue protein. Is
+   serine 256, the residue that protein kinase A phosphorylates after ADH
+   binding, in this structure (yes/no)?
+d. The same search also returns **8OEE**. Which NDI2 disease variant was
+   crystallised in this entry?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-```r
-k$excreted <- k$filtered - k$reabsorbed + k$secreted
-```
-
-```
-  substance filtered reabsorbed secreted excreted
-1         A      100         99        0        1
-2         B       50         25        0       25
-3         C       20          0       30       50
-[1] "C"
-```
-
-A: 1, B: 25, C: 50 units min⁻¹. C is excreted fastest even though it has the
-smallest filtered load, because it is also secreted.
+a. X-ray diffraction, 2.75 Å (≈ 2.8 Å).
+b. Four chains (A–D). Aquaporins are tetramers; each of the four subunits forms
+   its own water pore.
+c. No. The C-terminal tail (243–271) was removed from the construct. This tail
+   is flexible and would have made crystallisation difficult, but it carries the
+   signals that move AQP2 to the apical membrane, including Ser256.
+d. T126M (threonine 126 → methionine), "Crystal structure of human AQP2 T126M
+   mutant". Another entry from the same search, 8GHJ, holds the T125M mutant.
 :::
 
-### R3. Clearance and GFR
+### B3. Where is AlphaFold confident?
 
-Clearance is $C=U\times V/P$ (urine concentration × urine flow ÷ plasma
-concentration). Inulin is filtered but neither reabsorbed nor secreted, so its
-clearance equals the GFR. Use the invented values U = 25 mg mL⁻¹,
-V = 1.0 mL min⁻¹ and P = 0.2 mg mL⁻¹. Run the code and report (a) the GFR and
-(b) which of the three substances X, Y, Z (clearances 0, 60 and 600 mL min⁻¹)
-undergoes net secretion.
-
-```r
-clearance <- function(U, V, P) U * V / P
-gfr <- clearance(U = 25, V = 1.0, P = 0.2)   # inulin: mg mL^-1, mL min^-1, mg mL^-1
-gfr
-C <- c(X = 0, Y = 60, Z = 600)               # clearances, mL min^-1
-ifelse(C > gfr, "net secretion", "net reabsorption")
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-[1] 125
-                 X                  Y                  Z 
-"net reabsorption" "net reabsorption"    "net secretion" 
-```
-
-a. GFR = 125 mL min⁻¹. b. Z: its clearance is higher than the GFR, so more is
-excreted than is filtered. X (clearance 0) behaves like glucose in a healthy
-person: filtered and completely reabsorbed.
-:::
-
-### R4. Glucose transport maximum
-
-Use the same values as the Explore demo: GFR 0.125 L min⁻¹ and a glucose
-transport maximum (Tm) of 2.0 mmol min⁻¹. `pmin()` takes the smaller of two
-values element by element, so the tubule reabsorbs either everything filtered
-or Tm, whichever is less. Run the code and report (a) the glucose excreted at a
-plasma glucose of 25 mmol L⁻¹ and (b) the lowest of the five plasma
-concentrations at which glucose appears in the urine.
+Open the AlphaFold model of human aquaporin-2:
+<https://alphafold.ebi.ac.uk/entry/P41181>. The 3D view is coloured by pLDDT:
+blue is high and orange is low confidence. Then let R read the model file and
+plot pLDDT along the chain. The code asks the AlphaFold API for the address of
+the newest model file, so it keeps working when a new model version appears.
+In a PDB-format file, AlphaFold stores pLDDT in the column that normally holds
+the B-factor.
 
 ```r
-gfr <- 0.125                     # L min^-1
-tm  <- 2.0                       # mmol min^-1
-plasma <- c(5, 10, 15, 20, 25)   # mmol L^-1
-filtered   <- gfr * plasma
-reabsorbed <- pmin(filtered, tm)
-excreted   <- filtered - reabsorbed
-excreted
-plasma[excreted > 0][1]
-plot(plasma, excreted, type = "b",
-     xlab = "Plasma glucose (mmol/L)", ylab = "Excreted (mmol/min)")
+ua  <- c("User-Agent" = "Mozilla/5.0")    # the file server expects a browser-like name
+api <- paste(readLines("https://alphafold.ebi.ac.uk/api/prediction/P41181",
+                       warn = FALSE), collapse = "")
+pdb_url <- sub('.*"pdbUrl": *"([^"]+)".*', "\\1", api)
+pdb <- readLines(url(pdb_url, headers = ua), warn = FALSE)
+ca  <- pdb[startsWith(pdb, "ATOM") & substr(pdb, 13, 16) == " CA "]
+res   <- as.integer(substr(ca, 23, 26))    # residue number
+plddt <- as.numeric(substr(ca, 61, 66))    # pLDDT is stored in the B-factor column
+length(res)
+round(plddt[c(68, 184, 256)])
+round(mean(plddt[res <= 242]))
+round(mean(plddt[res >  242]))
+plot(res, plddt, type = "l", ylim = c(0, 100),
+     xlab = "Residue", ylab = "pLDDT")
+abline(h = c(50, 70, 90), lty = 2)
+abline(v = 242, col = "red")               # last residue in the 4NEF crystal
 ```
 
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-[1] 0.000 0.000 0.000 0.500 1.125
-[1] 20
-```
-
-a. 1.125 mmol min⁻¹. b. 20 mmol L⁻¹. The threshold is Tm ÷ GFR =
-16 mmol L⁻¹, between 15 and 20; above it excretion rises in a straight line,
-as the plot shows.
-:::
-
-### R5. The NPA motifs of aquaporin-2
-
-Aquaporin-2 is the water channel that ADH inserts into the collecting-duct
-membrane. Its pore is lined by two loops that each carry the motif
-asparagine–proline–alanine (NPA). The sequence below is human aquaporin-2,
-copied from UniProt P41181. Run the code and report (a) the length of the
-protein, (b) how many NPA motifs it contains and (c) the position of each.
-
-```r
-aqp2 <- paste0("MWELRSIAFSRAVFAEFLATLLFVFFGLGSALNWPQALPSVLQIAMAFGLGIGTLVQALG",
-               "HISGAHINPAVTVACLVGCHVSVLRAAFYVAAQLLGAVAGAALLHEITPADIRGDLAVNA",
-               "LSNSTTAGQAVTVELFLTLQLVLCIFASTDERRGENPGTPALSIGFSVALGHLLGIHYTG",
-               "CSMNPARSLAPAVVTGKFDDHWVFWIGPLVGAILGSLLYNYVLFPPAKSLSERLAVLKGL",
-               "EPDTDWEEREVRRRQSVELHSPQSLPRGTKA")
-nchar(aqp2)
-hits <- as.vector(gregexpr("NPA", aqp2)[[1]])
-hits
-length(hits)
-```
+a. How many residues does the model contain? Does the AlphaFold model cover
+   the whole protein (yes/no)?
+b. Asparagines 68 and 184 start the two NPA motifs that meet in the middle of
+   the pore. In which pLDDT category are they?
+c. In which pLDDT category is Ser256?
+d. Is the mean pLDDT higher in residues 1–242 or in the tail 243–271?
+e. Compare with B2c. Which statement is right?
+   (i) The part of AQP2 left out of the crystal is the part that AlphaFold
+   predicts with the least confidence.
+   (ii) AlphaFold is most confident exactly where no experimental structure
+   exists.
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
 [1] 271
-[1]  68 184
-[1] 2
+[1] 99 99 66
+[1] 96
+[1] 59
 ```
 
-a. 271 amino acids. b. Two. c. Starting at positions 68 and 184. The two NPA
-loops meet in the middle of the membrane and form the narrowest part of the
-water pore.
+a. 271 residues; yes, the whole chain, including the tail that is missing from
+   4NEF.
+b. Very high (pLDDT about 99).
+c. Low (between 50 and 70; about 66 in the current model).
+d. In 1–242 (mean about 96, against about 59 in the tail). The plot shows a flat
+   plateau near 100 over the six transmembrane helices and a drop after
+   residue 242.
+e. (i). The C-terminal tail is flexible and has no single fixed shape. It is
+   hard to crystallise and hard to predict, yet it is the part that is
+   phosphorylated and sorted to the apical membrane in response to ADH.
 :::
 
-### R6. The ADH phosphorylation site
+### B4. Where do the disease mutations hit?
 
-When ADH binds its receptor, protein kinase A phosphorylates aquaporin-2 on
-serine 256 in the cytoplasmic C-terminal tail, which helps move the channel
-into the apical membrane. Using the `aqp2` string from R5, run the code and
-report (a) the amino acid at position 256, (b) the seven residues 253–259 and
-(c) the number of serines (S) in the last 30 residues.
+The UniProt entry lists the amino-acid changes found in NDI2 patients.
+AlphaMissense, a predictor built on AlphaFold, gives every possible amino-acid
+change a class: likely pathogenic (`LPath`), ambiguous (`Amb`) or likely
+benign (`LBen`). The code below reads the NDI2 variants from UniProt, adds the
+pLDDT of each mutated residue and the AlphaMissense class, and splits the
+protein into the channel (1–222, the six transmembrane helices and their loops)
+and the cytoplasmic tail (223–271).
 
 ```r
-substr(aqp2, 256, 256)
-substr(aqp2, 253, 259)
-tail_seq <- substr(aqp2, 242, nchar(aqp2))
-tail_seq
-sum(strsplit(tail_seq, "")[[1]] == "S")
+# NDI2 variants listed by UniProt
+v <- readLines("https://rest.uniprot.org/uniprotkb/P41181?format=tsv&fields=ft_variant")[2]
+v <- strsplit(v, "VARIANT ")[[1]][-1]
+ndi  <- v[grepl("in NDI2", v)]
+pos  <- as.integer(sub(";.*", "", ndi))
+mut  <- paste0(sub('.*note="([A-Z]) -> ([A-Z]).*', "\\1", ndi), pos,
+               sub('.*note="([A-Z]) -> ([A-Z]).*', "\\2", ndi))
+
+# AlphaFold model (pLDDT) and AlphaMissense predictions
+ua  <- c("User-Agent" = "Mozilla/5.0")
+api <- paste(readLines("https://alphafold.ebi.ac.uk/api/prediction/P41181",
+                       warn = FALSE), collapse = "")
+pdb <- readLines(url(sub('.*"pdbUrl": *"([^"]+)".*', "\\1", api), headers = ua),
+                 warn = FALSE)
+ca  <- pdb[startsWith(pdb, "ATOM") & substr(pdb, 13, 16) == " CA "]
+plddt <- as.numeric(substr(ca, 61, 66))
+am  <- read.csv(url(sub('.*"amAnnotationsUrl": *"([^"]+)".*', "\\1", api),
+                    headers = ua))
+
+d <- data.frame(mut, pos, plddt = round(plddt[pos]),
+                alphamissense = am$am_class[match(mut, am$protein_variant)])
+d$part <- ifelse(d$pos <= 222, "channel", "tail")
+d
+table(d$part, d$alphamissense)
 ```
+
+a. Are most NDI2 variants in the channel or in the tail?
+b. Which three variants change a residue of an NPA motif (NPA 1 is residues
+   68–70, NPA 2 is 184–186)?
+c. Which AlphaMissense class is the most common among the channel variants?
+d. Four variants lie in the tail. How many of them does AlphaMissense call
+   likely pathogenic, and which one?
+e. In the UniProt entry, read the notes for R254L and P262L. Which describes
+   them best?
+   (i) The channel cannot conduct water.
+   (ii) The channel works but is not moved to the apical membrane in response
+   to ADH.
+f. In the sequence, residues 123–125 are `NST`, and UniProt marks N123 as
+   glycosylated. N-linked sugars are attached to asparagine in the motif
+   N–X–S/T. Which NDI2 variant in the table destroys this motif?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+The tail of the output (UniProt may add variants in later releases, so the
+number of rows can grow):
+
+```
+24 S216P 216    98         LPath channel
+25 R254L 254    74          LBen    tail
+26 R254Q 254    74          LBen    tail
+27 E258K 258    66         LPath    tail
+28 P262L 262    44          LBen    tail
+
+          Amb LBen LPath
+  channel   4    3    17
+  tail      0    3     1
+```
+
+a. In the channel: 24 of the 28 listed variants, nearly all at residues with
+   pLDDT above 90.
+b. N68S and A70D (NPA 1) and P185A (NPA 2). These residues line the narrowest
+   part of the pore.
+c. Likely pathogenic (`LPath`). Changes in the tightly packed helices tend to
+   make the protein misfold, which the predictor recognises.
+d. One: E258K. The other three (R254L, R254Q, P262L) are called likely benign
+   although they cause disease.
+e. (ii). R254L blocks phosphorylation of Ser256, and P262L folds and works but
+   stays in intracellular vesicles. The predictor judges whether a change
+   damages the folded structure, so it misses mutations that act by breaking a
+   sorting or phosphorylation signal in a flexible tail.
+f. T125M. N123–S124–T125 is the glycosylation motif, and methionine at 125
+   removes the S/T that the motif needs. Its structure is the PDB entry 8GHJ
+   (B2d). AlphaMissense also calls T125M likely benign.
+:::
+
+### B5. What a broken channel costs in litres
+
+Question 6.2 gave two points: 600 mOsm a day excreted at 1,200 or
+100 mOsm kg⁻¹. Here R draws the whole curve and adds two clinical ideas.
+**Free-water clearance** is the volume of pure water that the kidney removes
+from the body per day on top of an isosmotic urine:
+$C_{\rm H_2O}=V-U_{\rm osm}V/P_{\rm osm}$. It is positive when the urine is
+more dilute than plasma. Use plasma osmolality 290 mOsm kg⁻¹. The 600 mOsm
+day⁻¹ load and the extreme urine osmolalities are typical textbook values.
+
+```r
+solute <- 600                        # mOsm excreted per day
+p_osm  <- 290                        # plasma osmolality, mOsm/kg
+u_osm  <- seq(50, 1200, by = 10)     # urine osmolality, mOsm/kg
+V <- solute / u_osm                  # urine volume, L/day
+plot(u_osm, V, type = "l", log = "y",
+     xlab = "Urine osmolality (mOsm/kg)", ylab = "Urine volume (L/day)")
+abline(v = p_osm, lty = 2)
+V[u_osm == 1200]; V[u_osm == 100]
+free_water <- function(V, u_osm) V - u_osm * V / p_osm
+round(free_water(0.5, 1200), 2)
+round(free_water(6, 100), 2)
+solute_ndi <- c(normal_diet = 600, low_salt_low_protein = 300)
+solute_ndi / 100
+```
+
+a. What is the free-water clearance (L day⁻¹) of a healthy person with maximal
+   ADH effect, and of a person with NDI whose urine stays at 100 mOsm kg⁻¹?
+b. What does the sign of the healthy value mean?
+   (i) The kidney adds pure water back to the body.
+   (ii) The kidney removes extra pure water from the body.
+c. A person with NDI cannot raise urine osmolality. Patients are therefore
+   advised to eat less salt and protein. If this halves the daily solute load,
+   what is the new urine volume?
+d. Link the units together. A person carries the AQP2 variant R187C on both
+   copies of the gene (B1d), and the protein misfolds. Which step fails?
+   (i) ADH release from the posterior pituitary
+   (ii) ADH binding to the V2 receptor
+   (iii) water entry through the apical membrane of the collecting duct
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
-[1] "S"
-[1] "RRQSVEL"
-[1] "PDTDWEEREVRRRQSVELHSPQSLPRGTKA"
-[1] 3
+[1] 0.5
+[1] 6
+[1] -1.57
+[1] 3.93
+         normal_diet low_salt_low_protein
+                   6                    3
 ```
 
-a. S (serine). b. RRQSVEL; the arginines just before the serine are typical of
-a protein kinase A target site. c. 3 serines (positions 256, 261 and 264).
+a. Healthy: −1.57 L day⁻¹. NDI: +3.93 L day⁻¹, almost 4 L of pure water lost
+   every day, which the patient must replace by drinking.
+b. (i). A negative free-water clearance means the urine is more concentrated
+   than plasma, so water is returned to the body. The log-scale plot shows how
+   steeply volume rises once urine osmolality falls below plasma (dashed line).
+c. 3 L day⁻¹. With the urine osmolality fixed, volume is proportional to the
+   solute load, so less solute means less urine.
+d. (iii). ADH is released and binds its receptor, and cAMP rises, but there are
+   no working AQP2 channels to insert. Without them the collecting duct stays
+   almost impermeable to water and the medullary gradient cannot pull water out
+   of the urine.
 :::
 
 Continue with the [self-check quiz](quiz.qmd).

@@ -509,209 +509,265 @@ b. It increases, to 0.013 W. A lower Q₁₀ means the rate falls less on coolin
    curve is a straight line whose slope is set by Q₁₀.
 :::
 
-## R and bioinformatics {#r-exercises}
+## Bioinformatics and R {#bioinformatics}
 
-Run the code below in R or RStudio. Only base R is used (no packages), and all
-data are typed directly into the code.
+Brown fat cells do something that looks wasteful: they burn fuel without
+making ATP, releasing the energy as heat. The key protein is **uncoupling
+protein 1 (UCP1)**, UniProt P25874. These exercises use three new resources to
+find out what UCP1 is, what it does and where it is made: **InterPro/Pfam**
+(protein domains and families), **Gene Ontology** (standard terms for
+function) and the **Human Protein Atlas** (tissue expression). UCP1 is compared
+with its relative, the ADP/ATP translocase ANT1 (P12235), which does an
+everyday job in every mitochondrion. The last two exercises use R on real body
+temperatures of wild beavers. Run the R code in R or RStudio with base R only;
+B1 reads sequences from the internet.
 
-### R1. An energy budget
+::: {.callout-tip}
+## How to look up domains, GO terms and tissue expression
 
-Use the budget from the tutorial (kJ day⁻¹). Complete the line for `retained`
-and run the code. Report (a) retained energy and (b) the fraction of ingested
-energy that is absorbed.
+Find the protein's UniProt accession first (unit A1), for example with
+`gene:UCP1 AND organism_id:9606 AND reviewed:true`.
 
-```r
-ingested  <- 100   # kJ per day
-faeces    <- 25
-excreted  <- 5
-metabolic <- 60
-retained <- ingested - ____ - ____ - ____
-retained
-absorbed <- ingested - faeces
-absorbed / ingested
-```
+**InterPro** (<https://www.ebi.ac.uk/interpro/>) collects protein
+signatures from several member databases, of which **Pfam** is the best known.
+Open `https://www.ebi.ac.uk/interpro/protein/UniProt/<accession>/`. The
+graphic shows the protein as a line with coloured bars: each bar is a match,
+labelled by its type: *family* (the whole protein belongs to a group),
+*domain* (a structural unit that can occur in different proteins),
+*repeat* (a short unit occurring several times) or *homologous superfamily*.
+Pfam accessions start with `PF`, InterPro accessions with `IPR`. The
+*Family & Domains* section of a UniProt entry shows the same information
+more briefly.
 
-::: {.callout-note collapse="true"}
-## Answer
+**Gene Ontology (GO)** describes function with standard terms in three
+aspects: *molecular function* (what the protein does as a molecule),
+*biological process* (the larger process it contributes to) and
+*cellular component* (where it is). Every term has an ID such as
+`GO:0009409`. The UniProt entry lists a protein's GO terms in the
+*Function* section (molecular function and biological process) and in
+*Subcellular Location* (cellular component); QuickGO
+(<https://www.ebi.ac.uk/QuickGO/>) shows the definition of each term.
 
-```r
-retained <- ingested - faeces - excreted - metabolic
-```
-
-```
-[1] 10
-[1] 0.75
-```
-
-a. 10 kJ day⁻¹. b. 0.75 (75 % of ingested energy is absorbed).
+**Human Protein Atlas (HPA)** (<https://www.proteinatlas.org>) measures
+RNA and protein in human tissues and cells. Search the gene name and open the
+*Tissue* page. RNA levels are given as nTPM (normalised transcripts per
+million); the bar chart shows which tissues have the most. The *Single cell
+type* page shows which cell types express the gene.
 :::
 
-### R2. From energy to power
+### B1. Two relatives with different jobs: domains
 
-A metabolic expenditure of 60 kJ day⁻¹ is an energy per day. Convert it to
-watts (J s⁻¹). What power does R report, rounded to three decimals?
+UCP1 and ANT1 both sit in the inner mitochondrial membrane. Open
+<https://www.ebi.ac.uk/interpro/protein/UniProt/P25874/> (UCP1) and
+<https://www.ebi.ac.uk/interpro/protein/UniProt/P12235/> (ANT1).
 
-```r
-metabolic_kJ_per_day <- 60
-seconds_per_day <- 24 * 60 * 60
-watts <- metabolic_kJ_per_day * 1000 / seconds_per_day
-seconds_per_day
-round(watts, 3)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-[1] 86400
-[1] 0.694
-```
-
-0.694 W. Multiply kJ by 1000 to get J, then divide by the 86 400 seconds in
-a day.
-:::
-
-### R3. Blank-corrected respirometry
-
-Animal A uses the numbers from the tutorial; B–D are invented teaching
-numbers. Each chamber holds 0.10 L and is read after 10 min; the empty
-chamber loses 0.0010 mg min⁻¹. Run the code.
-
-a. What is the mean blank-corrected rate (mg O₂ min⁻¹)?
-b. Which animal has the highest rate?
+a. Which Pfam entry (accession and name) matches UCP1, and is it of type
+   *domain*, *repeat* or *family*?
+b. How many times does it occur in UCP1, and how many times in ANT1?
+c. One of the two proteins also matches a more specific InterPro family that
+   names its transported substrate. Which protein, and what is the family?
+d. Mitochondrial carriers have a signature motif P-x-[DE]-x-x-[KR] (P, any
+   amino acid, D or E, two of any, K or R). Run the code. Do the motif
+   positions fall inside the Pfam matches you saw in (b)?
 
 ```r
-resp <- data.frame(
-  animal = c("A", "B", "C", "D"),
-  drop   = c(0.40, 0.55, 0.30, 0.47)   # fall in O2 (mg per L) over 10 min
-)
-volume  <- 0.10     # L of water in the chamber
-minutes <- 10
-blank   <- 0.0010   # mg per min lost by an empty chamber
-resp$rate <- resp$drop * volume / minutes - blank
-resp
-mean(resp$rate)
-resp$animal[which.max(resp$rate)]
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-  animal drop   rate
-1      A 0.40 0.0030
-2      B 0.55 0.0045
-3      C 0.30 0.0020
-4      D 0.47 0.0037
-[1] 0.0033
-[1] "B"
-```
-
-a. 0.0033 mg min⁻¹. b. Animal B. Row A reproduces the tutorial's
-0.0030 mg min⁻¹.
-:::
-
-### R4. A Q₁₀ function
-
-The function implements the Q₁₀ equation from the tutorial. Run the code.
-
-a. What is Q₁₀ for the tutorial example (rate 2 → 4 between 10 and 20 °C)?
-b. A rate rises from 1.0 to 1.5 between 20 and 25 °C (invented numbers).
-   What is Q₁₀?
-
-```r
-q10 <- function(R1, R2, T1, T2) {
-  (R2 / R1)^(10 / (T2 - T1))
+read_uniprot <- function(acc) {
+  lines <- readLines(paste0("https://rest.uniprot.org/uniprotkb/", acc, ".fasta"))
+  paste(lines[-1], collapse = "")          # sequence without the header
 }
-q10(R1 = 2, R2 = 4, T1 = 10, T2 = 20)
-q10(R1 = 1.0, R2 = 1.5, T1 = 20, T2 = 25)
+ucp1 <- read_uniprot("P25874")
+ant1 <- read_uniprot("P12235")
+nchar(c(UCP1 = ucp1, ANT1 = ant1))
+motif <- "P.[DE]..[KR]"                     # . = any letter, [DE] = D or E
+as.vector(gregexpr(motif, ucp1)[[1]])       # start positions in UCP1
+as.vector(gregexpr(motif, ant1)[[1]])       # start positions in ANT1
 ```
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
-[1] 2
-[1] 2.25
-```
-
-a. 2. b. 2.25: a 5 °C interval is half of 10 °C, so the ratio 1.5 is
-squared (1.5² = 2.25).
-:::
-
-### R5. Metabolic scaling on a log–log plot
-
-Invented teaching numbers: resting metabolic rate (W) of six mammals of
-different body mass (kg). Fit a straight line to log₁₀(rate) against
-log₁₀(mass).
-
-a. What is the slope, rounded to two decimals?
-b. Does mass-specific rate (W kg⁻¹, last line) rise or fall with body mass?
-
-```r
-mass <- c(0.02, 0.3, 2, 10, 70, 500)   # body mass (kg)
-rate <- c(0.17, 1.5, 5.4, 20, 80, 370) # resting metabolic rate (W)
-fit <- lm(log10(rate) ~ log10(mass))
-round(coef(fit), 2)
-plot(log10(mass), log10(rate),
-     xlab = "log10 body mass (kg)", ylab = "log10 metabolic rate (W)")
-abline(fit)
-round(rate / mass, 1)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-(Intercept) log10(mass) 
-       0.53        0.75 
-[1] 8.5 5.0 2.7 2.0 1.1 0.7
-```
-
-a. 0.75. b. It falls (from 8.5 to 0.7 W kg⁻¹). A slope below 1 means whole-animal
-rate rises less steeply than mass, so each kilogram of a large animal uses
-less power than a kilogram of a small one.
-:::
-
-### R6. A carrier motif in UCP1 (bioinformatics)
-
-Uncoupling protein 1 (UCP1) lets protons leak back into the mitochondrial
-matrix in brown fat, so energy is released as heat instead of being used for
-ATP synthesis. The sequence is human UCP1, copied from UniProt
-[P25874](https://rest.uniprot.org/uniprotkb/P25874.fasta). Mitochondrial
-carrier proteins contain a signature motif P-x-[DE]-x-x-[KR]: P, any amino
-acid, D or E, two of any, then K or R. In a regular expression `.` means "any
-letter" and `[DE]` means "D or E". Run the code.
-
-a. How many amino acids long is UCP1?
-b. How many times does the motif occur?
-
-```r
-ucp1 <- paste0(
-  "MGGLTASDVHPTLGVQLFSAGIAACLADVITFPLDTAKVRLQVQGECPTSSVIRYKGVLG",
-  "TITAVVKTEGRMKLYSGLPAGLQRQISSASLRIGLYDTVQEFLTAGKETAPSLGSKILAG",
-  "LTTGGVAVFIGQPTEVVKVRLQAQSHLHGIKPRYTGTYNAYRIIATTEGLTGLWKGTTPN",
-  "LMRSVIINCTELVTYDLMKEAFVKNNILADDVPCHLVSALIAGFCATAMSSPVDVVKTRF",
-  "INSPPGQYKSVPNCAMKVFTNEGPTAFFKGLVPSFLRLGSWNVIMFVCFEQLKRELSKSR",
-  "QTMDCAT")
-nchar(ucp1)
-hits <- gregexpr("P.[DE]..[KR]", ucp1)[[1]]
-as.vector(hits)
-regmatches(ucp1, gregexpr("P.[DE]..[KR]", ucp1))[[1]]
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-[1] 307
+UCP1 ANT1 
+ 307  298 
 [1]  33 133 232
-[1] "PLDTAK" "PTEVVK" "PVDVVK"
+[1]  28 133 230
 ```
 
-a. 307 amino acids. b. 3 times, at positions 33, 133 and 232, roughly 100
-residues apart. Mitochondrial carriers are built from three similar repeats of
-about 100 amino acids, each carrying one copy of the motif.
+a. **PF00153, "Mitochondrial carrier protein"**, of type **repeat**.
+b. **Three times in each** (in UCP1 about residues 12–103, 112–202 and
+   213–294). A mitochondrial carrier is built from three similar repeats of
+   about 100 amino acids, each forming two membrane-crossing helices.
+c. **ANT1**, which matches **"ADP/ATP carrier protein, eukaryotic type"**
+   (IPR002113).
+d. **Yes**: one motif in each repeat (UCP1 at 33, 133 and 232). The same
+   architecture is used to move different things across the inner membrane:
+   ADP in and ATP out (ANT1), or protons (UCP1).
+:::
+
+### B2. Same family, different function: GO terms
+
+Open the *Function* sections of
+<https://www.uniprot.org/uniprotkb/P25874/entry> (UCP1) and
+<https://www.uniprot.org/uniprotkb/P12235/entry> (ANT1) and look at their GO
+annotations. Use QuickGO for definitions.
+
+a. Which cellular-component term do both proteins share that tells you
+   which membrane they work in?
+b. Which of these biological-process terms is annotated to UCP1 but **not**
+   to ANT1?
+   1. adaptive thermogenesis (GO:1990845)
+   2. response to cold (GO:0009409)
+   3. mitochondrial ATP transmembrane transport (GO:1990544)
+   4. ADP transport (GO:0015866)
+c. Which molecular-function term describes ANT1's everyday job of exchanging
+   nucleotides? Give its GO ID.
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. **Mitochondrial inner membrane** (GO:0005743), where the proton gradient
+   made by the respiratory chain drives ATP synthase.
+b. **2, response to cold.** Options 3 and 4 belong to ANT1. Option 1 is
+   annotated to *both*: ANT1 also lets some protons leak back, so it adds a
+   little heat in all cells. GO terms describe evidence-backed roles, and one
+   protein can have several.
+c. **ATP:ADP antiporter activity, GO:0005471.** ANT1 exports each new ATP
+   from the mitochondrion in exchange for an ADP. UCP1 instead lets protons
+   return to the matrix without passing ATP synthase, so the energy of the
+   gradient becomes heat.
+:::
+
+### B3. Where are the two genes switched on?
+
+On the Human Protein Atlas, open the tissue pages
+<https://www.proteinatlas.org/ENSG00000109424-UCP1/tissue> and
+<https://www.proteinatlas.org/ENSG00000151729-SLC25A4/tissue> (SLC25A4 is the
+gene for ANT1).
+
+a. Which tissue has the highest UCP1 RNA in the tissue bar chart?
+b. On UCP1's *Single cell type* page, which cell type has the highest
+   expression?
+c. The three tissues with the highest SLC25A4 RNA are heart muscle, skeletal
+   muscle and tongue. Which of the four tissue categories (unit A1) do they
+   share, and why does that fit ANT1's job?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. **Adrenal gland**, and at a low level; most other tissues show none. The
+   HPA "adipose tissue" samples are subcutaneous white fat, which has little
+   UCP1. In adult humans, brown and beige fat lie in particular depots, for
+   example around the kidneys and adrenal glands and in the neck, so an
+   adrenal sample can include some of it.
+b. **Adipocytes** (fat cells).
+c. **Muscle tissue.** Contracting muscle uses ATP at a high rate, so its
+   mitochondria must export a lot of ATP. UCP1 is restricted to a few
+   specialised fat cells whose job is heat, whereas ANT1 is abundant wherever
+   ATP demand is high.
+:::
+
+### B4. Does a beaver warm up when it goes out?
+
+`beaver2` is a real dataset shipped with R: body temperature of a wild female
+beaver (*Castor canadensis*) in Wisconsin, measured by telemetry every 10 min
+on 3–4 November. `activ` is 1 when the beaver was outside its lodge, in and
+around cold water. `time` is clock time written as hhmm.
+
+```r
+b <- beaver2
+head(b)
+b$hour <- floor(b$time / 100) + (b$time %% 100) / 60 + 24 * (b$day - 307)
+round(tapply(b$temp, b$activ, mean), 2)       # mean temp inside (0) / outside (1)
+b$time[which(b$activ == 1)[1]]                # first reading outside
+rle(b$activ)                                  # runs of 0s and 1s
+plot(b$hour, b$temp, type = "l", xlab = "Clock hour (24 = midnight)",
+     ylab = "Body temperature (°C)")
+points(b$hour[b$activ == 1], b$temp[b$activ == 1], pch = 19, cex = 0.5)
+```
+
+a. What is the mean body temperature inside the lodge and outside, and how
+   large is the difference?
+b. At what clock time is the beaver first recorded outside, and does it
+   return inside before the recording ends?
+c. Outside, the beaver is in near-freezing water and loses heat fast, yet its
+   temperature is higher. What does that tell you about its heat production
+   while outside compared with inside?
+   1. It must be lower
+   2. It must be higher, more than enough to cover the extra heat loss
+   3. Nothing; temperature does not depend on heat production
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+   0    1 
+37.1 37.9 
+[1] 1550
+Run Length Encoding
+  lengths: int [1:2] 38 62
+  values : num [1:2] 0 1
+```
+
+a. **37.1 °C inside and 37.9 °C outside, a difference of about 0.8 °C.**
+b. **15:50**, and **no**: after 38 readings inside, all of the remaining
+   62 readings (until 02:00) are outside.
+c. **2.** Body temperature rises only if heat production exceeds heat loss.
+   Activity (swimming, carrying branches) adds muscle heat; the beaver's
+   regulated temperature is not a fixed number but is allowed to be higher
+   during the active phase.
+:::
+
+### B5. Warming up before leaving: how much does it cost?
+
+The plot from B4 shows that the beaver's temperature already rises while it is
+still resting in the lodge. Fit a line to the inside readings to get the
+warming rate, then estimate the heat stored. The body mass (20 kg), the
+specific heat of tissue (3.5 kJ kg⁻¹ °C⁻¹) and the energy of fat (39 kJ g⁻¹)
+are **assumed round values**, not part of the dataset.
+
+```r
+inside <- b[b$activ == 0, ]                   # needs b from B4
+fit <- lm(temp ~ hour, data = inside)
+round(coef(fit), 3)
+hours   <- max(inside$hour) - min(inside$hour)
+warming <- coef(fit)[["hour"]] * hours        # rise along the line (°C)
+round(c(hours = hours, warming = warming), 2)
+mass <- 20; c_tissue <- 3.5; fat <- 39        # assumed values
+heat_kJ <- mass * c_tissue * warming
+round(heat_kJ, 1)                             # heat stored (kJ)
+round(heat_kJ / fat, 2)                       # grams of fat
+round(heat_kJ * 1000 / (hours * 3600), 2)     # average extra power (W)
+```
+
+a. At what rate (°C per hour) does the beaver warm while inside?
+b. How much heat is stored by the warming, in kJ, and how many grams of fat
+   is that?
+c. What average extra power (W) is needed just to store this heat?
+d. The beaver warms while lying still in its lodge. Which mechanism can make
+   heat without muscle contraction, and which protein from B1–B3 is its key?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+(Intercept)        hour 
+     36.121       0.078 
+  hours warming 
+   6.17    0.48 
+[1] 33.5
+[1] 0.86
+[1] 1.51
+```
+
+a. **0.078 °C per hour** (about 0.5 °C over the 6 h inside).
+b. **33.5 kJ, about 0.86 g of fat.** Warming the body itself is cheap; the
+   larger cost is replacing the heat lost to cold water once outside.
+c. **About 1.5 W**, on top of the power needed to balance ongoing heat loss.
+d. **Non-shivering thermogenesis in brown fat, with UCP1.** These data show
+   that heat production rose before the beaver moved off; they cannot show
+   which tissue produced it. A beaver's brown fat would make heat exactly as
+   in B2: protons flow back through UCP1, fuel is oxidised without making
+   ATP, and the energy appears as heat.
 :::
 
 Continue with the [self-check quiz](quiz.qmd).

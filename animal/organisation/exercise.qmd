@@ -517,200 +517,316 @@ Press **Cold** (disturbance −0.30 °C min⁻¹). What is the deviation at minu
 it is heating (for example shivering), opposing the fall in temperature.
 :::
 
-## R and bioinformatics {#r-exercises}
+## Bioinformatics and R {#bioinformatics}
 
-Run the code below in R or RStudio. Only base R is used (no packages), and all
-data are typed directly into the code.
+These exercises use **UniProtKB**, the main database of protein sequences and
+their functions, together with R. Each exercise is a separate small problem
+about how body size and tissue organisation show up in real data. Run the R code
+in R or RStudio; only base R and the MASS package (installed with every copy of
+R) are used. The code reads sequences directly from the internet, so you need a
+network connection.
 
-### R1. Surface area to volume of cubes
+::: {.callout-tip}
+## How to search UniProtKB
 
-Complete the last line so that R prints the surface-area-to-volume ratio of
-each cube, then run the code. What ratio (mm⁻¹) does R give for the 4 mm cube?
+Go to <https://www.uniprot.org> and type a query in the search box. Plain words
+(`myoglobin`) search every field, which gives many unwanted hits. Field queries
+are more precise and can be combined with `AND`, `OR` and `NOT`:
 
-```r
-L <- c(1, 2, 4, 8)          # side length of each cube (mm)
-area   <- 6 * L^2           # surface area (mm^2)
-volume <- L^3               # volume (mm^3)
-ratio  <- ____ / ____       # surface-area-to-volume ratio (mm^-1)
-ratio
-```
+| Query | Finds |
+|---|---|
+| `gene:MB` | entries whose gene name or gene-name synonym is MB |
+| `protein_name:myoglobin` | entries with "myoglobin" in the protein name |
+| `organism_id:9606` | human (NCBI taxonomy number); mouse is `10090` |
+| `organism_name:"sperm whale"` | organisms whose name contains the phrase |
+| `reviewed:true` | only **Swiss-Prot** entries, curated by experts |
+
+Example: `gene:MB AND organism_id:9606 AND reviewed:true`.
+
+**Reviewed** (Swiss-Prot, gold star icon) entries are checked by curators and
+there is normally one per protein and species. **Unreviewed** (TrEMBL) entries
+are computer-annotated and often fragments or duplicates. Use the
+*Reviewed* filter in the left-hand panel, or add `reviewed:true`.
+
+Each entry has a stable **accession** (for example `P02144`) and an entry
+name (`MYG_HUMAN`). Cite the accession: it does not change between releases.
+An entry page is divided into sections: *Function*, *Names & Taxonomy*,
+*Subcellular Location*, *PTM/Processing* (with the *Features* table giving
+positions such as the mature chain), *Family & Domains* and *Sequence*.
+The sequence in FASTA format is at
+`https://rest.uniprot.org/uniprotkb/<accession>.fasta`; R can read that address
+with `readLines()`.
+:::
+
+### B1. Finding the right myoglobin
+
+Myoglobin is the oxygen-binding protein of muscle. You want the myoglobin of
+three mammals that differ about a million-fold in body mass: mouse, human and
+sperm whale. Use UniProtKB.
+
+a. Search `gene:MB AND organism_id:9606`. Many hits appear, most of them short.
+   Tick the *Reviewed* filter. What is the accession of the reviewed human
+   myoglobin entry?
+b. Search `gene:MB AND organism_id:10090 AND reviewed:true` (mouse). The
+   reviewed list contains more than myoglobin, for example the B-cell protein
+   CD79A. Why?
+   1. CD79A is a myoglobin that is expressed in blood cells
+   2. `gene:` also matches gene-name synonyms, and CD79A has the old synonym
+      Mb-1
+   3. The search ignores the organism filter
+   4. Unreviewed entries were not removed
+c. Search `myoglobin AND organism_name:"sperm whale" AND reviewed:true`. Three
+   reviewed entries appear, from three different whale species. Which accession
+   belongs to the sperm whale, *Physeter macrocephalus* (taxonomy number 9755)?
+   Which query would have given only this entry?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-```r
-L <- c(1, 2, 4, 8)          # side length of each cube (mm)
-area   <- 6 * L^2           # surface area (mm^2)
-volume <- L^3               # volume (mm^3)
-ratio  <- area / volume     # surface-area-to-volume ratio (mm^-1)
-ratio
-```
-
-```
-[1] 6.00 3.00 1.50 0.75
-```
-
-1.5 mm⁻¹. Each doubling of side length halves the ratio (6/L).
+a. **P02144** (entry name MYG_HUMAN, 154 amino acids). The unreviewed hits are
+   mostly automatically predicted fragments from alternative transcripts.
+b. **2.** Field `gene:` searches gene names *and* their synonyms. Always check
+   the protein name and organism of a hit, not only that it matched.
+c. **P02185** (MYG_PHYMC). The others are the dwarf (*Kogia sima*, P02184) and
+   pygmy sperm whale (*Kogia breviceps*, Q0KIY5), whose common names also
+   contain "sperm whale". `gene:MB AND organism_id:9755 AND reviewed:true`
+   (or `protein_name:myoglobin AND organism_id:9755`) gives only P02185: a
+   taxonomy number is unambiguous where a common name is not.
 :::
 
-### R2. Diffusion time grows with distance squared
+### B2. What does myoglobin do in a muscle fibre?
 
-Diffusion time is proportional to the square of distance. Run the code. How
-many times longer does diffusion over 100 µm take than over 10 µm?
+Open the human myoglobin entry, <https://www.uniprot.org/uniprotkb/P02144/entry>.
+
+a. In the *Function* section, myoglobin's primary function is to store oxygen
+   and to … (choose one)
+   1. carry oxygen in blood plasma between lungs and tissues
+   2. facilitate the diffusion of oxygen within muscle tissue
+   3. pump oxygen across the plasma membrane
+b. In *Subcellular Location*, where in the cell is myoglobin found?
+c. In the *Features* table (section *PTM/Processing*) the chain "Myoglobin"
+   runs from position 2 to 154. How many amino acids does the mature protein
+   have, and what happened to residue 1?
+d. In the *Function* section's features, which amino acid is at position 94
+   (the proximal residue binding heme), and what does it hold in place?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. **2.** Myoglobin stores O₂ and speeds its movement from the capillary side
+   of a muscle fibre to the mitochondria, which helps with the diffusion limit
+   over distances of tens of micrometres discussed in this unit.
+b. In the **cytoplasm of the muscle cell, the sarcoplasm**. Unlike haemoglobin
+   it is not in blood: it works inside the tissue, on the last part of the
+   oxygen path.
+c. **153 amino acids.** The initiator methionine (residue 1) is removed after
+   translation, which is why the mature chain starts at position 2.
+d. **Histidine (H94)**. It binds the iron of the **heme** group; oxygen binds
+   on the other side of the heme, near another histidine at position 65.
+:::
+
+### B3. Is a whale's myoglobin a scaled-up mouse myoglobin?
+
+A sperm whale is roughly a million times heavier than a mouse. Do its muscle
+proteins also differ in size? Read the three FASTA files from B1 into R and
+compare them. All three proteins have the same length, so the residues can be
+compared position by position without an alignment program.
 
 ```r
-d <- c(1, 10, 100)          # diffusion distance (micrometres)
-t_rel <- d^2 / d[1]^2       # diffusion time relative to 1 micrometre
-t_rel
-t_rel[3] / t_rel[2]
+read_uniprot <- function(acc) {
+  url   <- paste0("https://rest.uniprot.org/uniprotkb/", acc, ".fasta")
+  lines <- readLines(url)
+  cat(lines[1], "\n")                      # the header line
+  paste(lines[-1], collapse = "")          # join the sequence lines
+}
+human <- read_uniprot("P02144")
+mouse <- read_uniprot("P04247")
+whale <- read_uniprot("P02185")
+nchar(c(human = human, mouse = mouse, whale = whale))
+
+h <- strsplit(human, "")[[1]]              # one letter per residue
+m <- strsplit(mouse, "")[[1]]
+w <- strsplit(whale, "")[[1]]
+identity <- function(a, b) round(100 * mean(a == b), 1)   # % identical positions
+c(human_mouse = identity(h, m),
+  human_whale = identity(h, w),
+  mouse_whale = identity(m, w))
+sum(h == m & h == w)                       # positions identical in all three
+c(human = h[c(65, 94)], mouse = m[c(65, 94)], whale = w[c(65, 94)])
 ```
+
+a. How long is myoglobin in each species?
+b. Which pair of species is the least similar, and what is its percentage
+   identity?
+c. At how many of the positions are all three species identical?
+d. Are the two oxygen- and heme-binding histidines (positions 65 and 94)
+   conserved in all three?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
-[1]     1   100 10000
-[1] 100
+>sp|P02144|MYG_HUMAN Myoglobin OS=Homo sapiens OX=9606 GN=MB PE=1 SV=2 
+>sp|P04247|MYG_MOUSE Myoglobin OS=Mus musculus OX=10090 GN=Mb PE=1 SV=3 
+>sp|P02185|MYG_PHYMC Myoglobin OS=Physeter macrocephalus OX=9755 GN=MB PE=1 SV=2 
+human mouse whale 
+  154   154   154 
+human_mouse human_whale mouse_whale 
+       83.8        84.4        79.9 
+[1] 118
+human1 human2 mouse1 mouse2 whale1 whale2 
+   "H"    "H"    "H"    "H"    "H"    "H" 
 ```
 
-100 times longer: ten times the distance gives one hundred times the time.
+a. **154 amino acids** in all three.
+b. **Mouse and sperm whale, 79.9 %.** Human is about equally close to both
+   (about 84 %).
+c. **118** of 154 positions.
+d. **Yes**, both histidines are present in all three.
+
+Body size scales organs, not molecules. A protein that does one job (holding
+oxygen on a heme) keeps its size and its key residues across a million-fold
+range of body mass. Large divers differ instead in how *much* myoglobin their
+muscles contain and in some surface residues.
 :::
 
-### R3. Mean and spread of body temperature
+### B4. Do big mammals have proportionally big brains?
 
-The values are invented teaching numbers: eight readings of a resting
-person's core temperature (°C). Run the code and report (a) the mean,
-(b) the standard deviation rounded to two decimals, and (c) how many
-readings lie outside 36.8–37.2 °C.
-
-```r
-temp <- c(36.8, 37.1, 36.9, 37.4, 37.0, 36.6, 37.2, 37.0)
-mean(temp)
-round(sd(temp), 2)
-sum(temp < 36.8 | temp > 37.2)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```
-[1] 37
-[1] 0.24
-[1] 2
-```
-
-a. 37 °C. b. 0.24 °C. c. 2 readings (36.6 and 37.4 °C). The variable
-fluctuates around the set point rather than being perfectly constant.
-:::
-
-### R4. A disturbance and its correction
-
-Invented teaching numbers: body temperature recorded each minute during and
-after a short bout of exercise. Complete the subsetting line so that `high`
-keeps only the rows with a temperature above 37.5 °C, then run the code.
-
-a. How many readings are above 37.5 °C?
-b. At which minute is the temperature highest?
+`MASS::mammals` holds real average body mass (kg) and brain mass (g) of 62
+mammal species. If brain mass were proportional to body mass, the slope of
+log(brain) against log(body) would be 1. A slope of 2/3 would match the
+surface-area rule used in this unit.
 
 ```r
-rec <- data.frame(
-  minute = 0:9,
-  temp   = c(37.0, 37.3, 37.6, 37.8, 37.7, 37.5, 37.3, 37.2, 37.1, 37.0)
-)
-high <- rec[rec$temp ____ 37.5, ]
-high
-nrow(high)
-rec$minute[which.max(rec$temp)]
-plot(rec$minute, rec$temp, type = "b",
-     xlab = "Time (min)", ylab = "Body temperature (°C)")
-abline(h = 37, lty = 2)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```r
-high <- rec[rec$temp > 37.5, ]
-```
-
-```
-  minute temp
-3      2 37.6
-4      3 37.8
-5      4 37.7
-[1] 3
-[1] 3
-```
-
-a. 3 readings. b. Minute 3. The plot shows the rise and the return towards
-the dashed 37 °C line, as expected when negative feedback opposes a deviation.
-:::
-
-### R5. A log–log slope with `lm`
-
-For cubes, area grows more slowly than volume. Fit a straight line to
-log₁₀(area) against log₁₀(volume). What is the slope (rounded to three
-decimals)?
-
-a. 0.333  b. 0.667  c. 1.000  d. 1.500
-
-```r
-L <- c(1, 2, 4, 8, 16)
-area   <- 6 * L^2
-volume <- L^3
-fit <- lm(log10(area) ~ log10(volume))
+library(MASS)                     # ships with R
+head(mammals)
+fit <- lm(log10(brain) ~ log10(body), data = mammals)
 round(coef(fit), 3)
-plot(log10(volume), log10(area))
+round(confint(fit), 3)           # 95 % confidence intervals
+plot(log10(mammals$body), log10(mammals$brain),
+     xlab = "log10 body mass (kg)", ylab = "log10 brain mass (g)")
 abline(fit)
+pct <- 100 * (mammals$brain / 1000) / mammals$body   # brain as % of body mass
+names(pct) <- rownames(mammals)
+round(pct[c("Mouse", "Human", "African elephant")], 3)
 ```
+
+a. What is the slope, to three decimals?
+b. Does its 95 % confidence interval include 1? Does it include 2/3 (0.667)?
+c. What percentage of body mass is brain in the mouse and in the African
+   elephant?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
-  (Intercept) log10(volume) 
-        0.778         0.667 
+(Intercept) log10(body) 
+      0.927       0.752 
+            2.5 % 97.5 %
+(Intercept) 0.844  1.011
+log10(body) 0.695  0.809
+           Mouse            Human African elephant 
+           1.739            2.129            0.086 
 ```
 
-b. 0.667, that is 2/3: area ∝ volume^(2/3). The intercept 0.778 is
-log₁₀(6). A slope below 1 on a log–log plot means the surface available per
-unit volume falls as size increases.
+a. **0.752**, so brain mass ∝ body mass^0.75.
+b. **No and no.** The interval 0.695–0.809 excludes both 1 and 0.667. Brain
+   mass rises less steeply than body mass, but more steeply than simple
+   surface area; it is close to the 3/4 exponent often found for whole-body
+   metabolic rate.
+c. **Mouse 1.739 %, African elephant 0.086 %.** On a log–log plot a slope
+   below 1 means that each organ makes up a smaller fraction of a larger body,
+   just as surface area per unit volume falls when a cube gets bigger.
 :::
 
-### R6. Glycine in collagen (bioinformatics)
+### B5. Which mammal has the largest brain for its size?
 
-Collagen, the main fibrous protein of connective-tissue matrix, has a repeating
-Gly–X–Y pattern. The string below is residues 181–240 of human collagen
-alpha-1(I), copied from UniProt
-[P02452](https://rest.uniprot.org/uniprotkb/P02452.fasta) (one letter per
-amino acid; G = glycine). Run the code.
-
-a. What fraction of the residues is glycine (three decimals)?
-b. Are all spacings between consecutive glycines equal to 3 (yes/no)?
+The line from B4 predicts the brain mass expected for a given body mass. A
+residual on the log₁₀ scale converts to a ratio: `10^residual` is observed
+brain mass divided by expected brain mass. Run this after the code in B4.
 
 ```r
-col1 <- "MGPSGPRGLPGPPGAPGPQGFQGPPGEPGEPGASGPMGPRGPPGPPGKNGDDGEAGKPGR"
-aa <- strsplit(col1, "")[[1]]   # split into single letters
-length(aa)
-sum(aa == "G")
-round(mean(aa == "G"), 3)
-g_pos <- gregexpr("G", col1)[[1]]   # positions of each G
-diff(as.vector(g_pos))
+ratio <- 10^residuals(fit)                 # observed / expected brain mass
+round(sort(ratio, decreasing = TRUE)[1:5], 1)
+round(sort(ratio)[1:3], 2)
+mammals[c("Human", "African elephant"), ]
+```
+
+a. Which species has the highest ratio, and how many times larger is its brain
+   than expected for its body mass?
+b. Which species has the lowest ratio?
+c. Which species in the data has the heaviest brain in absolute terms?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+```
+        Human Rhesus monkey        Baboon    Owl monkey    Chimpanzee 
+          7.0           5.0           3.6           3.2           2.7 
+Water opossum        Tenrec    Musk shrew 
+         0.18          0.33          0.38 
+                   body brain
+Human              62  1320
+African elephant 6654  5712
+```
+
+a. **Human, 7.0 times** the expected brain mass. The next four are also
+   primates.
+b. **Water opossum** (0.18 of expected).
+c. **African elephant** (5712 g against 1320 g in humans). Absolute size and
+   size relative to the scaling line answer different questions: only the
+   second removes the effect of body size, which is why comparative
+   physiologists compare residuals rather than raw values.
+:::
+
+### B6. The protein that makes connective tissue strong
+
+Connective tissue is defined by its extracellular matrix. In tendon and bone
+the main matrix protein is collagen type I. Search UniProtKB for
+`gene:COL1A1 AND organism_id:9606 AND reviewed:true` and open the entry.
+
+a. What is the accession?
+b. In *Subcellular Location*, where does the protein end up?
+c. In the *Features* table, between which positions is the
+   "Triple-helical region"?
+d. Run the code. In the triple-helical region, what fraction of the triplets
+   (residues 1, 4, 7, … of the region) start with glycine (G)?
+
+```r
+lines <- readLines("https://rest.uniprot.org/uniprotkb/P02452.fasta")
+col1  <- paste(lines[-1], collapse = "")
+nchar(col1)                                   # whole precursor
+helix <- substr(col1, 179, 1192)              # triple-helical region
+aa    <- strsplit(helix, "")[[1]]
+first <- aa[seq(1, length(aa), by = 3)]       # first residue of each triplet
+length(first)
+sum(first == "G")
+round(100 * mean(aa == "G"), 1)               # % glycine in the helix
+round(100 * mean(strsplit(col1, "")[[1]] == "G"), 1)   # % glycine overall
 ```
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
-[1] 60
-[1] 20
-[1] 0.333
- [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+[1] 1464
+[1] 338
+[1] 338
+[1] 33.6
+[1] 26.7
 ```
 
-a. 0.333 (20 of 60). b. Yes: glycine is every third residue. The small
-glycine fits in the centre of the collagen triple helix, which is why a
-regular sequence pattern underlies the strength of tendon and bone matrix.
+a. **P02452** (CO1A1_HUMAN, collagen alpha-1(I) chain).
+b. It is **secreted into the extracellular matrix**; the *Tissue specificity*
+   comment says it forms the fibrils of tendon, ligaments and bone.
+c. **179–1192** (1014 residues, 338 triplets).
+d. **All of them: 338 of 338.** Every third residue is glycine, the only amino
+   acid small enough to sit in the centre of the triple helix. Glycine is
+   33.6 % of the helix but only 26.7 % of the whole precursor, which also has
+   a signal peptide and propeptides that are removed. A single glycine change
+   in the helix can weaken the matrix; this is the cause of many cases of
+   osteogenesis imperfecta (brittle bone disease), listed under the entry's
+   *Disease & Variants* section.
 :::
 
 Continue with the [self-check quiz](quiz.qmd).

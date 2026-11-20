@@ -499,229 +499,305 @@ low in the cold (C3 O₂/CO₂ is only 0.15 at 12 °C). This is why C4 grasses
 dominate warm regions and C3 grasses cool ones.
 :::
 
-## R and bioinformatics {#r-exercises}
+## Bioinformatics and R {#bioinformatics}
 
-Run the code in R or RStudio; it uses base R only (no packages), and all data
-are typed into the code.
+A weed is growing in a maize field and photosynthesises vigorously in the
+summer heat. What plant is it, does it use the C3 or the C4 pathway, and why
+might a cold night slow it down? In these exercises you identify the plant by
+**DNA barcoding** (BLASTn of an *rbcL* sequence), analyse real **gas-exchange
+data** from the same species in R, and follow its carbon through **KEGG
+pathway maps** using **EC numbers**. The R code uses base R only; B2 and B3
+use the `CO2` dataset that ships with R, and B5 reads KEGG over the internet.
 
-### R1. Net and gross photosynthesis
+::: {.callout-tip}
+## How to identify a plant by DNA barcoding (BLASTn)
 
-Plant L01 was measured at five light levels (invented teaching data, the same
-values as `data/photosynthesis.csv`). Respiration is estimated as the CO₂
-released in darkness, and gross uptake = net uptake + respiration. Run the
-code. What is gross uptake at 600 µmol photons m⁻² s⁻¹, and between which two
-light levels does net uptake rise most steeply per photon?
+A DNA barcode is a short, standard gene region that differs between taxa.
+For land plants the standard barcodes are the chloroplast genes *rbcL* and
+*matK*. Go to [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROGRAM=blastn)
+and choose **Nucleotide BLAST** (blastn). Paste the sequence into *Enter Query
+Sequence*, keep the standard nucleotide database (core_nt) and the program
+*Highly similar sequences (megablast)*, and click BLAST.
 
-```r
-light <- c(0, 50, 200, 600, 1200)   # umol photons m^-2 s^-1
-net   <- c(-2, 0, 5, 10, 11)        # umol CO2 m^-2 s^-1
-resp  <- -net[1]                    # CO2 released in darkness
-gross <- net + resp
-gross
-diff(net) / diff(light)             # slope between neighbouring points
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```r
-gross
-## [1]  0  2  7 12 13
-diff(net) / diff(light)
-## [1] 0.040000000 0.033333333 0.012500000 0.001666667
-```
-
-Gross uptake at 600 µmol photons m⁻² s⁻¹ is 12 µmol CO₂ m⁻² s⁻¹. The slope
-is steepest between 0 and 50 (0.040) and falls with each step, as the curve
-saturates.
+In the hit table read *Scientific Name*, *Query Cover* (how much of your
+sequence is aligned) and *Per. Ident* (percent identity). For a barcode, look
+at all the top hits with near-full query cover and ≥ 99 % identity, not only
+the first: if they all belong to one species the barcode identifies the
+species; if several species of one genus share the top identity, it only
+identifies the genus. Clicking a hit's accession opens its GenBank record,
+whose *ORGANISM* line gives the full taxonomic lineage. (BLAST with proteins
+was introduced in A3; blastn works the same way with DNA.)
 :::
 
-### R2. A data frame for three plants and a plot
+::: {.callout-tip}
+## How to search KEGG pathway maps and EC numbers
 
-Run the code, which puts all three plants into one data frame. What is the
-mean net uptake at 1200 µmol photons m⁻² s⁻¹, and which rows of the data
-frame hold plant L02?
-
-```r
-curves <- data.frame(
-  plant = rep(c("L01", "L02", "L03"), each = 5),
-  light = rep(c(0, 50, 200, 600, 1200), times = 3),
-  net   = c(-2,   0,    5,   10,   11,
-            -2.2, -0.2, 4.6, 9.5,  10.5,
-            -1.8, 0.2,  5.4, 10.5, 11.5)
-)
-tapply(curves$net, curves$light, mean)
-l02 <- curves[curves$plant == "L02", ]
-l02
-plot(curves$light, curves$net, col = factor(curves$plant), pch = 19,
-     xlab = "Light (umol photons m-2 s-1)",
-     ylab = "Net CO2 uptake (umol m-2 s-1)")
-abline(h = 0, lty = 2)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-```r
-tapply(curves$net, curves$light, mean)
-##    0   50  200  600 1200 
-##   -2    0    5   10   11 
-l02
-##    plant light  net
-## 6    L02     0 -2.2
-## 7    L02    50 -0.2
-## 8    L02   200  4.6
-## 9    L02   600  9.5
-## 10   L02  1200 10.5
-```
-
-The mean at 1200 is 11 µmol CO₂ m⁻² s⁻¹. Plant L02 is in rows 6–10. In the
-plot, the points cross the dashed zero line between 0 and 200 µmol photons
-m⁻² s⁻¹.
+[KEGG](https://www.kegg.jp) draws metabolism as reference maps. Open
+[map00710](https://www.kegg.jp/pathway/map00710) ("Carbon fixation by
+Calvin cycle"; older versions called it "Carbon fixation in photosynthetic
+organisms"). Each box is an enzyme labelled with its **EC number**, the
+Enzyme Commission code of the reaction it catalyses: four numbers, where the
+first gives the class (1 oxidoreductases, 2 transferases, 3 hydrolases,
+4 lyases, 5 isomerases, 6 ligases, 7 translocases). Click a box to open the
+enzyme entry (e.g. [ec:4.1.1.31](https://www.kegg.jp/entry/ec:4.1.1.31)),
+which gives its names and its *REACTION*. Above the map, **Pathway modules**
+(e.g. [M00172](https://www.kegg.jp/entry/M00172)) list the enzymes of one
+functional unit such as one type of C4 cycle, in order. Replacing `map` by a
+three-letter organism code (e.g. [ath00710](https://www.kegg.jp/pathway/ath00710)
+for *Arabidopsis thaliana*, `zma` for maize) colours the boxes for which that
+organism has genes. KEGG also has a REST interface that R can read, e.g.
+`https://rest.kegg.jp/link/ath/ec:4.1.1.39` lists the Arabidopsis genes for
+an EC number.
 :::
 
-### R3. Light compensation point by linear interpolation
+### B1. What is the weed?
 
-For plant L02, net uptake changes sign between 50 and 200 µmol photons
-m⁻² s⁻¹. Draw a straight line between those two points and find where it
-crosses zero. Complete `y2`, run the code, and give the compensation point.
-Does R's `approx()` give the same value (yes/no)?
+A leaf sample from the weed gave this partial *rbcL* sequence (577 bp):
 
-```r
-light <- c(0, 50, 200, 600, 1200)
-net   <- c(-2.2, -0.2, 4.6, 9.5, 10.5)   # plant L02
-x1 <- 50;  y1 <- -0.2
-x2 <- 200; y2 <- ___                      # complete
-comp <- x1 + (0 - y1) * (x2 - x1) / (y2 - y1)
-comp
-approx(x = net, y = light, xout = 0)$y
 ```
+ACAGAGACTAAAGCAAGTGTTGGATTTAAAGCTGGGGTTAAGGATTATAAATTGACTTACTACACCCCGG
+AGTACGAAACCAAGGATACTGATATCTTGGCAGCATTCCGAGTAACTCCTCAGCCCGGGGTTCCGCCTGA
+AGAAGCAGGGGCTGCAGTAGCTGCGGAATCTTCTACTGGTACATGGACAACTGTTTGGACTGATGGACTT
+ACCAGTCTTGATCGTTACAAAGGACGATGCTATCACATCGAGCCCGTTCCTGGGGAGCCAGATCAATATA
+TCTGTTATATAGCTTATCCATTAGACCTATTTGAAGAGGGTTCTGTTACTAACATGTTTACTTCCATTGT
+GGGTAACGTATTTGGTTTCAAAGCCCTACGCGCTCTACGTTTGGAGGATCTACGAATTCCCCCTACTTAT
+TCAAAAACTTTCCAGGGTCCGCCTCACGGTATCCAAGTTGAAAGGGATAAGTTGAACAAGTATGGTCGTC
+CTTTATTGGGATGTACTATTAAACCAAAATTGGGATTATCCGCAAAAAATTACGGTAGAGCGTGTTATGA
+GTGTCTACGCGGTGGAT
+```
+
+Run blastn as described in the tip box.
+
+a. To which genus do almost all the top hits belong?
+b. Open the GenBank record of the top hit. To which plant family and which
+   subfamily does it belong (ORGANISM lineage)?
+c. Look at the species among the hits with ≥ 99 % identity and full query
+   cover. Can this *rbcL* fragment alone tell *E. crus-galli* from its
+   relatives such as *E. colona* (yes/no)?
+d. According to the GenBank record, which genome carries *rbcL*, and which
+   protein does it encode?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-```r
-y2 <- 4.6
-comp
-## [1] 56.25
-approx(x = net, y = light, xout = 0)$y
-## [1] 56.25
-```
-
-The compensation point is 56.25 (about 56) µmol photons m⁻² s⁻¹, and yes,
-`approx()` gives the same value.
+a. *Echinochloa*. The top hit is *Echinochloa crus-galli* (barnyard grass;
+   GenBank OP711265, the record this sequence comes from) at 100 % identity.
+b. Poaceae (grasses), subfamily Panicoideae (lineage: … Poales; Poaceae;
+   PACMAD clade; Panicoideae; … *Echinochloa*). Panicoideae include many C4
+   grasses, such as maize and sorghum.
+c. No. *E. crus-galli*, *E. colona*, *E. esculenta*, *E. oryzicola* and other
+   species all match at about 99.5–99.8 % (1–3 differences in 577 bp), almost as well as
+   other *E. crus-galli* records. *rbcL*
+   reliably identifies the genus; species need a more variable barcode such
+   as *matK* or ITS.
+d. The chloroplast genome (*organelle = plastid:chloroplast*); it encodes the
+   large subunit of Rubisco (ribulose-1,5-bisphosphate
+   carboxylase/oxygenase), the enzyme that fixes CO₂.
 :::
 
-### R4. Water-use efficiency of C3, C4 and CAM leaves
+### B2. C3 or C4?
 
-Water-use efficiency (WUE) is CO₂ taken up per water lost. The values below
-are invented teaching numbers, each measured while the leaf's stomata are open
-(the CAM leaf at night). Run the code. Give the WUE of each leaf (µmol CO₂ per
-mmol H₂O) and which leaf has the highest.
+The `CO2` dataset in R holds real CO₂-response curves of *Echinochloa
+crus-galli*: net CO₂ uptake (µmol m⁻² s⁻¹) of 12 plants measured at seven
+ambient CO₂ concentrations (µL L⁻¹ = ppm). A C3 leaf has a CO₂ compensation
+point (where net uptake is zero) of roughly 40–100 µL L⁻¹ and is far from
+saturated at ambient CO₂ (about 350 µL L⁻¹ when these data were taken). A C4
+leaf, whose PEP carboxylase concentrates CO₂ around Rubisco, has a
+compensation point near 0–10 µL L⁻¹ and is almost saturated at ambient CO₂.
+Run the code, which uses the six nonchilled plants.
 
 ```r
-leaf <- c("C3 wheat", "C4 maize", "CAM pineapple")
-A    <- c(12, 18, 4)        # CO2 uptake, umol m^-2 s^-1
-E    <- c(4.0, 3.0, 0.5)    # transpiration, mmol H2O m^-2 s^-1
-wue  <- A / E
-wue
-leaf[which.max(wue)]
+co2 <- as.data.frame(CO2)
+nonch <- co2[co2$Treatment == "nonchilled", ]
+plot(uptake ~ conc, data = nonch, col = Type, pch = 19,
+     xlab = "Ambient CO2 (uL/L)", ylab = "CO2 uptake (umol m-2 s-1)")
+legend("bottomright", levels(nonch$Type), col = 1:2, pch = 19)
+
+# saturation: mean uptake at each CO2, as a fraction of the maximum
+curve <- aggregate(uptake ~ conc, data = nonch, FUN = mean)
+curve$fraction <- round(curve$uptake / max(curve$uptake), 2)
+curve
+
+# compensation point: straight line through the two lowest CO2 levels
+low <- nonch[nonch$conc <= 175, ]
+fit <- lm(uptake ~ conc, data = low)
+round(coef(fit), 3)
+round(-coef(fit)[1] / coef(fit)[2])   # CO2 where uptake = 0
 ```
+
+a. What fraction of the maximum uptake does the plant reach at
+   350 µL L⁻¹?
+b. What is the estimated CO₂ compensation point (µL L⁻¹)?
+c. Is *E. crus-galli* a C3 or a C4 plant?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```r
-wue
-## [1] 3 6 8
-leaf[which.max(wue)]
-## [1] "CAM pineapple"
+curve
+##   conc   uptake fraction
+## 1   95 13.28333     0.36
+## 2  175 25.11667     0.67
+## 3  250 32.46667     0.87
+## 4  350 35.13333     0.94
+## 5  500 35.10000     0.94
+## 6  675 36.01667     0.96
+## 7 1000 37.38333     1.00
+round(coef(fit), 3)
+## (Intercept)        conc
+##      -0.769       0.148
+round(-coef(fit)[1] / coef(fit)[2])
+## (Intercept)
+##           5
 ```
 
-C3: 3, C4: 6, CAM: 8 µmol CO₂ per mmol H₂O. The CAM leaf has the highest WUE
-because it opens its stomata in cool night air; the C4 leaf beats the C3 leaf
-because PEP carboxylase lets it fix CO₂ with less open stomata.
+a. 0.94: the leaf is almost saturated at ambient CO₂.
+b. About 5 µL L⁻¹.
+c. C4. Both signatures (near-zero compensation point, saturation at ambient
+   CO₂) show that PEP carboxylase keeps CO₂ high around Rubisco, so extra CO₂
+   in the air hardly helps and photorespiration is suppressed. This fits a
+   panicoid grass (B1).
 :::
 
-### R5. Percent identity of Rubisco from two plants
+### B3. Does a cold night hurt photosynthesis?
 
-The code holds the first 60 amino acids of the Rubisco large subunit (rbcL)
-from *Arabidopsis thaliana* (UniProt O03042) and spinach (UniProt P00875).
-The two fragments align without gaps. Run the code. How many positions are
-identical, what is the percent identity, and at which positions do they
-differ?
+Half of the plants of each origin (Quebec, a cool climate; Mississippi, a
+warm climate) were chilled overnight before measurement. Run the code, which
+compares uptake at 1000 µL L⁻¹ CO₂ (the CO₂-saturated rate, a measure of
+photosynthetic capacity).
 
 ```r
-arath <- "MSPQTETKASVGFKAGVKEYKLTYYTPEYETKDTDILAAFRVTPQPGVPPEEAGAAVAAE"
-spiol <- "MSPQTETKASVEFKAGVKDYKLTYYTPEYETLDTDILAAFRVSPQPGVPPEEAGAAVAAE"
-a <- strsplit(arath, "")[[1]]
-s <- strsplit(spiol, "")[[1]]
-length(a) == length(s)
-sum(a == s)
-round(100 * mean(a == s), 1)
-which(a != s)
+co2 <- as.data.frame(CO2)
+high <- co2[co2$conc == 1000, ]
+tab <- tapply(high$uptake, list(high$Type, high$Treatment), mean)
+round(tab, 1)
+round(100 * (1 - tab[, "chilled"] / tab[, "nonchilled"]))   # % reduction
+for (origin in c("Quebec", "Mississippi")) {
+  d <- high[high$Type == origin, ]
+  cat(origin, "p =", signif(t.test(uptake ~ Treatment, data = d)$p.value, 2), "\n")
+}
+interaction.plot(co2$conc, co2$Type:co2$Treatment, co2$uptake,
+                 xlab = "Ambient CO2 (uL/L)", ylab = "Mean CO2 uptake",
+                 trace.label = "Group")
 ```
+
+a. By how many percent does chilling reduce the CO₂-saturated uptake of
+   plants from Quebec and from Mississippi?
+b. For which origin is the effect significant at the 5 % level (t-test)?
+c. Which population is better adapted to cold nights?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```r
-length(a) == length(s)
-## [1] TRUE
-sum(a == s)
-## [1] 56
-round(100 * mean(a == s), 1)
-## [1] 93.3
-which(a != s)
-## [1] 12 19 32 43
+round(tab, 1)
+##             nonchilled chilled
+## Quebec            43.2    40.8
+## Mississippi       31.6    18.7
+round(100 * (1 - tab[, "chilled"] / tab[, "nonchilled"]))
+##      Quebec Mississippi
+##           5          41
+## Quebec p = 0.34
+## Mississippi p = 0.015
 ```
 
-56 of 60 positions are identical (93.3 %); they differ at positions 12, 19,
-32 and 43. Rubisco is highly conserved, even between plants from different families.
+a. Quebec 5 %, Mississippi 41 %.
+b. Only Mississippi (p ≈ 0.015 < 0.05; Quebec p ≈ 0.34). With three plants
+   per group only a large effect can be detected.
+c. Quebec: its plants keep their capacity after chilling and also have a
+   higher capacity without chilling. C4 photosynthesis is often
+   chilling-sensitive, and populations of the same species from cold
+   climates can be selected for tolerance.
 :::
 
-### R6. The lysine that activates Rubisco
+### B4. Where does the CO₂ go first?
 
-Rubisco is activated when CO₂ binds to a lysine (Lys201 in spinach), forming a
-carbamate. The code holds the full spinach rbcL sequence (UniProt P00875).
-Complete the counting line and run the code. How long is the protein, how many
-lysines (K) does it contain, and which amino acid is at position 201?
+Open KEGG [map00710](https://www.kegg.jp/pathway/map00710) and the enzyme
+and module entries it links to.
+
+a. Give the EC numbers of Rubisco (ribulose-bisphosphate carboxylase) and of
+   PEP carboxylase. To which enzyme class do both belong?
+b. Open both EC entries and read the *REACTION*. Which form of inorganic
+   carbon does PEP carboxylase use, and which does Rubisco use?
+c. Open the three C4 modules (M00170, M00171, M00172) and the CAM-dark module
+   (M00168). Which enzyme is the first step in all four?
+d. In the NADP-malic enzyme type (M00172), which enzyme (name and EC number)
+   releases CO₂ next to Rubisco in the bundle-sheath cells?
+e. Which enzyme in M00172 regenerates PEP, and which energy carrier does its
+   reaction consume?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. Rubisco EC 4.1.1.39, PEP carboxylase EC 4.1.1.31; both are lyases (class
+   4, carbon–carbon lyases that add or remove CO₂).
+b. PEP carboxylase uses bicarbonate (HCO₃⁻): phosphate + oxaloacetate =
+   phosphoenolpyruvate + HCO₃⁻ (written in reverse). Rubisco uses CO₂. HCO₃⁻
+   is abundant in the cytosol and PEPC does not react with O₂, which is why
+   it captures carbon efficiently even at low CO₂.
+c. PEP carboxylase (K01595, EC 4.1.1.31). C4 and CAM differ in when and
+   where the C4 acid is decarboxylated, not in the first carboxylation.
+d. NADP-malic enzyme, malate dehydrogenase (oxaloacetate-decarboxylating)
+   (NADP⁺), EC 1.1.1.40: malate + NADP⁺ → pyruvate + CO₂ + NADPH.
+e. Pyruvate, phosphate dikinase (PPDK, EC 2.7.9.1):
+   ATP + pyruvate + phosphate = AMP + PEP + diphosphate. One ATP goes to AMP,
+   i.e. two phosphoanhydride bonds per CO₂ pumped, the extra energy cost of
+   C4 photosynthesis.
+:::
+
+### B5. Does a C3 plant carry the C4 genes?
+
+Arabidopsis is a C3 plant. Run the code, which asks KEGG how many
+Arabidopsis genes encode Rubisco and each enzyme of the NADP-ME C4 cycle.
 
 ```r
-# Spinach Rubisco large subunit, UniProt P00875
-rbcl <- paste0(
-  "MSPQTETKASVEFKAGVKDYKLTYYTPEYETLDTDILAAFRVSPQPGVPPEEAGAAVAAE",
-  "SSTGTWTTVWTDGLTNLDRYKGRCYHIEPVAGEENQYICYVAYPLDLFEEGSVTNMFTSI",
-  "VGNVFGFKALRALRLEDLRIPVAYVKTFQGPPHGIQVERDKLNKYGRPLLGCTIKPKLGL",
-  "SAKNYGRAVYECLRGGLDFTKDDENVNSQPFMRWRDRFLFCAEALYKAQAETGEIKGHYL",
-  "NATAGTCEDMMKRAVFARELGVPIVMHDYLTGGFTANTTLSHYCRDNGLLLHIHRAMHAV",
-  "IDRQKNHGMHFRVLAKALRLSGGDHIHSGTVVGKLEGERDITLGFVDLLRDDYTEKDRSR",
-  "GIYFTQSWVSTPGVLPVASGGIHVWHMPALTEIFGDDSVLQFGGGTLGHPWGNAPGAVAN",
-  "RVALEACVQARNEGRDLAREGNTIIREATKWSPELAAACEVWKEIKFEFPAMDTV")
-nchar(rbcl)
-aa <- strsplit(rbcl, "")[[1]]
-sum(aa == ___)               # complete: count lysines
-substr(rbcl, 201, 201)
-substr(rbcl, 196, 206)
+ec <- c(Rubisco = "4.1.1.39", PEPC = "4.1.1.31", NADP_MDH = "1.1.1.82",
+        NADP_ME = "1.1.1.40", PPDK = "2.7.9.1")
+genes <- lapply(ec, function(e) {
+  x <- read.delim(paste0("https://rest.kegg.jp/link/ath/ec:", e),
+                  header = FALSE)
+  Sys.sleep(1)                 # be polite to the server
+  x$V2
+})
+sapply(genes, length)
+genes$Rubisco
 ```
+
+a. Does Arabidopsis have at least one gene for every enzyme of the C4 cycle
+   (yes/no)?
+b. How many Arabidopsis genes are linked to Rubisco, and which one is not
+   an AT…G… nuclear gene? Look it up in KEGG
+   (`https://www.kegg.jp/entry/ath:<ID>`): which gene is it?
+c. What, then, makes a C4 leaf different from a C3 leaf?
+   A. Only C4 plants have the genes for PEP carboxylase and PPDK.
+   B. C4 plants express these genes at high levels in specific cell types
+      (mesophyll versus bundle sheath) arranged in Kranz anatomy.
+   C. C4 plants lack Rubisco.
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```r
-nchar(rbcl)
-## [1] 475
-sum(aa == "K")
-## [1] 23
-substr(rbcl, 201, 201)
-## [1] "K"
-substr(rbcl, 196, 206)
-## [1] "GLDFTKDDENV"
+sapply(genes, length)
+##  Rubisco     PEPC NADP_MDH  NADP_ME     PPDK
+##        5        4        1        4        1
+genes$Rubisco
+## [1] "ath:AT1G67090" "ath:AT5G38410" "ath:AT5G38420" "ath:AT5G38430"
+## [5] "ath:ArthCp030"
 ```
 
-The protein has 475 amino acids and 23 lysines. Position 201 is K (lysine), in
-the stretch GLDFTKDDENV; UniProt annotates it as N6-carboxylysine, the
-carbamylated residue.
+(The counts can change slightly between KEGG releases.)
+
+a. Yes. C3 plants use these enzymes for other jobs, e.g. PEP carboxylase
+   refills the citric acid cycle with oxaloacetate.
+b. Five: four nuclear small-subunit genes (RBCS1A, RBCS1B, RBCS2B, RBCS3B)
+   and ArthCp030, which is *rbcL*, the large subunit encoded in the
+   chloroplast genome ("Cp"), the same gene you used as a barcode in B1.
+   *rbcL* is in every photosynthetic plant and is highly conserved, which is
+   why it makes a good barcode.
+c. B. C4 photosynthesis evolved many times from C3 ancestors by recruiting
+   existing genes, changing where and how strongly they are expressed, and
+   reorganising leaf anatomy.
 :::
 
 Continue with the [self-check quiz](quiz.qmd).

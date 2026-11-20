@@ -486,220 +486,319 @@ in the elongation zone, where cells expand; the meristem still produces the
 same number of cells.
 :::
 
-## R and bioinformatics {#r-exercises}
+## Bioinformatics and R {#bioinformatics}
 
-Run the code in R or RStudio. Only base R is used (no packages), and all data
-are typed into the code.
+Rubisco, the enzyme that fixes CO₂, is built from two kinds of subunit encoded
+in two different genomes: the large subunit in the chloroplast and the small
+subunit in the nucleus. A nuclear gene is not simply a string of codons: it has
+exons and introns, untranslated regions (UTRs) and, for a chloroplast protein,
+a stretch that codes for an address label. These exercises teach you to look up
+plant genes by their **AGI code** in **TAIR**, **NCBI Gene** and **Ensembl
+Plants**, to read a **gene structure**, and to use **R** to fetch the genomic
+DNA, the mRNA, the coding sequence (CDS) and the protein of real genes and
+compare them.
 
-### R1. Cell lengths in two zones
+::: {.callout-tip}
+## How to search for an Arabidopsis gene
 
-The lengths (µm) of eight neighbouring cells were measured in the meristem and
-in the elongation zone of one root (invented teaching values). Complete the
-second `mean()` line, run the code and report how many times longer the average
-elongation-zone cell is than the average meristem cell.
+**AGI codes.** Every *Arabidopsis thaliana* gene has an Arabidopsis Genome
+Initiative code such as **AT1G67090**: `AT` = *A. thaliana*, `1` = chromosome
+1 (`C` = chloroplast, `M` = mitochondrion), `G` = gene, `67090` = its number,
+counting along the chromosome from the top in steps of 10. A suffix `.1`,
+`.2` (AT1G67090.1) names a transcript (gene model) of that gene. AGI codes are
+the safest search term, because gene names have synonyms.
 
-```r
-meristem   <- c(9, 11, 10, 12, 8, 10, 11, 9)
-elongation <- c(35, 60, 85, 110, 140, 150, 155, 157)
-mean(meristem)
-mean(___)
-mean(elongation) / mean(meristem)
-```
+**Where to search.**
+
+- **TAIR** (<https://www.arabidopsis.org>): the Arabidopsis database. Search by
+  AGI code or gene name; the locus page lists aliases, gene models and
+  descriptions.
+- **NCBI Gene** (<https://www.ncbi.nlm.nih.gov/gene>): query
+  `RBCS1A[sym] AND "Arabidopsis thaliana"[orgn]` or simply the AGI code. The
+  record shows the AGI code under "Also known as", the chromosome, the exon
+  count and RefSeq sequences (NM_ = mRNA, NP_ = protein; NC_ = whole
+  chromosome).
+- **Ensembl Plants** (<https://plants.ensembl.org>, now part of
+  <https://www.ensembl.org>): search the AGI code and open the gene. The gene
+  page shows location, strand and each transcript drawn as boxes (exons) joined
+  by lines (introns); coding parts are drawn as filled boxes, UTRs as open or
+  thinner boxes.
+
+**Four sequences of one gene.** *Genomic* DNA = exons + introns. *mRNA* (cDNA)
+= exons only: 5′ UTR + CDS + 3′ UTR. *CDS* = from the ATG start codon to and
+including the stop codon. *Protein* = CDS translated, so
+CDS length = 3 × (protein length + 1).
+:::
+
+### B1. Finding the Rubisco small-subunit gene
+
+a. Search NCBI Gene for `RBCS1A[sym] AND "Arabidopsis thaliana"[orgn]`. What is
+   the AGI code of RBCS1A, and what does it tell you about the chromosome?
+b. What is the NCBI Gene ID, and how many exons does the gene have?
+c. Search Ensembl Plants (or TAIR) for the AGI code. Is the gene on the forward
+   or the reverse strand?
+d. Its curated RefSeq mRNA is **NM_105379.4**. Find it on the NCBI Gene page.
+   What does the "4" after the dot mean? (A) the 4th transcript of the gene;
+   (B) the 4th version of that sequence record.
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-11.15 times longer.
-
-```r
-mean(meristem)
-mean(elongation)
-mean(elongation) / mean(meristem)
-```
-
-```
-[1] 10
-[1] 111.5
-[1] 11.15
-```
-
-The root lengthens mainly because cells expand after they leave the meristem,
-not because they divide there.
+a. **AT1G67090**: an Arabidopsis gene on chromosome **1**, near the lower end
+   (gene numbers on chromosome 1 run up to about 80000).
+b. Gene ID **843029**; **3** exons.
+c. **Reverse** strand (chromosome 1, about 25.05 Mb). The genomic sequence must
+   therefore be read from the opposite strand to get the gene in its
+   5′→3′ direction (B2 does this with `strand=2`).
+d. **B.** The version number goes up whenever the sequence of the record is
+   changed. Quoting accession *and* version (NM_105379.4) pins the exact
+   sequence, so results can be repeated.
 :::
 
-### R2. Where does elongation start?
+### B2. One gene, four sequences
 
-One cell file is measured at increasing distance from the root tip (invented
-teaching values). Complete the subsetting line so that `elongated` keeps the
-cells longer than 50 µm. Run the code and report (a) how many cells are longer
-than 50 µm and (b) the distance from the tip of the first such cell.
-
-```r
-root <- data.frame(
-  position = c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000),  # µm from tip
-  length   = c(10, 11, 10, 14, 30, 62, 105, 140, 152, 155)          # cell length, µm
-)
-elongated <- root[root$length ___ 50, ]
-nrow(elongated)
-min(elongated$position)
-plot(root$position, root$length, type = "b",
-     xlab = "Distance from root tip (µm)", ylab = "Cell length (µm)")
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-(a) 5 cells; (b) 600 µm from the tip.
+The code fetches, for RBCS1A, the genomic region from chromosome 1
+(NC_003070.9, reverse strand), the mRNA and its CDS (NM_105379.4) from NCBI,
+and the protein from UniProt (P10795).
 
 ```r
-elongated <- root[root$length > 50, ]
-nrow(elongated)
-min(elongated$position)
+efetch <- "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&"
+read_fasta <- function(url) paste(readLines(url)[-1], collapse = "")
+
+genomic <- read_fasta(paste0(efetch,
+  "id=NC_003070.9&seq_start=25048158&seq_stop=25049667&strand=2&rettype=fasta"))
+mrna    <- read_fasta(paste0(efetch, "id=NM_105379.4&rettype=fasta"))
+cds     <- read_fasta(paste0(efetch, "id=NM_105379.4&rettype=fasta_cds_na"))
+protein <- read_fasta("https://rest.uniprot.org/uniprotkb/P10795.fasta")
+
+c(genomic = nchar(genomic), mRNA = nchar(mrna),
+  CDS = nchar(cds), protein = nchar(protein))
+nchar(genomic) - nchar(mrna)          # removed by splicing
+nchar(cds) / 3                        # codons in the CDS
+substr(cds, nchar(cds) - 2, nchar(cds))   # last codon
+as.integer(regexpr(cds, mrna))        # where the CDS starts in the mRNA
 ```
 
-```
-[1] 5
-[1] 600
-```
-
-The plot shows short cells near the tip, a steep rise (elongation zone) and a
-plateau where cells have reached their final length.
-:::
-
-### R3. Surface area and volume of a growing cell
-
-Treat a root cell as a cylinder of radius $r$ and length $L$: surface area
-$= 2\pi r L + 2\pi r^2$ and volume $= \pi r^2 L$. Compare a young meristem cell
-($L$ = 10 µm) with an elongated cell ($L$ = 150 µm), both with $r$ = 5 µm
-(invented teaching dimensions). Run the code and answer:
-
-a. What is the surface-to-volume ratio (µm⁻¹) of each cell?
-b. How many times larger is the volume of the elongated cell?
-c. Which cell has less surface membrane per unit volume to serve?
-
-```r
-r <- c(5, 5)          # radius, µm
-L <- c(10, 150)       # length, µm: meristem cell, elongated cell
-area   <- 2 * pi * r * L + 2 * pi * r^2
-volume <- pi * r^2 * L
-round(area / volume, 3)
-round(volume[2] / volume[1], 1)
-```
+a. What are the lengths of the four sequences?
+b. How many nucleotides are removed by splicing (total intron length)?
+c. The CDS has 181 codons but the protein has 180 amino acids. Why, and which
+   codon is the last one?
+d. At which nucleotide of the mRNA does the CDS start? How long are the 5′ UTR
+   and the 3′ UTR?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
 ```
-[1] 0.600 0.413
-[1] 15
+genomic    mRNA     CDS protein
+   1510    1268     543     180
+[1] 242
+[1] 181
+[1] "TAA"
+[1] 419
 ```
 
-a. 0.600 µm⁻¹ for the meristem cell, 0.413 µm⁻¹ for the elongated cell.
-b. 15 times larger.
-c. The elongated cell. Much of its extra volume is the central vacuole, so the
-   cell gets large without making 15 times more cytoplasm.
+a. Genomic **1510** nt, mRNA **1268** nt, CDS **543** nt, protein **180** aa.
+b. **242** nt of intron.
+c. The last codon is the stop codon **TAA**, which is read by a release factor,
+   not a tRNA, so it adds no amino acid: 543 = 3 × (180 + 1).
+d. At nucleotide **419**, so the 5′ UTR is **418** nt; the 3′ UTR is
+   1268 − 418 − 543 = **307** nt. Only 43 % of the mRNA is coding; the UTRs
+   carry signals for translation and mRNA stability.
 :::
 
-### R4. A nuclear-encoded chloroplast protein
+### B3. Where are the introns, and what does exon 1 encode?
 
-The small subunit of Rubisco works inside the chloroplast but is encoded in the
-nucleus. It is made in the cytosol with an N-terminal **transit peptide** that
-directs it into the chloroplast and is then cut off. The sequence below is
-copied from UniProt entry
-[P10795](https://rest.uniprot.org/uniprotkb/P10795.fasta) (RBCS-1A,
-*Arabidopsis thaliana*), which annotates residues 1–54 as the transit peptide.
-Complete the `substr()` line for the mature protein, run the code and report
-(a) the length of the full protein and (b) the length of the mature protein
-in the chloroplast.
+The Ensembl/NCBI gene page of transcript AT1G67090.1 gives the exon lengths
+589, 135 and 544 nt, separated by introns of 106 and 136 nt. The code cuts the
+genomic sequence into exons and introns, checks the intron ends and glues the
+exons together.
 
 ```r
-rbcs <- paste0(
-  "MASSMLSSATMVASPAQATMVAPFNGLKSSAAFPATRKANNDITSITSNGGRVNCMQVWP",
-  "PIGKKKFETLSYLPDLTDSELAKEVDYLIRNKWIPCVEFELEHGFVYREHGNSPGYYDGR",
-  "YWTMWKLPLFGCTDSAQVLKEVEECKKEYPNAFIRIIGFDNTRQVQCISFIAYKPPSFTG")
-nchar(rbcs)
-transit <- substr(rbcs, 1, 54)
-mature  <- substr(rbcs, ___, nchar(rbcs))
-nchar(mature)
+efetch <- "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&"
+read_fasta <- function(url) paste(readLines(url)[-1], collapse = "")
+genomic <- read_fasta(paste0(efetch,
+  "id=NC_003070.9&seq_start=25048158&seq_stop=25049667&strand=2&rettype=fasta"))
+mrna    <- read_fasta(paste0(efetch, "id=NM_105379.4&rettype=fasta"))
+
+# exon 1 = 589 nt, intron 1 = 106 nt, exon 2 = 135 nt, intron 2 = 136 nt, exon 3 = 544 nt
+intron_start <- c(589 + 1, 589 + 106 + 135 + 1)
+intron_end   <- intron_start + c(106, 136) - 1
+introns <- substring(genomic, intron_start, intron_end)
+substr(introns, 1, 2)                                   # first two bases
+substring(introns, nchar(introns) - 1, nchar(introns))  # last two bases
+
+exons <- substring(genomic, c(1, 696, 967), c(589, 830, 1510))
+identical(paste(exons, collapse = ""), mrna)            # splicing in silico
+
+gc <- function(s) round(100 * mean(strsplit(s, "")[[1]] %in% c("G", "C")), 1)
+sapply(introns, gc, USE.NAMES = FALSE)
+gc(paste(exons, collapse = ""))
+
+(589 - 418) / 3      # codons encoded by exon 1 (418 = 5' UTR length from B2)
 ```
+
+a. Which two bases start and which two end each intron?
+b. Is the spliced genomic sequence identical to the mRNA?
+c. What is the GC content (%) of the two introns and of the exons together?
+d. How many codons of the CDS lie in exon 1? UniProt annotates residues 1–54 of
+   P10795 as the chloroplast **transit peptide**. Which exon encodes it?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-(a) 180 amino acids; (b) 126 amino acids.
-
-```r
-mature  <- substr(rbcs, 55, nchar(rbcs))
-nchar(mature)
+```
+[1] "GT" "GT"
+[1] "AG" "AG"
+[1] TRUE
+[1] 23.6 24.3
+[1] 42.7
+[1] 57
 ```
 
-```
-[1] 180
-[1] 126
-```
+a. Both introns start with **GT** and end with **AG**, the GT–AG rule that the
+   spliceosome recognises.
+b. **Yes** (`TRUE`): removing the introns gives exactly the mRNA.
+c. Introns **23.6 %** and **24.3 %**, exons **42.7 %**. Plant introns are
+   typically AT-rich, which helps the splicing machinery find them.
+d. **57** codons, so the whole **transit peptide (54 aa) is encoded by exon 1**.
+   The address that sends the small subunit into the chloroplast is a separate
+   module of the gene; the mature enzyme part is mostly encoded by exons 2
+   and 3.
 :::
 
-### R5. Composition of the transit peptide
+### B4. The other half of Rubisco is made in the chloroplast
 
-Chloroplast transit peptides are typically rich in serine (S) and threonine
-(T). Using `transit` and `mature` from R4, run the code. What fraction of the
-residues is S or T in (a) the transit peptide and (b) the mature protein?
+a. Search NCBI Gene for `rbcL[sym] AND "Arabidopsis thaliana"[orgn]`. On which
+   genome is the gene, and what are its coordinates? Then search Ensembl
+   Plants for **ATCG00490**: how many exons does rbcL have?
+
+The code fetches the rbcL gene from the chloroplast genome (NC_000932.1) and
+both proteins from UniProt (O03042 large subunit, P10795 small subunit).
 
 ```r
-frac_ST <- function(s) {
-  aa <- strsplit(s, "")[[1]]
-  mean(aa %in% c("S", "T"))
+efetch <- "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&"
+read_fasta <- function(url) paste(readLines(url)[-1], collapse = "")
+rbcL  <- read_fasta(paste0(efetch,
+  "id=NC_000932.1&seq_start=54958&seq_stop=56397&strand=1&rettype=fasta"))
+large <- read_fasta("https://rest.uniprot.org/uniprotkb/O03042.fasta")
+small <- read_fasta("https://rest.uniprot.org/uniprotkb/P10795.fasta")
+
+c(rbcL_nt = nchar(rbcL), large_aa = nchar(large))
+nchar(rbcL) / 3 - 1
+substr(rbcL, 1, 3); substr(rbcL, nchar(rbcL) - 2, nchar(rbcL))
+substr(large, 1, 10)
+substr(small, 1, 10)
+
+c(large = nchar(large), mature_small = nchar(small) - 54)
+```
+
+b. Is the rbcL gene a single uninterrupted CDS? Check: does its length fit
+   3 × (protein length + 1), and what are its first and last codons?
+c. Does the large subunit need a chloroplast transit peptide? (Look at its
+   first residues and at the Features of O03042.)
+d. The small subunit loses its 54-residue transit peptide in the chloroplast;
+   count the large subunit as 479 aa. UniProt says the enzyme is a
+   "heterohexadecamer of 8 large chains and 8 small chains". How many amino
+   acids are in one Rubisco holoenzyme, and what fraction of them is encoded by
+   the nucleus?
+
+::: {.callout-note collapse="true"}
+## Answer
+
+a. The **chloroplast** genome (NC_000932.1), nucleotides **54958–56397**
+   (Gene ID 844754; the chloroplast genome is about 154 kb, chromosome 1 about
+   30 Mb). Ensembl shows **one** exon, on region "Pt", forward strand.
+
+```
+ rbcL_nt large_aa
+    1440      479
+[1] 479
+[1] "ATG"
+[1] "TAG"
+[1] "MSPQTETKAS"
+[1] "MASSMLSSAT"
+       large mature_small
+         479          126
+```
+
+b. **Yes**: 1440 = 3 × (479 + 1), starting with **ATG** and ending with the
+   stop codon **TAG**, with no introns.
+c. **No.** It is made by chloroplast ribosomes where it works. UniProt only
+   annotates a 2-residue propeptide (1–2), not a transit peptide; the
+   nuclear-encoded small subunit starts with the transit peptide MASSML….
+d. Large **479**, mature small **126** (180 − 54). One holoenzyme has
+   8 × 479 + 8 × 126 = **4840** amino acids, of which 1008/4840 ≈ **21 %** come
+   from nuclear genes (removing the large subunit's 2-residue propeptide
+   hardly changes this). Building Rubisco needs the two genomes to be expressed
+   in step.
+:::
+
+### B5. A plant without root hairs
+
+Root hairs enlarge the absorbing surface of a root. Mutants in the gene
+**ROOT HAIR DEFECTIVE 6 (RHD6)** make almost no root hairs.
+
+a. Search NCBI Gene for `RHD6[sym] AND "Arabidopsis thaliana"[orgn]` (or TAIR
+   for "RHD6"). What is its AGI code? Is it on the same chromosome as RBCS1A,
+   and which of the two genes lies closer to the top of the chromosome?
+b. Open the gene in Ensembl Plants. How many exons does transcript
+   AT1G66470.1 have, and on which strand is the gene?
+c. In UniProt (entry Q9C707), what type of protein is RHD6, where is it in the
+   cell, and which residues form its domain?
+
+Ensembl gives the exon lengths 640, 105, 66, 66 and 549 nt for AT1G66470.1,
+and the CDS starts at nucleotide 113 of the mRNA. The gene spans 1802 bp. The
+code finds which exon encodes a given amino acid.
+
+```r
+exon_len <- c(640, 105, 66, 66, 549)    # AT1G66470.1, exons in transcript order
+utr5     <- 112                         # CDS starts at nucleotide 113 of the mRNA
+sum(exon_len)                           # mRNA length
+1802 - sum(exon_len)                    # total intron length (gene = 1802 bp)
+
+exon_end <- cumsum(exon_len)            # last mRNA nucleotide of each exon
+codon_exon <- function(aa) {            # which exon holds the first base of codon aa?
+  nt <- utr5 + 3 * (aa - 1) + 1
+  which(nt <= exon_end)[1]
 }
-round(frac_ST(transit), 2)
-round(frac_ST(mature), 2)
+codon_exon(1)
+codon_exon(201)                         # start of the bHLH domain
+codon_exon(250)                         # end of the bHLH domain
+codon_exon(298)
 ```
+
+d. What are the mRNA length and the total intron length?
+e. Which exons encode the bHLH domain?
+f. Check the CDS: the protein has 298 aa. How long must the CDS be?
 
 ::: {.callout-note collapse="true"}
 ## Answer
 
-(a) 0.26; (b) 0.1 (R drops the trailing zero of 0.10).
+a. **AT1G66470**, Gene ID 842965. Same chromosome (**1**); its number 66470
+   is lower than 67090, so **RHD6** lies closer to the top. The two genes are
+   about 250 kb apart (RHD6 ends at 24797015, RBCS1A starts at 25048158), with
+   roughly 60 gene numbers between them.
+b. **5** exons, **forward** strand (RBCS1A was on the reverse strand:
+   neighbouring genes can be read from opposite strands).
+c. A **transcription factor** of the **bHLH** (basic helix-loop-helix) family,
+   located in the **nucleus**; bHLH domain = residues **201–250**.
 
 ```
-[1] 0.26
-[1] 0.1
+[1] 1426
+[1] 376
+[1] 1
+[1] 2
+[1] 4
+[1] 5
 ```
 
-The transit peptide has more than twice the S + T fraction of the mature
-protein, as expected for a chloroplast-targeting sequence.
-:::
-
-### R6. Translating and GC content
-
-Below is a made-up DNA sequence and a small codon table containing only the
-codons it needs. Run the code and report (a) the protein sequence (one-letter
-code) and (b) the GC content in percent. Compare (a) with the first amino acids
-of `rbcs` in R4.
-
-```r
-dna <- "ATGGCTTCCTCTATGCTC"   # a made-up DNA sequence
-code <- c(ATG = "M", GCT = "A", TCC = "S", TCT = "S", CTC = "L")
-starts <- seq(1, nchar(dna), by = 3)
-codons <- substring(dna, starts, starts + 2)
-codons
-paste(code[codons], collapse = "")
-gc <- strsplit(dna, "")[[1]]
-round(100 * mean(gc %in% c("G", "C")), 1)
-```
-
-::: {.callout-note collapse="true"}
-## Answer
-
-(a) MASSML; (b) 50 %.
-
-```
-[1] "ATG" "GCT" "TCC" "TCT" "ATG" "CTC"
-[1] "MASSML"
-[1] 50
-```
-
-MASSML is the start of RBCS-1A. Note that S is coded by two different codons
-(TCC and TCT): the genetic code is redundant, so one protein sequence can be
-written by many DNA sequences.
+d. mRNA **1426** nt; introns **376** nt in total (4 introns).
+e. **Exons 2 to 4** (codon 201 is in exon 2, codon 250 in exon 4). The
+   DNA-binding domain is split across three exons.
+f. 3 × (298 + 1) = **897** nt. A transcription factor in the nucleus that
+   switches on root-hair genes in some epidermal cells: a change in one gene's
+   expression alters the absorbing surface of the whole root system.
 :::
 
 Continue with the [self-check quiz](quiz.qmd).

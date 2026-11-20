@@ -103,35 +103,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -312,8 +283,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../animal/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../animal/organisation/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -365,8 +336,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../animal/energy-temperature/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../animal/energy-temperature/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -412,8 +383,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../animal/gas-circulation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../animal/gas-circulation/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -465,8 +436,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../animal/water-excretion/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../animal/water-excretion/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -518,8 +489,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../animal/integration/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../animal/integration/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -594,8 +565,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../plant/organisation/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../plant/organisation/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -647,8 +618,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../plant/water-nutrition/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../plant/water-nutrition/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -700,8 +671,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../plant/carbon-metabolism/exercise.html#r-exercises" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R and bioinformatics</span></a>
+  <a href="../../plant/carbon-metabolism/exercise.html#bioinformatics" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bioinformatics and R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -980,14 +951,13 @@ window.Quarto = {
   <li><a href="#e2.3" id="toc-e2.3" class="nav-link" data-scroll-target="#e2.3">E2.3</a></li>
   <li><a href="#e2.4" id="toc-e2.4" class="nav-link" data-scroll-target="#e2.4">E2.4</a></li>
   </ul></li>
-  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises">R and bioinformatics</a>
+  <li><a href="#bioinformatics" id="toc-bioinformatics" class="nav-link" data-scroll-target="#bioinformatics">Bioinformatics and R</a>
   <ul class="collapse">
-  <li><a href="#r1.-cell-lengths-in-two-zones" id="toc-r1.-cell-lengths-in-two-zones" class="nav-link" data-scroll-target="#r1.-cell-lengths-in-two-zones">R1. Cell lengths in two zones</a></li>
-  <li><a href="#r2.-where-does-elongation-start" id="toc-r2.-where-does-elongation-start" class="nav-link" data-scroll-target="#r2.-where-does-elongation-start">R2. Where does elongation start?</a></li>
-  <li><a href="#r3.-surface-area-and-volume-of-a-growing-cell" id="toc-r3.-surface-area-and-volume-of-a-growing-cell" class="nav-link" data-scroll-target="#r3.-surface-area-and-volume-of-a-growing-cell">R3. Surface area and volume of a growing cell</a></li>
-  <li><a href="#r4.-a-nuclear-encoded-chloroplast-protein" id="toc-r4.-a-nuclear-encoded-chloroplast-protein" class="nav-link" data-scroll-target="#r4.-a-nuclear-encoded-chloroplast-protein">R4. A nuclear-encoded chloroplast protein</a></li>
-  <li><a href="#r5.-composition-of-the-transit-peptide" id="toc-r5.-composition-of-the-transit-peptide" class="nav-link" data-scroll-target="#r5.-composition-of-the-transit-peptide">R5. Composition of the transit peptide</a></li>
-  <li><a href="#r6.-translating-and-gc-content" id="toc-r6.-translating-and-gc-content" class="nav-link" data-scroll-target="#r6.-translating-and-gc-content">R6. Translating and GC content</a></li>
+  <li><a href="#b1.-finding-the-rubisco-small-subunit-gene" id="toc-b1.-finding-the-rubisco-small-subunit-gene" class="nav-link" data-scroll-target="#b1.-finding-the-rubisco-small-subunit-gene">B1. Finding the Rubisco small-subunit gene</a></li>
+  <li><a href="#b2.-one-gene-four-sequences" id="toc-b2.-one-gene-four-sequences" class="nav-link" data-scroll-target="#b2.-one-gene-four-sequences">B2. One gene, four sequences</a></li>
+  <li><a href="#b3.-where-are-the-introns-and-what-does-exon-1-encode" id="toc-b3.-where-are-the-introns-and-what-does-exon-1-encode" class="nav-link" data-scroll-target="#b3.-where-are-the-introns-and-what-does-exon-1-encode">B3. Where are the introns, and what does exon 1 encode?</a></li>
+  <li><a href="#b4.-the-other-half-of-rubisco-is-made-in-the-chloroplast" id="toc-b4.-the-other-half-of-rubisco-is-made-in-the-chloroplast" class="nav-link" data-scroll-target="#b4.-the-other-half-of-rubisco-is-made-in-the-chloroplast">B4. The other half of Rubisco is made in the chloroplast</a></li>
+  <li><a href="#b5.-a-plant-without-root-hairs" id="toc-b5.-a-plant-without-root-hairs" class="nav-link" data-scroll-target="#b5.-a-plant-without-root-hairs">B5. A plant without root hairs</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1927,53 +1897,40 @@ Answer
 </div>
 </section>
 </section>
-<section id="r-exercises" class="level2">
-<h2 class="anchored" data-anchor-id="r-exercises">R and bioinformatics</h2>
-<p>Run the code in R or RStudio. Only base R is used (no packages), and all data are typed into the code.</p>
-<section id="r1.-cell-lengths-in-two-zones" class="level3">
-<h3 class="anchored" data-anchor-id="r1.-cell-lengths-in-two-zones">R1. Cell lengths in two zones</h3>
-<p>The lengths (µm) of eight neighbouring cells were measured in the meristem and in the elongation zone of one root (invented teaching values). Complete the second <code>mean()</code> line, run the code and report how many times longer the average elongation-zone cell is than the average meristem cell.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>meristem   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">9</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>elongation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>, <span class="dv">60</span>, <span class="dv">85</span>, <span class="dv">110</span>, <span class="dv">140</span>, <span class="dv">150</span>, <span class="dv">155</span>, <span class="dv">157</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(meristem)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(___)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(elongation) <span class="sc">/</span> <span class="fu">mean</span>(meristem)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<section id="bioinformatics" class="level2">
+<h2 class="anchored" data-anchor-id="bioinformatics">Bioinformatics and R</h2>
+<p>Rubisco, the enzyme that fixes CO₂, is built from two kinds of subunit encoded in two different genomes: the large subunit in the chloroplast and the small subunit in the nucleus. A nuclear gene is not simply a string of codons: it has exons and introns, untranslated regions (UTRs) and, for a chloroplast protein, a stretch that codes for an address label. These exercises teach you to look up plant genes by their <strong>AGI code</strong> in <strong>TAIR</strong>, <strong>NCBI Gene</strong> and <strong>Ensembl Plants</strong>, to read a <strong>gene structure</strong>, and to use <strong>R</strong> to fetch the genomic DNA, the mRNA, the coding sequence (CDS) and the protein of real genes and compare them.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Answer
+How to search for an Arabidopsis gene
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>11.15 times longer.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(meristem)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(elongation)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(elongation) <span class="sc">/</span> <span class="fu">mean</span>(meristem)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>[1] 10
-[1] 111.5
-[1] 11.15</code></pre>
-<p>The root lengthens mainly because cells expand after they leave the meristem, not because they divide there.</p>
+<p><strong>AGI codes.</strong> Every <em>Arabidopsis thaliana</em> gene has an Arabidopsis Genome Initiative code such as <strong>AT1G67090</strong>: <code>AT</code> = <em>A. thaliana</em>, <code>1</code> = chromosome 1 (<code>C</code> = chloroplast, <code>M</code> = mitochondrion), <code>G</code> = gene, <code>67090</code> = its number, counting along the chromosome from the top in steps of 10. A suffix <code>.1</code>, <code>.2</code> (AT1G67090.1) names a transcript (gene model) of that gene. AGI codes are the safest search term, because gene names have synonyms.</p>
+<p><strong>Where to search.</strong></p>
+<ul>
+<li><strong>TAIR</strong> (<a href="https://www.arabidopsis.org" class="uri">https://www.arabidopsis.org</a>): the Arabidopsis database. Search by AGI code or gene name; the locus page lists aliases, gene models and descriptions.</li>
+<li><strong>NCBI Gene</strong> (<a href="https://www.ncbi.nlm.nih.gov/gene" class="uri">https://www.ncbi.nlm.nih.gov/gene</a>): query <code>RBCS1A[sym] AND "Arabidopsis thaliana"[orgn]</code> or simply the AGI code. The record shows the AGI code under “Also known as”, the chromosome, the exon count and RefSeq sequences (NM_ = mRNA, NP_ = protein; NC_ = whole chromosome).</li>
+<li><strong>Ensembl Plants</strong> (<a href="https://plants.ensembl.org" class="uri">https://plants.ensembl.org</a>, now part of <a href="https://www.ensembl.org" class="uri">https://www.ensembl.org</a>): search the AGI code and open the gene. The gene page shows location, strand and each transcript drawn as boxes (exons) joined by lines (introns); coding parts are drawn as filled boxes, UTRs as open or thinner boxes.</li>
+</ul>
+<p><strong>Four sequences of one gene.</strong> <em>Genomic</em> DNA = exons + introns. <em>mRNA</em> (cDNA) = exons only: 5′ UTR + CDS + 3′ UTR. <em>CDS</em> = from the ATG start codon to and including the stop codon. <em>Protein</em> = CDS translated, so CDS length = 3 × (protein length + 1).</p>
 </div>
 </div>
-</div>
-</section>
-<section id="r2.-where-does-elongation-start" class="level3">
-<h3 class="anchored" data-anchor-id="r2.-where-does-elongation-start">R2. Where does elongation start?</h3>
-<p>One cell file is measured at increasing distance from the root tip (invented teaching values). Complete the subsetting line so that <code>elongated</code> keeps the cells longer than 50 µm. Run the code and report (a) how many cells are longer than 50 µm and (b) the distance from the tip of the first such cell.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>root <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">position =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">400</span>, <span class="dv">500</span>, <span class="dv">600</span>, <span class="dv">700</span>, <span class="dv">800</span>, <span class="dv">900</span>, <span class="dv">1000</span>),  <span class="co"># µm from tip</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">length   =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">10</span>, <span class="dv">14</span>, <span class="dv">30</span>, <span class="dv">62</span>, <span class="dv">105</span>, <span class="dv">140</span>, <span class="dv">152</span>, <span class="dv">155</span>)          <span class="co"># cell length, µm</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>elongated <span class="ot">&lt;-</span> root[root<span class="sc">$</span>length ___ <span class="dv">50</span>, ]</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(elongated)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(elongated<span class="sc">$</span>position)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(root<span class="sc">$</span>position, root<span class="sc">$</span>length, <span class="at">type =</span> <span class="st">"b"</span>,</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Distance from root tip (µm)"</span>, <span class="at">ylab =</span> <span class="st">"Cell length (µm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="b1.-finding-the-rubisco-small-subunit-gene" class="level3">
+<h3 class="anchored" data-anchor-id="b1.-finding-the-rubisco-small-subunit-gene">B1. Finding the Rubisco small-subunit gene</h3>
+<ol type="a">
+<li>Search NCBI Gene for <code>RBCS1A[sym] AND "Arabidopsis thaliana"[orgn]</code>. What is the AGI code of RBCS1A, and what does it tell you about the chromosome?</li>
+<li>What is the NCBI Gene ID, and how many exons does the gene have?</li>
+<li>Search Ensembl Plants (or TAIR) for the AGI code. Is the gene on the forward or the reverse strand?</li>
+<li>Its curated RefSeq mRNA is <strong>NM_105379.4</strong>. Find it on the NCBI Gene page. What does the “4” after the dot mean? (A) the 4th transcript of the gene;
+<ol start="2" type="A">
+<li>the 4th version of that sequence record.</li>
+</ol></li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1987,32 +1944,39 @@ Answer
 <div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li>5 cells; (b) 600 µm from the tip.</li>
+<li><strong>AT1G67090</strong>: an Arabidopsis gene on chromosome <strong>1</strong>, near the lower end (gene numbers on chromosome 1 run up to about 80000).</li>
+<li>Gene ID <strong>843029</strong>; <strong>3</strong> exons.</li>
+<li><strong>Reverse</strong> strand (chromosome 1, about 25.05 Mb). The genomic sequence must therefore be read from the opposite strand to get the gene in its 5′→3′ direction (B2 does this with <code>strand=2</code>).</li>
+<li><strong>B.</strong> The version number goes up whenever the sequence of the record is changed. Quoting accession <em>and</em> version (NM_105379.4) pins the exact sequence, so results can be repeated.</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>elongated <span class="ot">&lt;-</span> root[root<span class="sc">$</span>length <span class="sc">&gt;</span> <span class="dv">50</span>, ]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(elongated)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(elongated<span class="sc">$</span>position)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>[1] 5
-[1] 600</code></pre>
-<p>The plot shows short cells near the tip, a steep rise (elongation zone) and a plateau where cells have reached their final length.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="r3.-surface-area-and-volume-of-a-growing-cell" class="level3">
-<h3 class="anchored" data-anchor-id="r3.-surface-area-and-volume-of-a-growing-cell">R3. Surface area and volume of a growing cell</h3>
-<p>Treat a root cell as a cylinder of radius <span class="math inline">\(r\)</span> and length <span class="math inline">\(L\)</span>: surface area <span class="math inline">\(= 2\pi r L + 2\pi r^2\)</span> and volume <span class="math inline">\(= \pi r^2 L\)</span>. Compare a young meristem cell (<span class="math inline">\(L\)</span> = 10 µm) with an elongated cell (<span class="math inline">\(L\)</span> = 150 µm), both with <span class="math inline">\(r\)</span> = 5 µm (invented teaching dimensions). Run the code and answer:</p>
+<section id="b2.-one-gene-four-sequences" class="level3">
+<h3 class="anchored" data-anchor-id="b2.-one-gene-four-sequences">B2. One gene, four sequences</h3>
+<p>The code fetches, for RBCS1A, the genomic region from chromosome 1 (NC_003070.9, reverse strand), the mRNA and its CDS (NM_105379.4) from NCBI, and the protein from UniProt (P10795).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>efetch <span class="ot">&lt;-</span> <span class="st">"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&amp;"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>read_fasta <span class="ot">&lt;-</span> <span class="cf">function</span>(url) <span class="fu">paste</span>(<span class="fu">readLines</span>(url)[<span class="sc">-</span><span class="dv">1</span>], <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>genomic <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="fu">paste0</span>(efetch,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id=NC_003070.9&amp;seq_start=25048158&amp;seq_stop=25049667&amp;strand=2&amp;rettype=fasta"</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>mrna    <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="fu">paste0</span>(efetch, <span class="st">"id=NM_105379.4&amp;rettype=fasta"</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cds     <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="fu">paste0</span>(efetch, <span class="st">"id=NM_105379.4&amp;rettype=fasta_cds_na"</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>protein <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="st">"https://rest.uniprot.org/uniprotkb/P10795.fasta"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">genomic =</span> <span class="fu">nchar</span>(genomic), <span class="at">mRNA =</span> <span class="fu">nchar</span>(mrna),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">CDS =</span> <span class="fu">nchar</span>(cds), <span class="at">protein =</span> <span class="fu">nchar</span>(protein))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(genomic) <span class="sc">-</span> <span class="fu">nchar</span>(mrna)          <span class="co"># removed by splicing</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(cds) <span class="sc">/</span> <span class="dv">3</span>                        <span class="co"># codons in the CDS</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(cds, <span class="fu">nchar</span>(cds) <span class="sc">-</span> <span class="dv">2</span>, <span class="fu">nchar</span>(cds))   <span class="co"># last codon</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">as.integer</span>(<span class="fu">regexpr</span>(cds, mrna))        <span class="co"># where the CDS starts in the mRNA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="a">
-<li>What is the surface-to-volume ratio (µm⁻¹) of each cell?</li>
-<li>How many times larger is the volume of the elongated cell?</li>
-<li>Which cell has less surface membrane per unit volume to serve?</li>
+<li>What are the lengths of the four sequences?</li>
+<li>How many nucleotides are removed by splicing (total intron length)?</li>
+<li>The CDS has 181 codons but the protein has 180 amino acids. Why, and which codon is the last one?</li>
+<li>At which nucleotide of the mRNA does the CDS start? How long are the 5′ UTR and the 3′ UTR?</li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">5</span>)          <span class="co"># radius, µm</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>L <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">150</span>)       <span class="co"># length, µm: meristem cell, elongated cell</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>area   <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> r <span class="sc">*</span> L <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> r<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>volume <span class="ot">&lt;-</span> pi <span class="sc">*</span> r<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> L</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(area <span class="sc">/</span> volume, <span class="dv">3</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(volume[<span class="dv">2</span>] <span class="sc">/</span> volume[<span class="dv">1</span>], <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2025,28 +1989,52 @@ Answer
 </div>
 <div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>[1] 0.600 0.413
-[1] 15</code></pre>
+<pre><code>genomic    mRNA     CDS protein
+   1510    1268     543     180
+[1] 242
+[1] 181
+[1] "TAA"
+[1] 419</code></pre>
 <ol type="a">
-<li>0.600 µm⁻¹ for the meristem cell, 0.413 µm⁻¹ for the elongated cell.</li>
-<li>15 times larger.</li>
-<li>The elongated cell. Much of its extra volume is the central vacuole, so the cell gets large without making 15 times more cytoplasm.</li>
+<li>Genomic <strong>1510</strong> nt, mRNA <strong>1268</strong> nt, CDS <strong>543</strong> nt, protein <strong>180</strong> aa.</li>
+<li><strong>242</strong> nt of intron.</li>
+<li>The last codon is the stop codon <strong>TAA</strong>, which is read by a release factor, not a tRNA, so it adds no amino acid: 543 = 3 × (180 + 1).</li>
+<li>At nucleotide <strong>419</strong>, so the 5′ UTR is <strong>418</strong> nt; the 3′ UTR is 1268 − 418 − 543 = <strong>307</strong> nt. Only 43 % of the mRNA is coding; the UTRs carry signals for translation and mRNA stability.</li>
 </ol>
 </div>
 </div>
 </div>
 </section>
-<section id="r4.-a-nuclear-encoded-chloroplast-protein" class="level3">
-<h3 class="anchored" data-anchor-id="r4.-a-nuclear-encoded-chloroplast-protein">R4. A nuclear-encoded chloroplast protein</h3>
-<p>The small subunit of Rubisco works inside the chloroplast but is encoded in the nucleus. It is made in the cytosol with an N-terminal <strong>transit peptide</strong> that directs it into the chloroplast and is then cut off. The sequence below is copied from UniProt entry <a href="https://rest.uniprot.org/uniprotkb/P10795.fasta">P10795</a> (RBCS-1A, <em>Arabidopsis thaliana</em>), which annotates residues 1–54 as the transit peptide. Complete the <code>substr()</code> line for the mature protein, run the code and report (a) the length of the full protein and (b) the length of the mature protein in the chloroplast.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rbcs <span class="ot">&lt;-</span> <span class="fu">paste0</span>(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"MASSMLSSATMVASPAQATMVAPFNGLKSSAAFPATRKANNDITSITSNGGRVNCMQVWP"</span>,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PIGKKKFETLSYLPDLTDSELAKEVDYLIRNKWIPCVEFELEHGFVYREHGNSPGYYDGR"</span>,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"YWTMWKLPLFGCTDSAQVLKEVEECKKEYPNAFIRIIGFDNTRQVQCISFIAYKPPSFTG"</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(rbcs)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>transit <span class="ot">&lt;-</span> <span class="fu">substr</span>(rbcs, <span class="dv">1</span>, <span class="dv">54</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>mature  <span class="ot">&lt;-</span> <span class="fu">substr</span>(rbcs, ___, <span class="fu">nchar</span>(rbcs))</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(mature)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="b3.-where-are-the-introns-and-what-does-exon-1-encode" class="level3">
+<h3 class="anchored" data-anchor-id="b3.-where-are-the-introns-and-what-does-exon-1-encode">B3. Where are the introns, and what does exon 1 encode?</h3>
+<p>The Ensembl/NCBI gene page of transcript AT1G67090.1 gives the exon lengths 589, 135 and 544 nt, separated by introns of 106 and 136 nt. The code cuts the genomic sequence into exons and introns, checks the intron ends and glues the exons together.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>efetch <span class="ot">&lt;-</span> <span class="st">"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&amp;"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>read_fasta <span class="ot">&lt;-</span> <span class="cf">function</span>(url) <span class="fu">paste</span>(<span class="fu">readLines</span>(url)[<span class="sc">-</span><span class="dv">1</span>], <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>genomic <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="fu">paste0</span>(efetch,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id=NC_003070.9&amp;seq_start=25048158&amp;seq_stop=25049667&amp;strand=2&amp;rettype=fasta"</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>mrna    <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="fu">paste0</span>(efetch, <span class="st">"id=NM_105379.4&amp;rettype=fasta"</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># exon 1 = 589 nt, intron 1 = 106 nt, exon 2 = 135 nt, intron 2 = 136 nt, exon 3 = 544 nt</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>intron_start <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">589</span> <span class="sc">+</span> <span class="dv">1</span>, <span class="dv">589</span> <span class="sc">+</span> <span class="dv">106</span> <span class="sc">+</span> <span class="dv">135</span> <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>intron_end   <span class="ot">&lt;-</span> intron_start <span class="sc">+</span> <span class="fu">c</span>(<span class="dv">106</span>, <span class="dv">136</span>) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>introns <span class="ot">&lt;-</span> <span class="fu">substring</span>(genomic, intron_start, intron_end)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(introns, <span class="dv">1</span>, <span class="dv">2</span>)                                   <span class="co"># first two bases</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">substring</span>(introns, <span class="fu">nchar</span>(introns) <span class="sc">-</span> <span class="dv">1</span>, <span class="fu">nchar</span>(introns))  <span class="co"># last two bases</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>exons <span class="ot">&lt;-</span> <span class="fu">substring</span>(genomic, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">696</span>, <span class="dv">967</span>), <span class="fu">c</span>(<span class="dv">589</span>, <span class="dv">830</span>, <span class="dv">1510</span>))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="fu">paste</span>(exons, <span class="at">collapse =</span> <span class="st">""</span>), mrna)            <span class="co"># splicing in silico</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>gc <span class="ot">&lt;-</span> <span class="cf">function</span>(s) <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">mean</span>(<span class="fu">strsplit</span>(s, <span class="st">""</span>)[[<span class="dv">1</span>]] <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"G"</span>, <span class="st">"C"</span>)), <span class="dv">1</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(introns, gc, <span class="at">USE.NAMES =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>(<span class="fu">paste</span>(exons, <span class="at">collapse =</span> <span class="st">""</span>))</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>(<span class="dv">589</span> <span class="sc">-</span> <span class="dv">418</span>) <span class="sc">/</span> <span class="dv">3</span>      <span class="co"># codons encoded by exon 1 (418 = 5' UTR length from B2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="a">
+<li>Which two bases start and which two end each intron?</li>
+<li>Is the spliced genomic sequence identical to the mRNA?</li>
+<li>What is the GC content (%) of the two introns and of the exons together?</li>
+<li>How many codons of the CDS lie in exon 1? UniProt annotates residues 1–54 of P10795 as the chloroplast <strong>transit peptide</strong>. Which exon encodes it?</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2059,26 +2047,47 @@ Answer
 </div>
 <div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<pre><code>[1] "GT" "GT"
+[1] "AG" "AG"
+[1] TRUE
+[1] 23.6 24.3
+[1] 42.7
+[1] 57</code></pre>
 <ol type="a">
-<li>180 amino acids; (b) 126 amino acids.</li>
+<li>Both introns start with <strong>GT</strong> and end with <strong>AG</strong>, the GT–AG rule that the spliceosome recognises.</li>
+<li><strong>Yes</strong> (<code>TRUE</code>): removing the introns gives exactly the mRNA.</li>
+<li>Introns <strong>23.6 %</strong> and <strong>24.3 %</strong>, exons <strong>42.7 %</strong>. Plant introns are typically AT-rich, which helps the splicing machinery find them.</li>
+<li><strong>57</strong> codons, so the whole <strong>transit peptide (54 aa) is encoded by exon 1</strong>. The address that sends the small subunit into the chloroplast is a separate module of the gene; the mature enzyme part is mostly encoded by exons 2 and 3.</li>
 </ol>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mature  <span class="ot">&lt;-</span> <span class="fu">substr</span>(rbcs, <span class="dv">55</span>, <span class="fu">nchar</span>(rbcs))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(mature)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>[1] 180
-[1] 126</code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="r5.-composition-of-the-transit-peptide" class="level3">
-<h3 class="anchored" data-anchor-id="r5.-composition-of-the-transit-peptide">R5. Composition of the transit peptide</h3>
-<p>Chloroplast transit peptides are typically rich in serine (S) and threonine (T). Using <code>transit</code> and <code>mature</code> from R4, run the code. What fraction of the residues is S or T in (a) the transit peptide and (b) the mature protein?</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>frac_ST <span class="ot">&lt;-</span> <span class="cf">function</span>(s) {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  aa <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(s, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(aa <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"T"</span>))</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">frac_ST</span>(transit), <span class="dv">2</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">frac_ST</span>(mature), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="b4.-the-other-half-of-rubisco-is-made-in-the-chloroplast" class="level3">
+<h3 class="anchored" data-anchor-id="b4.-the-other-half-of-rubisco-is-made-in-the-chloroplast">B4. The other half of Rubisco is made in the chloroplast</h3>
+<ol type="a">
+<li>Search NCBI Gene for <code>rbcL[sym] AND "Arabidopsis thaliana"[orgn]</code>. On which genome is the gene, and what are its coordinates? Then search Ensembl Plants for <strong>ATCG00490</strong>: how many exons does rbcL have?</li>
+</ol>
+<p>The code fetches the rbcL gene from the chloroplast genome (NC_000932.1) and both proteins from UniProt (O03042 large subunit, P10795 small subunit).</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>efetch <span class="ot">&lt;-</span> <span class="st">"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&amp;"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>read_fasta <span class="ot">&lt;-</span> <span class="cf">function</span>(url) <span class="fu">paste</span>(<span class="fu">readLines</span>(url)[<span class="sc">-</span><span class="dv">1</span>], <span class="at">collapse =</span> <span class="st">""</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>rbcL  <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="fu">paste0</span>(efetch,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id=NC_000932.1&amp;seq_start=54958&amp;seq_stop=56397&amp;strand=1&amp;rettype=fasta"</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>large <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="st">"https://rest.uniprot.org/uniprotkb/O03042.fasta"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>small <span class="ot">&lt;-</span> <span class="fu">read_fasta</span>(<span class="st">"https://rest.uniprot.org/uniprotkb/P10795.fasta"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">rbcL_nt =</span> <span class="fu">nchar</span>(rbcL), <span class="at">large_aa =</span> <span class="fu">nchar</span>(large))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(rbcL) <span class="sc">/</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(rbcL, <span class="dv">1</span>, <span class="dv">3</span>); <span class="fu">substr</span>(rbcL, <span class="fu">nchar</span>(rbcL) <span class="sc">-</span> <span class="dv">2</span>, <span class="fu">nchar</span>(rbcL))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(large, <span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(small, <span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">large =</span> <span class="fu">nchar</span>(large), <span class="at">mature_small =</span> <span class="fu">nchar</span>(small) <span class="sc">-</span> <span class="dv">54</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="a">
+<li>Is the rbcL gene a single uninterrupted CDS? Check: does its length fit 3 × (protein length + 1), and what are its first and last codons?</li>
+<li>Does the large subunit need a chloroplast transit peptide? (Look at its first residues and at the Features of O03042.)</li>
+<li>The small subunit loses its 54-residue transit peptide in the chloroplast; count the large subunit as 479 aa. UniProt says the enzyme is a “heterohexadecamer of 8 large chains and 8 small chains”. How many amino acids are in one Rubisco holoenzyme, and what fraction of them is encoded by the nucleus?</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2092,26 +2101,54 @@ Answer
 <div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li>0.26; (b) 0.1 (R drops the trailing zero of 0.10).</li>
+<li>The <strong>chloroplast</strong> genome (NC_000932.1), nucleotides <strong>54958–56397</strong> (Gene ID 844754; the chloroplast genome is about 154 kb, chromosome 1 about 30 Mb). Ensembl shows <strong>one</strong> exon, on region “Pt”, forward strand.</li>
 </ol>
-<pre><code>[1] 0.26
-[1] 0.1</code></pre>
-<p>The transit peptide has more than twice the S + T fraction of the mature protein, as expected for a chloroplast-targeting sequence.</p>
+<pre><code> rbcL_nt large_aa
+    1440      479
+[1] 479
+[1] "ATG"
+[1] "TAG"
+[1] "MSPQTETKAS"
+[1] "MASSMLSSAT"
+       large mature_small
+         479          126</code></pre>
+<ol start="2" type="a">
+<li><strong>Yes</strong>: 1440 = 3 × (479 + 1), starting with <strong>ATG</strong> and ending with the stop codon <strong>TAG</strong>, with no introns.</li>
+<li><strong>No.</strong> It is made by chloroplast ribosomes where it works. UniProt only annotates a 2-residue propeptide (1–2), not a transit peptide; the nuclear-encoded small subunit starts with the transit peptide MASSML….</li>
+<li>Large <strong>479</strong>, mature small <strong>126</strong> (180 − 54). One holoenzyme has 8 × 479 + 8 × 126 = <strong>4840</strong> amino acids, of which 1008/4840 ≈ <strong>21 %</strong> come from nuclear genes (removing the large subunit’s 2-residue propeptide hardly changes this). Building Rubisco needs the two genomes to be expressed in step.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="r6.-translating-and-gc-content" class="level3">
-<h3 class="anchored" data-anchor-id="r6.-translating-and-gc-content">R6. Translating and GC content</h3>
-<p>Below is a made-up DNA sequence and a small codon table containing only the codons it needs. Run the code and report (a) the protein sequence (one-letter code) and (b) the GC content in percent. Compare (a) with the first amino acids of <code>rbcs</code> in R4.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dna <span class="ot">&lt;-</span> <span class="st">"ATGGCTTCCTCTATGCTC"</span>   <span class="co"># a made-up DNA sequence</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>code <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">ATG =</span> <span class="st">"M"</span>, <span class="at">GCT =</span> <span class="st">"A"</span>, <span class="at">TCC =</span> <span class="st">"S"</span>, <span class="at">TCT =</span> <span class="st">"S"</span>, <span class="at">CTC =</span> <span class="st">"L"</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>starts <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">nchar</span>(dna), <span class="at">by =</span> <span class="dv">3</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>codons <span class="ot">&lt;-</span> <span class="fu">substring</span>(dna, starts, starts <span class="sc">+</span> <span class="dv">2</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>codons</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(code[codons], <span class="at">collapse =</span> <span class="st">""</span>)</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>gc <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(dna, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">mean</span>(gc <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"G"</span>, <span class="st">"C"</span>)), <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="b5.-a-plant-without-root-hairs" class="level3">
+<h3 class="anchored" data-anchor-id="b5.-a-plant-without-root-hairs">B5. A plant without root hairs</h3>
+<p>Root hairs enlarge the absorbing surface of a root. Mutants in the gene <strong>ROOT HAIR DEFECTIVE 6 (RHD6)</strong> make almost no root hairs.</p>
+<ol type="a">
+<li>Search NCBI Gene for <code>RHD6[sym] AND "Arabidopsis thaliana"[orgn]</code> (or TAIR for “RHD6”). What is its AGI code? Is it on the same chromosome as RBCS1A, and which of the two genes lies closer to the top of the chromosome?</li>
+<li>Open the gene in Ensembl Plants. How many exons does transcript AT1G66470.1 have, and on which strand is the gene?</li>
+<li>In UniProt (entry Q9C707), what type of protein is RHD6, where is it in the cell, and which residues form its domain?</li>
+</ol>
+<p>Ensembl gives the exon lengths 640, 105, 66, 66 and 549 nt for AT1G66470.1, and the CDS starts at nucleotide 113 of the mRNA. The gene spans 1802 bp. The code finds which exon encodes a given amino acid.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>exon_len <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">640</span>, <span class="dv">105</span>, <span class="dv">66</span>, <span class="dv">66</span>, <span class="dv">549</span>)    <span class="co"># AT1G66470.1, exons in transcript order</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>utr5     <span class="ot">&lt;-</span> <span class="dv">112</span>                         <span class="co"># CDS starts at nucleotide 113 of the mRNA</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(exon_len)                           <span class="co"># mRNA length</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1802</span> <span class="sc">-</span> <span class="fu">sum</span>(exon_len)                    <span class="co"># total intron length (gene = 1802 bp)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>exon_end <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(exon_len)            <span class="co"># last mRNA nucleotide of each exon</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>codon_exon <span class="ot">&lt;-</span> <span class="cf">function</span>(aa) {            <span class="co"># which exon holds the first base of codon aa?</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  nt <span class="ot">&lt;-</span> utr5 <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> (aa <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(nt <span class="sc">&lt;=</span> exon_end)[<span class="dv">1</span>]</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">codon_exon</span>(<span class="dv">1</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">codon_exon</span>(<span class="dv">201</span>)                         <span class="co"># start of the bHLH domain</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">codon_exon</span>(<span class="dv">250</span>)                         <span class="co"># end of the bHLH domain</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">codon_exon</span>(<span class="dv">298</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="a">
+<li>What are the mRNA length and the total intron length?</li>
+<li>Which exons encode the bHLH domain?</li>
+<li>Check the CDS: the protein has 298 aa. How long must the CDS be?</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2125,12 +2162,21 @@ Answer
 <div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li>MASSML; (b) 50 %.</li>
+<li><strong>AT1G66470</strong>, Gene ID 842965. Same chromosome (<strong>1</strong>); its number 66470 is lower than 67090, so <strong>RHD6</strong> lies closer to the top. The two genes are about 250 kb apart (RHD6 ends at 24797015, RBCS1A starts at 25048158), with roughly 60 gene numbers between them.</li>
+<li><strong>5</strong> exons, <strong>forward</strong> strand (RBCS1A was on the reverse strand: neighbouring genes can be read from opposite strands).</li>
+<li>A <strong>transcription factor</strong> of the <strong>bHLH</strong> (basic helix-loop-helix) family, located in the <strong>nucleus</strong>; bHLH domain = residues <strong>201–250</strong>.</li>
 </ol>
-<pre><code>[1] "ATG" "GCT" "TCC" "TCT" "ATG" "CTC"
-[1] "MASSML"
-[1] 50</code></pre>
-<p>MASSML is the start of RBCS-1A. Note that S is coded by two different codons (TCC and TCT): the genetic code is redundant, so one protein sequence can be written by many DNA sequences.</p>
+<pre><code>[1] 1426
+[1] 376
+[1] 1
+[1] 2
+[1] 4
+[1] 5</code></pre>
+<ol start="4" type="a">
+<li>mRNA <strong>1426</strong> nt; introns <strong>376</strong> nt in total (4 introns).</li>
+<li><strong>Exons 2 to 4</strong> (codon 201 is in exon 2, codon 250 in exon 4). The DNA-binding domain is split across three exons.</li>
+<li>3 × (298 + 1) = <strong>897</strong> nt. A transcription factor in the nucleus that switches on root-hair genes in some epidermal cells: a change in one gene’s expression alters the absorbing surface of the whole root system.</li>
+</ol>
 </div>
 </div>
 </div>
